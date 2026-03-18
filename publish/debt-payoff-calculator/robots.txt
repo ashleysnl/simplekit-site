@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://simplekit.app/debt-payoff-calculator/sitemap.xml

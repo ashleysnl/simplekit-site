@@ -2,7 +2,6 @@
   "name": "simplekit-main-site",
   "private": true,
   "scripts": {
-    "bootstrap:templates": "node scripts/bootstrap-tool-templates.mjs",
     "build": "node scripts/build-site.mjs"
   }
 }

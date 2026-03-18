@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://simplekit.app/take-home-pay-calculator/sitemap.xml

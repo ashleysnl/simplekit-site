@@ -1,12 +1,10 @@
-import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const repoRoot = process.cwd();
 const templatesRoot = path.join(repoRoot, "templates");
 const registryPath = path.join(repoRoot, "data", "tool-registry.json");
 const trackerPath = path.join(repoRoot, "data", "tool-migration-tracker.json");
-const publishRoot = path.join(repoRoot, "publish");
-
 const registry = JSON.parse(readFileSync(registryPath, "utf8")).map((tool) => {
   if (!["subdomain", "path"].includes(tool.status)) {
     throw new Error(`Unsupported status "${tool.status}" for ${tool.id}`);
@@ -59,7 +57,6 @@ writeActiveToolsMarkdown();
 writeSitemap();
 writeToolUrlAudit();
 validateTemplates();
-writePublishBundle();
 
 function buildTemplates(relativeDir = ".") {
   const absoluteDir = path.join(templatesRoot, relativeDir);
@@ -270,76 +267,6 @@ function rewriteMigratedToolUrls(destinationDir) {
       if (rewritten !== original) {
         writeFileSync(entryPath, rewritten);
       }
-    }
-  }
-}
-
-function writePublishBundle() {
-  const stagedPublishRoot = path.join(repoRoot, ".publish-staging");
-  rmSync(stagedPublishRoot, { recursive: true, force: true });
-  mkdirSync(stagedPublishRoot, { recursive: true });
-
-  const topLevelFiles = [
-    "index.html",
-    "robots.txt",
-    "sitemap.xml",
-    "og-image.png",
-    "og-image.svg"
-  ];
-
-  const topLevelDirs = [...new Set([
-    "about",
-    "support",
-    "learn",
-    "tools",
-    "assets",
-    ...migratedTools.map((tool) => tool.slug)
-  ])];
-
-  for (const file of topLevelFiles) {
-    const sourcePath = path.join(repoRoot, file);
-    if (existsSync(sourcePath)) {
-      cpSync(sourcePath, path.join(stagedPublishRoot, file), { recursive: false });
-    }
-  }
-
-  for (const dir of topLevelDirs) {
-    const sourcePath = path.join(repoRoot, dir);
-    if (existsSync(sourcePath)) {
-      cpSync(sourcePath, path.join(stagedPublishRoot, dir), { recursive: true });
-    }
-  }
-
-  prunePublishBundle(stagedPublishRoot);
-  rmSync(publishRoot, { recursive: true, force: true });
-  renameSync(stagedPublishRoot, publishRoot);
-}
-
-function prunePublishBundle(rootDir) {
-  for (const entry of readdirSync(rootDir)) {
-    const entryPath = path.join(rootDir, entry);
-    const stats = statSync(entryPath);
-
-    if (stats.isDirectory() && / \d+$/.test(entry)) {
-      rmSync(entryPath, { recursive: true, force: true });
-      continue;
-    }
-
-    if (stats.isDirectory()) {
-      prunePublishBundle(entryPath);
-      continue;
-    }
-
-    const parsed = path.parse(entryPath);
-    const hasNumberedDuplicateName = / \d+$/.test(parsed.name);
-    const basename = path.basename(entryPath);
-    const isPublishOnlyTrimTarget =
-      basename === "tool-registry.js" ||
-      basename === "og-image.svg" ||
-      /^mobile-pass(?:-\d+)?\.png$/.test(basename);
-
-    if (basename === ".DS_Store" || hasNumberedDuplicateName || isPublishOnlyTrimTarget) {
-      rmSync(entryPath, { force: true });
     }
   }
 }

@@ -20,9 +20,9 @@ Each tool entry includes:
 1. Change that tool's `status` in `data/tool-registry.json` from `subdomain` to `path`.
 2. Make sure the tool is marked complete in `data/tool-migration-tracker.json` and includes its `toolRepoPath`.
 3. Run `npm run build`.
-4. Publish this repo.
+4. Commit and push this repo, then deploy the repo root output.
 
-To migrate a tool, change its status in `data/tool-registry.json` from subdomain to path, regenerate if needed, then publish this repo.
+To migrate a tool, change its status in `data/tool-registry.json` from subdomain to path, regenerate if needed, then deploy this repo.
 
 ## What the build updates
 
@@ -38,5 +38,6 @@ To migrate a tool, change its status in `data/tool-registry.json` from subdomain
 - Default behavior preserves current traffic by keeping every tool in `subdomain` mode.
 - Only tools marked `path` are added to the root-domain calculator URLs in `sitemap.xml`.
 - Tools marked `path` are only published into root path folders when their tracker entry is complete and has a valid `toolRepoPath`.
+- The repo root is now the single deployable site output. There is no separate `publish/` bundle.
 - The repo remains static-friendly: published files are plain HTML, CSS, JS, XML, and Markdown.
 - `debt-to-income-ratio-calculator` remains in the registry because it is still linked in the current site, even though it was not part of the supplied migration list.
