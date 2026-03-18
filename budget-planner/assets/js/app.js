@@ -701,7 +701,7 @@
     }
     if (metrics.surplus > 0) {
       suggestions.push({
-        href: "https://investment.simplekit.app/",
+        href: "https://simplekit.app/compound-interest-calculator/",
         label: "Project your savings growth",
       });
       suggestions.push({

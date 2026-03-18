@@ -758,7 +758,7 @@ function renderPrimaryResults(summary) {
   } else if (summary.inputs.investMonthlySavings || summary.inputs.investUpfrontCapital) {
     nextToolHeading.textContent = "Use the Compound Interest Calculator next";
     nextToolCopy.textContent = "Renting is ahead largely because invested savings matter. Pressure-test the return assumption with a dedicated compounding view.";
-    nextToolLink.href = "https://investment.simplekit.app/";
+    nextToolLink.href = "https://simplekit.app/compound-interest-calculator/";
   } else {
     nextToolHeading.textContent = "Use the Net Worth Calculator next";
     nextToolCopy.textContent = "If the housing decision is close, zoom out and see how it fits inside your full financial picture.";

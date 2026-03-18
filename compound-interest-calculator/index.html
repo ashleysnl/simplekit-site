@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compound Interest Calculator (Investment Growth With Contributions) | SimpleKit</title>
+  <meta
+    name="description"
+    content="Use this compound interest calculator to model investment growth over time with recurring contributions, fees, inflation, and compounding in one simple view."
+  >
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://simplekit.app/compound-interest-calculator/">
+  <meta property="og:title" content="Compound Interest Calculator (Investment Growth With Contributions) | SimpleKit">
+  <meta
+    property="og:description"
+    content="Model compound interest with contributions, fees, inflation, and compound growth in one clear investment calculator from SimpleKit."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplekit.app/compound-interest-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compound Interest Calculator (Investment Growth With Contributions) | SimpleKit">
+  <meta
+    name="twitter:description"
+    content="See how an initial investment plus recurring contributions may grow over time with compounding, fees, and inflation."
+  >
+  <meta name="theme-color" content="#0f6abf">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "SimpleKit Compound Interest Calculator",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "inLanguage": "en-CA",
+          "url": "https://simplekit.app/compound-interest-calculator/",
+          "description": "A browser-based compound interest calculator for modeling investment growth, recurring contributions, fees, inflation, and compound growth over time."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is compound interest?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Compound interest means your money can earn growth on both the amount you invest and the returns already earned, which can make long-term growth accelerate over time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should I contribute?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Whatever schedule you can maintain consistently is usually best. Monthly, biweekly, or annual contributions can all work, but recurring contributions generally increase long-term compound growth."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this calculator include inflation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can view inflation-adjusted results to translate future balances into today's purchasing-power terms."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do fees affect long-term growth?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fees reduce the return that stays invested, which lowers the amount that compounds for you over time and can create a meaningful long-term drag on ending value."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this compound interest calculator include contributions?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can model recurring monthly, biweekly, or annual contributions, an optional annual increase in contributions, and one future lump-sum addition."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why adjust for inflation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inflation adjustment helps translate future dollars into today's purchasing-power terms so you can compare nominal compound growth with real-world spending value."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+
+  <link rel="preconnect" href="https://core.simplekit.app">
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "compound-interest-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "SimpleKit Compound Interest Calculator runs fully in the browser with the shared platform shell.",
+      supportTitle: "Support more practical SimpleKit tools",
+      supportCopy: "If this compound interest calculator helped you think more clearly about long-term investing, you can help fund the next SimpleKit update.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="page-shell growth-shell">
+    <header class="hero hero-growth" aria-labelledby="pageTitle">
+      <div data-simplekit-header></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">SimpleKit Compound Interest Calculator</p>
+        <h1 id="pageTitle">Compound Interest Calculator</h1>
+        <p class="hero-subtitle">Investment Growth With Contributions</p>
+        <p class="hero-proof">
+          Use this compound interest calculator to estimate how an initial investment plus recurring contributions may grow over time. It includes compound growth, fees, inflation, and a clear breakdown of contribution versus investment growth.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#calculatorSection">Calculate Compound Growth</a>
+          <a class="btn btn-secondary" href="#learnSection">Learn about compound interest</a>
+        </div>
+        <div class="hero-trust-row" aria-label="Compound interest calculator highlights">
+          <span>Includes recurring contributions</span>
+          <span>Accounts for fees and inflation</span>
+          <span>Visual growth breakdown</span>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="Quick summary">
+        <article class="hero-highlight">
+          <span class="mini-kicker">What this tool answers</span>
+          <strong>How much can compound interest grow your portfolio?</strong>
+          <p>See how your initial investment, recurring contributions, and compound growth work together over time.</p>
+        </article>
+        <div class="hero-mini-grid">
+          <div>
+            <span class="mini-summary-label">Best for</span>
+            <strong>Retirement, TFSA, RRSP, and general investing scenarios with recurring contributions</strong>
+          </div>
+          <div>
+            <span class="mini-summary-label">Built for clarity</span>
+            <strong>Compound growth summary cards, charts, and a year-by-year table</strong>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <main id="mainContent" class="page-flow">
+      <section id="calculatorSection" class="panel calculator-panel" aria-labelledby="calculatorHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Quick start</p>
+            <h2 id="calculatorHeading">Start with your compound interest assumptions</h2>
+          </div>
+          <p>Enter the core numbers first, then refine the scenario with fees, inflation, and compounding details if you want a more realistic result.</p>
+        </div>
+
+        <div class="quick-start-strip" aria-label="How to use this calculator">
+          <article class="quick-start-item quick-start-item-wide">
+            <span class="trust-label">Start simple</span>
+            <strong>Enter the basics, review the first answer, then improve realism only if you need to.</strong>
+            <p>Initial investment, contributions, return, and time horizon are enough for a useful first pass. Fees, inflation, ages, and contribution growth are there when you want a more realistic scenario.</p>
+            <p class="muted small-copy">If you are unsure, keep the defaults and start simple.</p>
+          </article>
+        </div>
+
+        <div class="calculator-layout">
+          <form id="growthForm" class="calculator-card no-print" novalidate>
+            <div class="form-toolbar">
+              <div>
+                <strong>Inputs update the results instantly</strong>
+                <p class="muted small-copy">Defaults are preloaded so you can see a realistic example immediately.</p>
+              </div>
+              <div class="toolbar-actions">
+                <button id="sampleScenarioBtn" class="btn btn-secondary-panel" type="button">Load sample scenario</button>
+                <button id="resetBtn" class="btn btn-tertiary" type="button">Reset</button>
+              </div>
+            </div>
+
+            <section class="input-card">
+              <div class="input-card-head">
+                <div>
+                  <span class="step-kicker">Core inputs</span>
+                  <h3>Start with these core inputs</h3>
+                </div>
+                <p>This is enough for a strong first estimate. Everything else below improves realism.</p>
+              </div>
+
+              <div class="calculator-grid">
+                <label class="form-field">
+                  <span>Initial Investment</span>
+                  <input id="startingAmount" name="startingAmount" type="number" inputmode="decimal" min="0" step="100">
+                  <small>What you already have invested today before new compound growth begins.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Contribution Amount</span>
+                  <input id="recurringContribution" name="recurringContribution" type="number" inputmode="decimal" min="0" step="25">
+                  <small>The amount you plan to add on your chosen contribution schedule.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Contribution frequency</span>
+                  <select id="contributionFrequency" name="contributionFrequency">
+                    <option value="monthly">Monthly</option>
+                    <option value="biweekly">Biweekly</option>
+                    <option value="annually">Annually</option>
+                  </select>
+                  <small>Pick the cadence that matches how you actually invest.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Expected Annual Return</span>
+                  <input id="annualReturn" name="annualReturn" type="number" inputmode="decimal" step="0.1">
+                  <small>Estimated yearly investment return before fees and inflation.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Investment Length</span>
+                  <input id="years" name="years" type="number" inputmode="decimal" min="1" step="1">
+                  <small>How long your money stays invested and compounding.</small>
+                </label>
+
+              </div>
+            </section>
+
+            <details class="advanced-panel">
+              <summary>Improve realism</summary>
+              <div class="advanced-grid">
+                <label class="form-field">
+                  <span>Extra months</span>
+                  <input id="extraMonths" name="extraMonths" type="number" inputmode="decimal" min="0" max="11" step="1">
+                  <small>Use this only if you want more precision than full years.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Compounding Frequency</span>
+                  <select id="compoundingFrequency" name="compoundingFrequency">
+                    <option value="annually">Annually</option>
+                    <option value="semiannually">Semi-annually</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="monthly" selected>Monthly</option>
+                  </select>
+                  <small>Monthly is a sensible default if you are unsure how often returns compound.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Inflation Rate</span>
+                  <input id="inflationRate" name="inflationRate" type="number" inputmode="decimal" min="0" step="0.1">
+                  <small>Use this to translate future dollars into today’s purchasing power.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Annual Fees</span>
+                  <input id="annualFee" name="annualFee" type="number" inputmode="decimal" min="0" step="0.01">
+                  <small>Even small annual fees can reduce long-term growth.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Annual contribution increase (%)</span>
+                  <input id="contributionIncrease" name="contributionIncrease" type="number" inputmode="decimal" min="0" step="0.1">
+                  <small>Useful if you expect your savings rate to rise with income.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Start age</span>
+                  <input id="startAge" name="startAge" type="number" inputmode="decimal" min="0" max="100" step="1">
+                  <small>Optional, but helpful for retirement-focused scenarios.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>End age</span>
+                  <input id="endAge" name="endAge" type="number" inputmode="decimal" min="0" max="120" step="0.5">
+                  <small id="ageModeHint">Auto-calculated from the investment period unless you turn on the override.</small>
+                </label>
+
+                <label class="checkbox-field">
+                  <input id="overrideEndAge" name="overrideEndAge" type="checkbox">
+                  <span>Use target age instead of time horizon</span>
+                </label>
+
+                <label class="checkbox-field">
+                  <input id="showRealValues" name="showRealValues" type="checkbox">
+                  <span>Show results in today’s dollars</span>
+                </label>
+
+                <label class="checkbox-field">
+                  <input id="includeFees" name="includeFees" type="checkbox" checked>
+                  <span>Include fees in the projection</span>
+                </label>
+
+                <label class="form-field">
+                  <span>Future lump-sum contribution</span>
+                  <input id="futureLumpSum" name="futureLumpSum" type="number" inputmode="decimal" min="0" step="100">
+                  <small>For a one-time extra deposit such as a bonus, inheritance, or account transfer.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Lump-sum year</span>
+                  <input id="futureLumpSumYear" name="futureLumpSumYear" type="number" inputmode="decimal" min="1" step="1">
+                  <small>Applies at the end of that year.</small>
+                </label>
+              </div>
+            </details>
+          </form>
+
+          <div class="results-stack">
+            <section id="summarySection" class="results-shell" aria-labelledby="summaryHeading">
+              <div class="results-block-head">
+                <div>
+                  <p class="section-kicker">Results</p>
+                  <h3 id="summaryHeading">Your compound growth</h3>
+                </div>
+                <p id="resultsModeText">Values shown in nominal dollars.</p>
+              </div>
+
+              <div id="headlineResult" class="headline-result" aria-live="polite"></div>
+
+              <div id="resultCards" class="result-grid result-grid-secondary" aria-live="polite"></div>
+
+              <section class="interpretation-shell" aria-labelledby="interpretationHeading">
+                <div class="results-block-head compact-head">
+                  <div>
+                    <p class="section-kicker">Understand this compound growth result</p>
+                    <h4 id="interpretationHeading">Main takeaway</h4>
+                  </div>
+                  <p>A quick read on what this estimate means and the next realism check worth trying.</p>
+                </div>
+                <div id="insightSummary" class="insight-summary"></div>
+                <div id="interpretationCards" class="interpretation-grid"></div>
+              </section>
+
+              <div id="assumptionsNote" class="results-status">
+                Results are estimates, not guarantees. Returns, inflation, fees, and contribution increases are user assumptions. Actual market performance will vary.
+              </div>
+            </section>
+
+            <section class="results-shell next-step-shell" aria-labelledby="nextStepHeading">
+              <div class="results-block-head compact-head">
+                <div>
+                  <p class="section-kicker">Best next tool</p>
+                  <h3 id="nextStepHeading">Best next tool for this scenario</h3>
+                </div>
+                <p>If you want to keep going, start with the recommended next tool below.</p>
+              </div>
+              <div id="nextStepCards" class="next-step-grid"></div>
+              <p class="results-stop-note">You now have a usable first-pass answer. You can stop here, or open the optional detail below.</p>
+              <details class="summary-details inline-summary-details">
+                <summary>Optional: read the plain-English summary</summary>
+                <p id="screenReaderSummary" class="plain-summary" aria-live="polite"></p>
+              </details>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel charts-panel optional-panel" aria-labelledby="chartsHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Optional charts</p>
+            <h2 id="chartsHeading">How compounding builds over time</h2>
+          </div>
+          <p>Optional visuals if you want to see how compound growth, contributions, and fees shape the result over time.</p>
+        </div>
+        <details class="optional-details">
+          <summary>See charts</summary>
+          <div class="chart-grid optional-section-inner">
+            <figure class="chart-card">
+              <figcaption>
+                <strong>How compound growth builds</strong>
+                <span class="muted small-copy">Projected portfolio value across the full investment timeline.</span>
+              </figcaption>
+              <div id="growthLineChart" class="chart-shell" role="img" aria-label="Line chart of projected portfolio value over time"></div>
+              <p id="growthChartTakeaway" class="chart-takeaway"></p>
+            </figure>
+
+            <figure class="chart-card">
+              <figcaption>
+                <strong>Contributions vs growth</strong>
+                <span class="muted small-copy">A stacked year-end view of total contributions, growth, and optional fee drag.</span>
+              </figcaption>
+              <div id="breakdownChart" class="chart-shell" role="img" aria-label="Stacked chart showing yearly contributions, growth, and fee drag"></div>
+              <p id="breakdownChartTakeaway" class="chart-takeaway"></p>
+            </figure>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel table-panel optional-panel" aria-labelledby="tableHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Detail</p>
+            <h2 id="tableHeading">Optional planner detail</h2>
+          </div>
+          <p>Open this only if you want a year-by-year breakdown of how the balance changes.</p>
+        </div>
+
+        <details class="table-details">
+          <summary>See yearly detail</summary>
+          <div class="table-toolbar no-print">
+            <p class="muted small-copy">Optional detail. The final row may be a partial year, and on mobile you can swipe sideways to see every column.</p>
+            <button id="downloadCsvBtn" class="btn btn-secondary-panel" type="button">Download CSV</button>
+          </div>
+          <div class="table-scroll">
+            <table class="projection-table">
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Starting balance</th>
+                  <th scope="col">Contributions</th>
+                  <th scope="col">Growth earned</th>
+                  <th scope="col">Fees deducted</th>
+                  <th scope="col">Ending balance</th>
+                  <th scope="col">Inflation-adjusted ending balance</th>
+                </tr>
+              </thead>
+              <tbody id="projectionTableBody"></tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+
+      <section id="learnSection" class="panel learn-panel optional-panel" aria-labelledby="learnHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Optional learning</p>
+            <h2 id="learnHeading">Compound interest explained in plain English</h2>
+          </div>
+          <p>Optional deeper reading if you want more context around compound interest, recurring contributions, fees, inflation, and common planning questions.</p>
+        </div>
+        <details class="optional-details">
+          <summary>Read guide</summary>
+          <div class="info-grid optional-section-inner">
+            <article class="info-card info-card-wide">
+              <h3>What is compound interest?</h3>
+              <p>Compound interest means your investment can earn growth on both the money you put in and the returns already earned. Over long periods, that snowball effect can become one of the biggest drivers of portfolio growth.</p>
+            </article>
+            <article class="info-card">
+              <h3>Why recurring contributions matter</h3>
+              <p>Regular monthly, biweekly, or annual contributions can meaningfully increase long-term results because each new deposit gets its own chance to compound over time.</p>
+            </article>
+            <article class="info-card">
+              <h3>How fees and inflation affect investment growth</h3>
+              <p>Even small annual fees reduce the amount left invested, which lowers future compound growth. Inflation also reduces future purchasing power, so a large future balance may still buy less than it does today.</p>
+            </article>
+            <article class="info-card">
+              <h3>Compound interest example</h3>
+              <p>If you invest $10,000 and add $500 per month, compound growth can have a much larger impact over decades than most people expect, especially once returns start building on earlier gains.</p>
+            </article>
+            <article class="info-card">
+              <h3>What to focus on first</h3>
+              <p>For most first-pass scenarios, the biggest levers are time invested, contribution consistency, and whether your return, fee, and inflation assumptions are realistic.</p>
+            </article>
+            <article class="info-card">
+              <h3>How to use this for retirement planning</h3>
+              <p>Use this calculator to pressure-test your contribution pace and long-term compound growth assumptions before moving into a fuller retirement plan.</p>
+            </article>
+            <article class="info-card">
+              <h3>Common mistakes to avoid</h3>
+              <p>Common mistakes include assuming guaranteed returns, skipping fees, ignoring inflation, or using a contribution schedule that does not match how you actually invest.</p>
+            </article>
+          </div>
+        </details>
+        <details class="optional-details secondary-optional">
+          <summary>Open the FAQ</summary>
+          <div class="faq-list optional-section-inner">
+            <details class="faq-item" open>
+              <summary>What is compound interest?</summary>
+              <p>Compound interest means your money can earn returns on both your original investment and the gains already earned, which is why long timelines can lead to much stronger growth.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How often should I contribute?</summary>
+              <p>The best schedule is usually the one you can sustain consistently. Monthly and biweekly contributions are common because they let new money start compounding sooner.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Does this calculator include inflation?</summary>
+              <p>Yes. You can turn on today’s-dollar results to see what the future balance may be worth after inflation.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do fees affect long-term growth?</summary>
+              <p>Fees reduce the amount of return left invested, which lowers both today’s gains and the future compounding of those gains.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Does this compound interest calculator include contributions?</summary>
+              <p>Yes. You can model monthly, biweekly, or annual contributions, optionally increase those contributions over time, and add one future lump sum.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Why should I adjust for inflation?</summary>
+              <p>Inflation adjustment helps you understand what a future balance may be worth in today’s dollars, which can be more useful for retirement or spending planning.</p>
+            </details>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel related-panel optional-panel" aria-labelledby="relatedHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Related tools</p>
+            <h2 id="relatedHeading">Related planning tools</h2>
+          </div>
+          <p>Optional next-step tools if you want to go deeper after this compound interest estimate.</p>
+        </div>
+        <details class="optional-details">
+          <summary>More tools</summary>
+          <div class="related-links optional-section-inner">
+            <a class="related-link-chip" href="https://fees.simplekit.app/" target="_blank" rel="noopener noreferrer">See how fees reduce long-term returns</a>
+            <a class="related-link-chip" href="https://rrsptfsa.simplekit.app/" target="_blank" rel="noopener noreferrer">Compare RRSP vs TFSA strategies</a>
+            <a class="related-link-chip" href="https://fire.simplekit.app/" target="_blank" rel="noopener noreferrer">FIRE Calculator</a>
+            <a class="related-link-chip" href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer">Retirement Planner</a>
+            <a class="related-link-chip" href="https://networth.simplekit.app/" target="_blank" rel="noopener noreferrer">Net Worth Calculator</a>
+          </div>
+        </details>
+      </section>
+
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
+  </div>
+
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

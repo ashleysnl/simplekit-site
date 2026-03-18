@@ -41,8 +41,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "compound-interest-calculator",
     "subdomainUrl": "https://investment.simplekit.app/",
     "pathUrl": "https://simplekit.app/compound-interest-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://investment.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/compound-interest-calculator/"
   },
   "savings-goal-calculator": {
     "id": "savings-goal-calculator",

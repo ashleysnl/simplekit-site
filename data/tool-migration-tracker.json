@@ -82,10 +82,10 @@
   {
     "id": "compound-interest-calculator",
     "name": "Compound Interest Calculator",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/43_SimpleKit Investment Growth",
+    "notes": "Aligned the compound interest calculator with the /compound-interest-calculator/ path, updated canonical and schema metadata from the old investment-growth path, fixed the shared-shell tools-nav target and tool identity, added path crawl metadata, and flipped the main-site registry to path mode."
   },
   {
     "id": "net-worth-calculator",

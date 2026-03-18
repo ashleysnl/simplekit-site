@@ -37,7 +37,7 @@
     "slug": "compound-interest-calculator",
     "subdomainUrl": "https://investment.simplekit.app/",
     "pathUrl": "https://simplekit.app/compound-interest-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "savings-goal-calculator",
