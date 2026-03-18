@@ -1,0 +1,450 @@
+{
+  "generatedAt": "2026-03-18T21:45:18.386Z",
+  "files": [
+    {
+      "file": "about/index.html",
+      "toolIds": [
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "index.html",
+      "toolIds": [
+        "budget-planner",
+        "canadian-tax-checklist",
+        "compound-interest-calculator",
+        "cpp-calculator",
+        "credit-card-interest-calculator",
+        "debt-payoff-calculator",
+        "debt-to-income-ratio-calculator",
+        "emergency-fund-calculator",
+        "fire-calculator",
+        "house-affordability-calculator",
+        "investment-fee-calculator",
+        "loan-calculator",
+        "mortgage-calculator",
+        "mortgage-paydown-vs-invest-calculator",
+        "net-worth-calculator",
+        "rent-vs-buy-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator",
+        "savings-goal-calculator",
+        "take-home-pay-calculator",
+        "travel-planner"
+      ]
+    },
+    {
+      "file": "learn/cpp-basics/index.html",
+      "toolIds": [
+        "cpp-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "learn/fire-explained/index.html",
+      "toolIds": [
+        "fire-calculator",
+        "net-worth-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "learn/index.html",
+      "toolIds": [
+        "net-worth-calculator",
+        "retirement-planner",
+        "travel-planner"
+      ]
+    },
+    {
+      "file": "learn/net-worth-basics/index.html",
+      "toolIds": [
+        "fire-calculator",
+        "net-worth-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "learn/retirement-planning-basics/index.html",
+      "toolIds": [
+        "cpp-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "learn/rrsp-vs-tfsa-basics/index.html",
+      "toolIds": [
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "learn/travel-budget-planning-basics/index.html",
+      "toolIds": [
+        "travel-planner"
+      ]
+    },
+    {
+      "file": "simplekit-active-tools.md",
+      "toolIds": [
+        "budget-planner",
+        "canadian-tax-checklist",
+        "compound-interest-calculator",
+        "cpp-calculator",
+        "credit-card-interest-calculator",
+        "debt-payoff-calculator",
+        "emergency-fund-calculator",
+        "fire-calculator",
+        "house-affordability-calculator",
+        "investment-fee-calculator",
+        "loan-calculator",
+        "mortgage-calculator",
+        "mortgage-paydown-vs-invest-calculator",
+        "net-worth-calculator",
+        "rent-vs-buy-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator",
+        "savings-goal-calculator",
+        "take-home-pay-calculator",
+        "travel-planner"
+      ]
+    },
+    {
+      "file": "support/index.html",
+      "toolIds": [
+        "cpp-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "tools/budget-planner/index.html",
+      "toolIds": [
+        "budget-planner",
+        "compound-interest-calculator",
+        "debt-payoff-calculator",
+        "net-worth-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "tools/cpp-calculator/index.html",
+      "toolIds": [
+        "cpp-calculator",
+        "fire-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "tools/debt-payoff-calculator/index.html",
+      "toolIds": [
+        "compound-interest-calculator",
+        "debt-payoff-calculator",
+        "mortgage-calculator",
+        "net-worth-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "tools/emergency-fund-calculator/index.html",
+      "toolIds": [
+        "budget-planner",
+        "compound-interest-calculator",
+        "debt-payoff-calculator",
+        "emergency-fund-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "tools/fire-calculator/index.html",
+      "toolIds": [
+        "fire-calculator",
+        "net-worth-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "tools/index.html",
+      "toolIds": [
+        "budget-planner",
+        "canadian-tax-checklist",
+        "compound-interest-calculator",
+        "cpp-calculator",
+        "credit-card-interest-calculator",
+        "debt-payoff-calculator",
+        "debt-to-income-ratio-calculator",
+        "emergency-fund-calculator",
+        "fire-calculator",
+        "house-affordability-calculator",
+        "investment-fee-calculator",
+        "loan-calculator",
+        "mortgage-calculator",
+        "mortgage-paydown-vs-invest-calculator",
+        "net-worth-calculator",
+        "rent-vs-buy-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator",
+        "savings-goal-calculator",
+        "take-home-pay-calculator",
+        "travel-planner"
+      ]
+    },
+    {
+      "file": "tools/investment-growth-calculator/index.html",
+      "toolIds": [
+        "compound-interest-calculator",
+        "investment-fee-calculator",
+        "net-worth-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "tools/loan-calculator/index.html",
+      "toolIds": [
+        "budget-planner",
+        "debt-payoff-calculator",
+        "loan-calculator",
+        "mortgage-calculator",
+        "rent-vs-buy-calculator"
+      ]
+    },
+    {
+      "file": "tools/net-worth-calculator/index.html",
+      "toolIds": [
+        "fire-calculator",
+        "net-worth-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "tools/rent-vs-buy-calculator/index.html",
+      "toolIds": [
+        "compound-interest-calculator",
+        "mortgage-calculator",
+        "mortgage-paydown-vs-invest-calculator",
+        "rent-vs-buy-calculator",
+        "retirement-planner"
+      ]
+    },
+    {
+      "file": "tools/retirement-planner/index.html",
+      "toolIds": [
+        "cpp-calculator",
+        "fire-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "tools/rrsp-tfsa-calculator/index.html",
+      "toolIds": [
+        "cpp-calculator",
+        "net-worth-calculator",
+        "retirement-planner",
+        "rrsp-vs-tfsa-calculator"
+      ]
+    },
+    {
+      "file": "tools/savings-goal-calculator/index.html",
+      "toolIds": [
+        "budget-planner",
+        "compound-interest-calculator",
+        "emergency-fund-calculator",
+        "retirement-planner",
+        "savings-goal-calculator"
+      ]
+    },
+    {
+      "file": "tools/travel-planner/index.html",
+      "toolIds": [
+        "net-worth-calculator",
+        "travel-planner"
+      ]
+    }
+  ],
+  "byTool": {
+    "retirement-planner": [
+      "about/index.html",
+      "index.html",
+      "learn/cpp-basics/index.html",
+      "learn/fire-explained/index.html",
+      "learn/index.html",
+      "learn/net-worth-basics/index.html",
+      "learn/retirement-planning-basics/index.html",
+      "learn/rrsp-vs-tfsa-basics/index.html",
+      "simplekit-active-tools.md",
+      "support/index.html",
+      "tools/budget-planner/index.html",
+      "tools/cpp-calculator/index.html",
+      "tools/debt-payoff-calculator/index.html",
+      "tools/emergency-fund-calculator/index.html",
+      "tools/fire-calculator/index.html",
+      "tools/index.html",
+      "tools/investment-growth-calculator/index.html",
+      "tools/net-worth-calculator/index.html",
+      "tools/rent-vs-buy-calculator/index.html",
+      "tools/retirement-planner/index.html",
+      "tools/rrsp-tfsa-calculator/index.html",
+      "tools/savings-goal-calculator/index.html"
+    ],
+    "fire-calculator": [
+      "index.html",
+      "learn/fire-explained/index.html",
+      "learn/net-worth-basics/index.html",
+      "simplekit-active-tools.md",
+      "tools/cpp-calculator/index.html",
+      "tools/fire-calculator/index.html",
+      "tools/index.html",
+      "tools/net-worth-calculator/index.html",
+      "tools/retirement-planner/index.html"
+    ],
+    "cpp-calculator": [
+      "index.html",
+      "learn/cpp-basics/index.html",
+      "learn/retirement-planning-basics/index.html",
+      "simplekit-active-tools.md",
+      "support/index.html",
+      "tools/cpp-calculator/index.html",
+      "tools/index.html",
+      "tools/retirement-planner/index.html",
+      "tools/rrsp-tfsa-calculator/index.html"
+    ],
+    "rrsp-vs-tfsa-calculator": [
+      "index.html",
+      "learn/rrsp-vs-tfsa-basics/index.html",
+      "simplekit-active-tools.md",
+      "tools/cpp-calculator/index.html",
+      "tools/fire-calculator/index.html",
+      "tools/index.html",
+      "tools/investment-growth-calculator/index.html",
+      "tools/net-worth-calculator/index.html",
+      "tools/retirement-planner/index.html",
+      "tools/rrsp-tfsa-calculator/index.html"
+    ],
+    "compound-interest-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/budget-planner/index.html",
+      "tools/debt-payoff-calculator/index.html",
+      "tools/emergency-fund-calculator/index.html",
+      "tools/index.html",
+      "tools/investment-growth-calculator/index.html",
+      "tools/rent-vs-buy-calculator/index.html",
+      "tools/savings-goal-calculator/index.html"
+    ],
+    "savings-goal-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html",
+      "tools/savings-goal-calculator/index.html"
+    ],
+    "emergency-fund-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/emergency-fund-calculator/index.html",
+      "tools/index.html",
+      "tools/savings-goal-calculator/index.html"
+    ],
+    "net-worth-calculator": [
+      "index.html",
+      "learn/fire-explained/index.html",
+      "learn/index.html",
+      "learn/net-worth-basics/index.html",
+      "simplekit-active-tools.md",
+      "tools/budget-planner/index.html",
+      "tools/debt-payoff-calculator/index.html",
+      "tools/fire-calculator/index.html",
+      "tools/index.html",
+      "tools/investment-growth-calculator/index.html",
+      "tools/net-worth-calculator/index.html",
+      "tools/rrsp-tfsa-calculator/index.html",
+      "tools/travel-planner/index.html"
+    ],
+    "budget-planner": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/budget-planner/index.html",
+      "tools/emergency-fund-calculator/index.html",
+      "tools/index.html",
+      "tools/loan-calculator/index.html",
+      "tools/savings-goal-calculator/index.html"
+    ],
+    "take-home-pay-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html"
+    ],
+    "debt-payoff-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/budget-planner/index.html",
+      "tools/debt-payoff-calculator/index.html",
+      "tools/emergency-fund-calculator/index.html",
+      "tools/index.html",
+      "tools/loan-calculator/index.html"
+    ],
+    "credit-card-interest-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html"
+    ],
+    "loan-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html",
+      "tools/loan-calculator/index.html"
+    ],
+    "house-affordability-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html"
+    ],
+    "rent-vs-buy-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html",
+      "tools/loan-calculator/index.html",
+      "tools/rent-vs-buy-calculator/index.html"
+    ],
+    "mortgage-paydown-vs-invest-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html",
+      "tools/rent-vs-buy-calculator/index.html"
+    ],
+    "investment-fee-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html",
+      "tools/investment-growth-calculator/index.html"
+    ],
+    "mortgage-calculator": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/debt-payoff-calculator/index.html",
+      "tools/index.html",
+      "tools/loan-calculator/index.html",
+      "tools/rent-vs-buy-calculator/index.html"
+    ],
+    "canadian-tax-checklist": [
+      "index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html"
+    ],
+    "travel-planner": [
+      "index.html",
+      "learn/index.html",
+      "learn/travel-budget-planning-basics/index.html",
+      "simplekit-active-tools.md",
+      "tools/index.html",
+      "tools/travel-planner/index.html"
+    ],
+    "debt-to-income-ratio-calculator": [
+      "index.html",
+      "tools/index.html"
+    ]
+  }
+}

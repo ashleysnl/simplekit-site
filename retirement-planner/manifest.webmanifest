@@ -1,0 +1,24 @@
+{
+  "name": "Canadian Retirement Planner",
+  "short_name": "Retirement",
+  "description": "Local-first Canadian retirement planning app with guided setup and advanced tax-aware modeling.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0f6abf",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

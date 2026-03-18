@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting…</title>
+</head>
+<body>
+  <script>
+    (function () {
+      var path = location.pathname + location.search + location.hash;
+      var target = "./index.html#notfound=" + encodeURIComponent(path);
+      location.replace(target);
+    })();
+  </script>
+</body>
+</html>
+

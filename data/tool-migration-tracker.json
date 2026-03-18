@@ -1,0 +1,162 @@
+[
+  {
+    "id": "retirement-planner",
+    "name": "Retirement Planner",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Retirement Planner V3",
+    "notes": "Moved the retirement planner mini-site to /retirement-planner/, updated planner and subpage public URLs, fixed path crawl metadata, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "cpp-calculator",
+    "name": "CPP Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/32_Simplekit CPP Calculator",
+    "notes": "Updated the CPP calculator repo for the /cpp-calculator/ path and flipped the main-site registry plus sitemap/link generation to path mode."
+  },
+  {
+    "id": "take-home-pay-calculator",
+    "name": "Canadian Take Home Pay Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/take-home-pay-canada",
+    "notes": "Updated canonical and schema URLs for the /take-home-pay-calculator/ path, added path crawl metadata, refreshed shared tool links, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "name": "Debt Payoff Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/44_SimpleKitDebt",
+    "notes": "Aligned the debt tool with the /debt-payoff-calculator/ path, added path crawl metadata, updated shared-shell tool identity, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "mortgage-calculator",
+    "name": "Mortgage Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/40_SimpleKit Mortgage Projection",
+    "notes": "Aligned the mortgage calculator with the /mortgage-calculator/ path, updated the shared-shell tool identity, added path crawl metadata, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "house-affordability-calculator",
+    "name": "House Affordability Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/house-affordability",
+    "notes": "Aligned the house affordability calculator with the /house-affordability-calculator/ path, updated canonical and social metadata, set the shared-shell tool identity to the canonical slug, added path crawl metadata, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "credit-card-interest-calculator",
+    "name": "Credit Card Interest Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/credit-card",
+    "notes": "Aligned the credit card interest calculator with the /credit-card-interest-calculator/ path, updated canonical and social metadata, refreshed the local shared tool link map for already-migrated tools, added path crawl metadata, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "loan-calculator",
+    "name": "Loan Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/48_SimpleKit Loan Calculator",
+    "notes": "Aligned the loan calculator with the /loan-calculator/ path, fixed the shared-shell tools-nav target, added path crawl metadata, and flipped the main-site registry to path mode."
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "name": "Rent vs Buy Calculator",
+    "completed": true,
+    "completedAt": "2026-03-17",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/46_SimpleKit RentVsBuy",
+    "notes": "Aligned the rent vs buy calculator with the /rent-vs-buy-calculator/ path, fixed the shared-shell tools-nav target, added path crawl metadata, flipped the main-site registry to path mode, and taught the build to rewrite copied SimpleKit tool URLs from the central registry."
+  },
+  {
+    "id": "budget-planner",
+    "name": "Budget Planner",
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/45_Simplekit Budget Planner",
+    "notes": "Aligned the budget planner with the /budget-planner/ path, fixed the shared-shell tools-nav target, added path crawl metadata, flipped the main-site registry to path mode, and expanded copied-site URL rewrites to normalize doubled-slash subdomain links."
+  },
+  {
+    "id": "compound-interest-calculator",
+    "name": "Compound Interest Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "net-worth-calculator",
+    "name": "Net Worth Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "savings-goal-calculator",
+    "name": "Savings Goal Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "name": "Emergency Fund Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "mortgage-paydown-vs-invest-calculator",
+    "name": "Mortgage Paydown vs Invest",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "investment-fee-calculator",
+    "name": "Investment Fee Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "rrsp-vs-tfsa-calculator",
+    "name": "RRSP / TFSA Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "fire-calculator",
+    "name": "FIRE Calculator",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "canadian-tax-checklist",
+    "name": "Canadian Tax Checklist",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  },
+  {
+    "id": "travel-planner",
+    "name": "Travel Planner",
+    "completed": false,
+    "completedAt": null,
+    "toolRepoPath": null,
+    "notes": ""
+  }
+]

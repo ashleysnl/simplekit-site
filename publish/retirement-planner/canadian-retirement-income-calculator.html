@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canadian Retirement Income Calculator | Canadian Retirement Planner</title>
+  <meta name="description" content="Use this Canadian retirement income calculator to estimate spending coverage from pension, CPP, OAS, and RRSP/RRIF withdrawals, including taxes and OAS clawback." />
+  <link rel="canonical" href="https://simplekit.app/retirement-planner/canadian-retirement-income-calculator.html" />
+  <meta property="og:title" content="Canadian Retirement Income Calculator" />
+  <meta property="og:description" content="See where retirement income comes from each year and how taxes change withdrawals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://simplekit.app/retirement-planner/canadian-retirement-income-calculator.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this include federal and provincial tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The simulator uses planning-level federal plus provincial tax estimates based on your selected province."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I include CPP, OAS, and a workplace pension together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Guaranteed income sources are modeled together and shown in the income coverage visuals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is gross withdrawal bigger than my spending gap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because RRSP/RRIF withdrawals are taxable. Gross withdrawal must cover both your net gap and tax owed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this overwrite my existing plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Shared presets open as a preview. You explicitly choose whether to apply them."
+          }
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://simplekit.app/retirement-planner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Canadian Retirement Income Calculator",
+          "item": "https://simplekit.app/retirement-planner/canadian-retirement-income-calculator.html"
+        }
+      ]
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="panel landing-panel">
+      <h1>Canadian Retirement Income Calculator</h1>
+      <p class="muted">Estimate how your retirement spending is funded by pension, CPP, OAS, and RRSP/RRIF withdrawals.</p>
+      <p class="small-copy muted">Built for Canadians who want a clear income map, tax wedge visibility, and OAS clawback awareness.</p>
+      <div class="landing-actions">
+        <a class="btn btn-primary" href="./index.html?preset=retirement-income#dashboard">Open calculator with this preset</a>
+        <a class="btn btn-secondary" href="./index.html#learn">Learn the basics</a>
+      </div>
+      <ul class="plain-list">
+        <li>After-tax spending target vs guaranteed income</li>
+        <li>Net gap from savings and gross RRSP/RRIF withdrawal</li>
+        <li>Tax wedge visibility by age/year</li>
+        <li>RRIF minimum and clawback impacts</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>How this retirement income calculator works</h2>
+      <p>You enter your retirement timeline, spending goal, savings, and income sources. The simulator then estimates year-by-year cash flow and tax drag using planning-level Canadian assumptions.</p>
+      <p>The key output is simple: how much of spending is covered by guaranteed income, how much must come from registered savings, and how much extra must be withdrawn to cover tax.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Who this page is for</h2>
+      <ul class="plain-list">
+        <li>Pre-retirees who want to test if their plan is funded</li>
+        <li>Retirees checking tax pressure from RRIF withdrawals</li>
+        <li>Anyone comparing CPP/OAS timing and clawback risk</li>
+      </ul>
+      <p class="small-copy muted">Planning estimate only. Not financial, tax, or legal advice.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Frequently asked questions</h2>
+      <details class="subsection">
+        <summary>Does this include federal and provincial tax?</summary>
+        <p class="muted">Yes. The simulator uses planning-level federal plus provincial tax estimates based on your selected province.</p>
+      </details>
+      <details class="subsection">
+        <summary>Can I include CPP, OAS, and a workplace pension together?</summary>
+        <p class="muted">Yes. Guaranteed income sources are modeled together and shown in the income coverage visuals.</p>
+      </details>
+      <details class="subsection">
+        <summary>Why is gross withdrawal bigger than my spending gap?</summary>
+        <p class="muted">Because RRSP/RRIF withdrawals are taxable. Gross withdrawal must cover both your net gap and tax owed.</p>
+      </details>
+      <details class="subsection">
+        <summary>Will this overwrite my existing plan?</summary>
+        <p class="muted">No. Shared presets open as a preview. You explicitly choose whether to apply them.</p>
+      </details>
+    </section>
+
+    <section class="panel flagship-card">
+      <h2>Why use the full planner?</h2>
+      <p class="muted">This page shows one cash-flow view. The full planner connects income, spending, taxes, OAS clawback, RRIF minimums, and long-term sustainability in one plan.</p>
+      <div class="landing-actions">
+        <a class="btn btn-primary" href="./index.html#start">Open the full planner</a>
+        <a class="btn btn-secondary" href="./index.html#dashboard">See planner results</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Related Canada retirement calculators</h2>
+      <p class="small-copy muted">
+        <a href="./oas-clawback-calculator.html">OAS clawback calculator</a> |
+        <a href="./rrif-withdrawal-calculator.html">RRIF withdrawal calculator</a> |
+        <a href="./rrif-minimum-withdrawal-calculator.html">RRIF minimum withdrawal calculator</a> |
+        <a href="./cpp-timing-calculator-canada.html">CPP timing calculator Canada</a> |
+        <a href="./retirement-tax-calculator-canada.html">Retirement tax calculator Canada</a> |
+        <a href="./rrsp-withdrawal-strategy-canada.html">RRSP withdrawal strategy Canada</a>
+      </p>
+      <p class="small-copy">Trust and references: <a href="./index.html#methodology">Methodology &amp; Sources</a> | <a href="./index.html#about">About</a> | <a href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support this free tool</a></p>
+    </section>
+  </main>
+</body>
+</html>
