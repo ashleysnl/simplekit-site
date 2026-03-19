@@ -185,8 +185,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "debt-to-income-ratio-calculator",
     "subdomainUrl": "https://dti.simplekit.app/",
     "pathUrl": "https://simplekit.app/debt-to-income-ratio-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://dti.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/debt-to-income-ratio-calculator/"
   }
 });
 
