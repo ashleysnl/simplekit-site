@@ -1,0 +1,11 @@
+{
+  "name": "Travel Planner | SimpleKit",
+  "short_name": "Travel Planner",
+  "description": "Plan trips, itinerary details, and budget scenarios in one offline-friendly travel planner.",
+  "start_url": "/travel-planner/",
+  "scope": "/travel-planner/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0f6abf",
+  "icons": []
+}

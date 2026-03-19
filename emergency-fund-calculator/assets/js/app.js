@@ -432,7 +432,7 @@
       { href: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/", label: "Mortgage Paydown vs Invest" },
       { href: "https://simplekit.app/mortgage-calculator/", label: "Mortgage Calculator" },
       { href: "https://simplekit.app/investment-fee-calculator/", label: "Investment Fee Calculator" },
-      { href: "https://travel.simplekit.app/", label: "Travel Planner" },
+      { href: "https://simplekit.app/travel-planner/", label: "Travel Planner" },
     ];
 
     const toolsSectionMatch = findFooterSection(footerRoot, "Tools");

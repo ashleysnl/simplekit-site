@@ -15,7 +15,7 @@ window.SimpleKitToolLinks = Object.freeze({
   mortgagePaydownVsInvestCalculator: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
   mortgageCalculator: "https://simplekit.app/mortgage-calculator/",
   investmentFeeCalculator: "https://simplekit.app/investment-fee-calculator/",
-  travelPlanner: "https://travel.simplekit.app/"
+  travelPlanner: "https://simplekit.app/travel-planner/"
 });
 
 window.getSimpleKitToolUrl = function getSimpleKitToolUrl(toolKey) {

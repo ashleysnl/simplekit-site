@@ -19,4 +19,4 @@
 17. [Investment Fee Calculator](https://simplekit.app/investment-fee-calculator/)
 18. [Mortgage Calculator](https://simplekit.app/mortgage-calculator/)
 19. [Canadian Tax Checklist](https://simplekit.app/canadian-tax-checklist/)
-20. [Travel Planner](https://travel.simplekit.app/)
+20. [Travel Planner](https://simplekit.app/travel-planner/)

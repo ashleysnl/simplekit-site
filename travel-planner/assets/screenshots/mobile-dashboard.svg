@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1360" viewBox="0 0 760 1360" role="img" aria-labelledby="t d">
+  <title id="t">TravelPlanner Mobile Dashboard</title>
+  <desc id="d">Placeholder mobile screenshot showing budget cards and long itinerary list on a phone layout.</desc>
+  <rect width="760" height="1360" fill="#edf4ff"/>
+  <rect x="110" y="28" width="540" height="1304" rx="42" fill="#111827" opacity=".08"/>
+  <rect x="100" y="20" width="540" height="1304" rx="42" fill="#f8fbff" stroke="#dfe8f7"/>
+  <rect x="250" y="42" width="240" height="34" rx="17" fill="#111827"/>
+  <rect x="130" y="102" width="480" height="92" rx="24" fill="url(#hero)"/>
+  <text x="160" y="140" fill="#fff" font-size="20" font-family="Arial">TravelPlanner</text>
+  <text x="160" y="172" fill="#fff" font-size="28" font-weight="700" font-family="Arial">Dashboard</text>
+  <rect x="486" y="118" width="96" height="50" rx="25" fill="#0ea5a8" opacity=".95"/>
+  <text x="516" y="151" fill="#fff" font-size="18" font-weight="700" font-family="Arial">Save</text>
+
+  <g>
+    <rect x="130" y="220" width="220" height="92" rx="18" fill="#fff" stroke="#e8edf5"/>
+    <rect x="360" y="220" width="220" height="92" rx="18" fill="#fff" stroke="#e8edf5"/>
+    <text x="150" y="252" fill="#6b7280" font-size="16" font-family="Arial">Planned (CDN)</text>
+    <text x="150" y="288" fill="#162033" font-size="26" font-weight="700" font-family="Arial">CA$5,644</text>
+    <text x="380" y="252" fill="#6b7280" font-size="16" font-family="Arial">Paid (CDN)</text>
+    <text x="380" y="288" fill="#162033" font-size="26" font-weight="700" font-family="Arial">CA$3,454</text>
+  </g>
+
+  <rect x="130" y="332" width="450" height="170" rx="18" fill="#fff" stroke="#e8edf5"/>
+  <text x="154" y="370" fill="#162033" font-size="22" font-weight="700" font-family="Arial">Budget Health</text>
+  <text x="154" y="410" fill="#162033" font-size="18" font-family="Arial">Planned vs Budget</text>
+  <rect x="154" y="426" width="402" height="16" rx="8" fill="#e9eef7"/>
+  <rect x="154" y="426" width="350" height="16" rx="8" fill="#4a90e2"/>
+  <text x="154" y="472" fill="#162033" font-size="18" font-family="Arial">Paid vs Budget</text>
+  <rect x="154" y="488" width="402" height="16" rx="8" fill="#e9eef7"/>
+  <rect x="154" y="488" width="224" height="16" rx="8" fill="#34d399"/>
+
+  <text x="130" y="560" fill="#162033" font-size="22" font-weight="700" font-family="Arial">Itinerary (Mobile View)</text>
+  <text x="130" y="590" fill="#6b7280" font-size="16" font-family="Arial">Long day-by-day list for readability on phone</text>
+
+  <g>
+    <rect x="130" y="614" width="480" height="132" rx="18" fill="#fff" stroke="#e8edf5"/>
+    <text x="154" y="650" fill="#162033" font-size="20" font-weight="700" font-family="Arial">Mon • Apr 27</text>
+    <rect x="154" y="668" width="208" height="34" rx="17" fill="#0f6abf"/>
+    <text x="172" y="690" fill="#fff" font-size="16" font-weight="700" font-family="Arial">Flight to Orlando</text>
+    <rect x="154" y="710" width="196" height="34" rx="17" fill="#ff8c42"/>
+    <text x="172" y="732" fill="#fff" font-size="16" font-weight="700" font-family="Arial">Hertz Car Rental</text>
+    <text x="372" y="732" fill="#6b7280" font-size="16" font-family="Arial">+1 more</text>
+  </g>
+
+  <g>
+    <rect x="130" y="762" width="480" height="110" rx="18" fill="#fff" stroke="#e8edf5"/>
+    <text x="154" y="798" fill="#162033" font-size="20" font-weight="700" font-family="Arial">Tue • Apr 28</text>
+    <rect x="154" y="816" width="220" height="34" rx="17" fill="#0f6abf"/>
+    <text x="172" y="838" fill="#fff" font-size="16" font-weight="700" font-family="Arial">Epic Universe</text>
+  </g>
+
+  <g>
+    <rect x="130" y="888" width="480" height="110" rx="18" fill="#fff" stroke="#e8edf5"/>
+    <text x="154" y="924" fill="#162033" font-size="20" font-weight="700" font-family="Arial">Wed • Apr 29</text>
+    <rect x="154" y="942" width="236" height="34" rx="17" fill="#0f6abf"/>
+    <text x="172" y="964" fill="#fff" font-size="16" font-weight="700" font-family="Arial">Dinner Reservation</text>
+  </g>
+
+  <g>
+    <rect x="130" y="1018" width="480" height="110" rx="18" fill="#fff" stroke="#e8edf5"/>
+    <text x="154" y="1054" fill="#162033" font-size="20" font-weight="700" font-family="Arial">Thu • Apr 30</text>
+    <text x="154" y="1090" fill="#c0cad7" font-size="18" font-family="Arial">No scheduled items</text>
+  </g>
+
+  <g>
+    <rect x="130" y="1160" width="480" height="72" rx="18" fill="#ffffff" stroke="#e8edf5"/>
+    <text x="154" y="1202" fill="#162033" font-size="18" font-weight="700" font-family="Arial">☕ Buy me a coffee</text>
+    <text x="340" y="1202" fill="#6b7280" font-size="15" font-family="Arial">If this saved you from a spreadsheet</text>
+  </g>
+
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a3565"/>
+      <stop offset="55%" stop-color="#0f6abf"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+</svg>

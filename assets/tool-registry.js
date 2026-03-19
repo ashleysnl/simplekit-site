@@ -176,8 +176,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "travel-planner",
     "subdomainUrl": "https://travel.simplekit.app/",
     "pathUrl": "https://simplekit.app/travel-planner/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://travel.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/travel-planner/"
   },
   "debt-to-income-ratio-calculator": {
     "id": "debt-to-income-ratio-calculator",

@@ -154,9 +154,9 @@
   {
     "id": "travel-planner",
     "name": "Travel Planner",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/26_Vacation Tracker",
+    "notes": "Updated the standalone Travel Planner repo for https://simplekit.app/travel-planner/ by adding canonical/OG/Twitter/schema metadata, share fallbacks, robots, sitemap, and a path-safe manifest, then flipped the main-site registry so generated links now resolve to the main-domain path."
   }
 ]

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="t d">
+  <title id="t">TravelPlanner Budget Breakdown</title>
+  <desc id="d">Placeholder screenshot focused on budget metrics, category donut, and payment progress.</desc>
+  <rect width="1400" height="820" fill="#f6f9ff"/>
+  <rect x="38" y="36" width="1324" height="748" rx="24" fill="#fff" stroke="#e8edf5"/>
+  <text x="74" y="92" fill="#162033" font-size="38" font-weight="700" font-family="Arial">Budget Dashboard</text>
+  <text x="74" y="124" fill="#6b7280" font-size="18" font-family="Arial">Planned vs paid totals and category breakdown (all values converted to CDN)</text>
+  <g>
+    <rect x="74" y="154" width="250" height="102" rx="16" fill="#fbfdff" stroke="#e8edf5"/>
+    <rect x="338" y="154" width="250" height="102" rx="16" fill="#fbfdff" stroke="#e8edf5"/>
+    <rect x="602" y="154" width="250" height="102" rx="16" fill="#fbfdff" stroke="#e8edf5"/>
+    <rect x="866" y="154" width="250" height="102" rx="16" fill="#fbfdff" stroke="#e8edf5"/>
+  </g>
+  <g fill="#6b7280" font-family="Arial" font-size="18">
+    <text x="92" y="190">Budget (CDN)</text><text x="356" y="190">Planned (CDN)</text><text x="620" y="190">Paid (CDN)</text><text x="884" y="190">Outstanding</text>
+  </g>
+  <g fill="#162033" font-family="Arial" font-size="32" font-weight="700">
+    <text x="92" y="230">CA$8,500</text><text x="356" y="230">CA$6,940</text><text x="620" y="230">CA$4,120</text><text x="884" y="230">CA$2,820</text>
+  </g>
+  <rect x="74" y="286" width="742" height="434" rx="18" fill="#fff" stroke="#e8edf5"/>
+  <text x="100" y="328" fill="#162033" font-size="26" font-weight="700" font-family="Arial">Spend by Category</text>
+  <circle cx="256" cy="500" r="110" fill="none" stroke="#0f6abf" stroke-width="42" stroke-dasharray="180 510" transform="rotate(-90 256 500)"/>
+  <circle cx="256" cy="500" r="110" fill="none" stroke="#0ea5a8" stroke-width="42" stroke-dasharray="150 540" stroke-dashoffset="-185" transform="rotate(-90 256 500)"/>
+  <circle cx="256" cy="500" r="110" fill="none" stroke="#ff8c42" stroke-width="42" stroke-dasharray="90 600" stroke-dashoffset="-340" transform="rotate(-90 256 500)"/>
+  <circle cx="256" cy="500" r="110" fill="none" stroke="#22c55e" stroke-width="42" stroke-dasharray="60 630" stroke-dashoffset="-437" transform="rotate(-90 256 500)"/>
+  <circle cx="256" cy="500" r="68" fill="#fff"/>
+  <text x="256" y="495" text-anchor="middle" fill="#6b7280" font-size="18" font-family="Arial">Planned</text>
+  <text x="256" y="527" text-anchor="middle" fill="#162033" font-size="32" font-weight="700" font-family="Arial">$6.9k</text>
+  <text x="256" y="551" text-anchor="middle" fill="#6b7280" font-size="16" font-family="Arial">CDN</text>
+  <g font-family="Arial" font-size="20" fill="#162033">
+    <circle cx="435" cy="415" r="7" fill="#0f6abf"/><text x="454" y="422">Transportation — CA$2,450 (35%)</text>
+    <circle cx="435" cy="458" r="7" fill="#0ea5a8"/><text x="454" y="465">Lodging — CA$2,050 (30%)</text>
+    <circle cx="435" cy="501" r="7" fill="#ff8c42"/><text x="454" y="508">Activities — CA$1,350 (19%)</text>
+    <circle cx="435" cy="544" r="7" fill="#22c55e"/><text x="454" y="551">Food — CA$720 (10%)</text>
+    <circle cx="435" cy="587" r="7" fill="#ef4444"/><text x="454" y="594">Shopping — CA$370 (6%)</text>
+  </g>
+  <rect x="840" y="286" width="486" height="434" rx="18" fill="#fff" stroke="#e8edf5"/>
+  <text x="866" y="328" fill="#162033" font-size="26" font-weight="700" font-family="Arial">Budget Health</text>
+  <g font-family="Arial">
+    <text x="866" y="390" fill="#162033" font-size="22">Planned vs Budget</text>
+    <text x="1220" y="390" fill="#162033" font-size="22">81.6%</text>
+    <rect x="866" y="408" width="430" height="18" rx="9" fill="#e9eef7"/>
+    <rect x="866" y="408" width="352" height="18" rx="9" fill="url(#g1)"/>
+    <text x="866" y="478" fill="#162033" font-size="22">Paid vs Budget</text>
+    <text x="1220" y="478" fill="#162033" font-size="22">48.5%</text>
+    <rect x="866" y="496" width="430" height="18" rx="9" fill="#e9eef7"/>
+    <rect x="866" y="496" width="209" height="18" rx="9" fill="#14b8a6"/>
+    <text x="866" y="584" fill="#6b7280" font-size="18">Track mixed USD/CAD entries and compare planned vs paid instantly.</text>
+    <text x="866" y="618" fill="#6b7280" font-size="18">Everything on the dashboard sums in CDN using your chosen exchange rate.</text>
+  </g>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f6abf"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+  </defs>
+</svg>

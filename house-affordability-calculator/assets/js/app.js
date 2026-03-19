@@ -78,7 +78,7 @@
     ["mortgage paydown vs invest", "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"],
     ["mortgage calculator", "https://simplekit.app/mortgage-calculator/"],
     ["investment fee calculator", "https://simplekit.app/investment-fee-calculator/"],
-    ["travel planner", "https://travel.simplekit.app/"],
+    ["travel planner", "https://simplekit.app/travel-planner/"],
   ]);
 
   const STALE_TOOL_LINK_PATTERNS = [
@@ -101,7 +101,7 @@
     ["mortgage.simplekit.app", "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"],
     ["paydown", "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"],
     ["fees", "https://simplekit.app/investment-fee-calculator/"],
-    ["travel", "https://travel.simplekit.app/"],
+    ["travel", "https://simplekit.app/travel-planner/"],
   ];
 
   let state = { ...DEFAULT_STATE };

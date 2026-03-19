@@ -197,6 +197,10 @@ function shouldCopyMigratedToolFile(sourceRoot, sourcePath) {
   ]);
 
   const extension = path.extname(sourcePath).toLowerCase();
+  const baseName = path.basename(sourcePath).toLowerCase();
+  if (extension === ".json" && (baseName.includes("backup") || baseName.includes("export"))) {
+    return false;
+  }
   return allowedExtensions.has(extension);
 }
 
