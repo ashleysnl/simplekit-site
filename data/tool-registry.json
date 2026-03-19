@@ -125,7 +125,7 @@
     "slug": "mortgage-paydown-vs-invest-calculator",
     "subdomainUrl": "https://mortgage.simplekit.app/",
     "pathUrl": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "investment-fee-calculator",

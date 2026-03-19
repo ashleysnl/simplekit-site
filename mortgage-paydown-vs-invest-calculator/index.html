@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    id="metaDescription"
+    name="description"
+    content="SimpleKit Mortgage vs Invest Calculator for Canadians comparing extra mortgage payments against investing in a TFSA, RRSP, or taxable account."
+  />
+  <meta id="metaThemeColor" name="theme-color" content="#0f6abf" />
+  <meta property="og:type" content="website" />
+  <meta id="metaOgTitle" property="og:title" content="SimpleKit Mortgage vs Invest Calculator" />
+  <meta
+    id="metaOgDescription"
+    property="og:description"
+    content="Compare paying down your mortgage faster versus investing the difference with a calm, client-side Canadian planning tool."
+  />
+  <meta id="metaOgUrl" property="og:url" content="https://simplekit.app/mortgage-paydown-vs-invest-calculator/" />
+  <meta id="metaOgImage" property="og:image" content="https://simplekit.app/mortgage-paydown-vs-invest-calculator/icons/icon.svg" />
+  <meta id="metaOgSiteName" property="og:site_name" content="SimpleKit Mortgage vs Invest Calculator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta id="metaTwitterTitle" name="twitter:title" content="SimpleKit Mortgage vs Invest Calculator" />
+  <meta
+    id="metaTwitterDescription"
+    name="twitter:description"
+    content="See how mortgage prepayments and monthly investing may affect your net worth over time."
+  />
+  <meta id="metaTwitterImage" name="twitter:image" content="https://simplekit.app/mortgage-paydown-vs-invest-calculator/icons/icon.svg" />
+  <link rel="canonical" href="https://simplekit.app/mortgage-paydown-vs-invest-calculator/" />
+  <title>SimpleKit Mortgage vs Invest Calculator</title>
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="icons/favicon.svg" />
+  <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <p class="eyebrow">SimpleKit Mortgage vs Invest Calculator</p>
+        <h1 id="heroTitle">Should you pay down your mortgage or invest?</h1>
+        <p class="hero-subtitle">Compare paying down your mortgage faster vs investing the difference.</p>
+        <p class="hero-proof">See how each strategy may affect your net worth over time without leaving your browser.</p>
+        <div class="hero-cta-row no-print">
+          <a class="btn btn-primary" href="#calculator">Open calculator</a>
+          <a class="btn btn-secondary" href="#how-it-works">How it works</a>
+        </div>
+        <div class="hero-perfect-for" aria-label="Trust and fit">
+          <span class="hero-perfect-label">Good to know:</span>
+          <ul class="hero-perfect-list">
+            <li>No signup</li>
+            <li>Free to use</li>
+            <li>Runs entirely in your browser</li>
+            <li>Built for Canadian scenarios</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-actions no-print" aria-label="Page navigation">
+        <a class="btn btn-secondary" href="#results">Results</a>
+        <a class="btn btn-secondary" href="#sensitivity">Break-even</a>
+        <a class="btn btn-secondary" href="#faq">FAQ</a>
+        <a
+          id="heroSupportLink"
+          class="btn btn-secondary control-btn support-link-btn"
+          href="https://buymeacoffee.com/ashleysnl"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Support the creator"
+        >Buy me a coffee</a>
+      </div>
+    </header>
+
+    <section class="trip-snapshot" aria-labelledby="snapshotTitle">
+      <div class="trip-snapshot-head">
+        <div>
+          <h2 id="snapshotTitle">Quick decision snapshot</h2>
+          <p class="muted small-copy">Mortgage prepayments offer guaranteed interest savings. Investing may deliver higher expected growth, but with uncertainty.</p>
+        </div>
+        <div class="offline-badge-wrap" aria-label="Storage status">
+          <span class="offline-badge">Private by default</span>
+          <span class="offline-badge-note">No account required.</span>
+          <span class="offline-badge-trust">Nothing is sent to a server.</span>
+        </div>
+      </div>
+      <div id="snapshotGrid" class="trip-snapshot-grid" aria-live="polite"></div>
+    </section>
+
+    <main class="app-layout">
+      <section id="how-it-works" class="panel content-panel" aria-labelledby="howTitle">
+        <div class="panel-header">
+          <h2 id="howTitle">How this comparison works</h2>
+          <p>This tool compares two common choices for the same extra cash flow: prepay the mortgage or invest instead.</p>
+        </div>
+        <div class="content-grid two-up">
+          <article class="subsection prose-card">
+            <p>A mortgage prepayment creates a guaranteed benefit equal to the interest you avoid on that debt. Investing may grow faster over long periods, but market returns can be higher or lower than expected.</p>
+            <p>The answer often depends on your mortgage rate, time horizon, tax shelter, fees, and how much you value certainty, liquidity, and peace of mind.</p>
+            <div class="formula-stack" aria-label="Simplified formulas">
+              <div class="formula-card">
+                <strong>Mortgage strategy benefit</strong>
+                <span>interest avoided + faster equity build</span>
+              </div>
+              <div class="formula-card">
+                <strong>Invest strategy benefit</strong>
+                <span>investment growth - mortgage interest still paid</span>
+              </div>
+            </div>
+          </article>
+          <article class="subsection prose-card">
+            <h3>Keep the tradeoff in context</h3>
+            <ul class="check-list">
+              <li>Mortgage savings are predictable. Market returns are not.</li>
+              <li>TFSA and RRSP accounts can improve after-tax investing results.</li>
+              <li>Extra mortgage payments reduce debt, but are less liquid than cash you keep invested.</li>
+              <li>This is a simplified planning tool, not personal financial advice or a tax filing model.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculator" class="panel calculator-panel" aria-labelledby="calculatorTitle">
+        <div class="panel-header">
+          <h2 id="calculatorTitle">Calculator</h2>
+          <p>Adjust your mortgage, investing, and scenario assumptions to compare the two strategies live.</p>
+        </div>
+
+        <div class="calculator-grid">
+          <form id="calculatorForm" class="activity-form calculator-form no-print" novalidate>
+            <div class="dashboard-quick-form-header">
+              <strong>Inputs</strong>
+              <div class="hero-cta-row">
+                <button id="sampleDataBtn" class="btn btn-secondary" type="button">Load sample data</button>
+                <button id="resetInputsBtn" class="btn btn-secondary" type="button">Reset</button>
+              </div>
+            </div>
+
+            <section class="subsection form-section form-span-full">
+              <h3>Mortgage inputs</h3>
+              <div class="field-grid">
+                <label>
+                  Current mortgage balance
+                  <input id="mortgageBalance" name="mortgageBalance" inputmode="decimal" type="number" min="0" step="1000" />
+                </label>
+                <label>
+                  Mortgage interest rate (%)
+                  <input id="mortgageRate" name="mortgageRate" inputmode="decimal" type="number" step="0.01" />
+                </label>
+                <label>
+                  Years left on mortgage
+                  <input id="amortizationYears" name="amortizationYears" inputmode="decimal" type="number" min="0" step="1" />
+                </label>
+                <label>
+                  Current monthly payment
+                  <input id="monthlyPayment" name="monthlyPayment" inputmode="decimal" type="number" min="0" step="25" />
+                </label>
+                <label>
+                  Extra monthly amount available
+                  <input id="extraMonthly" name="extraMonthly" inputmode="decimal" type="number" min="0" step="25" />
+                </label>
+                <label>
+                  Current home value
+                  <input id="homeValue" name="homeValue" inputmode="decimal" type="number" min="0" step="1000" />
+                </label>
+              </div>
+            </section>
+
+            <section class="subsection form-section form-span-full">
+              <h3>Investment inputs</h3>
+              <div class="field-grid">
+                <label>
+                  Expected annual return (%)
+                  <input id="investmentReturn" name="investmentReturn" inputmode="decimal" type="number" step="0.01" />
+                </label>
+                <label>
+                  Investment account type
+                  <select id="accountType" name="accountType">
+                    <option value="tfsa">TFSA</option>
+                    <option value="rrsp">RRSP</option>
+                    <option value="taxable">Taxable / General</option>
+                    <option value="general">General</option>
+                  </select>
+                </label>
+                <label>
+                  Comparison horizon (years)
+                  <input id="timeHorizonYears" name="timeHorizonYears" inputmode="decimal" type="number" min="1" step="1" />
+                </label>
+              </div>
+            </section>
+
+            <details id="advancedSettings" class="subsection form-section form-span-full">
+              <summary>Advanced settings</summary>
+              <div class="field-grid advanced-grid">
+                <label>
+                  Tax drag / effective tax rate on growth (%)
+                  <input id="taxDrag" name="taxDrag" inputmode="decimal" type="number" step="0.01" />
+                </label>
+                <label>
+                  Management fee / MER (%)
+                  <input id="mer" name="mer" inputmode="decimal" type="number" step="0.01" />
+                </label>
+                <label>
+                  Inflation assumption (%)
+                  <input id="inflation" name="inflation" inputmode="decimal" type="number" step="0.01" />
+                </label>
+                <label>
+                  Home value growth (%)
+                  <input id="homeGrowth" name="homeGrowth" inputmode="decimal" type="number" step="0.01" />
+                </label>
+                <label>
+                  One-time lump sum
+                  <input id="lumpSum" name="lumpSum" inputmode="decimal" type="number" min="0" step="100" />
+                </label>
+                <label>
+                  Contribution timing
+                  <select id="contributionTiming" name="contributionTiming">
+                    <option value="end">End of month</option>
+                    <option value="start">Start of month</option>
+                  </select>
+                </label>
+                <label>
+                  Compounding model
+                  <select id="compoundMode" name="compoundMode">
+                    <option value="monthly">Monthly compounding</option>
+                    <option value="annual">Annual simplification</option>
+                  </select>
+                </label>
+              </div>
+            </details>
+
+            <p class="muted small-copy form-span-full">Currency values are in Canadian dollars. Blank or invalid inputs fall back to safe defaults.</p>
+          </form>
+
+          <aside id="results" class="subsection results-aside" aria-labelledby="resultsTitle">
+            <div class="results-head">
+              <div>
+                <h3 id="resultsTitle">Live results summary</h3>
+                <p class="muted small-copy">Estimates update as you type.</p>
+              </div>
+              <span id="confidenceBadge" class="offline-badge">Planning view</span>
+            </div>
+            <div id="winnerCallout" class="winner-callout" aria-live="polite"></div>
+            <div id="metricGrid" class="metric-grid metric-grid-results"></div>
+            <div class="insight-card">
+              <h4>Interpretation</h4>
+              <p id="interpretationNote" class="muted">Enter your numbers to compare certainty, flexibility, and expected growth.</p>
+            </div>
+            <div id="warningBox" class="warning-box" hidden></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="comparisonTitle">
+        <div class="panel-header">
+          <h2 id="comparisonTitle">Side-by-side strategy comparison</h2>
+          <p>The same extra cash flow is routed either to the mortgage or to investing.</p>
+        </div>
+        <div id="comparisonGrid" class="comparison-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="chartsTitle">
+        <div class="panel-header">
+          <h2 id="chartsTitle">Visualize the tradeoff</h2>
+          <p>These charts focus on the most decision-useful trends: net worth, mortgage balance, and investment growth.</p>
+        </div>
+        <div class="chart-grid">
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Net worth over time</h3>
+              <p class="muted small-copy">Estimated home equity plus investment value.</p>
+            </div>
+            <div id="netWorthChart" class="chart-shell"></div>
+          </article>
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Mortgage balance over time</h3>
+              <p class="muted small-copy">Lower is better for debt reduction.</p>
+            </div>
+            <div id="mortgageChart" class="chart-shell"></div>
+          </article>
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Investment growth</h3>
+              <p class="muted small-copy">Shows liquid assets under each strategy, including post-payoff investing when the mortgage is gone.</p>
+            </div>
+            <div id="investmentChart" class="chart-shell"></div>
+          </article>
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Interest vs growth outcome</h3>
+              <p class="muted small-copy">A quick comparison of avoided interest and projected investment gains.</p>
+            </div>
+            <div id="outcomeChart" class="chart-shell"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="sensitivity" class="panel" aria-labelledby="sensitivityTitle">
+        <div class="panel-header">
+          <h2 id="sensitivityTitle">Break-even and sensitivity analysis</h2>
+          <p>Small assumption changes can move the result. This section shows where the comparison may flip.</p>
+        </div>
+        <div class="content-grid two-up">
+          <article class="subsection">
+            <h3>Break-even return</h3>
+            <p id="breakEvenSummary" class="muted">The required investment return will appear here.</p>
+            <div id="breakEvenCards" class="mini-card-grid"></div>
+          </article>
+          <article class="subsection">
+            <h3>Return scenarios</h3>
+            <div id="scenarioCards" class="mini-card-grid"></div>
+          </article>
+        </div>
+        <div class="subsection sensitivity-table-wrap">
+          <div class="chart-head">
+            <h3>Horizon comparison</h3>
+            <p class="muted small-copy">How the outcome shifts over shorter and longer planning windows.</p>
+          </div>
+          <div id="horizonTable" class="table-shell"></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="insightsTitle">
+        <div class="panel-header">
+          <h2 id="insightsTitle">Practical planning insights</h2>
+          <p>Use the numbers as a starting point, then layer in comfort, tax strategy, and real-life flexibility.</p>
+        </div>
+        <div class="content-grid three-up">
+          <article class="subsection insight-card">
+            <h3>When paying down debt may make more sense</h3>
+            <p>Higher mortgage rates, shorter horizons, or a strong preference for certainty often tilt the decision toward prepayment.</p>
+          </article>
+          <article class="subsection insight-card">
+            <h3>When investing may come out ahead</h3>
+            <p>Longer horizons, moderate mortgage rates, and tax-sheltered returns may let investing build more net worth over time.</p>
+          </article>
+          <article class="subsection insight-card">
+            <h3>Risk tolerance still matters</h3>
+            <p>The mathematically higher expected result may still feel wrong if volatility would cause stress or second-guessing.</p>
+          </article>
+          <article class="subsection insight-card">
+            <h3>Guaranteed savings feel different</h3>
+            <p>Interest avoided is effectively locked in, while projected market returns can vary widely from year to year.</p>
+          </article>
+          <article class="subsection insight-card">
+            <h3>TFSA and RRSP choices can change the math</h3>
+            <p>Tax sheltering can improve net investing results, especially when compared with taxable investing that loses some return to drag.</p>
+          </article>
+          <article class="subsection insight-card">
+            <h3>Liquidity can be valuable</h3>
+            <p>Invested money may be easier to access in an emergency than equity locked inside your home.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="canadaTitle">
+        <div class="panel-header">
+          <h2 id="canadaTitle">Canadian context</h2>
+          <p>A few Canada-specific realities are worth remembering when you use this calculator.</p>
+        </div>
+        <div class="content-grid two-up">
+          <article class="subsection prose-card">
+            <ul class="check-list">
+              <li>Mortgage prepayment decisions are common in Canada, especially when rates reset at renewal.</li>
+              <li>TFSA and RRSP accounts can make investing more efficient than a taxable account.</li>
+              <li>Mortgage rates can change materially at renewal, so future borrowing costs may differ from today.</li>
+            </ul>
+          </article>
+          <article class="subsection prose-card">
+            <ul class="check-list">
+              <li>Taxable investing often reduces after-tax returns through dividends, interest, and realized gains.</li>
+              <li>This calculator is intentionally simplified and does not model deductions, contribution room, or full tax planning.</li>
+              <li>Use it to frame the tradeoff, then pair it with your broader savings and retirement plan.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="relatedTitle">
+        <div class="panel-header">
+          <h2 id="relatedTitle">Continue your planning</h2>
+          <p>These SimpleKit tools are natural next steps after comparing mortgage prepayments and investing.</p>
+        </div>
+        <div id="relatedToolsGrid" class="content-grid related-grid"></div>
+      </section>
+
+      <section class="panel support-panel" aria-labelledby="supportTitle">
+        <div class="panel-header">
+          <h2 id="supportTitle">Support SimpleKit</h2>
+          <p>If this tool helped you think through the tradeoff, you can help keep the next one free too.</p>
+        </div>
+        <div class="support-cta">
+          <p>If this tool helped you, support SimpleKit.</p>
+          <a
+            id="supportCtaLink"
+            class="btn btn-primary"
+            href="https://buymeacoffee.com/ashleysnl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Buy me a coffee</a>
+        </div>
+      </section>
+
+      <section id="faq" class="panel content-panel seo-panel" aria-labelledby="faqTitle">
+        <div class="panel-header">
+          <h2 id="faqTitle">Mortgage vs invest questions</h2>
+          <p>Plain-English answers for people deciding whether to make extra mortgage payments or invest instead.</p>
+        </div>
+        <article class="subsection prose-card">
+          <h3>Is it better to pay off a mortgage or invest?</h3>
+          <p>Neither option is always best. Paying down a mortgage gives a guaranteed return equal to the interest you avoid. Investing may produce a better long-term result, but only if real returns, taxes, and fees work in your favour.</p>
+          <h3>What mortgage rate changes the answer?</h3>
+          <p>Higher mortgage rates usually make prepayments more attractive because the guaranteed savings become more valuable. Lower mortgage rates give investing more room to outperform, especially over longer periods.</p>
+          <h3>Should I invest instead of making extra mortgage payments?</h3>
+          <p>That can make sense when you have a long horizon, can tolerate volatility, and have access to tax-efficient accounts like a TFSA or RRSP. It may matter less if you want certainty or need to be debt-free sooner.</p>
+          <h3>How does risk affect the decision?</h3>
+          <p>Risk changes both the path and the experience. A projected 6% market return may not arrive smoothly, while mortgage savings are immediate and predictable. Your comfort with swings in account value matters.</p>
+          <h3>Should I use my TFSA before paying off my mortgage?</h3>
+          <p>A TFSA can improve investing efficiency because gains can compound without ongoing tax drag. That may tilt the comparison toward investing, but your mortgage rate, renewal risk, and debt comfort still matter.</p>
+          <h3>What if I care more about peace of mind than maximum expected return?</h3>
+          <p>That is a valid reason to favour mortgage prepayments. Personal finance is not just about maximizing a spreadsheet result. Reducing fixed obligations can make a household feel safer and more flexible.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="app-footer no-print" aria-label="App support and links">
+      <div class="footer-branding">
+        <strong>SimpleKit Mortgage vs Invest Calculator</strong>
+        <span class="muted">Compare extra mortgage payments versus investing with a calm, static planning tool.</span>
+      </div>
+      <div class="footer-actions">
+        <a id="footerSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">Support</a>
+        <a href="#calculator">Calculator</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="global-fab-row no-print" aria-label="Quick actions">
+    <a id="globalSupportBtn" class="global-support-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">Support</a>
+    <a class="global-save-btn" href="#calculator">Compare</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

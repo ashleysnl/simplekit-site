@@ -114,10 +114,10 @@
   {
     "id": "mortgage-paydown-vs-invest-calculator",
     "name": "Mortgage Paydown vs Invest",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/36_Mortgage Investment Simple Kit",
+    "notes": "Aligned mortgage paydown vs invest with the /mortgage-paydown-vs-invest-calculator/ path, replaced placeholder metadata with the live path URL, fixed robots and sitemap, updated the manifest for path scope, and flipped the main-site registry to path mode."
   },
   {
     "id": "investment-fee-calculator",

@@ -15,7 +15,7 @@
 13. [Loan Calculator](https://simplekit.app/loan-calculator/)
 14. [House Affordability Calculator](https://simplekit.app/house-affordability-calculator/)
 15. [Rent vs Buy Calculator](https://simplekit.app/rent-vs-buy-calculator/)
-16. [Mortgage Paydown vs Invest](https://mortgage.simplekit.app/)
+16. [Mortgage Paydown vs Invest](https://simplekit.app/mortgage-paydown-vs-invest-calculator/)
 17. [Investment Fee Calculator](https://fees.simplekit.app/)
 18. [Mortgage Calculator](https://simplekit.app/mortgage-calculator/)
 19. [Canadian Tax Checklist](https://taxchecklist.simplekit.app/)

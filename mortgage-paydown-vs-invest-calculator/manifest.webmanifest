@@ -1,0 +1,18 @@
+{
+  "name": "SimpleKit Mortgage vs Invest Calculator",
+  "short_name": "Mortgage vs Invest",
+  "description": "Compare paying down your mortgage faster versus investing the difference with a Canadian-focused planning tool.",
+  "start_url": "/mortgage-paydown-vs-invest-calculator/",
+  "scope": "/mortgage-paydown-vs-invest-calculator/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0f6abf",
+  "icons": [
+    {
+      "src": "/mortgage-paydown-vs-invest-calculator/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+  ]
+}

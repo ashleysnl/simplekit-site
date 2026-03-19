@@ -140,8 +140,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "mortgage-paydown-vs-invest-calculator",
     "subdomainUrl": "https://mortgage.simplekit.app/",
     "pathUrl": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://mortgage.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"
   },
   "investment-fee-calculator": {
     "id": "investment-fee-calculator",
