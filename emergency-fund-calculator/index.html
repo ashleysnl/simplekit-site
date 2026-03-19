@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency Fund Calculator | SimpleKit</title>
+  <meta
+    name="description"
+    content="Estimate how much emergency savings you need, see your current shortfall, and calculate how long it may take to reach your target. Free, simple, and privacy-friendly."
+  >
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://simplekit.app/emergency-fund-calculator/">
+  <meta property="og:title" content="Emergency Fund Calculator | SimpleKit">
+  <meta
+    property="og:description"
+    content="Estimate your emergency fund target, see how much you already have, and map out how long it may take to fill the gap."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplekit.app/emergency-fund-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emergency Fund Calculator | SimpleKit">
+  <meta
+    name="twitter:description"
+    content="Free emergency fund calculator with a simple target, funding gap, and timeline estimate. No login required."
+  >
+  <meta name="theme-color" content="#0f6abf">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Emergency Fund Calculator",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "inLanguage": "en-CA",
+          "url": "https://simplekit.app/emergency-fund-calculator/",
+          "description": "Estimate your emergency fund goal, funding gap, and timeline with a privacy-friendly browser calculator."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much emergency savings should I have?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many people start with 3 to 6 months of essential expenses, while people with more variable income or higher uncertainty may choose 9 to 12 months."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is 3 months enough?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Three months can be a reasonable starting point if your income is stable and your expenses are predictable, but some households prefer a larger cushion."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What expenses should I include?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Focus on essentials such as housing, groceries, utilities, transportation, insurance, minimum debt payments, and core household costs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I invest my emergency fund?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Emergency savings are often kept in cash or cash-like accounts so the money is easier to access when needed."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where should I keep emergency savings?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "People often use high-interest savings accounts or other low-risk, liquid accounts that keep the money available for real emergencies."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+
+  <link rel="preconnect" href="https://core.simplekit.app">
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "emergency-fund-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Simple emergency fund planning without accounts, clutter, or unnecessary tracking.",
+      supportTitle: "Support SimpleKit",
+      supportCopy: "SimpleKit builds focused, privacy-friendly planning tools that work directly in your browser.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="page-shell fund-shell">
+    <header class="hero hero-fund" aria-labelledby="pageTitle">
+      <div data-simplekit-header></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Emergency Savings</p>
+        <h1 id="pageTitle">Emergency Fund Calculator</h1>
+        <p class="hero-subtitle">Estimate your target, see your savings gap, and understand how long it may take to build your cushion.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#calculator">Start calculator</a>
+          <a class="text-link" href="#learnBasics">How it works</a>
+        </div>
+        <div class="hero-trust-row" aria-label="Trust signals">
+          <span>No login</span>
+          <span>Runs in your browser</span>
+          <span>Free educational tool</span>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="Emergency fund guidance">
+        <article class="hero-highlight compact-highlight">
+          <span class="mini-kicker">Typical starting point</span>
+          <strong id="heroPreviewTitle">3 to 6 months</strong>
+          <p id="heroPreviewText">Many people begin with a cash buffer equal to a few months of essential expenses, then adjust for income stability and household needs.</p>
+        </article>
+      </aside>
+    </header>
+
+    <main id="mainContent" class="page-flow">
+      <section id="calculator" class="panel calculator-panel" aria-labelledby="calculatorHeading">
+        <div class="panel-header compact-panel-header">
+          <div>
+            <p class="section-kicker">Calculator</p>
+            <h2 id="calculatorHeading">Build your emergency fund plan</h2>
+          </div>
+          <p>Start with essentials, savings, and what you can add next.</p>
+        </div>
+
+        <div class="calculator-layout">
+          <form id="calculatorForm" class="calculator-card no-print" novalidate>
+            <div class="form-toolbar">
+              <div>
+                <strong>Simple first</strong>
+                <p class="muted small-copy">Use monthly essentials, not total spending.</p>
+              </div>
+              <div class="toolbar-actions">
+                <button id="exampleBtn" class="btn btn-ghost" type="button">Use example</button>
+                <button id="resetBtn" class="btn btn-tertiary" type="button">Clear</button>
+              </div>
+            </div>
+
+            <section class="input-card" aria-labelledby="coreInputsHeading">
+              <div class="input-card-head">
+                <div>
+                  <span class="step-kicker">Step 1</span>
+                  <h3 id="coreInputsHeading">Enter your core numbers</h3>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Monthly essential expenses</span>
+                  <input id="monthlyExpenses" name="monthlyExpenses" type="number" inputmode="decimal" min="0" step="0.01" placeholder="2500" aria-describedby="monthlyExpensesHelp">
+                  <small id="monthlyExpensesHelp">Housing, groceries, utilities, insurance, transport.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Current emergency savings</span>
+                  <input id="currentSavings" name="currentSavings" type="number" inputmode="decimal" min="0" step="0.01" placeholder="5000" aria-describedby="currentSavingsHelp">
+                  <small id="currentSavingsHelp">Only include cash you would actually use.</small>
+                </label>
+
+                <label class="form-field form-field-wide">
+                  <span id="contributionLabel">Monthly contribution</span>
+                  <input id="monthlyContribution" name="monthlyContribution" type="number" inputmode="decimal" min="0" step="0.01" placeholder="300" aria-describedby="contributionHelp">
+                  <small id="contributionHelp">Switch to bi-weekly in Advanced options if needed.</small>
+                </label>
+              </div>
+
+              <p class="inline-trust">Runs in your browser. No account. No data upload.</p>
+            </section>
+
+            <section class="input-card" aria-labelledby="targetHeading">
+              <div class="input-card-head">
+                <div>
+                  <span class="step-kicker">Step 2</span>
+                  <h3 id="targetHeading">Choose your months of protection</h3>
+                </div>
+                  <p class="muted small-copy">Guidance only. Pick the cushion that fits your situation.</p>
+              </div>
+
+              <fieldset class="month-picker">
+                <legend class="month-legend">Choose a target</legend>
+                <label class="month-option">
+                  <input type="radio" name="targetPreset" value="3">
+                  <span class="month-card">
+                    <span class="selected-badge" aria-hidden="true">Selected</span>
+                    <strong>3 months</strong>
+                    <small>Stable income</small>
+                  </span>
+                </label>
+                <label class="month-option">
+                  <input type="radio" name="targetPreset" value="6">
+                  <span class="month-card">
+                    <span class="selected-badge" aria-hidden="true">Selected</span>
+                    <strong>6 months</strong>
+                    <small>Common middle ground</small>
+                  </span>
+                </label>
+                <label class="month-option">
+                  <input type="radio" name="targetPreset" value="9">
+                  <span class="month-card">
+                    <span class="selected-badge" aria-hidden="true">Selected</span>
+                    <strong>9 months</strong>
+                    <small>Added uncertainty</small>
+                  </span>
+                </label>
+                <label class="month-option">
+                  <input type="radio" name="targetPreset" value="12">
+                  <span class="month-card">
+                    <span class="selected-badge" aria-hidden="true">Selected</span>
+                    <strong>12 months</strong>
+                    <small>Variable income</small>
+                  </span>
+                </label>
+              </fieldset>
+
+              <p id="targetMonthsSummary" class="selection-summary" aria-live="polite"></p>
+            </section>
+
+            <details class="input-card advanced-card" id="advancedOptions">
+              <summary>
+                <span>
+                  <span class="step-kicker">Advanced</span>
+                  <strong>Advanced options</strong>
+                </span>
+                <span class="summary-note">Optional assumptions and guidance inputs</span>
+              </summary>
+
+              <div class="advanced-sections">
+                <section class="advanced-group" aria-labelledby="calcAssumptionsHeading">
+                  <h4 id="calcAssumptionsHeading">Calculation assumptions</h4>
+                  <div class="advanced-grid">
+                    <label class="form-field">
+                      <span>Optional savings interest estimate</span>
+                      <div class="suffix-input">
+                        <input id="annualRate" name="annualRate" type="number" inputmode="decimal" min="0" step="0.01" placeholder="1.5" aria-describedby="annualRateHelp">
+                        <span>%</span>
+                      </div>
+                      <small id="annualRateHelp">Use a low estimate for a savings account.</small>
+                    </label>
+
+                    <label class="form-field">
+                      <span>Contribution frequency</span>
+                      <select id="contributionFrequency" name="contributionFrequency">
+                        <option value="monthly">Monthly</option>
+                        <option value="biweekly">Bi-weekly</option>
+                      </select>
+                    </label>
+
+                    <label class="form-field">
+                      <span>One-time lump sum</span>
+                      <input id="lumpSum" name="lumpSum" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0" aria-describedby="lumpSumHelp">
+                      <small id="lumpSumHelp">Optional cash you expect to add right away.</small>
+                    </label>
+
+                    <label class="form-field">
+                      <span class="field-label-row">
+                        <span>Custom target months</span>
+                        <span id="customTargetBadge" class="custom-target-badge" hidden>Using custom target</span>
+                      </span>
+                      <input id="customTargetMonths" name="customTargetMonths" type="number" inputmode="decimal" min="1" step="0.1" placeholder="6" aria-describedby="customMonthsHelp">
+                      <small id="customMonthsHelp">Only change this if you want a custom target.</small>
+                    </label>
+                  </div>
+                </section>
+
+                <section class="advanced-group" aria-labelledby="guidanceInputsHeading">
+                  <h4 id="guidanceInputsHeading">Guidance inputs</h4>
+                  <p class="muted small-copy">These shape the guidance text only, not the base math.</p>
+                  <div class="advanced-grid">
+                    <label class="form-field">
+                      <span>Job or income stability</span>
+                      <select id="incomeStability" name="incomeStability">
+                        <option value="very-stable">Very stable</option>
+                        <option value="somewhat-stable">Somewhat stable</option>
+                        <option value="variable">Variable or self-employed</option>
+                      </select>
+                    </label>
+
+                    <label class="form-field">
+                      <span>Dependents</span>
+                      <select id="dependents" name="dependents">
+                        <option value="none">None</option>
+                        <option value="one-plus">1+</option>
+                      </select>
+                    </label>
+                  </div>
+                </section>
+              </div>
+            </details>
+          </form>
+
+          <div class="results-stack">
+            <section id="resultsSection" class="results-shell sticky-results" aria-labelledby="resultsHeading">
+              <div class="results-block-head">
+                <div>
+                  <p class="section-kicker">Results</p>
+                  <h3 id="resultsHeading">Your emergency fund snapshot</h3>
+                </div>
+                  <p class="muted small-copy">Your main answer first.</p>
+              </div>
+
+              <div id="summaryCard" class="summary-card" aria-live="polite">
+                <p class="summary-eyebrow">Today’s answer</p>
+                <p id="summaryHeadline" class="summary-headline">Enter your numbers to see your target.</p>
+                <p id="summaryText" class="summary-text">Start with essentials, current savings, and a monthly contribution.</p>
+                <p id="nextStepText" class="next-step-text">Pick a target that feels practical, then adjust the contribution until the timeline feels realistic.</p>
+              </div>
+
+              <div id="resultCards" class="result-grid" aria-live="polite"></div>
+
+              <section class="progress-shell" aria-labelledby="progressHeading">
+                <div class="results-block-head compact-head">
+                  <div>
+                    <p class="section-kicker">Progress</p>
+                    <h4 id="progressHeading">Where you stand now</h4>
+                  </div>
+                  <p id="progressLabel">0% funded</p>
+                </div>
+                <div
+                  id="progressBar"
+                  class="progress-track"
+                  role="progressbar"
+                  aria-labelledby="progressHeading"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="0"
+                >
+                  <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <p id="progressText" class="muted small-copy">Savings counted toward your current target.</p>
+              </section>
+
+              <details class="results-note" id="guidancePanel">
+                <summary>
+                  <span>
+                    <p class="section-kicker">Guidance</p>
+                    <h4 id="guidanceHeading">Why this plan may fit</h4>
+                  </span>
+                </summary>
+                <p id="guidanceText">Choose a target that matches your income stability, household needs, and comfort level with uncertainty.</p>
+              </details>
+            </section>
+
+            <section class="results-shell utility-shell no-print" aria-labelledby="utilityHeading">
+              <div class="results-block-head compact-head">
+                <div>
+                  <h3 id="utilityHeading">Save this setup</h3>
+                </div>
+                <p class="muted small-copy">Copy a link to revisit it later.</p>
+              </div>
+              <div class="form-actions">
+                <button id="shareBtn" class="btn btn-secondary-panel" type="button">Copy calculator link</button>
+              </div>
+              <p id="shareFeedback" class="muted small-copy" aria-live="polite"></p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="learnBasics" class="panel" aria-labelledby="learnHeading">
+        <div class="panel-header compact-panel-header">
+          <div>
+            <p class="section-kicker">How it works</p>
+            <h2 id="learnHeading">Use the calculator, then pressure-test the answer</h2>
+          </div>
+          <p>A realistic first estimate is enough.</p>
+        </div>
+        <div class="feature-grid learn-grid">
+          <article>
+            <span class="trust-label">1</span>
+            <strong>Estimate essentials</strong>
+            <p>Include the bills you would still need during an income interruption.</p>
+          </article>
+          <article>
+            <span class="trust-label">2</span>
+            <strong>Pick a cushion</strong>
+            <p>Many people start at 3 to 6 months, then adjust upward if income is less predictable.</p>
+          </article>
+          <article>
+            <span class="trust-label">3</span>
+            <strong>Check the timeline</strong>
+            <p>Use the timeline to decide whether your current savings pace feels realistic.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="relatedToolsHeading">
+        <div class="panel-header compact-panel-header">
+          <div>
+            <p class="section-kicker">Related tools</p>
+            <h2 id="relatedToolsHeading">Useful next steps</h2>
+          </div>
+          <p id="relatedIntro">These tools can help with the next step.</p>
+        </div>
+        <div class="related-grid">
+          <a class="related-card" href="https://simplekit.app/budget-planner/">
+            <strong>Budget Planner</strong>
+            <p>Find room in your monthly plan to save faster.</p>
+          </a>
+          <a class="related-card" href="https://simplekit.app/debt-payoff-calculator/">
+            <strong>Debt Payoff Calculator</strong>
+            <p>Compare debt payments with your savings pace.</p>
+          </a>
+          <a class="related-card" href="https://simplekit.app/net-worth-calculator/">
+            <strong>Net Worth Calculator</strong>
+            <p>See how your cash cushion fits into your bigger picture.</p>
+          </a>
+          <a class="related-card" href="https://simplekit.app/compound-interest-calculator/">
+            <strong>Compound Interest Calculator</strong>
+            <p>Model longer-term growth once your safety cushion is in place.</p>
+          </a>
+          <a class="related-card" href="https://simplekit.app/retirement-planner/">
+            <strong>Retirement Planner</strong>
+            <p>Shift from short-term resilience to long-term planning.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel faq-panel" aria-labelledby="faqHeading">
+        <div class="panel-header compact-panel-header">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faqHeading">Common emergency fund questions</h2>
+          </div>
+          <p>Short answers for the questions people usually ask first.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How much emergency savings should I have?</summary>
+            <p>Many people aim for 3 to 6 months of essential expenses, then adjust upward if income is less predictable.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is 3 months enough?</summary>
+            <p>It can be a reasonable starting point for some households, especially with stable income.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What expenses should I include?</summary>
+            <p>Include essentials you would still need during a disruption, such as housing, groceries, utilities, insurance, transportation, childcare, and minimum debt payments.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should I invest my emergency fund?</summary>
+            <p>Emergency savings are often kept in low-risk, liquid accounts so the money stays available when needed.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where should I keep emergency savings?</summary>
+            <p>A high-interest savings account or other liquid cash account is a common choice because access matters.</p>
+          </details>
+        </div>
+      </section>
+
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
+  </div>
+
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

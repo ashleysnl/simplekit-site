@@ -4,7 +4,7 @@ window.SimpleKitToolLinks = Object.freeze({
   cppCalculator: "https://simplekit.app/cpp-calculator/",
   rrsptfsaCalculator: "https://rrsptfsa.simplekit.app/",
   compoundInterestCalculator: "https://simplekit.app/compound-interest-calculator/",
-  emergencyFundCalculator: "https://emergency.simplekit.app/",
+  emergencyFundCalculator: "https://simplekit.app/emergency-fund-calculator/",
   netWorthCalculator: "https://simplekit.app/net-worth-calculator/",
   budgetPlanner: "https://simplekit.app/budget-planner/",
   rentVsBuyCalculator: "https://simplekit.app/rent-vs-buy-calculator/",

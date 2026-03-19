@@ -59,8 +59,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "emergency-fund-calculator",
     "subdomainUrl": "https://emergency.simplekit.app/",
     "pathUrl": "https://simplekit.app/emergency-fund-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://emergency.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/emergency-fund-calculator/"
   },
   "net-worth-calculator": {
     "id": "net-worth-calculator",

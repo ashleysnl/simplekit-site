@@ -53,7 +53,7 @@
     "slug": "emergency-fund-calculator",
     "subdomainUrl": "https://emergency.simplekit.app/",
     "pathUrl": "https://simplekit.app/emergency-fund-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "net-worth-calculator",
