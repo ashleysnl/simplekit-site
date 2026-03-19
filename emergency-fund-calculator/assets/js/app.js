@@ -429,7 +429,7 @@
       { href: "https://simplekit.app/net-worth-calculator/", label: "Net Worth Calculator" },
       { href: "https://simplekit.app/compound-interest-calculator/", label: "Compound Interest Calculator" },
       { href: "https://simplekit.app/rent-vs-buy-calculator/", label: "Rent vs Buy Calculator" },
-      { href: "https://mortgage.simplekit.app/", label: "Mortgage Paydown vs Invest" },
+      { href: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/", label: "Mortgage Paydown vs Invest" },
       { href: "https://simplekit.app/mortgage-calculator/", label: "Mortgage Calculator" },
       { href: "https://fees.simplekit.app/", label: "Investment Fee Calculator" },
       { href: "https://travel.simplekit.app/", label: "Travel Planner" },

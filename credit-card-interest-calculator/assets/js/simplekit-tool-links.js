@@ -9,7 +9,7 @@ window.SimpleKitToolLinks = Object.freeze({
   budgetPlanner: "https://simplekit.app/budget-planner/",
   rentVsBuyCalculator: "https://simplekit.app/rent-vs-buy-calculator/",
   debtPayoffCalculator: "https://simplekit.app/debt-payoff-calculator/",
-  mortgagePaydownVsInvestCalculator: "https://mortgage.simplekit.app/",
+  mortgagePaydownVsInvestCalculator: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
   mortgageCalculator: "https://simplekit.app/mortgage-calculator/",
   investmentFeeCalculator: "https://fees.simplekit.app/",
   travelPlanner: "https://travel.simplekit.app/"

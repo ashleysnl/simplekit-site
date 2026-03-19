@@ -695,7 +695,7 @@
 
     if (hasDebt && metrics.surplus >= 0) {
       suggestions.push({
-        href: "https://mortgage.simplekit.app/",
+        href: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
         label: "Compare mortgage payoff vs investing",
       });
     }
