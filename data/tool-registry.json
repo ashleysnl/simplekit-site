@@ -13,7 +13,7 @@
     "slug": "fire-calculator",
     "subdomainUrl": "https://fire.simplekit.app/",
     "pathUrl": "https://simplekit.app/fire-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "cpp-calculator",

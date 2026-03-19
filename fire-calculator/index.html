@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    id="metaDescription"
+    name="description"
+    content="SimpleKit FIRE Calculator helps Canadians estimate their FIRE number, timeline to financial independence, and how savings, spending, and returns affect early retirement plans."
+  />
+  <meta id="metaThemeColor" name="theme-color" content="#0f6abf" />
+  <meta property="og:type" content="website" />
+  <meta id="metaOgTitle" property="og:title" content="SimpleKit FIRE Calculator" />
+  <meta
+    id="metaOgDescription"
+    property="og:description"
+    content="Estimate your path to financial independence with a free FIRE calculator built for Canadian planners."
+  />
+  <meta id="metaOgUrl" property="og:url" content="https://simplekit.app/fire-calculator/" />
+  <meta id="metaOgImage" property="og:image" content="https://simplekit.app/social-preview.png" />
+  <meta id="metaOgSiteName" property="og:site_name" content="SimpleKit FIRE Calculator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta id="metaTwitterTitle" name="twitter:title" content="SimpleKit FIRE Calculator" />
+  <meta
+    id="metaTwitterDescription"
+    name="twitter:description"
+    content="Estimate your FIRE number, timeline, and savings-rate impact with this free browser-based calculator."
+  />
+  <meta id="metaTwitterImage" name="twitter:image" content="https://simplekit.app/social-preview.png" />
+  <title>SimpleKit FIRE Calculator</title>
+  <link rel="canonical" href="https://simplekit.app/fire-calculator/" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="icons/favicon.svg" />
+  <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <nav class="tabs hero-tabs no-print" aria-label="Page sections">
+          <a class="tab-btn active" href="#calculator">Calculator</a>
+          <a class="tab-btn" href="#timeline">Timeline</a>
+          <a class="tab-btn" href="#scenarios">Scenarios</a>
+          <a class="tab-btn" href="#learn">Learn FIRE</a>
+        </nav>
+        <p class="eyebrow">SimpleKit FIRE Calculator • Canada-aware • Browser-based</p>
+        <h1 id="heroTitle">Find out how close you are to financial independence.</h1>
+        <p class="hero-subtitle">Estimate your path to financial independence.</p>
+        <p class="hero-proof">
+          See how savings, investing, and spending affect your timeline with a calm, beginner-friendly FIRE planning tool.
+        </p>
+        <div class="hero-cta-row no-print">
+          <a class="btn btn-primary" href="#calculator">Start the calculator</a>
+          <a class="btn btn-secondary" href="#what-is-fire">Learn how FIRE works</a>
+        </div>
+        <div class="hero-perfect-for" aria-label="Quick trust notes">
+          <span class="hero-perfect-label">Why people use it:</span>
+          <ul class="hero-perfect-list">
+            <li>No signup</li>
+            <li>Runs in your browser</li>
+            <li>Free to use</li>
+            <li>Built for quick scenario testing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-actions no-print">
+        <button id="saveAssumptionsBtn" class="btn btn-primary" type="button">Save assumptions</button>
+        <button id="loadSampleBtnHero" class="btn btn-secondary" type="button">Load sample</button>
+        <button id="aboutAppBtn" type="button" class="btn btn-secondary control-btn">About</button>
+      </div>
+    </header>
+
+    <section class="trip-snapshot" aria-labelledby="snapshotTitle">
+      <div class="trip-snapshot-head">
+        <div>
+          <h2 id="snapshotTitle">Quick trust note</h2>
+          <p class="muted small-copy">A lightweight planning tool for exploring financial independence assumptions.</p>
+        </div>
+        <div class="offline-badge-wrap" aria-label="Storage status">
+          <span class="offline-badge">Client-side calculator</span>
+          <span class="offline-badge-note">No account required.</span>
+          <span class="offline-badge-trust">Your inputs stay on this device unless you export them.</span>
+        </div>
+      </div>
+      <div id="snapshotGrid" class="trip-snapshot-grid" aria-live="polite"></div>
+    </section>
+
+    <main class="app-main">
+      <section id="what-is-fire" class="panel" aria-labelledby="fireIntroTitle">
+        <div class="panel-header">
+          <h2 id="fireIntroTitle">What Is FIRE?</h2>
+          <p>Financial independence means your portfolio can support your spending without depending entirely on employment income.</p>
+        </div>
+        <div class="content-grid intro-grid">
+          <article class="subsection">
+            <p>
+              FIRE stands for Financial Independence, Retire Early. In practice, many people use it less as a promise to stop working forever and more as a way to gain flexibility, optional work, or earlier freedom.
+            </p>
+            <p>
+              Annual spending matters because your future portfolio needs to support what you actually spend. A common shortcut is the 4% rule, which is often expressed as needing about 25 times your annual spending.
+            </p>
+            <p class="muted small-copy">
+              This is a simplified planning estimate, not personalized financial advice. Markets, taxes, inflation, and your withdrawal pattern all matter.
+            </p>
+          </article>
+          <aside class="subsection formula-card" aria-label="FIRE formula">
+            <p class="formula-label">Simple formula</p>
+            <p class="formula-value">FIRE Number = Annual Spending × Target Withdrawal Multiple</p>
+            <p class="muted small-copy">Default multiple: 25x, which is roughly equivalent to a 4% withdrawal rate.</p>
+            <div class="pill-row">
+              <span class="pill">Lean FIRE</span>
+              <span class="pill">Regular FIRE</span>
+              <span class="pill">Fat FIRE</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="calculator" class="panel" aria-labelledby="calculatorTitle">
+        <div class="panel-header">
+          <h2 id="calculatorTitle">Calculator</h2>
+          <p>Enter a few core assumptions to estimate your FIRE number, progress, and projected timeline.</p>
+        </div>
+        <div class="calculator-layout">
+          <form id="fireForm" class="activity-form fire-form" novalidate>
+            <label>
+              Current age
+              <input id="currentAge" name="currentAge" type="number" inputmode="decimal" min="0" step="1" />
+            </label>
+            <label>
+              FI age goal
+              <input id="targetAge" name="targetAge" type="number" inputmode="decimal" min="0" step="1" />
+            </label>
+            <label>
+              Current invested assets
+              <div class="input-prefix">
+                <span>$</span>
+                <input id="currentAssets" name="currentAssets" type="number" inputmode="decimal" min="0" step="1000" />
+              </div>
+            </label>
+            <label>
+              Annual after-tax spending
+              <div class="input-prefix">
+                <span>$</span>
+                <input id="annualSpending" name="annualSpending" type="number" inputmode="decimal" min="0" step="1000" />
+              </div>
+            </label>
+            <label>
+              Annual savings / contributions
+              <div class="input-prefix">
+                <span>$</span>
+                <input id="annualSavings" name="annualSavings" type="number" inputmode="decimal" min="0" step="1000" />
+              </div>
+            </label>
+            <label>
+              Expected annual return
+              <div class="input-suffix">
+                <input id="expectedReturn" name="expectedReturn" type="number" inputmode="decimal" step="0.1" />
+                <span>%</span>
+              </div>
+            </label>
+            <label>
+              Safe withdrawal rate
+              <div class="input-suffix">
+                <input id="withdrawalRate" name="withdrawalRate" type="number" inputmode="decimal" min="0.1" step="0.1" />
+                <span>%</span>
+              </div>
+            </label>
+            <label>
+              Annual passive income in retirement
+              <div class="input-prefix">
+                <span>$</span>
+                <input id="passiveIncome" name="passiveIncome" type="number" inputmode="decimal" min="0" step="1000" />
+              </div>
+            </label>
+            <div class="form-span-full">
+              <button id="advancedToggleBtn" class="toggle-row" type="button" aria-expanded="false" aria-controls="advancedFields">
+                <span>More assumptions</span>
+                <span id="advancedToggleLabel">Show</span>
+              </button>
+            </div>
+            <div id="advancedFields" class="advanced-fields form-span-full" hidden>
+              <label>
+                Salary / income
+                <div class="input-prefix">
+                  <span>$</span>
+                  <input id="salaryIncome" name="salaryIncome" type="number" inputmode="decimal" min="0" step="1000" />
+                </div>
+              </label>
+              <label>
+                Inflation assumption
+                <div class="input-suffix">
+                  <input id="inflationRate" name="inflationRate" type="number" inputmode="decimal" step="0.1" />
+                  <span>%</span>
+                </div>
+              </label>
+              <label>
+                Annual contribution increase
+                <div class="input-suffix">
+                  <input id="contributionGrowth" name="contributionGrowth" type="number" inputmode="decimal" step="0.1" />
+                  <span>%</span>
+                </div>
+              </label>
+              <label>
+                One-time future lump sum
+                <div class="input-prefix">
+                  <span>$</span>
+                  <input id="lumpSumAmount" name="lumpSumAmount" type="number" inputmode="decimal" min="0" step="1000" />
+                </div>
+              </label>
+              <label>
+                Lump sum in years
+                <input id="lumpSumYear" name="lumpSumYear" type="number" inputmode="decimal" min="0" step="1" />
+              </label>
+              <label class="toggle-field">
+                Return mode
+                <div class="segmented-control" role="radiogroup" aria-label="Return mode">
+                  <label>
+                    <input id="returnModeNominal" type="radio" name="returnMode" value="nominal" />
+                    <span>Nominal</span>
+                  </label>
+                  <label>
+                    <input id="returnModeReal" type="radio" name="returnMode" value="real" />
+                    <span>Real</span>
+                  </label>
+                </div>
+              </label>
+              <div class="advanced-note">
+                <p id="savingsRateNote" class="muted small-copy">Savings rate will appear here when salary is entered.</p>
+                <p class="muted small-copy">Taxes are not fully modeled. Use this as a planning estimate, especially when comparing registered and non-registered withdrawals.</p>
+              </div>
+            </div>
+            <div class="hero-cta-row form-span-full no-print">
+              <button id="loadSampleBtn" class="btn btn-secondary" type="button">Load Canadian sample</button>
+              <button id="resetBtn" class="btn btn-secondary" type="button">Reset assumptions</button>
+            </div>
+          </form>
+
+          <aside class="panel result-panel" aria-labelledby="resultsTitle">
+            <div class="panel-header result-header">
+              <div>
+                <h2 id="resultsTitle">Live results</h2>
+                <p id="resultSummaryLine">Enter your numbers to estimate your path to FI.</p>
+              </div>
+              <span id="stageBadge" class="status-pill" data-status="info">Early stage</span>
+            </div>
+            <div class="progress-card">
+              <div class="progress-row">
+                <span>Progress to FI</span>
+                <span id="progressPercent">0%</span>
+              </div>
+              <div class="progress-track progress-track-large">
+                <div id="progressBar" class="progress-fill planned"></div>
+              </div>
+              <p id="progressNarrative" class="muted small-copy">Enter your spending and portfolio to estimate your FIRE target.</p>
+            </div>
+            <div id="resultsGrid" class="metric-grid results-grid" aria-live="polite"></div>
+            <div class="result-callouts">
+              <article class="subsection">
+                <h3>Supported income</h3>
+                <p id="supportedIncomeText" class="result-callout-value">$0 / year</p>
+                <p class="muted small-copy">Based on your FIRE target and selected withdrawal rate.</p>
+              </article>
+              <article class="subsection">
+                <h3>Important note</h3>
+                <p id="edgeCaseMessage" class="muted">This tool assumes steady yearly contributions and returns for comparison purposes.</p>
+              </article>
+            </div>
+            <div class="support-inline no-print">
+              <p class="muted small-copy">If this tool helped you, support SimpleKit.</p>
+              <a id="resultsSupportLink" class="btn btn-secondary support-link-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="timeline" class="panel" aria-labelledby="timelineTitle">
+        <div class="panel-header">
+          <h2 id="timelineTitle">Projection timeline</h2>
+          <p>See how your portfolio could grow year by year, what your milestones look like, and when you may cross your FIRE target.</p>
+        </div>
+        <div class="content-grid chart-grid">
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Portfolio growth</h3>
+              <p class="muted small-copy">Estimated ending portfolio by year.</p>
+            </div>
+            <div id="growthChart" class="chart-surface" role="img" aria-label="Portfolio growth chart"></div>
+          </article>
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Current assets vs FIRE target</h3>
+              <p class="muted small-copy">A quick glance at how much of the target is already funded.</p>
+            </div>
+            <div id="comparisonChart" class="chart-surface" role="img" aria-label="Assets compared with FIRE target"></div>
+          </article>
+        </div>
+        <div id="milestoneGrid" class="metric-grid milestone-grid"></div>
+        <details class="projection-details">
+          <summary>Show yearly projection table</summary>
+          <div class="projection-table-wrap">
+            <table class="projection-table">
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Starting portfolio</th>
+                  <th scope="col">Contribution</th>
+                  <th scope="col">Growth</th>
+                  <th scope="col">Ending portfolio</th>
+                  <th scope="col">% to FI</th>
+                </tr>
+              </thead>
+              <tbody id="projectionTableBody"></tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+
+      <section id="scenarios" class="panel" aria-labelledby="scenarioTitle">
+        <div class="panel-header">
+          <h2 id="scenarioTitle">Scenario testing</h2>
+          <p>Compare your current plan with a few simple changes that often matter most.</p>
+        </div>
+        <div class="content-grid scenario-layout">
+          <article class="subsection chart-card">
+            <div class="chart-head">
+              <h3>Timeline comparison</h3>
+              <p class="muted small-copy">Lower bars mean fewer years until FI.</p>
+            </div>
+            <div id="scenarioChart" class="chart-surface" role="img" aria-label="Scenario comparison chart"></div>
+          </article>
+          <div id="scenarioCards" class="scenario-card-grid"></div>
+        </div>
+      </section>
+
+      <section id="learn" class="panel" aria-labelledby="insightsTitle">
+        <div class="panel-header">
+          <h2 id="insightsTitle">Educational insights</h2>
+          <p>Short takeaways to help you understand what the numbers mean in plain English.</p>
+        </div>
+        <div id="insightGrid" class="content-grid insight-grid"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="canadaTitle">
+        <div class="panel-header">
+          <h2 id="canadaTitle">Canadian context</h2>
+          <p>FIRE planning in Canada often works best when you combine portfolio math with account structure and future benefits.</p>
+        </div>
+        <div class="content-grid canada-grid">
+          <article class="subsection">
+            <h3>TFSA and RRSP both matter</h3>
+            <p>Tax-free growth in a TFSA and tax deferral in an RRSP can both support a FIRE plan. Which one helps most depends on your tax rate now versus later.</p>
+          </article>
+          <article class="subsection">
+            <h3>CPP and OAS can reduce later self-funding needs</h3>
+            <p>Many FIRE plans bridge the years before government benefits start, then rely less heavily on the portfolio later.</p>
+          </article>
+          <article class="subsection">
+            <h3>Withdrawals are tax-sensitive</h3>
+            <p>Registered withdrawals, capital gains, and account sequencing affect net income. This calculator is intentionally not a full tax engine.</p>
+          </article>
+          <article class="subsection">
+            <h3>Use this with your broader plan</h3>
+            <p>For a stronger plan, pair this estimate with account-level contribution strategy, government benefit timing, and retirement income planning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="relatedToolsTitle">
+        <div class="panel-header">
+          <h2 id="relatedToolsTitle">Continue your planning</h2>
+          <p>Use the next SimpleKit tool that answers the question you are likely to ask after your FIRE estimate.</p>
+        </div>
+        <div class="content-grid related-grid">
+          <a class="subsection related-card no-print" href="../33_Simplekit RRSP TFSA Calculator/index.html" data-track-link="tfsa-rrsp">
+            <h3>TFSA / RRSP Calculator</h3>
+            <p>See how registered accounts can accelerate your investing plan and change where you save next.</p>
+          </a>
+          <a class="subsection related-card no-print" href="../32_Simplekit CPP Calculator/index.html" data-track-link="cpp">
+            <h3>CPP Calculator</h3>
+            <p>Estimate future government benefits that may reduce how much you need to self-fund later retirement years.</p>
+          </a>
+          <a class="subsection related-card no-print" href="../33_Retirement Planner V3/index.html" data-track-link="retirement">
+            <h3>Retirement Planner</h3>
+            <p>Turn this simple FIRE estimate into a broader retirement income plan with more moving parts.</p>
+          </a>
+          <a class="subsection related-card no-print" href="../34_Net Worth/index.html" data-track-link="net-worth">
+            <h3>Net Worth Calculator</h3>
+            <p>Track the assets and liabilities behind your progress so your FI plan reflects your full financial picture.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel seo-panel" aria-labelledby="seoTitle">
+        <div class="panel-header">
+          <h2 id="seoTitle">FIRE calculator guide</h2>
+          <p>Helpful context for common questions about financial independence, retire early planning, and the 4% rule in Canada.</p>
+        </div>
+        <article class="seo-block">
+          <h3>What is FIRE?</h3>
+          <p>FIRE stands for Financial Independence, Retire Early. The core idea is simple: build enough invested assets that work becomes optional because your portfolio can help cover your annual spending.</p>
+          <h3>How do you calculate your FIRE number?</h3>
+          <p>Your FIRE number starts with annual spending, adjusted for any reliable passive income you expect in retirement. A common shortcut is dividing net spending by your withdrawal rate, or multiplying annual spending by a withdrawal multiple such as 25x.</p>
+          <h3>What is a good savings rate for FIRE?</h3>
+          <p>There is no perfect number, but higher savings rates usually shorten the timeline because they increase contributions and often reflect lower spending. Even moderate increases can materially change your projection.</p>
+          <h3>How much do I need to retire early?</h3>
+          <p>It depends more on what you spend than on a headline target. Someone spending $50,000 per year needs a very different portfolio than someone spending $100,000 per year.</p>
+          <h3>Does the 4% rule work in Canada?</h3>
+          <p>The 4% rule is a rough planning guideline, not a guarantee. Canadian taxes, asset mix, sequence risk, inflation, and account structure all affect how safe a withdrawal plan may be.</p>
+          <h3>Can TFSA and RRSP be used for FIRE?</h3>
+          <p>Yes. Both can be part of a FIRE plan. TFSAs provide tax-free withdrawals, while RRSPs can reduce taxes during high-earning years and still be useful later with thoughtful withdrawal planning.</p>
+        </article>
+      </section>
+
+      <section id="support" class="panel support-panel no-print" aria-labelledby="supportTitle">
+        <div class="support-banner">
+          <div>
+            <h2 id="supportTitle">If this tool helped you, support SimpleKit</h2>
+            <p class="muted">Buy me a coffee and help fund more free planning tools.</p>
+          </div>
+          <a id="supportBannerLink" class="btn btn-primary support-link-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer no-print" aria-label="App support and links">
+      <div class="footer-branding">
+        <strong id="footerAppName">SimpleKit FIRE Calculator</strong>
+        <span id="footerTagline" class="muted">Estimate your path to financial independence.</span>
+      </div>
+      <div class="footer-actions">
+        <a id="footerSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
+        <button id="footerAboutBtn" type="button" class="icon-btn" aria-label="About this calculator">About</button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="global-fab-row no-print" aria-label="Quick actions">
+    <a id="globalSupportBtn" class="global-support-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
+    <button id="globalSaveBtn" class="global-save-btn" type="button">Save</button>
+  </div>
+
+  <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <div id="aboutModal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+      <button id="aboutModalClose" class="modal-close icon-btn" type="button" aria-label="Close about dialog">Close</button>
+      <div class="modal-header">
+        <h4 id="aboutModalTitle">About SimpleKit FIRE Calculator</h4>
+        <p class="muted small-copy">A local-first estimate for financial independence planning, savings strategy, and quick scenario testing.</p>
+      </div>
+      <div class="modal-body">
+        <p>This calculator uses simple annual projections so you can compare spending, savings, returns, and withdrawal assumptions without a spreadsheet-heavy experience.</p>
+        <p>It is designed for education and planning. It does not replace tax advice, portfolio planning, or a full retirement income strategy.</p>
+        <p><a id="aboutSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

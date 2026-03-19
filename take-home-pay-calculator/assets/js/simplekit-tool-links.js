@@ -3,7 +3,7 @@ window.SimpleKitToolLinks = Object.freeze({
   "take-home-pay-calculator": "https://simplekit.app/take-home-pay-calculator/",
   "take-home-pay-canada": "https://simplekit.app/take-home-pay-calculator/",
   retirementPlanner: "https://simplekit.app/retirement-planner/",
-  fireCalculator: "https://fire.simplekit.app/",
+  fireCalculator: "https://simplekit.app/fire-calculator/",
   cppCalculator: "https://simplekit.app/cpp-calculator/",
   rrsptfsaCalculator: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
   compoundInterestCalculator: "https://simplekit.app/compound-interest-calculator/",

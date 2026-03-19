@@ -421,7 +421,7 @@
     const toolsLinks = [
       { href: "https://simplekit.app/tools/", label: "All Tools" },
       { href: "https://simplekit.app/retirement-planner/", label: "Retirement Planner" },
-      { href: "https://fire.simplekit.app/", label: "FIRE Calculator" },
+      { href: "https://simplekit.app/fire-calculator/", label: "FIRE Calculator" },
       { href: "https://simplekit.app/cpp-calculator/", label: "CPP Calculator" },
       { href: "https://simplekit.app/rrsp-vs-tfsa-calculator/", label: "RRSP / TFSA Calculator" },
       { href: "https://simplekit.app/budget-planner/", label: "Budget Planner" },

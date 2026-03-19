@@ -138,10 +138,10 @@
   {
     "id": "fire-calculator",
     "name": "FIRE Calculator",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/35_FIRE Simplekit",
+    "notes": "Updated the FIRE tool repo from template/example.com metadata to https://simplekit.app/fire-calculator/ across OG, Twitter image fallback, app share fallback, robots, sitemap, and manifest scope, then flipped the main-site registry so generated links now resolve to the main-domain path."
   },
   {
     "id": "canadian-tax-checklist",

@@ -550,7 +550,7 @@
           kicker: "Financial independence",
           title: "Try the FIRE Calculator",
           copy: "If your goal is optional early retirement or work flexibility, test how this compound-growth path affects your timeline.",
-          href: "https://fire.simplekit.app/",
+          href: "https://simplekit.app/fire-calculator/",
         },
         {
           kicker: "Balance sheet",

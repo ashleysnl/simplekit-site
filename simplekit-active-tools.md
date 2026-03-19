@@ -1,7 +1,7 @@
 # SimpleKit Active Tools
 
 1. [Retirement Planner](https://simplekit.app/retirement-planner/)
-2. [FIRE Calculator](https://fire.simplekit.app/)
+2. [FIRE Calculator](https://simplekit.app/fire-calculator/)
 3. [CPP Calculator](https://simplekit.app/cpp-calculator/)
 4. [RRSP / TFSA Calculator](https://simplekit.app/rrsp-vs-tfsa-calculator/)
 5. [Compound Interest Calculator](https://simplekit.app/compound-interest-calculator/)

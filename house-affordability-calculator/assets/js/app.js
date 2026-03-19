@@ -67,7 +67,7 @@
 
   const LIVE_TOOL_LINKS = new Map([
     ["retirement planner", "https://simplekit.app/retirement-planner/"],
-    ["fire calculator", "https://fire.simplekit.app/"],
+    ["fire calculator", "https://simplekit.app/fire-calculator/"],
     ["cpp calculator", "https://simplekit.app/cpp-calculator/"],
     ["rrsp / tfsa calculator", "https://simplekit.app/rrsp-vs-tfsa-calculator/"],
     ["compound interest calculator", "https://simplekit.app/compound-interest-calculator/"],
@@ -83,7 +83,7 @@
 
   const STALE_TOOL_LINK_PATTERNS = [
     ["retirement", "https://simplekit.app/retirement-planner/"],
-    ["fire", "https://fire.simplekit.app/"],
+    ["fire", "https://simplekit.app/fire-calculator/"],
     ["cpp", "https://simplekit.app/cpp-calculator/"],
     ["rrsp", "https://simplekit.app/rrsp-vs-tfsa-calculator/"],
     ["tfsa", "https://simplekit.app/rrsp-vs-tfsa-calculator/"],

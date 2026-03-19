@@ -14,8 +14,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "fire-calculator",
     "subdomainUrl": "https://fire.simplekit.app/",
     "pathUrl": "https://simplekit.app/fire-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://fire.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/fire-calculator/"
   },
   "cpp-calculator": {
     "id": "cpp-calculator",
