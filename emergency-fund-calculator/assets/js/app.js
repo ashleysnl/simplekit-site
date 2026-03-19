@@ -423,7 +423,7 @@
       { href: "https://simplekit.app/retirement-planner/", label: "Retirement Planner" },
       { href: "https://fire.simplekit.app/", label: "FIRE Calculator" },
       { href: "https://simplekit.app/cpp-calculator/", label: "CPP Calculator" },
-      { href: "https://rrsptfsa.simplekit.app/", label: "RRSP / TFSA Calculator" },
+      { href: "https://simplekit.app/rrsp-vs-tfsa-calculator/", label: "RRSP / TFSA Calculator" },
       { href: "https://simplekit.app/budget-planner/", label: "Budget Planner" },
       { href: "https://simplekit.app/debt-payoff-calculator/", label: "Debt Payoff Calculator" },
       { href: "https://simplekit.app/net-worth-calculator/", label: "Net Worth Calculator" },
@@ -431,7 +431,7 @@
       { href: "https://simplekit.app/rent-vs-buy-calculator/", label: "Rent vs Buy Calculator" },
       { href: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/", label: "Mortgage Paydown vs Invest" },
       { href: "https://simplekit.app/mortgage-calculator/", label: "Mortgage Calculator" },
-      { href: "https://fees.simplekit.app/", label: "Investment Fee Calculator" },
+      { href: "https://simplekit.app/investment-fee-calculator/", label: "Investment Fee Calculator" },
       { href: "https://travel.simplekit.app/", label: "Travel Planner" },
     ];
 

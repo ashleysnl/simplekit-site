@@ -1,0 +1,30 @@
+{
+  "name": "SimpleKit Investment Fee Calculator",
+  "short_name": "Fee Calc",
+  "description": "Compare investment fees, MERs, and long-term fee drag with a static calculator built for SimpleKit.",
+  "start_url": "/investment-fee-calculator/",
+  "scope": "/investment-fee-calculator/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0f6abf",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

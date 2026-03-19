@@ -122,18 +122,18 @@
   {
     "id": "investment-fee-calculator",
     "name": "Investment Fee Calculator",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/37_Investment Fee SimpleKit",
+    "notes": "Verified the tool repo was already path-ready for /investment-fee-calculator/, kept canonical/OG/schema/robots/sitemap on the path URL, and flipped the main-site registry so all generated site links now resolve to the main-domain path."
   },
   {
     "id": "rrsp-vs-tfsa-calculator",
     "name": "RRSP / TFSA Calculator",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Simplekit RRSP TFSA Calculator",
+    "notes": "Updated the tool repo from the old retirement.simplekit.app/rrsp-vs-tfsa-calculator/ URL to https://simplekit.app/rrsp-vs-tfsa-calculator/ across canonical, OG, schema, app config, robots, and sitemap, then flipped the main-site registry so all generated links resolve to the main-domain path."
   },
   {
     "id": "fire-calculator",

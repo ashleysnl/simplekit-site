@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simplekit.app/rrsp-vs-tfsa-calculator/sitemap.xml

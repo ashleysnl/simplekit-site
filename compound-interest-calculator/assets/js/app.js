@@ -517,13 +517,13 @@
           kicker: "Fee drag",
           title: "Open the Investment Fee Calculator",
           copy: "This scenario shows meaningful long-term fee drag. Compare lower-fee options next to see how much more compound growth you may keep.",
-          href: "https://fees.simplekit.app/",
+          href: "https://simplekit.app/investment-fee-calculator/",
         },
         {
           kicker: "Tax efficiency",
           title: "Compare RRSP vs TFSA",
           copy: "If these contributions are going into registered accounts, compare where the next dollar may work harder after tax.",
-          href: "https://rrsptfsa.simplekit.app/",
+          href: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
         },
       ];
     }
@@ -540,7 +540,7 @@
           kicker: "Tax efficiency",
           title: "Compare RRSP vs TFSA",
           copy: "If this goal is retirement-focused, check where future contributions may be more efficient after tax.",
-          href: "https://rrsptfsa.simplekit.app/",
+          href: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
         },
       ];
     }

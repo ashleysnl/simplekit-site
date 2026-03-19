@@ -29,7 +29,7 @@
     "slug": "rrsp-vs-tfsa-calculator",
     "subdomainUrl": "https://rrsptfsa.simplekit.app/",
     "pathUrl": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "compound-interest-calculator",
@@ -133,7 +133,7 @@
     "slug": "investment-fee-calculator",
     "subdomainUrl": "https://fees.simplekit.app/",
     "pathUrl": "https://simplekit.app/investment-fee-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "mortgage-calculator",

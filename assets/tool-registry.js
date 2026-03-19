@@ -32,8 +32,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "rrsp-vs-tfsa-calculator",
     "subdomainUrl": "https://rrsptfsa.simplekit.app/",
     "pathUrl": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://rrsptfsa.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/rrsp-vs-tfsa-calculator/"
   },
   "compound-interest-calculator": {
     "id": "compound-interest-calculator",
@@ -149,8 +149,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "investment-fee-calculator",
     "subdomainUrl": "https://fees.simplekit.app/",
     "pathUrl": "https://simplekit.app/investment-fee-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://fees.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/investment-fee-calculator/"
   },
   "mortgage-calculator": {
     "id": "mortgage-calculator",

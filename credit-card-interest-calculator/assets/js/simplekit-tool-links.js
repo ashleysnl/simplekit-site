@@ -2,7 +2,7 @@ window.SimpleKitToolLinks = Object.freeze({
   retirementPlanner: "https://simplekit.app/retirement-planner/",
   fireCalculator: "https://fire.simplekit.app/",
   cppCalculator: "https://simplekit.app/cpp-calculator/",
-  rrsptfsaCalculator: "https://rrsptfsa.simplekit.app/",
+  rrsptfsaCalculator: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
   compoundInterestCalculator: "https://simplekit.app/compound-interest-calculator/",
   emergencyFundCalculator: "https://simplekit.app/emergency-fund-calculator/",
   netWorthCalculator: "https://simplekit.app/net-worth-calculator/",
@@ -11,7 +11,7 @@ window.SimpleKitToolLinks = Object.freeze({
   debtPayoffCalculator: "https://simplekit.app/debt-payoff-calculator/",
   mortgagePaydownVsInvestCalculator: "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
   mortgageCalculator: "https://simplekit.app/mortgage-calculator/",
-  investmentFeeCalculator: "https://fees.simplekit.app/",
+  investmentFeeCalculator: "https://simplekit.app/investment-fee-calculator/",
   travelPlanner: "https://travel.simplekit.app/"
 });
 

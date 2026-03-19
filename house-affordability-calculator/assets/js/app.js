@@ -69,7 +69,7 @@
     ["retirement planner", "https://simplekit.app/retirement-planner/"],
     ["fire calculator", "https://fire.simplekit.app/"],
     ["cpp calculator", "https://simplekit.app/cpp-calculator/"],
-    ["rrsp / tfsa calculator", "https://rrsptfsa.simplekit.app/"],
+    ["rrsp / tfsa calculator", "https://simplekit.app/rrsp-vs-tfsa-calculator/"],
     ["compound interest calculator", "https://simplekit.app/compound-interest-calculator/"],
     ["net worth calculator", "https://simplekit.app/net-worth-calculator/"],
     ["budget planner", "https://simplekit.app/budget-planner/"],
@@ -77,7 +77,7 @@
     ["rent vs buy calculator", "https://simplekit.app/rent-vs-buy-calculator/"],
     ["mortgage paydown vs invest", "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"],
     ["mortgage calculator", "https://simplekit.app/mortgage-calculator/"],
-    ["investment fee calculator", "https://fees.simplekit.app/"],
+    ["investment fee calculator", "https://simplekit.app/investment-fee-calculator/"],
     ["travel planner", "https://travel.simplekit.app/"],
   ]);
 
@@ -85,8 +85,8 @@
     ["retirement", "https://simplekit.app/retirement-planner/"],
     ["fire", "https://fire.simplekit.app/"],
     ["cpp", "https://simplekit.app/cpp-calculator/"],
-    ["rrsp", "https://rrsptfsa.simplekit.app/"],
-    ["tfsa", "https://rrsptfsa.simplekit.app/"],
+    ["rrsp", "https://simplekit.app/rrsp-vs-tfsa-calculator/"],
+    ["tfsa", "https://simplekit.app/rrsp-vs-tfsa-calculator/"],
     ["investment", "https://simplekit.app/compound-interest-calculator/"],
     ["compound", "https://simplekit.app/compound-interest-calculator/"],
     ["networth", "https://simplekit.app/net-worth-calculator/"],
@@ -100,7 +100,7 @@
     ["mortgage-calculator", "https://simplekit.app/mortgage-calculator/"],
     ["mortgage.simplekit.app", "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"],
     ["paydown", "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"],
-    ["fees", "https://fees.simplekit.app/"],
+    ["fees", "https://simplekit.app/investment-fee-calculator/"],
     ["travel", "https://travel.simplekit.app/"],
   ];
 
