@@ -7,7 +7,7 @@
 5. [Compound Interest Calculator](https://simplekit.app/compound-interest-calculator/)
 6. [Savings Goal Calculator](https://savingsgoal.simplekit.app/)
 7. [Emergency Fund Calculator](https://emergency.simplekit.app/)
-8. [Net Worth Calculator](https://networth.simplekit.app/)
+8. [Net Worth Calculator](https://simplekit.app/net-worth-calculator/)
 9. [Budget Planner](https://simplekit.app/budget-planner/)
 10. [Canadian Take Home Pay Calculator](https://simplekit.app/take-home-pay-calculator/)
 11. [Debt Payoff Calculator](https://simplekit.app/debt-payoff-calculator/)

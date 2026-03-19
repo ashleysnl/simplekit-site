@@ -1,0 +1,18 @@
+{
+  "name": "SimpleKit Net Worth Calculator",
+  "short_name": "Net Worth",
+  "description": "A SimpleKit calculator for assets, liabilities, and future net worth projections.",
+  "start_url": "/net-worth-calculator/",
+  "scope": "/net-worth-calculator/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0f6abf",
+  "icons": [
+    {
+      "src": "/net-worth-calculator/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

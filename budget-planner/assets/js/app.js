@@ -716,7 +716,7 @@
       });
     }
     suggestions.push({
-      href: "https://networth.simplekit.app/",
+      href: "https://simplekit.app/net-worth-calculator/",
       label: "See how budgeting changes your net worth",
     });
 

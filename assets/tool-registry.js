@@ -68,8 +68,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "net-worth-calculator",
     "subdomainUrl": "https://networth.simplekit.app/",
     "pathUrl": "https://simplekit.app/net-worth-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://networth.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/net-worth-calculator/"
   },
   "budget-planner": {
     "id": "budget-planner",

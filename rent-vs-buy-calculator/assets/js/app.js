@@ -762,7 +762,7 @@ function renderPrimaryResults(summary) {
   } else {
     nextToolHeading.textContent = "Use the Net Worth Calculator next";
     nextToolCopy.textContent = "If the housing decision is close, zoom out and see how it fits inside your full financial picture.";
-    nextToolLink.href = "https://networth.simplekit.app/";
+    nextToolLink.href = "https://simplekit.app/net-worth-calculator/";
   }
 
   if (resultToolInlineLink) {

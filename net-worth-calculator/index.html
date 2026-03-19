@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    id="metaDescription"
+    name="description"
+    content="Calculate your net worth in Canada, compare assets and liabilities, and project how savings, growth, and debt paydown could change your financial picture."
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta id="metaThemeColor" name="theme-color" content="#0f6abf" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta id="metaOgTitle" property="og:title" content="SimpleKit Net Worth Calculator Canada" />
+  <meta
+    id="metaOgDescription"
+    property="og:description"
+    content="Use this SimpleKit net worth calculator to total your assets and debts, estimate home equity, and project your future net worth over time."
+  />
+  <meta id="metaOgUrl" property="og:url" content="https://simplekit.app/net-worth-calculator/" />
+  <meta id="metaOgImage" property="og:image" content="https://simplekit.app/og-image.png" />
+  <meta id="metaOgSiteName" property="og:site_name" content="SimpleKit Net Worth Calculator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta id="metaTwitterTitle" name="twitter:title" content="SimpleKit Net Worth Calculator Canada" />
+  <meta
+    id="metaTwitterDescription"
+    name="twitter:description"
+    content="See your full financial picture in minutes with a Canadian net worth calculator for assets, liabilities, and future projections."
+  />
+  <meta id="metaTwitterImage" name="twitter:image" content="https://simplekit.app/og-image.png" />
+  <title>SimpleKit Net Worth Calculator Canada</title>
+  <link rel="canonical" href="https://simplekit.app/net-worth-calculator/" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="icons/favicon.svg" />
+  <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "SimpleKit Net Worth Calculator",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "inLanguage": "en-CA",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Canada"
+          },
+          "url": "https://simplekit.app/net-worth-calculator/",
+          "description": "A Canadian net worth calculator that helps households total assets and debts, understand equity, and project future net worth."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is net worth?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Net worth is the value of what you own minus what you owe. It combines cash, investments, real estate, pensions, and other assets, then subtracts debts such as mortgages, loans, and credit cards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you calculate net worth in Canada?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Canada, net worth is calculated by adding assets such as cash, TFSAs, RRSPs, FHSAs, pensions, real estate, and vehicles, then subtracting liabilities such as mortgages, HELOCs, loans, and other debts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should you include your house in net worth?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, many people include their home because home equity is part of their balance sheet. The important step is to include both the property value and the related mortgage or HELOC."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is pension included in net worth?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A pension can be included if you use a reasonable estimate for its present value. If you do not have a clear estimate, you can leave it blank and review it later."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a good net worth by age?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "There is no single good net worth number by age because income, housing costs, pensions, family size, and when you started saving all matter. The more useful question is whether your net worth is moving in the right direction over time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does net worth connect to retirement planning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Net worth shows the resources you may be able to draw on later, but retirement readiness also depends on retirement income sources, spending needs, taxes, and timing decisions such as CPP or RRSP withdrawals."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="suite-nav no-print" aria-label="SimpleKit suite navigation">
+      <a class="suite-home" href="https://simplekit.app/" target="_blank" rel="noopener noreferrer">SimpleKit</a>
+      <div class="suite-links">
+        <a href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer">Retirement Planner</a>
+        <a href="https://simplekit.app/cpp-calculator/" target="_blank" rel="noopener noreferrer">CPP Calculator</a>
+        <a href="https://simplekit.app/retirement-planner/rrsp-vs-tfsa-calculator/" target="_blank" rel="noopener noreferrer">TFSA / RRSP Calculator</a>
+      </div>
+    </nav>
+
+    <header class="hero" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <p class="eyebrow">SimpleKit Retirement Tools • Canada</p>
+        <h1 id="heroTitle">SimpleKit Net Worth Calculator Canada</h1>
+        <p class="hero-subtitle">Calculate your net worth in Canada, understand what counts, and see what your balance sheet could look like over time.</p>
+        <p class="hero-proof">Estimate what you own and subtract what you owe. This gives you a clearer starting point for retirement planning.</p>
+        <div class="hero-cta-row no-print">
+          <button id="jumpToCalculatorBtn" class="btn btn-primary" type="button">Start the calculator</button>
+          <a class="btn btn-secondary ghost-btn" href="#educationSection">What counts as net worth?</a>
+        </div>
+        <p class="hero-trust">No sign-up. No data sent to servers. Runs entirely in your browser.</p>
+      </div>
+      <div class="hero-side">
+        <div class="hero-stat-card">
+          <span class="hero-stat-label">Formula</span>
+          <strong>Assets - Liabilities</strong>
+          <p>Track the snapshot now, then use the projection to see what regular saving and debt paydown can do over time.</p>
+        </div>
+        <div class="hero-mini-grid" aria-label="What this tool shows">
+          <article class="hero-mini-card">
+            <span class="mini-kicker">Today</span>
+            <strong>Current net worth</strong>
+          </article>
+          <article class="hero-mini-card">
+            <span class="mini-kicker">Mix</span>
+            <strong>Assets vs debts</strong>
+          </article>
+          <article class="hero-mini-card">
+            <span class="mini-kicker">Next</span>
+            <strong>Future trajectory</strong>
+          </article>
+        </div>
+      </div>
+    </header>
+
+    <section class="trip-snapshot trust-strip" aria-labelledby="trustHeading">
+      <div class="trip-snapshot-head">
+        <div>
+          <h2 id="trustHeading">Quick trust note</h2>
+          <p class="muted small-copy">Built to feel simple, private, and useful for real Canadian planning conversations.</p>
+        </div>
+        <div class="offline-badge-wrap" aria-label="Privacy note">
+          <span class="offline-badge">Private by default</span>
+          <span class="offline-badge-note">Entries stay on this device.</span>
+          <span class="offline-badge-trust">Use sample data if you just want to explore first.</span>
+        </div>
+      </div>
+      <div class="trip-snapshot-grid trust-grid">
+        <article class="trip-snapshot-item">
+          <span class="label">Easy start</span>
+          <span class="value">3 sections</span>
+          <span class="sub">Assets, debts, and projection assumptions.</span>
+        </article>
+        <article class="trip-snapshot-item">
+          <span class="label">Live updates</span>
+          <span class="value">Instant</span>
+          <span class="sub">Blank fields count as zero and charts refresh automatically.</span>
+        </article>
+        <article class="trip-snapshot-item">
+          <span class="label">Retirement context</span>
+          <span class="value">Built in</span>
+          <span class="sub">See how net worth fits with TFSA, RRSP, CPP, and long-term planning.</span>
+        </article>
+      </div>
+    </section>
+
+    <main class="page-flow">
+      <section id="calculatorSection" class="panel calculator-panel" aria-labelledby="calculatorHeading">
+        <div class="panel-header">
+          <h2 id="calculatorHeading">Net worth calculator</h2>
+          <p>Start with your balance sheet first. Use realistic resale values for homes, vehicles, and other assets.</p>
+        </div>
+
+        <div class="calculator-intro prose-inline">
+          <p><strong>SimpleKit Net Worth Calculator</strong> is a plain-English net worth calculator for Canada. Use it as a household net worth calculator, a personal balance-sheet check-in, or a quick way to connect today’s numbers to longer-term retirement planning.</p>
+        </div>
+
+        <section class="mobile-summary-card" aria-labelledby="mobileSummaryHeading">
+          <div class="results-head">
+            <div>
+              <span class="results-kicker">Quick view</span>
+              <h3 id="mobileSummaryHeading">Live snapshot</h3>
+            </div>
+            <span id="mobileStrengthBadge" class="strength-badge">Building</span>
+          </div>
+          <div class="mobile-summary-value">
+            <span class="label">Current net worth</span>
+            <strong id="mobileNetWorthValue">$0</strong>
+          </div>
+          <div id="mobileSummaryGrid" class="mobile-summary-grid" aria-live="polite"></div>
+        </section>
+
+        <div class="calculator-layout">
+          <form id="calculatorForm" class="calculator-card no-print" novalidate>
+            <div class="form-toolbar">
+              <div>
+                <strong>Guided input</strong>
+                <p class="muted small-copy">You can include pensions and home equity for a fuller financial picture.</p>
+              </div>
+              <div class="toolbar-actions">
+                <button id="loadSampleBtn" class="btn btn-primary" type="button">Load sample data</button>
+                <button id="resetBtn" class="btn btn-secondary btn-secondary-panel" type="button">Reset</button>
+              </div>
+            </div>
+
+            <details class="input-card" open>
+              <summary>
+                <span>Assets</span>
+                <span class="summary-note">What you own</span>
+              </summary>
+              <div class="input-grid">
+                <label class="form-field">
+                  <span>Cash / chequing / savings</span>
+                  <input id="cash" data-format="currency" inputmode="decimal" placeholder="15,000" />
+                  <small>Emergency funds and everyday cash accounts.</small>
+                </label>
+                <label class="form-field">
+                  <span>TFSA</span>
+                  <input id="tfsa" data-format="currency" inputmode="decimal" placeholder="55,000" />
+                  <small>Use current market value.</small>
+                </label>
+                <label class="form-field">
+                  <span>RRSP</span>
+                  <input id="rrsp" data-format="currency" inputmode="decimal" placeholder="180,000" />
+                  <small>Include locked-in or spousal RRSPs if relevant.</small>
+                </label>
+                <label class="form-field">
+                  <span>FHSA</span>
+                  <input id="fhsa" data-format="currency" inputmode="decimal" placeholder="12,000" />
+                  <small>Optional if you have one.</small>
+                </label>
+                <label class="form-field">
+                  <span>Non-registered investments</span>
+                  <input id="nonRegistered" data-format="currency" inputmode="decimal" placeholder="10,000" />
+                  <small>Taxable brokerage or other investment accounts.</small>
+                </label>
+                <label class="form-field">
+                  <span>Pension value estimate</span>
+                  <input id="pension" data-format="currency" inputmode="decimal" placeholder="150,000" />
+                  <small>Optional estimate if your plan provides a commuted value or statement.</small>
+                </label>
+                <label class="form-field">
+                  <span>Home value</span>
+                  <input id="homeValue" data-format="currency" inputmode="decimal" placeholder="850,000" />
+                  <small>Use a realistic current market estimate.</small>
+                </label>
+                <label class="form-field">
+                  <span>Other real estate</span>
+                  <input id="otherRealEstate" data-format="currency" inputmode="decimal" placeholder="0" />
+                  <small>Cottage, rental, land, or other property.</small>
+                </label>
+                <label class="form-field">
+                  <span>Vehicle value</span>
+                  <input id="vehicle" data-format="currency" inputmode="decimal" placeholder="25,000" />
+                  <small>Use a resale estimate, not the purchase price.</small>
+                </label>
+                <label class="form-field">
+                  <span>Business value</span>
+                  <input id="business" data-format="currency" inputmode="decimal" placeholder="0" />
+                  <small>Optional for business owners.</small>
+                </label>
+                <label class="form-field">
+                  <span>Other assets</span>
+                  <input id="otherAssets" data-format="currency" inputmode="decimal" placeholder="5,000" />
+                  <small>Collectibles, receivables, or anything else you want to include.</small>
+                </label>
+              </div>
+            </details>
+
+            <details class="input-card" open>
+              <summary>
+                <span>Liabilities</span>
+                <span class="summary-note">What you owe</span>
+              </summary>
+              <div class="input-grid">
+                <label class="form-field">
+                  <span>Mortgage balance</span>
+                  <input id="mortgage" data-format="currency" inputmode="decimal" placeholder="520,000" />
+                  <small>Outstanding principal balance.</small>
+                </label>
+                <label class="form-field">
+                  <span>HELOC</span>
+                  <input id="heloc" data-format="currency" inputmode="decimal" placeholder="0" />
+                  <small>Shown separately and included in debt totals.</small>
+                </label>
+                <label class="form-field">
+                  <span>Car loan</span>
+                  <input id="carLoan" data-format="currency" inputmode="decimal" placeholder="12,000" />
+                  <small>Auto loan or lease buyout debt.</small>
+                </label>
+                <label class="form-field">
+                  <span>Student loan</span>
+                  <input id="studentLoan" data-format="currency" inputmode="decimal" placeholder="0" />
+                  <small>Federal, provincial, or private student debt.</small>
+                </label>
+                <label class="form-field">
+                  <span>Credit card debt</span>
+                  <input id="creditCard" data-format="currency" inputmode="decimal" placeholder="2,500" />
+                  <small>Include balances you carry month to month.</small>
+                </label>
+                <label class="form-field">
+                  <span>Line of credit</span>
+                  <input id="lineOfCredit" data-format="currency" inputmode="decimal" placeholder="8,000" />
+                  <small>Personal or unsecured line of credit.</small>
+                </label>
+                <label class="form-field">
+                  <span>Other debt</span>
+                  <input id="otherDebt" data-format="currency" inputmode="decimal" placeholder="0" />
+                  <small>Anything else that should reduce your net worth.</small>
+                </label>
+              </div>
+            </details>
+
+            <details class="input-card" open>
+              <summary>
+                <span>Future projection</span>
+                <span class="summary-note">Optional estimate</span>
+              </summary>
+              <div class="input-grid projection-grid">
+                <label class="form-field">
+                  <span>Annual contributions / savings</span>
+                  <input id="annualContributions" data-format="currency" inputmode="decimal" placeholder="18,000" />
+                  <small>Added to assets each year.</small>
+                </label>
+                <label class="form-field">
+                  <span>Expected annual growth rate</span>
+                  <input id="growthRate" data-format="percent" inputmode="decimal" placeholder="5" />
+                  <small>Default is 5%. Use a conservative long-term estimate.</small>
+                </label>
+                <label class="form-field">
+                  <span>Projection years</span>
+                  <input id="projectionYears" data-format="number" inputmode="numeric" placeholder="10" />
+                  <small>Choose how far ahead you want to look.</small>
+                </label>
+                <label class="form-field">
+                  <span>Annual debt paydown</span>
+                  <input id="annualDebtPaydown" data-format="currency" inputmode="decimal" placeholder="12,000" />
+                  <small>Debt is reduced each year, but never below zero.</small>
+                </label>
+              </div>
+            </details>
+          </form>
+
+          <aside class="results-card" aria-labelledby="resultsHeading">
+            <div class="results-head">
+              <div>
+                <span class="results-kicker">Live results</span>
+                <h2 id="resultsHeading">Your current snapshot</h2>
+              </div>
+              <span id="strengthBadge" class="strength-badge" aria-live="polite">Building</span>
+            </div>
+
+            <article class="net-worth-card">
+              <span class="label">Current net worth</span>
+              <strong id="netWorthValue" class="net-worth-value">$0</strong>
+              <p id="badgeExplanation" class="muted">Based on whether assets currently exceed liabilities and how heavily debt supports those assets.</p>
+            </article>
+
+            <div id="summaryGrid" class="metric-grid" aria-live="polite"></div>
+
+            <section class="subsection insight-block" aria-labelledby="insightHeading">
+              <div class="section-head">
+                <h3 id="insightHeading">What this suggests</h3>
+                <p class="muted small-copy">Quick context, not a judgment.</p>
+              </div>
+              <p id="insightCopy" class="lead-copy"></p>
+              <ul id="insightList" class="insight-list"></ul>
+            </section>
+
+            <section class="subsection next-step-cta" aria-labelledby="nextActionHeading">
+              <div class="section-head">
+                <h3 id="nextActionHeading">Best next step</h3>
+                <p class="muted small-copy">Continue from this snapshot.</p>
+              </div>
+              <p id="nextActionCopy" class="lead-copy"></p>
+              <p id="nextActionBridge" class="muted small-copy"></p>
+              <div class="next-action-buttons">
+                <a id="primaryNextAction" class="btn btn-primary result-link-cta" href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer" data-tool-name="retirement-planner">Open the Retirement Planner</a>
+                <a id="secondaryNextAction" class="btn btn-secondary btn-secondary-panel result-link-cta" href="https://simplekit.app/retirement-planner/rrsp-vs-tfsa-calculator/" target="_blank" rel="noopener noreferrer" data-tool-name="tfsa-rrsp">Compare TFSA vs RRSP</a>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel charts-panel" aria-labelledby="chartsHeading">
+        <div class="panel-header">
+          <h2 id="chartsHeading">Charts and breakdowns</h2>
+          <p>Keep the visuals simple: what you own, what you owe, and where your trajectory may be headed.</p>
+        </div>
+
+        <div class="charts-grid">
+          <article class="subsection chart-card">
+            <div class="section-head">
+              <h3>Asset mix</h3>
+              <p class="muted small-copy">Largest categories first.</p>
+            </div>
+            <div id="assetMixChart" class="chart-shell" aria-label="Asset mix chart"></div>
+          </article>
+
+          <article class="subsection chart-card">
+            <div class="section-head">
+              <h3>Assets vs liabilities</h3>
+              <p class="muted small-copy">Quick balance sheet comparison.</p>
+            </div>
+            <div id="balanceChart" class="chart-shell" aria-label="Assets vs liabilities chart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel projection-panel" aria-labelledby="projectionHeading">
+        <div class="panel-header">
+          <h2 id="projectionHeading">Future net worth projection</h2>
+          <p>Projection assumptions are simple by design: growth on assets, yearly contributions, and annual debt paydown.</p>
+        </div>
+
+        <div class="projection-layout">
+          <article class="subsection projection-summary">
+            <div class="section-head">
+              <h3>Projected outcome</h3>
+              <p class="muted small-copy">Estimate only. Not financial advice.</p>
+            </div>
+            <div class="projection-highlight">
+              <span class="label">Projected net worth in <span id="projectionYearsLabel">10</span> years</span>
+              <strong id="projectedNetWorthValue">$0</strong>
+            </div>
+            <p id="projectionCopy" class="muted">Change the assumptions above to test different savings, growth, and debt-paydown paths.</p>
+            <ul id="projectionAssumptionsList" class="assumption-list"></ul>
+            <p class="muted small-copy">Educational estimate only. Property values, pension values, and future returns may differ from reality.</p>
+            <div id="milestoneGrid" class="milestone-grid" aria-live="polite"></div>
+          </article>
+
+          <article class="subsection projection-chart-card">
+            <div class="section-head">
+              <h3>Projected net worth over time</h3>
+              <p class="muted small-copy">Current year plus each projected year.</p>
+            </div>
+            <div id="projectionChart" class="chart-shell" aria-label="Projected net worth line chart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="educationSection" class="panel content-panel" aria-labelledby="educationHeading">
+        <div class="panel-header">
+          <h2 id="educationHeading">What counts toward net worth?</h2>
+          <p>Keep it plain: assets are what you own, liabilities are what you owe, and your net worth is the difference.</p>
+        </div>
+
+        <div class="content-grid">
+          <article class="subsection prose-card">
+            <h3>Assets</h3>
+            <p>Assets include cash, investments, pensions, real estate, vehicles, business value, and anything else with meaningful resale or financial value.</p>
+            <h3>Liabilities</h3>
+            <p>Liabilities include mortgages, HELOCs, lines of credit, student loans, car loans, credit cards, and other debts that reduce your balance sheet.</p>
+            <h3>Why home equity matters</h3>
+            <p>Your home can be one of your biggest assets. Equity is what is left after subtracting the mortgage and any related borrowing such as a HELOC.</p>
+          </article>
+
+          <article class="subsection prose-card">
+            <div class="formula-box" aria-label="Net worth formula">
+              <span class="formula-label">Formula</span>
+              <strong>Net Worth = Total Assets - Total Liabilities</strong>
+            </div>
+            <h3>Pensions can be estimated</h3>
+            <p>Defined benefit pensions are not always easy to value, so an estimate is acceptable. If you have a statement with a commuted value or transfer value, that can help.</p>
+            <h3>Vehicles can count, but be realistic</h3>
+            <p>Cars can be included, but they are depreciating assets. Use realistic resale values instead of what you paid.</p>
+            <h3>Common mistakes</h3>
+            <ul class="plain-list">
+              <li>Forgetting debts that still reduce your balance sheet.</li>
+              <li>Double counting the same money across multiple accounts.</li>
+              <li>Ignoring home equity by listing property value without the mortgage.</li>
+              <li>Overstating resale values for homes, vehicles, or collectibles.</li>
+              <li>Leaving out employer pensions that materially affect your full picture.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel content-panel" aria-labelledby="seoHeading">
+        <div class="panel-header">
+          <h2 id="seoHeading">Net worth questions Canadians often ask</h2>
+          <p>Readable answers first, without turning the page into finance jargon.</p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="subsection prose-card">
+            <h3>What is net worth?</h3>
+            <p>Net worth is a snapshot of your finances at a point in time. It helps you see whether your assets are growing faster than your debts and whether your household is building long-term financial strength.</p>
+            <h3>How do you calculate net worth in Canada?</h3>
+            <p>Add your cash, TFSA, RRSP, FHSA, non-registered investments, pensions, property, vehicles, and other assets. Then subtract mortgages, HELOCs, loans, credit cards, and other debts.</p>
+            <h3>Should you include your house in net worth?</h3>
+            <p>Usually yes. For many households, home equity is a large part of total net worth. The key is to include both the home value and the remaining mortgage balance.</p>
+          </article>
+
+          <article class="subsection prose-card">
+            <h3>Is pension included in net worth?</h3>
+            <p>It can be, especially if you have a pension statement that gives you a commuted value or another estimate. If you are unsure, you can leave it out for now and add it later.</p>
+            <h3>What is a good net worth by age?</h3>
+            <p>There is no single number that fits everyone. Income, housing costs, pensions, family size, and when you started saving all matter. The more useful question is whether your net worth is moving in the right direction over time.</p>
+            <h3>How does net worth connect to retirement planning?</h3>
+            <p>Net worth shows the resources you may be able to draw on later, but retirement readiness also depends on income sources, spending needs, taxes, and timing decisions such as CPP or RRSP withdrawals.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel next-steps-panel" aria-labelledby="nextStepsHeading">
+        <div class="panel-header">
+          <h2 id="nextStepsHeading">Ways to improve your net worth over time</h2>
+          <p>Use your results as a starting point for practical next steps, not as a scorecard.</p>
+        </div>
+
+        <div class="next-steps-grid">
+          <article class="subsection action-card">
+            <h3>Pay down high-interest debt</h3>
+            <p>Reducing credit card balances and costly lines of credit can improve net worth quickly and free up future cash flow.</p>
+          </article>
+          <article class="subsection action-card">
+            <h3>Increase TFSA and RRSP contributions</h3>
+            <p>Regular contributions can compound over time and strengthen the investable side of your balance sheet.</p>
+          </article>
+          <article class="subsection action-card">
+            <h3>Track net worth quarterly</h3>
+            <p>Quarterly snapshots can show progress without turning this into a daily spreadsheet habit.</p>
+          </article>
+          <article class="subsection action-card">
+            <h3>Build emergency savings</h3>
+            <p>Cash reserves can keep new debt from replacing progress when life gets expensive.</p>
+          </article>
+        </div>
+
+        <div class="tool-grid">
+          <a class="tool-card related-tool-link" href="https://simplekit.app/retirement-planner/rrsp-vs-tfsa-calculator/" target="_blank" rel="noopener noreferrer" data-tool-name="tfsa-rrsp">
+            <span class="tool-kicker">Continue your planning</span>
+            <h3>TFSA / RRSP Calculator</h3>
+            <p>Use it to decide where your next dollar may be more effective after tax.</p>
+          </a>
+          <a class="tool-card related-tool-link" href="https://simplekit.app/cpp-calculator/" target="_blank" rel="noopener noreferrer" data-tool-name="cpp">
+            <span class="tool-kicker">Income timing</span>
+            <h3>CPP Calculator</h3>
+            <p>See how CPP timing can change retirement income and long-term tradeoffs.</p>
+          </a>
+          <a class="tool-card related-tool-link" href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer" data-tool-name="retirement-planner">
+            <span class="tool-kicker">Bigger picture</span>
+            <h3>Retirement Planner</h3>
+            <p>Move from your balance sheet to a fuller retirement income and spending plan.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel support-panel no-print" aria-labelledby="supportHeading">
+        <div class="support-panel-copy">
+          <span class="pill">Free tool</span>
+          <h2 id="supportHeading">If this tool helped you, support SimpleKit.</h2>
+          <p>This calculator is free and independently built. A coffee helps fund more practical retirement tools.</p>
+        </div>
+        <div class="support-panel-actions">
+          <a id="supportLink" class="btn btn-primary" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer no-print" aria-label="App support and links">
+      <div class="footer-branding">
+        <strong>SimpleKit Net Worth Calculator</strong>
+        <span class="muted">Simple, private, browser-based net worth tracking for Canadian households.</span>
+      </div>
+      <div class="footer-actions">
+        <a href="https://simplekit.app/" target="_blank" rel="noopener noreferrer">SimpleKit home</a>
+        <a href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer">Retirement Planner</a>
+        <a id="footerSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="global-fab-row no-print" aria-label="Support">
+    <a id="floatingSupportLink" class="global-support-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
+  </div>
+
+  <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

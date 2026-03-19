@@ -61,7 +61,7 @@
     "slug": "net-worth-calculator",
     "subdomainUrl": "https://networth.simplekit.app/",
     "pathUrl": "https://simplekit.app/net-worth-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "budget-planner",

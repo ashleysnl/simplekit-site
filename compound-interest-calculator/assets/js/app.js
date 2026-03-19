@@ -556,7 +556,7 @@
           kicker: "Balance sheet",
           title: "Net Worth Calculator",
           copy: "If you want a broader balance-sheet view, pair this investment projection with a full net worth snapshot.",
-          href: "https://networth.simplekit.app/",
+          href: "https://simplekit.app/net-worth-calculator/",
         },
       ];
   }
