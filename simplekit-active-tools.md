@@ -5,7 +5,7 @@
 3. [CPP Calculator](https://simplekit.app/cpp-calculator/)
 4. [RRSP / TFSA Calculator](https://rrsptfsa.simplekit.app/)
 5. [Compound Interest Calculator](https://simplekit.app/compound-interest-calculator/)
-6. [Savings Goal Calculator](https://savingsgoal.simplekit.app/)
+6. [Savings Goal Calculator](https://simplekit.app/savings-goal-calculator/)
 7. [Emergency Fund Calculator](https://emergency.simplekit.app/)
 8. [Net Worth Calculator](https://simplekit.app/net-worth-calculator/)
 9. [Budget Planner](https://simplekit.app/budget-planner/)

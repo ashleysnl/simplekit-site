@@ -745,7 +745,7 @@ function getNextAction(summary) {
       copy: "A larger share of your net worth is already in investable assets, so the next useful question is where new savings should go.",
       bridge: "If new contributions are your main lever now, compare TFSA and RRSP choices before your next deposit.",
       primary: {
-        href: "https://simplekit.app/retirement-planner/rrsp-vs-tfsa-calculator/",
+        href: "https://rrsptfsa.simplekit.app/",
         label: "Compare TFSA vs RRSP",
         toolName: "tfsa-rrsp",
       },
@@ -766,7 +766,7 @@ function getNextAction(summary) {
       toolName: "retirement-planner",
     },
     secondary: {
-      href: "https://simplekit.app/retirement-planner/rrsp-vs-tfsa-calculator/",
+      href: "https://rrsptfsa.simplekit.app/",
       label: "Compare TFSA vs RRSP",
       toolName: "tfsa-rrsp",
     },

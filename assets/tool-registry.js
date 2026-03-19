@@ -50,8 +50,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "savings-goal-calculator",
     "subdomainUrl": "https://savingsgoal.simplekit.app/",
     "pathUrl": "https://simplekit.app/savings-goal-calculator/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://savingsgoal.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/savings-goal-calculator/"
   },
   "emergency-fund-calculator": {
     "id": "emergency-fund-calculator",

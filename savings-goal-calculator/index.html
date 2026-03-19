@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Savings Goal Calculator | SimpleKit</title>
+  <meta
+    name="description"
+    content="Use the SimpleKit Savings Goal Calculator to estimate how long it takes to reach a savings target, calculate required monthly savings, compare multiple scenarios, and print a clean PDF-style report."
+  >
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://simplekit.app/savings-goal-calculator/">
+  <meta property="og:title" content="Savings Goal Calculator | SimpleKit">
+  <meta
+    property="og:description"
+    content="Plan your savings target, compare scenarios, see the impact of interest, and calculate the contribution you need to hit your goal by a specific date."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplekit.app/savings-goal-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savings Goal Calculator | SimpleKit">
+  <meta
+    name="twitter:description"
+    content="Calculate how long it will take to reach a savings goal, how much to save each month, compare goal scenarios, and save your plan as JSON."
+  >
+  <meta name="theme-color" content="#0f6abf">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SimpleKit Savings Goal Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "en-CA",
+      "url": "https://simplekit.app/savings-goal-calculator/",
+      "description": "A browser-based savings goal calculator for estimating timelines, required contributions, interest growth, and scenario comparisons."
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+
+  <link rel="preconnect" href="https://core.simplekit.app">
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "savings-goal-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Savings Goal Calculator built on the shared SimpleKit static shell.",
+      supportTitle: "Support more SimpleKit calculators",
+      supportCopy: "SimpleKit tools stay free and static-first so planning tools like this can stay fast, private, and easy to revisit.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore SimpleKit"
+    };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="page-shell savings-shell">
+    <header class="hero hero-savings" aria-labelledby="pageTitle">
+      <div data-simplekit-header></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">SimpleKit Savings Goal Calculator</p>
+        <h1 id="pageTitle">Savings Goal Calculator</h1>
+        <p class="hero-subtitle">Plan your savings target, compare scenarios, and see how long it takes to reach your goal.</p>
+        <p class="hero-proof">
+          Choose the question you want answered, enter a few core details, and the calculator will guide you to the next step.
+        </p>
+        <div class="hero-actions no-print">
+          <a class="btn btn-primary" href="#calculatorWorkspace">Start planning</a>
+          <button id="heroPrintBtn" class="btn btn-secondary" type="button">Print / Save PDF</button>
+        </div>
+        <div class="hero-trust-row" aria-label="Savings calculator highlights">
+          <span>Beginner-friendly planning flow</span>
+          <span>Scenario comparison when you need it</span>
+          <span>Auto-save, backup, and PDF report</span>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="Quick calculator summary">
+        <article class="hero-highlight hero-callout">
+          <span class="mini-kicker">Best way to start</span>
+          <strong>Start with one plan.</strong>
+          <p>Once the answer looks right, open comparison, projection, and report tools only if you need them.</p>
+        </article>
+      </aside>
+    </header>
+
+    <main id="mainContent" class="page-flow">
+      <section id="calculatorWorkspace" class="panel workspace-panel" aria-labelledby="workspaceHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Guided setup</p>
+            <h2 id="workspaceHeading">Answer your savings question in three steps</h2>
+          </div>
+          <p>Start with one mode, complete the essentials, and review the answer before opening deeper tools.</p>
+        </div>
+        <div class="setup-steps no-print" aria-label="Guided setup steps">
+          <article class="setup-step is-active">
+            <span>Step 1</span>
+            <strong>Choose your question</strong>
+          </article>
+          <article class="setup-step">
+            <span>Step 2</span>
+            <strong>Enter the essentials</strong>
+          </article>
+          <article class="setup-step">
+            <span>Step 3</span>
+            <strong>Review your answer</strong>
+          </article>
+        </div>
+
+        <section class="mode-context no-print" aria-labelledby="modeContextHeading">
+          <div class="mode-context-copy">
+            <p class="section-kicker">Step 1</p>
+            <h3 id="modeContextHeading">Choose the question you want answered</h3>
+            <div class="mode-toolbar" role="group" aria-label="Calculation mode">
+              <button id="modeTimeBtn" class="mode-pill is-active" type="button" data-mode="timeToGoal">When will I reach my goal?</button>
+              <button id="modeContributionBtn" class="mode-pill" type="button" data-mode="requiredContribution">What do I need to save?</button>
+            </div>
+            <p id="modeHelperText">Choose this if you already know how much you can save and want to estimate when you could reach your goal.</p>
+          </div>
+          <div class="mode-context-card">
+            <span class="mini-summary-label">Current mode</span>
+            <strong id="modeHelperTitle">When will I reach my goal?</strong>
+            <span id="modeRecommendedTag" class="mode-recommended">Recommended for most users</span>
+            <p id="modeHelperSummary">Estimate your goal date using your current contribution plan.</p>
+          </div>
+        </section>
+
+        <div class="workspace-grid">
+          <div class="control-stack">
+            <details id="scenarioManagerPanel" class="control-card no-print scenario-panel" aria-labelledby="scenarioManagerHeading">
+              <summary class="scenario-panel-summary">
+                <div>
+                  <p class="section-kicker">Optional</p>
+                  <h3 id="scenarioManagerHeading">Compare plans, back up your work, or load a saved setup</h3>
+                  <p id="scenarioSummaryMeta" class="muted small-copy">You can ignore this until you want to compare or save scenarios.</p>
+                </div>
+              </summary>
+              <div class="scenario-panel-body">
+                <div class="toolbar-actions">
+                  <button id="addScenarioBtn" class="btn btn-secondary-panel" type="button">Add scenario</button>
+                  <button id="duplicateScenarioBtn" class="btn btn-secondary-panel" type="button">Duplicate selected</button>
+                </div>
+                <div id="scenarioList" class="scenario-list" aria-label="Savings scenarios"></div>
+                <div class="action-row">
+                  <button id="deleteScenarioBtn" class="btn btn-tertiary danger-button" type="button">Delete selected</button>
+                  <button id="resetAllBtn" class="btn btn-tertiary" type="button">Reset all</button>
+                </div>
+                <div class="storage-card">
+                  <div>
+                    <strong>Auto-save is on</strong>
+                    <p class="muted small-copy">Your latest plan stays saved in this browser. Use backup if you want a portable copy.</p>
+                    <p class="muted small-copy">Importing a saved plan replaces the current planner state.</p>
+                  </div>
+                  <div class="action-row">
+                    <button id="exportJsonBtn" class="btn btn-primary" type="button">Back up scenarios</button>
+                    <label class="btn btn-secondary-panel file-trigger" for="importJsonInput">Import saved plan</label>
+                    <input id="importJsonInput" type="file" accept="application/json,.json" hidden>
+                  </div>
+                  <p id="storageStatus" class="muted small-copy" aria-live="polite"></p>
+                </div>
+              </div>
+            </details>
+
+            <form id="scenarioForm" class="control-card" novalidate aria-labelledby="goalDetailsHeading">
+              <section class="input-section">
+                <div class="card-header">
+                  <div>
+                    <p class="section-kicker">Step 2</p>
+                    <h3 id="goalDetailsHeading">Set the goal and starting point</h3>
+                  </div>
+                  <button id="sampleScenarioBtn" class="btn btn-secondary-panel no-print" type="button">Load sample</button>
+                </div>
+                <p id="formModeHint" class="field-help mode-hint">
+                  Enter the amount you can save each period. The calculator will estimate how long the goal could take.
+                </p>
+                <div class="form-grid">
+                  <label class="form-field">
+                    <span>Scenario name</span>
+                    <input id="scenarioName" name="name" type="text" maxlength="80" placeholder="House down payment">
+                  </label>
+                  <label class="form-field">
+                    <span>Goal category</span>
+                    <select id="goalCategory" name="goalCategory"></select>
+                  </label>
+                  <label class="form-field">
+                    <span>Goal amount</span>
+                    <input id="goalAmount" name="goalAmount" type="number" min="0" step="0.01" inputmode="decimal">
+                    <small class="field-help">The total amount you want to have saved.</small>
+                  </label>
+                  <label class="form-field">
+                    <span>Current savings</span>
+                    <input id="currentSavings" name="currentSavings" type="number" min="0" step="0.01" inputmode="decimal">
+                    <small class="field-help">How much you already have set aside today.</small>
+                  </label>
+                  <label class="form-field">
+                    <span>Start date</span>
+                    <input id="startDate" name="startDate" type="date">
+                    <small class="field-help">The date this plan starts from.</small>
+                  </label>
+                  <label class="form-field" data-target-date-field>
+                    <span>Target date</span>
+                    <input id="targetDate" name="targetDate" type="date">
+                    <small class="field-help" id="targetDateHelp">Only needed when a specific deadline matters.</small>
+                  </label>
+                </div>
+              </section>
+
+              <section class="input-section">
+                <div class="card-header">
+                  <div>
+                    <p class="section-kicker">Contribution plan</p>
+                    <h3>Choose how money gets added</h3>
+                  </div>
+                </div>
+                <div class="form-grid">
+                  <label class="form-field" data-contribution-field>
+                    <span class="field-label-row">
+                      <span id="contributionFieldLabel">Contribution amount</span>
+                      <span id="calculatedBadge" class="calculated-badge" hidden>Calculated</span>
+                    </span>
+                    <input id="contributionAmount" name="contributionAmount" type="number" min="0" step="0.01" inputmode="decimal">
+                    <small class="field-help" id="contributionFieldHelp">How much you expect to add each contribution period.</small>
+                  </label>
+                  <label class="form-field">
+                    <span>Contribution frequency</span>
+                    <select id="contributionFrequency" name="contributionFrequency"></select>
+                    <small class="field-help">Choose how often you plan to save.</small>
+                  </label>
+                  <label class="form-field">
+                    <span>Annual interest rate (%)</span>
+                    <input id="annualInterestRate" name="annualInterestRate" type="number" min="0" max="100" step="0.01" inputmode="decimal">
+                    <small class="field-help">Use 0% if you want a no-growth savings estimate.</small>
+                  </label>
+                  <label class="form-field">
+                    <span>Compounding frequency</span>
+                    <select id="compounding" name="compounding"></select>
+                    <small class="field-help">How often interest is added to your balance.</small>
+                  </label>
+                </div>
+              </section>
+
+              <details class="advanced-panel">
+                <summary>Advanced settings</summary>
+                <div class="form-grid">
+                  <label class="form-field">
+                    <span>Inflation assumption (%)</span>
+                    <input id="inflationRate" name="inflationRate" type="number" min="0" max="100" step="0.01" inputmode="decimal">
+                  </label>
+                  <label class="form-field">
+                    <span>Notes</span>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Optional notes for this goal scenario"></textarea>
+                  </label>
+                </div>
+              </details>
+
+              <div id="validationSummary" class="validation-box" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <div class="results-stack">
+            <section class="results-shell results-hero" aria-labelledby="resultsHeading">
+              <div class="results-block-head">
+                <div>
+                  <p class="section-kicker">Step 3</p>
+                  <h3 id="resultsHeading">Live results for the selected scenario</h3>
+                </div>
+                <p id="resultsSummaryText">Adjust inputs to see your timeline, contributions, and interest projections update.</p>
+              </div>
+              <div id="summaryCardsPrimary" class="summary-grid summary-grid-primary" aria-live="polite"></div>
+              <details class="secondary-results">
+                <summary>More planning details</summary>
+                <div id="summaryCardsSecondary" class="summary-grid summary-grid-secondary" aria-live="polite"></div>
+              </details>
+              <div id="insightsList" class="insights-grid" aria-live="polite"></div>
+            </section>
+
+            <details class="results-shell analysis-panel">
+              <summary class="analysis-summary">
+                <div>
+                  <p class="section-kicker">Optional analysis</p>
+                  <h3 id="chartsHeading">Open charts and deeper visual analysis</h3>
+                </div>
+                <p>Use this after the top-line answer looks right.</p>
+              </summary>
+              <div class="chart-stack">
+                <article class="chart-card chart-card-primary">
+                  <h4>Savings balance over time</h4>
+                  <div id="growthChart" class="chart-slot chart-slot-primary" role="img" aria-label="Savings balance over time chart"></div>
+                </article>
+                <article class="chart-card">
+                  <h4>Contribution vs interest</h4>
+                  <div id="mixChart" class="chart-slot chart-slot-secondary" role="img" aria-label="Contribution versus interest chart"></div>
+                </article>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <details class="panel deeper-panel" aria-labelledby="comparisonHeading">
+        <summary class="deeper-summary">
+          <div>
+            <p class="section-kicker">Optional comparison</p>
+            <h2 id="comparisonHeading">Compare multiple savings goals and timelines</h2>
+          </div>
+          <p>Open this when you want to weigh tradeoffs across two or more scenarios.</p>
+        </summary>
+        <div class="comparison-stack">
+          <div id="comparisonHighlights" class="comparison-highlights" aria-live="polite"></div>
+          <div class="comparison-toolbar no-print">
+            <div id="comparisonSelectionMeta" class="comparison-selection-meta">1 scenario selected for comparison.</div>
+            <label class="comparison-sort">
+              <span>Compare by</span>
+              <select id="comparisonSortSelect">
+                <option value="speed">Fastest to goal</option>
+                <option value="contribution">Lowest contribution</option>
+                <option value="balance">Highest final balance</option>
+              </select>
+            </label>
+          </div>
+          <div id="comparisonChart" class="chart-slot comparison-chart" role="img" aria-label="Scenario comparison chart"></div>
+          <div class="table-shell">
+            <table class="data-table comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col">Scenario</th>
+                  <th scope="col">Mode</th>
+                  <th scope="col">Time to goal</th>
+                  <th scope="col">Goal / target date</th>
+                  <th scope="col">Contribution</th>
+                  <th scope="col">Total contributed</th>
+                  <th scope="col">Interest earned</th>
+                  <th scope="col">Final balance</th>
+                </tr>
+              </thead>
+              <tbody id="comparisonTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <details class="panel deeper-panel" aria-labelledby="projectionHeading">
+        <summary class="deeper-summary">
+          <div>
+            <p class="section-kicker">Optional projection</p>
+            <h2 id="projectionHeading">Review the projected path period by period</h2>
+          </div>
+          <p>Open this for milestones and detailed period-by-period projection data.</p>
+        </summary>
+        <div id="milestoneChips" class="milestone-chips" aria-live="polite"></div>
+        <div class="projection-toolbar no-print">
+          <label class="projection-view">
+            <span>Table view</span>
+            <select id="projectionViewSelect">
+              <option value="milestones">Quick view</option>
+              <option value="full">Detailed view</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-shell">
+          <table class="data-table projection-table">
+            <thead>
+              <tr>
+                <th scope="col">Period</th>
+                <th scope="col">Date</th>
+                <th scope="col">Starting balance</th>
+                <th scope="col">Contribution</th>
+                <th scope="col">Interest</th>
+                <th scope="col">Ending balance</th>
+                <th scope="col">Goal progress</th>
+              </tr>
+            </thead>
+            <tbody id="projectionTableBody"></tbody>
+          </table>
+        </div>
+      </details>
+
+      <details id="reportSection" class="panel report-panel deeper-panel" aria-labelledby="reportHeading">
+        <summary class="deeper-summary no-print">
+          <div>
+            <p class="section-kicker">Optional report</p>
+            <h2 id="reportHeading">Print a clean report or save it as PDF</h2>
+          </div>
+          <p>Open this when you want a shareable summary you can keep or export.</p>
+        </summary>
+        <div class="report-preview-note no-print">
+          <strong>Your PDF includes:</strong>
+          <span>The active scenario summary, assumptions, progress snapshot, selected comparisons, and planning notes.</span>
+        </div>
+        <div class="report-actions no-print">
+          <button id="printReportBtn" class="btn btn-primary" type="button">Print / Save PDF</button>
+        </div>
+        <article id="printReport" class="print-report" aria-labelledby="reportTitle">
+          <div class="print-branding">
+            <div>
+              <p class="section-kicker">SimpleKit</p>
+              <h3 id="reportTitle">Savings Goal Report</h3>
+            </div>
+            <p id="reportGeneratedAt" class="muted">Generated today</p>
+          </div>
+          <p id="reportExecutiveSummary" class="report-executive">This report summarizes your current savings plan.</p>
+          <div id="reportScenarioSummary" class="report-card-grid"></div>
+          <div class="report-layout">
+            <section class="report-block">
+              <h4>Assumptions</h4>
+              <div id="reportAssumptions"></div>
+            </section>
+            <section class="report-block">
+              <h4>Progress snapshot</h4>
+              <div id="reportMilestones"></div>
+            </section>
+          </div>
+          <section class="report-block">
+            <h4>Comparison summary</h4>
+            <div id="reportComparison"></div>
+          </section>
+          <section class="report-block">
+            <h4>Notes</h4>
+            <p id="reportNotes">No notes added for this scenario.</p>
+          </section>
+          <footer class="report-footer">
+            <p>
+              Estimates are for planning only. Returns are not guaranteed, contribution timing is assumed to occur at the end of each contribution period,
+              and actual savings results will vary.
+            </p>
+          </footer>
+        </article>
+      </details>
+
+      <section class="panel content-panel" aria-labelledby="learnHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Learn</p>
+            <h2 id="learnHeading">How to calculate a savings goal and use this calculator well</h2>
+          </div>
+          <p>These sections stay in the HTML so search engines and readers can understand the calculator without relying only on JavaScript output.</p>
+        </div>
+        <div class="info-grid learn-grid">
+          <article class="info-card">
+            <h3>How to calculate how long it takes to reach a savings goal</h3>
+            <p>
+              Start with your goal amount, current savings, and expected contribution plan. Then factor in the interest rate and compounding frequency.
+              A higher contribution usually changes your timeline more than a small change in interest, especially over shorter goals.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>How much to save each month to hit a target</h3>
+            <p>
+              In target-date mode, the calculator works backward from your goal and deadline to estimate the contribution required per contribution period.
+              If the result feels too high, try extending the deadline, increasing current savings, or reducing the goal amount.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>How interest affects savings growth</h3>
+            <p>
+              Interest matters most when the timeline is long and you keep money invested or in a high-yield account. On short timelines,
+              steady contributions often do more of the heavy lifting than growth alone.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>How to save and reload scenarios</h3>
+            <p>
+              This calculator auto-saves locally in your browser so accidental refreshes do not wipe your work. You can also export your scenarios as JSON,
+              then import that file later to continue comparing goal plans.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Choosing between timeline mode and target-date mode</h3>
+            <p>
+              Use timeline mode when you know how much you can save right now and want to see when you arrive. Use target-date mode when the deadline matters
+              more and you need the calculator to solve for the required contribution.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Why compare multiple savings goals</h3>
+            <p>
+              Comparing scenarios makes tradeoffs obvious. You can test a higher contribution, a different goal size, or a different deadline and quickly see
+              which option is fastest, which uses the least contribution, and how much interest does the work.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel faq-panel" aria-labelledby="faqHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faqHeading">Savings goal calculator FAQs</h2>
+          </div>
+          <p>Common questions about goal planning, contribution targets, comparison scenarios, and printing your report.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How do I calculate how long it takes to reach my savings goal?</summary>
+            <p>Enter your goal amount, current savings, contribution amount, contribution frequency, interest rate, and compounding frequency. Timeline mode projects forward until your balance reaches the goal.</p>
+          </details>
+          <details>
+            <summary>How do I calculate how much I need to save each month?</summary>
+            <p>Switch to required contribution mode, enter a target date, and the calculator estimates the periodic contribution needed to reach the goal by that date under the chosen interest assumptions.</p>
+          </details>
+          <details>
+            <summary>Does this calculator include interest?</summary>
+            <p>Yes. The projection uses your annual rate and compounding frequency, then converts that growth into a daily planning rate for the simulation so contribution timing and target dates can be handled consistently.</p>
+          </details>
+          <details>
+            <summary>Can I compare multiple savings goals?</summary>
+            <p>Yes. Create or duplicate scenarios, check the ones you want to compare, and the comparison section will show side-by-side timelines, totals, and balance outcomes.</p>
+          </details>
+          <details>
+            <summary>Can I save my scenarios and come back later?</summary>
+            <p>Yes. Your latest state is auto-saved in localStorage, and you can export all scenarios to a JSON file for a portable backup that can be reloaded later.</p>
+          </details>
+          <details>
+            <summary>How do I save the report as PDF?</summary>
+            <p>Use the Print / Save PDF button. The page includes print styles that simplify the layout, hide controls, and format the report for browser PDF export.</p>
+          </details>
+        </div>
+      </section>
+
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
+  </div>
+
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

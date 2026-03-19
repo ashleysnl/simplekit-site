@@ -45,7 +45,7 @@
     "slug": "savings-goal-calculator",
     "subdomainUrl": "https://savingsgoal.simplekit.app/",
     "pathUrl": "https://simplekit.app/savings-goal-calculator/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "emergency-fund-calculator",
