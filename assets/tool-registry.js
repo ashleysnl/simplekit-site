@@ -167,8 +167,8 @@ window.SimpleKitToolLinks = Object.freeze({
     "slug": "canadian-tax-checklist",
     "subdomainUrl": "https://taxchecklist.simplekit.app/",
     "pathUrl": "https://simplekit.app/canadian-tax-checklist/",
-    "status": "subdomain",
-    "currentPublicUrl": "https://taxchecklist.simplekit.app/"
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/canadian-tax-checklist/"
   },
   "travel-planner": {
     "id": "travel-planner",

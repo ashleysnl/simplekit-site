@@ -149,7 +149,7 @@
     "slug": "canadian-tax-checklist",
     "subdomainUrl": "https://taxchecklist.simplekit.app/",
     "pathUrl": "https://simplekit.app/canadian-tax-checklist/",
-    "status": "subdomain"
+    "status": "path"
   },
   {
     "id": "travel-planner",

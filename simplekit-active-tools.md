@@ -18,5 +18,5 @@
 16. [Mortgage Paydown vs Invest](https://simplekit.app/mortgage-paydown-vs-invest-calculator/)
 17. [Investment Fee Calculator](https://simplekit.app/investment-fee-calculator/)
 18. [Mortgage Calculator](https://simplekit.app/mortgage-calculator/)
-19. [Canadian Tax Checklist](https://taxchecklist.simplekit.app/)
+19. [Canadian Tax Checklist](https://simplekit.app/canadian-tax-checklist/)
 20. [Travel Planner](https://travel.simplekit.app/)

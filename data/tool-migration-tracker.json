@@ -146,10 +146,10 @@
   {
     "id": "canadian-tax-checklist",
     "name": "Canadian Tax Checklist",
-    "completed": false,
-    "completedAt": null,
-    "toolRepoPath": null,
-    "notes": ""
+    "completed": true,
+    "completedAt": "2026-03-18",
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/tax-checklist",
+    "notes": "Updated the tax checklist tool repo for https://simplekit.app/canadian-tax-checklist/ by adding canonical/OG/schema URL metadata, setting shared-shell navigation to the main site tools hub, adding robots and sitemap files, adding a path-safe manifest, and flipping the main-site registry to path mode."
   },
   {
     "id": "travel-planner",
