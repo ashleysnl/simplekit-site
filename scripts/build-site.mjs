@@ -1,60 +1,38 @@
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import {
+  getCanonicalToolRegistry,
+  getManifestToolMap,
+  getTemplateToolUrls,
+  loadSeoManifest,
+  runSeoValidation,
+  writeCompatToolRegistry,
+  writeRobotsTxt,
+  writeSitemapXml
+} from "./seo-utils.mjs";
 
 const repoRoot = process.cwd();
 const templatesRoot = path.join(repoRoot, "templates");
-const registryPath = path.join(repoRoot, "data", "tool-registry.json");
 const trackerPath = path.join(repoRoot, "data", "tool-migration-tracker.json");
-const registry = JSON.parse(readFileSync(registryPath, "utf8")).map((tool) => {
-  if (!["subdomain", "path"].includes(tool.status)) {
-    throw new Error(`Unsupported status "${tool.status}" for ${tool.id}`);
-  }
-
-  return {
-    ...tool,
-    currentPublicUrl: tool.status === "path" ? tool.pathUrl : tool.subdomainUrl
-  };
-});
-
+const manifest = loadSeoManifest(repoRoot);
+const registry = getCanonicalToolRegistry(manifest);
 const tracker = JSON.parse(readFileSync(trackerPath, "utf8"));
 const trackerById = new Map(tracker.map((entry) => [entry.id, entry]));
 const toolById = new Map(registry.map((tool) => [tool.id, tool]));
+const manifestToolUrls = getTemplateToolUrls(manifest);
+const manifestToolMap = getManifestToolMap(manifest);
 const migratedTools = registry.filter((tool) => tool.status === "path");
-
-const staticSitemapEntries = [
-  "https://simplekit.app/",
-  "https://simplekit.app/tools/",
-  "https://simplekit.app/learn/",
-  "https://simplekit.app/about/",
-  "https://simplekit.app/support/",
-  "https://simplekit.app/tools/retirement-planner/",
-  "https://simplekit.app/tools/net-worth-calculator/",
-  "https://simplekit.app/tools/fire-calculator/",
-  "https://simplekit.app/tools/investment-growth-calculator/",
-  "https://simplekit.app/tools/savings-goal-calculator/",
-  "https://simplekit.app/tools/debt-payoff-calculator/",
-  "https://simplekit.app/tools/budget-planner/",
-  "https://simplekit.app/tools/emergency-fund-calculator/",
-  "https://simplekit.app/tools/rent-vs-buy-calculator/",
-  "https://simplekit.app/tools/loan-calculator/",
-  "https://simplekit.app/tools/cpp-calculator/",
-  "https://simplekit.app/tools/rrsp-tfsa-calculator/",
-  "https://simplekit.app/tools/travel-planner/",
-  "https://simplekit.app/learn/retirement-planning-basics/",
-  "https://simplekit.app/learn/cpp-basics/",
-  "https://simplekit.app/learn/fire-explained/",
-  "https://simplekit.app/learn/rrsp-vs-tfsa-basics/",
-  "https://simplekit.app/learn/net-worth-basics/",
-  "https://simplekit.app/learn/travel-budget-planning-basics/"
-];
-
 const toolUrlPattern = /\{\{toolUrl:([a-z0-9-]+)\}\}/g;
+const toolCountPattern = /\{\{toolCount\}\}/g;
 
+runSeoValidation(manifest, repoRoot, { scanRepo: false });
+writeCompatToolRegistry(repoRoot, manifest);
 buildTemplates();
 syncMigratedToolSites();
 writeToolRegistryAsset();
 writeActiveToolsMarkdown();
-writeSitemap();
+writeRobotsTxt(repoRoot, manifest);
+writeSitemapXml(repoRoot, manifest);
 writeToolUrlAudit();
 validateTemplates();
 
@@ -70,20 +48,18 @@ function buildTemplates(relativeDir = ".") {
       continue;
     }
 
-    if (relativePath === "sitemap.xml") {
-      continue;
-    }
-
     const destinationPath = path.join(repoRoot, relativePath);
     mkdirSync(path.dirname(destinationPath), { recursive: true });
     const template = readFileSync(absolutePath, "utf8");
-    const rendered = template.replace(toolUrlPattern, (_, toolId) => {
-      const tool = toolById.get(toolId);
-      if (!tool) {
-        throw new Error(`Unknown tool token "${toolId}" in ${relativePath}`);
-      }
-      return tool.currentPublicUrl;
-    });
+    const rendered = template
+      .replace(toolUrlPattern, (_, toolId) => {
+        const tool = toolById.get(toolId);
+        if (!tool) {
+          throw new Error(`Unknown tool token "${toolId}" in ${relativePath}`);
+        }
+        return tool.currentPublicUrl;
+      })
+      .replace(toolCountPattern, String(registry.length));
     writeFileSync(destinationPath, rendered);
   }
 }
@@ -232,18 +208,20 @@ function pruneMigratedToolSite(destinationDir) {
 
 function rewriteMigratedToolUrls(destinationDir) {
   const textExtensions = new Set([".html", ".css", ".js", ".json", ".txt", ".xml", ".webmanifest", ".md"]);
-  const replacements = registry.flatMap((tool) => {
-    const current = tool.currentPublicUrl;
-    const subdomainNoSlash = tool.subdomainUrl.replace(/\/$/, "");
-    return [
-      [tool.subdomainUrl, current],
-      [subdomainNoSlash, current],
-      [`${tool.subdomainUrl}/`, current],
-      [`${subdomainNoSlash}//`, current],
-      [tool.pathUrl, current],
-      [`${tool.pathUrl}/`, current]
-    ];
-  }).filter(([from, to], index, all) => from && to && from !== to && all.findIndex(([candidate]) => candidate === from) === index)
+  const replacements = registry
+    .flatMap((tool) => {
+      const current = tool.currentPublicUrl;
+      const subdomainNoSlash = tool.subdomainUrl.replace(/\/$/, "");
+      return [
+        [tool.subdomainUrl, current],
+        [subdomainNoSlash, current],
+        [`${tool.subdomainUrl}/`, current],
+        [`${subdomainNoSlash}//`, current],
+        [tool.pathUrl, current],
+        [`${tool.pathUrl}/`, current]
+      ];
+    })
+    .filter(([from, to], index, all) => from && to && from !== to && all.findIndex(([candidate]) => candidate === from) === index)
     .sort((a, b) => b[0].length - a[0].length);
 
   rewriteDirectory(destinationDir);
@@ -281,28 +259,14 @@ function rewriteMigratedToolUrls(destinationDir) {
 
 function writeActiveToolsMarkdown() {
   const outputPath = path.join(repoRoot, "simplekit-active-tools.md");
-  const toolsToList = registry.filter((tool) => tool.id !== "debt-to-income-ratio-calculator");
   const lines = ["# SimpleKit Active Tools", ""];
 
-  toolsToList.forEach((tool, index) => {
+  registry.forEach((tool, index) => {
     lines.push(`${index + 1}. [${tool.name}](${tool.currentPublicUrl})`);
   });
 
   lines.push("");
   writeFileSync(outputPath, lines.join("\n"));
-}
-
-function writeSitemap() {
-  const outputPath = path.join(repoRoot, "sitemap.xml");
-  const entries = [...staticSitemapEntries, ...migratedTools.map((tool) => tool.pathUrl)];
-  const content = [
-    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
-    "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">",
-    ...entries.map((url) => `  <url>\n    <loc>${url}</loc>\n  </url>`),
-    "</urlset>",
-    ""
-  ].join("\n");
-  writeFileSync(outputPath, content);
 }
 
 function writeToolUrlAudit() {
@@ -311,9 +275,7 @@ function writeToolUrlAudit() {
 
   collectTemplateAudit(files);
 
-  const byTool = Object.fromEntries(
-    registry.map((tool) => [tool.id, []])
-  );
+  const byTool = Object.fromEntries(registry.map((tool) => [tool.id, []]));
 
   for (const file of files) {
     for (const toolId of file.toolIds) {
@@ -376,17 +338,24 @@ function validateTemplates(relativeDir = ".") {
     }
 
     const template = readFileSync(absolutePath, "utf8");
-    for (const tool of registry) {
+    for (const tool of manifest.tools) {
       const rawUrls = [
-        tool.subdomainUrl,
-        tool.subdomainUrl.replace(/\/$/, ""),
-        tool.pathUrl,
-        tool.pathUrl.replace(/\/$/, "")
-      ];
+        tool.legacySubdomain,
+        tool.legacySubdomain?.replace(/\/$/, ""),
+        tool.canonicalUrl,
+        tool.canonicalUrl?.replace(/\/$/, "")
+      ].filter(Boolean);
+
       for (const rawUrl of rawUrls) {
         if (template.includes(rawUrl)) {
           throw new Error(`Template ${relativePath} still contains a hardcoded tool URL: ${rawUrl}`);
         }
+      }
+    }
+
+    for (const toolId of [...template.matchAll(toolUrlPattern)].map((match) => match[1])) {
+      if (!manifestToolMap.has(toolId)) {
+        throw new Error(`Template ${relativePath} references unknown tool token "${toolId}"`);
       }
     }
   }

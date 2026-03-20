@@ -1,0 +1,357 @@
+{
+  "site": {
+    "name": "SimpleKit",
+    "canonicalHost": "https://simplekit.app",
+    "defaultChangefreq": "weekly",
+    "defaultPriority": 0.8,
+    "robots": {
+      "userAgent": "*",
+      "allow": "/",
+      "sitemap": "https://simplekit.app/sitemap.xml"
+    },
+    "pages": [
+      {
+        "loc": "https://simplekit.app/",
+        "changefreq": "weekly",
+        "priority": 1
+      },
+      {
+        "loc": "https://simplekit.app/tools/",
+        "changefreq": "weekly",
+        "priority": 0.9
+      },
+      {
+        "loc": "https://simplekit.app/learn/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/about/",
+        "changefreq": "monthly",
+        "priority": 0.5
+      },
+      {
+        "loc": "https://simplekit.app/support/",
+        "changefreq": "monthly",
+        "priority": 0.5
+      },
+      {
+        "loc": "https://simplekit.app/tools/retirement-planner/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/net-worth-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/fire-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/investment-growth-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/savings-goal-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/debt-payoff-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/budget-planner/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/emergency-fund-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/rent-vs-buy-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/loan-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/cpp-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/rrsp-tfsa-calculator/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/tools/travel-planner/",
+        "changefreq": "weekly",
+        "priority": 0.7
+      },
+      {
+        "loc": "https://simplekit.app/learn/retirement-planning-basics/",
+        "changefreq": "weekly",
+        "priority": 0.6
+      },
+      {
+        "loc": "https://simplekit.app/learn/cpp-basics/",
+        "changefreq": "weekly",
+        "priority": 0.6
+      },
+      {
+        "loc": "https://simplekit.app/learn/fire-explained/",
+        "changefreq": "weekly",
+        "priority": 0.6
+      },
+      {
+        "loc": "https://simplekit.app/learn/rrsp-vs-tfsa-basics/",
+        "changefreq": "weekly",
+        "priority": 0.6
+      },
+      {
+        "loc": "https://simplekit.app/learn/net-worth-basics/",
+        "changefreq": "weekly",
+        "priority": 0.6
+      },
+      {
+        "loc": "https://simplekit.app/learn/travel-budget-planning-basics/",
+        "changefreq": "weekly",
+        "priority": 0.6
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "Retirement Planner",
+      "slug": "retirement-planner",
+      "canonicalPath": "/retirement-planner/",
+      "canonicalUrl": "https://simplekit.app/retirement-planner/",
+      "legacySubdomain": "https://retirement.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "FIRE Calculator",
+      "slug": "fire-calculator",
+      "canonicalPath": "/fire-calculator/",
+      "canonicalUrl": "https://simplekit.app/fire-calculator/",
+      "legacySubdomain": "https://fire.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "CPP Calculator",
+      "slug": "cpp-calculator",
+      "canonicalPath": "/cpp-calculator/",
+      "canonicalUrl": "https://simplekit.app/cpp-calculator/",
+      "legacySubdomain": "https://cpp.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "RRSP / TFSA Calculator",
+      "slug": "rrsp-vs-tfsa-calculator",
+      "canonicalPath": "/rrsp-vs-tfsa-calculator/",
+      "canonicalUrl": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "legacySubdomain": "https://rrsptfsa.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Compound Interest Calculator",
+      "slug": "compound-interest-calculator",
+      "canonicalPath": "/compound-interest-calculator/",
+      "canonicalUrl": "https://simplekit.app/compound-interest-calculator/",
+      "legacySubdomain": "https://investment.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Savings Goal Calculator",
+      "slug": "savings-goal-calculator",
+      "canonicalPath": "/savings-goal-calculator/",
+      "canonicalUrl": "https://simplekit.app/savings-goal-calculator/",
+      "legacySubdomain": "https://savingsgoal.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Emergency Fund Calculator",
+      "slug": "emergency-fund-calculator",
+      "canonicalPath": "/emergency-fund-calculator/",
+      "canonicalUrl": "https://simplekit.app/emergency-fund-calculator/",
+      "legacySubdomain": "https://emergency.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Net Worth Calculator",
+      "slug": "net-worth-calculator",
+      "canonicalPath": "/net-worth-calculator/",
+      "canonicalUrl": "https://simplekit.app/net-worth-calculator/",
+      "legacySubdomain": "https://networth.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Budget Planner",
+      "slug": "budget-planner",
+      "canonicalPath": "/budget-planner/",
+      "canonicalUrl": "https://simplekit.app/budget-planner/",
+      "legacySubdomain": "https://monthlybudget.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Canadian Take Home Pay Calculator",
+      "slug": "take-home-pay-calculator",
+      "canonicalPath": "/take-home-pay-calculator/",
+      "canonicalUrl": "https://simplekit.app/take-home-pay-calculator/",
+      "legacySubdomain": "https://takehomepay.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Debt Payoff Calculator",
+      "slug": "debt-payoff-calculator",
+      "canonicalPath": "/debt-payoff-calculator/",
+      "canonicalUrl": "https://simplekit.app/debt-payoff-calculator/",
+      "legacySubdomain": "https://debt.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Credit Card Interest Calculator",
+      "slug": "credit-card-interest-calculator",
+      "canonicalPath": "/credit-card-interest-calculator/",
+      "canonicalUrl": "https://simplekit.app/credit-card-interest-calculator/",
+      "legacySubdomain": "https://creditcard.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Loan Calculator",
+      "slug": "loan-calculator",
+      "canonicalPath": "/loan-calculator/",
+      "canonicalUrl": "https://simplekit.app/loan-calculator/",
+      "legacySubdomain": "https://loan.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "House Affordability Calculator",
+      "slug": "house-affordability-calculator",
+      "canonicalPath": "/house-affordability-calculator/",
+      "canonicalUrl": "https://simplekit.app/house-affordability-calculator/",
+      "legacySubdomain": "https://houseaffordability.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Rent vs Buy Calculator",
+      "slug": "rent-vs-buy-calculator",
+      "canonicalPath": "/rent-vs-buy-calculator/",
+      "canonicalUrl": "https://simplekit.app/rent-vs-buy-calculator/",
+      "legacySubdomain": "https://rentvsbuy.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Mortgage Paydown vs Invest",
+      "slug": "mortgage-paydown-vs-invest-calculator",
+      "canonicalPath": "/mortgage-paydown-vs-invest-calculator/",
+      "canonicalUrl": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "legacySubdomain": "https://mortgage.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Investment Fee Calculator",
+      "slug": "investment-fee-calculator",
+      "canonicalPath": "/investment-fee-calculator/",
+      "canonicalUrl": "https://simplekit.app/investment-fee-calculator/",
+      "legacySubdomain": "https://fees.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Mortgage Calculator",
+      "slug": "mortgage-calculator",
+      "canonicalPath": "/mortgage-calculator/",
+      "canonicalUrl": "https://simplekit.app/mortgage-calculator/",
+      "legacySubdomain": "https://mortgagecalculator.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Canadian Tax Checklist",
+      "slug": "canadian-tax-checklist",
+      "canonicalPath": "/canadian-tax-checklist/",
+      "canonicalUrl": "https://simplekit.app/canadian-tax-checklist/",
+      "legacySubdomain": "https://taxchecklist.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Travel Planner",
+      "slug": "travel-planner",
+      "canonicalPath": "/travel-planner/",
+      "canonicalUrl": "https://simplekit.app/travel-planner/",
+      "legacySubdomain": "https://travel.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Debt-to-Income Ratio Calculator",
+      "slug": "debt-to-income-ratio-calculator",
+      "canonicalPath": "/debt-to-income-ratio-calculator/",
+      "canonicalUrl": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "legacySubdomain": "https://dti.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    },
+    {
+      "name": "Contractor Effective Hourly Rate Calculator",
+      "slug": "contractor-effective-hourly-rate-calculator",
+      "canonicalPath": "/contractor-effective-hourly-rate-calculator/",
+      "canonicalUrl": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "legacySubdomain": "https://contractorrate.simplekit.app/",
+      "includeInSitemap": true,
+      "changefreq": "weekly",
+      "priority": 0.8
+    }
+  ]
+}
