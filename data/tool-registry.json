@@ -166,5 +166,13 @@
     "subdomainUrl": "https://dti.simplekit.app/",
     "pathUrl": "https://simplekit.app/debt-to-income-ratio-calculator/",
     "status": "path"
+  },
+  {
+    "id": "contractor-effective-hourly-rate-calculator",
+    "name": "Contractor Effective Hourly Rate Calculator",
+    "slug": "contractor-effective-hourly-rate-calculator",
+    "subdomainUrl": "https://contractorrate.simplekit.app/",
+    "pathUrl": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+    "status": "path"
   }
 ]

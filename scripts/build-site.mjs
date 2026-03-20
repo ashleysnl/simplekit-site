@@ -136,10 +136,14 @@ function syncMigratedToolSites() {
     rmSync(destinationDir, { recursive: true, force: true });
     mkdirSync(destinationDir, { recursive: true });
 
-    cpSync(sourceDir, destinationDir, {
-      recursive: true,
-      filter: (sourcePath) => shouldCopyMigratedToolFile(sourceDir, sourcePath)
-    });
+    for (const entry of readdirSync(sourceDir)) {
+      const sourcePath = path.join(sourceDir, entry);
+      const destinationPath = path.join(destinationDir, entry);
+      cpSync(sourcePath, destinationPath, {
+        recursive: true,
+        filter: (candidatePath) => shouldCopyMigratedToolFile(sourceDir, candidatePath)
+      });
+    }
 
     pruneMigratedToolSite(destinationDir);
     rewriteMigratedToolUrls(destinationDir);

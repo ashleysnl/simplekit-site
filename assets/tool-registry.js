@@ -187,6 +187,15 @@ window.SimpleKitToolLinks = Object.freeze({
     "pathUrl": "https://simplekit.app/debt-to-income-ratio-calculator/",
     "status": "path",
     "currentPublicUrl": "https://simplekit.app/debt-to-income-ratio-calculator/"
+  },
+  "contractor-effective-hourly-rate-calculator": {
+    "id": "contractor-effective-hourly-rate-calculator",
+    "name": "Contractor Effective Hourly Rate Calculator",
+    "slug": "contractor-effective-hourly-rate-calculator",
+    "subdomainUrl": "https://contractorrate.simplekit.app/",
+    "pathUrl": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+    "status": "path",
+    "currentPublicUrl": "https://simplekit.app/contractor-effective-hourly-rate-calculator/"
   }
 });
 

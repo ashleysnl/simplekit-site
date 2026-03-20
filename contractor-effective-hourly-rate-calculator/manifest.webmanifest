@@ -1,0 +1,11 @@
+{
+  "name": "Contractor Effective Hourly Rate Calculator | SimpleKit",
+  "short_name": "Contract Rate",
+  "description": "Compare stated contract rate against nominal annual income, adjusted annual income, and effective hourly rate after unpaid vacation and self-paid benefits.",
+  "start_url": "/contractor-effective-hourly-rate-calculator/",
+  "scope": "/contractor-effective-hourly-rate-calculator/",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#0f6abf",
+  "icons": []
+}

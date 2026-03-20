@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T01:26:45.294Z",
+  "generatedAt": "2026-03-20T15:30:52.918Z",
   "files": [
     {
       "file": "about/index.html",
@@ -13,6 +13,7 @@
         "budget-planner",
         "canadian-tax-checklist",
         "compound-interest-calculator",
+        "contractor-effective-hourly-rate-calculator",
         "cpp-calculator",
         "credit-card-interest-calculator",
         "debt-payoff-calculator",
@@ -170,6 +171,7 @@
         "budget-planner",
         "canadian-tax-checklist",
         "compound-interest-calculator",
+        "contractor-effective-hourly-rate-calculator",
         "cpp-calculator",
         "credit-card-interest-calculator",
         "debt-payoff-calculator",
@@ -443,6 +445,10 @@
       "tools/travel-planner/index.html"
     ],
     "debt-to-income-ratio-calculator": [
+      "index.html",
+      "tools/index.html"
+    ],
+    "contractor-effective-hourly-rate-calculator": [
       "index.html",
       "tools/index.html"
     ]

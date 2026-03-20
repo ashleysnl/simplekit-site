@@ -20,3 +20,4 @@
 18. [Mortgage Calculator](https://simplekit.app/mortgage-calculator/)
 19. [Canadian Tax Checklist](https://simplekit.app/canadian-tax-checklist/)
 20. [Travel Planner](https://simplekit.app/travel-planner/)
+21. [Contractor Effective Hourly Rate Calculator](https://simplekit.app/contractor-effective-hourly-rate-calculator/)
