@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan Payment & Amortization Calculator | SimpleKit Loan Calculator</title>
+  <meta
+    name="description"
+    content="Use the SimpleKit Loan Calculator to estimate payments, compare loan scenarios, model extra payments, view a full amortization schedule, save your work as JSON, and print a PDF-ready report."
+  >
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://simplekit.app/loan-calculator/">
+  <meta property="og:title" content="Loan Payment & Amortization Calculator | SimpleKit Loan Calculator">
+  <meta
+    property="og:description"
+    content="Compare loans, test extra payments, explore amortization schedules, and print a polished browser PDF report."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplekit.app/loan-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan Payment & Amortization Calculator | SimpleKit Loan Calculator">
+  <meta
+    name="twitter:description"
+    content="A beginner-friendly loan payment calculator with amortization schedules, scenario comparisons, extra payment modeling, JSON save/load, and print-ready reporting."
+  >
+  <meta name="theme-color" content="#0f6abf">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SimpleKit Loan Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "en-CA",
+      "url": "https://simplekit.app/loan-calculator/",
+      "description": "A loan payment and amortization calculator for comparing loan offers, modeling extra payments, viewing amortization schedules, saving JSON scenario files, and printing PDF-ready reports.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CAD"
+      }
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+
+  <link rel="preconnect" href="https://core.simplekit.app">
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "loan-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Educational calculator only. Confirm final loan terms with your lender or financial professional.",
+      supportTitle: "Support more practical SimpleKit tools",
+      supportCopy: "SimpleKit tools are built to turn messy financial decisions into calmer, clearer choices.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore SimpleKit"
+    };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="page-shell loan-shell">
+    <header class="hero hero-loan" aria-labelledby="pageTitle">
+      <div data-simplekit-header></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">SimpleKit Loan Calculator</p>
+        <h1 id="pageTitle">Loan Payment &amp; Amortization Calculator</h1>
+        <p class="hero-subtitle">Compare loans, model extra payments, and print a full amortization report.</p>
+        <p class="hero-proof">
+          Estimate regular payments, test payoff strategies, compare side-by-side scenarios,
+          save your work as JSON, and print a polished PDF-style report right from your browser.
+        </p>
+        <div class="hero-actions no-print">
+          <a class="btn btn-primary" href="#workspace">Start with a loan scenario</a>
+          <a class="btn btn-secondary" href="#quickGuide">See how it works</a>
+        </div>
+        <div class="hero-trust-row" aria-label="Loan calculator highlights">
+          <span>Loan payment calculator</span>
+          <span>Amortization schedule calculator</span>
+          <span>Loan comparison calculator</span>
+          <span>Extra payment modeling</span>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <article class="hero-highlight">
+          <span class="mini-kicker">Quick view</span>
+          <strong id="heroScenarioName">Family Car Loan</strong>
+          <p id="heroScenarioSnapshot">Monthly payment, payoff date, and interest savings update as you edit your scenario.</p>
+        </article>
+        <div class="hero-mini-grid" aria-label="Key loan calculator tasks">
+          <div>
+            <span class="mini-summary-label">Compare</span>
+            <strong>Multiple loan offers side by side</strong>
+          </div>
+          <div>
+            <span class="mini-summary-label">Save</span>
+            <strong>JSON export, import, and local auto-save</strong>
+          </div>
+          <div>
+            <span class="mini-summary-label">Report</span>
+            <strong>Clean print and Save PDF flow</strong>
+          </div>
+          <div>
+            <span class="mini-summary-label">Learn</span>
+            <strong>Amortization explanations and FAQs</strong>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <main id="mainContent" class="page-flow">
+      <section class="panel intro-panel no-print" aria-labelledby="introHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">What this calculator does</p>
+            <h2 id="introHeading">Model loan payments, compare offers, and see the full payoff story</h2>
+          </div>
+          <p>
+            This loan payment calculator helps you estimate regular payments, understand how amortization works,
+            compare multiple financing options, and see how recurring extra payments or lump sums can reduce interest.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="trust-label">Calculator</span>
+            <strong>Live payment and payoff estimates</strong>
+            <p>See payment amount, total interest, total paid, and payoff date update instantly as you edit assumptions.</p>
+          </article>
+          <article>
+            <span class="trust-label">Comparison</span>
+            <strong>Scenario-based decision support</strong>
+            <p>Create several loan scenarios, duplicate them, and compare costs, timing, and savings in one place.</p>
+          </article>
+          <article>
+            <span class="trust-label">Reporting</span>
+            <strong>Portable records and print output</strong>
+            <p>Export all scenarios as JSON, reload them later, and print a tidy PDF-ready loan report from the browser.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="quickGuide" class="panel quick-guide-panel no-print" aria-labelledby="quickGuideHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Quick guide</p>
+            <h2 id="quickGuideHeading">A calmer way to use the calculator</h2>
+          </div>
+          <p>Start with the basics, then open the advanced sections only if you need them. The tool auto-saves on this browser as you work.</p>
+        </div>
+        <div class="feature-grid quick-guide-grid">
+          <article>
+            <span class="trust-label">Step 1</span>
+            <strong>Pick or create a scenario</strong>
+            <p>Use the scenario manager to compare a few loan options instead of overwriting one set of assumptions.</p>
+          </article>
+          <article>
+            <span class="trust-label">Step 2</span>
+            <strong>Enter amount, rate, and term</strong>
+            <p>Those three inputs create your first useful payment estimate. You can add fees, extra payments, or notes afterward.</p>
+          </article>
+          <article>
+            <span class="trust-label">Step 3</span>
+            <strong>Review results, then print or save</strong>
+            <p>Once the numbers look right, compare scenarios, save a scenarios file, or print a clean PDF-style report.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workspace" class="panel workspace-panel" aria-labelledby="workspaceHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Main calculator workspace</p>
+            <h2 id="workspaceHeading">Build, save, and compare loan scenarios</h2>
+          </div>
+          <p>Start with the default example, then create as many loan scenarios as you need for a careful comparison.</p>
+        </div>
+
+        <div class="workspace-top no-print">
+          <section class="scenario-manager" aria-labelledby="scenarioHeading">
+            <div class="section-head-inline">
+              <div>
+                <h3 id="scenarioHeading">Scenario manager</h3>
+                <p class="muted">Switch scenarios, duplicate options, and choose which ones to compare.</p>
+              </div>
+              <div class="toolbar-actions">
+                <button id="newScenarioBtn" class="btn btn-primary" type="button">New scenario</button>
+                <button id="duplicateScenarioBtn" class="btn btn-tertiary" type="button">Duplicate</button>
+                <button id="deleteScenarioBtn" class="btn btn-tertiary" type="button">Delete</button>
+              </div>
+            </div>
+            <div id="scenarioList" class="scenario-list" aria-live="polite"></div>
+          </section>
+
+          <section class="utility-card" aria-labelledby="storageHeading">
+            <div class="section-head-inline">
+              <div>
+                <h3 id="storageHeading">Save, load, and print</h3>
+                <p class="muted">Your work auto-saves on this browser. Save a scenarios file when you want a backup or want to reopen it later.</p>
+              </div>
+            </div>
+            <div class="toolbar-actions">
+              <label class="btn btn-secondary-panel file-trigger" for="importFile">Open saved scenarios</label>
+              <input id="importFile" type="file" accept="application/json,.json" hidden>
+              <button id="exportBtn" class="btn btn-secondary-panel" type="button">Save scenarios file</button>
+              <button id="printBtn" class="btn btn-secondary-panel" type="button">Print report / Save PDF</button>
+              <button id="resetAllBtn" class="btn btn-danger" type="button">Reset all</button>
+            </div>
+            <div class="storage-note-list">
+              <p class="muted small-copy">Auto-save stays on this device and browser until you reset it.</p>
+              <p class="muted small-copy">Opening a saved scenarios file replaces the current scenarios after confirmation.</p>
+              <details class="storage-details">
+                <summary>What gets saved?</summary>
+                <p class="muted small-copy">Your scenarios file includes loan assumptions, extra payments, notes, selected comparison items, and calculator settings like currency.</p>
+              </details>
+            </div>
+            <p id="storageStatus" class="muted small-copy" aria-live="polite"></p>
+          </section>
+        </div>
+
+        <div class="workspace-main-grid">
+          <form id="loanForm" class="editor-card no-print" novalidate aria-describedby="validationSummary">
+            <div class="form-toolbar">
+              <div>
+                <strong>Scenario editor</strong>
+                <p class="muted small-copy">Start with the quick-start fields below. Open advanced assumptions only if your quote needs them.</p>
+              </div>
+              <div class="toolbar-actions compact-actions">
+                <label class="form-field compact-select">
+                  <span>Currency</span>
+                  <select id="currencySelect" name="currency">
+                    <option value="CAD">CAD</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                  </select>
+                </label>
+                <button id="compactModeBtn" class="btn btn-tertiary" type="button" aria-pressed="false">Compact mode</button>
+              </div>
+            </div>
+
+            <div id="validationSummary" class="results-status validation-box" aria-live="polite"></div>
+
+            <div class="focus-strip no-print" aria-label="Calculator workflow">
+              <div class="focus-step">
+                <strong>1. Build a scenario</strong>
+                <p>Amount, rate, and term create the first estimate.</p>
+              </div>
+              <div class="focus-step">
+                <strong>2. Add extras if needed</strong>
+                <p>Use recurring or one-time prepayments to test savings.</p>
+              </div>
+              <div class="focus-step">
+                <strong>3. Compare or print</strong>
+                <p>Pick scenarios to compare, then save or print the report.</p>
+              </div>
+            </div>
+
+            <section class="guided-setup no-print" aria-labelledby="guidedSetupHeading">
+              <div class="guided-setup-head">
+                <div>
+                  <span class="step-kicker">Guided setup</span>
+                  <h3 id="guidedSetupHeading">Follow the setup path</h3>
+                </div>
+                <p id="guidedSetupStatus" class="muted small-copy">Start with the core loan details to create your first useful estimate.</p>
+              </div>
+              <div class="guided-step-list" role="navigation" aria-label="Guided calculator setup">
+                <button class="guided-step-button is-active" type="button" data-guide-tab="loan">
+                  <span class="guided-step-number">1</span>
+                  <span class="guided-step-copy">
+                    <strong>Core setup</strong>
+                    <small>Amount, rate, term</small>
+                  </span>
+                </button>
+                <button class="guided-step-button" type="button" data-guide-tab="extra">
+                  <span class="guided-step-number">2</span>
+                  <span class="guided-step-copy">
+                    <strong>Extras</strong>
+                    <small>Optional prepayments</small>
+                  </span>
+                </button>
+                <button class="guided-step-button" type="button" data-guide-tab="comparison">
+                  <span class="guided-step-number">3</span>
+                  <span class="guided-step-copy">
+                    <strong>Review</strong>
+                    <small>Compare, schedule, report</small>
+                  </span>
+                </button>
+              </div>
+              <div class="guided-setup-footer">
+                <p id="guidedSetupHint" class="muted small-copy">Most users only need these three steps.</p>
+                <div class="toolbar-actions">
+                  <button id="guidedNextBtn" class="btn btn-secondary-panel" type="button" data-guide-next="extra">Continue to optional extras</button>
+                </div>
+              </div>
+            </section>
+
+            <details class="section-nav-details no-print">
+              <summary>Open all calculator sections</summary>
+              <div class="tab-list" role="tablist" aria-label="Loan calculator sections">
+                <button class="tab-button is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-loan" id="tabButtonLoan" data-tab="loan">Loan Details</button>
+                <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-extra" id="tabButtonExtra" data-tab="extra">Extra Payments</button>
+                <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-comparison" id="tabButtonComparison" data-tab="comparison">Comparison</button>
+                <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-schedule" id="tabButtonSchedule" data-tab="schedule">Schedule / Table</button>
+                <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-report" id="tabButtonReport" data-tab="report">Report</button>
+                <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-learn" id="tabButtonLearn" data-tab="learn">Learn</button>
+              </div>
+            </details>
+
+            <section id="tab-loan" class="tab-panel is-active" role="tabpanel" aria-labelledby="tabButtonLoan">
+              <div class="input-card">
+                <div class="input-card-head">
+                  <div>
+                    <span class="step-kicker">Quick start</span>
+                    <h3>Core loan details</h3>
+                  </div>
+                  <p>Enter the essentials first. These fields are enough to estimate payment, payoff timing, and total interest.</p>
+                </div>
+
+                <div class="form-grid">
+                  <label class="form-field">
+                    <span>Scenario name</span>
+                    <input id="scenarioName" name="scenarioName" type="text" placeholder="Family Car Loan">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Loan amount</span>
+                    <input id="loanAmount" name="loanAmount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="25000">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Annual interest rate (%)</span>
+                    <input id="annualRate" name="annualRate" type="number" inputmode="decimal" min="0" max="100" step="0.01" placeholder="6.49">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Term years</span>
+                    <input id="termYears" name="termYears" type="number" inputmode="numeric" min="0" max="50" step="1" placeholder="5">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Additional term months</span>
+                    <input id="termMonths" name="termMonths" type="number" inputmode="numeric" min="0" max="11" step="1" placeholder="0">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Payment frequency</span>
+                    <select id="paymentFrequency" name="paymentFrequency">
+                      <option value="monthly">Monthly</option>
+                      <option value="semi-monthly">Semi-monthly</option>
+                      <option value="bi-weekly">Bi-weekly</option>
+                      <option value="weekly">Weekly</option>
+                    </select>
+                    <small class="field-help">Monthly is the clearest default for most comparisons. More frequent payments can change payoff timing and total interest.</small>
+                  </label>
+                </div>
+
+                <p class="muted small-copy">Most users only need the fields above. Open the advanced section only when your quote includes extra assumptions like fees or a specific compounding method.</p>
+                <details id="advancedLoanDetails" class="advanced-details">
+                  <summary>Advanced assumptions and notes</summary>
+                  <p class="muted small-copy">Open this when you want to model compounding, fees, a start date, or notes from a lender quote.</p>
+                  <div class="form-grid">
+                    <label class="form-field">
+                      <span>Compounding</span>
+                      <select id="compounding" name="compounding">
+                        <option value="monthly">Monthly</option>
+                        <option value="semi-annual">Semi-annual</option>
+                        <option value="annual">Annual</option>
+                        <option value="simple">Simple equivalent</option>
+                      </select>
+                      <small class="field-help">If you are unsure, match your lender quote. Monthly is a practical default.</small>
+                    </label>
+
+                    <label class="form-field">
+                      <span>Start date</span>
+                      <input id="startDate" name="startDate" type="date">
+                    </label>
+
+                    <label class="form-field">
+                      <span>Upfront fees or costs</span>
+                      <input id="fees" name="fees" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0">
+                      <small class="field-help">Fees are added to total out-of-pocket cost but not financed into the balance.</small>
+                    </label>
+
+                    <label class="form-field form-field-wide">
+                      <span>Scenario notes</span>
+                      <textarea id="notes" name="notes" rows="4" placeholder="Add context such as lender quote details, renewal assumptions, or your reasoning."></textarea>
+                    </label>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="tab-extra" class="tab-panel" role="tabpanel" aria-labelledby="tabButtonExtra" hidden>
+              <div class="input-card">
+                <div class="input-card-head">
+                  <div>
+                    <span class="step-kicker">Prepayment strategy</span>
+                    <h3>Extra payments</h3>
+                  </div>
+                  <p>Use recurring extras or one-time lump sums to see how faster repayment changes interest and payoff timing.</p>
+                </div>
+
+                <div class="form-grid">
+                  <label class="form-field checkbox-field">
+                    <span>Enable recurring extra payments</span>
+                    <input id="recurringEnabled" name="recurringEnabled" type="checkbox">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Recurring extra amount</span>
+                    <input id="recurringAmount" name="recurringAmount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="100">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Recurring extra frequency</span>
+                    <select id="recurringFrequency" name="recurringFrequency">
+                      <option value="monthly">Monthly</option>
+                      <option value="semi-monthly">Semi-monthly</option>
+                      <option value="bi-weekly">Bi-weekly</option>
+                      <option value="weekly">Weekly</option>
+                    </select>
+                    <small class="field-help">Match this to how often you expect to make the extra payment.</small>
+                  </label>
+
+                  <label class="form-field checkbox-field">
+                    <span>Include extras when comparing this scenario</span>
+                    <input id="comparisonIncludeExtras" name="comparisonIncludeExtras" type="checkbox">
+                  </label>
+                </div>
+                <p class="muted small-copy inline-guidance">Turn this on when you want prepayments included in side-by-side comparisons. Turn it off when you want to compare only the base loan structure.</p>
+
+                <div class="subsection-head">
+                  <div>
+                    <h4>Add a one-time lump sum</h4>
+                    <p class="muted">Use dates like annual bonuses, refunds, or planned principal paydowns.</p>
+                  </div>
+                </div>
+
+                <div class="form-grid lump-form-grid">
+                  <label class="form-field">
+                    <span>Lump sum date</span>
+                    <input id="lumpDate" name="lumpDate" type="date">
+                  </label>
+
+                  <label class="form-field">
+                    <span>Lump sum amount</span>
+                    <input id="lumpAmount" name="lumpAmount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="1000">
+                  </label>
+
+                  <label class="form-field form-field-wide">
+                    <span>Note</span>
+                    <input id="lumpNote" name="lumpNote" type="text" placeholder="Bonus payment">
+                  </label>
+                </div>
+
+                <div class="toolbar-actions">
+                  <button id="addLumpSumBtn" class="btn btn-secondary-panel" type="button">Add lump sum</button>
+                </div>
+
+                <div id="lumpSumList" class="lump-sum-list" aria-live="polite"></div>
+              </div>
+            </section>
+
+            <section id="tab-comparison" class="tab-panel" role="tabpanel" aria-labelledby="tabButtonComparison" hidden>
+              <div class="input-card">
+                <div class="input-card-head">
+                  <div>
+                    <span class="step-kicker">Compare scenarios</span>
+                    <h3>Comparison setup</h3>
+                  </div>
+                  <p>Select two or more scenarios to compare payment size, interest cost, payoff date, and prepayment savings.</p>
+                </div>
+                <div class="comparison-explainer">
+                  <strong>Tip</strong>
+                  <p>Compare like with like. Use the same term, payment frequency, and fees when you want the clearest apples-to-apples view.</p>
+                </div>
+                <div id="comparisonSelector" class="comparison-selector" aria-live="polite"></div>
+                <div id="comparisonSummary" class="comparison-summary" aria-live="polite"></div>
+              </div>
+            </section>
+
+            <section id="tab-schedule" class="tab-panel" role="tabpanel" aria-labelledby="tabButtonSchedule" hidden>
+              <div class="input-card">
+                <div class="input-card-head">
+                  <div>
+                    <span class="step-kicker">Amortization</span>
+                    <h3>Schedule guidance</h3>
+                  </div>
+                  <p>The detailed table below shows every payment, interest amount, principal reduction, and remaining balance.</p>
+                </div>
+                <div class="info-inline-grid">
+                  <article class="tip-card">
+                    <strong>Mobile tip</strong>
+                    <p>Swipe horizontally to review all columns in the amortization table.</p>
+                  </article>
+                  <article class="tip-card">
+                    <strong>Print tip</strong>
+                    <p>The print view keeps the report clean while still including the detailed amortization table.</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section id="tab-report" class="tab-panel" role="tabpanel" aria-labelledby="tabButtonReport" hidden>
+              <div class="input-card">
+                <div class="input-card-head">
+                  <div>
+                    <span class="step-kicker">Browser print flow</span>
+                    <h3>Report and PDF output</h3>
+                  </div>
+                  <p>When you print, SimpleKit hides editing controls and keeps the report, charts, comparison, and amortization content ready for a browser PDF export.</p>
+                </div>
+                <div class="report-checklist">
+                  <div class="mini-stat">
+                    <span>Includes</span>
+                    <strong>Assumptions, key results, comparison note, and summary visuals</strong>
+                  </div>
+                  <div class="mini-stat">
+                    <span>Best for</span>
+                    <strong>Saving a PDF or sharing a summary with a partner or lender</strong>
+                  </div>
+                </div>
+                <div class="toolbar-actions">
+                  <button class="btn btn-secondary-panel" type="button" data-print-trigger="true">Print report / Save as PDF</button>
+                </div>
+              </div>
+            </section>
+
+            <section id="tab-learn" class="tab-panel" role="tabpanel" aria-labelledby="tabButtonLearn" hidden>
+              <div class="input-card">
+                <div class="input-card-head">
+                  <div>
+                    <span class="step-kicker">Learn</span>
+                    <h3>How to use the calculator well</h3>
+                  </div>
+                  <p>Use the educational sections below for a deeper explanation of amortization, comparison strategy, and extra payments.</p>
+                </div>
+                <div class="info-inline-grid">
+                  <article class="tip-card">
+                    <strong>Compare like with like</strong>
+                    <p>Keep term length, fees, and payment frequency aligned when comparing lender quotes.</p>
+                  </article>
+                  <article class="tip-card">
+                    <strong>Test prepayment plans</strong>
+                    <p>Even modest recurring extras can materially reduce total interest, especially early in the loan.</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <div class="results-stack results-stack-primary">
+            <section id="compareStatusSection" class="results-shell compare-status-shell" aria-labelledby="compareStatusHeading">
+              <div class="results-block-head">
+                <div>
+                  <p class="section-kicker">Comparison state</p>
+                  <h3 id="compareStatusHeading">Current comparison set</h3>
+                </div>
+                <p>Keep this strip in view as your working context while you switch scenarios, review savings, and decide what to compare.</p>
+              </div>
+              <div id="compareStatusBar" class="compare-status-bar" aria-live="polite"></div>
+            </section>
+
+            <section id="summarySection" class="results-shell" aria-labelledby="summaryHeading">
+              <div class="results-block-head">
+                <div>
+                  <p class="section-kicker">Results summary</p>
+                  <h3 id="summaryHeading">Payment, payoff, and savings at a glance</h3>
+                </div>
+                <p>Review the selected scenario first, then use the comparison area to stack up multiple loans side by side.</p>
+              </div>
+              <div id="summaryNarrative" class="summary-narrative" aria-live="polite"></div>
+              <div id="summaryCards" class="result-grid" aria-live="polite"></div>
+            </section>
+          </div>
+        </div>
+
+        <div class="workspace-secondary-grid">
+          <section class="results-shell" aria-labelledby="chartHeading">
+            <div class="results-block-head">
+              <div>
+                <p class="section-kicker">Charts</p>
+                <h3 id="chartHeading">Balance and interest visuals</h3>
+              </div>
+              <p>These charts show how the loan balance falls over time and how principal versus interest accumulates.</p>
+            </div>
+            <div id="chartInsight" class="chart-insight" aria-live="polite"></div>
+            <div class="chart-grid">
+              <figure class="chart-card">
+                <canvas id="balanceChart" width="640" height="320" aria-label="Loan balance chart" role="img"></canvas>
+                <div class="chart-legend" aria-hidden="true">
+                  <span><i class="legend-swatch legend-base"></i>Base schedule</span>
+                  <span><i class="legend-swatch legend-extra"></i>With extras</span>
+                </div>
+                <figcaption>Loan balance over time, with and without extra payments when applicable.</figcaption>
+              </figure>
+              <details class="chart-details">
+                <summary>Open the principal vs. interest chart</summary>
+                <figure class="chart-card chart-card-secondary">
+                  <canvas id="breakdownChart" width="640" height="320" aria-label="Principal and interest chart" role="img"></canvas>
+                  <div class="chart-legend" aria-hidden="true">
+                    <span><i class="legend-swatch legend-principal"></i>Principal paid</span>
+                    <span><i class="legend-swatch legend-interest"></i>Interest paid</span>
+                  </div>
+                  <figcaption>Cumulative principal and cumulative interest paid across the amortization schedule.</figcaption>
+                </figure>
+              </details>
+            </div>
+          </section>
+
+          <section id="comparisonSection" class="results-shell" aria-labelledby="comparisonHeading">
+            <div class="results-block-head">
+              <div>
+                <p class="section-kicker">Comparison view</p>
+                <h3 id="comparisonHeading">Loan comparison calculator output</h3>
+              </div>
+              <p>Choose at least two scenarios to compare payment size, cost, timeline, and the effect of extra payments.</p>
+            </div>
+            <div id="comparisonCards" class="comparison-cards" aria-live="polite"></div>
+            <div id="comparisonMatrix" class="comparison-matrix" aria-live="polite"></div>
+            <div class="table-shell comparison-table-shell">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Metric</th>
+                  </tr>
+                  <tr id="comparisonTableHeaderRow">
+                    <th scope="col">Selected scenarios</th>
+                  </tr>
+                </thead>
+                <tbody id="comparisonTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <section id="tableSection" class="results-shell workspace-wide-shell" aria-labelledby="tableHeading">
+          <div class="results-block-head">
+            <div>
+              <p class="section-kicker">Amortization table</p>
+              <h3 id="tableHeading">Detailed payment schedule</h3>
+            </div>
+            <p>Every row shows the payment date, scheduled amount, extra payment, principal, interest, and remaining balance.</p>
+          </div>
+          <p class="muted small-copy">Preview mode shows the first 24 payments. Open the full schedule when you need every payment row.</p>
+          <div id="scheduleStats" class="table-summary" aria-live="polite"></div>
+          <div class="schedule-toolbar no-print">
+            <div id="schedulePreviewNote" class="muted small-copy" aria-live="polite"></div>
+            <button id="scheduleToggleBtn" class="btn btn-tertiary" type="button">Show full schedule</button>
+          </div>
+          <div class="table-shell">
+            <table class="amortization-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Scheduled</th>
+                  <th scope="col">Extra</th>
+                  <th scope="col">Principal</th>
+                  <th scope="col">Interest</th>
+                  <th scope="col">Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section id="reportSection" class="panel report-panel" aria-labelledby="reportHeading">
+        <div class="panel-header no-print">
+          <div>
+            <p class="section-kicker">Print-friendly report</p>
+            <h2 id="reportHeading">SimpleKit loan report</h2>
+          </div>
+          <p>Use this section for a browser print or Save PDF flow. The print stylesheet removes editing controls and simplifies colours for paper.</p>
+        </div>
+
+        <article class="print-report" aria-labelledby="reportTitle">
+          <div class="report-masthead">
+            <div class="report-brand-block">
+              <p class="eyebrow report-eyebrow">SimpleKit Loan Calculator</p>
+              <h3 id="reportTitle">Loan payment and amortization report</h3>
+              <p class="report-subtitle">Prepared for planning, discussion, and browser PDF export.</p>
+            </div>
+            <div class="report-meta-card">
+              <p id="reportGeneratedAt" class="muted">Generated report details appear here.</p>
+              <p class="report-meta-note">Educational planning summary. Confirm final terms with your lender before making a decision.</p>
+            </div>
+          </div>
+
+          <div class="report-header">
+            <div class="report-lead">
+              <p id="reportTakeaway" class="report-takeaway">A concise planning takeaway appears here.</p>
+            </div>
+            <div class="report-actions no-print">
+              <button class="btn btn-primary" type="button" data-print-trigger="true">Print / Save PDF</button>
+            </div>
+          </div>
+
+          <div id="reportSnapshot" class="report-snapshot" aria-live="polite"></div>
+
+          <div id="reportSummaryCards" class="result-grid report-grid" aria-live="polite"></div>
+
+          <div class="report-columns">
+            <section class="report-card" aria-labelledby="assumptionsHeading">
+              <h4 id="assumptionsHeading">Loan assumptions</h4>
+              <div id="reportAssumptions" class="definition-grid"></div>
+            </section>
+
+            <section class="report-card" aria-labelledby="extraHeading">
+              <h4 id="extraHeading">Extra payment summary</h4>
+              <div id="reportExtraSummary" class="definition-grid"></div>
+            </section>
+          </div>
+
+          <section class="report-card" aria-labelledby="reportComparisonHeading">
+            <h4 id="reportComparisonHeading">Comparison summary</h4>
+            <div id="reportComparisonSummary" class="report-rich-copy"></div>
+          </section>
+
+          <section class="report-card" aria-labelledby="reportNotesHeading">
+            <h4 id="reportNotesHeading">Scenario notes</h4>
+            <p id="reportNotes" class="report-rich-copy"></p>
+          </section>
+
+          <section class="report-card report-disclaimer" aria-labelledby="reportDisclaimerHeading">
+            <h4 id="reportDisclaimerHeading">Important note</h4>
+            <p>
+              This calculator is for educational planning. Lender calculations can vary because of contract terms,
+              rounding rules, fee treatment, compounding conventions, and timing specifics. Confirm final numbers with the lender.
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <section id="learn" class="panel no-print" aria-labelledby="learnHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Learn</p>
+            <h2 id="learnHeading">Understand amortization, comparison, and extra payments</h2>
+          </div>
+          <p>These on-page explanations are here for both human readers and search engines looking for high-quality loan calculator content.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>How loan payment calculations work</h3>
+            <p>
+              A loan payment calculator estimates the regular payment needed to repay a balance over a set term.
+              Each payment typically covers interest first, then reduces principal. The exact split changes over time.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>What amortization means</h3>
+            <p>
+              Amortization is the process of paying down a loan through repeated payments. Early payments usually contain more interest,
+              while later payments shift more heavily toward principal as the balance falls.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Why extra payments matter</h3>
+            <p>
+              Extra payments reduce principal sooner. Because future interest is calculated on the remaining balance,
+              even small recurring extras can lower total interest and shorten the payoff timeline.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>How to compare loan offers</h3>
+            <p>
+              Compare more than the payment alone. A lower payment can still cost more over time if the term is longer,
+              the rate is higher, or fees are larger. Look at total interest, total paid, and payoff date together.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>How save and reload works</h3>
+            <p>
+              Use the JSON export button to save your scenarios to your device. Load that file later to restore your work,
+              or rely on local auto-save to recover from an accidental refresh on the same device.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>How to save as PDF</h3>
+            <p>
+              Use the Print / Save PDF button. Your browser print dialog can usually save the report as a PDF,
+              preserving the summary, charts, comparison, and amortization content in a shareable document.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel no-print" aria-labelledby="faqHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faqHeading">Loan calculator frequently asked questions</h2>
+          </div>
+          <p>These FAQs cover the most common questions about loan payment calculators, amortization calculators, and extra payment planning.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>How is a loan payment calculated?</h3>
+            <p>The payment is based on the loan balance, interest rate, term length, payment frequency, and compounding assumptions. With interest-bearing loans, each payment covers accrued interest plus some principal.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What is amortization?</h3>
+            <p>Amortization is the schedule that shows how each payment is divided between interest and principal until the balance reaches zero.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How do extra payments reduce interest?</h3>
+            <p>Extra payments lower the outstanding balance earlier, which reduces future interest charges and usually shortens the payoff period.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can I save my loan scenarios?</h3>
+            <p>Yes. Export all scenarios and calculator settings as a JSON file, then load the same file later to continue working.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How do I save the report as a PDF?</h3>
+            <p>Use the Print / Save PDF button, then choose your browser’s PDF destination in the print dialog.</p>
+          </article>
+        </div>
+      </section>
+
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
+  </div>
+
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

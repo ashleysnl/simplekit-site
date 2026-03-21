@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simplekit.app/debt-to-income-ratio-calculator/sitemap.xml

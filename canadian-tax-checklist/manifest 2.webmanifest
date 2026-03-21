@@ -1,0 +1,11 @@
+{
+  "name": "Canadian Family Tax Checklist | SimpleKit",
+  "short_name": "Tax Checklist",
+  "description": "Organize receipts, slips, notes, and recurring filing tasks with a reusable Canadian family tax checklist.",
+  "start_url": "/canadian-tax-checklist/",
+  "scope": "/canadian-tax-checklist/",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#0f6abf",
+  "icons": []
+}

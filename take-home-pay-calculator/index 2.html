@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canadian Take-Home Pay Calculator | Salary, After-Tax Income &amp; Province Comparison</title>
+  <meta
+    name="description"
+    content="Estimate salary after tax in Canada with a guided take-home pay calculator. Compare provinces and territories, see federal and provincial tax, CPP, EI, and when payroll deductions may stop for the year."
+  >
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://simplekit.app/take-home-pay-calculator/">
+  <meta property="og:title" content="Canadian Take-Home Pay Calculator | Salary, After-Tax Income &amp; Province Comparison">
+  <meta
+    property="og:description"
+    content="Estimate monthly and annual take-home pay in Canada, review tax and payroll deductions, and compare provinces and territories using the same salary and tax year."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplekit.app/take-home-pay-calculator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Canadian Take-Home Pay Calculator | Salary, After-Tax Income &amp; Province Comparison">
+  <meta
+    name="twitter:description"
+    content="A guided Canadian salary calculator for after-tax income, CPP, EI, and province-by-province take-home pay comparison."
+  >
+  <meta name="theme-color" content="#0f6abf">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Canadian Take-Home Pay Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "en-CA",
+      "url": "https://simplekit.app/take-home-pay-calculator/",
+      "description": "A guided Canadian take-home pay calculator that estimates gross pay, deductions, net income, payroll cap timing, and province-by-province salary comparisons."
+    }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-6SS26QC3C9");
+  </script>
+
+  <link rel="preconnect" href="https://core.simplekit.app">
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "./tools.html",
+      toolId: "take-home-pay-canada",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Built as a guided planning tool for Canadian salary and payroll estimates.",
+      supportTitle: "Support more practical Canadian planning tools",
+      supportCopy: "SimpleKit keeps calculators approachable, educational, and easy to use without turning everyday money questions into a tax form.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="page-shell take-home-shell">
+    <header class="hero hero-tax" aria-labelledby="pageTitle">
+      <div data-simplekit-header></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Guided Salary Planning</p>
+        <h1 id="pageTitle">Canadian Take-Home Pay Calculator</h1>
+        <p class="hero-subtitle">Estimate monthly net pay, payroll deductions, and how take-home income changes across Canada.</p>
+        <p class="hero-proof">
+          Start with a year, a province, and your salary. Get the answer first, then open details only if you need them.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#calculatorSection">Estimate take-home pay</a>
+          <a class="btn btn-secondary" href="#comparisonSection">Compare provinces</a>
+        </div>
+        <div class="hero-trust-row" aria-label="Planner highlights">
+          <span>All provinces and territories</span>
+          <span>CPP and EI cap timing</span>
+          <span>Tax-year-first design</span>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <article class="hero-highlight">
+          <span class="mini-kicker">Quick snapshot</span>
+          <strong id="heroPreviewNet">$0</strong>
+          <p id="heroPreviewCopy">Estimated monthly take-home pay updates as you adjust your salary amount, salary mode, tax year, and province.</p>
+        </article>
+        <div class="hero-mini-grid" aria-label="What this tool explains">
+          <div>
+            <span class="mini-summary-label">Why province matters</span>
+            <strong>Different tax systems change net pay</strong>
+          </div>
+          <div>
+            <span class="mini-summary-label">Why pay can rise later</span>
+            <strong>CPP and EI can stop after annual maximums</strong>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <main id="mainContent" class="page-flow">
+      <section id="calculatorSection" class="panel" aria-labelledby="calculatorHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Calculator</p>
+            <h2 id="calculatorHeading">Estimate gross pay, deductions, and net take-home pay</h2>
+          </div>
+          <p>
+            This is a planning estimate for employees with steady salary income. Exact payroll results may differ because of bonuses, taxable benefits,
+            employer setup, pay frequency, and Quebec-specific payroll treatment.
+          </p>
+        </div>
+
+        <div class="calculator-layout">
+          <form id="calculatorForm" class="calculator-card no-print" novalidate>
+            <div class="form-toolbar">
+              <div>
+                <strong>Guided inputs</strong>
+                <p class="muted small-copy">Each step explains why the input matters before you move to the next one.</p>
+              </div>
+              <div class="toolbar-actions">
+                <button id="loadSampleBtn" class="btn btn-primary" type="button">Load example</button>
+                <button id="resetBtn" class="btn btn-tertiary" type="button">Reset</button>
+              </div>
+            </div>
+
+            <section class="input-card">
+              <div class="input-card-head">
+                <div>
+                  <span class="step-kicker">Step 1</span>
+                  <h3>Set your tax context</h3>
+                </div>
+                <p>Start with the year and the province or territory, because those two choices drive the tax rules behind the estimate.</p>
+              </div>
+              <div class="salary-grid">
+                <label class="form-field">
+                  <span>Tax year</span>
+                  <select id="taxYear" name="taxYear">
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </label>
+                <label class="form-field">
+                  <span>Province or territory</span>
+                  <select id="province" name="province"></select>
+                </label>
+              </div>
+            </section>
+
+            <section class="input-card">
+              <div class="input-card-head">
+                <div>
+                  <span class="step-kicker">Step 2</span>
+                  <h3>Enter your salary</h3>
+                </div>
+                <p>Choose whether you want to start with monthly or annual salary. The calculator will convert it into the annual tax view it needs, then return practical monthly results.</p>
+              </div>
+              <div class="salary-grid">
+                <label class="form-field">
+                  <span>Salary input mode</span>
+                  <select id="salaryMode" name="salaryMode">
+                    <option value="monthly">Monthly salary</option>
+                    <option value="annual">Annual salary</option>
+                  </select>
+                </label>
+                <label class="form-field">
+                  <span id="salaryAmountLabel">Monthly gross salary</span>
+                  <div class="money-input">
+                    <span aria-hidden="true">$</span>
+                    <input id="salaryAmount" name="salaryAmount" type="number" inputmode="decimal" min="0" step="50" placeholder="5000" required>
+                  </div>
+                </label>
+              </div>
+              <p class="muted small-copy" id="salaryModeHelper">Monthly salary is often easiest for budgeting. Annual salary is useful if that is how your offer or compensation is quoted.</p>
+              <p class="muted small-copy" id="salaryHelper">Use steady salary income for the clearest estimate. Irregular pay can change real payroll results.</p>
+            </section>
+
+            <section class="input-card">
+              <div class="input-card-head">
+                <div>
+                  <span class="step-kicker">Step 3</span>
+                  <h3>Review assumptions and comparison</h3>
+                </div>
+                <p>Most employees can leave the payroll settings on. You can also compare one province side by side, or switch to the full Canada view.</p>
+              </div>
+              <div class="toggle-grid">
+                <label class="toggle-card">
+                  <input id="includeCpp" name="includeCpp" type="checkbox" checked>
+                  <span>
+                    <strong>Include CPP or QPP</strong>
+                    <small>Useful for most salary employees. Quebec uses QPP-style pension rules.</small>
+                  </span>
+                </label>
+                <label class="toggle-card">
+                  <input id="includeEi" name="includeEi" type="checkbox" checked>
+                  <span>
+                    <strong>Include EI</strong>
+                    <small>EI has annual maximum employee premiums, so deductions may stop later in the year.</small>
+                  </span>
+                </label>
+              </div>
+              <div class="input-card-divider"></div>
+              <div class="salary-grid">
+                <label class="form-field">
+                  <span>Compare with</span>
+                  <select id="comparisonProvince" name="comparisonProvince"></select>
+                </label>
+                <label class="toggle-card toggle-card-wide">
+                  <input id="compareAll" name="compareAll" type="checkbox">
+                  <span>
+                    <strong>Compare all provinces and territories</strong>
+                    <small>Helpful for exploring tax differences across Canada. Leave this off for a simpler two-province view.</small>
+                  </span>
+                </label>
+              </div>
+              <p class="muted small-copy" id="comparisonHelper">By default, the comparison table shows your selected province and one comparison province.</p>
+            </section>
+
+            <div class="form-actions">
+              <button id="shareBtn" class="btn btn-secondary-panel" type="button">Copy share link</button>
+              <p id="shareFeedback" class="muted small-copy" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="results-stack">
+            <section id="resultsStatus" class="results-status" aria-live="polite"></section>
+
+            <section class="results-shell results-shell-primary" aria-labelledby="resultsHeading">
+              <div class="results-block-head">
+                <div>
+                  <p class="section-kicker">Main answer</p>
+                  <h3 id="resultsHeading">Your estimated take-home pay</h3>
+                </div>
+                <p>See the clear answer first, then open the deeper breakdowns below.</p>
+              </div>
+              <div class="headline-grid">
+                <article class="headline-card headline-card-accent">
+                  <span class="trust-label">Monthly net pay</span>
+                  <strong id="monthlyNetValue">$0</strong>
+                  <p id="monthlyNetCopy">Estimated take-home pay after tax and payroll deductions.</p>
+                </article>
+                <article class="headline-card">
+                  <span class="trust-label">Annual net pay</span>
+                  <strong id="annualNetValue">$0</strong>
+                  <p id="annualNetCopy">A yearly view of the same estimate for bigger planning decisions.</p>
+                </article>
+                <article class="headline-card">
+                  <span class="trust-label">Annual deductions</span>
+                  <strong id="annualDeductionValue">$0</strong>
+                  <p id="annualDeductionCopy">Federal tax, provincial or territorial tax, pension contributions, and EI.</p>
+                </article>
+              </div>
+              <article class="result-summary-card">
+                <span class="trust-label">Key takeaway</span>
+                <p id="keyTakeaway">Choose a province, tax year, and salary amount to see your estimate.</p>
+              </article>
+            </section>
+
+            <section class="results-shell" aria-labelledby="quickBreakdownHeading">
+              <details class="detail-shell" open>
+                <summary class="detail-summary">
+                  <span>
+                    <span class="section-kicker">Quick breakdown</span>
+                    <strong id="quickBreakdownHeading">Where your money is going</strong>
+                  </span>
+                  <span class="detail-summary-copy">Annual tax and payroll details</span>
+                </summary>
+                <div id="resultCards" class="result-grid" aria-live="polite"></div>
+              </details>
+            </section>
+
+            <section class="results-shell" aria-labelledby="capTimingHeading">
+              <details class="detail-shell">
+                <summary class="detail-summary">
+                  <span>
+                    <span class="section-kicker">Payroll timing</span>
+                    <strong id="capTimingHeading">When deductions may stop</strong>
+                  </span>
+                  <span class="detail-summary-copy">CPP, QPP, and EI timing</span>
+                </summary>
+                <div class="cap-grid">
+                  <article class="info-card">
+                    <h3 id="cppPaidUpHeading">CPP or QPP timing</h3>
+                    <p id="cppPaidUpValue">Waiting for salary details.</p>
+                  </article>
+                  <article class="info-card">
+                    <h3 id="eiPaidUpHeading">EI timing</h3>
+                    <p id="eiPaidUpValue">Waiting for salary details.</p>
+                  </article>
+                </div>
+              </details>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="comparisonSection" class="panel" aria-labelledby="comparisonHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Province comparison</p>
+            <h2 id="comparisonHeading">See how the same salary looks across Canada</h2>
+          </div>
+          <p>
+            Use this view to compare estimated take-home pay with the same salary and tax year across provinces and territories.
+            It is designed for exploration, not relocation advice.
+          </p>
+        </div>
+
+        <div class="comparison-summary">
+          <article class="info-card info-card-highlight">
+            <h3>Comparison summary</h3>
+            <p id="comparisonSummary">Compare your selected province with one other province by default, or turn on compare all for a full Canada view.</p>
+          </article>
+        </div>
+
+        <div class="table-shell">
+          <div class="table-scroll">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col">Province or territory</th>
+                  <th scope="col">Monthly net pay</th>
+                  <th scope="col">Annual net pay</th>
+                  <th scope="col">Monthly deductions</th>
+                  <th scope="col">Federal tax</th>
+                  <th scope="col">Provincial or territorial tax</th>
+                </tr>
+              </thead>
+              <tbody id="comparisonTableBody">
+                <tr>
+                  <td colspan="6">Comparison results will appear here.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="faqHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faqHeading">Common questions about take-home pay in Canada</h2>
+          </div>
+          <p>These quick answers are meant to keep the calculator practical for beginners while still being useful for deeper salary planning.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What is take-home pay?</summary>
+            <p>Take-home pay is the amount left after payroll deductions come off your gross salary. In this calculator that usually means federal tax, provincial or territorial tax, CPP or QPP, and EI.</p>
+          </details>
+          <details>
+            <summary>Why is my take-home pay different in each province?</summary>
+            <p>Federal tax applies across Canada, but provincial and territorial income tax systems differ. That changes your estimated deductions and net pay even when the salary stays the same.</p>
+          </details>
+          <details>
+            <summary>Does CPP stop during the year?</summary>
+            <p>It can. If your salary is high enough to reach the annual maximum employee contribution before December, that deduction may stop for the rest of the year.</p>
+          </details>
+          <details>
+            <summary>Does EI stop during the year?</summary>
+            <p>It can. EI also has an annual employee maximum premium, so some workers will see EI stop later in the year if they hit the cap.</p>
+          </details>
+          <details>
+            <summary>How do you estimate when CPP and EI are paid up?</summary>
+            <p>The calculator assumes steady salary and applies the same monthly earnings pattern across the full year to estimate when each annual maximum would be reached.</p>
+          </details>
+          <details>
+            <summary>Is this calculator accurate for Quebec?</summary>
+            <p>It is useful for planning, but Quebec payroll treatment can differ in practice. Confirm exact figures with Revenu Quebec, the CRA, or your payroll provider if you need payroll-accurate numbers.</p>
+          </details>
+          <details>
+            <summary>Why can my paycheck increase later in the year?</summary>
+            <p>If CPP, QPP, or EI reaches its annual maximum during the year, that deduction may stop later pay periods and your net pay can increase even if gross salary stays the same.</p>
+          </details>
+          <details>
+            <summary>Can I compare provinces with the same salary?</summary>
+            <p>Yes. The comparison feature reuses the same salary and tax year across all provinces and territories so you can explore how location changes estimated take-home pay.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="relatedHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Related tools</p>
+            <h2 id="relatedHeading">Keep planning after your salary estimate</h2>
+          </div>
+          <p>Once you know your after-tax income, these SimpleKit tools can help you turn that estimate into a practical monthly plan.</p>
+        </div>
+        <div id="relatedTools" class="info-grid"></div>
+      </section>
+
+      <section class="panel disclaimer-panel" aria-labelledby="disclaimerHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Disclaimer</p>
+            <h2 id="disclaimerHeading">Planning estimate only</h2>
+          </div>
+          <p>
+            This calculator does not provide tax, payroll, legal, or accounting advice. Actual deductions may differ because of payroll setup,
+            irregular income, annual rule changes, and Quebec-specific treatment in practice.
+          </p>
+        </div>
+        <ul class="assumptions-list">
+          <li>Tax thresholds, contribution caps, rates, and credits can change yearly.</li>
+          <li>Actual payroll may differ because of bonuses, commissions, taxable benefits, pre-tax deductions, and employer setup.</li>
+          <li>Quebec payroll treatment may differ in practice and should be confirmed carefully.</li>
+          <li>Confirm exact figures with the Canada Revenue Agency, Revenu Quebec, official payroll tables, or your payroll provider.</li>
+        </ul>
+      </section>
+
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
+  </div>
+
+  <script src="./assets/js/simplekit-tool-links.js"></script>
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

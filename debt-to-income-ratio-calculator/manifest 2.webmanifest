@@ -1,0 +1,11 @@
+{
+  "name": "Debt-to-Income Ratio Calculator | SimpleKit",
+  "short_name": "DTI Calculator",
+  "description": "Calculate front-end and back-end debt-to-income ratio, test a future mortgage payment, and compare monthly debt pressure.",
+  "start_url": "/debt-to-income-ratio-calculator/",
+  "scope": "/debt-to-income-ratio-calculator/",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#0f6abf",
+  "icons": []
+}
