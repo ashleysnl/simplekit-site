@@ -329,6 +329,10 @@ p {
   gap: 16px;
 }
 
+.cluster-grid {
+  align-items: stretch;
+}
+
 .card,
 .step,
 .article-card,
@@ -510,6 +514,31 @@ p {
 
 .support-inline {
   justify-content: space-between;
+}
+
+.authority-section .detail-card,
+.cluster-card {
+  gap: 14px;
+}
+
+.cluster-card .related-links {
+  margin-top: 2px;
+}
+
+.cluster-card .related-links a {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #f3f6fb;
+  border: 1px solid #dbe7f4;
+  text-decoration: none;
+}
+
+.cluster-card .related-links a:hover,
+.cluster-card .related-links a:focus-visible {
+  background: rgba(15, 106, 191, 0.08);
+  border-color: rgba(15, 106, 191, 0.2);
+  text-decoration: none;
+  outline: none;
 }
 
 .related-links a,
