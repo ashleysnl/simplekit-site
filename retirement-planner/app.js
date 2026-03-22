@@ -677,22 +677,6 @@ function finalizeGuidedPlan() {
   }
 }
 
-function wizardStepForPath(path) {
-  if (path.startsWith("profile.birthYear") || path.startsWith("profile.annualIncome") || path.startsWith("profile.retirementAge") || path.startsWith("savings.currentTotal") || path.startsWith("uiState.guided.estimateRetirementAge")) return 1;
-  if (path.startsWith("profile.desiredSpending") || path.startsWith("uiState.guided.retirementIncome") || path.startsWith("uiState.guided.lifestylePreset")) return 2;
-  if (path.startsWith("savings.annualContribution") || path.startsWith("uiState.guided.rrspShare") || path.startsWith("uiState.guided.savingsContributionMode") || path.startsWith("uiState.guided.useCanadianDefaults")) return 3;
-  if (path.startsWith("assumptions.") || path.startsWith("income.cpp.") || path.startsWith("income.oas.") || path.startsWith("profile.province") || path.startsWith("uiState.showAdvancedControls")) return 4;
-  return 0;
-}
-
-function maybeAdvanceWizard(step) {
-  if (ui.activeNav !== "plan") return false;
-  if (state.uiState.wizardStep !== step) return false;
-  if (step >= WIZARD_STEP_COUNT) return false;
-  state.uiState.wizardStep = step + 1;
-  return true;
-}
-
 function handleDocumentClick(event) {
   const rawTarget = event.target;
   const target = rawTarget instanceof Element ? rawTarget : rawTarget?.parentElement;
@@ -1288,9 +1272,6 @@ function handleBoundInput(event) {
     return;
   }
 
-  const stepForPath = wizardStepForPath(path);
-  const advanced = stepForPath === 4 && state.uiState.showAdvancedControls;
-  const autoAdvanced = stepForPath > 0 && event.type === "change" && maybeAdvanceWizard(stepForPath) && !advanced;
   renderAll();
   if (trackChange && beforeModel) {
     const summary = buildChangeSummary(beforeModel, ui.lastModel, state);
@@ -1301,9 +1282,6 @@ function handleBoundInput(event) {
     }
   }
   savePlan();
-  if (autoAdvanced) {
-    toast(`Step ${Math.max(1, state.uiState.wizardStep - 1)} saved. Moving to the next step.`);
-  }
 }
 
 function handleLearnBoundInput(event) {
