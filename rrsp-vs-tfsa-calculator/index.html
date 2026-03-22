@@ -36,6 +36,8 @@
   <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://core.simplekit.app" />
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css" />
   <!-- SimpleKit shared analytics snippet: place in head with other production scripts. -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
@@ -44,6 +46,21 @@
     function gtag() { dataLayer.push(arguments); }
     gtag("js", new Date());
     gtag("config", "G-6SS26QC3C9");
+  </script>
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "rrsp-vs-tfsa-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Compare RRSP and TFSA tradeoffs with a simple Canadian contribution view.",
+      supportTitle: "Support SimpleKit",
+      supportCopy: "If this RRSP versus TFSA calculator helped you make the next contribution decision more clearly, you can support more focused Canadian planning tools.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
   </script>
   <script type="application/ld+json">
     {
@@ -106,16 +123,9 @@
 </head>
 <body>
   <div class="page-shell">
-    <nav class="suite-nav no-print" aria-label="SimpleKit suite navigation">
-      <a class="suite-home" href="https://simplekit.app/" target="_blank" rel="noopener noreferrer">SimpleKit</a>
-      <div class="suite-links">
-        <a href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer">Retirement Planner</a>
-        <a href="https://simplekit.app/cpp-calculator/" target="_blank" rel="noopener noreferrer">CPP Planner</a>
-        <a href="https://simplekit.app/travel-planner/" target="_blank" rel="noopener noreferrer">Travel Planner</a>
-      </div>
-    </nav>
 
     <header class="hero hero-compact" aria-labelledby="heroTitle">
+      <div data-simplekit-header></div>
       <div class="hero-content">
         <p class="eyebrow">SimpleKit Retirement Tools • Canada</p>
         <h1 id="heroTitle">Should this contribution go into your RRSP or your TFSA?</h1>
@@ -490,22 +500,15 @@
           </details>
         </div>
       </section>
-    </main>
 
-    <footer class="app-footer" aria-label="Footer">
-      <div class="footer-branding">
-        <strong>SimpleKit RRSP vs TFSA Calculator</strong>
-        <span class="muted">Educational estimates only. Actual tax results, contribution room, and returns can differ.</span>
-      </div>
-      <div class="footer-actions">
-        <a href="https://simplekit.app/" target="_blank" rel="noopener noreferrer">Back to SimpleKit</a>
-        <a href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
-      </div>
-    </footer>
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
   </div>
 
   <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

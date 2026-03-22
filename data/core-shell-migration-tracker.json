@@ -41,11 +41,12 @@
   {
     "id": "rrsp-vs-tfsa-calculator",
     "name": "RRSP / TFSA Calculator",
-    "status": "pending",
-    "usesCoreNow": false,
+    "status": "completed",
+    "usesCoreNow": true,
     "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Simplekit RRSP TFSA Calculator",
     "priority": 5,
-    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+    "completedAt": "2026-03-22",
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom suite navigation plus custom footer shell."
   },
   {
     "id": "fire-calculator",
