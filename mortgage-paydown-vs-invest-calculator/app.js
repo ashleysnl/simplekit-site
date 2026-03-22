@@ -114,10 +114,6 @@ const el = {
   metaTwitterTitle: document.getElementById("metaTwitterTitle"),
   metaTwitterDescription: document.getElementById("metaTwitterDescription"),
   metaTwitterImage: document.getElementById("metaTwitterImage"),
-  heroSupportLink: document.getElementById("heroSupportLink"),
-  supportCtaLink: document.getElementById("supportCtaLink"),
-  footerSupportLink: document.getElementById("footerSupportLink"),
-  globalSupportBtn: document.getElementById("globalSupportBtn"),
 };
 
 const fields = [
@@ -146,7 +142,6 @@ init();
 
 function init() {
   syncMeta();
-  syncSupportLinks();
   renderRelatedTools();
   applyInputs(state);
   bindEvents();
@@ -172,9 +167,6 @@ function bindEvents() {
   });
   el.advancedSettings?.addEventListener("toggle", () => {
     trackEvent("toggle_advanced_settings", { open: el.advancedSettings.open ? "true" : "false" });
-  });
-  [el.heroSupportLink, el.supportCtaLink, el.footerSupportLink, el.globalSupportBtn].forEach((link) => {
-    link?.addEventListener("click", () => trackEvent("support_click", { location: link.id || "support_link" }));
   });
   window.addEventListener("resize", scheduleCharts);
 }
@@ -878,11 +870,6 @@ function syncMeta() {
   el.metaTwitterImage?.setAttribute("content", TEMPLATE.socialImageUrl);
 }
 
-function syncSupportLinks() {
-  [el.heroSupportLink, el.supportCtaLink, el.footerSupportLink, el.globalSupportBtn].forEach((link) => {
-    if (link) link.href = TEMPLATE.supportUrl;
-  });
-}
 
 function buildInterpretation(results, inputs, investAhead) {
   if (Math.abs(results.netWorthDifference) < 10000) {
