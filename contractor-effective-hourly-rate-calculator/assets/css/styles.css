@@ -732,7 +732,7 @@ body {
   .tool-shell {
     width: min(100%, 100vw);
     margin: 12px auto 40px;
-    padding: 0 12px 156px;
+    padding: 0 12px 172px;
   }
 
   .tool-hero,
@@ -778,7 +778,7 @@ body {
     position: fixed;
     left: 12px;
     right: 12px;
-    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     z-index: 20;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -793,5 +793,10 @@ body {
     border-radius: 14px;
     background: linear-gradient(180deg, rgba(15, 106, 191, 0.06), rgba(255, 255, 255, 0.98));
     border: 1px solid var(--starter-line);
+  }
+
+  #simplekitFloatingSupport {
+    bottom: calc(98px + env(safe-area-inset-bottom, 0px));
+    right: 12px;
   }
 }
