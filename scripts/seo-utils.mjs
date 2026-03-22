@@ -41,6 +41,28 @@ export function runSeoValidation(manifest, repoRoot, options = {}) {
   const slugSet = new Set();
   const urlSet = new Set();
   const host = manifest.site.canonicalHost.replace(/\/$/, "");
+  const toolCanonicalUrlSet = new Set();
+  const sitePageUrlSet = new Set();
+
+  for (const page of manifest.site.pages || []) {
+    if (!page.loc) {
+      issues.push("Site page entry is missing loc");
+      continue;
+    }
+
+    if (!page.loc.startsWith("http://") && !page.loc.startsWith("https://")) {
+      issues.push(`Site page loc must be an absolute URL: ${page.loc}`);
+    }
+
+    if (page.loc.includes("?")) {
+      issues.push(`Site page loc must not include query parameters: ${page.loc}`);
+    }
+
+    if (sitePageUrlSet.has(page.loc)) {
+      issues.push(`Duplicate site page URL found: ${page.loc}`);
+    }
+    sitePageUrlSet.add(page.loc);
+  }
 
   for (const tool of manifest.tools) {
     if (!tool.slug) {
@@ -64,6 +86,18 @@ export function runSeoValidation(manifest, repoRoot, options = {}) {
     const expectedUrl = `${host}${tool.canonicalPath}`;
     if (tool.canonicalUrl !== expectedUrl) {
       issues.push(`Tool "${tool.slug}" canonicalUrl must equal canonicalHost + canonicalPath (${expectedUrl})`);
+    }
+
+    toolCanonicalUrlSet.add(tool.canonicalUrl);
+  }
+
+  for (const pageUrl of sitePageUrlSet) {
+    if (toolCanonicalUrlSet.has(pageUrl)) {
+      issues.push(`Site page URL duplicates a canonical tool URL: ${pageUrl}`);
+    }
+
+    if (pageUrl.startsWith(`${host}/tools/`)) {
+      issues.push(`Legacy /tools/ sitemap URL found in site pages: ${pageUrl}`);
     }
   }
 
@@ -117,10 +151,21 @@ export function writeSitemapXml(repoRoot, manifest) {
     }));
 
   const entries = [...sitePages, ...toolPages];
+  const uniqueEntries = [];
+  const seen = new Set();
+
+  for (const entry of entries) {
+    if (seen.has(entry.loc)) {
+      continue;
+    }
+    seen.add(entry.loc);
+    uniqueEntries.push(entry);
+  }
+
   const content = [
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
     "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">",
-    ...entries.map((entry) => {
+    ...uniqueEntries.map((entry) => {
       const lines = ["  <url>", `    <loc>${entry.loc}</loc>`];
       if (entry.changefreq) {
         lines.push(`    <changefreq>${entry.changefreq}</changefreq>`);
