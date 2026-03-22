@@ -132,10 +132,12 @@ function shouldCopyMigratedToolFile(sourceRoot, sourcePath) {
     return true;
   }
 
+  const duplicateNamePattern = / \d+(?=(\.[^.]+)?$)/;
+
   if (statSync(sourcePath).isDirectory()) {
     const directoryName = path.basename(sourcePath);
     const blockedDirectories = new Set([".git", ".factory", "docs", "src", "tests", "tools"]);
-    return !blockedDirectories.has(directoryName);
+    return !blockedDirectories.has(directoryName) && !duplicateNamePattern.test(directoryName);
   }
 
   const parts = relativePath.split(path.sep);
@@ -178,6 +180,9 @@ function shouldCopyMigratedToolFile(sourceRoot, sourcePath) {
 
   const extension = path.extname(sourcePath).toLowerCase();
   const baseName = path.basename(sourcePath).toLowerCase();
+  if (duplicateNamePattern.test(path.basename(sourcePath))) {
+    return false;
+  }
   if (extension === ".json" && (baseName.includes("backup") || baseName.includes("export"))) {
     return false;
   }
@@ -284,7 +289,6 @@ function writeToolUrlAudit() {
   }
 
   const content = {
-    generatedAt: new Date().toISOString(),
     files,
     byTool
   };
