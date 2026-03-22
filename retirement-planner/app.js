@@ -298,6 +298,12 @@ let ui = {
     references: false,
     modules: false,
   },
+  planCardOpen: {
+    basics: true,
+    lifestyle: true,
+    income: false,
+    assumptions: false,
+  },
   learnChartHover: {
     inflation: null,
     indexed: null,
@@ -1201,6 +1207,7 @@ function handleBoundInput(event) {
   const beforeModel = trackChange ? buildPlanModel(beforePlan) : null;
 
   captureAdvancedAccordionState();
+  capturePlannerCardState();
 
   let value;
   if (target instanceof HTMLInputElement && target.type === "checkbox") {
@@ -2049,6 +2056,7 @@ function renderPlanInputs() {
   if (!el.planInputsPanel) return;
   el.planInputsPanel.innerHTML = buildPlanInputsHtml({
     state,
+    ui,
     provinces: PROVINCES,
     selectField,
     numberField,
@@ -2782,6 +2790,16 @@ function captureAdvancedAccordionState() {
   });
 }
 
+function capturePlannerCardState() {
+  const sections = Array.from(document.querySelectorAll("#planInputsPanel details[data-planner-card-id]"));
+  if (!sections.length) return;
+  sections.forEach((details) => {
+    const id = details.getAttribute("data-planner-card-id");
+    if (!id) return;
+    ui.planCardOpen[id] = details.open;
+  });
+}
+
 function handleDetailsToggle(event) {
   const target = event.target;
   if (!(target instanceof HTMLDetailsElement)) return;
@@ -2791,10 +2809,16 @@ function handleDetailsToggle(event) {
       if (item instanceof HTMLDetailsElement && item !== target) item.open = false;
     });
   }
-  if (!target.matches("#advancedAccordion details[data-accordion-id]")) return;
-  const id = target.getAttribute("data-accordion-id");
+  if (target.matches("#advancedAccordion details[data-accordion-id]")) {
+    const id = target.getAttribute("data-accordion-id");
+    if (!id) return;
+    ui.advancedOpen[id] = target.open;
+    return;
+  }
+  if (!target.matches("#planInputsPanel details[data-planner-card-id]")) return;
+  const id = target.getAttribute("data-planner-card-id");
   if (!id) return;
-  ui.advancedOpen[id] = target.open;
+  ui.planCardOpen[id] = target.open;
 }
 
 function applyAdvancedSearchFilter() {
