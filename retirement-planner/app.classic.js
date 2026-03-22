@@ -1664,6 +1664,7 @@ function createDefaultPlan({ app, riskReturns, learnProgressItems }) {
     profile: {
       province: app.defaultProvince,
       birthYear: app.currentYear - 35,
+      annualIncome: 90000,
       retirementAge: 65,
       lifeExpectancy: 92,
       desiredSpending: 60000,
@@ -1766,6 +1767,15 @@ function createDefaultPlan({ app, riskReturns, learnProgressItems }) {
         preparedBy: "",
         summaryDate: "",
       },
+      guided: {
+        lifestylePreset: "comfortable",
+        retirementIncomeMode: "percent",
+        retirementIncomePercent: 0.7,
+        estimateRetirementAge: false,
+        savingsContributionMode: "annual",
+        rrspShare: 0.6,
+        useCanadianDefaults: true,
+      },
       learn: createDefaultLearnState(),
       learningProgress: createDefaultLearningProgress(learnProgressItems),
       unlocked: {
@@ -1822,6 +1832,7 @@ function createDemoPlan({ app, riskReturns, learnProgressItems }) {
   plan.profile.birthYear = app.currentYear - 45;
   plan.profile.retirementAge = 63;
   plan.profile.lifeExpectancy = 94;
+  plan.profile.annualIncome = 105000;
   plan.profile.desiredSpending = 70000;
   plan.savings.currentTotal = 380000;
   plan.savings.annualContribution = 12000;
@@ -1900,6 +1911,10 @@ function normalizePlan(input, { app, provinces, riskReturns, learnProgressItems 
         ...base.uiState.clientSummary,
         ...(migrated.uiState?.clientSummary || {}),
       },
+      guided: {
+        ...base.uiState.guided,
+        ...(migrated.uiState?.guided || {}),
+      },
       learn: normalizeLearnState(migrated.uiState?.learn || base.uiState.learn),
       learningProgress: {
         ...createDefaultLearningProgress(learnProgressItems),
@@ -1914,6 +1929,7 @@ function normalizePlan(input, { app, provinces, riskReturns, learnProgressItems 
 
 function ensureValidState(state, { app, provinces, learnProgressItems }) {
   state.profile.birthYear = clamp(Number(state.profile.birthYear), 1940, app.currentYear - 18);
+  state.profile.annualIncome = Math.max(0, Number(state.profile.annualIncome || 0));
   state.profile.retirementAge = clamp(Number(state.profile.retirementAge), 50, 75);
   state.profile.lifeExpectancy = clamp(Number(state.profile.lifeExpectancy), state.profile.retirementAge + 1, 105);
   state.profile.desiredSpending = Math.max(12000, Number(state.profile.desiredSpending));
@@ -1995,6 +2011,17 @@ function ensureValidState(state, { app, provinces, learnProgressItems }) {
     preparedBy: String(state.uiState.clientSummary?.preparedBy || ""),
     summaryDate: String(state.uiState.clientSummary?.summaryDate || ""),
   };
+  state.uiState.guided = {
+    lifestylePreset: ["basic", "comfortable", "higher"].includes(state.uiState.guided?.lifestylePreset)
+      ? state.uiState.guided.lifestylePreset
+      : "comfortable",
+    retirementIncomeMode: state.uiState.guided?.retirementIncomeMode === "dollar" ? "dollar" : "percent",
+    retirementIncomePercent: clamp(normalizePct(state.uiState.guided?.retirementIncomePercent ?? 0.7), 0.3, 1.2),
+    estimateRetirementAge: Boolean(state.uiState.guided?.estimateRetirementAge),
+    savingsContributionMode: state.uiState.guided?.savingsContributionMode === "percent" ? "percent" : "annual",
+    rrspShare: clamp(normalizePct(state.uiState.guided?.rrspShare ?? 0.6), 0, 1),
+    useCanadianDefaults: Boolean(state.uiState.guided?.useCanadianDefaults ?? true),
+  };
   const defaultProgress = createDefaultLearningProgress(learnProgressItems);
   state.uiState.learningProgress = {
     ...defaultProgress,
@@ -2070,6 +2097,18 @@ function validatePlan(plan, { app, provinces, learnProgressItems }) {
     summaryDate: String(plan.uiState.clientSummary?.summaryDate || ""),
   };
   if (!plan.version) plan.version = app.version;
+  plan.profile.annualIncome = Math.max(0, Number(plan.profile.annualIncome || 0));
+  plan.uiState.guided = {
+    lifestylePreset: ["basic", "comfortable", "higher"].includes(plan.uiState.guided?.lifestylePreset)
+      ? plan.uiState.guided.lifestylePreset
+      : "comfortable",
+    retirementIncomeMode: plan.uiState.guided?.retirementIncomeMode === "dollar" ? "dollar" : "percent",
+    retirementIncomePercent: clamp(normalizePct(plan.uiState.guided?.retirementIncomePercent ?? 0.7), 0.3, 1.2),
+    estimateRetirementAge: Boolean(plan.uiState.guided?.estimateRetirementAge),
+    savingsContributionMode: plan.uiState.guided?.savingsContributionMode === "percent" ? "percent" : "annual",
+    rrspShare: clamp(normalizePct(plan.uiState.guided?.rrspShare ?? 0.6), 0, 1),
+    useCanadianDefaults: Boolean(plan.uiState.guided?.useCanadianDefaults ?? true),
+  };
 }
 
 function migratePlan(plan, { app, riskReturns, learnProgressItems }) {
@@ -2103,6 +2142,17 @@ function migratePlan(plan, { app, riskReturns, learnProgressItems }) {
   if (!Array.isArray(next.uiState.scenarios)) next.uiState.scenarios = [];
   if (next.uiState.lastChangeSummary == null) next.uiState.lastChangeSummary = null;
   if (!next.uiState.timingSim) next.uiState.timingSim = { cppStartAge: 65, oasStartAge: 65, linkTiming: false };
+  if (!next.uiState.guided) {
+    next.uiState.guided = {
+      lifestylePreset: "comfortable",
+      retirementIncomeMode: "percent",
+      retirementIncomePercent: 0.7,
+      estimateRetirementAge: false,
+      savingsContributionMode: "annual",
+      rrspShare: 0.6,
+      useCanadianDefaults: true,
+    };
+  }
   if (!next.savings) next.savings = createDefaultPlan({ app, riskReturns, learnProgressItems }).savings;
   if (!Array.isArray(next.savings.capitalInjects)) next.savings.capitalInjects = [];
   if (!next.accounts) next.accounts = createDefaultPlan({ app, riskReturns, learnProgressItems }).accounts;
@@ -6521,7 +6571,7 @@ function renderMethodologyHtml(escapeHtml) {
 /* FILE: src/ui/views/wizardView.js */
 function explainer(title, text, action = "") {
   return `
-    <aside class="explainer-block">
+    <aside class="guided-explainer">
       <strong>${title}</strong>
       <p class="muted">${text}</p>
       ${action}
@@ -6529,14 +6579,49 @@ function explainer(title, text, action = "") {
   `;
 }
 
-function sourceToggleCard(title, body, checked) {
+function optionButton({ action, value, label, active, sublabel = "" }) {
   return `
-    <label class="source-toggle-card">
-      <input type="checkbox" ${checked ? "checked" : ""} disabled />
-      <span>
-        <strong>${title}</strong>
-        <small>${body}</small>
-      </span>
+    <button class="choice-card ${active ? "active" : ""}" type="button" data-action="${action}" data-value="${value}" aria-pressed="${active ? "true" : "false"}">
+      <strong>${label}</strong>
+      ${sublabel ? `<span>${sublabel}</span>` : ""}
+    </button>
+  `;
+}
+
+function segmentedButton({ action, value, label, active }) {
+  return `<button class="segmented-btn ${active ? "active" : ""}" type="button" data-action="${action}" data-value="${value}" aria-pressed="${active ? "true" : "false"}">${label}</button>`;
+}
+
+function inlineNote(title, text) {
+  return `
+    <details class="inline-learn">
+      <summary>${title}</summary>
+      <p class="muted small-copy">${text}</p>
+    </details>
+  `;
+}
+
+function simpleNumberField({ label, bind, value, min, max, step = 1, suffix = "", hint = "", disabled = false, percent = false, inputMode = "decimal", displayAs = "" }) {
+  return `
+    <label class="guided-field ${disabled ? "is-disabled" : ""}">
+      <span class="label-row">${label}</span>
+      <div class="guided-input-wrap">
+        <input
+          type="number"
+          data-bind="${bind}"
+          data-type="number"
+          value="${value}"
+          min="${min}"
+          max="${max}"
+          step="${step}"
+          inputmode="${inputMode}"
+          ${disabled ? "disabled" : ""}
+          ${percent ? 'data-percent-input="1"' : ""}
+          ${displayAs ? `data-display-as="${displayAs}"` : ""}
+        />
+        ${suffix ? `<span class="guided-input-suffix">${suffix}</span>` : ""}
+      </div>
+      ${hint ? `<small>${hint}</small>` : ""}
     </label>
   `;
 }
@@ -6545,59 +6630,88 @@ function buildWizardStepHtml(step, ctx) {
   const {
     state,
     model,
-    app,
     provinces,
     ageNow,
     numberField,
     selectField,
-    riskButton,
-    tooltipButton,
     toPct,
     formatCurrency,
-    formatPct,
-    findFirstRetirementRow,
   } = ctx;
 
+  const age = ageNow();
+  const yearsToRetirement = Math.max(0, Number(state.profile.retirementAge || 65) - age);
+  const guided = state.uiState.guided || {};
+  const annualIncome = Math.max(0, Number(state.profile.annualIncome || 0));
+  const retirementIncomePercent = Math.max(0.3, Number(guided.retirementIncomePercent || 0.7));
+  const estimatedRetirementIncome = annualIncome * retirementIncomePercent;
+  const firstRetirementRow = model?.base?.rows?.find((row) => row.age === state.profile.retirementAge) || model?.base?.rows?.[0] || null;
+  const projectedBalance = Math.max(0, Number(model?.kpis?.balanceAtRetirement || firstRetirementRow?.balanceStart || 0));
+
   if (step === 1) {
-    const yearsToRetirement = Math.max(0, state.profile.retirementAge - ageNow());
     return `
       <div class="wizard-step-head">
-        <p class="wizard-step-kicker">About you</p>
-        <h3>Set your timeline</h3>
-        <p class="muted">These dates shape how long you keep saving and how long retirement income needs to last.</p>
+        <p class="wizard-step-kicker">Step 1</p>
+        <h3>Your basics</h3>
+        <p class="muted">Start with the few inputs that matter most. This is enough to get a strong first answer.</p>
       </div>
-      <div class="wizard-grid compact-mobile-two">
-        <div class="form-span-full">
-          ${selectField("Province", "profile.province", Object.entries(provinces).map(([value, label]) => ({ value, label })), state.profile.province, "province")}
+      <div class="guided-step-layout">
+        <div class="guided-step-main">
+          <div class="guided-grid guided-grid-basics">
+            ${simpleNumberField({ label: "Your age", bind: "profile.birthYear", value: age, min: 18, max: 85, step: 1, hint: "We store this as birth year behind the scenes.", displayAs: "age", inputMode: "numeric" })}
+            ${numberField("Current savings", "savings.currentTotal", state.savings.currentTotal, { min: 0, max: 5000000, step: 1000 }, "currentSavings", false, false, true)}
+            ${numberField("Annual income", "profile.annualIncome", annualIncome, { min: 0, max: 1000000, step: 1000 }, "annualIncome", false, false, true)}
+            ${numberField("Retirement age", "profile.retirementAge", state.profile.retirementAge, { min: 50, max: 75, step: 1 }, "retirementAge", false, false, true)}
+          </div>
+          <div class="guided-inline-row">
+            <label class="inline-check">
+              <input type="checkbox" data-bind="uiState.guided.estimateRetirementAge" ${guided.estimateRetirementAge ? "checked" : ""} />
+              I don't know. Estimate a typical retirement age for me.
+            </label>
+          </div>
+          ${explainer("Quick read", `You have about ${yearsToRetirement} years until retirement based on the current target. You can refine everything later without losing this first plan.`)}
         </div>
-        ${numberField("Year you were born", "profile.birthYear", state.profile.birthYear, { min: 1940, max: app.currentYear - 18, step: 1 }, "birthYear", false, false, true)}
-        ${numberField("Age you want to retire", "profile.retirementAge", state.profile.retirementAge, { min: 50, max: 75, step: 1 }, "retirementAge", false, false, true)}
-        ${numberField("Plan until age", "profile.lifeExpectancy", state.profile.lifeExpectancy, { min: 75, max: 105, step: 1 }, "lifeExpectancy", false, false, true)}
-      </div>
-      ${explainer("Why this matters", "Retiring earlier means more years funded by savings. Planning to an older age gives a safer longevity buffer.")}
-      <div class="preview-kpi">
-        <div class="preview-kpi-item"><strong>Years until retirement</strong><span>${yearsToRetirement}</span></div>
-        <div class="preview-kpi-item"><strong>Retirement years to fund</strong><span>${Math.max(1, state.profile.lifeExpectancy - state.profile.retirementAge)}</span></div>
+        <aside class="guided-step-side">
+          <div class="guided-summary-card">
+            <strong>Why we start here</strong>
+            <p class="muted">Age, savings, income, and retirement timing shape the whole projection. Everything else is refinement.</p>
+            <div class="mini-stat-list">
+              <span><strong>${yearsToRetirement}</strong> years to save</span>
+              <span><strong>${formatCurrency(projectedBalance)}</strong> projected at retirement</span>
+            </div>
+          </div>
+        </aside>
       </div>
     `;
   }
 
   if (step === 2) {
-    const yearsToRetirement = Math.max(0, state.profile.retirementAge - ageNow());
-    const spendAtRetirement = state.profile.desiredSpending * Math.pow(1 + state.assumptions.inflation, yearsToRetirement);
+    const lifestylePreset = guided.lifestylePreset || "comfortable";
     return `
       <div class="wizard-step-head">
-        <p class="wizard-step-kicker">Retirement spending</p>
-        <h3>Choose the lifestyle target</h3>
-        <p class="muted">Use after-tax spending in today's dollars so the target feels intuitive.</p>
+        <p class="wizard-step-kicker">Step 2</p>
+        <h3>Lifestyle</h3>
+        <p class="muted">Pick a simple retirement lifestyle, then use a percent of income or a dollar target if you want more control.</p>
       </div>
-      <div class="wizard-grid compact-mobile-two">
-        ${numberField("After-tax spending per year", "profile.desiredSpending", state.profile.desiredSpending, { min: 12000, max: 350000, step: 500 }, "desiredSpending")}
-        ${numberField("Inflation assumption", "assumptions.inflation", toPct(state.assumptions.inflation), { min: 0.5, max: 5, step: 0.1 }, "inflation", true, false, true)}
+      <div class="choice-card-grid">
+        ${optionButton({ action: "set-lifestyle-preset", value: "basic", label: "Basic lifestyle", active: lifestylePreset === "basic", sublabel: "Leaner spending, more buffer" })}
+        ${optionButton({ action: "set-lifestyle-preset", value: "comfortable", label: "Comfortable", active: lifestylePreset === "comfortable", sublabel: "A balanced default for most plans" })}
+        ${optionButton({ action: "set-lifestyle-preset", value: "higher", label: "Higher income", active: lifestylePreset === "higher", sublabel: "More travel and discretionary spending" })}
       </div>
-      ${explainer("Why this matters", "Your spending target is what you want to live on after tax. That means withdrawals often need to be higher than the spending gap itself.")}
-      <div class="preview-kpi">
-        <div class="preview-kpi-item"><strong>Approximate spending at retirement</strong><span>${formatCurrency(spendAtRetirement)}</span></div>
+      <div class="guided-card">
+        <div class="segmented-control" aria-label="Retirement income mode">
+          ${segmentedButton({ action: "set-retirement-income-mode", value: "percent", label: "Use % of income", active: guided.retirementIncomeMode !== "dollar" })}
+          ${segmentedButton({ action: "set-retirement-income-mode", value: "dollar", label: "Use dollar amount", active: guided.retirementIncomeMode === "dollar" })}
+        </div>
+        <div class="guided-grid compact-mobile-two">
+          ${guided.retirementIncomeMode === "dollar"
+            ? numberField("Desired retirement income", "profile.desiredSpending", state.profile.desiredSpending, { min: 12000, max: 350000, step: 500 }, "desiredSpending", false, false, true)
+            : simpleNumberField({ label: "Target retirement income", bind: "uiState.guided.retirementIncomePercent", value: Math.round(retirementIncomePercent * 100), min: 30, max: 120, step: 1, suffix: "% of income", hint: `About ${formatCurrency(estimatedRetirementIncome)} per year with your current income.`, percent: true, inputMode: "numeric" })}
+        </div>
+      </div>
+      ${explainer("Why this matters", "A retirement target turns your income and savings into a real answer. Start simple here. Fine-tune inflation and taxes later if you want.")}
+      <div class="guided-learn-stack">
+        ${inlineNote("What is a safe withdrawal rate?", "It is a planning rule of thumb for how much savings can support income over a long retirement. This planner uses a full year-by-year projection instead of a single rule.")}
+        ${inlineNote("Why inflation matters", "Your target is entered in today's dollars so it feels familiar. The projection then grows future spending using the inflation assumption.")}
       </div>
     `;
   }
@@ -6605,26 +6719,30 @@ function buildWizardStepHtml(step, ctx) {
   if (step === 3) {
     return `
       <div class="wizard-step-head">
-        <p class="wizard-step-kicker">Savings</p>
-        <h3>Enter the savings that will support retirement</h3>
-        <p class="muted">Keep this step short. You can refine account detail later in advanced tools.</p>
+        <p class="wizard-step-kicker">Step 3</p>
+        <h3>Savings and contributions</h3>
+        <p class="muted">Tell us what you save today and roughly how it is split. You can use Canadian defaults if you don't want to think about accounts yet.</p>
       </div>
-      <div class="wizard-grid compact-mobile-two">
-        ${numberField("Current total savings", "savings.currentTotal", state.savings.currentTotal, { min: 0, max: 5000000, step: 1000 }, "currentSavings")}
-        ${numberField("Annual savings going in", "savings.annualContribution", state.savings.annualContribution, { min: 0, max: 250000, step: 500 }, "annualContribution")}
-        ${numberField("Savings increase each year", "savings.contributionIncrease", toPct(state.savings.contributionIncrease), { min: 0, max: 15, step: 0.1 }, "contributionIncrease", true, false, true)}
-        <div class="form-span-full">
-          <div class="label-row">Investment style ${tooltipButton("riskProfile")}</div>
-          <div class="inline-radio-row">
-            ${riskButton("conservative")}
-            ${riskButton("balanced")}
-            ${riskButton("aggressive")}
-          </div>
+      <div class="guided-card">
+        <div class="segmented-control" aria-label="Contribution mode">
+          ${segmentedButton({ action: "set-contribution-mode", value: "annual", label: "Annual savings", active: guided.savingsContributionMode !== "percent" })}
+          ${segmentedButton({ action: "set-contribution-mode", value: "percent", label: "% of income", active: guided.savingsContributionMode === "percent" })}
         </div>
+        <div class="guided-grid compact-mobile-two">
+          ${guided.savingsContributionMode === "percent"
+            ? simpleNumberField({ label: "Savings rate", bind: "savings.annualContribution", value: annualIncome > 0 ? Math.round((Number(state.savings.annualContribution || 0) / annualIncome) * 100) : 0, min: 0, max: 60, step: 1, suffix: "% of income", hint: annualIncome > 0 ? `${formatCurrency(state.savings.annualContribution)} per year at current income.` : "", displayAs: "income-percent", inputMode: "numeric" })
+            : numberField("Annual savings", "savings.annualContribution", state.savings.annualContribution, { min: 0, max: 250000, step: 500 }, "annualContribution", false, false, true)}
+          ${simpleNumberField({ label: "RRSP share", bind: "uiState.guided.rrspShare", value: Math.round(Number(guided.rrspShare || 0.6) * 100), min: 0, max: 100, step: 5, suffix: "%", hint: "TFSA automatically gets the rest.", percent: true, inputMode: "numeric" })}
+        </div>
+        <label class="inline-check">
+          <input type="checkbox" data-bind="uiState.guided.useCanadianDefaults" ${guided.useCanadianDefaults ? "checked" : ""} />
+          Use typical Canadian defaults for my account split and assumptions.
+        </label>
       </div>
-      ${explainer("Why this matters", "Savings consistency is one of the biggest drivers of the plan. Return assumptions matter too, but they should stay realistic.")}
-      <div class="preview-kpi">
-        <div class="preview-kpi-item"><strong>Projected savings at retirement</strong><span>${formatCurrency(model.kpis.balanceAtRetirement)}</span></div>
+      ${explainer("Current split", `${formatCurrency(state.accounts.rrsp || 0)} in RRSP/RRIF and ${formatCurrency(state.accounts.tfsa || 0)} in TFSA based on your simple split.`)}
+      <div class="guided-learn-stack">
+        ${inlineNote("What is CPP?", "CPP is the Canada Pension Plan. It is a government benefit based on your work history and contribution record.")}
+        ${inlineNote("RRSP vs TFSA", "RRSP withdrawals are taxable later. TFSA withdrawals are not. Keeping a simple split helps the planner estimate tax drag more realistically.")}
       </div>
     `;
   }
@@ -6632,92 +6750,63 @@ function buildWizardStepHtml(step, ctx) {
   if (step === 4) {
     return `
       <div class="wizard-step-head">
-        <p class="wizard-step-kicker">Income sources</p>
-        <h3>Turn on the income you expect to receive</h3>
-        <p class="muted">Only the cards you switch on expand. That keeps the plan simple at first load.</p>
+        <p class="wizard-step-kicker">Step 4</p>
+        <h3>Advanced assumptions</h3>
+        <p class="muted">These are collapsed by default so beginners can keep moving. The planner already starts with Canadian defaults.</p>
       </div>
-      <div class="source-toggle-grid">
-        ${sourceToggleCard("Work pension", "Employer or private pension income.", state.income.pension.enabled)}
-        ${sourceToggleCard("CPP", "Canada Pension Plan income.", true)}
-        ${sourceToggleCard("OAS", "Old Age Security income.", true)}
-        ${sourceToggleCard("RRSP / RRIF", "Registered savings withdrawals later in retirement.", true)}
-        ${sourceToggleCard("TFSA", "Tax-free savings account detail is available in advanced tools.", state.accounts.tfsa > 0)}
-        ${sourceToggleCard("Non-registered savings", "Taxable investment account detail is available in advanced tools.", state.accounts.nonRegistered > 0)}
-      </div>
-      <div class="wizard-grid compact-mobile-two">
-        ${numberField("Work pension per year", "income.pension.amount", state.income.pension.amount, { min: 0, max: 200000, step: 500 }, "pensionAmount", false, !state.income.pension.enabled, true)}
-        ${numberField("Pension start age", "income.pension.startAge", state.income.pension.startAge, { min: 50, max: 75, step: 1 }, "pensionStartAge", false, !state.income.pension.enabled, true)}
-        ${numberField("CPP amount at 65", "income.cpp.amountAt65", state.income.cpp.amountAt65, { min: 0, max: 35000, step: 100 }, "cppAmount65", false, false, true)}
-        ${numberField("CPP start age", "income.cpp.startAge", state.income.cpp.startAge, { min: 60, max: 70, step: 1 }, "cppStartAge", false, false, true)}
-        ${numberField("OAS amount at 65", "income.oas.amountAt65", state.income.oas.amountAt65, { min: 0, max: 12000, step: 100 }, "oasAmount65", false, false, true)}
-        ${numberField("OAS start age", "income.oas.startAge", state.income.oas.startAge, { min: 65, max: 70, step: 1 }, "oasStartAge", false, false, true)}
-      </div>
-      ${explainer("Why this matters", "Guaranteed income from pension, CPP, and OAS reduces the amount your savings must cover each year.")}
-    `;
-  }
-
-  if (step === 5) {
-    const first = findFirstRetirementRow(model.base.rows, state.profile.retirementAge);
-    const coverage = first?.spending > 0 ? (first.guaranteedNet / first.spending) * 100 : 0;
-    return `
-      <div class="wizard-step-head">
-        <p class="wizard-step-kicker">Government benefits</p>
-        <h3>Check how much your plan leans on CPP and OAS</h3>
-        <p class="muted">These benefits often change the picture meaningfully after age 65.</p>
-      </div>
-      <div class="wizard-grid compact-mobile-two">
-        ${numberField("CPP start age", "income.cpp.startAge", state.income.cpp.startAge, { min: 60, max: 70, step: 1 }, "cppStartAge", false, false, true)}
-        ${numberField("OAS start age", "income.oas.startAge", state.income.oas.startAge, { min: 65, max: 70, step: 1 }, "oasStartAge", false, false, true)}
-      </div>
-      ${explainer("Why this matters", "Delaying CPP can increase later guaranteed income. OAS can be clawed back if taxable income gets too high.")}
-      <div class="preview-kpi">
-        <div class="preview-kpi-item"><strong>Guaranteed income coverage in first retirement year</strong><span>${formatPct(coverage / 100)}</span></div>
-        <div class="preview-kpi-item"><strong>Net spending gap</strong><span>${formatCurrency(first?.netGap || 0)}</span></div>
-      </div>
-    `;
-  }
-
-  if (step === 6) {
-    const first = findFirstRetirementRow(model.base.rows, state.profile.retirementAge);
-    return `
-      <div class="wizard-step-head">
-        <p class="wizard-step-kicker">Taxes and assumptions</p>
-        <h3>Confirm the key planning rules</h3>
-        <p class="muted">This is where tax drag, RRIF minimums, and OAS clawback start to matter.</p>
-      </div>
-      <div class="wizard-grid compact-mobile-two">
-        <label class="inline-check form-span-full">
-          <input type="checkbox" data-bind="strategy.oasClawbackModeling" ${state.strategy.oasClawbackModeling ? "checked" : ""} />
-          Model OAS clawback ${tooltipButton("oasClawback")}
+      <div class="guided-card">
+        <label class="inline-check">
+          <input type="checkbox" data-bind="uiState.showAdvancedControls" ${state.uiState.showAdvancedControls ? "checked" : ""} />
+          Show advanced assumptions
         </label>
-        <label class="inline-check form-span-full">
-          <input type="checkbox" data-bind="strategy.estimateTaxes" ${state.strategy.estimateTaxes !== false ? "checked" : ""} />
-          Estimate taxes on retirement income ${tooltipButton("strategyLifetimeTaxes")}
-        </label>
-        ${numberField("RRIF conversion age", "strategy.rrifConversionAge", state.strategy.rrifConversionAge, { min: 65, max: 75, step: 1 }, "rrifConversionAge", false, false, true)}
-        <label class="inline-check compact-field">
-          <input type="checkbox" data-bind="strategy.applyRrifMinimums" ${state.strategy.applyRrifMinimums ? "checked" : ""} />
-          Apply RRIF minimums ${tooltipButton("rrifMinimums")}
-        </label>
+        <p class="small-copy muted">Defaults: 5% balanced return, 2% inflation, CPP and OAS included, tax-aware income modeling on.</p>
       </div>
-      ${explainer("Why this matters", "A spending target is after tax. Registered withdrawals are taxable, and RRIF minimums can force taxable income higher later.")}
-      <div class="preview-kpi">
-        <div class="preview-kpi-item"><strong>First-year gross withdrawal</strong><span>${formatCurrency(first?.withdrawal || 0)}</span></div>
-        <div class="preview-kpi-item"><strong>Tax and clawback drag</strong><span>${formatCurrency((first?.taxOnWithdrawal || 0) + (first?.oasClawback || 0))}</span></div>
+      ${state.uiState.showAdvancedControls ? `
+        <div class="guided-grid compact-mobile-two">
+          ${selectField("Province", "profile.province", Object.entries(provinces).map(([value, label]) => ({ value, label })), state.profile.province, "province")}
+          ${numberField("Balanced return", "assumptions.returns.balanced", toPct(state.assumptions.returns.balanced), { min: 1, max: 12, step: 0.1 }, "riskProfile", true)}
+          ${numberField("Inflation", "assumptions.inflation", toPct(state.assumptions.inflation), { min: 0.5, max: 5, step: 0.1 }, "inflation", true)}
+          ${numberField("CPP at 65", "income.cpp.amountAt65", state.income.cpp.amountAt65, { min: 0, max: 35000, step: 100 }, "cppAmount65", false, false, true)}
+          ${numberField("CPP start age", "income.cpp.startAge", state.income.cpp.startAge, { min: 60, max: 70, step: 1 }, "cppStartAge", false, false, true)}
+          ${numberField("OAS at 65", "income.oas.amountAt65", state.income.oas.amountAt65, { min: 0, max: 12000, step: 100 }, "oasAmount65", false, false, true)}
+          ${numberField("OAS start age", "income.oas.startAge", state.income.oas.startAge, { min: 65, max: 70, step: 1 }, "oasStartAge", false, false, true)}
+        </div>
+      ` : `
+        <div class="guided-placeholder-card">
+          <strong>Keeping it simple</strong>
+          <p class="muted">You can skip this step and still get a useful answer. Detailed assumptions stay available anytime in the detailed planner.</p>
+        </div>
+      `}
+      <div class="guided-learn-stack">
+        ${inlineNote("Why inflation matters", "Even modest inflation changes what your future spending target needs to be.")}
+        ${inlineNote("What is CPP?", "CPP is a monthly federal retirement benefit based on your earnings history.")}
+        ${inlineNote("Why taxes matter", "A retirement target is spending after tax. Registered withdrawals often need to be higher than the net spending gap.")}
       </div>
     `;
   }
 
   return `
     <div class="wizard-step-head">
-      <p class="wizard-step-kicker">Results</p>
-      <h3>Your first forecast is ready</h3>
-      <p class="muted">Move to Results to see your outcome summary, income timeline, tax interpretation, and suggested next actions.</p>
+      <p class="wizard-step-kicker">Step 5</p>
+      <h3>Your first result is ready</h3>
+      <p class="muted">You have enough information for a real first pass. Open the results to see if you are on track and what to do next.</p>
     </div>
-    ${explainer("What unlocks next", "Advanced mode adds account-level assumptions, withdrawal strategy controls, spouse planning, and richer scenario exploration.", `
+    <div class="guided-result-preview">
+      <div class="guided-result-card">
+        <span class="result-label">Expected monthly retirement income</span>
+        <strong>${formatCurrency(Math.max(0, Number(firstRetirementRow?.spending || state.profile.desiredSpending)) / 12)}</strong>
+        <span class="muted">Based on your current plan inputs.</span>
+      </div>
+      <div class="guided-result-card">
+        <span class="result-label">Projected portfolio at retirement</span>
+        <strong>${formatCurrency(projectedBalance)}</strong>
+        <span class="muted">${yearsToRetirement} years until retirement.</span>
+      </div>
+    </div>
+    ${explainer("What unlocks next", "Results will show the big answer first, then the chart, income breakdown, and plain-language ways to improve the plan.", `
       <div class="landing-actions">
-        <button class="btn btn-primary" type="button" data-nav-target="results">Go to Results</button>
-        <button class="btn btn-secondary" type="button" data-action="open-stress">Compare scenarios</button>
+        <button class="btn btn-primary" type="button" data-nav-target="results">See my result</button>
+        <button class="btn btn-secondary" type="button" data-action="open-advanced">Switch to detailed planner</button>
       </div>
     `)}
   `;
@@ -7155,9 +7244,9 @@ function updateLearnOutputsView(ctx) {
 }
 
 /* FILE: src/ui/views/planInputsView.js */
-function inputCard(title, description, content, open = false) {
+function plannerCard(title, description, content, open = false) {
   return `
-    <details class="accordion planner-card" ${open ? "open" : ""}>
+    <details class="accordion planner-card planner-card-guided" ${open ? "open" : ""}>
       <summary>${title}</summary>
       <div class="accordion-content">
         <p class="small-copy muted">${description}</p>
@@ -7167,14 +7256,14 @@ function inputCard(title, description, content, open = false) {
   `;
 }
 
-function advancedHint() {
+function detailPlannerHint() {
   return `
-    <div class="advanced-inline-callout">
-      <strong>Advanced controls</strong>
-      <p class="muted">Need more precision? Open Tools for account-level assumptions, withdrawal strategy, RRIF rules, and methodology.</p>
+    <div class="advanced-inline-callout advanced-inline-callout-soft">
+      <strong>Need more precision?</strong>
+      <p class="muted">Switch to the detailed planner for full assumptions, strategy controls, RRIF rules, and richer scenario tools.</p>
       <div class="landing-actions">
         <button class="btn btn-primary" type="button" data-nav-target="results">View results</button>
-        <button class="btn btn-secondary" type="button" data-action="open-advanced">Open advanced tools</button>
+        <button class="btn btn-secondary" type="button" data-action="open-advanced">Switch to detailed planner</button>
       </div>
     </div>
   `;
@@ -7186,76 +7275,62 @@ function buildPlanInputsHtml(ctx) {
     provinces,
     selectField,
     numberField,
-    riskButton,
     tooltipButton,
     toPct,
   } = ctx;
-  const beginnerMode = state.uiState.experienceMode !== "advanced";
 
-  const essentials = `
+  const guided = state.uiState.guided || {};
+  const annualIncome = Number(state.profile.annualIncome || 0);
+  const basics = `
     <div class="form-grid compact-mobile-two">
-      <div class="form-span-full">
-        ${selectField("Province", "profile.province", Object.entries(provinces).map(([value, label]) => ({ value, label })), state.profile.province, "province")}
-      </div>
-      ${numberField("Age you want to retire", "profile.retirementAge", state.profile.retirementAge, { min: 50, max: 75, step: 1 }, "retirementAge", false, false, true)}
+      ${selectField("Province", "profile.province", Object.entries(provinces).map(([value, label]) => ({ value, label })), state.profile.province, "province")}
+      ${numberField("Annual income", "profile.annualIncome", annualIncome, { min: 0, max: 1000000, step: 1000 }, "annualIncome", false, false, true)}
+      ${numberField("Retirement age", "profile.retirementAge", state.profile.retirementAge, { min: 50, max: 75, step: 1 }, "retirementAge", false, false, true)}
       ${numberField("Plan until age", "profile.lifeExpectancy", state.profile.lifeExpectancy, { min: 75, max: 105, step: 1 }, "lifeExpectancy", false, false, true)}
-      ${numberField("After-tax spending target", "profile.desiredSpending", state.profile.desiredSpending, { min: 12000, max: 350000, step: 500 }, "desiredSpending", false, false, true)}
-      ${numberField("Current total savings", "savings.currentTotal", state.savings.currentTotal, { min: 0, max: 5000000, step: 1000 }, "currentSavings", false, false, true)}
+      ${numberField("Current savings", "savings.currentTotal", state.savings.currentTotal, { min: 0, max: 5000000, step: 1000 }, "currentSavings", false, false, true)}
       ${numberField("Annual savings", "savings.annualContribution", state.savings.annualContribution, { min: 0, max: 250000, step: 500 }, "annualContribution", false, false, true)}
     </div>
-    <p class="field-microcopy">Use today's dollars for spending. The planner will layer inflation on top.</p>
+  `;
+
+  const lifestyle = `
+    <div class="form-grid compact-mobile-two">
+      ${numberField("Retirement income target", "profile.desiredSpending", state.profile.desiredSpending, { min: 12000, max: 350000, step: 500 }, "desiredSpending", false, false, true)}
+      ${numberField("Inflation", "assumptions.inflation", toPct(state.assumptions.inflation), { min: 0.5, max: 5, step: 0.1 }, "inflation", true, false, true)}
+    </div>
+    <p class="field-microcopy">Lifestyle preset: <strong>${guided.lifestylePreset || "comfortable"}</strong>. This target stays editable if you want to override the preset.</p>
   `;
 
   const income = `
     <div class="form-grid compact-mobile-two">
+      ${numberField("CPP amount at 65", "income.cpp.amountAt65", state.income.cpp.amountAt65, { min: 0, max: 35000, step: 100 }, "cppAmount65", false, false, true)}
+      ${numberField("CPP start age", "income.cpp.startAge", state.income.cpp.startAge, { min: 60, max: 70, step: 1 }, "cppStartAge", false, false, true)}
+      ${numberField("OAS amount at 65", "income.oas.amountAt65", state.income.oas.amountAt65, { min: 0, max: 12000, step: 100 }, "oasAmount65", false, false, true)}
+      ${numberField("OAS start age", "income.oas.startAge", state.income.oas.startAge, { min: 65, max: 70, step: 1 }, "oasStartAge", false, false, true)}
       <label class="inline-check form-span-full">
         <input type="checkbox" data-bind="income.pension.enabled" ${state.income.pension.enabled ? "checked" : ""} />
         Include a work pension
       </label>
       ${numberField("Work pension per year", "income.pension.amount", state.income.pension.amount, { min: 0, max: 200000, step: 500 }, "pensionAmount", false, !state.income.pension.enabled, true)}
       ${numberField("Pension start age", "income.pension.startAge", state.income.pension.startAge, { min: 50, max: 75, step: 1 }, "pensionStartAge", false, !state.income.pension.enabled, true)}
-      ${numberField("CPP amount at 65", "income.cpp.amountAt65", state.income.cpp.amountAt65, { min: 0, max: 35000, step: 100 }, "cppAmount65", false, false, true)}
-      ${numberField("CPP start age", "income.cpp.startAge", state.income.cpp.startAge, { min: 60, max: 70, step: 1 }, "cppStartAge", false, false, true)}
-      ${numberField("OAS amount at 65", "income.oas.amountAt65", state.income.oas.amountAt65, { min: 0, max: 12000, step: 100 }, "oasAmount65", false, false, true)}
-      ${numberField("OAS start age", "income.oas.startAge", state.income.oas.startAge, { min: 65, max: 70, step: 1 }, "oasStartAge", false, false, true)}
     </div>
-    <div class="context-note">
-      <strong>Why this matters</strong>
-      <p class="muted">Guaranteed income reduces the amount you need to withdraw from savings later.</p>
-    </div>
+    <p class="field-microcopy">CPP and OAS are included by default because most Canadian retirement plans depend on them.</p>
   `;
 
-  const savings = `
+  const assumptions = `
     <div class="form-grid compact-mobile-two">
-      ${numberField("Savings increase each year", "savings.contributionIncrease", toPct(state.savings.contributionIncrease), { min: 0, max: 15, step: 0.1 }, "contributionIncrease", true, false, true)}
-      ${numberField("Inflation", "assumptions.inflation", toPct(state.assumptions.inflation), { min: 0.5, max: 5, step: 0.1 }, "inflation", true, false, true)}
-      <div class="form-span-full">
-        <div class="label-row">Investment style ${tooltipButton("riskProfile")}</div>
-        <div class="inline-radio-row">
-          ${riskButton("conservative")}
-          ${riskButton("balanced")}
-          ${riskButton("aggressive")}
-        </div>
-      </div>
+      ${numberField("Balanced return", "assumptions.returns.balanced", toPct(state.assumptions.returns.balanced), { min: 1, max: 12, step: 0.1 }, "riskProfile", true)}
+      ${numberField("RRSP share", "uiState.guided.rrspShare", Math.round((guided.rrspShare || 0.6) * 100), { min: 0, max: 100, step: 5 }, "rrsp", true, false, true)}
     </div>
+    <p class="field-microcopy">What is a safe withdrawal rate? ${tooltipButton("riskProfile")} This planner uses a year-by-year projection rather than a single withdrawal rule.</p>
   `;
-
-  if (beginnerMode) {
-    return `
-      <p class="what-affects"><strong>Beginner mode:</strong> focus on the few inputs that most affect whether your plan works.</p>
-      ${inputCard("About you and your target", "Retirement age, lifestyle goal, and core savings base.", essentials, true)}
-      ${inputCard("Income sources", "Pension, CPP, and OAS first. More detail stays in Tools.", income, true)}
-      ${inputCard("Savings assumptions", "Inflation and investment style can be refined here without opening advanced controls.", savings)}
-      ${advancedHint()}
-    `;
-  }
 
   return `
-    <p class="what-affects"><strong>Advanced mode:</strong> the same simple structure, but with deeper editing available in Tools.</p>
-    ${inputCard("About you and your target", "Core plan timing and spending assumptions.", essentials, true)}
-    ${inputCard("Income sources", "Guaranteed income timing and amounts.", income, true)}
-    ${inputCard("Savings assumptions", "Investment style, inflation, and contribution growth.", savings, true)}
-    ${advancedHint()}
+    <p class="what-affects"><strong>Simple-first editing:</strong> make one or two changes, then go back to Results to see the story update.</p>
+    ${plannerCard("Your basics", "Age, timing, income, and savings for a fast first answer.", basics, true)}
+    ${plannerCard("Lifestyle target", "Retirement income target in today's dollars, plus inflation.", lifestyle, true)}
+    ${plannerCard("Canadian income sources", "CPP, OAS, and optional workplace pension.", income)}
+    ${plannerCard("Advanced assumptions", "Only the highest-impact assumptions stay here in simple mode.", assumptions)}
+    ${detailPlannerHint()}
   `;
 }
 
@@ -7594,20 +7669,25 @@ function renderDashboardView(ctx) {
     const report = getReportMetrics(state, row);
     const balanceAtRetirement = Math.max(0, Number(row.balanceStart || row.balance || 0));
     const moneyLasts = model.kpis.depletionAge ? `Age ${model.kpis.depletionAge}` : `Beyond ${state.profile.lifeExpectancy}`;
-    const risk = getOasRiskLevel(row.oasClawback || 0);
+    const currentAge = app.currentYear - Number(state.profile.birthYear || app.currentYear);
+    const yearsToRetirement = Math.max(0, state.profile.retirementAge - currentAge);
+    const statusCard = report.netGap > 0
+      ? { label: "Shortfall or surplus", value: `-${formatCurrency(report.netGap)}`, sub: "First retirement year after tax" }
+      : { label: "Shortfall or surplus", value: `+${formatCurrency(report.surplus)}`, sub: "Covered before extra withdrawals" };
     const cards = [
-      { label: "Target retirement age", value: `Age ${state.profile.retirementAge}`, sub: dashboardScenario === "base" ? "Current plan" : `Scenario: ${dashboardScenario.replace("-", " ")}` },
-      { label: "Projected retirement income", value: formatCurrency(report.totalSpendable), sub: report.estimateTaxes ? "Net spendable income" : "Before tax estimate" },
-      { label: "Savings at retirement", value: formatCurrency(balanceAtRetirement), sub: "Projected portfolio" },
-      { label: "How long money lasts", value: moneyLasts, sub: model.kpis.depletionAge ? "Depletion estimate" : "Planning horizon covered" },
-      { label: "OAS clawback risk", value: risk.label, sub: report.clawback > 0 ? formatCurrency(report.clawback) : "No current clawback", badgeClass: risk.className },
+      { label: "Retirement readiness", value: planStatus.status, sub: dashboardScenario === "base" ? "Base plan" : `Scenario: ${dashboardScenario.replace("-", " ")}` },
+      { label: "Monthly retirement income", value: formatCurrency(report.totalSpendable / 12), sub: report.estimateTaxes ? "Estimated spendable income" : "Before tax estimate" },
+      statusCard,
+      { label: "Years until retirement", value: String(Math.max(0, yearsToRetirement)), sub: `Target age ${state.profile.retirementAge}` },
+      { label: "Projected portfolio value", value: formatCurrency(balanceAtRetirement), sub: "At retirement" },
+      { label: "Money lasts", value: moneyLasts, sub: model.kpis.depletionAge ? "Projection under current assumptions" : "No depletion in plan horizon" },
     ];
     el.readinessSummaryModule.innerHTML = `
       <section class="subsection readiness-summary">
         <div class="section-head-tight">
           <div>
-            <h3>Retirement Readiness</h3>
-            <p class="muted">Your plan in one view, using the currently selected scenario.</p>
+            <h3>Top numbers</h3>
+            <p class="muted">The simplest read of your current retirement plan.</p>
           </div>
         </div>
         <div class="readiness-grid">
@@ -7710,21 +7790,21 @@ function renderDashboardView(ctx) {
     }
     const report = getReportMetrics(state, row);
     const guaranteedPct = Math.round((report.coverageRatio || 0) * 100);
-    const topMessage = model.kpis.depletionAge
-      ? `Your current plan covers retirement spending for now, but savings are projected to run out around age ${model.kpis.depletionAge}.`
-      : `Your current plan appears to cover retirement spending through age ${state.profile.lifeExpectancy} under the base assumptions.`;
+    const topMessage = report.netGap > 0
+      ? `Your first retirement-year gap is about ${formatCurrency(report.netGap)} after tax.`
+      : `Your first retirement year appears funded under the current assumptions.`;
     const pressurePoint = report.dragAmount > Math.max(5000, report.grossWithdrawal * 0.18)
-      ? `Taxes and possible clawback reduce spendable income by about ${formatCurrency(report.dragAmount)} in the first retirement year.`
-      : report.netGap > 0
-        ? `You still need about ${formatCurrency(report.netGap)} after tax from savings in the first retirement year.`
-        : `Guaranteed income and withdrawals currently support the early-retirement spending target.`;
+      ? `Taxes and clawback reduce spendable income by about ${formatCurrency(report.dragAmount)} in that first retirement year.`
+      : model.kpis.depletionAge
+        ? `The main pressure point is longevity: savings are projected to run out around age ${model.kpis.depletionAge}.`
+        : `Guaranteed income covers about ${guaranteedPct}% of your retirement target before extra savings withdrawals.`;
     const nextMove = planStatus.nextBestAction?.detail || "Compare one simple scenario before editing advanced settings.";
     el.resultsNarrativeModule.innerHTML = `
       <section class="subsection results-narrative-hero">
         <div class="section-head-tight">
           <div>
-            <h3>What you should know first</h3>
-            <p class="muted">A simpler reading of the plan before you get into charts and controls.</p>
+            <h3>What is driving this result</h3>
+            <p class="muted">The plain-language version before you get into charts and deeper tools.</p>
           </div>
           <span class="coverage-badge ${report.netGap <= 0 && !model.kpis.depletionAge ? "coverage-good" : ""}">${planStatus.status}</span>
         </div>
@@ -7738,7 +7818,7 @@ function renderDashboardView(ctx) {
             <p>${escapeHtml(pressurePoint)}</p>
           </article>
           <article class="comparison-card">
-            <strong>Best next move</strong>
+            <strong>What would improve it</strong>
             <p>${escapeHtml(nextMove)}</p>
           </article>
         </div>
@@ -7835,7 +7915,8 @@ function renderDashboardView(ctx) {
       });
     }
 
-    const savingYears = Math.max(0, state.profile.retirementAge - state.profile.age);
+    const currentAgeForSavings = app.currentYear - Number(state.profile.birthYear || app.currentYear);
+    const savingYears = Math.max(0, state.profile.retirementAge - currentAgeForSavings);
     if (savingYears >= 3 && (depletionAge || report.netGap > 0)) {
       const currentRetirementRow = findRowByAge(model.base.rows, state.profile.retirementAge) || retirementRow;
       const previewRetirementRow = findRowByAge(saveMorePreview.model.base.rows, saveMorePreview.plan.profile.retirementAge) || currentRetirementRow;
@@ -7933,14 +8014,14 @@ function renderDashboardView(ctx) {
       <section class="subsection advisor-section">
         <div class="section-head-tight">
           <div>
-            <h3>How to improve your plan</h3>
-            <p class="muted">Use these planning experiments to improve the current result before opening advanced settings.</p>
+            <h3>What should I do next?</h3>
+            <p class="muted">These are the clearest ways to improve this result before opening the full detailed planner.</p>
           </div>
           <a class="small-copy muted advisor-support-note" href="${escapeHtml(supportUrl || "https://buymeacoffee.com/ashleysnl")}" target="_blank" rel="noopener noreferrer">☕ This free tool is community-supported.</a>
         </div>
         <div class="comparison-card-grid advisor-summary-grid">
           <article class="comparison-card advisor-summary-card">
-            <strong>Biggest risk</strong>
+            <strong>What is holding this back</strong>
             <p>${escapeHtml(planStatus.biggestRisk?.title || "No immediate critical issue stands out in the current base view.")}</p>
             <p class="small-copy muted">${escapeHtml(planStatus.biggestRisk?.detail || "Keep validating the plan under alternate scenarios.")}</p>
           </article>
@@ -8070,32 +8151,41 @@ function renderDashboardView(ctx) {
     }
     const report = getReportMetrics(state, row);
     const depletionAge = model.kpis.depletionAge;
+    const earlierAge = state.profile.retirementAge > 52 ? state.profile.retirementAge - 1 : state.profile.retirementAge;
+    const earlierRow = findRowByAge(model.base.rows, earlierAge) || row;
     let verdictClass = "verdict-moderate";
-    let verdict = planStatus.status;
+    let bigAnswer = "You are close, but this plan needs a review.";
     let explainer = planStatus.summary;
-    if (planStatus.status === "On Track" || planStatus.status === "Strong but Tax-Inefficient" || planStatus.status === "Sustainable but Clawback Exposure") {
+    if (report.netGap <= 0 && !depletionAge) {
       verdictClass = "verdict-strong";
-    } else if (planStatus.status === "Shortfall Likely") {
+      bigAnswer = "You are on track.";
+    } else if (report.netGap > 0) {
       verdictClass = "verdict-attention";
+      bigAnswer = `You may be short by ${formatCurrency(report.netGap)} per year.`;
+    } else if (depletionAge) {
+      verdictClass = "verdict-attention";
+      bigAnswer = `Your plan may run short around age ${depletionAge}.`;
     }
-    const warning = depletionAge ? `<span class="insight-warning">Savings run out around age ${depletionAge}</span>` : "";
+    const earlierPossible = !depletionAge && earlierAge < state.profile.retirementAge && Number(earlierRow.netGap || 0) <= 0;
+    const warning = depletionAge ? `<span class="insight-warning">Current projection runs out around age ${depletionAge}</span>` : "";
     el.canIRetireModule.innerHTML = `
       <section class="subsection verdict-hero ${verdictClass}">
         <div class="verdict-hero-main">
           <div>
-            <p class="eyebrow muted">Plan status</p>
-            <h3>${verdict}</h3>
+            <p class="eyebrow muted">Big answer</p>
+            <h3>${bigAnswer}</h3>
             <p class="verdict-copy">${explainer}</p>
-            <p class="small-copy muted">Based on retirement age ${state.profile.retirementAge} and your current assumptions. ${warning}</p>
+            <p class="small-copy muted">Based on retirement age ${state.profile.retirementAge}, your current savings, and your current lifestyle target. ${warning}</p>
+            ${earlierPossible ? `<p class="small-copy muted">Good news: this projection also suggests you may be able to retire earlier at age ${earlierAge}.</p>` : ""}
             <details>
-              <summary>Why this status?</summary>
+              <summary>What is driving this result?</summary>
               <ul class="plain-list small-copy muted">
                 ${planStatus.keyDrivers.map((driver) => `<li>${escapeHtml(driver)}</li>`).join("")}
               </ul>
             </details>
           </div>
           <div class="verdict-badge-block">
-            <span class="verdict-score">${planScore.total}/100</span>
+            <span class="verdict-score">${formatCurrency(report.totalSpendable / 12)}</span>
             <span class="coverage-badge ${report.netGap <= 0 && !depletionAge ? "coverage-good" : ""}">${planStatus.status}</span>
           </div>
         </div>
@@ -8819,6 +8909,7 @@ globalThis.__RETIREMENT_APP_SCRIPT_EXECUTED = true;
 globalThis.__RETIREMENT_APP_STAGE = "script-start";
 
 const el = {
+  heroHeader: document.getElementById("heroHeader"),
   landingPanel: document.getElementById("landingPanel"),
   appPanel: document.getElementById("appPanel"),
   startSimpleBtn: document.getElementById("startSimpleBtn"),
@@ -8908,6 +8999,7 @@ const el = {
   nextActions: document.getElementById("nextActions"),
   basicsSummary: document.getElementById("basicsSummary"),
   dashboardStatus: document.getElementById("dashboardStatus"),
+  resultLiveSummary: document.getElementById("resultLiveSummary"),
   retirementScoreCard: document.getElementById("retirementScoreCard"),
   copyShareLinkBtn: document.getElementById("copyShareLinkBtn"),
   copyMinimalLinkBtn: document.getElementById("copyMinimalLinkBtn"),
@@ -9013,8 +9105,16 @@ let ui = {
   pendingStrategyKey: "",
   supportShownThisSession: sessionSupportShown,
   incomeMapHitZones: [],
+  pendingPlanStartScroll: false,
 };
 globalThis.__RETIREMENT_APP_STAGE = "ui-created";
+
+const WIZARD_STEP_COUNT = 5;
+const LIFESTYLE_PRESETS = {
+  basic: 0.55,
+  comfortable: 0.7,
+  higher: 0.85,
+};
 
 const { tooltipButton, numberField, learnNumberField, selectField } = createUiFieldHelpers({
   tooltips: TOOLTIPS,
@@ -9073,11 +9173,17 @@ function bindEvents() {
   ui.eventsBound = true;
 
   el.startSimpleBtn?.addEventListener("click", () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
     state.uiState.firstRun = false;
     state.uiState.hasStarted = true;
     state.uiState.activeNav = "plan";
     state.uiState.wizardStep = 1;
+    state.uiState.experienceMode = "beginner";
+    state.uiState.showAdvancedControls = false;
     ui.activeNav = "plan";
+    ui.pendingPlanStartScroll = true;
     savePlan();
     renderAll();
   });
@@ -9141,20 +9247,20 @@ function bindEvents() {
   });
 
   el.wizardNextBtn?.addEventListener("click", () => {
-    if (state.uiState.wizardStep >= 7) {
-      state.uiState.wizardStep = 7;
+    if (state.uiState.wizardStep >= WIZARD_STEP_COUNT) {
+      state.uiState.wizardStep = WIZARD_STEP_COUNT;
       state.uiState.unlocked.advanced = true;
       state.uiState.justCompletedWizard = true;
       state.uiState.activeNav = "results";
       ui.activeNav = "results";
       savePlan();
       renderAll();
-      toast("Advanced features unlocked.");
+      toast("Your first retirement result is ready.");
       return;
     }
 
-    state.uiState.wizardStep = Math.min(7, state.uiState.wizardStep + 1);
-    if (state.uiState.wizardStep >= 7) state.uiState.unlocked.advanced = true;
+    state.uiState.wizardStep = Math.min(WIZARD_STEP_COUNT, state.uiState.wizardStep + 1);
+    if (state.uiState.wizardStep >= WIZARD_STEP_COUNT) state.uiState.unlocked.advanced = true;
     savePlan();
     renderAll();
   });
@@ -9299,6 +9405,85 @@ function updateResponsiveLayout() {
   document.body.classList.toggle("mobile-layout", mobile);
 }
 
+function applyLifestylePreset(preset) {
+  const nextPreset = Object.prototype.hasOwnProperty.call(LIFESTYLE_PRESETS, preset) ? preset : "comfortable";
+  if (!state.uiState.guided) state.uiState.guided = {};
+  state.uiState.guided.lifestylePreset = nextPreset;
+  state.uiState.guided.retirementIncomePercent = LIFESTYLE_PRESETS[nextPreset];
+  if (state.uiState.guided.retirementIncomeMode !== "dollar") {
+    syncDesiredSpendingFromGuided();
+  }
+}
+
+function syncDesiredSpendingFromGuided() {
+  const percent = clamp(normalizePct(state.uiState.guided?.retirementIncomePercent ?? 0.7), 0.3, 1.2);
+  state.uiState.guided.retirementIncomePercent = percent;
+  state.profile.desiredSpending = Math.max(12000, Math.round(Number(state.profile.annualIncome || 0) * percent / 500) * 500);
+}
+
+function syncAnnualContributionFromPercent(percentInput) {
+  const income = Math.max(0, Number(state.profile.annualIncome || 0));
+  const rawPercent = normalizePct(percentInput);
+  state.savings.annualContribution = Math.max(0, Math.round((income * rawPercent) / 500) * 500);
+}
+
+function syncAccountsFromGuidedSplit() {
+  const total = Math.max(0, Number(state.savings.currentTotal || 0));
+  const rrspShare = clamp(normalizePct(state.uiState.guided?.rrspShare ?? 0.6), 0, 1);
+  const rrsp = Math.round(total * rrspShare);
+  const tfsa = Math.round(total - rrsp);
+  state.uiState.guided.rrspShare = rrspShare;
+  state.accounts.rrsp = rrsp;
+  state.accounts.tfsa = tfsa;
+  state.accounts.nonRegistered = 0;
+  state.accounts.cash = 0;
+}
+
+function applyGuidedDefaults() {
+  if (state.uiState.guided?.useCanadianDefaults) {
+    state.assumptions.inflation = 0.02;
+    state.assumptions.riskProfile = "balanced";
+    state.assumptions.returns.balanced = 0.05;
+    state.strategy.estimateTaxes = true;
+    state.strategy.oasClawbackModeling = true;
+    state.income.cpp.amountAt65 = Math.max(12000, Number(state.income.cpp.amountAt65 || 0));
+    state.income.oas.amountAt65 = Math.max(9000, Number(state.income.oas.amountAt65 || 0));
+  }
+}
+
+function applyGuidedEstimateRetirementAge() {
+  if (!state.uiState.guided?.estimateRetirementAge) return;
+  const currentAge = ageNow();
+  const estimatedAge = currentAge < 35 ? 67 : currentAge < 50 ? 65 : 63;
+  state.profile.retirementAge = clamp(estimatedAge, 50, 75);
+}
+
+function finalizeGuidedPlan() {
+  if (!state.uiState.guided) return;
+  applyGuidedEstimateRetirementAge();
+  if (state.uiState.guided.retirementIncomeMode !== "dollar") syncDesiredSpendingFromGuided();
+  if (state.uiState.experienceMode !== "advanced") {
+    syncAccountsFromGuidedSplit();
+    applyGuidedDefaults();
+  }
+}
+
+function wizardStepForPath(path) {
+  if (path.startsWith("profile.birthYear") || path.startsWith("profile.annualIncome") || path.startsWith("profile.retirementAge") || path.startsWith("savings.currentTotal") || path.startsWith("uiState.guided.estimateRetirementAge")) return 1;
+  if (path.startsWith("profile.desiredSpending") || path.startsWith("uiState.guided.retirementIncome") || path.startsWith("uiState.guided.lifestylePreset")) return 2;
+  if (path.startsWith("savings.annualContribution") || path.startsWith("uiState.guided.rrspShare") || path.startsWith("uiState.guided.savingsContributionMode") || path.startsWith("uiState.guided.useCanadianDefaults")) return 3;
+  if (path.startsWith("assumptions.") || path.startsWith("income.cpp.") || path.startsWith("income.oas.") || path.startsWith("profile.province") || path.startsWith("uiState.showAdvancedControls")) return 4;
+  return 0;
+}
+
+function maybeAdvanceWizard(step) {
+  if (ui.activeNav !== "plan") return false;
+  if (state.uiState.wizardStep !== step) return false;
+  if (step >= WIZARD_STEP_COUNT) return false;
+  state.uiState.wizardStep = step + 1;
+  return true;
+}
+
 function handleDocumentClick(event) {
   const rawTarget = event.target;
   const target = rawTarget instanceof Element ? rawTarget : rawTarget?.parentElement;
@@ -9378,6 +9563,34 @@ function handleDocumentClick(event) {
     }
     if (action === "open-learn") {
       setActiveNav("learn");
+      return;
+    }
+    if (action === "see-how-it-works") {
+      setActiveNav("plan");
+      requestAnimationFrame(() => {
+        document.querySelector(".guided-stepper-shell")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      return;
+    }
+    if (action === "set-lifestyle-preset") {
+      applyLifestylePreset(actionBtn.getAttribute("data-value") || "comfortable");
+      savePlan();
+      renderAll();
+      return;
+    }
+    if (action === "set-retirement-income-mode") {
+      if (!state.uiState.guided) state.uiState.guided = {};
+      state.uiState.guided.retirementIncomeMode = actionBtn.getAttribute("data-value") === "dollar" ? "dollar" : "percent";
+      if (state.uiState.guided.retirementIncomeMode !== "dollar") syncDesiredSpendingFromGuided();
+      savePlan();
+      renderAll();
+      return;
+    }
+    if (action === "set-contribution-mode") {
+      if (!state.uiState.guided) state.uiState.guided = {};
+      state.uiState.guided.savingsContributionMode = actionBtn.getAttribute("data-value") === "percent" ? "percent" : "annual";
+      savePlan();
+      renderAll();
       return;
     }
     if (action === "tools-save-plan") {
@@ -9467,6 +9680,7 @@ function handleDocumentClick(event) {
     }
     if (action === "open-advanced") {
       state.uiState.unlocked.advanced = true;
+      state.uiState.experienceMode = "advanced";
       state.uiState.showAdvancedControls = true;
       setActiveNav("tools");
       savePlan();
@@ -9807,12 +10021,35 @@ function handleBoundInput(event) {
   if (target.getAttribute("data-percent-input") === "1" && typeof value === "number") {
     value /= 100;
   }
+  const displayAs = target.getAttribute("data-display-as") || "";
+  if (displayAs === "age" && typeof value === "number") {
+    value = APP.currentYear - value;
+  }
+  if (displayAs === "income-percent" && typeof value === "number") {
+    syncAnnualContributionFromPercent(value);
+    value = state.savings.annualContribution;
+  }
 
   setByPath(state, path, value);
 
   if (path === "income.pension.enabled" && !value) state.income.pension.amount = 0;
   if (path === "profile.retirementAge") {
     state.income.pension.startAge = Math.max(state.income.pension.startAge, 40);
+  }
+  if (path === "profile.annualIncome" && state.uiState.guided?.retirementIncomeMode !== "dollar") {
+    syncDesiredSpendingFromGuided();
+  }
+  if (path === "uiState.guided.retirementIncomePercent" && state.uiState.guided?.retirementIncomeMode !== "dollar") {
+    syncDesiredSpendingFromGuided();
+  }
+  if ((path === "uiState.guided.rrspShare" || path === "savings.currentTotal") && state.uiState.experienceMode !== "advanced") {
+    syncAccountsFromGuidedSplit();
+  }
+  if (path === "uiState.guided.useCanadianDefaults" && value && state.uiState.experienceMode !== "advanced") {
+    applyGuidedDefaults();
+  }
+  if (path === "uiState.guided.estimateRetirementAge") {
+    applyGuidedEstimateRetirementAge();
   }
   if (path === "uiState.showGrossWithdrawals") {
     ui.showGrossWithdrawals = Boolean(value);
@@ -9839,6 +10076,9 @@ function handleBoundInput(event) {
     return;
   }
 
+  const stepForPath = wizardStepForPath(path);
+  const advanced = stepForPath === 4 && state.uiState.showAdvancedControls;
+  const autoAdvanced = stepForPath > 0 && event.type === "change" && maybeAdvanceWizard(stepForPath) && !advanced;
   renderAll();
   if (trackChange && beforeModel) {
     const summary = buildChangeSummary(beforeModel, ui.lastModel, state);
@@ -9849,6 +10089,9 @@ function handleBoundInput(event) {
     }
   }
   savePlan();
+  if (autoAdvanced) {
+    toast(`Step ${Math.max(1, state.uiState.wizardStep - 1)} saved. Moving to the next step.`);
+  }
 }
 
 function handleLearnBoundInput(event) {
@@ -9897,10 +10140,14 @@ function handleDashboardInput(event) {
 
 function renderAll() {
   ensureValidStateLocal();
+  finalizeGuidedPlan();
+  ensureValidStateLocal();
   ui.showGrossWithdrawals = Boolean(state.uiState.showGrossWithdrawals ?? true);
   ui.activeNav = normalizeNavTargetUi(ui.activeNav || state.uiState.activeNav || "results");
   state.uiState.activeNav = ui.activeNav;
   ui.lastModel = buildPlanModel(state);
+  document.body.classList.remove("mobile-plan-focus");
+  if (el.heroHeader) el.heroHeader.hidden = false;
 
   const showLanding = state.uiState.firstRun;
   if (el.landingPanel) el.landingPanel.hidden = !showLanding;
@@ -9918,6 +10165,14 @@ function renderAll() {
   renderMethodology();
   renderNotes();
   bindInlineTooltipTriggers(document.body);
+  if (ui.pendingPlanStartScroll && ui.activeNav === "plan") {
+    ui.pendingPlanStartScroll = false;
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    window.scrollTo(0, 0);
+    queueGuidedSetupScroll();
+  }
 }
 
 function syncExperienceModeUi() {
@@ -9962,6 +10217,30 @@ function scrollDashboardToTop() {
   } else {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+}
+
+function scrollPlanToGuidedSetup() {
+  const guidedSetup = document.getElementById("guidedSetupSection") || document.querySelector(".guided-stepper-shell");
+  if (guidedSetup instanceof HTMLElement) {
+    guidedSetup.scrollIntoView({ behavior: "smooth", block: "start" });
+    try {
+      guidedSetup.focus({ preventScroll: true });
+    } catch {}
+    return;
+  }
+  const planPanel = document.querySelector('[data-nav-panel="plan"]');
+  if (planPanel instanceof HTMLElement) {
+    planPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function queueGuidedSetupScroll() {
+  const delays = [0, 120, 260, 520];
+  delays.forEach((delay) => {
+    setTimeout(() => {
+      scrollPlanToGuidedSetup();
+    }, delay);
+  });
 }
 
 function getDashboardScenario() {
@@ -10041,6 +10320,16 @@ function renderDashboard() {
   renderDashboardPresetBanner();
   renderDashboardSharedScenarioBanner();
   renderClientSummaryModeModule();
+  syncDashboardLiveSummary();
+}
+
+function syncDashboardLiveSummary() {
+  if (!el.resultLiveSummary) return;
+  const status = (el.dashboardStatus?.textContent || "").trim();
+  const verdict = (document.querySelector("#canIRetireModule h3")?.textContent || "").trim();
+  const summary = [status, verdict].filter(Boolean).join(". ");
+  if (!summary || el.resultLiveSummary.textContent === summary) return;
+  el.resultLiveSummary.textContent = summary;
 }
 
 function syncClientSummaryModeUi() {
@@ -10609,13 +10898,13 @@ function updateLearnOutputs() {
 
 
 function renderWizard() {
-  const step = clamp(state.uiState.wizardStep || 1, 1, 7);
+  const step = clamp(state.uiState.wizardStep || 1, 1, WIZARD_STEP_COUNT);
   state.uiState.wizardStep = step;
-  const progress = (step / 7) * 100;
+  const progress = (step / WIZARD_STEP_COUNT) * 100;
   el.wizardProgressBar.style.width = `${progress}%`;
-  el.wizardStepLabel.textContent = `Step ${step} of 7`;
+  el.wizardStepLabel.textContent = `Step ${step} of ${WIZARD_STEP_COUNT}`;
   el.wizardBackBtn.disabled = step === 1;
-  el.wizardNextBtn.textContent = step === 7 ? "Finish" : "Next";
+  el.wizardNextBtn.textContent = step === WIZARD_STEP_COUNT ? "See my result" : "Next";
 
   el.wizardBody.innerHTML = buildWizardStepHtml(step, {
     state,
@@ -11130,6 +11419,7 @@ function isMaterialChangePath(path) {
     path.startsWith("income.cpp.") ||
     path.startsWith("income.oas.") ||
     path.startsWith("income.pension.") ||
+    path.startsWith("profile.annualIncome") ||
     path.startsWith("profile.retirementAge") ||
     path.startsWith("profile.desiredSpending") ||
     path.startsWith("assumptions.")

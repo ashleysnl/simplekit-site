@@ -58,6 +58,10 @@ summary:focus-visible,
   margin: 24px auto 40px;
 }
 
+.shell-header-wrap {
+  margin-bottom: 14px;
+}
+
 .hero {
   display: block;
   background: linear-gradient(135deg, #0a3565, var(--brand) 55%, var(--brand-2));
@@ -69,6 +73,38 @@ summary:focus-visible,
 
 .hero-content {
   min-width: 0;
+}
+
+.hero-platform-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hero-platform-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-platform-separator {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.hero-home-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-home-link:hover {
+  text-decoration: underline;
 }
 
 .eyebrow {
@@ -326,6 +362,16 @@ summary:focus-visible,
   color: rgba(255, 255, 255, 0.92);
 }
 
+.shell-bridge-stack {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.planner-reference-panel {
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
 .section-head,
 .section-head-tight {
   display: flex;
@@ -388,6 +434,10 @@ summary:focus-visible,
 .contextual-results-links,
 .plan-path-summary {
   background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+#guidedSetupSection {
+  scroll-margin-top: 12px;
 }
 
 .wizard-step-head h3,
@@ -512,6 +562,212 @@ summary:focus-visible,
   box-shadow: 0 16px 34px rgba(17, 35, 59, 0.05);
 }
 
+.seo-panel {
+  margin-top: 14px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.guided-step-layout,
+.guided-result-preview,
+.guided-grid,
+.choice-card-grid,
+.guided-learn-stack,
+.mini-stat-list {
+  display: grid;
+  gap: 12px;
+}
+
+.guided-step-layout {
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+  align-items: start;
+}
+
+.guided-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.guided-grid-basics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.guided-card,
+.guided-summary-card,
+.guided-placeholder-card,
+.guided-result-card,
+.guided-explainer,
+.inline-learn,
+.choice-card {
+  border: 1px solid #dbe7f4;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff, #f6fbff);
+}
+
+.guided-card,
+.guided-summary-card,
+.guided-placeholder-card,
+.guided-result-card,
+.guided-explainer {
+  padding: 16px;
+}
+
+.guided-summary-card,
+.guided-step-side {
+  position: sticky;
+  top: 16px;
+}
+
+.guided-summary-card strong,
+.guided-result-card strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.guided-result-preview {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 14px;
+}
+
+.guided-result-card .result-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.guided-field {
+  display: grid;
+  gap: 6px;
+}
+
+.guided-field.is-disabled {
+  opacity: 0.65;
+}
+
+.guided-input-wrap {
+  position: relative;
+}
+
+.guided-input-wrap input {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 14px;
+  border: 1px solid #d6e4f2;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.guided-input-suffix {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 0.84rem;
+  pointer-events: none;
+}
+
+.guided-field small {
+  color: var(--muted);
+}
+
+.choice-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 14px;
+}
+
+.choice-card {
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  gap: 6px;
+}
+
+.choice-card strong {
+  font-size: 1rem;
+}
+
+.choice-card span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.choice-card.active,
+.segmented-btn.active {
+  border-color: rgba(15, 106, 191, 0.45);
+  box-shadow: 0 12px 24px rgba(15, 106, 191, 0.08);
+  background: linear-gradient(180deg, #ffffff, #eef7ff);
+}
+
+.segmented-control {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #edf5fc;
+  border: 1px solid #dbe7f4;
+  margin-bottom: 14px;
+}
+
+.segmented-btn {
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: #234f78;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.guided-inline-row {
+  margin-top: 12px;
+}
+
+.guided-explainer strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.inline-learn {
+  padding: 0;
+  overflow: hidden;
+}
+
+.inline-learn summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.inline-learn summary::-webkit-details-marker {
+  display: none;
+}
+
+.inline-learn p {
+  margin: 0;
+  padding: 0 16px 14px;
+}
+
+.advanced-inline-callout-soft {
+  background: linear-gradient(180deg, #fcfeff, #f4f9ff);
+}
+
+.planner-card-guided {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+}
+
+.planner-card-guided summary {
+  font-weight: 700;
+}
+
+.mini-stat-list span {
+  display: block;
+  color: var(--muted);
+}
+
 .dashboard-quick-controls summary {
   cursor: pointer;
   font-weight: 700;
@@ -532,16 +788,27 @@ summary:focus-visible,
   .landing-grid,
   .landing-secondary-grid,
   .support-grid,
-  .source-toggle-grid {
+  .source-toggle-grid,
+  .guided-step-layout,
+  .guided-result-preview,
+  .choice-card-grid,
+  .guided-grid,
+  .guided-grid-basics {
     grid-template-columns: 1fr;
   }
 
   .section-head,
   .section-head-tight,
   .plan-top-actions,
-  .planner-onboarding {
+  .planner-onboarding,
+  .hero-platform-row {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .guided-summary-card,
+  .guided-step-side {
+    position: static;
   }
 }
 
@@ -569,6 +836,16 @@ summary:focus-visible,
   .panel-header p,
   .small-copy {
     line-height: 1.45;
+  }
+
+  .hero-platform-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero-platform-separator {
+    display: none;
   }
 
   .table-scroll {
@@ -667,6 +944,10 @@ body.mobile-layout .bottom-tabs {
 
 #appPanel .nav-panel {
   margin-top: 14px;
+}
+
+#appPanel > .seo-panel {
+  grid-column: 2;
 }
 
 .metric-grid {
@@ -2776,11 +3057,13 @@ textarea {
 
   .support-fab {
     right: 12px;
-    left: 12px;
+    left: auto;
     bottom: calc(82px + env(safe-area-inset-bottom, 0px));
     font-size: 0.84rem;
-    padding: 11px 14px;
-    max-width: none;
+    padding: 10px 14px;
+    width: auto;
+    max-width: min(calc(100vw - 24px), 240px);
+    white-space: nowrap;
   }
 
   .hero {

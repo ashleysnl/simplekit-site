@@ -1,10 +1,10 @@
 const TEMPLATE = {
   storageKey: "simplekit.rrspTfsaOptimizer.v1",
-  appName: "RRSP vs TFSA Optimizer Canada | SimpleKit",
+  appName: "RRSP vs TFSA Calculator Canada | SimpleKit",
   seoDescription:
-    "Compare RRSP and TFSA outcomes in Canada, estimate your RRSP tax refund, and see how refund reinvestment can change your retirement result.",
+    "Compare RRSP and TFSA outcomes in Canada, estimate your RRSP tax refund, and see how reinvesting the refund can change long-term retirement results.",
   siteUrl: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
-  socialImageUrl: "https://simplekit.app/retirement-planner/social-preview.png",
+  socialImageUrl: "https://simplekit.app/og-image.png",
 };
 
 const FEDERAL_TAX_TABLE = [

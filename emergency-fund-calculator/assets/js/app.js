@@ -345,18 +345,18 @@
 
   function buildRelatedToolOrder(result) {
     if (!result.hasEssentials || result.monthlyContributionEquivalent <= 0) {
-      return ["monthlybudget.simplekit.app", "debt.simplekit.app", "networth.simplekit.app", "investment.simplekit.app", "retirement.simplekit.app"];
+      return ["budget-planner", "debt-payoff-calculator", "net-worth-calculator", "compound-interest-calculator", "retirement-planner"];
     }
 
     if (result.remainingGap <= 0) {
-      return ["networth.simplekit.app", "retirement.simplekit.app", "investment.simplekit.app", "monthlybudget.simplekit.app", "debt.simplekit.app"];
+      return ["net-worth-calculator", "retirement-planner", "compound-interest-calculator", "budget-planner", "debt-payoff-calculator"];
     }
 
     if (result.monthsToTarget > 24 || !Number.isFinite(result.monthsToTarget)) {
-      return ["monthlybudget.simplekit.app", "debt.simplekit.app", "networth.simplekit.app", "investment.simplekit.app", "retirement.simplekit.app"];
+      return ["budget-planner", "debt-payoff-calculator", "net-worth-calculator", "compound-interest-calculator", "retirement-planner"];
     }
 
-    return ["debt.simplekit.app", "investment.simplekit.app", "networth.simplekit.app", "monthlybudget.simplekit.app", "retirement.simplekit.app"];
+    return ["debt-payoff-calculator", "compound-interest-calculator", "net-worth-calculator", "budget-planner", "retirement-planner"];
   }
 
   function normalizeText(value) {

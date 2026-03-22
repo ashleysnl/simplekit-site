@@ -3,10 +3,10 @@ const APP = {
   maxProjectionYears: 60,
   supportUrl: "https://buymeacoffee.com/ashleysnl",
   relatedLinks: [
-    { key: "tfsa-rrsp", href: "../33_Simplekit RRSP TFSA Calculator/index.html" },
-    { key: "cpp", href: "../32_Simplekit CPP Calculator/index.html" },
-    { key: "retirement", href: "../33_Retirement Planner V3/index.html" },
-    { key: "net-worth", href: "../34_Net Worth/index.html" },
+    { key: "tfsa-rrsp", href: "https://simplekit.app/rrsp-vs-tfsa-calculator/" },
+    { key: "cpp", href: "https://simplekit.app/cpp-calculator/" },
+    { key: "retirement", href: "https://simplekit.app/retirement-planner/" },
+    { key: "net-worth", href: "https://simplekit.app/net-worth-calculator/" },
   ],
 };
 
@@ -786,9 +786,9 @@ function syncSupportLinks() {
 }
 
 function syncMeta() {
-  const title = "SimpleKit FIRE Calculator";
+  const title = "FIRE Calculator Canada | SimpleKit";
   const description =
-    "Estimate your path to financial independence with a free FIRE calculator for Canadians. Test savings, spending, withdrawal rate, and timeline assumptions in your browser.";
+    "Estimate your path to financial independence in Canada with a free FIRE calculator for Canadian planners. Test savings, spending, withdrawal rate, and timeline assumptions in your browser.";
   const hasHttpOrigin = /^https?:/i.test(window.location.protocol);
   const pageUrl = hasHttpOrigin ? window.location.href : "https://simplekit.app/fire-calculator/";
   const socialImage = hasHttpOrigin ? new URL("icons/icon.svg", window.location.href).href : "https://simplekit.app/social-preview.png";

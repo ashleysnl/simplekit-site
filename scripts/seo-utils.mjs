@@ -95,10 +95,6 @@ export function runSeoValidation(manifest, repoRoot, options = {}) {
     if (toolCanonicalUrlSet.has(pageUrl)) {
       issues.push(`Site page URL duplicates a canonical tool URL: ${pageUrl}`);
     }
-
-    if (pageUrl.startsWith(`${host}/tools/`)) {
-      issues.push(`Legacy /tools/ sitemap URL found in site pages: ${pageUrl}`);
-    }
   }
 
   if (scanRepo) {

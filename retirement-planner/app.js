@@ -116,6 +116,7 @@ globalThis.__RETIREMENT_APP_SCRIPT_EXECUTED = true;
 globalThis.__RETIREMENT_APP_STAGE = "script-start";
 
 const el = {
+  heroHeader: document.getElementById("heroHeader"),
   landingPanel: document.getElementById("landingPanel"),
   appPanel: document.getElementById("appPanel"),
   startSimpleBtn: document.getElementById("startSimpleBtn"),
@@ -205,6 +206,7 @@ const el = {
   nextActions: document.getElementById("nextActions"),
   basicsSummary: document.getElementById("basicsSummary"),
   dashboardStatus: document.getElementById("dashboardStatus"),
+  resultLiveSummary: document.getElementById("resultLiveSummary"),
   retirementScoreCard: document.getElementById("retirementScoreCard"),
   copyShareLinkBtn: document.getElementById("copyShareLinkBtn"),
   copyMinimalLinkBtn: document.getElementById("copyMinimalLinkBtn"),
@@ -310,8 +312,16 @@ let ui = {
   pendingStrategyKey: "",
   supportShownThisSession: sessionSupportShown,
   incomeMapHitZones: [],
+  pendingPlanStartScroll: false,
 };
 globalThis.__RETIREMENT_APP_STAGE = "ui-created";
+
+const WIZARD_STEP_COUNT = 5;
+const LIFESTYLE_PRESETS = {
+  basic: 0.55,
+  comfortable: 0.7,
+  higher: 0.85,
+};
 
 const { tooltipButton, numberField, learnNumberField, selectField } = createUiFieldHelpers({
   tooltips: TOOLTIPS,
@@ -370,11 +380,17 @@ function bindEvents() {
   ui.eventsBound = true;
 
   el.startSimpleBtn?.addEventListener("click", () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
     state.uiState.firstRun = false;
     state.uiState.hasStarted = true;
     state.uiState.activeNav = "plan";
     state.uiState.wizardStep = 1;
+    state.uiState.experienceMode = "beginner";
+    state.uiState.showAdvancedControls = false;
     ui.activeNav = "plan";
+    ui.pendingPlanStartScroll = true;
     savePlan();
     renderAll();
   });
@@ -438,20 +454,20 @@ function bindEvents() {
   });
 
   el.wizardNextBtn?.addEventListener("click", () => {
-    if (state.uiState.wizardStep >= 7) {
-      state.uiState.wizardStep = 7;
+    if (state.uiState.wizardStep >= WIZARD_STEP_COUNT) {
+      state.uiState.wizardStep = WIZARD_STEP_COUNT;
       state.uiState.unlocked.advanced = true;
       state.uiState.justCompletedWizard = true;
       state.uiState.activeNav = "results";
       ui.activeNav = "results";
       savePlan();
       renderAll();
-      toast("Advanced features unlocked.");
+      toast("Your first retirement result is ready.");
       return;
     }
 
-    state.uiState.wizardStep = Math.min(7, state.uiState.wizardStep + 1);
-    if (state.uiState.wizardStep >= 7) state.uiState.unlocked.advanced = true;
+    state.uiState.wizardStep = Math.min(WIZARD_STEP_COUNT, state.uiState.wizardStep + 1);
+    if (state.uiState.wizardStep >= WIZARD_STEP_COUNT) state.uiState.unlocked.advanced = true;
     savePlan();
     renderAll();
   });
@@ -596,6 +612,85 @@ function updateResponsiveLayout() {
   document.body.classList.toggle("mobile-layout", mobile);
 }
 
+function applyLifestylePreset(preset) {
+  const nextPreset = Object.prototype.hasOwnProperty.call(LIFESTYLE_PRESETS, preset) ? preset : "comfortable";
+  if (!state.uiState.guided) state.uiState.guided = {};
+  state.uiState.guided.lifestylePreset = nextPreset;
+  state.uiState.guided.retirementIncomePercent = LIFESTYLE_PRESETS[nextPreset];
+  if (state.uiState.guided.retirementIncomeMode !== "dollar") {
+    syncDesiredSpendingFromGuided();
+  }
+}
+
+function syncDesiredSpendingFromGuided() {
+  const percent = clamp(normalizePct(state.uiState.guided?.retirementIncomePercent ?? 0.7), 0.3, 1.2);
+  state.uiState.guided.retirementIncomePercent = percent;
+  state.profile.desiredSpending = Math.max(12000, Math.round(Number(state.profile.annualIncome || 0) * percent / 500) * 500);
+}
+
+function syncAnnualContributionFromPercent(percentInput) {
+  const income = Math.max(0, Number(state.profile.annualIncome || 0));
+  const rawPercent = normalizePct(percentInput);
+  state.savings.annualContribution = Math.max(0, Math.round((income * rawPercent) / 500) * 500);
+}
+
+function syncAccountsFromGuidedSplit() {
+  const total = Math.max(0, Number(state.savings.currentTotal || 0));
+  const rrspShare = clamp(normalizePct(state.uiState.guided?.rrspShare ?? 0.6), 0, 1);
+  const rrsp = Math.round(total * rrspShare);
+  const tfsa = Math.round(total - rrsp);
+  state.uiState.guided.rrspShare = rrspShare;
+  state.accounts.rrsp = rrsp;
+  state.accounts.tfsa = tfsa;
+  state.accounts.nonRegistered = 0;
+  state.accounts.cash = 0;
+}
+
+function applyGuidedDefaults() {
+  if (state.uiState.guided?.useCanadianDefaults) {
+    state.assumptions.inflation = 0.02;
+    state.assumptions.riskProfile = "balanced";
+    state.assumptions.returns.balanced = 0.05;
+    state.strategy.estimateTaxes = true;
+    state.strategy.oasClawbackModeling = true;
+    state.income.cpp.amountAt65 = Math.max(12000, Number(state.income.cpp.amountAt65 || 0));
+    state.income.oas.amountAt65 = Math.max(9000, Number(state.income.oas.amountAt65 || 0));
+  }
+}
+
+function applyGuidedEstimateRetirementAge() {
+  if (!state.uiState.guided?.estimateRetirementAge) return;
+  const currentAge = ageNow();
+  const estimatedAge = currentAge < 35 ? 67 : currentAge < 50 ? 65 : 63;
+  state.profile.retirementAge = clamp(estimatedAge, 50, 75);
+}
+
+function finalizeGuidedPlan() {
+  if (!state.uiState.guided) return;
+  applyGuidedEstimateRetirementAge();
+  if (state.uiState.guided.retirementIncomeMode !== "dollar") syncDesiredSpendingFromGuided();
+  if (state.uiState.experienceMode !== "advanced") {
+    syncAccountsFromGuidedSplit();
+    applyGuidedDefaults();
+  }
+}
+
+function wizardStepForPath(path) {
+  if (path.startsWith("profile.birthYear") || path.startsWith("profile.annualIncome") || path.startsWith("profile.retirementAge") || path.startsWith("savings.currentTotal") || path.startsWith("uiState.guided.estimateRetirementAge")) return 1;
+  if (path.startsWith("profile.desiredSpending") || path.startsWith("uiState.guided.retirementIncome") || path.startsWith("uiState.guided.lifestylePreset")) return 2;
+  if (path.startsWith("savings.annualContribution") || path.startsWith("uiState.guided.rrspShare") || path.startsWith("uiState.guided.savingsContributionMode") || path.startsWith("uiState.guided.useCanadianDefaults")) return 3;
+  if (path.startsWith("assumptions.") || path.startsWith("income.cpp.") || path.startsWith("income.oas.") || path.startsWith("profile.province") || path.startsWith("uiState.showAdvancedControls")) return 4;
+  return 0;
+}
+
+function maybeAdvanceWizard(step) {
+  if (ui.activeNav !== "plan") return false;
+  if (state.uiState.wizardStep !== step) return false;
+  if (step >= WIZARD_STEP_COUNT) return false;
+  state.uiState.wizardStep = step + 1;
+  return true;
+}
+
 function handleDocumentClick(event) {
   const rawTarget = event.target;
   const target = rawTarget instanceof Element ? rawTarget : rawTarget?.parentElement;
@@ -675,6 +770,34 @@ function handleDocumentClick(event) {
     }
     if (action === "open-learn") {
       setActiveNav("learn");
+      return;
+    }
+    if (action === "see-how-it-works") {
+      setActiveNav("plan");
+      requestAnimationFrame(() => {
+        document.querySelector(".guided-stepper-shell")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      return;
+    }
+    if (action === "set-lifestyle-preset") {
+      applyLifestylePreset(actionBtn.getAttribute("data-value") || "comfortable");
+      savePlan();
+      renderAll();
+      return;
+    }
+    if (action === "set-retirement-income-mode") {
+      if (!state.uiState.guided) state.uiState.guided = {};
+      state.uiState.guided.retirementIncomeMode = actionBtn.getAttribute("data-value") === "dollar" ? "dollar" : "percent";
+      if (state.uiState.guided.retirementIncomeMode !== "dollar") syncDesiredSpendingFromGuided();
+      savePlan();
+      renderAll();
+      return;
+    }
+    if (action === "set-contribution-mode") {
+      if (!state.uiState.guided) state.uiState.guided = {};
+      state.uiState.guided.savingsContributionMode = actionBtn.getAttribute("data-value") === "percent" ? "percent" : "annual";
+      savePlan();
+      renderAll();
       return;
     }
     if (action === "tools-save-plan") {
@@ -764,6 +887,7 @@ function handleDocumentClick(event) {
     }
     if (action === "open-advanced") {
       state.uiState.unlocked.advanced = true;
+      state.uiState.experienceMode = "advanced";
       state.uiState.showAdvancedControls = true;
       setActiveNav("tools");
       savePlan();
@@ -1104,12 +1228,35 @@ function handleBoundInput(event) {
   if (target.getAttribute("data-percent-input") === "1" && typeof value === "number") {
     value /= 100;
   }
+  const displayAs = target.getAttribute("data-display-as") || "";
+  if (displayAs === "age" && typeof value === "number") {
+    value = APP.currentYear - value;
+  }
+  if (displayAs === "income-percent" && typeof value === "number") {
+    syncAnnualContributionFromPercent(value);
+    value = state.savings.annualContribution;
+  }
 
   setByPath(state, path, value);
 
   if (path === "income.pension.enabled" && !value) state.income.pension.amount = 0;
   if (path === "profile.retirementAge") {
     state.income.pension.startAge = Math.max(state.income.pension.startAge, 40);
+  }
+  if (path === "profile.annualIncome" && state.uiState.guided?.retirementIncomeMode !== "dollar") {
+    syncDesiredSpendingFromGuided();
+  }
+  if (path === "uiState.guided.retirementIncomePercent" && state.uiState.guided?.retirementIncomeMode !== "dollar") {
+    syncDesiredSpendingFromGuided();
+  }
+  if ((path === "uiState.guided.rrspShare" || path === "savings.currentTotal") && state.uiState.experienceMode !== "advanced") {
+    syncAccountsFromGuidedSplit();
+  }
+  if (path === "uiState.guided.useCanadianDefaults" && value && state.uiState.experienceMode !== "advanced") {
+    applyGuidedDefaults();
+  }
+  if (path === "uiState.guided.estimateRetirementAge") {
+    applyGuidedEstimateRetirementAge();
   }
   if (path === "uiState.showGrossWithdrawals") {
     ui.showGrossWithdrawals = Boolean(value);
@@ -1136,6 +1283,9 @@ function handleBoundInput(event) {
     return;
   }
 
+  const stepForPath = wizardStepForPath(path);
+  const advanced = stepForPath === 4 && state.uiState.showAdvancedControls;
+  const autoAdvanced = stepForPath > 0 && event.type === "change" && maybeAdvanceWizard(stepForPath) && !advanced;
   renderAll();
   if (trackChange && beforeModel) {
     const summary = buildChangeSummary(beforeModel, ui.lastModel, state);
@@ -1146,6 +1296,9 @@ function handleBoundInput(event) {
     }
   }
   savePlan();
+  if (autoAdvanced) {
+    toast(`Step ${Math.max(1, state.uiState.wizardStep - 1)} saved. Moving to the next step.`);
+  }
 }
 
 function handleLearnBoundInput(event) {
@@ -1194,10 +1347,14 @@ function handleDashboardInput(event) {
 
 function renderAll() {
   ensureValidStateLocal();
+  finalizeGuidedPlan();
+  ensureValidStateLocal();
   ui.showGrossWithdrawals = Boolean(state.uiState.showGrossWithdrawals ?? true);
   ui.activeNav = normalizeNavTargetUi(ui.activeNav || state.uiState.activeNav || "results");
   state.uiState.activeNav = ui.activeNav;
   ui.lastModel = buildPlanModel(state);
+  document.body.classList.remove("mobile-plan-focus");
+  if (el.heroHeader) el.heroHeader.hidden = false;
 
   const showLanding = state.uiState.firstRun;
   if (el.landingPanel) el.landingPanel.hidden = !showLanding;
@@ -1215,6 +1372,14 @@ function renderAll() {
   renderMethodology();
   renderNotes();
   bindInlineTooltipTriggers(document.body);
+  if (ui.pendingPlanStartScroll && ui.activeNav === "plan") {
+    ui.pendingPlanStartScroll = false;
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    window.scrollTo(0, 0);
+    queueGuidedSetupScroll();
+  }
 }
 
 function syncExperienceModeUi() {
@@ -1259,6 +1424,30 @@ function scrollDashboardToTop() {
   } else {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+}
+
+function scrollPlanToGuidedSetup() {
+  const guidedSetup = document.getElementById("guidedSetupSection") || document.querySelector(".guided-stepper-shell");
+  if (guidedSetup instanceof HTMLElement) {
+    guidedSetup.scrollIntoView({ behavior: "smooth", block: "start" });
+    try {
+      guidedSetup.focus({ preventScroll: true });
+    } catch {}
+    return;
+  }
+  const planPanel = document.querySelector('[data-nav-panel="plan"]');
+  if (planPanel instanceof HTMLElement) {
+    planPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function queueGuidedSetupScroll() {
+  const delays = [0, 120, 260, 520];
+  delays.forEach((delay) => {
+    setTimeout(() => {
+      scrollPlanToGuidedSetup();
+    }, delay);
+  });
 }
 
 function getDashboardScenario() {
@@ -1338,6 +1527,16 @@ function renderDashboard() {
   renderDashboardPresetBanner();
   renderDashboardSharedScenarioBanner();
   renderClientSummaryModeModule();
+  syncDashboardLiveSummary();
+}
+
+function syncDashboardLiveSummary() {
+  if (!el.resultLiveSummary) return;
+  const status = (el.dashboardStatus?.textContent || "").trim();
+  const verdict = (document.querySelector("#canIRetireModule h3")?.textContent || "").trim();
+  const summary = [status, verdict].filter(Boolean).join(". ");
+  if (!summary || el.resultLiveSummary.textContent === summary) return;
+  el.resultLiveSummary.textContent = summary;
 }
 
 function syncClientSummaryModeUi() {
@@ -1906,13 +2105,13 @@ function updateLearnOutputs() {
 
 
 function renderWizard() {
-  const step = clamp(state.uiState.wizardStep || 1, 1, 7);
+  const step = clamp(state.uiState.wizardStep || 1, 1, WIZARD_STEP_COUNT);
   state.uiState.wizardStep = step;
-  const progress = (step / 7) * 100;
+  const progress = (step / WIZARD_STEP_COUNT) * 100;
   el.wizardProgressBar.style.width = `${progress}%`;
-  el.wizardStepLabel.textContent = `Step ${step} of 7`;
+  el.wizardStepLabel.textContent = `Step ${step} of ${WIZARD_STEP_COUNT}`;
   el.wizardBackBtn.disabled = step === 1;
-  el.wizardNextBtn.textContent = step === 7 ? "Finish" : "Next";
+  el.wizardNextBtn.textContent = step === WIZARD_STEP_COUNT ? "See my result" : "Next";
 
   el.wizardBody.innerHTML = buildWizardStepHtml(step, {
     state,
@@ -2427,6 +2626,7 @@ function isMaterialChangePath(path) {
     path.startsWith("income.cpp.") ||
     path.startsWith("income.oas.") ||
     path.startsWith("income.pension.") ||
+    path.startsWith("profile.annualIncome") ||
     path.startsWith("profile.retirementAge") ||
     path.startsWith("profile.desiredSpending") ||
     path.startsWith("assumptions.")
