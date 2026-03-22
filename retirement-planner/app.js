@@ -773,6 +773,9 @@ function handleDocumentClick(event) {
     }
     if (action === "open-learn") {
       setActiveNav("learn");
+      requestAnimationFrame(() => {
+        document.getElementById("learnPanel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
       return;
     }
     if (action === "see-how-it-works") {
