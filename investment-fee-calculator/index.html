@@ -51,6 +51,23 @@
   <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://core.simplekit.app" />
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css" />
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "investment-fee-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Compare MERs and fee drag with a simple Canadian long-term investing view.",
+      supportTitle: "Support SimpleKit",
+      supportCopy: "If this investment fee calculator helped you compare costs more clearly, you can support more focused Canadian planning tools.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
   <script>
@@ -64,6 +81,7 @@
 <body>
   <div class="page-shell">
     <header class="hero" aria-labelledby="heroTitle">
+      <div data-simplekit-header></div>
       <div class="hero-content">
         <p class="eyebrow">SimpleKit Investment Fee Calculator • MER planning • Canada-friendly</p>
         <h1 id="heroTitle">Investment Fee Calculator Canada</h1>
@@ -86,14 +104,6 @@
       <div class="hero-actions no-print">
         <a class="btn btn-primary" href="#results">View comparison</a>
         <button id="loadSampleBtnHero" class="btn btn-secondary" type="button">Load sample data</button>
-        <a
-          id="heroSupportLink"
-          class="btn btn-secondary control-btn support-link-btn"
-          href="https://buymeacoffee.com/ashleysnl"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Support SimpleKit"
-        >☕ Buy me a coffee</a>
       </div>
     </header>
 
@@ -425,22 +435,6 @@
         <p class="muted small-copy">Retirement Planner is linked now. The remaining cards are intentionally non-clickable until their final production URLs are confirmed.</p>
       </section>
 
-      <section class="panel section-panel support-panel" aria-labelledby="supportTitle">
-        <div class="panel-header">
-          <h2 id="supportTitle">Support SimpleKit</h2>
-          <p>If this tool helped you, a small coffee helps keep the free calculators coming.</p>
-        </div>
-        <div class="support-card">
-          <p class="muted">Helpful, free, no signup, and built to make planning feel easier.</p>
-          <a
-            id="supportCta"
-            class="btn btn-primary support-cta"
-            href="https://buymeacoffee.com/ashleysnl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >☕ Buy me a coffee</a>
-        </div>
-      </section>
 
       <section class="panel" aria-labelledby="canadaContextHeading-investment-fee">
         <div class="panel-header">
@@ -506,28 +500,14 @@
           </article>
         </div>
       </section>
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
     </main>
-
-    <footer class="app-footer no-print" aria-label="App support and links">
-      <div class="footer-branding">
-        <strong>SimpleKit Investment Fee Calculator</strong>
-        <span class="muted">See how investment fees can reduce your long-term wealth.</span>
-      </div>
-      <div class="footer-actions">
-        <a id="footerSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
-        <a href="#calculator">Calculator</a>
-        <a href="#faq">Guide</a>
-      </div>
-    </footer>
-  </div>
-
-  <div class="global-fab-row no-print" aria-label="Quick actions">
-    <a id="globalSupportBtn" class="global-support-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
-    <a class="global-save-btn" href="#calculator">Compare fees</a>
   </div>
 
   <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
