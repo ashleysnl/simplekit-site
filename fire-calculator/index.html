@@ -47,6 +47,23 @@
   <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://core.simplekit.app" />
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css" />
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "fire-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Estimate financial independence timelines with a calm Canadian FIRE planning lens.",
+      supportTitle: "Support SimpleKit",
+      supportCopy: "If this FIRE calculator helped you explore financial independence more clearly, you can support more focused Canadian planning tools.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
   <script>
@@ -60,6 +77,7 @@
 <body>
   <div class="page-shell">
     <header class="hero" aria-labelledby="heroTitle">
+      <div data-simplekit-header></div>
       <div class="hero-content">
         <nav class="tabs hero-tabs no-print" aria-label="Page sections">
           <a class="tab-btn active" href="#calculator">Calculator</a>
@@ -288,10 +306,6 @@
                 <p id="edgeCaseMessage" class="muted">This tool assumes steady yearly contributions and returns for comparison purposes.</p>
               </article>
             </div>
-            <div class="support-inline no-print">
-              <p class="muted small-copy">If this tool helped you, support SimpleKit.</p>
-              <a id="resultsSupportLink" class="btn btn-secondary support-link-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
-            </div>
           </aside>
         </div>
       </section>
@@ -435,17 +449,6 @@
         </article>
       </section>
 
-      <section id="support" class="panel support-panel no-print" aria-labelledby="supportTitle">
-        <div class="support-banner">
-          <div>
-            <h2 id="supportTitle">If this tool helped you, support SimpleKit</h2>
-            <p class="muted">Buy me a coffee and help fund more free planning tools.</p>
-          </div>
-          <a id="supportBannerLink" class="btn btn-primary support-link-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
-        </div>
-      </section>
-    </main>
-
       <section class="panel" aria-labelledby="canadaContextHeading-fire">
         <div class="panel-header">
           <div>
@@ -472,23 +475,9 @@
           </article>
         </div>
       </section>
-
-
-    <footer class="app-footer no-print" aria-label="App support and links">
-      <div class="footer-branding">
-        <strong id="footerAppName">SimpleKit FIRE Calculator</strong>
-        <span id="footerTagline" class="muted">Estimate your path to financial independence.</span>
-      </div>
-      <div class="footer-actions">
-        <a id="footerSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
-        <button id="footerAboutBtn" type="button" class="icon-btn" aria-label="About this calculator">About</button>
-      </div>
-    </footer>
-  </div>
-
-  <div class="global-fab-row no-print" aria-label="Quick actions">
-    <a id="globalSupportBtn" class="global-support-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
-    <button id="globalSaveBtn" class="global-save-btn" type="button">Save</button>
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
   </div>
 
   <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
@@ -508,6 +497,7 @@
     </div>
   </div>
 
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

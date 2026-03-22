@@ -72,10 +72,6 @@ const el = {
   resetBtn: document.getElementById("resetBtn"),
   saveAssumptionsBtn: document.getElementById("saveAssumptionsBtn"),
   globalSaveBtn: document.getElementById("globalSaveBtn"),
-  globalSupportBtn: document.getElementById("globalSupportBtn"),
-  resultsSupportLink: document.getElementById("resultsSupportLink"),
-  supportBannerLink: document.getElementById("supportBannerLink"),
-  footerSupportLink: document.getElementById("footerSupportLink"),
   aboutSupportLink: document.getElementById("aboutSupportLink"),
   aboutAppBtn: document.getElementById("aboutAppBtn"),
   footerAboutBtn: document.getElementById("footerAboutBtn"),
@@ -149,7 +145,7 @@ function bindEvents() {
       track("related_tool_click", { tool: link.getAttribute("data-track-link") || "unknown" });
     });
   });
-  [el.globalSupportBtn, el.resultsSupportLink, el.footerSupportLink, el.supportBannerLink, el.aboutSupportLink]
+  [el.aboutSupportLink]
     .filter(Boolean)
     .forEach((link) => {
       link.addEventListener("click", () => track("support_click", { location: link.id }));
@@ -778,7 +774,7 @@ function syncSavingsRate(inputs) {
 }
 
 function syncSupportLinks() {
-  [el.globalSupportBtn, el.resultsSupportLink, el.footerSupportLink, el.supportBannerLink, el.aboutSupportLink]
+  [el.aboutSupportLink]
     .filter(Boolean)
     .forEach((link) => {
       link.href = APP.supportUrl;
