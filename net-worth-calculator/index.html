@@ -35,6 +35,8 @@
   <link rel="shortcut icon" href="icons/favicon.svg" />
   <link rel="mask-icon" href="icons/mask-icon.svg" color="#0f6abf" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://core.simplekit.app" />
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
   <script>
@@ -42,6 +44,21 @@
     function gtag() { dataLayer.push(arguments); }
     gtag("js", new Date());
     gtag("config", "G-6SS26QC3C9");
+  </script>
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "net-worth-calculator",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Track assets, liabilities, and long-term progress with a simple Canadian net worth view.",
+      supportTitle: "Support SimpleKit",
+      supportCopy: "If this net worth calculator helps you understand your financial picture more clearly, you can support more focused Canadian planning tools.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
   </script>
   <script type="application/ld+json">
     {
@@ -120,16 +137,9 @@
 </head>
 <body>
   <div class="page-shell">
-    <nav class="suite-nav no-print" aria-label="SimpleKit suite navigation">
-      <a class="suite-home" href="https://simplekit.app/" target="_blank" rel="noopener noreferrer">SimpleKit</a>
-      <div class="suite-links">
-        <a href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer">Retirement Planner</a>
-        <a href="https://simplekit.app/cpp-calculator/" target="_blank" rel="noopener noreferrer">CPP Calculator</a>
-        <a href="https://simplekit.app/rrsp-vs-tfsa-calculator/" target="_blank" rel="noopener noreferrer">TFSA / RRSP Calculator</a>
-      </div>
-    </nav>
 
     <header class="hero" aria-labelledby="heroTitle">
+      <div data-simplekit-header></div>
       <div class="hero-content">
         <p class="eyebrow">SimpleKit Retirement Tools • Canada</p>
         <h1 id="heroTitle">SimpleKit Net Worth Calculator Canada</h1>
@@ -579,18 +589,6 @@
         </div>
       </section>
 
-      <section class="panel support-panel no-print" aria-labelledby="supportHeading">
-        <div class="support-panel-copy">
-          <span class="pill">Free tool</span>
-          <h2 id="supportHeading">If this tool helped you, support SimpleKit.</h2>
-          <p>This calculator is free and independently built. A coffee helps fund more practical retirement tools.</p>
-        </div>
-        <div class="support-panel-actions">
-          <a id="supportLink" class="btn btn-primary" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
-        </div>
-      </section>
-    </main>
-
       <section class="panel" aria-labelledby="canadaContextHeading-net-worth">
         <div class="panel-header">
           <div>
@@ -618,26 +616,14 @@
         </div>
       </section>
 
-
-    <footer class="app-footer no-print" aria-label="App support and links">
-      <div class="footer-branding">
-        <strong>SimpleKit Net Worth Calculator</strong>
-        <span class="muted">Simple, private, browser-based net worth tracking for Canadian households.</span>
-      </div>
-      <div class="footer-actions">
-        <a href="https://simplekit.app/" target="_blank" rel="noopener noreferrer">SimpleKit home</a>
-        <a href="https://simplekit.app/retirement-planner/" target="_blank" rel="noopener noreferrer">Retirement Planner</a>
-        <a id="footerSupportLink" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
-      </div>
-    </footer>
-  </div>
-
-  <div class="global-fab-row no-print" aria-label="Support">
-    <a id="floatingSupportLink" class="global-support-btn" href="https://buymeacoffee.com/ashleysnl" target="_blank" rel="noopener noreferrer">☕ Support</a>
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
   </div>
 
   <div id="appToast" class="app-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
 
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

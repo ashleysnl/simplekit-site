@@ -90,9 +90,6 @@ const el = {
   projectionCopy: document.getElementById("projectionCopy"),
   projectionAssumptionsList: document.getElementById("projectionAssumptionsList"),
   milestoneGrid: document.getElementById("milestoneGrid"),
-  supportLink: document.getElementById("supportLink"),
-  footerSupportLink: document.getElementById("footerSupportLink"),
-  floatingSupportLink: document.getElementById("floatingSupportLink"),
   relatedToolLinks: Array.from(document.querySelectorAll(".related-tool-link")),
   resultLinkCtas: Array.from(document.querySelectorAll(".result-link-cta")),
   appToast: document.getElementById("appToast"),
@@ -146,10 +143,6 @@ function bindEvents() {
     renderAll();
     toast("Calculator reset");
     trackEvent("reset_calculator");
-  });
-
-  [el.supportLink, el.footerSupportLink, el.floatingSupportLink].forEach((link) => {
-    link?.addEventListener("click", () => trackEvent("support_cta_click"));
   });
 
   el.relatedToolLinks.forEach((link) => {
