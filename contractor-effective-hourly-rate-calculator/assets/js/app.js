@@ -698,11 +698,35 @@
     document.querySelector(selectors.shareBtn)?.addEventListener("click", copyShareLink);
   }
 
+  function syncFloatingSupportButton() {
+    const button = document.getElementById("simplekitFloatingSupport");
+    if (!button) {
+      return false;
+    }
+
+    const compact = window.innerWidth <= 720;
+    button.setAttribute("aria-label", "Support this free tool");
+    button.textContent = compact ? "☕ Support" : "☕ Support this free tool";
+    return true;
+  }
+
+  function queueFloatingSupportSync(attempt = 0) {
+    if (syncFloatingSupportButton() || attempt >= 12) {
+      return;
+    }
+
+    window.setTimeout(() => {
+      queueFloatingSupportSync(attempt + 1);
+    }, 120);
+  }
+
   function initialize() {
     restoreFromUrl();
     state = readFormState();
     renderRelatedTools();
     bindEvents();
+    queueFloatingSupportSync();
+    window.addEventListener("resize", syncFloatingSupportButton);
     render();
   }
 

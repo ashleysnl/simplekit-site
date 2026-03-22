@@ -732,7 +732,7 @@ body {
   .tool-shell {
     width: min(100%, 100vw);
     margin: 12px auto 40px;
-    padding: 0 12px 84px;
+    padding: 0 12px 156px;
   }
 
   .tool-hero,
@@ -778,7 +778,7 @@ body {
     position: fixed;
     left: 12px;
     right: 12px;
-    bottom: 12px;
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     z-index: 20;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
