@@ -792,8 +792,7 @@ summary:focus-visible,
   .section-head,
   .section-head-tight,
   .plan-top-actions,
-  .planner-onboarding,
-  .hero-platform-row {
+  .planner-onboarding {
     flex-direction: column;
     align-items: stretch;
   }
@@ -3113,10 +3112,14 @@ textarea {
   }
 
   .hero-platform-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     margin-bottom: 10px;
     padding-bottom: 8px;
     gap: 8px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero-copy {
