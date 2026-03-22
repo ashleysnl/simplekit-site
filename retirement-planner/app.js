@@ -313,6 +313,7 @@ let ui = {
   supportShownThisSession: sessionSupportShown,
   incomeMapHitZones: [],
   pendingPlanStartScroll: false,
+  pendingLearnStartScroll: false,
 };
 globalThis.__RETIREMENT_APP_STAGE = "ui-created";
 
@@ -772,10 +773,8 @@ function handleDocumentClick(event) {
       return;
     }
     if (action === "open-learn") {
+      ui.pendingLearnStartScroll = true;
       setActiveNav("learn");
-      requestAnimationFrame(() => {
-        document.getElementById("learnPanel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
       return;
     }
     if (action === "see-how-it-works") {
@@ -1386,6 +1385,14 @@ function renderAll() {
     window.scrollTo(0, 0);
     queueGuidedSetupScroll();
   }
+  if (ui.pendingLearnStartScroll && ui.activeNav === "learn") {
+    ui.pendingLearnStartScroll = false;
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    window.scrollTo(0, 0);
+    queueLearnPanelScroll();
+  }
 }
 
 function syncExperienceModeUi() {
@@ -1453,6 +1460,36 @@ function queueGuidedSetupScroll() {
     setTimeout(scrollPlanToGuidedSetup, 140);
     setTimeout(scrollPlanToGuidedSetup, 320);
     setTimeout(scrollPlanToGuidedSetup, 640);
+  };
+  if (typeof requestAnimationFrame === "function") {
+    requestAnimationFrame(runScroll);
+    requestAnimationFrame(() => {
+      setTimeout(runScroll, 60);
+    });
+    return;
+  }
+  runScroll();
+}
+
+function scrollLearnPanelToTop() {
+  const learnPanel =
+    document.querySelector('[data-nav-panel="learn"]') ||
+    document.getElementById("learnHeading") ||
+    document.getElementById("learnPanel");
+  if (learnPanel instanceof HTMLElement) {
+    learnPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    try {
+      learnPanel.focus({ preventScroll: true });
+    } catch {}
+  }
+}
+
+function queueLearnPanelScroll() {
+  const runScroll = () => {
+    scrollLearnPanelToTop();
+    setTimeout(scrollLearnPanelToTop, 140);
+    setTimeout(scrollLearnPanelToTop, 320);
+    setTimeout(scrollLearnPanelToTop, 640);
   };
   if (typeof requestAnimationFrame === "function") {
     requestAnimationFrame(runScroll);
