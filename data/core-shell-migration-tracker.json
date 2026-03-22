@@ -62,10 +62,11 @@
   {
     "id": "travel-planner",
     "name": "Travel Planner",
-    "status": "pending",
-    "usesCoreNow": false,
+    "status": "completed",
+    "usesCoreNow": true,
     "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/26_Vacation Tracker",
     "priority": 7,
-    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+    "completedAt": "2026-03-22",
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell while keeping the app-specific quick-save flow."
   }
 ]

@@ -1316,35 +1316,13 @@ function markSupportBannerDismissed() {
 }
 
 function maybeQueueSupportBannerAfterMeaningfulAction(trigger = "save") {
-  if (!uiState.appReady) return;
-  if (isSupportBannerDismissed() || hasSupportBannerShown()) return;
-  const activityCount = (state.activities || []).length;
-  const costCount = (state.costItems || []).length;
-  const paidCount = [...(state.activities || []), ...(state.costItems || [])].filter((item) => (Number(item.paidUsd) || 0) > 0).length;
-  const reachedValueMoment =
-    trigger === "export" || trigger === "print" || activityCount >= 5 || costCount >= 5 || paidCount >= 3;
-  if (!reachedValueMoment) return;
-  uiState.supportBannerQueued = true;
-  renderSupportUi();
+  uiState.supportBannerQueued = false;
+  uiState.supportBannerVisible = false;
 }
 
 function renderSupportUi() {
-  if (!el.supportBanner) return;
-  const blockedByModal = uiState.importReminderOpen || uiState.dashboardDayModalOpen || uiState.aboutModalOpen;
-  const shouldShow =
-    uiState.appReady &&
-    uiState.supportBannerQueued &&
-    !blockedByModal &&
-    !isSupportBannerDismissed() &&
-    !hasSupportBannerShown();
-
-  el.supportBanner.hidden = !shouldShow;
-  uiState.supportBannerVisible = shouldShow;
-
-  if (shouldShow) {
-    markSupportBannerShown();
-    uiState.supportBannerQueued = false;
-  }
+  uiState.supportBannerQueued = false;
+  uiState.supportBannerVisible = false;
 }
 
 function dismissSupportBanner({ permanent = true } = {}) {

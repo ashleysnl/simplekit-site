@@ -25,6 +25,23 @@
     gtag('js', new Date());
     gtag('config', 'G-6SS26QC3C9');
   </script>
+  <link rel="preconnect" href="https://core.simplekit.app" />
+  <link rel="stylesheet" href="https://core.simplekit.app/core.css" />
+  <script>
+    window.SimpleKitPage = {
+      pageType: "tool",
+      activeNavHref: "https://simplekit.app/tools/",
+      toolId: "travel-planner",
+      showSupportCta: true,
+      showRelatedTools: false,
+      showFooterToolLinks: true,
+      footerNote: "Plan trips privately with a simple local-first travel workflow.",
+      supportTitle: "Support SimpleKit",
+      supportCopy: "If this travel planner helped you skip the spreadsheet chaos, you can support more focused SimpleKit tools.",
+      supportPrimaryLabel: "Support SimpleKit",
+      supportSecondaryLabel: "Explore more tools"
+    };
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,6 +63,7 @@
 <body>
   <div class="page-shell">
     <header class="hero">
+      <div data-simplekit-header></div>
       <div class="hero-content">
         <p class="eyebrow">TravelPlanner • Family budget • Local-first</p>
         <h1 id="heroTripTitle">Plan your trip without spreadsheets.</h1>
@@ -486,7 +504,6 @@
           <p class="report-footer-line">Private, local-first trip planning. No login. No tracking.</p>
         </div>
       </section>
-    </main>
 
       <section class="panel" aria-labelledby="canadaContextHeading-travel-planner">
         <div class="panel-header">
@@ -514,37 +531,12 @@
           </article>
         </div>
       </section>
-
-
-    <footer class="app-footer no-print" aria-label="TravelPlanner support and links">
-      <div class="app-footer-copy">
-        <strong>TravelPlanner</strong>
-        <span class="muted">Private, local-first trip planning. No login. No tracking.</span>
-      </div>
-      <div class="app-footer-actions">
-        <button id="footerMenuBtn" type="button" class="icon-btn" aria-label="Open menu">Menu</button>
-        <a
-          class="footer-support-link"
-          href="https://buymeacoffee.com/ashleysnl"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="If this saved you from a spreadsheet"
-        >☕ Buy me a coffee</a>
-        <button id="footerAboutBtn" type="button" class="icon-btn" aria-label="About TravelPlanner">About</button>
-      </div>
-    </footer>
+      <div data-simplekit-support></div>
+      <div data-simplekit-footer></div>
+    </main>
   </div>
 
   <div class="global-fab-row no-print" aria-label="Quick actions">
-    <a
-      id="globalSupportBtn"
-      class="global-support-btn"
-      href="https://buymeacoffee.com/ashleysnl"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Buy me a coffee"
-      title="Buy me a coffee"
-    >☕ Support</a>
     <button id="globalSaveBtn" class="global-save-btn" type="button" aria-label="Save trip backup" title="Save trip backup">Save</button>
   </div>
 
@@ -693,24 +685,9 @@
     </div>
   </div>
 
-  <div id="supportBanner" class="support-banner no-print" hidden role="status" aria-live="polite">
-    <div class="support-banner-card">
-      <p id="supportBannerMessage">If this saved you from building a spreadsheet, consider supporting it ☕</p>
-      <div class="support-banner-actions">
-        <a
-          id="supportBannerCoffeeLink"
-          class="btn btn-primary"
-          href="https://buymeacoffee.com/ashleysnl"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Buy me a coffee</a>
-        <button id="supportBannerDismissBtn" type="button" class="btn btn-secondary control-btn">Dismiss</button>
-      </div>
-    </div>
-  </div>
-
   <div id="appToast" class="app-toast no-print" aria-live="polite" hidden></div>
 
+  <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
