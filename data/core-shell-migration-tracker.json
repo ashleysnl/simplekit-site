@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cpp-calculator",
+    "name": "CPP Calculator",
+    "status": "completed",
+    "usesCoreNow": true,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/32_Simplekit CPP Calculator",
+    "priority": 1,
+    "completedAt": "2026-03-22",
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom bottom support/footer shell."
+  },
+  {
+    "id": "net-worth-calculator",
+    "name": "Net Worth Calculator",
+    "status": "pending",
+    "usesCoreNow": false,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/34_Net Worth",
+    "priority": 2,
+    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+  },
+  {
+    "id": "mortgage-paydown-vs-invest-calculator",
+    "name": "Mortgage Paydown vs Invest",
+    "status": "pending",
+    "usesCoreNow": false,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/36_Mortgage Investment Simple Kit",
+    "priority": 3,
+    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+  },
+  {
+    "id": "investment-fee-calculator",
+    "name": "Investment Fee Calculator",
+    "status": "pending",
+    "usesCoreNow": false,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/37_Investment Fee SimpleKit",
+    "priority": 4,
+    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+  },
+  {
+    "id": "rrsp-vs-tfsa-calculator",
+    "name": "RRSP / TFSA Calculator",
+    "status": "pending",
+    "usesCoreNow": false,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Simplekit RRSP TFSA Calculator",
+    "priority": 5,
+    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+  },
+  {
+    "id": "fire-calculator",
+    "name": "FIRE Calculator",
+    "status": "pending",
+    "usesCoreNow": false,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/35_FIRE Simplekit",
+    "priority": 6,
+    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+  },
+  {
+    "id": "travel-planner",
+    "name": "Travel Planner",
+    "status": "pending",
+    "usesCoreNow": false,
+    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/26_Vacation Tracker",
+    "priority": 7,
+    "notes": "Needs shared Core header/footer navigation wired into the main entry page."
+  }
+]

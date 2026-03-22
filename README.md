@@ -37,3 +37,9 @@ Add new tools there first. The manifest drives:
 - Canonical production URLs should follow `https://simplekit.app/<slug>/`.
 - Legacy subdomains can remain live, but this repo should only promote canonical path URLs in SEO outputs.
 - `data/tool-registry.json` is still generated for compatibility with the existing migration workflow, but it should not be edited by hand.
+
+## Core Shell Rollout
+
+Tools that still need the shared Core header/footer navigation are tracked in [data/core-shell-migration-tracker.json](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/data/core-shell-migration-tracker.json).
+
+Use [CORE-SHELL-MIGRATION.md](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/CORE-SHELL-MIGRATION.md) as the one-by-one rollout checklist.

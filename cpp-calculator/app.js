@@ -83,10 +83,7 @@ const el = {
   appToast: document.getElementById("appToast"),
 
   plannerResultsLink: document.getElementById("plannerResultsLink"),
-  footerPlannerLink: document.getElementById("footerPlannerLink"),
   supportMicroLink: document.getElementById("supportMicroLink"),
-  supportLink: document.getElementById("supportLink"),
-  footerSupportLink: document.getElementById("footerSupportLink"),
 };
 
 let state = loadInputs();
@@ -609,10 +606,10 @@ function syncHeadMeta() {
 }
 
 function syncStaticLinks() {
-  [el.plannerResultsLink, el.footerPlannerLink].forEach((link) => {
+  [el.plannerResultsLink].forEach((link) => {
     if (link) link.href = TEMPLATE.retirementPlannerUrl;
   });
-  [el.supportMicroLink, el.supportLink, el.footerSupportLink].forEach((link) => {
+  [el.supportMicroLink].forEach((link) => {
     if (link) link.href = TEMPLATE.supportUrl;
   });
 }
