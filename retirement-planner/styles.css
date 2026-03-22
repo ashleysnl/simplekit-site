@@ -831,8 +831,6 @@ summary:focus-visible,
 
   .hero-platform-copy {
     display: contents;
-    flex: none;
-    width: 100%;
   }
 
   .hero-home-link {
@@ -841,16 +839,18 @@ summary:focus-visible,
     justify-content: center;
     width: 100%;
     min-width: 0;
-    padding: 6px 6px;
+    padding: 6px 4px;
     border-radius: 999px;
     background: rgba(5, 26, 52, 0.24);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.98);
     text-shadow: 0 1px 1px rgba(4, 18, 36, 0.45);
-    font-size: 0.8rem;
-    line-height: 1.2;
+    font-size: 0.74rem;
+    line-height: 1.15;
     text-align: center;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .hero-platform-separator {
@@ -3111,10 +3111,10 @@ textarea {
 
   .hero-platform-row {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    gap: 8px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    gap: 6px;
     align-items: stretch;
   }
 

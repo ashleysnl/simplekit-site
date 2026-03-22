@@ -1472,16 +1472,15 @@ function queueGuidedSetupScroll() {
 }
 
 function scrollLearnPanelToTop() {
-  const learnPanel =
-    document.querySelector('[data-nav-panel="learn"]') ||
-    document.getElementById("learnHeading") ||
-    document.getElementById("learnPanel");
-  if (learnPanel instanceof HTMLElement) {
-    learnPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-    try {
-      learnPanel.focus({ preventScroll: true });
-    } catch {}
-  }
+  const learnPanel = document.querySelector('[data-nav-panel="learn"]');
+  const learnHeading = document.getElementById("learnHeading");
+  const target = learnPanel instanceof HTMLElement ? learnPanel : learnHeading instanceof HTMLElement ? learnHeading : document.getElementById("learnPanel");
+  if (!(target instanceof HTMLElement)) return;
+  const top = Math.max(0, window.scrollY + target.getBoundingClientRect().top - 12);
+  window.scrollTo({ top, behavior: "smooth" });
+  try {
+    target.focus({ preventScroll: true });
+  } catch {}
 }
 
 function queueLearnPanelScroll() {
