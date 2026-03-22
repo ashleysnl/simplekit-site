@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contractor Effective Hourly Rate Calculator | Compare Contract Pay</title>
+  <title>Contractor Effective Hourly Rate Calculator | Compare Real Contract Pay | SimpleKit</title>
   <meta
     name="description"
-    content="Estimate your real contractor pay after unpaid vacation and self-paid benefits. Compare nominal annual income, adjusted annual income, and effective hourly rate."
+    content="See what a contractor offer is really worth after unpaid vacation, self-paid benefits, sick time, and contractor costs. Compare real annual income and effective hourly rate."
   >
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://simplekit.app/contractor-effective-hourly-rate-calculator/">
   <meta property="og:title" content="Contractor Effective Hourly Rate Calculator | SimpleKit">
   <meta
     property="og:description"
-    content="See how unpaid vacation and self-paid benefits change your real contractor pay, annual income, and effective hourly rate."
+    content="Compare contractor offers using a beginner-friendly calculator that accounts for unpaid vacation and self-paid benefits."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://simplekit.app/contractor-effective-hourly-rate-calculator/">
@@ -21,20 +21,61 @@
   <meta name="twitter:title" content="Contractor Effective Hourly Rate Calculator | SimpleKit">
   <meta
     name="twitter:description"
-    content="Use this contractor hourly rate calculator to compare stated pay against true annual income and effective hourly rate."
+    content="Estimate your real contractor rate after unpaid vacation, benefits, and common contractor costs."
   >
   <meta name="theme-color" content="#0f6abf">
   <link rel="manifest" href="manifest.webmanifest">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Contractor Effective Hourly Rate Calculator",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "inLanguage": "en-CA",
-      "url": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
-      "description": "Estimate nominal annual income, adjusted annual income after unpaid vacation and benefits, and effective hourly rate for contractor offers."
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Contractor Effective Hourly Rate Calculator",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "inLanguage": "en-CA",
+          "url": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+          "description": "A mobile-friendly contractor pay calculator that estimates effective hourly rate after unpaid vacation, self-paid benefits, and common contractor costs."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an effective hourly rate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An effective hourly rate is your adjusted annual earnings divided by your full-year standard contract hours. It helps you compare offers more fairly than looking only at the advertised hourly rate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does unpaid vacation reduce hourly rate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Unpaid vacation lowers the number of paid weeks in the year, which reduces annual earnings and lowers the practical value of the advertised rate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do self-paid benefits affect compensation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If you pay for your own health, dental, disability, or insurance coverage, those costs reduce your real compensation and should be included when comparing contract offers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this calculator include taxes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. This tool is for pre-tax compensation planning and offer comparison. Taxes, incorporation costs, reimbursable expenses, and province-specific rules are not included."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 
@@ -73,462 +114,497 @@
       <div data-simplekit-header></div>
 
       <div class="hero-copy">
-        <p class="eyebrow">Contract Rate Calculator</p>
+        <p class="eyebrow">Contractor Pay Tool</p>
         <h1 id="pageTitle">Contractor Effective Hourly Rate Calculator</h1>
-        <p class="hero-subtitle">
-          Compare your stated contract rate against the annual income and effective hourly rate you actually keep after unpaid vacation and self-paid benefits.
-        </p>
-        <p class="hero-proof">
-          Two contracts can advertise the same hourly rate and still leave you with very different real compensation. This calculator gives you a practical like-for-like view.
-        </p>
+        <p class="hero-subtitle">See what your hourly rate is really worth after unpaid vacation and self-paid benefits.</p>
+        <p class="hero-proof">A simple way to compare contract offers and understand your true working rate before you say yes.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#calculatorSection">Start calculating</a>
-          <a class="btn btn-secondary" href="#faqSection">Read the FAQs</a>
+          <a class="btn btn-primary" href="#calculatorSection" data-scroll-target="#calculatorSection">Calculate my real rate</a>
+          <a class="btn btn-secondary" href="#learnSection" data-scroll-target="#learnSection">See how it works</a>
         </div>
         <div class="hero-trust-row" aria-label="Calculator highlights">
-          <span>Nominal vs effective pay</span>
-          <span>Unpaid vacation impact</span>
-          <span>Self-paid benefits impact</span>
+          <span>Beginner friendly</span>
+          <span>Mobile friendly</span>
+          <span>Built for contractors</span>
         </div>
       </div>
 
       <aside class="hero-side" aria-label="Preview summary">
         <article class="hero-highlight">
-          <span class="mini-kicker">Quick example</span>
-          <strong id="heroPreviewRate">$93.75/hr</strong>
-          <p id="heroPreviewText">Example result for a $100/hr contract with 2 unpaid weeks and $5,000 in self-paid benefits.</p>
+          <span class="mini-kicker">Quick answer</span>
+          <strong id="heroEffectiveRate">$93.75/hr</strong>
+          <p id="heroExplanation">Because 2 weeks are unpaid and you cover $5,000 of benefits yourself, a $100/hour contract works more like $93.75/hour.</p>
         </article>
         <div class="hero-mini-grid">
           <div>
-            <span class="mini-summary-label">Nominal annual</span>
-            <strong id="heroPreviewAnnual">$208,000</strong>
+            <span class="mini-summary-label">Advertised rate</span>
+            <strong id="heroAdvertisedRate">$100/hr</strong>
           </div>
           <div>
-            <span class="mini-summary-label">Annual reduction</span>
-            <strong id="heroPreviewReduction">$13,000</strong>
+            <span class="mini-summary-label">Estimated annual</span>
+            <strong id="heroAnnualIncome">$195,000</strong>
           </div>
         </div>
       </aside>
     </header>
 
     <main id="mainContent" class="page-flow">
-      <section class="panel intro-panel">
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">Why it matters</p>
-              <h2 id="introHeading">A posted contract rate is not always your real pay</h2>
-            </div>
-            <p>Open for a quick overview of why unpaid vacation and benefits can change the value of a contract.</p>
-          </summary>
-          <div class="feature-grid">
-            <article>
-              <span class="trust-label">Stated rate</span>
-              <strong>See the headline annual income</strong>
-              <p>Start with the basic math from your posted hourly rate and a standard working year.</p>
-            </article>
-            <article>
-              <span class="trust-label">Vacation impact</span>
-              <strong>Measure unpaid time off</strong>
-              <p>See how unpaid weeks reduce your paid weeks, annual income, and practical hourly value.</p>
-            </article>
-            <article>
-              <span class="trust-label">Benefits impact</span>
-              <strong>Account for real costs</strong>
-              <p>Subtract self-paid benefits so you can compare contracts on a more realistic basis.</p>
-            </article>
-          </div>
-        </details>
-      </section>
-
-      <section id="calculatorSection" class="panel" aria-labelledby="calculatorHeading">
+      <section class="panel trust-panel" aria-labelledby="trustHeading">
         <div class="panel-header">
           <div>
-            <p class="section-kicker">Calculator</p>
-            <h2 id="calculatorHeading">Estimate your real contractor compensation</h2>
+            <p class="section-kicker">Why this helps</p>
+            <h2 id="trustHeading">A higher hourly rate is not always the better offer</h2>
           </div>
-          <p>Use the standard full-time defaults or adjust the schedule to match the contract you are reviewing.</p>
+          <p>This calculator keeps the first answer simple, then lets you open advanced assumptions only if you need them.</p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="trust-label">Start simple</span>
+            <strong>Just answer the core compensation questions</strong>
+            <p>Rate, schedule, vacation, and benefits are enough to get a useful first answer in under a minute.</p>
+          </article>
+          <article>
+            <span class="trust-label">See the tradeoffs</span>
+            <strong>Understand what lowers the real value</strong>
+            <p>Unpaid time off and self-paid benefits are separated clearly so you can see where the gap comes from.</p>
+          </article>
+          <article>
+            <span class="trust-label">Go deeper when needed</span>
+            <strong>Add contractor-specific costs later</strong>
+            <p>Bonus, sick time, admin costs, and a second offer comparison stay tucked away until you want them.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculatorSection" class="panel calculator-panel scroll-target-section" aria-labelledby="calculatorHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Guided calculator</p>
+            <h2 id="calculatorHeading">Start with the offer, then adjust for real life</h2>
+          </div>
+          <p>We define your effective hourly rate as adjusted annual earnings divided by your full-year contract hours.</p>
         </div>
 
-        <div class="calculator-layout guided-layout guided-layout-single">
-          <form id="rateForm" class="calculator-card no-print" novalidate>
+        <div class="calculator-layout">
+          <form id="rateForm" class="calculator-card" novalidate>
             <div class="form-toolbar">
               <div>
-                <strong>Offer details</strong>
-                <p class="muted small-copy">Answer a few plain-English questions and we will convert the contract offer into a fairer annual and hourly comparison.</p>
+                <strong>Start simple</strong>
+                <p class="muted small-copy">Use the default questions first. Advanced assumptions stay collapsed below the main result.</p>
               </div>
               <div class="toolbar-actions">
-                <button id="loadSampleBtn" class="btn btn-primary" type="button">Load example</button>
+                <button id="loadPresetBtn" class="btn btn-primary" type="button">Load sample</button>
                 <button id="resetBtn" class="btn btn-tertiary" type="button">Reset</button>
               </div>
             </div>
 
             <section id="validationMessage" class="validation-banner" aria-live="polite" hidden></section>
 
-            <section class="input-card stepper-shell" aria-labelledby="snapshotHeading">
-              <div class="input-card-head compact-head">
+            <section class="flow-card" aria-labelledby="contractHeading">
+              <div class="flow-card-head">
+                <span class="step-badge">1</span>
                 <div>
-                  <span class="step-kicker">Guided tour</span>
-                  <h3 id="snapshotHeading">We will walk through the offer step by step</h3>
+                  <p class="step-kicker">Your contract</p>
+                  <h3 id="contractHeading">What are you being offered?</h3>
                 </div>
-                <p id="progressLabel">Ready to begin</p>
               </div>
-              <div class="step-progress" aria-label="Calculator progress">
-                <div id="stepProgressFill" class="step-progress-fill"></div>
+
+              <label class="form-field form-field-large">
+                <span>Hourly rate</span>
+                <div class="input-prefix">
+                  <span aria-hidden="true">$</span>
+                  <input id="hourlyRate" name="hourlyRate" type="number" min="0" step="1" inputmode="decimal">
+                </div>
+                <small>The advertised rate before vacation gaps, benefits, or contractor costs are considered.</small>
+              </label>
+
+              <div class="field-grid">
+                <label class="form-field">
+                  <span>Hours per week</span>
+                  <input id="hoursPerWeek" name="hoursPerWeek" type="number" min="1" max="168" step="0.5" inputmode="decimal">
+                  <small>Total paid contract hours in a normal week.</small>
+                </label>
+
+                <label class="form-field">
+                  <span>Weeks per year</span>
+                  <input id="weeksPerYear" name="weeksPerYear" type="number" min="1" max="52" step="1" inputmode="numeric">
+                  <small>Use the full contract year unless your engagement is shorter.</small>
+                </label>
+              </div>
+
+              <div class="chip-group">
+                <button class="chip-button" type="button" data-set-hours="35">35 hrs/week</button>
+                <button class="chip-button" type="button" data-set-hours="37.5">37.5 hrs/week</button>
+                <button class="chip-button" type="button" data-set-hours="40">40 hrs/week</button>
+                <button class="chip-button" type="button" data-set-hours="44">44 hrs/week</button>
+                <button class="chip-button" type="button" data-set-weeks="48">48 weeks/year</button>
+                <button class="chip-button" type="button" data-set-weeks="50">50 weeks/year</button>
+                <button class="chip-button" type="button" data-set-weeks="52">52 weeks/year</button>
               </div>
             </section>
 
-            <div class="wizard-viewport">
-              <div id="wizardTrack" class="wizard-track">
-                <section class="input-card question-step wizard-slide" data-step="0" aria-labelledby="step0Heading">
-                  <div class="question-layout">
-                    <div class="question-copy">
-                      <span class="step-kicker">Start here</span>
-                      <h3 id="step0Heading">Let’s turn the offer into a real compensation picture</h3>
-                      <p>Answer four short questions about the rate, schedule, vacation, and benefits. Then we will show the real annual income and effective hourly rate.</p>
-                    </div>
-                  </div>
-                  <div class="step-actions">
-                    <span></span>
-                    <button class="btn btn-primary" type="button" data-step-next="0">Start questions</button>
-                  </div>
-                </section>
-
-                <section class="input-card question-step wizard-slide" data-step="1" aria-labelledby="step1Heading">
-                  <div class="question-layout">
-                    <div class="question-copy">
-                      <span class="step-kicker">Step 1</span>
-                      <h3 id="step1Heading">What is the current hourly rate offer?</h3>
-                      <p>This is the headline contract number. We use it as the starting point before vacation gaps and benefits costs reduce the real value.</p>
-                      <p class="example-copy">Example: if the contract says $100 per hour, enter 100 here.</p>
-                    </div>
-                    <div class="question-inputs single-input">
-                      <label class="form-field form-field-large">
-                        <span>Current hourly rate offer</span>
-                        <div class="input-prefix">
-                          <span aria-hidden="true">$</span>
-                          <input id="hourlyRate" name="hourlyRate" type="number" min="0" step="1" inputmode="decimal">
-                        </div>
-                        <small>This should be the contract rate before unpaid time off or benefits costs are considered.</small>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="step-actions">
-                    <button class="btn btn-tertiary" type="button" data-step-back="1">Back</button>
-                    <button class="btn btn-primary" type="button" data-step-next="1">Next question</button>
-                  </div>
-                </section>
-
-                <section class="input-card question-step wizard-slide" data-step="2" aria-labelledby="step2Heading">
-                  <div class="question-layout">
-                    <div class="question-copy">
-                      <span class="step-kicker">Step 2</span>
-                      <h3 id="step2Heading">How many hours per week and weeks per year will you actually work?</h3>
-                      <p>We use these inputs to gross the hourly rate up into a nominal annual income. This creates the baseline before any reductions are applied.</p>
-                      <p class="example-copy">Example: 40 hours per week and 52 weeks per year produces 2,080 standard working hours.</p>
-                    </div>
-                    <div class="question-inputs">
-                      <label class="form-field">
-                        <span>Hours per week</span>
-                        <input id="hoursPerWeek" name="hoursPerWeek" type="number" min="1" max="168" step="0.5" inputmode="decimal">
-                        <small>Total paid working hours in a normal week. A standard full-time week is often 40.</small>
-                      </label>
-
-                      <label class="form-field">
-                        <span>Weeks per year</span>
-                        <input id="weeksPerYear" name="weeksPerYear" type="number" min="1" max="52" step="1" inputmode="numeric">
-                        <small>Use 52 for a full year unless the contract has a different annual working cycle.</small>
-                      </label>
-                      <div class="why-card">
-                        <strong>Why this matters</strong>
-                        <p>This is what turns the hourly rate into a full-year baseline so the offer can be compared fairly.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="step-actions">
-                    <button class="btn btn-tertiary" type="button" data-step-back="2">Back</button>
-                    <button class="btn btn-primary" type="button" data-step-next="2">Next question</button>
-                  </div>
-                </section>
-
-                <section class="input-card question-step wizard-slide" data-step="3" aria-labelledby="step3Heading">
-                  <div class="question-layout">
-                    <div class="question-copy">
-                      <span class="step-kicker">Step 3</span>
-                      <h3 id="step3Heading">What is the vacation offer: paid or unpaid?</h3>
-                      <p>This matters because unpaid vacation reduces the number of weeks you are actually paid. Paid vacation keeps your paid weeks intact.</p>
-                      <p class="example-copy">Example: 2 unpaid weeks on a 52-week year means only 50 weeks are paid.</p>
-                    </div>
-                    <div class="question-inputs">
-                      <div class="toggle-row">
-                        <label class="toggle-field" for="vacationIsPaid">
-                          <input id="vacationIsPaid" name="vacationIsPaid" type="checkbox">
-                          <span>
-                            <strong>Vacation is paid</strong>
-                            <small>If this is on, the calculator treats all selected weeks as paid weeks.</small>
-                          </span>
-                        </label>
-                      </div>
-
-                      <label class="form-field">
-                        <span>Unpaid vacation weeks</span>
-                        <input id="unpaidVacationWeeks" name="unpaidVacationWeeks" type="number" min="0" max="52" step="0.5" inputmode="decimal">
-                        <small id="vacationHelp">Only used when vacation is unpaid.</small>
-                      </label>
-                      <div class="why-card">
-                        <strong>Why this matters</strong>
-                        <p>Unpaid vacation lowers the number of weeks you are actually paid, which lowers real annual compensation.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="step-actions">
-                    <button class="btn btn-tertiary" type="button" data-step-back="3">Back</button>
-                    <button class="btn btn-primary" type="button" data-step-next="3">Next question</button>
-                  </div>
-                </section>
-
-                <section class="input-card question-step wizard-slide" data-step="4" aria-labelledby="step4Heading">
-                  <div class="question-layout">
-                    <div class="question-copy">
-                      <span class="step-kicker">Step 4</span>
-                      <h3 id="step4Heading">Are benefits included, and if not, what will they cost you each year?</h3>
-                      <p>Benefits change the real value of a contract. If you need to pay for health, dental, insurance, or similar coverage yourself, that cost should come out of compensation.</p>
-                      <p class="example-copy">Example: if you expect $5,000 in annual benefits costs, the calculator subtracts that from your adjusted annual income.</p>
-                    </div>
-                    <div class="question-inputs">
-                      <div class="toggle-row">
-                        <label class="toggle-field" for="benefitsAreEmployerPaid">
-                          <input id="benefitsAreEmployerPaid" name="benefitsAreEmployerPaid" type="checkbox">
-                          <span>
-                            <strong>Benefits are included</strong>
-                            <small>If this is on, no annual benefits cost is deducted.</small>
-                          </span>
-                        </label>
-                      </div>
-
-                      <label class="form-field">
-                        <span>Estimated annual benefits cost</span>
-                        <div class="input-prefix">
-                          <span aria-hidden="true">$</span>
-                          <input id="annualBenefitsCost" name="annualBenefitsCost" type="number" min="0" step="100" inputmode="decimal">
-                        </div>
-                        <small id="benefitsHelp">Only used when benefits are self-paid.</small>
-                      </label>
-                      <div class="why-card">
-                        <strong>Why this matters</strong>
-                        <p>If benefits are not included, this annual cost comes directly out of what the contract is really worth.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="step-actions">
-                    <button class="btn btn-tertiary" type="button" data-step-back="4">Back</button>
-                    <button class="btn btn-primary" type="button" id="showResultsBtn">Show my results</button>
-                  </div>
-                </section>
+            <section class="flow-card" aria-labelledby="vacationHeading">
+              <div class="flow-card-head">
+                <span class="step-badge">2</span>
+                <div>
+                  <p class="step-kicker">Vacation</p>
+                  <h3 id="vacationHeading">Is your vacation paid?</h3>
+                </div>
               </div>
-            </div>
+
+              <div class="choice-group" role="group" aria-label="Vacation is paid">
+                <button class="choice-button" type="button" data-toggle-target="vacationIsPaid" data-toggle-value="true">Yes, paid</button>
+                <button class="choice-button" type="button" data-toggle-target="vacationIsPaid" data-toggle-value="false">No, unpaid</button>
+              </div>
+              <input id="vacationIsPaid" name="vacationIsPaid" type="checkbox" class="sr-only-input">
+
+              <label class="form-field" id="unpaidVacationField">
+                <span>Unpaid vacation weeks</span>
+                <input id="unpaidVacationWeeks" name="unpaidVacationWeeks" type="number" min="0" max="52" step="0.5" inputmode="decimal">
+                <small>Unpaid vacation lowers your true annual earnings because you are not billing during those weeks.</small>
+              </label>
+            </section>
+
+            <section class="flow-card" aria-labelledby="benefitsHeading">
+              <div class="flow-card-head">
+                <span class="step-badge">3</span>
+                <div>
+                  <p class="step-kicker">Benefits</p>
+                  <h3 id="benefitsHeading">Are your benefits paid by the employer or client?</h3>
+                </div>
+              </div>
+
+              <div class="choice-group" role="group" aria-label="Benefits are employer paid">
+                <button class="choice-button" type="button" data-toggle-target="benefitsAreEmployerPaid" data-toggle-value="true">Yes, included</button>
+                <button class="choice-button" type="button" data-toggle-target="benefitsAreEmployerPaid" data-toggle-value="false">No, I pay them</button>
+              </div>
+              <input id="benefitsAreEmployerPaid" name="benefitsAreEmployerPaid" type="checkbox" class="sr-only-input">
+
+              <label class="form-field" id="benefitsCostField">
+                <span>Annual benefits cost</span>
+                <div class="input-prefix">
+                  <span aria-hidden="true">$</span>
+                  <input id="annualBenefitsCost" name="annualBenefitsCost" type="number" min="0" step="100" inputmode="decimal">
+                </div>
+                <small>If you pay for your own health, dental, or insurance coverage, that reduces your real compensation.</small>
+              </label>
+            </section>
+
+            <section class="flow-card summary-bridge" aria-labelledby="quickResultHeading">
+              <div class="flow-card-head">
+                <span class="step-badge">4</span>
+                <div>
+                  <p class="step-kicker">Your result</p>
+                  <h3 id="quickResultHeading">See the answer right away</h3>
+                </div>
+              </div>
+              <p class="bridge-copy">Your results update live below. Open advanced options only if you want to layer in extra assumptions or compare a second offer.</p>
+              <div class="form-actions">
+                <a class="btn btn-primary" href="#resultsSection">Jump to results</a>
+                <a class="btn btn-tertiary" href="#advancedSection">Open advanced options</a>
+              </div>
+            </section>
+
+            <section id="advancedSection" class="panel-nested" aria-labelledby="advancedHeading">
+              <details>
+                <summary class="nested-summary">
+                  <div>
+                    <p class="section-kicker">Advanced options</p>
+                    <h3 id="advancedHeading">Adjust assumptions without cluttering the main flow</h3>
+                  </div>
+                  <p>Add schedule detail, unpaid sick time, bonus, contractor costs, or a second offer comparison.</p>
+                </summary>
+
+                <div class="advanced-grid">
+                  <label class="form-field">
+                    <span>Work days per week</span>
+                    <input id="workDaysPerWeek" name="workDaysPerWeek" type="number" min="1" max="7" step="0.5" inputmode="decimal">
+                    <small>Used to estimate daily hours for sick day assumptions.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Hours per day</span>
+                    <input id="hoursPerDay" name="hoursPerDay" type="number" min="1" max="24" step="0.5" inputmode="decimal">
+                    <small>If left near your normal schedule, advanced time-off assumptions stay more realistic.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Paid stat holidays included</span>
+                    <input id="paidHolidayDays" name="paidHolidayDays" type="number" min="0" max="30" step="1" inputmode="numeric">
+                    <small>Shown as a planning note. It does not reduce pay because those days are assumed paid.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Unpaid sick days per year</span>
+                    <input id="unpaidSickDays" name="unpaidSickDays" type="number" min="0" max="60" step="0.5" inputmode="decimal">
+                    <small>Useful if you expect unpaid sick time during the year.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Annual bonus or stipend</span>
+                    <div class="input-prefix">
+                      <span aria-hidden="true">$</span>
+                      <input id="annualBonus" name="annualBonus" type="number" min="0" step="100" inputmode="decimal">
+                    </div>
+                    <small>Add retention bonuses, allowances, or guaranteed stipends.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Annual contractor costs</span>
+                    <div class="input-prefix">
+                      <span aria-hidden="true">$</span>
+                      <input id="annualContractCosts" name="annualContractCosts" type="number" min="0" step="100" inputmode="decimal">
+                    </div>
+                    <small>Use this for licensing, professional dues, equipment, admin, phone, or vehicle costs.</small>
+                  </label>
+                </div>
+
+                <div class="callout-card">
+                  <strong>Taxes are not included.</strong>
+                  <p>This tool is for comparing pre-tax compensation. Taxes, incorporation choices, and reimbursable expenses can change the final picture.</p>
+                </div>
+
+                <div class="compare-toggle">
+                  <label class="toggle-field" for="compareEnabled">
+                    <input id="compareEnabled" name="compareEnabled" type="checkbox">
+                    <span>
+                      <strong>Compare a second offer</strong>
+                      <small>Use a simplified side-by-side comparison for another contract scenario.</small>
+                    </span>
+                  </label>
+                </div>
+
+                <div id="compareFields" class="compare-grid" hidden>
+                  <label class="form-field">
+                    <span>Second offer hourly rate</span>
+                    <div class="input-prefix">
+                      <span aria-hidden="true">$</span>
+                      <input id="compareHourlyRate" name="compareHourlyRate" type="number" min="0" step="1" inputmode="decimal">
+                    </div>
+                    <small>The alternate contract headline rate.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Second offer unpaid vacation weeks</span>
+                    <input id="compareUnpaidVacationWeeks" name="compareUnpaidVacationWeeks" type="number" min="0" max="52" step="0.5" inputmode="decimal">
+                    <small>Set to 0 if the second offer has paid vacation.</small>
+                  </label>
+
+                  <label class="form-field">
+                    <span>Second offer annual benefits cost</span>
+                    <div class="input-prefix">
+                      <span aria-hidden="true">$</span>
+                      <input id="compareAnnualBenefitsCost" name="compareAnnualBenefitsCost" type="number" min="0" step="100" inputmode="decimal">
+                    </div>
+                    <small>Set to 0 if the second offer includes benefits.</small>
+                  </label>
+                </div>
+              </details>
+            </section>
           </form>
 
+          <aside class="summary-stack">
+            <section class="summary-card summary-card-sticky" aria-labelledby="summaryHeading">
+              <p class="section-kicker">Quick summary</p>
+              <h3 id="summaryHeading">A calm snapshot while you edit</h3>
+              <div class="summary-grid">
+                <article>
+                  <span>Offered rate</span>
+                  <strong id="summaryAdvertisedRate">$100/hr</strong>
+                </article>
+                <article>
+                  <span>Effective rate</span>
+                  <strong id="summaryEffectiveRate">$93.75/hr</strong>
+                </article>
+                <article>
+                  <span>Annual earnings</span>
+                  <strong id="summaryAnnualEarnings">$195,000</strong>
+                </article>
+              </div>
+              <p id="summaryPlainEnglish" class="summary-copy">A small reduction can still matter when you compare two offers across a full year.</p>
+            </section>
+
+            <section class="summary-card assumptions-card" aria-labelledby="methodHeading">
+              <p class="section-kicker">Method</p>
+              <h3 id="methodHeading">What this result means</h3>
+              <p id="methodCopy">Effective hourly rate = adjusted annual earnings divided by full-year contract hours, so different offers can be compared on a like-for-like basis.</p>
+            </section>
+          </aside>
         </div>
       </section>
 
-      <section class="panel" id="resultsPanel" hidden>
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">Results</p>
-              <h2 id="resultsPanelHeading">Your real contractor compensation</h2>
-            </div>
-            <p>The setup is complete. Open to review the answer and comparison notes.</p>
-          </summary>
-          <section id="resultsStatus" class="results-status" aria-live="polite"></section>
+      <section id="resultsSection" class="panel results-panel" aria-labelledby="resultsHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Results</p>
+            <h2 id="resultsHeading">Your real contractor compensation</h2>
+          </div>
+          <p>The top number stays focused on the practical question: what is this offer really worth?</p>
+        </div>
 
-          <section class="results-shell results-shell-inline" aria-labelledby="resultsHeading">
-            <div class="results-block-head">
-              <div>
-                <p class="section-kicker">Primary answer</p>
-                <h3 id="resultsHeading">Your practical pay picture</h3>
-              </div>
-              <p>Start with adjusted annual income and effective hourly rate.</p>
-            </div>
-            <div id="featuredResults" class="featured-results" aria-live="polite"></div>
-          </section>
-
-          <section class="results-shell results-shell-inline comparison-shell" aria-labelledby="comparisonHeading">
-            <div class="results-block-head">
-              <div>
-                <p class="section-kicker">Interpretation</p>
-                <h3 id="comparisonHeading">What changed from the stated rate?</h3>
-              </div>
-              <p>This shows where the gap comes from and what hourly rate would offset it.</p>
-            </div>
-            <div id="comparisonSummary" class="comparison-summary" aria-live="polite"></div>
-          </section>
-
-          <section class="results-shell results-shell-inline no-print" aria-labelledby="shareHeading">
-            <div class="results-block-head">
-              <div>
-                <p class="section-kicker">Share</p>
-                <h3 id="shareHeading">Save this scenario</h3>
-              </div>
-              <p>Copy a link to preserve the current assumptions and revisit them later.</p>
-            </div>
-            <div class="form-actions">
-              <button id="shareBtn" class="btn btn-secondary-panel" type="button">Copy share link</button>
-            </div>
+        <section class="results-hero" aria-live="polite">
+          <p class="results-kicker">Top result</p>
+          <h3 id="effectiveRateHeadline">Your effective hourly rate is $93.75/hr</h3>
+          <p id="rateGapHeadline" class="results-subtitle">That is $6.25/hr lower than the advertised contract rate.</p>
+          <p id="annualEarningsHeadline" class="results-annual">Estimated effective annual earnings: $195,000</p>
+          <p id="resultsExplanation" class="results-explanation">Because 2 weeks are unpaid and you cover $5,000 of benefits yourself, a $100/hour contract works more like $93.75/hour across a full contract year.</p>
+          <div class="form-actions no-print">
+            <button id="shareBtn" class="btn btn-secondary-panel" type="button">Copy share link</button>
             <p id="shareFeedback" class="muted small-copy" aria-live="polite"></p>
-          </section>
-        </details>
-      </section>
-
-      <section class="panel" id="breakdownPanel" hidden>
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">Breakdown</p>
-              <h2 id="breakdownHeading">Detailed compensation breakdown</h2>
-            </div>
-            <p>Open for the supporting numbers behind the headline answer.</p>
-          </summary>
-          <div id="resultCards" class="result-grid result-grid-expanded" aria-live="polite"></div>
-        </details>
-      </section>
-
-      <section class="panel" aria-labelledby="helpHeading">
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">How to use it</p>
-              <h2 id="helpHeading">Look past the posted hourly rate</h2>
-            </div>
-            <p>Open for a quick explanation of nominal pay, adjusted pay, and effective hourly rate.</p>
-          </summary>
-          <div class="info-grid">
-            <article class="info-card">
-              <h3>Nominal annual income</h3>
-              <p>This is the simple yearly total from your hourly rate, hours per week, and weeks per year before any unpaid vacation or benefits costs are deducted.</p>
-            </article>
-            <article class="info-card">
-              <h3>Adjusted annual income</h3>
-              <p>This figure reflects what happens after unpaid vacation reduces your paid weeks and after any self-paid benefits are subtracted.</p>
-            </article>
-            <article class="info-card">
-              <h3>Effective hourly rate</h3>
-              <p>This uses full-year standard working hours so two contracts can be compared on a like-for-like basis even if their perks differ.</p>
-            </article>
           </div>
-        </details>
+        </section>
+
+        <div id="supportCards" class="support-grid" aria-live="polite"></div>
+        <div id="comparisonCards" class="comparison-summary" aria-live="polite"></div>
+        <section id="compareResults" class="panel-nested compare-results-panel" hidden></section>
       </section>
 
-      <section class="panel" aria-labelledby="formulaHeading">
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">Formula notes</p>
-              <h2 id="formulaHeading">How the calculator works</h2>
-            </div>
-            <p>Open for the plain-English formulas behind the result.</p>
-          </summary>
-          <div class="formula-grid">
-            <article class="formula-card">
-              <h3>Base annual income</h3>
-              <p>Nominal annual income = hourly rate × hours per week × weeks per year.</p>
-            </article>
-            <article class="formula-card">
-              <h3>Paid weeks</h3>
-              <p>If vacation is unpaid, paid weeks = weeks per year - unpaid vacation weeks. If vacation is paid, paid weeks stay equal to the full year.</p>
-            </article>
-            <article class="formula-card">
-              <h3>Adjusted income</h3>
-              <p>Adjusted annual income after unpaid vacation = hourly rate × hours per week × paid weeks.</p>
-            </article>
-            <article class="formula-card">
-              <h3>Benefits adjustment</h3>
-              <p>If benefits are self-paid, annual benefits cost is subtracted from adjusted annual income after unpaid vacation.</p>
-            </article>
-            <article class="formula-card">
-              <h3>Effective hourly rate</h3>
-              <p>Effective hourly rate = adjusted annual income after benefits ÷ full-year standard working hours, where standard hours = hours per week × weeks per year.</p>
-            </article>
-            <article class="formula-card">
-              <h3>Total reduction</h3>
-              <p>Total compensation reduction = annual cost of unpaid vacation + annual cost of self-paid benefits.</p>
-            </article>
+      <section id="learnSection" class="panel scroll-target-section" aria-labelledby="learnHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Learn</p>
+            <h2 id="learnHeading">How to think about effective hourly rate</h2>
           </div>
-        </details>
+          <p>Use these quick notes when you want the reasoning behind the number.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>What it means</h3>
+            <p>Your effective hourly rate is your adjusted annual earnings divided by your full-year contract hours. It gives you a cleaner way to compare offers than using the headline rate alone.</p>
+          </article>
+          <article class="info-card">
+            <h3>Why unpaid vacation matters</h3>
+            <p>If you are not billing during time off, those unpaid weeks reduce annual income even though the posted hourly rate stays the same.</p>
+          </article>
+          <article class="info-card">
+            <h3>Why self-paid benefits matter</h3>
+            <p>Health, dental, disability, or insurance costs come out of your compensation if you fund them yourself.</p>
+          </article>
+          <article class="info-card">
+            <h3>Compare total compensation</h3>
+            <p>A contract with a lower hourly rate can still be the better offer if it includes paid vacation, benefits, or other support you would otherwise fund yourself.</p>
+          </article>
+          <article class="info-card">
+            <h3>When a higher rate can be worse</h3>
+            <p>A bigger headline number can hide more unpaid time, weaker benefits, or higher contractor costs, leaving you with less real compensation over the year.</p>
+          </article>
+          <article class="info-card">
+            <h3>Plain-English formula</h3>
+            <p id="formulaCopy">Adjusted annual earnings = gross billed income - unpaid vacation impact - benefits cost - unpaid sick time - contractor costs + bonus. Effective hourly rate = adjusted annual earnings / full-year contract hours.</p>
+          </article>
+        </div>
       </section>
 
-      <section id="faqSection" class="panel">
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">FAQ</p>
-              <h2 id="faqHeading">Common questions about contractor pay</h2>
-            </div>
-            <p>Open for the FAQ list. Each answer stays collapsed until you expand it.</p>
-          </summary>
-          <div class="faq-list">
-            <details class="faq-item">
-              <summary>What is an effective hourly rate?</summary>
-              <p>An effective hourly rate is your adjusted annual compensation divided by your full-year standard working hours. It reflects unpaid time off and self-paid benefits instead of only the posted contract rate.</p>
-            </details>
-            <details class="faq-item">
-              <summary>How do unpaid vacation weeks affect contractor pay?</summary>
-              <p>Unpaid vacation lowers the number of paid weeks in the year. That reduces annual income even when the hourly rate itself stays unchanged.</p>
-            </details>
-            <details class="faq-item">
-              <summary>How do self-paid benefits affect my contract rate?</summary>
-              <p>If you pay for your own benefits, those costs reduce your real compensation. That means a contract can look strong on paper but be weaker after those costs are deducted.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Is a higher hourly contract rate always better?</summary>
-              <p>No. A higher posted rate can still be a worse deal if another offer includes paid vacation or employer-paid benefits that protect more of your annual income.</p>
-            </details>
-            <details class="faq-item">
-              <summary>How can I compare two contractor offers fairly?</summary>
-              <p>Use the same schedule assumptions for both offers, then compare adjusted annual income after benefits and effective hourly rate rather than only comparing the posted rate.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Should I factor unpaid vacation into my hourly rate?</summary>
-              <p>Yes. If you expect unpaid time off during the year, building that into your target rate helps prevent surprises when your annual income is lower than the headline rate suggests.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Should contractors account for benefits when comparing jobs?</summary>
-              <p>Yes. Benefits can materially change the value of an offer, especially when one contract covers them and another requires you to pay for them yourself.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Why use full-year standard hours for the effective hourly rate?</summary>
-              <p>Using full-year standard hours creates a consistent baseline. It makes contract offers easier to compare on a like-for-like basis even when vacation and benefits differ.</p>
-            </details>
+      <section class="panel" aria-labelledby="canadaContextHeading-rate-calculator">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Canadian context</p>
+            <h2 id="canadaContextHeading-rate-calculator">How Canadian contractors can use this comparison</h2>
           </div>
-        </details>
+          <p>A posted contract rate can look strong on paper and still fall behind once unpaid vacation, self-paid benefits, and real working weeks are counted. This is where the offer becomes easier to compare fairly.</p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="trust-label">Canadian context</span>
+            <strong>Budget fit</strong>
+            <p>If the adjusted pay is lower than expected, compare the monthly impact in the <a href="https://simplekit.app/budget-planner/">Budget Planner</a>.</p>
+          </article>
+          <article>
+            <span class="trust-label">Canadian context</span>
+            <strong>After-tax reality</strong>
+            <p>If the contract decision changes how you think about take-home income, compare it against the <a href="https://simplekit.app/take-home-pay-calculator/">Canadian Take-Home Pay Calculator</a>.</p>
+          </article>
+          <article>
+            <span class="trust-label">Canadian context</span>
+            <strong>Longer-term planning</strong>
+            <p>If the rate decision changes savings goals, connect it to the <a href="https://simplekit.app/savings-goal-calculator/">Savings Goal Calculator</a> or the <a href="https://simplekit.app/net-worth-calculator/">Net Worth Calculator</a>.</p>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="faqSection" class="panel" aria-labelledby="faqHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2 id="faqHeading">Common questions about contractor pay</h2>
+          </div>
+          <p>These answers stay short and practical so you can compare offers with less guesswork.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is an effective hourly rate?</summary>
+            <p>An effective hourly rate is your adjusted annual earnings divided by your full-year standard contract hours. It helps you compare offers more fairly than looking only at the advertised rate.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I compare contractor offers fairly?</summary>
+            <p>Use the same weekly hours and weeks per year for each offer, then compare adjusted annual earnings and effective hourly rate instead of only comparing the posted rate.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does unpaid vacation reduce hourly rate?</summary>
+            <p>Yes. If time off is unpaid, you have fewer paid weeks in the year, so the contract is worth less than the headline rate suggests.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do self-paid benefits affect compensation?</summary>
+            <p>If you cover your own benefits, that annual cost comes out of what the contract is really worth.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is a higher contractor rate always better?</summary>
+            <p>No. A higher rate can still be weaker overall if another offer includes paid vacation, paid benefits, or fewer out-of-pocket contractor costs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Should contractors compare annual earnings instead of hourly pay?</summary>
+            <p>Yes. Annual earnings make the hidden gaps easier to see, especially when paid time off and benefits differ.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does this calculator include taxes?</summary>
+            <p>No. It is a pre-tax planning and comparison tool. Taxes, province-specific rules, and incorporation decisions are outside the scope.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use this to compare permanent vs contract work?</summary>
+            <p>Yes, as a rough comparison tool. You can model a permanent role by treating paid vacation and benefits as included, then compare the adjusted annual value against a contractor offer.</p>
+          </details>
+        </div>
       </section>
 
       <section class="panel" aria-labelledby="relatedHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Related tools</p>
-            <h2 id="relatedHeading">More SimpleKit calculators for planning ahead</h2>
+            <h2 id="relatedHeading">More SimpleKit tools for comparing money decisions</h2>
           </div>
-          <p>These tools pair well with contract income planning and broader cash flow decisions.</p>
+          <p>These calculators pair well with contract planning, budgeting, and longer-term decision making.</p>
         </div>
         <div id="relatedTools" class="related-grid"></div>
       </section>
 
-      <section class="panel">
-        <details>
-          <summary class="panel-header">
-            <div>
-              <p class="section-kicker">Disclaimer</p>
-              <h2 id="disclaimerHeading">Planning tool only</h2>
-            </div>
-            <p>Open for the full planning disclaimer and scope notes.</p>
-          </summary>
-          <p>
-            This calculator is for planning and comparison purposes only and does not provide tax, legal, employment, or financial advice. Real contracts may also include overtime, bonuses, statutory holidays, taxes, reimbursable expenses, equipment costs, incorporation costs, and other terms that affect take-home compensation.
-          </p>
-        </details>
+      <section class="panel" aria-labelledby="disclaimerHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Disclaimer</p>
+            <h2 id="disclaimerHeading">Planning tool only</h2>
+          </div>
+          <p>This is a comparison tool, not tax, legal, employment, or financial advice.</p>
+        </div>
+        <p>
+          This calculator is for planning and comparison purposes only and does not provide tax, legal, employment, or financial advice. Real contracts may also include overtime, bonuses, statutory holidays, taxes, reimbursable expenses, equipment costs, incorporation costs, and other terms that affect take-home compensation.
+        </p>
       </section>
+
+      <div class="mobile-summary-bar" aria-live="polite">
+        <div>
+          <span>Offered</span>
+          <strong id="mobileAdvertisedRate">$100/hr</strong>
+        </div>
+        <div>
+          <span>Effective</span>
+          <strong id="mobileEffectiveRate">$93.75/hr</strong>
+        </div>
+        <div>
+          <span>Annual</span>
+          <strong id="mobileAnnualEarnings">$195,000</strong>
+        </div>
+      </div>
 
       <div data-simplekit-support></div>
       <div data-simplekit-footer></div>

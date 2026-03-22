@@ -4,16 +4,16 @@ const TEMPLATE = {
   supportUrl: "https://buymeacoffee.com/ashleysnl",
   storageKey: "simplekit.mortgage-vs-invest.v1",
   seoDescription:
-    "SimpleKit Mortgage vs Invest Calculator for Canadians comparing extra mortgage payments against investing in a TFSA, RRSP, or taxable account.",
+    "Compare paying down your mortgage faster versus investing in Canada. Model TFSA, RRSP, taxable investing, and mortgage-interest tradeoffs in one planner.",
 };
 
 const ROUTES = {
   relatedTools: {
-    tfsaRrsp: "../33_Simplekit RRSP TFSA Calculator/",
-    fire: "../35_FIRE Simplekit/",
-    netWorth: "../34_Net Worth/",
-    retirement: "../33_Retirement Planner V3/",
-    cpp: "../32_Simplekit CPP Calculator/",
+    tfsaRrsp: "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+    fire: "https://simplekit.app/fire-calculator/",
+    netWorth: "https://simplekit.app/net-worth-calculator/",
+    retirement: "https://simplekit.app/retirement-planner/",
+    cpp: "https://simplekit.app/cpp-calculator/",
   },
 };
 
@@ -865,7 +865,7 @@ function renderRelatedTools() {
 }
 
 function syncMeta() {
-  document.title = "SimpleKit Mortgage vs Invest Calculator";
+  document.title = "Mortgage Paydown vs Invest Calculator Canada | SimpleKit";
   el.metaDescription?.setAttribute("content", TEMPLATE.seoDescription);
   el.metaThemeColor?.setAttribute("content", "#0f6abf");
   el.metaOgTitle?.setAttribute("content", "SimpleKit Mortgage vs Invest Calculator");

@@ -1417,12 +1417,12 @@
     const hrefMatches = (fragment) => cards.find((card) => card.getAttribute("href")?.includes(fragment));
     const highlights = [];
     const orderedCards = [];
-    const debtCard = hrefMatches("mortgage.simplekit.app");
-    const compoundCard = hrefMatches("investment.simplekit.app");
-    const netWorthCard = hrefMatches("networth.simplekit.app");
-    const fireCard = hrefMatches("fire.simplekit.app");
-    const retirementCard = hrefMatches("retirement.simplekit.app");
-    const mortgageCard = hrefMatches("mortgagecalculator.simplekit.app");
+    const debtCard = hrefMatches("/mortgage-paydown-vs-invest-calculator/");
+    const compoundCard = hrefMatches("/compound-interest-calculator/");
+    const netWorthCard = hrefMatches("/net-worth-calculator/");
+    const fireCard = hrefMatches("/fire-calculator/");
+    const retirementCard = hrefMatches("/retirement-planner/");
+    const mortgageCard = hrefMatches("/mortgage-calculator/");
 
     if (metrics.goals.debt > 0 || state.fixedExpenses.some((row) => row.label.toLowerCase().includes("debt") && amountToNumber(row.amount) > 0)) {
       highlights.push(debtCard);

@@ -9186,6 +9186,7 @@ function bindEvents() {
     ui.pendingPlanStartScroll = true;
     savePlan();
     renderAll();
+    queueGuidedSetupScroll();
   });
 
   el.landingDemoBtn?.addEventListener("click", () => {
@@ -9493,7 +9494,11 @@ function handleDocumentClick(event) {
   if (navTargetBtn && !(navTargetBtn instanceof HTMLButtonElement && navTargetBtn.classList.contains("tab-btn"))) {
     const navTarget = navTargetBtn.getAttribute("data-nav-target");
     if (navTarget) {
+      if (navTarget === "plan")
+        ui.pendingPlanStartScroll = true;
       setActiveNav(navTarget);
+      if (navTarget === "plan")
+        queueGuidedSetupScroll();
       return;
     }
   }
@@ -10235,12 +10240,20 @@ function scrollPlanToGuidedSetup() {
 }
 
 function queueGuidedSetupScroll() {
-  const delays = [0, 120, 260, 520];
-  delays.forEach((delay) => {
-    setTimeout(() => {
-      scrollPlanToGuidedSetup();
-    }, delay);
-  });
+  const runScroll = () => {
+    scrollPlanToGuidedSetup();
+    setTimeout(scrollPlanToGuidedSetup, 140);
+    setTimeout(scrollPlanToGuidedSetup, 320);
+    setTimeout(scrollPlanToGuidedSetup, 640);
+  };
+  if (typeof requestAnimationFrame === "function") {
+    requestAnimationFrame(runScroll);
+    requestAnimationFrame(() => {
+      setTimeout(runScroll, 60);
+    });
+    return;
+  }
+  runScroll();
 }
 
 function getDashboardScenario() {
@@ -11605,4 +11618,3 @@ function registerServiceWorker() {
     // ignore registration errors in local file mode
   });
 }
-
