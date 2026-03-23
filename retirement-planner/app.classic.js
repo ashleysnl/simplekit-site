@@ -6601,11 +6601,11 @@ function inlineNote(title, text) {
   `;
 }
 
-function simpleNumberField({ label, bind, value, min, max, step = 1, suffix = "", hint = "", disabled = false, percent = false, inputMode = "decimal", displayAs = "" }) {
+function simpleNumberField({ label, bind, value, min, max, step = 1, suffix = "", hint = "", disabled = false, percent = false, inputMode = "decimal", displayAs = "", tooltipKey = "" }) {
   return `
     <label class="guided-field ${disabled ? "is-disabled" : ""}">
-      <span class="label-row">${label}</span>
-      <div class="guided-input-wrap">
+      <span class="label-row">${label}${tooltipKey ? ` ${tooltipButton(tooltipKey)}` : ""}</span>
+      <div class="guided-input-wrap ${suffix ? "has-suffix" : ""}">
         <input
           type="number"
           data-bind="${bind}"
@@ -6634,7 +6634,6 @@ function buildWizardStepHtml(step, ctx) {
     ageNow,
     numberField,
     selectField,
-    toPct,
     formatCurrency,
   } = ctx;
 
@@ -6642,8 +6641,6 @@ function buildWizardStepHtml(step, ctx) {
   const yearsToRetirement = Math.max(0, Number(state.profile.retirementAge || 65) - age);
   const guided = state.uiState.guided || {};
   const annualIncome = Math.max(0, Number(state.profile.annualIncome || 0));
-  const retirementIncomePercent = Math.max(0.3, Number(guided.retirementIncomePercent || 0.7));
-  const estimatedRetirementIncome = annualIncome * retirementIncomePercent;
   const firstRetirementRow = model?.base?.rows?.find((row) => row.age === state.profile.retirementAge) || model?.base?.rows?.[0] || null;
   const projectedBalance = Math.max(0, Number(model?.kpis?.balanceAtRetirement || firstRetirementRow?.balanceStart || 0));
 
@@ -6658,17 +6655,10 @@ function buildWizardStepHtml(step, ctx) {
         <div class="guided-step-main">
           <div class="guided-grid guided-grid-basics">
             ${simpleNumberField({ label: "Your age", bind: "profile.birthYear", value: age, min: 18, max: 85, step: 1, hint: "We store this as birth year behind the scenes.", displayAs: "age", inputMode: "numeric" })}
-            ${numberField("Current savings", "savings.currentTotal", state.savings.currentTotal, { min: 0, max: 5000000, step: 1000 }, "currentSavings", false, false, true)}
-            ${numberField("Annual income", "profile.annualIncome", annualIncome, { min: 0, max: 1000000, step: 1000 }, "annualIncome", false, false, true)}
-            ${numberField("Retirement age", "profile.retirementAge", state.profile.retirementAge, { min: 50, max: 75, step: 1 }, "retirementAge", false, false, true)}
+            ${simpleNumberField({ label: "Current savings", bind: "savings.currentTotal", value: state.savings.currentTotal, min: 0, max: 5000000, step: 1000, hint: "We will handle the TFSA and RRSP split later.", tooltipKey: "currentSavings" })}
+            ${simpleNumberField({ label: "Annual income", bind: "profile.annualIncome", value: annualIncome, min: 0, max: 1000000, step: 1000, tooltipKey: "annualIncome" })}
+            ${selectField("Province", "profile.province", Object.entries(provinces).map(([value, label]) => ({ value, label })), state.profile.province, "province", true)}
           </div>
-          <div class="guided-inline-row">
-            <label class="inline-check">
-              <input type="checkbox" data-bind="uiState.guided.estimateRetirementAge" ${guided.estimateRetirementAge ? "checked" : ""} />
-              I don't know. Estimate a typical retirement age for me.
-            </label>
-          </div>
-          ${explainer("Quick read", `You have about ${yearsToRetirement} years until retirement based on the current target. You can refine everything later without losing this first plan.`)}
         </div>
         <aside class="guided-step-side">
           <div class="guided-summary-card">
@@ -6685,34 +6675,19 @@ function buildWizardStepHtml(step, ctx) {
   }
 
   if (step === 2) {
-    const lifestylePreset = guided.lifestylePreset || "comfortable";
     return `
       <div class="wizard-step-head">
         <p class="wizard-step-kicker">Step 2</p>
-        <h3>Lifestyle</h3>
-        <p class="muted">Pick a simple retirement lifestyle, then use a percent of income or a dollar target if you want more control.</p>
-      </div>
-      <div class="choice-card-grid">
-        ${optionButton({ action: "set-lifestyle-preset", value: "basic", label: "Basic lifestyle", active: lifestylePreset === "basic", sublabel: "Leaner spending, more buffer" })}
-        ${optionButton({ action: "set-lifestyle-preset", value: "comfortable", label: "Comfortable", active: lifestylePreset === "comfortable", sublabel: "A balanced default for most plans" })}
-        ${optionButton({ action: "set-lifestyle-preset", value: "higher", label: "Higher income", active: lifestylePreset === "higher", sublabel: "More travel and discretionary spending" })}
+        <h3>Your retirement goal</h3>
+        <p class="muted">Set your retirement age and the annual spending target you want in retirement.</p>
       </div>
       <div class="guided-card">
-        <div class="segmented-control" aria-label="Retirement income mode">
-          ${segmentedButton({ action: "set-retirement-income-mode", value: "percent", label: "Use % of income", active: guided.retirementIncomeMode !== "dollar" })}
-          ${segmentedButton({ action: "set-retirement-income-mode", value: "dollar", label: "Use dollar amount", active: guided.retirementIncomeMode === "dollar" })}
-        </div>
         <div class="guided-grid compact-mobile-two">
-          ${guided.retirementIncomeMode === "dollar"
-            ? numberField("Desired retirement income", "profile.desiredSpending", state.profile.desiredSpending, { min: 12000, max: 350000, step: 500 }, "desiredSpending", false, false, true)
-            : simpleNumberField({ label: "Target retirement income", bind: "uiState.guided.retirementIncomePercent", value: Math.round(retirementIncomePercent * 100), min: 30, max: 120, step: 1, suffix: "% of income", hint: `About ${formatCurrency(estimatedRetirementIncome)} per year with your current income.`, percent: true, inputMode: "numeric" })}
+          ${numberField("Retirement age", "profile.retirementAge", state.profile.retirementAge, { min: 50, max: 75, step: 1 }, "retirementAge", false, false, true)}
+          ${numberField("Annual retirement spend (today's dollars)", "profile.desiredSpending", state.profile.desiredSpending, { min: 12000, max: 350000, step: 500 }, "desiredSpending", false, false, true)}
         </div>
       </div>
       ${explainer("Why this matters", "A retirement target turns your income and savings into a real answer. Start simple here. Fine-tune inflation and taxes later if you want.")}
-      <div class="guided-learn-stack">
-        ${inlineNote("What is a safe withdrawal rate?", "It is a planning rule of thumb for how much savings can support income over a long retirement. This planner uses a full year-by-year projection instead of a single rule.")}
-        ${inlineNote("Why inflation matters", "Your target is entered in today's dollars so it feels familiar. The projection then grows future spending using the inflation assumption.")}
-      </div>
     `;
   }
 
@@ -6731,8 +6706,8 @@ function buildWizardStepHtml(step, ctx) {
         <div class="guided-grid compact-mobile-two">
           ${guided.savingsContributionMode === "percent"
             ? simpleNumberField({ label: "Savings rate", bind: "savings.annualContribution", value: annualIncome > 0 ? Math.round((Number(state.savings.annualContribution || 0) / annualIncome) * 100) : 0, min: 0, max: 60, step: 1, suffix: "% of income", hint: annualIncome > 0 ? `${formatCurrency(state.savings.annualContribution)} per year at current income.` : "", displayAs: "income-percent", inputMode: "numeric" })
-            : numberField("Annual savings", "savings.annualContribution", state.savings.annualContribution, { min: 0, max: 250000, step: 500 }, "annualContribution", false, false, true)}
-          ${simpleNumberField({ label: "RRSP share", bind: "uiState.guided.rrspShare", value: Math.round(Number(guided.rrspShare || 0.6) * 100), min: 0, max: 100, step: 5, suffix: "%", hint: "TFSA automatically gets the rest.", percent: true, inputMode: "numeric" })}
+            : simpleNumberField({ label: "Annual savings", bind: "savings.annualContribution", value: state.savings.annualContribution, min: 0, max: 250000, step: 500, tooltipKey: "annualContribution" })}
+          ${simpleNumberField({ label: "RRSP share", bind: "uiState.guided.rrspShare", value: Math.round(Number(guided.rrspShare || 0.6) * 100), min: 0, max: 100, step: 5, suffix: "%", hint: "TFSA automatically gets the rest.", percent: true, inputMode: "numeric", tooltipKey: "rrsp" })}
         </div>
         <label class="inline-check">
           <input type="checkbox" data-bind="uiState.guided.useCanadianDefaults" ${guided.useCanadianDefaults ? "checked" : ""} />
@@ -6751,37 +6726,18 @@ function buildWizardStepHtml(step, ctx) {
     return `
       <div class="wizard-step-head">
         <p class="wizard-step-kicker">Step 4</p>
-        <h3>Advanced assumptions</h3>
-        <p class="muted">These are collapsed by default so beginners can keep moving. The planner already starts with Canadian defaults.</p>
+        <h3>Retirement income sources</h3>
+        <p class="muted">Add the income you expect from CPP, OAS, and any workplace or private pension.</p>
       </div>
       <div class="guided-card">
-        <label class="inline-check">
-          <input type="checkbox" data-bind="uiState.showAdvancedControls" ${state.uiState.showAdvancedControls ? "checked" : ""} />
-          Show advanced assumptions
-        </label>
-        <p class="small-copy muted">Defaults: 5% balanced return, 2% inflation, CPP and OAS included, tax-aware income modeling on.</p>
-      </div>
-      ${state.uiState.showAdvancedControls ? `
         <div class="guided-grid compact-mobile-two">
-          ${selectField("Province", "profile.province", Object.entries(provinces).map(([value, label]) => ({ value, label })), state.profile.province, "province")}
-          ${numberField("Balanced return", "assumptions.returns.balanced", toPct(state.assumptions.returns.balanced), { min: 1, max: 12, step: 0.1 }, "riskProfile", true)}
-          ${numberField("Inflation", "assumptions.inflation", toPct(state.assumptions.inflation), { min: 0.5, max: 5, step: 0.1 }, "inflation", true)}
-          ${numberField("CPP at 65", "income.cpp.amountAt65", state.income.cpp.amountAt65, { min: 0, max: 35000, step: 100 }, "cppAmount65", false, false, true)}
-          ${numberField("CPP start age", "income.cpp.startAge", state.income.cpp.startAge, { min: 60, max: 70, step: 1 }, "cppStartAge", false, false, true)}
-          ${numberField("OAS at 65", "income.oas.amountAt65", state.income.oas.amountAt65, { min: 0, max: 12000, step: 100 }, "oasAmount65", false, false, true)}
-          ${numberField("OAS start age", "income.oas.startAge", state.income.oas.startAge, { min: 65, max: 70, step: 1 }, "oasStartAge", false, false, true)}
+          ${numberField("CPP annual amount at 65", "income.cpp.amountAt65", state.income.cpp.amountAt65, { min: 0, max: 35000, step: 100 }, "cppAmount65", false, false, true)}
+          ${numberField("OAS annual amount at 65", "income.oas.amountAt65", state.income.oas.amountAt65, { min: 0, max: 12000, step: 100 }, "oasAmount65", false, false, true)}
+          ${numberField("Pension annual amount", "income.pension.amount", state.income.pension.amount, { min: 0, max: 200000, step: 500 }, "pensionAmount", false, false, true)}
+          ${numberField("Pension start age", "income.pension.startAge", state.income.pension.startAge, { min: 50, max: 75, step: 1 }, "pensionStartAge", false, false, true)}
         </div>
-      ` : `
-        <div class="guided-placeholder-card">
-          <strong>Keeping it simple</strong>
-          <p class="muted">You can skip this step and still get a useful answer. Detailed assumptions stay available anytime in the detailed planner.</p>
-        </div>
-      `}
-      <div class="guided-learn-stack">
-        ${inlineNote("Why inflation matters", "Even modest inflation changes what your future spending target needs to be.")}
-        ${inlineNote("What is CPP?", "CPP is a monthly federal retirement benefit based on your earnings history.")}
-        ${inlineNote("Why taxes matter", "A retirement target is spending after tax. Registered withdrawals often need to be higher than the net spending gap.")}
       </div>
+      ${explainer("Why this matters", "These income sources can reduce how much of your retirement spending needs to come from savings.")}
     `;
   }
 
@@ -9185,6 +9141,8 @@ function bindEvents() {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
+    if (!state.uiState.guided) state.uiState.guided = {};
+    state.uiState.guided.retirementIncomeMode = "dollar";
     state.uiState.firstRun = false;
     state.uiState.hasStarted = true;
     state.uiState.activeNav = "plan";
@@ -10033,6 +9991,9 @@ function handleBoundInput(event) {
   setByPath(state, path, value);
 
   if (path === "income.pension.enabled" && !value) state.income.pension.amount = 0;
+  if (path === "income.pension.amount") {
+    state.income.pension.enabled = Number(state.income.pension.amount || 0) > 0;
+  }
   if (path === "profile.retirementAge") {
     state.income.pension.startAge = Math.max(state.income.pension.startAge, 40);
   }
@@ -10938,6 +10899,8 @@ function updateLearnOutputs() {
 
 
 function renderWizard() {
+  if (!state.uiState.guided) state.uiState.guided = {};
+  state.uiState.guided.retirementIncomeMode = "dollar";
   const step = clamp(state.uiState.wizardStep || 1, 1, WIZARD_STEP_COUNT);
   state.uiState.wizardStep = step;
   const progress = (step / WIZARD_STEP_COUNT) * 100;

@@ -580,6 +580,7 @@ summary:focus-visible,
 
 .guided-grid-basics {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
 }
 
 .guided-card,
@@ -649,6 +650,20 @@ summary:focus-visible,
   background: #fff;
 }
 
+.guided-input-wrap.has-suffix input {
+  padding-right: 42px;
+}
+
+.guided-input-wrap input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.guided-input-wrap input[type="number"]::-webkit-outer-spin-button,
+.guided-input-wrap input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .guided-input-suffix {
   position: absolute;
   right: 14px;
@@ -695,8 +710,8 @@ summary:focus-visible,
 .segmented-control {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 6px;
+  gap: 6px;
+  padding: 4px;
   border-radius: 999px;
   background: #edf5fc;
   border: 1px solid #dbe7f4;
@@ -707,7 +722,8 @@ summary:focus-visible,
   border: 0;
   background: transparent;
   border-radius: 999px;
-  padding: 10px 14px;
+  padding: 7px 12px;
+  line-height: 1.1;
   color: #234f78;
   font-weight: 700;
   cursor: pointer;
