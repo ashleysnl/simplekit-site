@@ -105,13 +105,13 @@ Cloudflare DNS and the repository sitemap were reconciled. All legacy calculator
 
 ## 1.2 Implement permanent redirects
 
-- [ ] Configure server/edge redirects so each retired calculator subdomain returns a permanent redirect to its exact canonical directory page.
-- [ ] Preserve useful paths/query parameters only where doing so makes sense.
-- [ ] Avoid redirect chains.
+- [x] Configure server/edge redirects so each retired calculator subdomain returns a permanent redirect to its exact canonical directory page. Implemented with Cloudflare Bulk Redirects (`simplekit_legacy_redirects`) because the Free-plan Single Redirect quota is 10 rules; the Bulk Redirect list now contains all 22 mappings.
+- [x] Preserve useful paths/query parameters only where doing so makes sense. Query strings are preserved; legacy path suffixes are intentionally not appended to canonical calculator destinations.
+- [x] Avoid redirect chains. All configured targets point directly to final `https://simplekit.app/<tool>/` canonical URLs.
 - [ ] Confirm the destination returns HTTP 200.
-- [ ] Confirm old hosts do not continue serving duplicate calculator pages.
+- [x] Confirm old hosts do not continue serving duplicate calculator pages at the Cloudflare configuration layer: the enabled account-level `http_request_redirect` rule evaluates the 22-host Bulk Redirect list before origin delivery.
 
-**Validation:** Test each hostname manually and with an HTTP status check.
+**Validation:** Cloudflare configuration validated 2026-10-01: Bulk Redirect asynchronous update completed successfully; list contains 22 entries; all entries are status 301; the account-level `http_request_redirect` rule is enabled. An independent live HTTP header check from the available runtime timed out, so browser/external HTTP confirmation remains part of Phase 1.4 rather than being falsely recorded as passed.
 
 ## 1.3 Retire `core.simplekit.app` as a website
 
@@ -483,10 +483,11 @@ Use this section to record material work so future audits can distinguish planne
 | Date | Phase / Task | Change | Validation | Commit / PR |
 |---|---|---|---|---|
 | 2026-10-01 | Plan created | Added repository SEO improvement plan based on initial GitHub, live-site, and Cloudflare audit. | Plan committed to repository. | `987c573` |
-| 2026-10-01 | Phase 0 / 1.1 | Reconciled Cloudflare DNS with sitemap; built authoritative 22-host redirect map; confirmed no existing dynamic redirect entry-point ruleset. | 22 legacy calculator hosts map 1:1 to 22 canonical calculator URLs. | pending |
+| 2026-10-01 | Phase 0 / 1.1 | Reconciled Cloudflare DNS with sitemap; built authoritative 22-host redirect map. | 22 legacy calculator hosts map 1:1 to 22 canonical calculator URLs. | `ea94454` |
+| 2026-10-01 | Phase 1.2 | Reconciled existing Cloudflare Bulk Redirect configuration, verified 20 existing mappings, and added missing `taxchecklist` and `contractorrate` mappings. | Bulk operation completed; list now has 22 entries, all 301 with query preservation; enabled account redirect rule references the list. Independent runtime HTTP check timed out, so external/browser validation remains in Phase 1.4. | Cloudflare config |
 
 ---
 
 # Next task
 
-**Next: Phase 1.2 — implement the verified 22-host permanent redirect configuration in Cloudflare, then validate every redirect before proceeding to `core.simplekit.app`. Phase 0 Search Console/GA4 baseline items remain open until those datasets are captured.**
+**Next: Phase 1.3 — retire the stale `core.simplekit.app` homepage without breaking shared CSS/JS assets. Then Phase 1.4 will perform final external/browser redirect validation. Phase 0 Search Console/GA4 baseline items remain open until those datasets are captured.**
