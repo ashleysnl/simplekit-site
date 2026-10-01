@@ -277,38 +277,42 @@ Create a complete 22-tool matrix before closing this phase. Suggested columns:
 
 ## Homepage
 
-Current homepage metadata attempts to enumerate too many tool categories.
+- [x] Shorten and refocus homepage title.
+- [x] Shorten meta description.
+- [x] Keep primary positioning Canadian where appropriate.
+- [x] Avoid keyword-list style metadata.
+- [x] Ensure H1 communicates the product benefit rather than duplicating the title.
 
-- [ ] Shorten and refocus homepage title.
-- [ ] Shorten meta description.
-- [ ] Keep primary positioning Canadian where appropriate.
-- [ ] Avoid keyword-list style metadata.
-- [ ] Ensure H1 communicates the product benefit rather than duplicating the title.
-
-Working title direction:
+Final title:
 
 > Free Financial Calculators & Planning Tools for Canadians | SimpleKit
 
-Working description direction:
+Final description:
 
-> Free Canadian calculators for retirement, budgeting, mortgages, debt, investing, taxes and financial planning. No signup required.
+> Free Canadian calculators for retirement, budgeting, mortgages, debt, investing, taxes, and everyday money decisions. No signup required.
 
-These are working directions, not locked copy. Validate against Search Console query data before finalizing.
+The homepage now owns the broad SimpleKit value proposition rather than enumerating individual calculator keywords.
 
 ## Tools hub
 
-- [ ] Ensure `/tools/` has a distinct title/H1/description from the homepage.
-- [ ] Add useful category copy rather than only a grid of links.
-- [ ] Organize tools into clear topical groups.
-- [ ] Link to relevant Learn hubs/guides.
+- [x] Give `/tools/` a distinct title/H1/description focused on calculator discovery.
+- [x] Keep useful category copy around the existing grouped tool catalogue.
+- [x] Organize tools into clear goal-based groups.
+- [x] Add contextual links into relevant Learn guides.
+
+The Tools hub now owns **browse/discovery intent**: users choose a financial goal and then the matching calculator.
 
 ## Learn hub
 
-- [ ] Give `/learn/` a distinct search purpose.
-- [ ] Organize guides into topic clusters.
-- [ ] Make calculator links contextually useful rather than decorative.
+- [x] Give `/learn/` a distinct educational search purpose.
+- [x] Organize the six existing guides into topic clusters.
+- [x] Add direct guide-to-calculator next steps so tool links are contextual rather than decorative.
 
-**Phase 4 done when:** Homepage, Tools, and Learn each have a clear and non-overlapping search purpose.
+The Learn hub now owns **education intent**: understand a concept first, then move into the corresponding calculator or planner.
+
+**Validation — 2026-10-01:** All three hubs retain exactly one self-referencing canonical and one H1; titles/descriptions are distinct; no legacy calculator-subdomain links were introduced. Homepage description is 137 characters, Tools 157, Learn 142. Existing 22-tool catalogue and six-guide inventory were preserved.
+
+**Phase 4 status:** **COMPLETE**.
 
 ---
 
@@ -551,9 +555,10 @@ Use this section to record material work so future audits can distinguish planne
 | 2026-10-01 | Phase 3 Batch 1 | Improved Take-Home Pay, Mortgage, DTI, RRSP vs TFSA, and Mortgage Paydown vs Invest. Added visible CRA/CMHC/OSFI/FCAC primary-source references and normalized application schema where needed; no calculator JS/calculation logic changed. | All five changes reviewed as one-file `index.html` diffs and merged through PRs. Merge commits: Take-Home Pay `f02af48`; Mortgage `92cf246`; DTI `ce62748`; RRSP/TFSA `ef07a5e`; Mortgage vs Invest `59aea61`. | five calculator repos |
 | 2026-10-01 | Phase 3 Batch 2 | Normalized structured data across the 13 medium-priority tools. All now declare `WebApplication`; FIRE, Savings Goal, Credit Card, Loan, Investment Fee, and Tax Checklist received `FAQPage` markup copied from their existing visible FAQ content. Pages without a visible FAQ did not receive FAQ schema. | Branch audit confirmed 13/13 have one canonical, one H1, `WebApplication`, and no remaining `SoftwareApplication`; all changes were limited to `index.html` structured data and merged through PRs. Merge commits: Retirement `77babb4`; FIRE `e44404c`; CPP `e2f14e9`; Compound `cd7ec0d`; Savings `0f4a7e4`; Net Worth `55ede2d`; Budget `35a6c68`; Debt `c36650f`; Credit Card `2b75e7a`; Loan `bda0374`; Fees `470270f`; Tax Checklist `ebe6150`; Travel `dc5b680`. | 13 calculator repos |
 | 2026-10-01 | Phase 3 Final Audit | Re-audited all 22 production calculators and closed the last FAQ-schema gaps on Take-Home Pay, DTI, and Mortgage Paydown vs Invest using their existing visible FAQ content. | Post-merge audit: 22/22 one canonical, one H1, `WebApplication`, related canonical links; 20/20 pages with visible FAQ have `FAQPage`; Retirement and Travel intentionally have no FAQ/schema; 0 `SoftwareApplication` remain. Merge commits: Take-Home Pay `78d539f`; DTI `d3c05a1`; Mortgage vs Invest `7e7198d`. Phase 3 complete. | three calculator repos + tracker |
+| 2026-10-01 | Phase 4 | Refocused homepage, Tools, and Learn around separate search intents: broad Canadian planning proposition, calculator discovery by goal, and plain-English education. Added contextual Tools-to-Learn links and guide-to-calculator next steps. | All three hubs have distinct metadata, one canonical, one H1, no legacy calculator-subdomain links; existing 22-tool catalogue and six-guide inventory preserved. | `simplekit-site` Phase 4 PR |
 
 ---
 
 # Next task
 
-**Next: Phase 4 — refocus homepage, Tools hub, and Learn hub metadata/content so each has a clear, non-overlapping search purpose.**
+**Next: Phase 5 — strengthen site-level trust, authorship, methodology, maintenance transparency, and authoritative source coverage.**
