@@ -255,6 +255,7 @@ Create a complete 22-tool matrix before closing this phase. Suggested columns:
 - [x] Populate initial 22-tool matrix from current production repository source.
 - [x] Fix highest-opportunity/weakest pages first. Batch 1 completed 2026-10-01: Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, and Mortgage Paydown vs Invest now include visible official Canadian primary-source references; application schema was normalized to `WebApplication` where needed. Calculator logic was not changed.
 - [ ] Re-audit every row after changes.
+- [x] Batch 2 schema normalization completed 2026-10-01 across all 13 medium-priority pages: all now use `WebApplication`; matching `FAQPage` schema was added only where visible FAQ content already existed. No calculator logic or visible copy changed.
 
 **Phase 3 done when:** Every production calculator meets the agreed baseline and the matrix is complete.
 
@@ -539,9 +540,10 @@ Use this section to record material work so future audits can distinguish planne
 | 2026-10-01 | Phase 2 | Audited `simplekit-site`, all 22 calculator production entry pages, shared `SimpleKit-Core/core.js`, and relevant calculator JS link maps. | No production internal navigation links use legacy calculator subdomains. `core.simplekit.app` is limited to shared asset references. One `mortgage.simplekit.app` token remains intentionally as a compatibility alias and maps directly to the canonical path. | tracker-only; no production code change required |
 | 2026-10-01 | Phase 3.2 | Built the initial 22-tool SEO matrix from current production repository source and prioritized normalization work. | 22/22 have title/meta/canonical/H1/social baseline. Main gaps are structured-data consistency, source coverage on rule-sensitive Canadian calculators, and a small number of methodology/related-link gaps. | tracker update |
 | 2026-10-01 | Phase 3 Batch 1 | Improved Take-Home Pay, Mortgage, DTI, RRSP vs TFSA, and Mortgage Paydown vs Invest. Added visible CRA/CMHC/OSFI/FCAC primary-source references and normalized application schema where needed; no calculator JS/calculation logic changed. | All five changes reviewed as one-file `index.html` diffs and merged through PRs. Merge commits: Take-Home Pay `f02af48`; Mortgage `92cf246`; DTI `ce62748`; RRSP/TFSA `ef07a5e`; Mortgage vs Invest `59aea61`. | five calculator repos |
+| 2026-10-01 | Phase 3 Batch 2 | Normalized structured data across the 13 medium-priority tools. All now declare `WebApplication`; FIRE, Savings Goal, Credit Card, Loan, Investment Fee, and Tax Checklist received `FAQPage` markup copied from their existing visible FAQ content. Pages without a visible FAQ did not receive FAQ schema. | Branch audit confirmed 13/13 have one canonical, one H1, `WebApplication`, and no remaining `SoftwareApplication`; all changes were limited to `index.html` structured data and merged through PRs. Merge commits: Retirement `77babb4`; FIRE `e44404c`; CPP `e2f14e9`; Compound `cd7ec0d`; Savings `0f4a7e4`; Net Worth `55ede2d`; Budget `35a6c68`; Debt `c36650f`; Credit Card `2b75e7a`; Loan `bda0374`; Fees `470270f`; Tax Checklist `ebe6150`; Travel `dc5b680`. | 13 calculator repos |
 
 ---
 
 # Next task
 
-**Next: Phase 3 Batch 2 — normalize the medium-priority pages, focusing first on missing `WebApplication` schema and matching `FAQPage` schema only where visible FAQ content already exists. Avoid unnecessary source sections on generic arithmetic tools.**
+**Next: Phase 3 final re-audit — recheck all 22 production calculators against the matrix, close remaining real methodology/FAQ/related-link/source gaps, and mark Phase 3 complete before moving to homepage and hub metadata.**
