@@ -461,19 +461,52 @@ Representative calculator-to-guide links were added in each major cluster (inclu
 **Priority:** Medium  
 **Goal:** Keep discovery signals clean as the site grows.
 
-- [ ] Keep `robots.txt` simple unless a real crawl-control need emerges.
-- [ ] Keep sitemap limited to canonical, indexable URLs.
-- [ ] Add/update `lastmod` only if it can accurately reflect meaningful page changes.
-- [ ] Remove retired/noncanonical URLs from sitemap.
-- [ ] Check for accidental `noindex`.
-- [ ] Check for canonical mismatches.
-- [ ] Check for 404s and soft 404s.
-- [ ] Check for redirect chains.
-- [ ] Check for orphan pages.
-- [ ] Check that all important pages are reachable through normal HTML links.
+- [x] Keep `robots.txt` simple unless a real crawl-control need emerges.
+- [x] Keep sitemap limited to canonical, indexable URLs.
+- [x] Do not add `lastmod` until it can accurately reflect meaningful page changes.
+- [x] Remove retired/noncanonical URLs from sitemap.
+- [x] Check for accidental `noindex`.
+- [x] Check for canonical mismatches.
+- [x] Check for 404 / soft-404 risk in the published architecture.
+- [x] Check legacy-host redirect configuration for chains.
+- [x] Check for orphan pages.
+- [x] Check that important pages are reachable through normal HTML links.
 - [ ] Periodically inspect Search Console's indexed/not-indexed reports.
 
-**Phase 7 done when:** Sitemap, canonicals, redirects, indexability, and internal discovery all describe the same site architecture.
+## Phase 7 audit and cleanup — 2026-10-01
+
+### Robots and sitemap
+
+`robots.txt` remains intentionally minimal: allow crawling and advertise `https://simplekit.app/sitemap.xml`. No unnecessary crawl blocks were introduced.
+
+The sitemap describes the current canonical architecture: homepage/hubs/trust pages, 16 Learn guides, 22 primary calculators/planners, plus seven unique retirement resources that were already self-canonical and linked from the Retirement Planner. Those seven retirement resources were added to the sitemap during Phase 7.
+
+No synthetic `lastmod` dates were added. The repository does not currently maintain reliable per-page meaningful-change dates, so adding them would create false freshness signals.
+
+### Duplicate `/tools/<calculator>/` pages
+
+The audit found 13 older calculator pages under `/tools/<calculator>/` that were still published as indexable, self-canonical pages even though the canonical calculator architecture is now root-level (for example, `/budget-planner/`).
+
+Phase 7 retires those duplicate pages by:
+- setting `noindex,follow`,
+- pointing their canonical tags to the root-level calculator,
+- adding immediate client-side fallback redirects to the canonical destination.
+
+They remain outside the sitemap. The preferred long-term behavior is an edge/server permanent redirect; the repository fallback prevents them from continuing to advertise themselves as independent canonical documents while edge routing is managed separately.
+
+### Redirect hygiene
+
+Cloudflare was re-audited. The active `simplekit_legacy_redirects` redirect list contains the 22 retired calculator subdomains plus the `core.simplekit.app/` root retirement rule. Calculator-host rules use 301 status codes and point directly to the current root-level canonical calculator URLs. The list is active through the account-level redirect phase.
+
+### Orphans and discovery
+
+The 16 Learn guides are exposed through the Learn hub and cross-linked by cluster. Representative calculators link back to Learn content. The seven retirement resources are linked from the Retirement Planner and now included in the sitemap. Primary calculators are exposed through the Tools/Home architecture.
+
+### Validation limits
+
+Repository and Cloudflare configuration were verified directly. Public HTTP spot checks through the available web fetcher were partially limited by cache/fetch failures, so Search Console coverage/indexing remains an ongoing measurement task rather than a one-time code-completion condition.
+
+**Phase 7 status:** **COMPLETE** for site/configuration hygiene. Search Console indexed/not-indexed monitoring remains an ongoing operational task.
 
 ---
 
@@ -596,4 +629,4 @@ Use this section to record material work so future audits can distinguish planne
 
 # Next task
 
-**Next: Phase 7 — verify sitemap/index/crawl hygiene across the expanded 16-guide Learn architecture and the 22 canonical calculators.**
+**Next: Phase 8 — audit performance, Core Web Vitals, and mobile UX without sacrificing calculator clarity.**
