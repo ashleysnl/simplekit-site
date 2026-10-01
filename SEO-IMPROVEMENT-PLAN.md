@@ -484,10 +484,11 @@ Use this section to record material work so future audits can distinguish planne
 |---|---|---|---|---|
 | 2026-10-01 | Plan created | Added repository SEO improvement plan based on initial GitHub, live-site, and Cloudflare audit. | Plan committed to repository. | `987c573` |
 | 2026-10-01 | Phase 0 / 1.1 | Reconciled Cloudflare DNS with sitemap; built authoritative 22-host redirect map. | 22 legacy calculator hosts map 1:1 to 22 canonical calculator URLs. | `ea94454` |
-| 2026-10-01 | Phase 1.2 | Reconciled existing Cloudflare Bulk Redirect configuration, verified 20 existing mappings, and added missing `taxchecklist` and `contractorrate` mappings. | Bulk operation completed; list now has 22 entries, all 301 with query preservation; enabled account redirect rule references the list. Independent runtime HTTP check timed out, so external/browser validation remains in Phase 1.4. | Cloudflare config |
+| 2026-10-01 | Phase 1.2 | Reconciled existing Cloudflare Bulk Redirect configuration, verified 20 existing mappings, and added missing `taxchecklist` and `contractorrate` mappings. | Bulk operation completed; list now has 22 calculator entries, all 301 with query preservation; enabled account redirect rule references the list. Independent runtime HTTP check timed out, so external/browser validation remains in Phase 1.4. | Cloudflare config |
+| 2026-10-01 | Phase 1.3 | Retired the stale `core.simplekit.app` homepage at the edge while preserving shared asset paths. | Added exact-root 301 `core.simplekit.app/` → `https://simplekit.app/` with `subpath_matching: false`; `core.css`/`core.js` remain outside the redirect match. Search cache still shows the previously crawled page pending recrawl. | Cloudflare config |
 
 ---
 
 # Next task
 
-**Next: Phase 1.3 — retire the stale `core.simplekit.app` homepage without breaking shared CSS/JS assets. Then Phase 1.4 will perform final external/browser redirect validation. Phase 0 Search Console/GA4 baseline items remain open until those datasets are captured.**
+**Next: Phase 1.4 — perform post-migration validation across all 22 calculator subdomains plus `core.simplekit.app`, confirm canonical destinations and shared assets, then resubmit/monitor in Search Console. Phase 0 Search Console/GA4 baseline items remain open until those datasets are captured.**
