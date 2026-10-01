@@ -38,8 +38,8 @@ Do not create new SEO content or architecture that reinforces the legacy calcula
 - [ ] Record top queries, pages, impressions, clicks, CTR, and average position.
 - [ ] Record current GA4 organic landing-page performance.
 - [ ] Confirm `https://simplekit.app/sitemap.xml` is submitted in Search Console.
-- [ ] Confirm the sitemap currently contains only intended canonical URLs.
-- [ ] Create a simple redirect test list covering every legacy SimpleKit subdomain before Phase 1 changes.
+- [x] Confirm the sitemap currently contains only intended canonical URLs. Verified 2026-10-01 against repository sitemap: 22 calculator directory URLs plus intended site/learn pages; no legacy calculator subdomains.
+- [x] Create a simple redirect test list covering every legacy SimpleKit subdomain before Phase 1 changes. The Phase 1.1 map below is the authoritative test list.
 
 **Done when:** We have enough baseline data to compare performance after migration work.
 
@@ -54,33 +54,54 @@ Legacy calculator subdomains still exist in DNS. The site should not maintain tw
 
 ## 1.1 Build authoritative redirect map
 
-- [ ] Inventory every historical calculator subdomain.
-- [ ] Map each legacy hostname to its matching canonical directory URL.
-- [ ] Identify any legacy URLs with no current equivalent and decide whether they should redirect to a relevant tool, `/tools/`, or return an intentional status.
-- [ ] Store the final redirect map in this document or a dedicated migration file.
+- [x] Inventory every historical calculator subdomain. Verified against Cloudflare DNS on 2026-10-01: 22 calculator CNAMEs plus `core` and `www`.
+- [x] Map each legacy hostname to its matching canonical directory URL.
+- [x] Identify any legacy URLs with no current equivalent. All 22 calculator hosts have a direct canonical calculator equivalent.
+- [x] Store the final redirect map in this document.
 
-Initial hosts to verify include:
+### Authoritative redirect map — verified 2026-10-01
 
-- `retirement.simplekit.app`
-- `fire.simplekit.app`
-- `cpp.simplekit.app`
-- `rrsptfsa.simplekit.app`
-- `investment.simplekit.app`
-- `savingsgoal.simplekit.app`
-- `emergency.simplekit.app`
-- `networth.simplekit.app`
-- `monthlybudget.simplekit.app`
-- `takehomepay.simplekit.app`
-- `debt.simplekit.app`
-- `creditcard.simplekit.app`
-- `loan.simplekit.app`
-- `houseaffordability.simplekit.app`
-- `rentvsbuy.simplekit.app`
-- `mortgage.simplekit.app`
-- `fees.simplekit.app`
-- `mortgagecalculator.simplekit.app`
-- `taxchecklist.simplekit.app`
-- `travel.simplekit.app`
+Cloudflare DNS and the repository sitemap were reconciled. All legacy calculator DNS records are currently proxied CNAMEs to `ashleysnl.github.io`. The canonical destinations below are present in the current sitemap.
+
+| Legacy hostname | Canonical destination |
+|---|---|
+| `retirement.simplekit.app` | `https://simplekit.app/retirement-planner/` |
+| `fire.simplekit.app` | `https://simplekit.app/fire-calculator/` |
+| `cpp.simplekit.app` | `https://simplekit.app/cpp-calculator/` |
+| `rrsptfsa.simplekit.app` | `https://simplekit.app/rrsp-vs-tfsa-calculator/` |
+| `investment.simplekit.app` | `https://simplekit.app/compound-interest-calculator/` |
+| `savingsgoal.simplekit.app` | `https://simplekit.app/savings-goal-calculator/` |
+| `emergency.simplekit.app` | `https://simplekit.app/emergency-fund-calculator/` |
+| `networth.simplekit.app` | `https://simplekit.app/net-worth-calculator/` |
+| `monthlybudget.simplekit.app` | `https://simplekit.app/budget-planner/` |
+| `takehomepay.simplekit.app` | `https://simplekit.app/take-home-pay-calculator/` |
+| `debt.simplekit.app` | `https://simplekit.app/debt-payoff-calculator/` |
+| `creditcard.simplekit.app` | `https://simplekit.app/credit-card-interest-calculator/` |
+| `loan.simplekit.app` | `https://simplekit.app/loan-calculator/` |
+| `houseaffordability.simplekit.app` | `https://simplekit.app/house-affordability-calculator/` |
+| `rentvsbuy.simplekit.app` | `https://simplekit.app/rent-vs-buy-calculator/` |
+| `mortgage.simplekit.app` | `https://simplekit.app/mortgage-paydown-vs-invest-calculator/` |
+| `fees.simplekit.app` | `https://simplekit.app/investment-fee-calculator/` |
+| `mortgagecalculator.simplekit.app` | `https://simplekit.app/mortgage-calculator/` |
+| `taxchecklist.simplekit.app` | `https://simplekit.app/canadian-tax-checklist/` |
+| `travel.simplekit.app` | `https://simplekit.app/travel-planner/` |
+| `dti.simplekit.app` | `https://simplekit.app/debt-to-income-ratio-calculator/` |
+| `contractorrate.simplekit.app` | `https://simplekit.app/contractor-effective-hourly-rate-calculator/` |
+
+### Non-calculator hosts
+
+- `core.simplekit.app` — retain for required shared assets, but handle its root separately in Phase 1.3 so it no longer behaves as a competing homepage.
+- `www.simplekit.app` — verify/normalize separately to the apex site.
+- `*.simplekit.app` — wildcard DNS currently points to `pixie.porkbun.com`; do not modify as part of calculator redirects without a separate review.
+
+### Redirect implementation notes
+
+- Cloudflare's current documentation supports zone-level Single Redirects in the `http_request_dynamic_redirect` phase.
+- The calculator DNS records are already proxied through Cloudflare, satisfying the prerequisite for Cloudflare Redirect Rules.
+- No zone entry-point ruleset currently exists in the dynamic redirect phase, so Phase 1.2 will create the redirect configuration rather than modifying an existing redirect ruleset.
+- Use permanent redirects and preserve query strings unless testing identifies a reason not to.
+- Keep each redirect one hop: legacy hostname → final canonical directory URL.
+
 
 ## 1.2 Implement permanent redirects
 
@@ -461,10 +482,11 @@ Use this section to record material work so future audits can distinguish planne
 
 | Date | Phase / Task | Change | Validation | Commit / PR |
 |---|---|---|---|---|
-| 2026-10-01 | Plan created | Added repository SEO improvement plan based on initial GitHub, live-site, and Cloudflare audit. | Plan committed to repository. | |
+| 2026-10-01 | Plan created | Added repository SEO improvement plan based on initial GitHub, live-site, and Cloudflare audit. | Plan committed to repository. | `987c573` |
+| 2026-10-01 | Phase 0 / 1.1 | Reconciled Cloudflare DNS with sitemap; built authoritative 22-host redirect map; confirmed no existing dynamic redirect entry-point ruleset. | 22 legacy calculator hosts map 1:1 to 22 canonical calculator URLs. | pending |
 
 ---
 
 # Next task
 
-**Start with Phase 0, then Phase 1.1: create and verify the complete legacy-subdomain → canonical-directory redirect map before changing Cloudflare configuration.**
+**Next: Phase 1.2 — implement the verified 22-host permanent redirect configuration in Cloudflare, then validate every redirect before proceeding to `core.simplekit.app`. Phase 0 Search Console/GA4 baseline items remain open until those datasets are captured.**
