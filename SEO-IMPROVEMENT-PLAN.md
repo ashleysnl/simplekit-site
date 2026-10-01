@@ -200,13 +200,60 @@ Do not add schema solely to maximize the number of schema types.
 
 ## 3.2 Page-by-page audit tracker
 
+Initial repository audit completed 2026-10-01. This matrix is based on the current production `index.html` in each calculator repository plus the relevant shared/internal link files. "Yes" means the baseline signal is present in the current page source; "Gap" means the page should be reviewed or normalized in this phase. Source requirements are intentionally stricter for calculators that depend on Canadian government/tax/mortgage program rules.
+
+| Tool | Title/meta | Canonical | H1 | Static explanatory copy / methodology | Visible FAQ | FAQ schema | WebApplication | Related canonical links | Primary sources | Initial priority |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Retirement Planner | Yes | Yes | Yes | Yes | Gap | — | Gap | Yes | Yes | Medium |
+| FIRE Calculator | Yes | Yes | Yes | Yes | Gap | — | Gap | Yes | Gap | Medium |
+| CPP Calculator | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Yes | Yes | Medium |
+| RRSP vs TFSA | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Yes | Gap | High |
+| Compound Interest | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Yes | N/A / optional | Medium |
+| Savings Goal | Yes | Yes | Yes | Yes | Yes | Gap | Gap | Yes | N/A / optional | Medium |
+| Emergency Fund | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | N/A / optional | Low |
+| Net Worth | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Yes | Yes | Medium |
+| Budget Planner | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Yes | N/A / optional | Medium |
+| Take-Home Pay | Yes | Yes | Yes | Yes | Yes | Gap | Yes | Yes | Gap | **High** |
+| Debt Payoff | Yes | Yes | Yes | Gap | Yes | Yes | Gap | Yes | N/A / optional | Medium |
+| Credit Card Interest | Yes | Yes | Yes | Yes | Yes | Gap | Gap | Yes | N/A / optional | Medium |
+| Loan Calculator | Yes | Yes | Yes | Yes | Yes | Gap | Gap | Yes | N/A / optional | Medium |
+| House Affordability | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Low |
+| Rent vs Buy | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Medium |
+| Mortgage Paydown vs Invest | Yes | Yes | Yes | Yes | Yes | Gap | Gap | Yes | Gap | High |
+| Investment Fee | Yes | Yes | Yes | Yes | Yes | Gap | Gap | Yes | N/A / optional | Medium |
+| Mortgage Calculator | Yes | Yes | Yes | Yes | Yes | Yes | Gap | Yes | Gap | **High** |
+| Canadian Tax Checklist | Yes | Yes | Yes | Gap | Yes | Gap | Gap | Yes | Yes | Medium |
+| Travel Planner | Yes | Yes | Yes | Gap | Gap | — | Gap | Gap | N/A | Medium |
+| Debt-to-Income Ratio | Yes | Yes | Yes | Yes | Yes | Gap | Gap | Yes | Gap | **High** |
+| Contractor Rate | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | N/A / optional | Low |
+
+### Initial Phase 3 findings
+
+- **Strong universal foundation:** 22/22 audited pages have a unique title, meta description, self-referencing canonical, one H1, and Open Graph/Twitter metadata.
+- **Canonical linking is already strong:** Phase 2 confirmed production tool-to-tool links point directly to canonical `simplekit.app/<tool>/` URLs.
+- **Structured data is inconsistent:** only a subset currently declares `WebApplication`; several pages with visible FAQ content do not declare matching `FAQPage` schema.
+- **Source coverage is the more important content gap:** calculators whose outputs depend materially on Canadian tax/payroll/mortgage/registered-account rules should cite the relevant primary Canadian source in visible page content.
+- **Do not add citations merely for appearance:** generic arithmetic tools such as savings goals, budgeting, debt payoff, and investment growth do not need government citations unless a rule-based claim is made.
+- **Highest-priority normalization group:** Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, and Mortgage Paydown vs Invest. These combine meaningful Canadian/rule-based assumptions with missing or incomplete source/schema normalization.
+- **Strong reference implementations:** House Affordability, Emergency Fund, Rent vs Buy, and Contractor Rate currently cover most of the baseline and should be used as implementation references where their patterns are semantically appropriate.
+
+### Phase 3 execution order
+
+1. Normalize the five high-priority rule-sensitive pages first.
+2. Standardize the baseline `WebApplication` structured data across calculator pages where appropriate.
+3. Add `FAQPage` only to pages that already expose the corresponding FAQ visibly.
+4. Improve methodology/static explanation only on pages with a real content gap; do not pad pages with SEO filler.
+5. Re-audit the matrix after each batch and mark individual tools complete only after the repository source passes the baseline.
+
+Create a complete 22-tool matrix before closing this phase. Suggested columns:
+
 Create a complete 22-tool matrix before closing this phase. Suggested columns:
 
 | Tool | Title | Description | Canonical | H1 | Static copy | Methodology | FAQ | Schema | Related links | Sources | Complete |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 
-- [ ] Populate matrix.
-- [ ] Fix highest-opportunity/weakest pages first.
+- [x] Populate initial 22-tool matrix from current production repository source.
+- [ ] Fix highest-opportunity/weakest pages first. Initial batch: Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, Mortgage Paydown vs Invest.
 - [ ] Re-audit every row after changes.
 
 **Phase 3 done when:** Every production calculator meets the agreed baseline and the matrix is complete.
@@ -490,9 +537,10 @@ Use this section to record material work so future audits can distinguish planne
 | 2026-10-01 | Phase 1.3 | Retired the stale `core.simplekit.app` homepage at the edge while preserving shared asset paths. | Added exact-root 301 `core.simplekit.app/` → `https://simplekit.app/` with `subpath_matching: false`; `core.css`/`core.js` remain outside the redirect match. Search cache may show the previously crawled page pending recrawl. | Cloudflare config |
 | 2026-10-01 | Phase 1.4 | Audited the completed Cloudflare redirect set against the authoritative migration map. | 22/22 calculator mappings exist exactly once, all status 301 with direct canonical targets and query preservation; Core root is 301 with subpath matching disabled; account redirect rule is enabled. Independent runtime HTTP requests timed out/inconsistently resolved, so destination no-chain/browser smoke check remains open. | Cloudflare config |
 | 2026-10-01 | Phase 2 | Audited `simplekit-site`, all 22 calculator production entry pages, shared `SimpleKit-Core/core.js`, and relevant calculator JS link maps. | No production internal navigation links use legacy calculator subdomains. `core.simplekit.app` is limited to shared asset references. One `mortgage.simplekit.app` token remains intentionally as a compatibility alias and maps directly to the canonical path. | tracker-only; no production code change required |
+| 2026-10-01 | Phase 3.2 | Built the initial 22-tool SEO matrix from current production repository source and prioritized normalization work. | 22/22 have title/meta/canonical/H1/social baseline. Main gaps are structured-data consistency, source coverage on rule-sensitive Canadian calculators, and a small number of methodology/related-link gaps. | tracker update |
 
 ---
 
 # Next task
 
-**Next: Phase 3 — build the 22-tool page-by-page SEO matrix and identify the weakest pages for normalization. Phase 0 Search Console/GA4 baseline items and the external Phase 1.4 recrawl/browser checks remain open until those surfaces are available.**
+**Next: Phase 3 implementation batch 1 — normalize Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, and Mortgage Paydown vs Invest, focusing on primary-source support and semantically appropriate structured data without changing calculator behavior.**
