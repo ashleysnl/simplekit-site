@@ -323,37 +323,51 @@ The Learn hub now owns **education intent**: understand a concept first, then mo
 
 ## Site-level trust
 
-- [ ] Strengthen About page with transparent maintainer information.
-- [ ] State that SimpleKit is built and maintained by Ashley Skinner.
-- [ ] State Canada-based context where relevant.
-- [ ] Explain SimpleKit's calculation-development philosophy.
-- [ ] Explain update/maintenance approach.
-- [ ] Provide a corrections/contact path.
-- [ ] Link privacy information clearly.
-- [ ] Explain local/browser processing where accurate.
-- [ ] Avoid unsupported expertise or authority claims.
+- [x] Strengthen About page with transparent maintainer information.
+- [x] State that SimpleKit is built and maintained by Ashley Skinner.
+- [x] State Canada-based context where relevant.
+- [x] Explain SimpleKit's calculation-development philosophy.
+- [x] Explain update/maintenance approach.
+- [x] Provide a corrections/contact path.
+- [x] Link privacy information clearly.
+- [x] Explain browser/local processing without claiming that the site has no analytics.
+- [x] Avoid unsupported expertise or authority claims.
+
+Implemented through the About, Support, Privacy, Methodology & Sources, and homepage trust sections. SimpleKit is described as an independent Canadian project and explicitly not a bank, government service, accounting firm, or financial-advice practice.
 
 ## Calculator methodology
 
 For calculators involving assumptions or regulated values:
 
-- [ ] Explain important formulas/assumptions in plain language.
-- [ ] Show material default assumptions.
-- [ ] Distinguish estimates from official determinations.
-- [ ] Show when important rule-based values were last reviewed where practical.
+- [x] Confirm important formulas/assumptions are exposed in the regulated-value calculators audited in Phase 5.
+- [x] Confirm material defaults/assumptions are surfaced where they materially affect results.
+- [x] Distinguish planning estimates from official determinations at the site level and on audited regulated-value calculators.
+- [x] Establish a maintenance policy for rule-based values and direct users to primary sources for current regulated values.
+
+Phase 5 audit sampled CPP, RRSP-vs-TFSA, House Affordability, Mortgage, Take-Home Pay, and Retirement. Existing pages already expose methodology/assumption language to varying degrees; CPP already links directly to Canada.ca and House Affordability already links directly to CMHC. Rather than inventing a universal "last reviewed" date that the repositories cannot substantiate, the new methodology page explains the review policy and treats the linked primary source as authoritative for current regulated values.
 
 ## Authoritative citations
 
-Add direct primary-source links where relevant, for example:
+- [x] CPP/OAS source policy → Government of Canada / Service Canada.
+- [x] Federal tax and registered-account source policy → CRA / Canada.ca.
+- [x] Mortgage/insured-mortgage source policy → Government of Canada / CMHC / OSFI.
+- [x] Other regulated calculations → primary regulator/government source policy.
 
-- [ ] CPP/OAS → Government of Canada / Service Canada.
-- [ ] Federal tax rules and registered-account limits → CRA / Canada.ca.
-- [ ] Mortgage/insured-mortgage rules → relevant Government of Canada, CMHC, or OSFI source.
-- [ ] Other regulated calculations → primary regulator/government source.
+Created `/methodology/` with direct primary-source references for CPP, RRSP, TFSA, mortgage down-payment/debt-service guidance, and OSFI's uninsured-mortgage minimum qualifying rate. Existing calculator-specific primary links are retained. Future rule-based calculator changes should link the exact primary source beside the relevant methodology/assumption rather than relying on finance-blog summaries.
 
-Prefer primary sources over finance blogs for factual rules.
+## Privacy and corrections
 
-**Phase 5 done when:** Users can readily determine who maintains SimpleKit, how important calculations work, and which authoritative sources support regulated inputs.
+- [x] Create `/privacy/` because no privacy page existed in the repository at the start of Phase 5.
+- [x] State that no account is required for public calculators.
+- [x] Describe browser-based calculation/local-storage behavior conservatively.
+- [x] Disclose Google Analytics usage rather than claiming the site is telemetry-free.
+- [x] Tell users not to enter unnecessary sensitive identifiers.
+- [x] Add a reproducible correction path through the SimpleKit GitHub issue tracker.
+- [x] Add Methodology and Privacy URLs to the sitemap.
+
+**Validation — 2026-10-01:** About identifies the maintainer and project context; Methodology documents the estimate/source/maintenance policy and links Canadian primary authorities; Privacy accurately acknowledges the existing GA tag; Support provides a correction route; homepage surfaces the trust layer; both new pages are canonical/indexable and included in the sitemap. No unsupported professional credential or authority claim was added.
+
+**Phase 5 status:** **COMPLETE**.
 
 ---
 
@@ -561,4 +575,4 @@ Use this section to record material work so future audits can distinguish planne
 
 # Next task
 
-**Next: Phase 5 — strengthen site-level trust, authorship, methodology, maintenance transparency, and authoritative source coverage.**
+**Next: Phase 6 — build topical authority clusters around the existing calculator and Learn architecture without mass-producing thin content.**
