@@ -374,64 +374,85 @@ Created `/methodology/` with direct primary-source references for CPP, RRSP, TFS
 # Phase 6 — Build topical authority
 
 **Priority:** Medium-High  
-**Goal:** Grow SimpleKit from a collection of calculators into a connected financial-planning resource.
-
-Do not mass-produce thin articles. Each guide should answer a real question, add useful explanation beyond the calculator UI, and connect naturally to one or more tools.
+**Goal:** Grow SimpleKit from a collection of calculators into a connected financial-planning resource without mass-producing thin articles.
 
 ## 6.1 Housing cluster
 
-Candidate topics:
+- [x] Mortgage affordability in Canada.
+- [x] Rent vs. buy in Canada.
+- [x] Mortgage payment vs. total cost of home ownership.
+- [x] Pay down the mortgage or invest.
+- [x] Connect the cluster to House Affordability, Rent vs Buy, Mortgage, DTI, and Mortgage Paydown vs Invest tools.
 
-- [ ] Mortgage affordability in Canada.
-- [ ] Rent vs. buy in Canada.
-- [ ] How much house can I afford?
-- [ ] Mortgage payment vs. total cost of home ownership.
-- [ ] Accelerated biweekly mortgage payments.
-- [ ] Pay down the mortgage or invest?
+The housing cluster deliberately consolidates overlapping intents instead of creating separate thin pages for "mortgage affordability" and "how much house can I afford." Accelerated-payment mechanics are covered inside the total-cost guide and the Mortgage Calculator's existing educational content rather than duplicated as a standalone article.
 
 ## 6.2 Retirement cluster
 
-- [ ] Expand beyond the current starter guides.
-- [ ] Connect CPP, RRSP/TFSA, retirement planning, FIRE, compound growth, and savings tools.
-- [ ] Build guides around actual Search Console queries.
+- [x] Preserve and connect Retirement Planning Basics, CPP Basics, FIRE Explained, RRSP vs TFSA Basics, and Understanding Net Worth.
+- [x] Connect retirement education to Retirement Planner, CPP, FIRE, RRSP/TFSA, Net Worth, compound growth, and savings pathways.
+- [x] Keep future expansion query-led rather than inventing articles without Search Console evidence.
 
 ## 6.3 Budgeting and cash-flow cluster
 
-- [ ] Budgeting methodology.
-- [ ] Emergency funds.
-- [ ] Savings goals.
-- [ ] Take-home pay and household cash flow.
-- [ ] Connect guides directly to relevant calculators.
+- [x] Monthly budgeting and household cash-flow methodology.
+- [x] Emergency funds and savings goals.
+- [x] Connect take-home pay, budget, emergency-fund, and savings-goal concepts.
 
 ## 6.4 Debt and credit cluster
 
-- [ ] Debt payoff methods.
-- [ ] Credit-card payoff/cost education.
-- [ ] Loan payment/amortization education.
-- [ ] Debt-to-income education.
+- [x] Debt snowball vs. avalanche payoff methods.
+- [x] Credit-card interest and payoff education.
+- [x] Loan payment and amortization education.
+- [x] Connect debt education to the existing DTI and budgeting pathways.
 
 ## 6.5 Investing cluster
 
-- [ ] Investment fees.
-- [ ] Compound growth.
-- [ ] RRSP vs. TFSA.
-- [ ] Mortgage paydown vs. investing.
+- [x] Compound interest and investment fees.
+- [x] RRSP vs. TFSA.
+- [x] Mortgage prepayment vs. investing.
+- [x] Connect investing guides to compound-interest, investment-fee, RRSP/TFSA, retirement, and mortgage-vs-invest tools.
 
 ## Content standard
 
-Every new guide should have:
+Every new guide has:
 
-- [ ] A single clear search intent.
-- [ ] Unique title/meta/H1.
-- [ ] Useful original explanation.
-- [ ] Semantic headings.
-- [ ] Relevant primary sources where factual rules are discussed.
-- [ ] Contextual links to calculators.
-- [ ] Contextual links to related guides.
-- [ ] Links from relevant calculators back to the guide where useful.
-- [ ] No filler written merely to increase word count.
+- [x] A single clear search intent.
+- [x] Unique title/meta/H1.
+- [x] Useful original explanation.
+- [x] Semantic headings.
+- [x] Relevant primary sources where factual regulated rules are discussed.
+- [x] Contextual links to calculators.
+- [x] Contextual links to related guides.
+- [x] Representative links from calculators back to supporting Learn content in each major cluster.
+- [x] No filler written merely to increase word count.
 
-**Phase 6 done when:** Each major calculator category has a meaningful supporting content cluster rather than isolated tools.
+## Phase 6 implementation — 2026-10-01
+
+Added 10 guides, taking SimpleKit Learn from 6 to **16 substantive guides**:
+
+**Housing**
+- `/learn/mortgage-affordability-canada/`
+- `/learn/rent-vs-buy-canada/`
+- `/learn/mortgage-costs-beyond-the-payment/`
+- `/learn/mortgage-prepayment-vs-investing/`
+
+**Budget / cash flow**
+- `/learn/monthly-budgeting-and-cash-flow/`
+- `/learn/emergency-fund-and-savings-goals/`
+
+**Debt / credit**
+- `/learn/debt-snowball-vs-avalanche/`
+- `/learn/credit-card-interest-and-payoff/`
+- `/learn/loan-payments-and-amortization/`
+
+**Investing**
+- `/learn/compound-interest-and-investment-fees/`
+
+The Learn hub now exposes five financial topic clusters plus everyday planning. All 10 new pages are canonical/indexable, have one H1, semantic sections, calculator links, related-guide links, and no legacy calculator-subdomain URLs. The regulated mortgage-affordability/prepayment content links directly to CMHC, OSFI, and Canada.ca sources. All 10 new URLs were added to the sitemap.
+
+Representative calculator-to-guide links were added in each major cluster (including Retirement, Savings, Mortgage, Budget, Debt Payoff, and Compound Interest) without forcing a new education panel into every calculator.
+
+**Phase 6 status:** **COMPLETE**.
 
 ---
 
@@ -575,4 +596,4 @@ Use this section to record material work so future audits can distinguish planne
 
 # Next task
 
-**Next: Phase 6 — build topical authority clusters around the existing calculator and Learn architecture without mass-producing thin content.**
+**Next: Phase 7 — verify sitemap/index/crawl hygiene across the expanded 16-guide Learn architecture and the 22 canonical calculators.**
