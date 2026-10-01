@@ -253,7 +253,7 @@ Create a complete 22-tool matrix before closing this phase. Suggested columns:
 |---|---|---|---|---|---|---|---|---|---|---|---|
 
 - [x] Populate initial 22-tool matrix from current production repository source.
-- [ ] Fix highest-opportunity/weakest pages first. Initial batch: Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, Mortgage Paydown vs Invest.
+- [x] Fix highest-opportunity/weakest pages first. Batch 1 completed 2026-10-01: Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, and Mortgage Paydown vs Invest now include visible official Canadian primary-source references; application schema was normalized to `WebApplication` where needed. Calculator logic was not changed.
 - [ ] Re-audit every row after changes.
 
 **Phase 3 done when:** Every production calculator meets the agreed baseline and the matrix is complete.
@@ -538,9 +538,10 @@ Use this section to record material work so future audits can distinguish planne
 | 2026-10-01 | Phase 1.4 | Audited the completed Cloudflare redirect set against the authoritative migration map. | 22/22 calculator mappings exist exactly once, all status 301 with direct canonical targets and query preservation; Core root is 301 with subpath matching disabled; account redirect rule is enabled. Independent runtime HTTP requests timed out/inconsistently resolved, so destination no-chain/browser smoke check remains open. | Cloudflare config |
 | 2026-10-01 | Phase 2 | Audited `simplekit-site`, all 22 calculator production entry pages, shared `SimpleKit-Core/core.js`, and relevant calculator JS link maps. | No production internal navigation links use legacy calculator subdomains. `core.simplekit.app` is limited to shared asset references. One `mortgage.simplekit.app` token remains intentionally as a compatibility alias and maps directly to the canonical path. | tracker-only; no production code change required |
 | 2026-10-01 | Phase 3.2 | Built the initial 22-tool SEO matrix from current production repository source and prioritized normalization work. | 22/22 have title/meta/canonical/H1/social baseline. Main gaps are structured-data consistency, source coverage on rule-sensitive Canadian calculators, and a small number of methodology/related-link gaps. | tracker update |
+| 2026-10-01 | Phase 3 Batch 1 | Improved Take-Home Pay, Mortgage, DTI, RRSP vs TFSA, and Mortgage Paydown vs Invest. Added visible CRA/CMHC/OSFI/FCAC primary-source references and normalized application schema where needed; no calculator JS/calculation logic changed. | All five changes reviewed as one-file `index.html` diffs and merged through PRs. Merge commits: Take-Home Pay `f02af48`; Mortgage `92cf246`; DTI `ce62748`; RRSP/TFSA `ef07a5e`; Mortgage vs Invest `59aea61`. | five calculator repos |
 
 ---
 
 # Next task
 
-**Next: Phase 3 implementation batch 1 — normalize Take-Home Pay, Mortgage Calculator, Debt-to-Income Ratio, RRSP vs TFSA, and Mortgage Paydown vs Invest, focusing on primary-source support and semantically appropriate structured data without changing calculator behavior.**
+**Next: Phase 3 Batch 2 — normalize the medium-priority pages, focusing first on missing `WebApplication` schema and matching `FAQPage` schema only where visible FAQ content already exists. Avoid unnecessary source sections on generic arithmetic tools.**
