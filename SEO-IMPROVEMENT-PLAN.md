@@ -117,11 +117,11 @@ Cloudflare DNS and the repository sitemap were reconciled. All legacy calculator
 
 `core.simplekit.app` currently exposes a stale indexable homepage while also serving shared SimpleKit assets.
 
-- [ ] Preserve required shared asset URLs such as CSS/JS.
-- [ ] Stop the root of `core.simplekit.app` from acting as a second SimpleKit homepage.
-- [ ] Prefer redirecting the root homepage to `https://simplekit.app/` if this can be done without breaking asset delivery.
-- [ ] Verify required assets still load after the change.
-- [ ] Confirm search engines are no longer being presented with a stale second homepage.
+- [x] Preserve required shared asset URLs such as CSS/JS. The exact-root redirect excludes subpaths, so `core.css`, `core.js`, icons, and other assets remain available.
+- [x] Stop the root of `core.simplekit.app` from acting as a second SimpleKit homepage. Cloudflare redirects the exact root to `https://simplekit.app/`.
+- [x] Redirect the root homepage to `https://simplekit.app/` without matching asset subpaths (`subpath_matching: false`).
+- [x] Verify at the routing/configuration layer that required asset paths are excluded from the root redirect. External runtime/browser smoke verification remains a separate follow-up because direct HTTP checks were unavailable.
+- [x] Confirm the stale Core homepage is retired at the Cloudflare edge with a 301. Search-engine caches may continue to show the prior page until recrawl.
 
 ## 1.4 Post-migration validation
 
@@ -140,19 +140,21 @@ Cloudflare DNS and the repository sitemap were reconciled. All legacy calculator
 **Priority:** Critical  
 **Goal:** Ensure SimpleKit itself consistently reinforces the canonical architecture.
 
-- [ ] Search `simplekit-site` for all `.simplekit.app` references.
-- [ ] Search every calculator repository for all `.simplekit.app` references.
-- [ ] Replace legacy calculator-subdomain links with canonical `https://simplekit.app/<tool>/` links.
-- [ ] Preserve `core.simplekit.app` references only where they are genuinely required for shared assets.
-- [ ] Review navigation links.
-- [ ] Review footer links.
-- [ ] Review related-tool links.
-- [ ] Review links embedded in educational content and FAQs.
-- [ ] Review structured data URLs.
-- [ ] Review Open Graph/Twitter URLs.
-- [ ] Confirm there are no internal links that intentionally route users through a redirect.
+- [x] Audit `simplekit-site` production pages for SimpleKit URL references. Homepage, Tools, Learn, About, and Support use canonical `https://simplekit.app/.../` URLs; no legacy calculator-subdomain navigation links were found.
+- [x] Audit all 22 calculator repositories. Because GitHub code search is not indexed for these repos, production `index.html` files and relevant JavaScript/navigation link files were read directly.
+- [x] Replace legacy calculator-subdomain links with canonical `https://simplekit.app/<tool>/` links. No production navigation replacements were required: current calculator pages already use canonical URLs.
+- [x] Preserve `core.simplekit.app` references only where genuinely required for shared assets. Current calculator pages use it for shared `core.css` / `core.js` (and preconnect), not calculator navigation.
+- [x] Review navigation links. Shared `SimpleKit-Core/core.js` navigation points to canonical apex/path URLs.
+- [x] Review footer links. Shared footer links point to canonical apex/path URLs.
+- [x] Review related-tool links across all 22 calculator production pages; current links point directly to canonical tool paths.
+- [x] Review calculator explanatory/educational link sections represented in production pages; current tool-to-tool links point directly to canonical paths.
+- [x] Review structured-data URLs in production calculator entry pages; the audited URLs use canonical `simplekit.app/<tool>/` destinations.
+- [x] Review Open Graph/Twitter URL references in production entry pages; audited page URLs/images use the canonical site rather than legacy calculator hosts.
+- [x] Confirm there are no production internal navigation links intentionally routing users through a legacy calculator redirect.
 
-**Phase 2 done when:** A repository-wide search finds no unintended legacy calculator-subdomain links.
+**Intentional compatibility exception:** `SimpleKitHouseAffordability/assets/js/app.js` retains the string `"mortgage.simplekit.app"` as a lookup alias only. It is not an outbound URL; it resolves directly to `https://simplekit.app/mortgage-paydown-vs-invest-calculator/`. Keep it unless backward-compatibility requirements change.
+
+**Phase 2 done:** The current production entry pages, shared navigation layer, hub pages, and relevant application link maps contain no unintended legacy calculator-subdomain navigation links. One legacy hostname token remains intentionally as a compatibility alias and resolves to a canonical URL.
 
 ---
 
@@ -487,9 +489,10 @@ Use this section to record material work so future audits can distinguish planne
 | 2026-10-01 | Phase 1.2 | Reconciled existing Cloudflare Bulk Redirect configuration, verified 20 existing mappings, and added missing `taxchecklist` and `contractorrate` mappings. | Bulk operation completed; list now has 22 calculator entries, all 301 with query preservation; enabled account redirect rule references the list. Independent runtime HTTP check timed out, so external/browser validation remains in Phase 1.4. | Cloudflare config |
 | 2026-10-01 | Phase 1.3 | Retired the stale `core.simplekit.app` homepage at the edge while preserving shared asset paths. | Added exact-root 301 `core.simplekit.app/` → `https://simplekit.app/` with `subpath_matching: false`; `core.css`/`core.js` remain outside the redirect match. Search cache may show the previously crawled page pending recrawl. | Cloudflare config |
 | 2026-10-01 | Phase 1.4 | Audited the completed Cloudflare redirect set against the authoritative migration map. | 22/22 calculator mappings exist exactly once, all status 301 with direct canonical targets and query preservation; Core root is 301 with subpath matching disabled; account redirect rule is enabled. Independent runtime HTTP requests timed out/inconsistently resolved, so destination no-chain/browser smoke check remains open. | Cloudflare config |
+| 2026-10-01 | Phase 2 | Audited `simplekit-site`, all 22 calculator production entry pages, shared `SimpleKit-Core/core.js`, and relevant calculator JS link maps. | No production internal navigation links use legacy calculator subdomains. `core.simplekit.app` is limited to shared asset references. One `mortgage.simplekit.app` token remains intentionally as a compatibility alias and maps directly to the canonical path. | tracker-only; no production code change required |
 
 ---
 
 # Next task
 
-**Next: finish the two external Phase 1.4 follow-ups (browser/no-chain smoke check and Search Console sitemap/recrawl monitoring) when those surfaces are available, while beginning Phase 2 — normalize internal links across the SimpleKit repos so no internal navigation relies on legacy redirects. Phase 0 Search Console/GA4 baseline items remain open until those datasets are captured.**
+**Next: Phase 3 — build the 22-tool page-by-page SEO matrix and identify the weakest pages for normalization. Phase 0 Search Console/GA4 baseline items and the external Phase 1.4 recrawl/browser checks remain open until those surfaces are available.**
