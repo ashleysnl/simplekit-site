@@ -66,6 +66,56 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://simplekit.app/learn/mortgage-affordability-canada/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/rent-vs-buy-canada/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/mortgage-costs-beyond-the-payment/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/mortgage-prepayment-vs-investing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/monthly-budgeting-and-cash-flow/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/emergency-fund-and-savings-goals/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/debt-snowball-vs-avalanche/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/credit-card-interest-and-payoff/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/loan-payments-and-amortization/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://simplekit.app/learn/compound-interest-and-investment-fees/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://simplekit.app/retirement-planner/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
