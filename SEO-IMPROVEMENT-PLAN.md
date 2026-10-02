@@ -569,13 +569,15 @@ Avoid changing pages repeatedly before enough data accumulates to judge the prev
 
 This phase should build on good web fundamentals rather than special AI-only tricks.
 
-- [ ] Maintain clear entity/about information.
-- [ ] Use descriptive headings and direct answers.
-- [ ] Keep methodology and assumptions explicit.
-- [ ] Cite primary sources.
-- [ ] Keep important facts in crawlable HTML.
-- [ ] Maintain consistent naming for SimpleKit and its calculators.
-- [ ] Use structured data accurately.
+**Initial audit complete:** homepage identity markup, About template alignment, primary citations on CPP/RRSP-TFSA guides, and all 16 guide introductions/headings/tool links reviewed. [Audit report](docs/seo/phase-10-discoverability-2026-10-02.md). Regulated-value verification and earning independent references remain ongoing.
+
+- [x] Maintain clear entity/about information. Initial audit completed 2026-10-02; retain during future updates.
+- [x] Use descriptive headings and direct answers. Initial audit completed 2026-10-02; retain during future updates.
+- [x] Keep methodology and assumptions explicit. Initial audit completed 2026-10-02; retain during future updates.
+- [x] Cite primary sources. Initial audit completed 2026-10-02; retain during future updates.
+- [x] Keep important facts in crawlable HTML. Initial audit completed 2026-10-02; retain during future updates.
+- [x] Maintain consistent naming for SimpleKit and its calculators. Initial audit completed 2026-10-02; retain during future updates.
+- [x] Use structured data accurately. Initial audit completed 2026-10-02; retain during future updates.
 - [ ] Keep content current, especially regulated Canadian financial values.
 - [ ] Earn legitimate references/links through useful calculators and original resources.
 
@@ -636,7 +638,7 @@ Use this section to record material work so future audits can distinguish planne
 
 # Next task
 
-**Next: Close organic landing-page engagement and Core Web Vitals measurement gaps, then audit Phase 10. Sitemap processing is verified; hub/guide indexing remains monitored (recheck around October 9). Phase 9 continues monthly; use 28 settled post-release days before further query-led changes.**
+**Next: Close organic landing-page engagement and Core Web Vitals measurement gaps, then maintain the completed initial Phase 10 improvements. Sitemap processing is verified; hub/guide indexing remains monitored (recheck around October 9). Phase 9 continues monthly; use 28 settled post-release days before further query-led changes.**
 
 
 ### 2026-10-01 — Phase 9 initial review
@@ -673,3 +675,12 @@ Use this section to record material work so future audits can distinguish planne
 - Organic Search landing-page GA4 query blocked: SimpleKit property 526477995 is readable but not linked to sc-domain:simplekit.app in the connected GSC Wizard account.
 - Both measurement checklist items remain open. Recorded configuration requirements, representative URLs and organic report settings in [measurement setup](docs/seo/measurement-setup-2026-10-02.md).
 - Next prerequisite: link the existing SimpleKit GA4 property and configure CrUX, or supply the specified GA4 export and PageSpeed reports. No public site change made without measurement evidence.
+
+
+### 2026-10-02 — Phase 10 initial discoverability pass
+
+- Added truthful, shared WebSite/Person identities to Home/About metadata and preserved published About trust statements in its template.
+- Added official Canada.ca/CRA source sections and Methodology links to CPP and RRSP/TFSA Basics, including matching templates.
+- Reviewed all 16 guide sources: one H1, static introductory explanations and canonical calculator links.
+- SEO validation passed for 22 tools; diff check and JSON-LD parsing passed. Fresh live HTTP responses verified deployed identity/source changes; purged the four changed URLs in Cloudflare.
+- Regulated numeric-value maintenance, legitimate independent references, and blocked GA4/CWV measurements remain open. See Phase 10 audit for scope and next steps.
