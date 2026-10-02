@@ -538,7 +538,7 @@ Repository and Cloudflare configuration were verified directly. Public HTTP spot
 **Priority:** Ongoing  
 **Goal:** Let actual search demand guide later optimization.
 
-**Initial cycle:** Search Console review completed; GA4 acquisition/general engagement baseline recorded. Organic landing-page engagement remains open. See [Phase 9 baseline](docs/seo/phase-9-baseline-2026-10-01.md). The latest GSC data predates the October 1 release; next full review should use 28 settled post-release days. Published 52-URL sitemap resubmission accepted October 2 UTC, pending Google download. Release annotation added in GSC Wizard. No further public copy/UX changes justified by this small baseline.
+**Initial cycle:** Search Console review completed; GA4 acquisition/general engagement baseline recorded. Organic landing-page engagement remains open. See [Phase 9 baseline](docs/seo/phase-9-baseline-2026-10-01.md). The latest GSC data predates the October 1 release; next full review should use 28 settled post-release days. Published 52-URL sitemap resubmission accepted October 2 UTC; Google downloaded it at 01:55:46 UTC and reported 52 submitted URLs, zero errors and zero warnings. Release annotation added in GSC Wizard. No further public copy/UX changes justified by this small baseline.
 
 Review monthly initially:
 
@@ -636,7 +636,7 @@ Use this section to record material work so future audits can distinguish planne
 
 # Next task
 
-**Next: Verify sitemap processing and Google discovery/recrawl, close organic landing-page engagement and Core Web Vitals measurement gaps, then audit Phase 10. Phase 9 continues monthly; use 28 settled post-release days before further query-led changes.**
+**Next: Close organic landing-page engagement and Core Web Vitals measurement gaps, then audit Phase 10. Sitemap processing is verified; hub/guide indexing remains monitored (recheck around October 9). Phase 9 continues monthly; use 28 settled post-release days before further query-led changes.**
 
 
 ### 2026-10-01 — Phase 9 initial review
@@ -655,3 +655,12 @@ Use this section to record material work so future audits can distinguish planne
 - Core CSS/JS and the Tools hub separately returned HTTP 200 without redirects.
 - Saved full verification evidence and redirect map under `docs/seo/redirect-verification-2026-10-02.*`.
 - Reconciled completed baseline/sitemap tasks and replaced the stale Next task footer. Google recrawl, organic landing-page engagement, CWV and the three-month baseline remain open where not measured.
+
+
+### 2026-10-02 — Sitemap processing and hub/guide discovery verification
+
+- Google downloaded the expanded sitemap at 01:55:46 UTC: 52 submitted URLs, pending false, zero errors and zero warnings.
+- Inspected both hubs and all 16 guides: 1 indexed, 7 discovered/currently not indexed, 10 unknown. Tools and the loan guide now show discovered status; the debt snowball/avalanche guide is indexed.
+- Live 18/18 checks passed HTTP 200, self-canonical, one H1 and no HTML robots noindex. Learn links to all 16 guides through normal HTML links.
+- Bulk inspection response timed out; recovered all 18 fresh results from persisted history. No inspections remain missing.
+- Saved report/evidence in [discovery verification](docs/seo/discovery-verification-2026-10-02.md). No new public code changes were justified. Recheck unresolved indexing around October 9; organic landing engagement and CWV remain open.
