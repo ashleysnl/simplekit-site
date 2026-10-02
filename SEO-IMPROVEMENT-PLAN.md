@@ -515,15 +515,17 @@ Repository and Cloudflare configuration were verified directly. Public HTTP spot
 **Priority:** Medium  
 **Goal:** Improve search landing-page usefulness without compromising calculator functionality.
 
-- [ ] Measure Core Web Vitals on representative calculator pages.
-- [ ] Check mobile usability.
-- [ ] Minimize layout shift.
-- [ ] Ensure primary calculator UI becomes usable quickly.
-- [ ] Audit shared `core.simplekit.app` asset weight and caching.
-- [ ] Optimize oversized images/assets where found.
-- [ ] Avoid adding SEO content that pushes the actual calculator unreasonably far down the page.
-- [ ] Improve result explanations and next-step links where they help users.
-- [ ] Review GA4 engagement after major page changes.
+- [ ] Measure Core Web Vitals on representative calculator pages. The public PageSpeed Insights endpoint returned HTTP 429 because its available daily quota is zero; no CWV score is claimed.
+- [x] Improve responsive navigation and touch targets in the marketing site and shared calculator shell. Mobile styles use a three-column navigation grid with 44px minimum link targets.
+- [x] Minimize layout shift and rendering work. Removed the landing-page entrance transform and large backdrop blur; simplified the page background. The shared floating support control no longer uses backdrop blur.
+- [x] Keep primary calculator use quick. After release, `/`, `/tools/`, and `/retirement-planner/` returned HTTP 200. No calculator form, script, or calculation logic was changed.
+- [x] Audit shared asset weight and caching. Live `core.css` is 7,500 bytes and `core.js` is 15,122 bytes; homepage `assets/site.css` is 11,728 bytes. Core CSS and JS responses use `max-age=14400`, HTML uses `max-age=600`. Cloudflare has no cache-settings entrypoint ruleset, so the existing four-hour TTL was retained for mutable, unversioned URLs.
+- [x] Check for oversized images/assets on the landing experience. The homepage and Tools hub do not load raster images in the page body; the 69,513-byte Open Graph image is metadata-only and was left unchanged.
+- [x] Keep explanatory SEO copy from pushing calculator controls down. No calculator page copy or layout was changed.
+- [x] Make tool discovery and next steps clearer. The homepage offers a direct “Choose a tool” path, the Tools page begins with the visitor’s question, and the featured planner uses one action instead of two duplicate links. Calculator forms and result areas remain unchanged.
+- [ ] Review GA4 engagement after major page changes once a complete post-release reporting window is available.
+
+**Phase 8 implementation status:** **COMPLETE** on 2026-10-02. The live homepage, Tools hub, representative planner route, and shared Core assets were checked after release. Core Web Vitals and GA4 engagement remain measurement follow-ups: the public PageSpeed Insights API returned HTTP 429 because its daily quota is zero, and a complete post-change GA4 reporting window is not yet available. No passing metrics are claimed.
 
 **Phase 8 done when:** SEO improvements do not come at the expense of the site's core calculator experience.
 
@@ -624,9 +626,10 @@ Use this section to record material work so future audits can distinguish planne
 | 2026-10-01 | Phase 3 Batch 2 | Normalized structured data across the 13 medium-priority tools. All now declare `WebApplication`; FIRE, Savings Goal, Credit Card, Loan, Investment Fee, and Tax Checklist received `FAQPage` markup copied from their existing visible FAQ content. Pages without a visible FAQ did not receive FAQ schema. | Branch audit confirmed 13/13 have one canonical, one H1, `WebApplication`, and no remaining `SoftwareApplication`; all changes were limited to `index.html` structured data and merged through PRs. Merge commits: Retirement `77babb4`; FIRE `e44404c`; CPP `e2f14e9`; Compound `cd7ec0d`; Savings `0f4a7e4`; Net Worth `55ede2d`; Budget `35a6c68`; Debt `c36650f`; Credit Card `2b75e7a`; Loan `bda0374`; Fees `470270f`; Tax Checklist `ebe6150`; Travel `dc5b680`. | 13 calculator repos |
 | 2026-10-01 | Phase 3 Final Audit | Re-audited all 22 production calculators and closed the last FAQ-schema gaps on Take-Home Pay, DTI, and Mortgage Paydown vs Invest using their existing visible FAQ content. | Post-merge audit: 22/22 one canonical, one H1, `WebApplication`, related canonical links; 20/20 pages with visible FAQ have `FAQPage`; Retirement and Travel intentionally have no FAQ/schema; 0 `SoftwareApplication` remain. Merge commits: Take-Home Pay `78d539f`; DTI `d3c05a1`; Mortgage vs Invest `7e7198d`. Phase 3 complete. | three calculator repos + tracker |
 | 2026-10-01 | Phase 4 | Refocused homepage, Tools, and Learn around separate search intents: broad Canadian planning proposition, calculator discovery by goal, and plain-English education. Added contextual Tools-to-Learn links and guide-to-calculator next steps. | All three hubs have distinct metadata, one canonical, one H1, no legacy calculator-subdomain links; existing 22-tool catalogue and six-guide inventory preserved. | `simplekit-site` Phase 4 PR |
+| 2026-10-02 | Phase 8 | Clarified the homepage entry paths and trust language, simplified the Tools hub, added mobile navigation targets, and reduced nonessential motion/blur in both shells. | `npm run seo:validate` passed. After release, homepage, Tools hub, and Retirement Planner returned HTTP 200; Core CSS/JS returned HTTP 200 at 7,500/15,122 bytes. Cloudflare purged only the changed HTML/CSS URLs. PageSpeed Insights returned 429 (daily quota 0); no CWV score is claimed. No calculator form or calculation logic changed. | `simplekit-site` (`0731235`, `0a09032`, `4a60ce8`, `8783e30`, `cd6aafe`) + `SimpleKit-Core` (`cb1da347`) |
 
 ---
 
 # Next task
 
-**Next: Phase 8 — audit performance, Core Web Vitals, and mobile UX without sacrificing calculator clarity.**
+**Next: Phase 9 — use Search Console and GA4 feedback to guide the next round of changes.**
