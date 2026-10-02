@@ -34,10 +34,7 @@ body {
 body {
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 0% 0%, rgba(14, 165, 168, 0.15), transparent 40%),
-    radial-gradient(circle at 100% 10%, rgba(15, 106, 191, 0.14), transparent 42%),
-    linear-gradient(180deg, #eef4ff 0%, #f7fbff 35%, #f7f7fb 100%);
+  background: linear-gradient(180deg, #edf4fc 0%, #f6f9fd 54%, #f3f6fa 100%);
   line-height: 1.55;
 }
 
@@ -57,9 +54,7 @@ img {
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
   overflow: hidden;
-  animation: fade-up 420ms ease-out both;
 }
 
 .topbar {
@@ -139,7 +134,11 @@ img {
 .nav-link.active {
   background: rgba(15, 106, 191, 0.1);
   color: var(--accent);
-  outline: none;
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid rgba(15, 106, 191, 0.55);
+  outline-offset: 3px;
 }
 
 .content {
@@ -252,7 +251,6 @@ p {
 .card-link:hover,
 .card-link:focus-visible {
   transform: translateY(-1px);
-  outline: none;
 }
 
 .button-secondary {
@@ -538,7 +536,6 @@ p {
   background: rgba(15, 106, 191, 0.08);
   border-color: rgba(15, 106, 191, 0.2);
   text-decoration: none;
-  outline: none;
 }
 
 .related-links a,
@@ -612,17 +609,6 @@ p {
   border: 0;
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (min-width: 760px) {
   .content {
     padding: 34px;
@@ -677,7 +663,31 @@ p {
   }
 
   .site-nav {
-    padding: 18px 20px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 20px 14px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    justify-content: stretch;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 6px;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .nav-link:last-child {
+    grid-column: 2;
   }
 
   .content,
@@ -699,12 +709,10 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page,
   .button,
   .button-secondary,
   .card-link,
   .nav-link {
-    animation: none;
     transition: none;
   }
 }
