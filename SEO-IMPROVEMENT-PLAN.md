@@ -536,15 +536,17 @@ Repository and Cloudflare configuration were verified directly. Public HTTP spot
 **Priority:** Ongoing  
 **Goal:** Let actual search demand guide later optimization.
 
+**Initial cycle:** Search Console review completed; GA4 acquisition/general engagement baseline recorded. Organic landing-page engagement remains open. See [Phase 9 baseline](docs/seo/phase-9-baseline-2026-10-01.md). The latest GSC data predates the October 1 release; next full review should use 28 settled post-release days. Published 52-URL sitemap resubmission accepted October 2 UTC, pending Google download. Release annotation added in GSC Wizard. No further public copy/UX changes justified by this small baseline.
+
 Review monthly initially:
 
-- [ ] Queries with high impressions and low CTR.
-- [ ] Queries ranking approximately positions 5–20.
-- [ ] Pages gaining or losing impressions.
-- [ ] Unexpected queries that reveal missing content.
-- [ ] Canonical/indexing warnings.
-- [ ] New pages that remain undiscovered or unindexed.
-- [ ] Organic landing-page engagement in GA4.
+- [x] Queries with high impressions and low CTR. Initial review completed 2026-10-01; repeat monthly.
+- [x] Queries ranking approximately positions 5–20. Initial review completed 2026-10-01; repeat monthly.
+- [x] Pages gaining or losing impressions. Initial review completed 2026-10-01; repeat monthly.
+- [x] Unexpected queries that reveal missing content. Initial review completed 2026-10-01; repeat monthly.
+- [x] Canonical/indexing warnings. Initial review completed 2026-10-01; repeat monthly.
+- [x] New pages that remain undiscovered or unindexed. Initial review completed 2026-10-01; repeat monthly.
+- [ ] Organic landing-page engagement in GA4. Owner-supplied September 3–30 snapshot reviewed; organic acquisition measured (10 sessions), but page engagement is all-traffic, so the organic landing-page breakdown remains open.
 
 For promising queries:
 
@@ -633,3 +635,12 @@ Use this section to record material work so future audits can distinguish planne
 # Next task
 
 **Next: Phase 9 — use Search Console and GA4 feedback to guide the next round of changes.**
+
+
+### 2026-10-01 — Phase 9 initial review
+
+- Recorded settled September 2–29 Search Console baseline and prior 28-day comparison: 7 clicks, 3,910 impressions, 0.179% CTR, average position 66.65.
+- Reviewed all 1,102 available queries, page gains/losses, and selected URL inspections; new hubs/guides need discovery/recrawl.
+- Resubmitted live 52-URL sitemap, accepted pending download; annotated October 1 SEO/UX release.
+- Reviewed owner-provided September 3–30 GA4 snapshot: 32 active users, 10 organic sessions. Organic landing-page engagement remains unmeasured.
+- Reviewed Cloudflare configuration; retained existing redirects. Recorded evidence and next-review criteria in docs/seo/phase-9-baseline-2026-10-01.md.
