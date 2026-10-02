@@ -64,6 +64,11 @@
         "loc": "https://simplekit.app/learn/travel-budget-planning-basics/",
         "changefreq": "weekly",
         "priority": 0.6
+      },
+      {
+        "loc": "https://simplekit.app/learn/budget-to-cash-flow-plan/",
+        "changefreq": "monthly",
+        "priority": 0.6
       }
     ]
   },
