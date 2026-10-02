@@ -35,9 +35,9 @@ Do not create new SEO content or architecture that reinforces the legacy calcula
 
 - [ ] Export or record current Google Search Console performance for the last 28 days and last 3 months.
 - [ ] Record indexed-page count and any current indexing/canonical warnings.
-- [ ] Record top queries, pages, impressions, clicks, CTR, and average position.
+- [x] Record top queries, pages, impressions, clicks, CTR, and average position. Initial baseline recorded in Phase 9.
 - [ ] Record current GA4 organic landing-page performance.
-- [ ] Confirm `https://simplekit.app/sitemap.xml` is submitted in Search Console.
+- [x] Confirm `https://simplekit.app/sitemap.xml` is submitted in Search Console. Resubmission accepted 2026-10-02 UTC; processing remains monitored.
 - [x] Confirm the sitemap currently contains only intended canonical URLs. Verified 2026-10-01 against repository sitemap: 22 calculator directory URLs plus intended site/learn pages; no legacy calculator subdomains.
 - [x] Create a simple redirect test list covering every legacy SimpleKit subdomain before Phase 1 changes. The Phase 1.1 map below is the authoritative test list.
 
@@ -108,7 +108,7 @@ Cloudflare DNS and the repository sitemap were reconciled. All legacy calculator
 - [x] Configure server/edge redirects so each retired calculator subdomain returns a permanent redirect to its exact canonical directory page. Implemented with Cloudflare Bulk Redirects (`simplekit_legacy_redirects`) because the Free-plan Single Redirect quota is 10 rules; the Bulk Redirect list now contains all 22 mappings.
 - [x] Preserve useful paths/query parameters only where doing so makes sense. Query strings are preserved; legacy path suffixes are intentionally not appended to canonical calculator destinations.
 - [x] Avoid redirect chains. All configured targets point directly to final `https://simplekit.app/<tool>/` canonical URLs.
-- [ ] Confirm the destination returns HTTP 200.
+- [x] Confirm the destination returns HTTP 200. Live HTTPS checks passed 2026-10-02; see redirect verification report.
 - [x] Confirm old hosts do not continue serving duplicate calculator pages at the Cloudflare configuration layer: the enabled account-level `http_request_redirect` rule evaluates the 22-host Bulk Redirect list before origin delivery.
 
 **Validation:** Cloudflare configuration validated 2026-10-01: Bulk Redirect asynchronous update completed successfully; list contains 22 entries; all entries are status 301; the account-level `http_request_redirect` rule is enabled. An independent live HTTP header check from the available runtime timed out, so browser/external HTTP confirmation remains part of Phase 1.4 rather than being falsely recorded as passed.
@@ -125,11 +125,13 @@ Cloudflare DNS and the repository sitemap were reconciled. All legacy calculator
 
 ## 1.4 Post-migration validation
 
-- [ ] Crawl/test all legacy hosts.
-- [ ] Confirm each legacy calculator hostname has one-hop permanent redirect behavior.
-- [ ] Confirm no canonical directory URL redirects elsewhere.
-- [ ] Re-submit sitemap in Search Console after migration.
+- [x] Crawl/test all legacy hosts. Live HTTPS checks passed 2026-10-02; see redirect verification report.
+- [x] Confirm each legacy calculator hostname has one-hop permanent redirect behavior. Live HTTPS checks passed 2026-10-02; see redirect verification report.
+- [x] Confirm no canonical directory URL redirects elsewhere. Live HTTPS checks passed 2026-10-02; see redirect verification report.
+- [x] Re-submit sitemap in Search Console after migration. Accepted 2026-10-02 UTC in Phase 9.
 - [ ] Monitor Search Console indexing/canonical reports for migration issues.
+
+**2026-10-02 verification:** All 22 legacy calculator host roots returned a one-hop 301 to their expected canonical URL, preserving the test query; all 22 destinations returned HTTP 200 without another redirect. Core root also passed, and Core CSS/JS remain HTTP 200. This closes the previously blocked live verification. [Full redirect report](docs/seo/redirect-verification-2026-10-02.md).
 
 **Phase 1 done when:** Every retired calculator subdomain resolves cleanly to one canonical SimpleKit directory URL and `core.simplekit.app` no longer functions as a competing homepage.
 
@@ -492,7 +494,7 @@ Phase 7 retires those duplicate pages by:
 - pointing their canonical tags to the root-level calculator,
 - adding immediate client-side fallback redirects to the canonical destination.
 
-They remain outside the sitemap. The preferred long-term behavior is an edge/server permanent redirect; the repository fallback prevents them from continuing to advertise themselves as independent canonical documents while edge routing is managed separately.
+They remain outside the sitemap. On 2026-10-02, Cloudflare permanent redirects were added for all 13 retired calculator paths with and without trailing slashes. All 26 variants passed live one-hop 301 checks with query preservation and HTTP 200 destinations. Repository fallbacks remain as a secondary safeguard.
 
 ### Redirect hygiene
 
@@ -634,7 +636,7 @@ Use this section to record material work so future audits can distinguish planne
 
 # Next task
 
-**Next: Phase 9 — use Search Console and GA4 feedback to guide the next round of changes.**
+**Next: Verify sitemap processing and Google discovery/recrawl, close organic landing-page engagement and Core Web Vitals measurement gaps, then audit Phase 10. Phase 9 continues monthly; use 28 settled post-release days before further query-led changes.**
 
 
 ### 2026-10-01 — Phase 9 initial review
@@ -644,3 +646,12 @@ Use this section to record material work so future audits can distinguish planne
 - Resubmitted live 52-URL sitemap, accepted pending download; annotated October 1 SEO/UX release.
 - Reviewed owner-provided September 3–30 GA4 snapshot: 32 active users, 10 organic sessions. Organic landing-page engagement remains unmeasured.
 - Reviewed Cloudflare configuration; retained existing redirects. Recorded evidence and next-review criteria in docs/seo/phase-9-baseline-2026-10-01.md.
+
+
+### 2026-10-02 — Redirect verification and retired path cleanup
+
+- Added 26 exact Cloudflare Bulk Redirect entries for the 13 retired `/tools/<calculator>/` paths, covering trailing-slash and no-slash forms with query preservation.
+- Live checks passed 49/49: 22 retired calculator host roots, 26 old path variants, and Core root. Each returned 301 directly to the expected HTTP 200 canonical destination.
+- Core CSS/JS and the Tools hub separately returned HTTP 200 without redirects.
+- Saved full verification evidence and redirect map under `docs/seo/redirect-verification-2026-10-02.*`.
+- Reconciled completed baseline/sitemap tasks and replaced the stale Next task footer. Google recrawl, organic landing-page engagement, CWV and the three-month baseline remain open where not measured.
