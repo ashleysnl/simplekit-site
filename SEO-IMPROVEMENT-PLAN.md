@@ -664,3 +664,12 @@ Use this section to record material work so future audits can distinguish planne
 - Live 18/18 checks passed HTTP 200, self-canonical, one H1 and no HTML robots noindex. Learn links to all 16 guides through normal HTML links.
 - Bulk inspection response timed out; recovered all 18 fresh results from persisted history. No inspections remain missing.
 - Saved report/evidence in [discovery verification](docs/seo/discovery-verification-2026-10-02.md). No new public code changes were justified. Recheck unresolved indexing around October 9; organic landing engagement and CWV remain open.
+
+
+### 2026-10-02 — Performance and organic engagement measurement attempt
+
+- GSC Wizard mobile CrUX measurement blocked: no Chrome UX Report API key configured.
+- Public mobile PageSpeed request returned HTTP 429 with daily quota 0; no metric or score claimed.
+- Organic Search landing-page GA4 query blocked: SimpleKit property 526477995 is readable but not linked to sc-domain:simplekit.app in the connected GSC Wizard account.
+- Both measurement checklist items remain open. Recorded configuration requirements, representative URLs and organic report settings in [measurement setup](docs/seo/measurement-setup-2026-10-02.md).
+- Next prerequisite: link the existing SimpleKit GA4 property and configure CrUX, or supply the specified GA4 export and PageSpeed reports. No public site change made without measurement evidence.
