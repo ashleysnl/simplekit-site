@@ -1,0 +1,808 @@
+{
+  "rows": [
+    {
+      "source": "https://retirement.simplekit.app/",
+      "target": "https://simplekit.app/retirement-planner/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/retirement-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://fire.simplekit.app/",
+      "target": "https://simplekit.app/fire-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/fire-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://cpp.simplekit.app/",
+      "target": "https://simplekit.app/cpp-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/cpp-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://rrsptfsa.simplekit.app/",
+      "target": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/rrsp-vs-tfsa-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://investment.simplekit.app/",
+      "target": "https://simplekit.app/compound-interest-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/compound-interest-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://savingsgoal.simplekit.app/",
+      "target": "https://simplekit.app/savings-goal-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/savings-goal-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://emergency.simplekit.app/",
+      "target": "https://simplekit.app/emergency-fund-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/emergency-fund-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://networth.simplekit.app/",
+      "target": "https://simplekit.app/net-worth-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/net-worth-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://monthlybudget.simplekit.app/",
+      "target": "https://simplekit.app/budget-planner/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/budget-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://takehomepay.simplekit.app/",
+      "target": "https://simplekit.app/take-home-pay-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/take-home-pay-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://debt.simplekit.app/",
+      "target": "https://simplekit.app/debt-payoff-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/debt-payoff-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://creditcard.simplekit.app/",
+      "target": "https://simplekit.app/credit-card-interest-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/credit-card-interest-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://loan.simplekit.app/",
+      "target": "https://simplekit.app/loan-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/loan-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://houseaffordability.simplekit.app/",
+      "target": "https://simplekit.app/house-affordability-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/house-affordability-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://rentvsbuy.simplekit.app/",
+      "target": "https://simplekit.app/rent-vs-buy-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/rent-vs-buy-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://mortgage.simplekit.app/",
+      "target": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://fees.simplekit.app/",
+      "target": "https://simplekit.app/investment-fee-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/investment-fee-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://mortgagecalculator.simplekit.app/",
+      "target": "https://simplekit.app/mortgage-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/mortgage-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://taxchecklist.simplekit.app/",
+      "target": "https://simplekit.app/canadian-tax-checklist/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/canadian-tax-checklist/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://travel.simplekit.app/",
+      "target": "https://simplekit.app/travel-planner/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/travel-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://dti.simplekit.app/",
+      "target": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/debt-to-income-ratio-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://contractorrate.simplekit.app/",
+      "target": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "type": "host",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/contractor-effective-hourly-rate-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/rrsp-tfsa-calculator/",
+      "target": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/rrsp-vs-tfsa-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/rrsp-tfsa-calculator",
+      "target": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/rrsp-vs-tfsa-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/net-worth-calculator/",
+      "target": "https://simplekit.app/net-worth-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/net-worth-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/net-worth-calculator",
+      "target": "https://simplekit.app/net-worth-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/net-worth-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/debt-payoff-calculator/",
+      "target": "https://simplekit.app/debt-payoff-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/debt-payoff-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/debt-payoff-calculator",
+      "target": "https://simplekit.app/debt-payoff-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/debt-payoff-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/rent-vs-buy-calculator/",
+      "target": "https://simplekit.app/rent-vs-buy-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/rent-vs-buy-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/rent-vs-buy-calculator",
+      "target": "https://simplekit.app/rent-vs-buy-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/rent-vs-buy-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/fire-calculator/",
+      "target": "https://simplekit.app/fire-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/fire-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/fire-calculator",
+      "target": "https://simplekit.app/fire-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/fire-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/loan-calculator/",
+      "target": "https://simplekit.app/loan-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/loan-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/loan-calculator",
+      "target": "https://simplekit.app/loan-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/loan-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/budget-planner/",
+      "target": "https://simplekit.app/budget-planner/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/budget-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/budget-planner",
+      "target": "https://simplekit.app/budget-planner/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/budget-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/retirement-planner/",
+      "target": "https://simplekit.app/retirement-planner/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/retirement-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/retirement-planner",
+      "target": "https://simplekit.app/retirement-planner/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/retirement-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/savings-goal-calculator/",
+      "target": "https://simplekit.app/savings-goal-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/savings-goal-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/savings-goal-calculator",
+      "target": "https://simplekit.app/savings-goal-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/savings-goal-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/investment-growth-calculator/",
+      "target": "https://simplekit.app/compound-interest-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/compound-interest-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/investment-growth-calculator",
+      "target": "https://simplekit.app/compound-interest-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/compound-interest-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/cpp-calculator/",
+      "target": "https://simplekit.app/cpp-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/cpp-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/cpp-calculator",
+      "target": "https://simplekit.app/cpp-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/cpp-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/travel-planner/",
+      "target": "https://simplekit.app/travel-planner/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/travel-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/travel-planner",
+      "target": "https://simplekit.app/travel-planner/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/travel-planner/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/emergency-fund-calculator/",
+      "target": "https://simplekit.app/emergency-fund-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/emergency-fund-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://simplekit.app/tools/emergency-fund-calculator",
+      "target": "https://simplekit.app/emergency-fund-calculator/",
+      "type": "path",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/emergency-fund-calculator/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    },
+    {
+      "source": "https://core.simplekit.app/",
+      "target": "https://simplekit.app/",
+      "type": "core",
+      "first": {
+        "status": 301,
+        "location": "https://simplekit.app/?seo_redirect_check=1",
+        "error": ""
+      },
+      "destination": {
+        "status": 200,
+        "location": null,
+        "error": ""
+      },
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://core.simplekit.app/core.css",
+      "status": 200,
+      "location": null,
+      "error": ""
+    },
+    {
+      "url": "https://core.simplekit.app/core.js",
+      "status": 200,
+      "location": null,
+      "error": ""
+    },
+    {
+      "url": "https://simplekit.app/tools/",
+      "status": 200,
+      "location": null,
+      "error": ""
+    }
+  ]
+}
