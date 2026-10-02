@@ -1,0 +1,442 @@
+{
+  "sitemap": {
+    "siteUrl": "sc-domain:simplekit.app",
+    "sitemaps": [
+      {
+        "path": "https://simplekit.app/sitemap.xml",
+        "lastSubmitted": "2026-10-02T01:22:18.827Z",
+        "isPending": false,
+        "isSitemapsIndex": false,
+        "type": "sitemap",
+        "lastDownloaded": "2026-10-02T01:55:46.128Z",
+        "warnings": "0",
+        "errors": "0",
+        "contents": [
+          {
+            "type": "web",
+            "submitted": "52",
+            "indexed": "0"
+          }
+        ]
+      }
+    ]
+  },
+  "inspections": [
+    {
+      "id": "669cea72-5223-4ef8-9ced-f6d3611c6fbe",
+      "url": "https://simplekit.app/learn/compound-interest-and-investment-fees/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:25:55.102255+00:00"
+    },
+    {
+      "id": "1aa8c83f-54ea-4082-81f4-45a14344cf8b",
+      "url": "https://simplekit.app/learn/loan-payments-and-amortization/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:25:48.436688+00:00"
+    },
+    {
+      "id": "2f255a89-257c-441c-9d6d-ae4f58482993",
+      "url": "https://simplekit.app/learn/credit-card-interest-and-payoff/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:25:41.771534+00:00"
+    },
+    {
+      "id": "c0e75834-edd9-4ceb-ba88-7291e9613046",
+      "url": "https://simplekit.app/learn/debt-snowball-vs-avalanche/",
+      "verdict": "PASS",
+      "coverage_state": "Submitted and indexed",
+      "robots_txt_state": "ALLOWED",
+      "indexing_state": "INDEXING_ALLOWED",
+      "last_crawl_time": "2026-10-02T01:05:46+00:00",
+      "page_fetch_state": "SUCCESSFUL",
+      "crawled_as": "MOBILE",
+      "requested_at": "2026-10-02T10:25:35.156273+00:00"
+    },
+    {
+      "id": "45c54c16-4125-4086-9eba-687e178ef8e5",
+      "url": "https://simplekit.app/learn/emergency-fund-and-savings-goals/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:25:28.315315+00:00"
+    },
+    {
+      "id": "e2f128da-27f6-4dc1-82e4-6b7ccced8e04",
+      "url": "https://simplekit.app/learn/monthly-budgeting-and-cash-flow/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:25:21.650378+00:00"
+    },
+    {
+      "id": "aa79fbdd-27fe-4d1d-b379-bf44729db9bb",
+      "url": "https://simplekit.app/learn/mortgage-prepayment-vs-investing/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:25:14.907125+00:00"
+    },
+    {
+      "id": "cfa9f652-acfb-48f6-94fe-e348f06a595b",
+      "url": "https://simplekit.app/learn/mortgage-costs-beyond-the-payment/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:25:08.336573+00:00"
+    },
+    {
+      "id": "4855259f-71ed-48b3-b90f-dba8c24dbb9b",
+      "url": "https://simplekit.app/learn/rent-vs-buy-canada/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:25:01.759942+00:00"
+    },
+    {
+      "id": "4e9a9ded-a9cd-4d40-bc03-f8bc4c5cb1c9",
+      "url": "https://simplekit.app/learn/mortgage-affordability-canada/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:24:55.215499+00:00"
+    },
+    {
+      "id": "4b18bf66-c076-4b16-8ca5-27b938922815",
+      "url": "https://simplekit.app/learn/travel-budget-planning-basics/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:24:48.592605+00:00"
+    },
+    {
+      "id": "cd2a8b0a-33c6-4079-b6ab-5bd026e52213",
+      "url": "https://simplekit.app/learn/net-worth-basics/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:24:41.654785+00:00"
+    },
+    {
+      "id": "f87ffaa4-07e0-42fa-8ae6-fd76cf4901c1",
+      "url": "https://simplekit.app/learn/rrsp-vs-tfsa-basics/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:24:35.028646+00:00"
+    },
+    {
+      "id": "ec4751fb-8442-41f9-b2bb-8faf8e20c69c",
+      "url": "https://simplekit.app/learn/fire-explained/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:24:28.345405+00:00"
+    },
+    {
+      "id": "1663beb6-b372-4eb0-8655-fd35a620f71b",
+      "url": "https://simplekit.app/learn/cpp-basics/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:24:21.459955+00:00"
+    },
+    {
+      "id": "5f2aa87f-902a-4a79-9a5c-60aecd32303c",
+      "url": "https://simplekit.app/learn/retirement-planning-basics/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:24:14.837609+00:00"
+    },
+    {
+      "id": "26e9e590-72f1-49e2-b76a-bbba3952bf8a",
+      "url": "https://simplekit.app/learn/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "URL is unknown to Google",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": null,
+      "requested_at": "2026-10-02T10:24:08.232415+00:00"
+    },
+    {
+      "id": "b142d2e4-0a8a-43ed-bab7-87038d127f28",
+      "url": "https://simplekit.app/tools/",
+      "verdict": "NEUTRAL",
+      "coverage_state": "Discovered - currently not indexed",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "last_crawl_time": null,
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "crawled_as": "CRAWLING_USER_AGENT_UNSPECIFIED",
+      "requested_at": "2026-10-02T10:24:01.427331+00:00"
+    }
+  ],
+  "liveChecks": [
+    {
+      "url": "https://simplekit.app/tools/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/tools/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/retirement-planning-basics/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/retirement-planning-basics/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/cpp-basics/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/cpp-basics/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/fire-explained/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/fire-explained/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/rrsp-vs-tfsa-basics/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/rrsp-vs-tfsa-basics/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/net-worth-basics/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/net-worth-basics/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/travel-budget-planning-basics/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/travel-budget-planning-basics/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/mortgage-affordability-canada/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/mortgage-affordability-canada/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/rent-vs-buy-canada/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/rent-vs-buy-canada/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/mortgage-costs-beyond-the-payment/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/mortgage-costs-beyond-the-payment/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/mortgage-prepayment-vs-investing/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/mortgage-prepayment-vs-investing/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/monthly-budgeting-and-cash-flow/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/monthly-budgeting-and-cash-flow/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/emergency-fund-and-savings-goals/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/emergency-fund-and-savings-goals/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/debt-snowball-vs-avalanche/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/debt-snowball-vs-avalanche/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/credit-card-interest-and-payoff/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/credit-card-interest-and-payoff/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/loan-payments-and-amortization/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/loan-payments-and-amortization/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    },
+    {
+      "url": "https://simplekit.app/learn/compound-interest-and-investment-fees/",
+      "status": 200,
+      "canonical": [
+        "https://simplekit.app/learn/compound-interest-and-investment-fees/"
+      ],
+      "noindex": false,
+      "h1": 1,
+      "error": "",
+      "linked_from_learn": true
+    }
+  ]
+}
