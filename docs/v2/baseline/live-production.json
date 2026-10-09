@@ -1,0 +1,209 @@
+{
+  "pages": [
+    {
+      "url": "https://simplekit.app/",
+      "status": 403,
+      "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "matchesTrackedSource": false,
+      "headers": {
+        "server": "envoy"
+      }
+    },
+    {
+      "url": "https://simplekit.app/sitemap.xml",
+      "status": 403,
+      "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "matchesTrackedSource": false,
+      "headers": {
+        "server": "envoy"
+      }
+    },
+    {
+      "url": "https://simplekit.app/robots.txt",
+      "status": 403,
+      "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "matchesTrackedSource": false,
+      "headers": {
+        "server": "envoy"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "id": "retirement-planner",
+      "url": "https://retirement.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/retirement-planner/",
+      "matchesExpected": false
+    },
+    {
+      "id": "fire-calculator",
+      "url": "https://fire.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/fire-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "cpp-calculator",
+      "url": "https://cpp.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/cpp-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "rrsp-vs-tfsa-calculator",
+      "url": "https://rrsptfsa.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "compound-interest-calculator",
+      "url": "https://investment.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/compound-interest-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "savings-goal-calculator",
+      "url": "https://savingsgoal.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/savings-goal-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "emergency-fund-calculator",
+      "url": "https://emergency.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/emergency-fund-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "net-worth-calculator",
+      "url": "https://networth.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/net-worth-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "budget-planner",
+      "url": "https://monthlybudget.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/budget-planner/",
+      "matchesExpected": false
+    },
+    {
+      "id": "take-home-pay-calculator",
+      "url": "https://takehomepay.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/take-home-pay-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "debt-payoff-calculator",
+      "url": "https://debt.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/debt-payoff-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "credit-card-interest-calculator",
+      "url": "https://creditcard.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/credit-card-interest-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "loan-calculator",
+      "url": "https://loan.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/loan-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "house-affordability-calculator",
+      "url": "https://houseaffordability.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/house-affordability-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "rent-vs-buy-calculator",
+      "url": "https://rentvsbuy.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/rent-vs-buy-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "mortgage-paydown-vs-invest-calculator",
+      "url": "https://mortgage.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "investment-fee-calculator",
+      "url": "https://fees.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/investment-fee-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "mortgage-calculator",
+      "url": "https://mortgagecalculator.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/mortgage-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "canadian-tax-checklist",
+      "url": "https://taxchecklist.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/canadian-tax-checklist/",
+      "matchesExpected": false
+    },
+    {
+      "id": "travel-planner",
+      "url": "https://travel.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/travel-planner/",
+      "matchesExpected": false
+    },
+    {
+      "id": "debt-to-income-ratio-calculator",
+      "url": "https://dti.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "matchesExpected": false
+    },
+    {
+      "id": "contractor-effective-hourly-rate-calculator",
+      "url": "https://contractorrate.simplekit.app/",
+      "status": 403,
+      "location": null,
+      "expected": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "matchesExpected": false
+    }
+  ]
+}

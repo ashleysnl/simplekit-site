@@ -1,0 +1,6 @@
+{
+  "test": "Append a comment to generated mortgage-calculator/app.js, run preservation check, restore exact original bytes in finally",
+  "exitCode": 1,
+  "detected": true,
+  "message": "Calculator logic differs: mortgage-calculator/app.js"
+}

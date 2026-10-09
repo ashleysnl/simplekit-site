@@ -1,0 +1,475 @@
+{
+  "observedAt": "2026-10-09T14:18:34.402Z",
+  "ruleset": {
+    "description": "",
+    "id": "b9f2a0b2b0e248e1b31ebc0bfd8ded92",
+    "kind": "root",
+    "last_updated": "2026-03-21T15:30:24.283119Z",
+    "name": "default",
+    "phase": "http_request_redirect",
+    "rules": [
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_list": {
+            "key": "http.request.full_uri",
+            "name": "simplekit_legacy_redirects"
+          }
+        },
+        "description": "SimpleKit_Legacy",
+        "enabled": true,
+        "expression": "http.request.full_uri in $simplekit_legacy_redirects",
+        "id": "932a73670f9e4a24a0e3d5a48e89a1aa",
+        "last_updated": "2026-03-21T15:30:24.283119Z",
+        "ref": "932a73670f9e4a24a0e3d5a48e89a1aa",
+        "version": "1"
+      }
+    ],
+    "version": "1"
+  },
+  "redirects": [
+    {
+      "source_url": "contractorrate.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "core.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "cpp.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/cpp-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "creditcard.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/credit-card-interest-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "debt.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/debt-payoff-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "dti.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "emergency.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/emergency-fund-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "fees.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/investment-fee-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "fire.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/fire-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "houseaffordability.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/house-affordability-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "investment.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/compound-interest-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "loan.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/loan-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "monthlybudget.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/budget-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "mortgagecalculator.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/mortgage-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "mortgage.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "networth.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/net-worth-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "rentvsbuy.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/rent-vs-buy-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "retirement.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/retirement-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "rrsptfsa.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "savingsgoal.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/savings-goal-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/budget-planner",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/budget-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/budget-planner/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/budget-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/cpp-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/cpp-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/cpp-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/cpp-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/debt-payoff-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/debt-payoff-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/debt-payoff-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/debt-payoff-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/emergency-fund-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/emergency-fund-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/emergency-fund-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/emergency-fund-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/fire-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/fire-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/fire-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/fire-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/investment-growth-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/compound-interest-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/investment-growth-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/compound-interest-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/loan-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/loan-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/loan-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/loan-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/net-worth-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/net-worth-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/net-worth-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/net-worth-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/rent-vs-buy-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/rent-vs-buy-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/rent-vs-buy-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/rent-vs-buy-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/retirement-planner",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/retirement-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/retirement-planner/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/retirement-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/rrsp-tfsa-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/rrsp-tfsa-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/savings-goal-calculator",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/savings-goal-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/savings-goal-calculator/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/savings-goal-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/travel-planner",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/travel-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "simplekit.app/tools/travel-planner/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/travel-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": false,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "takehomepay.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/take-home-pay-calculator/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "taxchecklist.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/canadian-tax-checklist/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    },
+    {
+      "source_url": "travel.simplekit.app/",
+      "include_subdomains": false,
+      "target_url": "https://simplekit.app/travel-planner/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": false
+    }
+  ],
+  "pages": 1,
+  "complete": true
+}

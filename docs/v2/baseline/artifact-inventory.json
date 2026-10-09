@@ -1,0 +1,1114 @@
+{
+  "about/index.html": {
+    "sha256": "c6d70681bfd0a6c99dd7f9da4bee819021c8fdad690126cee08c97aa6e01aea4",
+    "bytes": 8327
+  },
+  "assets/core/core.css": {
+    "sha256": "62b7a579f6cf6aaa16f2817dc26e8a6116936520ed2b3e10198af3a45846dd7f",
+    "bytes": 7500
+  },
+  "assets/core/core.js": {
+    "sha256": "f811e1b35e0771e6732e55be52f57eb65b899b0e3821c60d62df69bdfcc5a93f",
+    "bytes": 15122
+  },
+  "assets/site.css": {
+    "sha256": "acf9c494da3f0b76e0b4922fa2e63afa2fbc1d586105db03a3e7169fc2a9d914",
+    "bytes": 11728
+  },
+  "assets/tool-registry.js": {
+    "sha256": "e84309c3b1e908f75339ac45000dbca5e11da9b6fc5a09d465ef18839bceac9b",
+    "bytes": 8400
+  },
+  "budget-planner/assets/css/styles.css": {
+    "sha256": "067431b87aea8611fad4d3ec6670775f0606e67b6b522e7cf303de131b4d89c9",
+    "bytes": 25173
+  },
+  "budget-planner/assets/js/app.js": {
+    "sha256": "98420eb6dbc41e9971105f8161b72d4b92d007de89a1a3a4ade78f70b6036cf0",
+    "bytes": 54783
+  },
+  "budget-planner/index.html": {
+    "sha256": "8e9149c8f0f446724dfaf1692c13b6d88e1f2536e28b4ecaa83687218a5f6801",
+    "bytes": 41029
+  },
+  "budget-planner/robots.txt": {
+    "sha256": "a38ccc51220d88bc589dcdaf85c7c777c78c807bd06877487a8913dc1e189bd2",
+    "bytes": 82
+  },
+  "budget-planner/sitemap.xml": {
+    "sha256": "ad3bc81d97a7b21167af6e568b8c42034d210bd8d6e43c1bdd5d48345c316c31",
+    "bytes": 180
+  },
+  "canadian-tax-checklist/assets/css/styles.css": {
+    "sha256": "628f82c67b983f19c4db2b2b04b56499594a1b1076628762afc3bc4089d88647",
+    "bytes": 17794
+  },
+  "canadian-tax-checklist/assets/js/app.js": {
+    "sha256": "fb6bc0fc0316adeeee59cfeccfe63ce039248bcabfe79ae2454083922b320a9b",
+    "bytes": 55723
+  },
+  "canadian-tax-checklist/assets/js/simplekit-tool-links.js": {
+    "sha256": "8ce0effc94da02d300c9c3bd420f793ab058a029db96186fbf0a8a9e9c7de147",
+    "bytes": 1197
+  },
+  "canadian-tax-checklist/index.html": {
+    "sha256": "8dcc1a2fe474a9db3086603f9498644b7647f6b97f741be809e2948f27eb2006",
+    "bytes": 19352
+  },
+  "canadian-tax-checklist/manifest.webmanifest": {
+    "sha256": "4d7b2c3ac471483f8d14b09db092d1f0d0a1c1c6e411c6640e7cf624cf5ab4d4",
+    "bytes": 403
+  },
+  "canadian-tax-checklist/robots.txt": {
+    "sha256": "e0241e0bca05cc6a050315b7e29c8f52ff12ffbd473075c6e06d13c41601cd52",
+    "bytes": 90
+  },
+  "canadian-tax-checklist/sitemap.xml": {
+    "sha256": "e1eb3a5b069dce5a806cce5219630880eff05030aed92cbeb455101d3d95d5c6",
+    "bytes": 188
+  },
+  "CNAME": {
+    "sha256": "f823a1144cf33c204f56579209e8f32b4d06fc71181c4bd48bd34df2b553167d",
+    "bytes": 14
+  },
+  "compound-interest-calculator/assets/css/styles.css": {
+    "sha256": "1c6faad1ea0cf0fd0cbe3fb543c28612955caa12b15068550d6cf9855083745f",
+    "bytes": 17394
+  },
+  "compound-interest-calculator/assets/js/app.js": {
+    "sha256": "18918fbde9be1f10dca3bad18c6e47106a50037d830f81dac6b491fc9a82bbc5",
+    "bytes": 38424
+  },
+  "compound-interest-calculator/index.html": {
+    "sha256": "1b2bd5ac0718de3fcca12dbbd7947d8af901b889b86e6e4b5865de9aa60b9e95",
+    "bytes": 29961
+  },
+  "compound-interest-calculator/robots.txt": {
+    "sha256": "b8512e2f81caa840b5113f3070664c3571765a2989e2614c54057f08f59570bf",
+    "bytes": 96
+  },
+  "compound-interest-calculator/sitemap.xml": {
+    "sha256": "e77c98918cedc0b5adfca4b8054a584f734b78637e6ebe422528e467bbea52db",
+    "bytes": 194
+  },
+  "contractor-effective-hourly-rate-calculator/assets/css/styles.css": {
+    "sha256": "7e970e39884ce3be049b4642319b8b6d379040222fb63aa160dfd66b3fd9eae4",
+    "bytes": 14156
+  },
+  "contractor-effective-hourly-rate-calculator/assets/js/app.js": {
+    "sha256": "80f7851da5fb59c33352e8a7a9a4cb3117f1990473dd02dd447ae3c03ce09b34",
+    "bytes": 29389
+  },
+  "contractor-effective-hourly-rate-calculator/assets/js/simplekit-tool-links.js": {
+    "sha256": "8ce0effc94da02d300c9c3bd420f793ab058a029db96186fbf0a8a9e9c7de147",
+    "bytes": 1197
+  },
+  "contractor-effective-hourly-rate-calculator/index.html": {
+    "sha256": "01c8b34ecc924a6c53add515c0f6b69570a51f2615b64a4a369218e40cb2a9d5",
+    "bytes": 32486
+  },
+  "contractor-effective-hourly-rate-calculator/manifest.webmanifest": {
+    "sha256": "8f5ecc5f40daf6ff06cd100ff09d476d6aa51f324310b04d750a47c256da9332",
+    "bytes": 508
+  },
+  "contractor-effective-hourly-rate-calculator/robots.txt": {
+    "sha256": "349cfe7849afb60261fa500e0fc855025f68d8ffa03a244f00af03f7101468c3",
+    "bytes": 111
+  },
+  "contractor-effective-hourly-rate-calculator/sitemap.xml": {
+    "sha256": "b2cc6f7fe713f63849f6b713213486b805245ebadc5f75f7b802b29e38b1dd03",
+    "bytes": 209
+  },
+  "cpp-calculator/app.js": {
+    "sha256": "21bc175c3460ac0c34363b60e068913e9d1419af53ca3814a16b284d7dfa41f3",
+    "bytes": 25647
+  },
+  "cpp-calculator/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "cpp-calculator/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "cpp-calculator/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "cpp-calculator/index.html": {
+    "sha256": "b11f9c187768643f2774f303d5270129abbc51c6fca84208d9e9cdfdaae2dd99",
+    "bytes": 26500
+  },
+  "cpp-calculator/manifest.webmanifest": {
+    "sha256": "913d1c539b0c8aab1736da8883167a342910cce40d28e2e5a8c17f2258c28cbc",
+    "bytes": 731
+  },
+  "cpp-calculator/robots.txt": {
+    "sha256": "7bbc8da2ba432e52518147d8ebfd7cf16585ed4d1f8cf94c76122300afe5116e",
+    "bytes": 82
+  },
+  "cpp-calculator/sitemap.xml": {
+    "sha256": "7aafe762f23e1b094625ddae9dc7d3f336e79f47119d25198caeeeed7826f15f",
+    "bytes": 245
+  },
+  "cpp-calculator/styles.css": {
+    "sha256": "114f8d9b4b194a56e690da3662cac447cc09b4bfd944c93d5f186ca6eb337933",
+    "bytes": 16163
+  },
+  "credit-card-interest-calculator/assets/css/styles.css": {
+    "sha256": "30c8c9e633baed6e56499aec676d1fe800874d070943b902f8678e0e90e8b358",
+    "bytes": 17218
+  },
+  "credit-card-interest-calculator/assets/js/app.js": {
+    "sha256": "8643f8867c51a0dc9174a2e20446e14d3d79803cf248be2b035e25987cfdf38f",
+    "bytes": 28267
+  },
+  "credit-card-interest-calculator/assets/js/simplekit-tool-links.js": {
+    "sha256": "8ce0effc94da02d300c9c3bd420f793ab058a029db96186fbf0a8a9e9c7de147",
+    "bytes": 1197
+  },
+  "credit-card-interest-calculator/index.html": {
+    "sha256": "fafa97c78f4f99addde4ed38437896fbe06a29e6740fa92656c3da870706207f",
+    "bytes": 25508
+  },
+  "credit-card-interest-calculator/mobile-pass-2.png": {
+    "sha256": "cc912638b151f234b6293410345ac5ebefd941bba33259cacd0b4cd59b7ce920",
+    "bytes": 1394085
+  },
+  "credit-card-interest-calculator/mobile-pass.png": {
+    "sha256": "9dfe1af8788a2ebb9ed14ed2f9cf46de9fd35e7afc7286940b08b97790cf57f6",
+    "bytes": 2889965
+  },
+  "credit-card-interest-calculator/robots.txt": {
+    "sha256": "93403f62170089e45b7ddc2429ca6795f28e57986bef588342240f657afc3445",
+    "bytes": 99
+  },
+  "credit-card-interest-calculator/sitemap.xml": {
+    "sha256": "c837e50a7616950191da322461132efe113fcac2552505b40209843f828ff013",
+    "bytes": 197
+  },
+  "data/tool-link-audit.json": {
+    "sha256": "c2ce969e24e21329b06801f6061ed6728175665cffd119c116f059bdcd7babd7",
+    "bytes": 13472
+  },
+  "data/tool-registry.json": {
+    "sha256": "1f6efc5f8ad3ca5de93a046c620fe67cff9ab4943fa1d4df60f6c6407d0c5847",
+    "bytes": 5887
+  },
+  "debt-payoff-calculator/assets/css/styles.css": {
+    "sha256": "32f2322282c149eaf26ec58106e7c4e61bf4d5c2eb131a06345988e0bc10f2dd",
+    "bytes": 23366
+  },
+  "debt-payoff-calculator/assets/js/app.js": {
+    "sha256": "990fc7c96b6d433026afc8a37aa3c5452632b38e79c96bfa0a90e9f15009a4d8",
+    "bytes": 52610
+  },
+  "debt-payoff-calculator/index.html": {
+    "sha256": "89af15eefa1c4b7d07df5851a01f7b52453c22ac4e90fad86be33d1f7bf14666",
+    "bytes": 27930
+  },
+  "debt-payoff-calculator/robots.txt": {
+    "sha256": "d1cb52f63f4dc8b0285b1930739021e95430fe02b2c867282ca54ec0d9b0ebc4",
+    "bytes": 90
+  },
+  "debt-payoff-calculator/sitemap.xml": {
+    "sha256": "1ab865d920415b145080b389d234411ea03d6de42ccdcf08d56c021d1f3790e6",
+    "bytes": 253
+  },
+  "debt-to-income-ratio-calculator/assets/css/styles.css": {
+    "sha256": "b7157df5a8eabbc5102b50dab5bc15b34a148a222a9d700efecbe094467b0eee",
+    "bytes": 18339
+  },
+  "debt-to-income-ratio-calculator/assets/js/app.js": {
+    "sha256": "822f1a512483860612f7c287e2bb993399863dc882fbeb68d49b3d10a42da4ed",
+    "bytes": 33857
+  },
+  "debt-to-income-ratio-calculator/assets/js/simplekit-tool-links.js": {
+    "sha256": "c57fe30b599ff9a66784d83e8eb33e0193cbd7bd7886c23c2546def1c65a3b44",
+    "bytes": 1286
+  },
+  "debt-to-income-ratio-calculator/index.html": {
+    "sha256": "5cf6fc4fd8c71b7247b38ab2e2504432755eacea7a887f8f5a6c163960940c8d",
+    "bytes": 42459
+  },
+  "debt-to-income-ratio-calculator/manifest.webmanifest": {
+    "sha256": "de23c578baa335c962d5d2a743620bfd7b67fb32481f75569590b01e6c806b3d",
+    "bytes": 439
+  },
+  "debt-to-income-ratio-calculator/robots.txt": {
+    "sha256": "e71fea0fb7f2c9aa5b3c33cf49ce851caf5f0f60232bb8c27c8008657f613577",
+    "bytes": 99
+  },
+  "debt-to-income-ratio-calculator/sitemap.xml": {
+    "sha256": "8dd52fc5b6d6fe1475bafba23ea15dfe262134a5c0c5161a078f6ba11cc5ed74",
+    "bytes": 197
+  },
+  "emergency-fund-calculator/assets/css/styles.css": {
+    "sha256": "383ac7b6627a15de2fb8ecbba9e7bdffe5a3e7efdea61e2ae633cd4f11c73da6",
+    "bytes": 14633
+  },
+  "emergency-fund-calculator/assets/js/app.js": {
+    "sha256": "4f1598377d7faf53e233381369461d7f9ccb4f28d0f9fd7f124e8e377e4a3aa5",
+    "bytes": 26122
+  },
+  "emergency-fund-calculator/index.html": {
+    "sha256": "b46d0c67e4c2aaeb91343b563f20041528ffd56d71ee11e600538508db21ad8f",
+    "bytes": 24674
+  },
+  "emergency-fund-calculator/robots.txt": {
+    "sha256": "cc27ddfb79d6e437695cbca9e2fee0490748aa13006b731630029238477b64e9",
+    "bytes": 93
+  },
+  "emergency-fund-calculator/sitemap.xml": {
+    "sha256": "74e9a00e9da1b07c88871d7a7ca42c83982978e685bc64d6b60a9ebce7c6a7d9",
+    "bytes": 191
+  },
+  "fire-calculator/app.js": {
+    "sha256": "4881e2ef46cfaccb0e65b88cdca163be574c5627362b9334b7d69017f65e04e7",
+    "bytes": 36691
+  },
+  "fire-calculator/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "fire-calculator/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "fire-calculator/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "fire-calculator/index.html": {
+    "sha256": "5f9c9f45d5b694fbe6ea471b501a9e741303ecf4f0d5f99cfabeb6056943cd26",
+    "bytes": 29445
+  },
+  "fire-calculator/manifest.webmanifest": {
+    "sha256": "8f53b60509f79999598b467102f794469be0d3f959f8cde3099d3d4ed4ae37dc",
+    "bytes": 734
+  },
+  "fire-calculator/robots.txt": {
+    "sha256": "520857d22a87abd2778de6707de60c4a915425e9ab713f9267dcd89f05b8a569",
+    "bytes": 83
+  },
+  "fire-calculator/sitemap.xml": {
+    "sha256": "53ee790bf20c3cfd340ebe2be683f21fa63f70032f8ef019e3a54671bb94a506",
+    "bytes": 246
+  },
+  "fire-calculator/styles.css": {
+    "sha256": "f3df85f6123fe5622d01d09bf7eedb6f552d99959a385ec536a3fe07251f89cc",
+    "bytes": 17785
+  },
+  "house-affordability-calculator/assets/css/styles.css": {
+    "sha256": "7e974bc0cbcdb8d08d9cf87947715f5cf0ca77a219342c7d833ef0ebb2717105",
+    "bytes": 15479
+  },
+  "house-affordability-calculator/assets/js/app.js": {
+    "sha256": "616352398ab943d8c0e495e2b68b821061640a59fb9036e902adfffa8ad6d05f",
+    "bytes": 33563
+  },
+  "house-affordability-calculator/index.html": {
+    "sha256": "132f89e9e30b4e84f5a931c0279bc2c7cb7a5f5b9ff2c41f2f337ca781348c2e",
+    "bytes": 38176
+  },
+  "house-affordability-calculator/robots.txt": {
+    "sha256": "1ee07ee6a0975f63dff3214e48d081afc0edb3057546efd04c3c4c90f10f3d35",
+    "bytes": 98
+  },
+  "house-affordability-calculator/sitemap.xml": {
+    "sha256": "5ac7d56a19a5eac6b045bbcea158db72c893abbc87f80b48b0e3757c3d10fe97",
+    "bytes": 196
+  },
+  "index.html": {
+    "sha256": "71237e9bb94bea09891c6c2fd5929ee86891eb0bf92082198f1d7d6651feef82",
+    "bytes": 28706
+  },
+  "investment-fee-calculator/app.js": {
+    "sha256": "e41e13dfef14019917867e8f5f19b42b47010ddafdd384a338e2cb1b74608d25",
+    "bytes": 30984
+  },
+  "investment-fee-calculator/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "investment-fee-calculator/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "investment-fee-calculator/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "investment-fee-calculator/index.html": {
+    "sha256": "1153e73397628657bd46a7c58dcb7cab528738d88a11d0ec4b1eadd7088d7181",
+    "bytes": 29883
+  },
+  "investment-fee-calculator/manifest.webmanifest": {
+    "sha256": "3e4f0fd3132b45e83f35388e097cc5cd94233b23d143961ce67823f6888b96e0",
+    "bytes": 770
+  },
+  "investment-fee-calculator/robots.txt": {
+    "sha256": "5369c527994a613578d8fed7c11369613a65cd9d51d10443b70f66bbf8689f8c",
+    "bytes": 93
+  },
+  "investment-fee-calculator/sitemap.xml": {
+    "sha256": "e1cb362d0c28bcbe34a9a3c301bf7e7cc04c325b09299b85e18f9e4729583cfc",
+    "bytes": 256
+  },
+  "investment-fee-calculator/styles.css": {
+    "sha256": "79ea2e6e65e83e2503eb4e4458e9a457f45c7693bf0e7f170ac523ffa8728a13",
+    "bytes": 14851
+  },
+  "learn/budget-to-cash-flow-plan/index.html": {
+    "sha256": "59eebcda5dec7f429603e4ac2ec4a2e1de3d23d8d4cbe0a2253d2bba5b42e313",
+    "bytes": 17629
+  },
+  "learn/compound-interest-and-investment-fees/index.html": {
+    "sha256": "de60bc44b0e8112992ff4bc0bd221fe6e09fc9df39fe4848b4d59499239e5c26",
+    "bytes": 5972
+  },
+  "learn/cpp-basics/index.html": {
+    "sha256": "25650834460200b890d84f07b3fe88bd3b554ae8982506cf4823fee562a7e606",
+    "bytes": 5173
+  },
+  "learn/credit-card-interest-and-payoff/index.html": {
+    "sha256": "c43bb1fdba25fa469b5686f2504bdef50f42b1f285340e1db98f64d9067be165",
+    "bytes": 5981
+  },
+  "learn/debt-snowball-vs-avalanche/index.html": {
+    "sha256": "f8708c12c9e492bc15ceb93ab09790ace15eb5f5abb688784e40ed9541a891ef",
+    "bytes": 6072
+  },
+  "learn/emergency-fund-and-savings-goals/index.html": {
+    "sha256": "cef32852484280d2e385b8d7f55660345254fd5fbb560c952ec61a2cd5d41e1e",
+    "bytes": 6313
+  },
+  "learn/fire-explained/index.html": {
+    "sha256": "c3729696ef61ee9a287e21c54cb3f3a5f08ef35e46e0ff39baee68f2c47e053a",
+    "bytes": 4594
+  },
+  "learn/index.html": {
+    "sha256": "59b616cf6923d8ed4fd0fab61f656fe2f696bbbba747eb95b894691c757ba8d4",
+    "bytes": 11744
+  },
+  "learn/loan-payments-and-amortization/index.html": {
+    "sha256": "e480e5a560bf15ce26903b0f3883ee62aefd8b2a3c0b9f05a0fb29990f649bea",
+    "bytes": 6051
+  },
+  "learn/monthly-budgeting-and-cash-flow/index.html": {
+    "sha256": "2ffc0e54926d540c15688ca472f548e99cf652ee7943ba641dd3cb1f1fbbed89",
+    "bytes": 6413
+  },
+  "learn/mortgage-affordability-canada/index.html": {
+    "sha256": "11d1084f4a34645ffff2d6f9342b9bf013ec9e56ace7b079596b61a43331147c",
+    "bytes": 7965
+  },
+  "learn/mortgage-costs-beyond-the-payment/index.html": {
+    "sha256": "6deee7044403c205d0133e75e743fdf658cf3fc5757b2d9699d85700ac561d6c",
+    "bytes": 6221
+  },
+  "learn/mortgage-prepayment-vs-investing/index.html": {
+    "sha256": "0ca2ea26c23487b09c4ddb448119e091ff29e52486bef58b4ae9c38b682f9b89",
+    "bytes": 7558
+  },
+  "learn/net-worth-basics/index.html": {
+    "sha256": "6c55b9da30b831e7ae67e7b09334eb707dff68f8674941653e96f6659180da00",
+    "bytes": 4554
+  },
+  "learn/rent-vs-buy-canada/index.html": {
+    "sha256": "cdde597eaffe06d2e78850e29cf0493b8cd4b9caf9a720e39116f715a94f8ae0",
+    "bytes": 6234
+  },
+  "learn/retirement-planning-basics/index.html": {
+    "sha256": "21eb81ce3430dd4e368fe58c8dd8c103392a7e015be19955e4bcd80f710107df",
+    "bytes": 4684
+  },
+  "learn/rrsp-vs-tfsa-basics/index.html": {
+    "sha256": "0b9aa0d7502b22b6d9a4db6ce5f6cbe6674a7dc041b27fd112b5b9a5c440884a",
+    "bytes": 5280
+  },
+  "learn/travel-budget-planning-basics/index.html": {
+    "sha256": "0ae2ddaa20b8356131f1086786aa884eecd362413ab8b7e7b6c07c049cf234c4",
+    "bytes": 4392
+  },
+  "loan-calculator/assets/css/styles.css": {
+    "sha256": "959740bad2445ed93c038a1e44ba844890ba1af14555717ad733a1bf19727dde",
+    "bytes": 27807
+  },
+  "loan-calculator/assets/js/app.js": {
+    "sha256": "10ae3ae136d45fdf1209149c9698627a4d5056dfe98a145c9bd8805104e69b84",
+    "bytes": 69819
+  },
+  "loan-calculator/index.html": {
+    "sha256": "a1bd45a90445f4a852644255d674641137984f6434fc6e457127ed50cfeea9c1",
+    "bytes": 47109
+  },
+  "loan-calculator/robots.txt": {
+    "sha256": "a1dac049156cdb4042b3f0ef06e8058a3119e2aadd5402d1ee2498dabe69d658",
+    "bytes": 83
+  },
+  "loan-calculator/sitemap.xml": {
+    "sha256": "9513dab2c900e2cb095ae66e595df69fc7e3f2791f282140613079e6cdc852d9",
+    "bytes": 181
+  },
+  "methodology/index.html": {
+    "sha256": "8a9392e45f760d65f66409af94be17ff724cae96f9848be2c00c5bec29b0189c",
+    "bytes": 7362
+  },
+  "mortgage-calculator/app.js": {
+    "sha256": "185c4b1e12c1ffc905b8dd2bb007d2f5133372b65ce3549194d851a20bb25650",
+    "bytes": 39881
+  },
+  "mortgage-calculator/calculator.js": {
+    "sha256": "5260d9af6ca186d0afacde290e5c517837268d50c548b6db81ee92cbb087702a",
+    "bytes": 29567
+  },
+  "mortgage-calculator/charts.js": {
+    "sha256": "21ffec90bb2c9fb235e7875abb5a691e8a3f3164ee9dab51f0b0ffb779be45ea",
+    "bytes": 7440
+  },
+  "mortgage-calculator/index.html": {
+    "sha256": "4d2c5191a1745d645c2a3b49e88744f22680bf6c96bd0f09cbe675877c16a194",
+    "bytes": 26351
+  },
+  "mortgage-calculator/robots.txt": {
+    "sha256": "5ada2b049a06bf8d3ea93ea279bc813c6d6a0ed08f07c6b3abba2193120886df",
+    "bytes": 87
+  },
+  "mortgage-calculator/sitemap.xml": {
+    "sha256": "47ccfd99a8826aef8856cceec42b650c13c9b6b12ff07c9caf6d1814e3d87653",
+    "bytes": 250
+  },
+  "mortgage-calculator/styles.css": {
+    "sha256": "938a1e288e6fd33032c376da4763c7b355dfd7d0d78baf0cfba6ad760416d585",
+    "bytes": 20247
+  },
+  "mortgage-paydown-vs-invest-calculator/app.js": {
+    "sha256": "5ef44925f6e797451c6a2441917bb24e09572b1bab7d1723c8222ed4bf0715d7",
+    "bytes": 36601
+  },
+  "mortgage-paydown-vs-invest-calculator/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "mortgage-paydown-vs-invest-calculator/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "mortgage-paydown-vs-invest-calculator/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "mortgage-paydown-vs-invest-calculator/index.html": {
+    "sha256": "93e800c2f1b9e5aa9b340c056c102b3433c46e826666755f943cd8108551d7b1",
+    "bytes": 29869
+  },
+  "mortgage-paydown-vs-invest-calculator/manifest.webmanifest": {
+    "sha256": "67a159428698e0d6f8bfc9b44b3abfb4db97219e0ae18eec81d7996459db4ad5",
+    "bytes": 603
+  },
+  "mortgage-paydown-vs-invest-calculator/robots.txt": {
+    "sha256": "600dc71e6fd41894b0a541b37b0e02441592ef4462a4433519b1de4deadfa059",
+    "bytes": 105
+  },
+  "mortgage-paydown-vs-invest-calculator/sitemap.xml": {
+    "sha256": "3ced05e3fa7c14b2ae880e060de2b56d452d229535af85f3624030298d112f0f",
+    "bytes": 268
+  },
+  "mortgage-paydown-vs-invest-calculator/styles.css": {
+    "sha256": "6c83fea16af64fe6acfaffb8f47bc9b1bc37bc3715bc6753cad40c92b7247d51",
+    "bytes": 13592
+  },
+  "net-worth-calculator/app.js": {
+    "sha256": "0605f6a86c71a410bbbd20ceeb1b956cfd41e5f095975fd216243feff3bba4ff",
+    "bytes": 31794
+  },
+  "net-worth-calculator/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "net-worth-calculator/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "net-worth-calculator/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "net-worth-calculator/index.html": {
+    "sha256": "21e4dc31e144eb4c742049ca5ea0ad7c4f4bc23d91d9f791b88ac698b9f1e0f4",
+    "bytes": 33431
+  },
+  "net-worth-calculator/manifest.webmanifest": {
+    "sha256": "221ad181e73c498b483164345c8bd9383c056bc7d5c11331bc8eae0c9853f30b",
+    "bytes": 512
+  },
+  "net-worth-calculator/robots.txt": {
+    "sha256": "2526a89f40169fee5d047c1440d7c7b1125e778247b93a0e12432ffeb09a0a6d",
+    "bytes": 88
+  },
+  "net-worth-calculator/sitemap.xml": {
+    "sha256": "0fd3d80b1813c67486928f2b5131fc24e8f02b6d9df23f2ee59d3a1f010a25d7",
+    "bytes": 252
+  },
+  "net-worth-calculator/styles.css": {
+    "sha256": "8ae7587d512a8e204863da2f1415fde8a952dd7dc96febb25e4c14b2bf90209d",
+    "bytes": 18706
+  },
+  "og-image.png": {
+    "sha256": "370d997ea3ab5e2420648f980892646af7f9e3d490f8e52bd2d4fb04f35d0678",
+    "bytes": 7284
+  },
+  "og-image.svg": {
+    "sha256": "23d580542c0bf674ee9cc28a629d4c918854485099a94d1e573b6ba0eb1da9b3",
+    "bytes": 3640
+  },
+  "privacy/index.html": {
+    "sha256": "9bde69d9dafdae19f56e4eeba2ac2e3c58bf7949d35222395db04db810b88033",
+    "bytes": 4928
+  },
+  "rent-vs-buy-calculator/assets/css/styles.css": {
+    "sha256": "fda7791bba026d00c27d427a8fb20a69acf9e0c5356ee2bef22871f55f4acf9b",
+    "bytes": 17691
+  },
+  "rent-vs-buy-calculator/assets/js/app.js": {
+    "sha256": "b912d6471390b397bb84f3b134e4a5bd07845850354f12d252f469a6f0a8e501",
+    "bytes": 50987
+  },
+  "rent-vs-buy-calculator/index.html": {
+    "sha256": "3c80168899d69bb7439b558365a2a2f577871368fa7de8198bf57a1adf2e0ea9",
+    "bytes": 48027
+  },
+  "rent-vs-buy-calculator/robots.txt": {
+    "sha256": "d7b003a925976a8aa8d289e4bf845868cdde8ef65aa2feb105f92d77899be50b",
+    "bytes": 90
+  },
+  "rent-vs-buy-calculator/sitemap.xml": {
+    "sha256": "5f480d7fd54ee5dbab48c97ab48cc7f6bacee7cd449ef16a5d5152daff2a8674",
+    "bytes": 188
+  },
+  "retirement-planner/404.html": {
+    "sha256": "ed44c1922866a4322132f3c88f22230472b3426bdaddb1c8830af520de122bf2",
+    "bytes": 432
+  },
+  "retirement-planner/app.classic.js": {
+    "sha256": "850256d0e5f030eacc9fd117162deee4e7975dc6655248cf592759d20ef1848e",
+    "bytes": 499275
+  },
+  "retirement-planner/app.js": {
+    "sha256": "c7a19277576a005d81cf0695575e5f0ab6af12ffa4fc34b058980720c5dd595f",
+    "bytes": 100692
+  },
+  "retirement-planner/assets/css/styles.css": {
+    "sha256": "11ce2c56d7c098a58c6cb241a2e53e43415ad967d671628cea6ad66d202afdea",
+    "bytes": 538
+  },
+  "retirement-planner/assets/js/app.js": {
+    "sha256": "8de3250adb32111aa53b9c8476c5e6f620cc46f27bb9104621793183adcd0e6d",
+    "bytes": 28
+  },
+  "retirement-planner/canadian-retirement-income-calculator.html": {
+    "sha256": "966eb9b5e717b8b8fc83a2b9b535c0d2016ae756cf6e8cd566722de7a6e5b1ae",
+    "bytes": 7441
+  },
+  "retirement-planner/cpp-timing-calculator-canada.html": {
+    "sha256": "4ce828f9304031566253eb1f95711418899039e0e40d5f2bb814d18dfeb4e3b8",
+    "bytes": 6570
+  },
+  "retirement-planner/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "retirement-planner/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "retirement-planner/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "retirement-planner/index.html": {
+    "sha256": "26b6eb7ea14fb3dcdf3d6fdb9d60b67d4e219108302318162dd6232ebc5d74ad",
+    "bytes": 53031
+  },
+  "retirement-planner/manifest.webmanifest": {
+    "sha256": "9a7affbb6b4853fc8b91da7d3a20931515da89aba32fc4c745060f23f6b4a4ef",
+    "bytes": 576
+  },
+  "retirement-planner/oas-clawback-calculator.html": {
+    "sha256": "f7ff575e410042f7e2d9d3e1c1e2bb67c2ee6c82e1f92871b9d6ff4b6f486b14",
+    "bytes": 6521
+  },
+  "retirement-planner/retirement-tax-calculator-canada.html": {
+    "sha256": "3b2f8fb872548487d8ee28a88887c34c9dd63382c951dab9aea27f2840cd6882",
+    "bytes": 6513
+  },
+  "retirement-planner/robots.txt": {
+    "sha256": "1a616c9cd2d91377414252cfc15b778040fed2cf093e2baefdbe7a1ede06a5d8",
+    "bytes": 86
+  },
+  "retirement-planner/rrif-minimum-withdrawal-calculator.html": {
+    "sha256": "a0da3cc118ef4e565665cf184b074f6f395ee11e92a8aaf0df7450f18afca4d9",
+    "bytes": 6268
+  },
+  "retirement-planner/rrif-withdrawal-calculator.html": {
+    "sha256": "da401a7ea15a0d5b0890ab04acf1d583dc3b241338f98152c996bca093639d8e",
+    "bytes": 6429
+  },
+  "retirement-planner/rrsp-withdrawal-strategy-canada.html": {
+    "sha256": "dfef481244088935bfb999dbf32f71a6f3eb6ea9df20ea541493e944597c3c6c",
+    "bytes": 6369
+  },
+  "retirement-planner/sitemap.xml": {
+    "sha256": "7ddce754e9079e74014f38df9b3d6fc54b6778c5d28d46caff531201123d385b",
+    "bytes": 1473
+  },
+  "retirement-planner/src/content/constants.js": {
+    "sha256": "65777fcbf5263eebbb2491c255d4e1bba453a675e893cb7043d8f4a1039bb264",
+    "bytes": 22048
+  },
+  "retirement-planner/src/content/methodology.js": {
+    "sha256": "1772f414f06492ecb753c3009c4eed86701659d4a1005d534bf2a47fc901ce51",
+    "bytes": 3370
+  },
+  "retirement-planner/src/content/referenceLinks.js": {
+    "sha256": "690cc99d4a5dd7636b4f6de7c4345e5a92f2594baba9729807e7a0e1e48008bf",
+    "bytes": 1912
+  },
+  "retirement-planner/src/content/sources.js": {
+    "sha256": "f7827bc1af5c3a334522ceb13ad4f64b166f717d2b5445fbed2b88efe1acab85",
+    "bytes": 1847
+  },
+  "retirement-planner/src/main.js": {
+    "sha256": "13d9253ff99c967e2951a83b2f1f643787b6c2f0d076d09db67105a892c01cf4",
+    "bytes": 21
+  },
+  "retirement-planner/src/model/calculations.js": {
+    "sha256": "a9e65f7f0331a35ff80e166115ef7d8f8824deb83df94e8d25e555c61bdf53bf",
+    "bytes": 3681
+  },
+  "retirement-planner/src/model/clientSummary.js": {
+    "sha256": "9ac3b5003fc4b119ba4a08ccc0ededa75dddf3173bc709a60c577d56d2a9640f",
+    "bytes": 1755
+  },
+  "retirement-planner/src/model/constants.js": {
+    "sha256": "603b0dbff67d6b4a4b3f52563c3a54b7376e80df9c3a3273585a513a8219dd48",
+    "bytes": 2075
+  },
+  "retirement-planner/src/model/diff.js": {
+    "sha256": "e4f46634dc4ae2b5a42c6dd47859545b15e164ac9ba950f02a79627d8df5b976",
+    "bytes": 3652
+  },
+  "retirement-planner/src/model/meltdown.js": {
+    "sha256": "e257834ace7eb27ce194703d195d457d394cdaeedfba751150290a72e91c47f7",
+    "bytes": 1555
+  },
+  "retirement-planner/src/model/peakTax.js": {
+    "sha256": "0720ca40356c14766abcb6f75e8cd7b955c7b27403d79efc32b83985acf405f2",
+    "bytes": 2740
+  },
+  "retirement-planner/src/model/phases.js": {
+    "sha256": "baa796d74c0ac4213aad727119621daf6634ac7f6851619f48f7d8e42572aa18",
+    "bytes": 1849
+  },
+  "retirement-planner/src/model/planSchema.js": {
+    "sha256": "9e703cf69dedc645486e6951e030af36a9b6ebb9a1f6189bc236e460fa89a673",
+    "bytes": 28630
+  },
+  "retirement-planner/src/model/planStatus.js": {
+    "sha256": "531259a816732bed8d44e5bcc3b7e8420520b3d8d8cf27c6b857fd66ad5903aa",
+    "bytes": 5230
+  },
+  "retirement-planner/src/model/planStore.js": {
+    "sha256": "0a2c786c7d1950001bc4b85b6101947ede27f7123844c4c2b3a1089e1fd25048",
+    "bytes": 1573
+  },
+  "retirement-planner/src/model/projection.js": {
+    "sha256": "92de3c66f2b5b743c7f6fd718c25db7a944e90b3f783e7ab6b9ed6cfb04d6050",
+    "bytes": 20110
+  },
+  "retirement-planner/src/model/reportMetrics.js": {
+    "sha256": "d0c23ddcad2b6f806d7d93187113d54b8c1b5e2de503dd6b4a54b2e73065b451",
+    "bytes": 1341
+  },
+  "retirement-planner/src/model/risks.js": {
+    "sha256": "7650c83700944c8e6f76b02ba52464a7ba8181958ab57f003e7e40ae4ed9e94a",
+    "bytes": 5246
+  },
+  "retirement-planner/src/model/scenarioStore.js": {
+    "sha256": "ceef0c80d931cc3741c69aee0b3169142772c21dc38510ce9e6f2116a56b6416",
+    "bytes": 1755
+  },
+  "retirement-planner/src/model/score.js": {
+    "sha256": "3d1a6163a95a9d099e8bbb9b1e043668d4c79e8e000f322f8f24e9bcbe8fd949",
+    "bytes": 2689
+  },
+  "retirement-planner/src/model/timingSim.js": {
+    "sha256": "e136ab00fdd6510304dc8b81acb6ef8897ee0af5ae4e799711da3b56adca52c0",
+    "bytes": 1823
+  },
+  "retirement-planner/src/model/yearBreakdown.js": {
+    "sha256": "4a8875e22f3d2b550d14e10f0115a7d8fd70cdd467e2cbdc0555cddb8c33f730",
+    "bytes": 1369
+  },
+  "retirement-planner/src/ui/actions/planActions.js": {
+    "sha256": "bcfebfda42218830334cda8ea21f92ee212f0f1ec552c91ad11a59ba0899c8a9",
+    "bytes": 7093
+  },
+  "retirement-planner/src/ui/charts.js": {
+    "sha256": "9ca506ee027849bee3fad9470b6fa9223c3b6c9e9f07c0bb64acbd1ba18582d1",
+    "bytes": 8608
+  },
+  "retirement-planner/src/ui/clientSummaryMode.js": {
+    "sha256": "6d99eac2c171d92fed11a34591c39564841e06308cb79b5acc7a3c80944c3718",
+    "bytes": 9163
+  },
+  "retirement-planner/src/ui/clientSummaryPrint.js": {
+    "sha256": "b536e59f600f22162ace4df24884f370e10a59c4942c56d61ee46602151bf3fe",
+    "bytes": 23847
+  },
+  "retirement-planner/src/ui/coverageScore.js": {
+    "sha256": "9143fe03d9335d50a51a375565c17a171eee5efb9f2c13506888a91b3afdf896",
+    "bytes": 2115
+  },
+  "retirement-planner/src/ui/cppOasTimingSimulator.js": {
+    "sha256": "daa235a7fb3cc1a277f342237a53fb99dea26824d645c14b914308345e3f6785",
+    "bytes": 2493
+  },
+  "retirement-planner/src/ui/dashboardHelpers.js": {
+    "sha256": "84c2443afc275642cc76a27d421ea2599d100fc5a24259f2a17f9bb85c5e8c0a",
+    "bytes": 2635
+  },
+  "retirement-planner/src/ui/fields.js": {
+    "sha256": "11a26b601bebcacd42d3a19cf85b35eab8e01036dfebd5e24e9531496735c2fc",
+    "bytes": 2572
+  },
+  "retirement-planner/src/ui/formatters.js": {
+    "sha256": "ce78404b116be1d24ff214e0738893be9f37aadb81db0f34f54c9be045a92f38",
+    "bytes": 1511
+  },
+  "retirement-planner/src/ui/incomeMap.js": {
+    "sha256": "463d666e90ea1a634b9626c69a750a97b9539819fa62fdd9351d8e76677688c0",
+    "bytes": 12840
+  },
+  "retirement-planner/src/ui/interactions.js": {
+    "sha256": "aaabd8c5d532853c6826107d9635f0a14677a2c887c377c6188e2704d7465455",
+    "bytes": 3094
+  },
+  "retirement-planner/src/ui/keyRisks.js": {
+    "sha256": "5c792be4a1ae33ca52ca079d2f1ffdda08ed36fda53f6fddd31d140363b8c032",
+    "bytes": 1351
+  },
+  "retirement-planner/src/ui/learnCharts.js": {
+    "sha256": "b5d471ece9bb5d8855f5690eabf6a6de71aa238a6e63cec8615ae6b09d4d93f9",
+    "bytes": 4010
+  },
+  "retirement-planner/src/ui/learnUtils.js": {
+    "sha256": "504ad71d7cb40eec96ede59973fd84c9a0dc57ffa7a41db8b262c243eed06e48",
+    "bytes": 830
+  },
+  "retirement-planner/src/ui/navigation.js": {
+    "sha256": "6728efb33dd8f0150f2b802a672483690312f43d06c40b52618110d907971ee6",
+    "bytes": 968
+  },
+  "retirement-planner/src/ui/peakTaxYear.js": {
+    "sha256": "6b3284f2942cf4f23cde1e2a39f06df8442b8a862966357bd3b09728e5c67cd9",
+    "bytes": 924
+  },
+  "retirement-planner/src/ui/presets.js": {
+    "sha256": "caac3ee2eda2c9325dd0d87c9edc1ae6b1fdc0cc2e83b6ea421acf38f4c571a8",
+    "bytes": 5260
+  },
+  "retirement-planner/src/ui/printSummary.js": {
+    "sha256": "5deac6956381f1510d026e93c22adc5002e754d092eaabbe1acca40fe6e5ed62",
+    "bytes": 31541
+  },
+  "retirement-planner/src/ui/referenceLinksList.js": {
+    "sha256": "e9911ae4b278fd5d20b7223a36f2f4c922fcac91dc764628a2bb512ac1964271",
+    "bytes": 758
+  },
+  "retirement-planner/src/ui/resultsStrip.js": {
+    "sha256": "d77afd077db8b63d6ac690e965838b594fe983672474111c2d929da284ad9c07",
+    "bytes": 3418
+  },
+  "retirement-planner/src/ui/retirementGapHeadline.js": {
+    "sha256": "c963beae88076a08d040eca862ac95ed9c5b0caa40d4df4e1804f95d1a7ba32f",
+    "bytes": 2708
+  },
+  "retirement-planner/src/ui/retirementInsight.js": {
+    "sha256": "aaac05aa853828986a6f63ebf12ddb3c7f6f17c666eebb213e3e89a5ec510657",
+    "bytes": 1913
+  },
+  "retirement-planner/src/ui/rrspMeltdownSimulator.js": {
+    "sha256": "450774a323bea3e2b23fc229631806be4e124bbf8d8afad777f1f5e361e14750",
+    "bytes": 3054
+  },
+  "retirement-planner/src/ui/scenarioCompare.js": {
+    "sha256": "14dace481753659d0aab2e19da48804179be49e1ca068edd1a7630cb5e6123ae",
+    "bytes": 2509
+  },
+  "retirement-planner/src/ui/share.js": {
+    "sha256": "57a3047ea9a56c16db3a336195f7e323b4e211d012eae1e9fdc0c86438428006",
+    "bytes": 8231
+  },
+  "retirement-planner/src/ui/startupGuard.js": {
+    "sha256": "05b16b083453edced3a88e164e8a9ea0c071535a2fd79fe65760cf5d7ebd578f",
+    "bytes": 359
+  },
+  "retirement-planner/src/ui/strategySuggestions.js": {
+    "sha256": "472a77586feb36a6f01c9cc3df6745244e354fc4bfbc0a5d0a4b4f05afc031c1",
+    "bytes": 1822
+  },
+  "retirement-planner/src/ui/supportMoments.js": {
+    "sha256": "181f19f0ca4092b142ddf281a1ea10a5f64687f4ca4e1dc7e50df22ecc5766d2",
+    "bytes": 4241
+  },
+  "retirement-planner/src/ui/taxWedgeEnhancements.js": {
+    "sha256": "1ec228617229e1e89d7870e2936e3469cbee9f07279f1fda88b469461205e6a4",
+    "bytes": 2105
+  },
+  "retirement-planner/src/ui/taxWedgeMini.js": {
+    "sha256": "4977b785f0a29e6f5c67d7921fe148905137568d8641f76ba817ab1277c6c23f",
+    "bytes": 1603
+  },
+  "retirement-planner/src/ui/timeline.js": {
+    "sha256": "d48c9af1458956a98fa2a8ad55c96144e7025acb65fbfee910e667b534cb8945",
+    "bytes": 4644
+  },
+  "retirement-planner/src/ui/tooltips.js": {
+    "sha256": "1833da41f2902cdaf4def1969543f9f54b9d950bada3c10482d8a8761fe5de20",
+    "bytes": 2049
+  },
+  "retirement-planner/src/ui/views/advancedView.js": {
+    "sha256": "bbbe7e93a0cdfbd7365c204bdc1b6cf538ac9db0ea624e3809e6c60b2d1f69c8",
+    "bytes": 16778
+  },
+  "retirement-planner/src/ui/views/dashboardView.js": {
+    "sha256": "390808e9fbab03aec42c1cc8a94fe08eb9874d41ea3402c7abd03aa83de977e6",
+    "bytes": 61215
+  },
+  "retirement-planner/src/ui/views/learnOutputsView.js": {
+    "sha256": "99795fec0dd96ad6652fad385e22a51b7702ee35814912e12d68b51ede5fdf9e",
+    "bytes": 9157
+  },
+  "retirement-planner/src/ui/views/learnView.js": {
+    "sha256": "5bd76c283276799053fc3040a5bd7db3437e55ef8ede7fd858478a9865da3df6",
+    "bytes": 18055
+  },
+  "retirement-planner/src/ui/views/planEditorView.js": {
+    "sha256": "27dba8f1aa49f09bbacb8a303c671a70bd82164fdd23746851cf63b4b42d4129",
+    "bytes": 3937
+  },
+  "retirement-planner/src/ui/views/planInputsView.js": {
+    "sha256": "950b709e32ff18454863858bdbc69908f275fafaa526a18261211ab1a0e8f1ec",
+    "bytes": 5846
+  },
+  "retirement-planner/src/ui/views/wizardView.js": {
+    "sha256": "b5e2b31a598ffd309029c1fa85730552f9c6a8ef384e14caea215ea6ed5f2e62",
+    "bytes": 14486
+  },
+  "retirement-planner/src/ui/whatChangedPanel.js": {
+    "sha256": "71259811031da1f9038ac1d4b2990cd654e4828f1bb3d758b57d128c84b560a4",
+    "bytes": 664
+  },
+  "retirement-planner/styles.css": {
+    "sha256": "85a9e8fb3a6e7ea768bce02bc11569917c106828b88947a2c9bc843d0848300b",
+    "bytes": 56889
+  },
+  "retirement-planner/sw.js": {
+    "sha256": "172369afa0993d166c829089999dc3c87add378948e6bfefaeebe48aaac17a70",
+    "bytes": 1861
+  },
+  "robots.txt": {
+    "sha256": "c9aa10360f495060a3817687204a00bbd966e3a8728b66f52e273c996c7e59a5",
+    "bytes": 67
+  },
+  "rrsp-vs-tfsa-calculator/app.js": {
+    "sha256": "0531e57c95c09e39c2bbb287b4e2b813fb4ba48804da94ad1f300523c12874b4",
+    "bytes": 33988
+  },
+  "rrsp-vs-tfsa-calculator/icons/favicon.svg": {
+    "sha256": "18acb2cac419e7cd471db9651a2f014b52676652eef5925477e85c2e44ee2da9",
+    "bytes": 489
+  },
+  "rrsp-vs-tfsa-calculator/icons/icon.svg": {
+    "sha256": "ef5f44b4316cf69835fcac98d8fa6e03ce50ee0b3e065a88cfe8e36d716a0abe",
+    "bytes": 768
+  },
+  "rrsp-vs-tfsa-calculator/icons/mask-icon.svg": {
+    "sha256": "2998e4dfe969b935297e070b33bd75f17eb371234c794fdf6deabf6c6bc569d2",
+    "bytes": 251
+  },
+  "rrsp-vs-tfsa-calculator/index.html": {
+    "sha256": "f3c817bb8cabe8dc6afdf3f363303ebbf207e7322cc4b12ba5d0cbafb2136ec4",
+    "bytes": 30091
+  },
+  "rrsp-vs-tfsa-calculator/manifest.webmanifest": {
+    "sha256": "46c6b721d867d72a5c2c51ac69efdb15eb12e24dfc86ad768c4af585f3a097af",
+    "bytes": 724
+  },
+  "rrsp-vs-tfsa-calculator/robots.txt": {
+    "sha256": "2939fc9aa216af8e5607016c5c82681cedbb6c618bfdb87df15c013ba20535d2",
+    "bytes": 91
+  },
+  "rrsp-vs-tfsa-calculator/sitemap.xml": {
+    "sha256": "fdd66489dc51c10e5982becb44401e8ba610b574005b90402de26004f0eb444b",
+    "bytes": 254
+  },
+  "rrsp-vs-tfsa-calculator/styles.css": {
+    "sha256": "97914a530b5f535dc87d9faef80abc10fba5dc96fdae041f7bd05ab5e2c7c591",
+    "bytes": 15629
+  },
+  "savings-goal-calculator/assets/css/styles.css": {
+    "sha256": "259be031479657e32c5c12d13adb49ce7cabbe51be20f57f751cf250cbde8ea8",
+    "bytes": 23387
+  },
+  "savings-goal-calculator/assets/js/app.js": {
+    "sha256": "1f630e67f8b569bd9daf89d37433642f6d168357f1e5febadc6b247fc9396f05",
+    "bytes": 67717
+  },
+  "savings-goal-calculator/index.html": {
+    "sha256": "ddf98b2cc690184f448daf3a3972ec87561eaab2370a6466b1608fb182fb14b1",
+    "bytes": 32169
+  },
+  "savings-goal-calculator/robots.txt": {
+    "sha256": "1d88f4dd07b6fee9b1d8e3ec65c0f412b677c8975b66606905c733c5c4dcd542",
+    "bytes": 91
+  },
+  "savings-goal-calculator/sitemap.xml": {
+    "sha256": "fd52017d00e8d3e6c9da71c73ff344017c53ad1fcc471b9ace3f2ebc096a7e4b",
+    "bytes": 189
+  },
+  "simplekit-active-tools.md": {
+    "sha256": "55b220460fffe74b307d092f680907e0d06613b4d7d5f9b12eab0d473ad14d5a",
+    "bytes": 1748
+  },
+  "sitemap.xml": {
+    "sha256": "fc4b1f42a892912aab15a1fd40f1663d3f348fbf74fdd45ad5862cf95b518532",
+    "bytes": 8010
+  },
+  "support/index.html": {
+    "sha256": "583a4c950c254b75967d4bb1ebfe3c9cee174d245a841705761ff2560afc0afc",
+    "bytes": 6074
+  },
+  "take-home-pay-calculator/assets/css/styles.css": {
+    "sha256": "cbf7c8f656d3c171141a74ec2f385f9ae3fb470c4e0ca82dbcfc98426aa120f3",
+    "bytes": 12046
+  },
+  "take-home-pay-calculator/assets/js/app.js": {
+    "sha256": "6a41f2c49c8a4a10a622845a43267f6a12897b2b4a3771cd0705f6f8b21b208e",
+    "bytes": 36711
+  },
+  "take-home-pay-calculator/assets/js/simplekit-tool-links.js": {
+    "sha256": "7ddaa7c88be3323cc93d2508cbd0077978eb5425aa8538288e17b61479eb125c",
+    "bytes": 1431
+  },
+  "take-home-pay-calculator/index.html": {
+    "sha256": "2c39d8f91ade298361dcc28c69a27b8328b6eba6a94fabbc2f882a52b0775c3a",
+    "bytes": 27390
+  },
+  "take-home-pay-calculator/robots.txt": {
+    "sha256": "847a3b60afcd11a39306f143fca3a884d3c95bb8339f631412374397f42c01cc",
+    "bytes": 92
+  },
+  "take-home-pay-calculator/sitemap.xml": {
+    "sha256": "de30d5a51d8077538bd8be7d0b63f6e48fc6539ba55ba1c30f4ef327f5f2a049",
+    "bytes": 255
+  },
+  "tools/budget-planner/index.html": {
+    "sha256": "1e890b4d70e33dd5baaf00001393c7a48f5286ff7eefa5b7c301bc2f19113caf",
+    "bytes": 6343
+  },
+  "tools/cpp-calculator/index.html": {
+    "sha256": "53de66173f90aa8fa45700cabfc6d18acddf7e3e7b7ca6ba5b07554adbed5308",
+    "bytes": 5569
+  },
+  "tools/debt-payoff-calculator/index.html": {
+    "sha256": "4c33ab2213f0377e829767598a9ca31996dbe6dfb4a30b609c41e5662cf103bb",
+    "bytes": 6482
+  },
+  "tools/emergency-fund-calculator/index.html": {
+    "sha256": "6e6a78866b7f720e19adc01ac1e8a75890a4b62760c98288769014c7e450fd02",
+    "bytes": 6409
+  },
+  "tools/fire-calculator/index.html": {
+    "sha256": "9c3e3ce641132e92c54a2698d8d829cd108e1ffbe95d21feb6f33794782cb92a",
+    "bytes": 5690
+  },
+  "tools/index.html": {
+    "sha256": "ab473ef760ad9597e94a11202e95a11fc802c4cf63332bae63b83d8ee1fefecb",
+    "bytes": 20095
+  },
+  "tools/investment-growth-calculator/index.html": {
+    "sha256": "39e6ffc23ced4a7ee578a337ef630ade06ba651f8b9f5539690cd05d3827936a",
+    "bytes": 6643
+  },
+  "tools/loan-calculator/index.html": {
+    "sha256": "b58e09215db9a3ce73ff179b5b38eca03d8dbb8fe678fd19b7bbf3ebbab4ff99",
+    "bytes": 6474
+  },
+  "tools/net-worth-calculator/index.html": {
+    "sha256": "240bcb7b3f805f36db9edb282f5de28be55bd0400d6f2f3025afc150c54fe9f9",
+    "bytes": 5695
+  },
+  "tools/rent-vs-buy-calculator/index.html": {
+    "sha256": "e9262c5d1eda20ec82d959e0ca66f849907526525f1271d4a1648432ce50cba0",
+    "bytes": 6560
+  },
+  "tools/retirement-planner/index.html": {
+    "sha256": "7c597c5e700a72a7184dc9dfe69da0917b9a9ce835fbfb577505e864d92c1cc2",
+    "bytes": 6178
+  },
+  "tools/rrsp-tfsa-calculator/index.html": {
+    "sha256": "2847b0db9f095ec110708e110e874efa4497811351d7e8dd65e2ee96be38f911",
+    "bytes": 5646
+  },
+  "tools/savings-goal-calculator/index.html": {
+    "sha256": "7512f399fb76358b5caae4a1748d1c1df2db572d3f1d5931b2738499d508455b",
+    "bytes": 6420
+  },
+  "tools/travel-planner/index.html": {
+    "sha256": "5df5cab78876b92cd14fef829d3684320c1729aab325a6d8496a76e702c84ebc",
+    "bytes": 5542
+  },
+  "travel-planner/app.js": {
+    "sha256": "92ab832caeecb5fe925a92c888397af2111530001d42ac2b1664fcf4b6489f7c",
+    "bytes": 155980
+  },
+  "travel-planner/assets/screenshots/budget-breakdown.svg": {
+    "sha256": "7db91529025393c71ef03644ec661928a66644bfda7f78c6c5cea07735c50d60",
+    "bytes": 4670
+  },
+  "travel-planner/assets/screenshots/dashboard-overview.svg": {
+    "sha256": "b82c8ff09f95b8075665340b38dbf63c91d4bb3ab3911fe677443a4897b54f46",
+    "bytes": 5492
+  },
+  "travel-planner/assets/screenshots/itinerary-builder.svg": {
+    "sha256": "c94bb66abd72cfcce34f28cb9be9e445eeaa49cdfdf74ec4b728c72c0b884817",
+    "bytes": 4559
+  },
+  "travel-planner/assets/screenshots/mobile-dashboard.svg": {
+    "sha256": "c3f8f2ac4ffdbd6987467f62d7a71973d626117f95ee3ca88953e0ca977bd8c1",
+    "bytes": 5034
+  },
+  "travel-planner/index.html": {
+    "sha256": "8ea9cd90d42fdc44ca32c9f3d600689bbc605f90ae98f8e68dcd1f8a68ccf689",
+    "bytes": 32019
+  },
+  "travel-planner/manifest.webmanifest": {
+    "sha256": "c651cdef11c05adae454ab04e8c3bd972fb2755e2afedbf6ca57fd4a6b3a4540",
+    "bytes": 358
+  },
+  "travel-planner/robots.txt": {
+    "sha256": "411757a93a8451e12fa3b5634563eb7352fc23028f2f8c0eec498050e2423c09",
+    "bytes": 82
+  },
+  "travel-planner/sitemap.xml": {
+    "sha256": "0fc1e6f12d2b78fca5cebd94def6c35633d1d81fba794b770600b1664b7d5b50",
+    "bytes": 180
+  },
+  "travel-planner/styles.css": {
+    "sha256": "ac54e7fb50eae60ffd32a7c0bdffa6d6a442cc519c674f8e44c5e60176265eb4",
+    "bytes": 64716
+  }
+}

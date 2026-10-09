@@ -1,0 +1,33 @@
+
+> test
+> node --test tests/*.test.mjs
+
+Output validation passed: 1 calculator routes, 1 sitemap URLs, 1 HTML pages, 1 local assets.
+✔ every canonical calculator has one completed, immutable GitHub source (1.799769ms)
+✔ source acquisition rejects branch pins, duplicate IDs and traversal (1.2947ms)
+✔ historical reports are excluded only in source checks; published legacy links fail (2.099762ms)
+✔ SEO checks reject legacy URLs in robots, sitemap and browser code (1.950821ms)
+✔ intentional compatibility registry is allowed, adjacent production files are checked (1.256217ms)
+✔ canonical manifest rejects mismatched, duplicate and unsafe routes (1.078174ms)
+✔ all restored sitemap routes still resolve to the same canonical host (0.478804ms)
+✔ URL resolver handles relative/query assets and refuses external or encoded traversal (4.611995ms)
+✔ bundled Core loads as an ES module for classic and module callers (0.437467ms)
+✔ cached sources fail verification after edits, ignored files, or origin changes (61.778178ms)
+✔ output checks detect wrong metadata, missing assets and module dependencies (6.172002ms)
+✔ v2 preserves the 22 canonical tools and declared sitemap inventory (2.536124ms)
+✔ v2 leaves calculator and Core source revisions unchanged (0.291174ms)
+✔ v2 preserves checked-in production landing pages and hostname (0.75345ms)
+✔ v2 keeps the original design reference unchanged (2.574169ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 152.415061
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -1,0 +1,17 @@
+{
+  "identical": true,
+  "files": 278,
+  "method": "Exact SHA-256 and byte-size maps across two consecutive builds",
+  "artifact": {
+    "path": "/tmp/simplekit-generated-baseline-866f691.tar.gz",
+    "sha256": "3df2eb2da15318ba0ddc5bb7f6fb4cc1176af1d874bc2d957337742349c00770"
+  },
+  "productionSourceArchive": {
+    "path": "/tmp/simplekit-production-ca7826d.tar.gz",
+    "sha256": "020ebf8b0b11ff1a4694e5857c5077c5014f341b5aa609d234813f2ea107e8b9"
+  },
+  "workspaceArchiveCopies": [
+    "/workspace/scratch/simplekit-v2-baseline/simplekit-generated-baseline-866f691.tar.gz",
+    "/workspace/scratch/simplekit-v2-baseline/simplekit-production-ca7826d.tar.gz"
+  ]
+}

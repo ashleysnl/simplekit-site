@@ -1,0 +1,472 @@
+[
+  {
+    "file": "retirement-planner/app.classic.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "850256d0e5f030eacc9fd117162deee4e7975dc6655248cf592759d20ef1848e"
+  },
+  {
+    "file": "retirement-planner/app.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "c7a19277576a005d81cf0695575e5f0ab6af12ffa4fc34b058980720c5dd595f"
+  },
+  {
+    "file": "retirement-planner/assets/js/app.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "8de3250adb32111aa53b9c8476c5e6f620cc46f27bb9104621793183adcd0e6d"
+  },
+  {
+    "file": "retirement-planner/src/content/constants.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "65777fcbf5263eebbb2491c255d4e1bba453a675e893cb7043d8f4a1039bb264"
+  },
+  {
+    "file": "retirement-planner/src/content/methodology.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "1772f414f06492ecb753c3009c4eed86701659d4a1005d534bf2a47fc901ce51"
+  },
+  {
+    "file": "retirement-planner/src/content/referenceLinks.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "690cc99d4a5dd7636b4f6de7c4345e5a92f2594baba9729807e7a0e1e48008bf"
+  },
+  {
+    "file": "retirement-planner/src/content/sources.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "f7827bc1af5c3a334522ceb13ad4f64b166f717d2b5445fbed2b88efe1acab85"
+  },
+  {
+    "file": "retirement-planner/src/main.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "13d9253ff99c967e2951a83b2f1f643787b6c2f0d076d09db67105a892c01cf4"
+  },
+  {
+    "file": "retirement-planner/src/model/calculations.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "a9e65f7f0331a35ff80e166115ef7d8f8824deb83df94e8d25e555c61bdf53bf"
+  },
+  {
+    "file": "retirement-planner/src/model/clientSummary.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "9ac3b5003fc4b119ba4a08ccc0ededa75dddf3173bc709a60c577d56d2a9640f"
+  },
+  {
+    "file": "retirement-planner/src/model/constants.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "603b0dbff67d6b4a4b3f52563c3a54b7376e80df9c3a3273585a513a8219dd48"
+  },
+  {
+    "file": "retirement-planner/src/model/diff.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "e4f46634dc4ae2b5a42c6dd47859545b15e164ac9ba950f02a79627d8df5b976"
+  },
+  {
+    "file": "retirement-planner/src/model/meltdown.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "e257834ace7eb27ce194703d195d457d394cdaeedfba751150290a72e91c47f7"
+  },
+  {
+    "file": "retirement-planner/src/model/peakTax.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "0720ca40356c14766abcb6f75e8cd7b955c7b27403d79efc32b83985acf405f2"
+  },
+  {
+    "file": "retirement-planner/src/model/phases.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "baa796d74c0ac4213aad727119621daf6634ac7f6851619f48f7d8e42572aa18"
+  },
+  {
+    "file": "retirement-planner/src/model/planSchema.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "9e703cf69dedc645486e6951e030af36a9b6ebb9a1f6189bc236e460fa89a673"
+  },
+  {
+    "file": "retirement-planner/src/model/planStatus.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "531259a816732bed8d44e5bcc3b7e8420520b3d8d8cf27c6b857fd66ad5903aa"
+  },
+  {
+    "file": "retirement-planner/src/model/planStore.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "0a2c786c7d1950001bc4b85b6101947ede27f7123844c4c2b3a1089e1fd25048"
+  },
+  {
+    "file": "retirement-planner/src/model/projection.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "92de3c66f2b5b743c7f6fd718c25db7a944e90b3f783e7ab6b9ed6cfb04d6050"
+  },
+  {
+    "file": "retirement-planner/src/model/reportMetrics.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "d0c23ddcad2b6f806d7d93187113d54b8c1b5e2de503dd6b4a54b2e73065b451"
+  },
+  {
+    "file": "retirement-planner/src/model/risks.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "7650c83700944c8e6f76b02ba52464a7ba8181958ab57f003e7e40ae4ed9e94a"
+  },
+  {
+    "file": "retirement-planner/src/model/scenarioStore.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "ceef0c80d931cc3741c69aee0b3169142772c21dc38510ce9e6f2116a56b6416"
+  },
+  {
+    "file": "retirement-planner/src/model/score.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "3d1a6163a95a9d099e8bbb9b1e043668d4c79e8e000f322f8f24e9bcbe8fd949"
+  },
+  {
+    "file": "retirement-planner/src/model/timingSim.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "e136ab00fdd6510304dc8b81acb6ef8897ee0af5ae4e799711da3b56adca52c0"
+  },
+  {
+    "file": "retirement-planner/src/model/yearBreakdown.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "4a8875e22f3d2b550d14e10f0115a7d8fd70cdd467e2cbdc0555cddb8c33f730"
+  },
+  {
+    "file": "retirement-planner/src/ui/actions/planActions.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "bcfebfda42218830334cda8ea21f92ee212f0f1ec552c91ad11a59ba0899c8a9"
+  },
+  {
+    "file": "retirement-planner/src/ui/charts.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "9ca506ee027849bee3fad9470b6fa9223c3b6c9e9f07c0bb64acbd1ba18582d1"
+  },
+  {
+    "file": "retirement-planner/src/ui/clientSummaryMode.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "6d99eac2c171d92fed11a34591c39564841e06308cb79b5acc7a3c80944c3718"
+  },
+  {
+    "file": "retirement-planner/src/ui/clientSummaryPrint.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "b536e59f600f22162ace4df24884f370e10a59c4942c56d61ee46602151bf3fe"
+  },
+  {
+    "file": "retirement-planner/src/ui/coverageScore.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "9143fe03d9335d50a51a375565c17a171eee5efb9f2c13506888a91b3afdf896"
+  },
+  {
+    "file": "retirement-planner/src/ui/cppOasTimingSimulator.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "daa235a7fb3cc1a277f342237a53fb99dea26824d645c14b914308345e3f6785"
+  },
+  {
+    "file": "retirement-planner/src/ui/dashboardHelpers.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "84c2443afc275642cc76a27d421ea2599d100fc5a24259f2a17f9bb85c5e8c0a"
+  },
+  {
+    "file": "retirement-planner/src/ui/fields.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "11a26b601bebcacd42d3a19cf85b35eab8e01036dfebd5e24e9531496735c2fc"
+  },
+  {
+    "file": "retirement-planner/src/ui/formatters.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "ce78404b116be1d24ff214e0738893be9f37aadb81db0f34f54c9be045a92f38"
+  },
+  {
+    "file": "retirement-planner/src/ui/incomeMap.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "463d666e90ea1a634b9626c69a750a97b9539819fa62fdd9351d8e76677688c0"
+  },
+  {
+    "file": "retirement-planner/src/ui/interactions.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "aaabd8c5d532853c6826107d9635f0a14677a2c887c377c6188e2704d7465455"
+  },
+  {
+    "file": "retirement-planner/src/ui/keyRisks.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "5c792be4a1ae33ca52ca079d2f1ffdda08ed36fda53f6fddd31d140363b8c032"
+  },
+  {
+    "file": "retirement-planner/src/ui/learnCharts.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "b5d471ece9bb5d8855f5690eabf6a6de71aa238a6e63cec8615ae6b09d4d93f9"
+  },
+  {
+    "file": "retirement-planner/src/ui/learnUtils.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "504ad71d7cb40eec96ede59973fd84c9a0dc57ffa7a41db8b262c243eed06e48"
+  },
+  {
+    "file": "retirement-planner/src/ui/navigation.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "6728efb33dd8f0150f2b802a672483690312f43d06c40b52618110d907971ee6"
+  },
+  {
+    "file": "retirement-planner/src/ui/peakTaxYear.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "6b3284f2942cf4f23cde1e2a39f06df8442b8a862966357bd3b09728e5c67cd9"
+  },
+  {
+    "file": "retirement-planner/src/ui/presets.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "caac3ee2eda2c9325dd0d87c9edc1ae6b1fdc0cc2e83b6ea421acf38f4c571a8"
+  },
+  {
+    "file": "retirement-planner/src/ui/printSummary.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "5deac6956381f1510d026e93c22adc5002e754d092eaabbe1acca40fe6e5ed62"
+  },
+  {
+    "file": "retirement-planner/src/ui/referenceLinksList.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "e9911ae4b278fd5d20b7223a36f2f4c922fcac91dc764628a2bb512ac1964271"
+  },
+  {
+    "file": "retirement-planner/src/ui/resultsStrip.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "d77afd077db8b63d6ac690e965838b594fe983672474111c2d929da284ad9c07"
+  },
+  {
+    "file": "retirement-planner/src/ui/retirementGapHeadline.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "c963beae88076a08d040eca862ac95ed9c5b0caa40d4df4e1804f95d1a7ba32f"
+  },
+  {
+    "file": "retirement-planner/src/ui/retirementInsight.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "aaac05aa853828986a6f63ebf12ddb3c7f6f17c666eebb213e3e89a5ec510657"
+  },
+  {
+    "file": "retirement-planner/src/ui/rrspMeltdownSimulator.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "450774a323bea3e2b23fc229631806be4e124bbf8d8afad777f1f5e361e14750"
+  },
+  {
+    "file": "retirement-planner/src/ui/scenarioCompare.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "14dace481753659d0aab2e19da48804179be49e1ca068edd1a7630cb5e6123ae"
+  },
+  {
+    "file": "retirement-planner/src/ui/share.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "57a3047ea9a56c16db3a336195f7e323b4e211d012eae1e9fdc0c86438428006"
+  },
+  {
+    "file": "retirement-planner/src/ui/startupGuard.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "05b16b083453edced3a88e164e8a9ea0c071535a2fd79fe65760cf5d7ebd578f"
+  },
+  {
+    "file": "retirement-planner/src/ui/strategySuggestions.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "472a77586feb36a6f01c9cc3df6745244e354fc4bfbc0a5d0a4b4f05afc031c1"
+  },
+  {
+    "file": "retirement-planner/src/ui/supportMoments.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "181f19f0ca4092b142ddf281a1ea10a5f64687f4ca4e1dc7e50df22ecc5766d2"
+  },
+  {
+    "file": "retirement-planner/src/ui/taxWedgeEnhancements.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "1ec228617229e1e89d7870e2936e3469cbee9f07279f1fda88b469461205e6a4"
+  },
+  {
+    "file": "retirement-planner/src/ui/taxWedgeMini.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "4977b785f0a29e6f5c67d7921fe148905137568d8641f76ba817ab1277c6c23f"
+  },
+  {
+    "file": "retirement-planner/src/ui/timeline.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "d48c9af1458956a98fa2a8ad55c96144e7025acb65fbfee910e667b534cb8945"
+  },
+  {
+    "file": "retirement-planner/src/ui/tooltips.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "1833da41f2902cdaf4def1969543f9f54b9d950bada3c10482d8a8761fe5de20"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/advancedView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "bbbe7e93a0cdfbd7365c204bdc1b6cf538ac9db0ea624e3809e6c60b2d1f69c8"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/dashboardView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "390808e9fbab03aec42c1cc8a94fe08eb9874d41ea3402c7abd03aa83de977e6"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/learnOutputsView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "99795fec0dd96ad6652fad385e22a51b7702ee35814912e12d68b51ede5fdf9e"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/learnView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "5bd76c283276799053fc3040a5bd7db3437e55ef8ede7fd858478a9865da3df6"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/planEditorView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "27dba8f1aa49f09bbacb8a303c671a70bd82164fdd23746851cf63b4b42d4129"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/planInputsView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "950b709e32ff18454863858bdbc69908f275fafaa526a18261211ab1a0e8f1ec"
+  },
+  {
+    "file": "retirement-planner/src/ui/views/wizardView.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "b5e2b31a598ffd309029c1fa85730552f9c6a8ef384e14caea215ea6ed5f2e62"
+  },
+  {
+    "file": "retirement-planner/src/ui/whatChangedPanel.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "71259811031da1f9038ac1d4b2990cd654e4828f1bb3d758b57d128c84b560a4"
+  },
+  {
+    "file": "retirement-planner/sw.js",
+    "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+    "sha256": "172369afa0993d166c829089999dc3c87add378948e6bfefaeebe48aaac17a70"
+  },
+  {
+    "file": "fire-calculator/app.js",
+    "revision": "e44404c1405382840c12a2edf7aae3d1aa816e1b",
+    "sha256": "4881e2ef46cfaccb0e65b88cdca163be574c5627362b9334b7d69017f65e04e7"
+  },
+  {
+    "file": "cpp-calculator/app.js",
+    "revision": "e2f14e9401f9e16bf25fa6801dbf5df494676edf",
+    "sha256": "21bc175c3460ac0c34363b60e068913e9d1419af53ca3814a16b284d7dfa41f3"
+  },
+  {
+    "file": "rrsp-vs-tfsa-calculator/app.js",
+    "revision": "ef07a5e34a6d838d34dbf39a3e860c39d8b0eccd",
+    "sha256": "0531e57c95c09e39c2bbb287b4e2b813fb4ba48804da94ad1f300523c12874b4"
+  },
+  {
+    "file": "compound-interest-calculator/assets/js/app.js",
+    "revision": "cd7ec0dfeb1199a1e09f80a4c04ff3f2f29d4955",
+    "sha256": "18918fbde9be1f10dca3bad18c6e47106a50037d830f81dac6b491fc9a82bbc5"
+  },
+  {
+    "file": "savings-goal-calculator/assets/js/app.js",
+    "revision": "0f4a7e4a276535694e121168b2f0e85d50e41630",
+    "sha256": "1f630e67f8b569bd9daf89d37433642f6d168357f1e5febadc6b247fc9396f05"
+  },
+  {
+    "file": "emergency-fund-calculator/assets/js/app.js",
+    "revision": "144367cf3e024810b70b373677844e7f36c2c829",
+    "sha256": "4f1598377d7faf53e233381369461d7f9ccb4f28d0f9fd7f124e8e377e4a3aa5"
+  },
+  {
+    "file": "net-worth-calculator/app.js",
+    "revision": "55ede2d5e2130aa10530cccbc4fc8dac52f24975",
+    "sha256": "0605f6a86c71a410bbbd20ceeb1b956cfd41e5f095975fd216243feff3bba4ff"
+  },
+  {
+    "file": "budget-planner/assets/js/app.js",
+    "revision": "35a6c68bca49d56b5e46d1ca7530dede48eccb36",
+    "sha256": "98420eb6dbc41e9971105f8161b72d4b92d007de89a1a3a4ade78f70b6036cf0"
+  },
+  {
+    "file": "take-home-pay-calculator/assets/js/app.js",
+    "revision": "78d539f338078443563a7927e68c156aa261beac",
+    "sha256": "6a41f2c49c8a4a10a622845a43267f6a12897b2b4a3771cd0705f6f8b21b208e"
+  },
+  {
+    "file": "take-home-pay-calculator/assets/js/simplekit-tool-links.js",
+    "revision": "78d539f338078443563a7927e68c156aa261beac",
+    "sha256": "7ddaa7c88be3323cc93d2508cbd0077978eb5425aa8538288e17b61479eb125c"
+  },
+  {
+    "file": "debt-payoff-calculator/assets/js/app.js",
+    "revision": "c36650f1ef95b446ec2035e1ee28d37d11d69e28",
+    "sha256": "990fc7c96b6d433026afc8a37aa3c5452632b38e79c96bfa0a90e9f15009a4d8"
+  },
+  {
+    "file": "credit-card-interest-calculator/assets/js/app.js",
+    "revision": "2b75e7a44d3af3eb87cfb68c2cdbac9312114ef3",
+    "sha256": "8643f8867c51a0dc9174a2e20446e14d3d79803cf248be2b035e25987cfdf38f"
+  },
+  {
+    "file": "credit-card-interest-calculator/assets/js/simplekit-tool-links.js",
+    "revision": "2b75e7a44d3af3eb87cfb68c2cdbac9312114ef3",
+    "sha256": "8ce0effc94da02d300c9c3bd420f793ab058a029db96186fbf0a8a9e9c7de147"
+  },
+  {
+    "file": "loan-calculator/assets/js/app.js",
+    "revision": "bda03742ce0f2d8677a34e56e4a665d66a9113ae",
+    "sha256": "10ae3ae136d45fdf1209149c9698627a4d5056dfe98a145c9bd8805104e69b84"
+  },
+  {
+    "file": "house-affordability-calculator/assets/js/app.js",
+    "revision": "1a34b31ba85ca3cf0e31175bc93446bb01a61154",
+    "sha256": "616352398ab943d8c0e495e2b68b821061640a59fb9036e902adfffa8ad6d05f"
+  },
+  {
+    "file": "rent-vs-buy-calculator/assets/js/app.js",
+    "revision": "6d361109616df603b15b5a7b4f501d0407fa542f",
+    "sha256": "b912d6471390b397bb84f3b134e4a5bd07845850354f12d252f469a6f0a8e501"
+  },
+  {
+    "file": "mortgage-paydown-vs-invest-calculator/app.js",
+    "revision": "7e7198d600e545bf4b61c23fee50db9421b5b4c2",
+    "sha256": "5ef44925f6e797451c6a2441917bb24e09572b1bab7d1723c8222ed4bf0715d7"
+  },
+  {
+    "file": "investment-fee-calculator/app.js",
+    "revision": "470270f4adfcdc6987ac1d20c3657453e65e6c1c",
+    "sha256": "e41e13dfef14019917867e8f5f19b42b47010ddafdd384a338e2cb1b74608d25"
+  },
+  {
+    "file": "mortgage-calculator/app.js",
+    "revision": "92cf246721bf6b152334b7bc4185c62098abb8b4",
+    "sha256": "185c4b1e12c1ffc905b8dd2bb007d2f5133372b65ce3549194d851a20bb25650"
+  },
+  {
+    "file": "mortgage-calculator/calculator.js",
+    "revision": "92cf246721bf6b152334b7bc4185c62098abb8b4",
+    "sha256": "5260d9af6ca186d0afacde290e5c517837268d50c548b6db81ee92cbb087702a"
+  },
+  {
+    "file": "mortgage-calculator/charts.js",
+    "revision": "92cf246721bf6b152334b7bc4185c62098abb8b4",
+    "sha256": "21ffec90bb2c9fb235e7875abb5a691e8a3f3164ee9dab51f0b0ffb779be45ea"
+  },
+  {
+    "file": "canadian-tax-checklist/assets/js/app.js",
+    "revision": "ebe6150565b6e6dff5fcf0f96837f9710cbc422a",
+    "sha256": "fb6bc0fc0316adeeee59cfeccfe63ce039248bcabfe79ae2454083922b320a9b"
+  },
+  {
+    "file": "canadian-tax-checklist/assets/js/simplekit-tool-links.js",
+    "revision": "ebe6150565b6e6dff5fcf0f96837f9710cbc422a",
+    "sha256": "8ce0effc94da02d300c9c3bd420f793ab058a029db96186fbf0a8a9e9c7de147"
+  },
+  {
+    "file": "travel-planner/app.js",
+    "revision": "dc5b680e1bf49b75a0f8a746cf49c58b0914707a",
+    "sha256": "92ab832caeecb5fe925a92c888397af2111530001d42ac2b1664fcf4b6489f7c"
+  },
+  {
+    "file": "debt-to-income-ratio-calculator/assets/js/app.js",
+    "revision": "d3c05a120862cc5c46e27fd527d2369fd6679121",
+    "sha256": "822f1a512483860612f7c287e2bb993399863dc882fbeb68d49b3d10a42da4ed"
+  },
+  {
+    "file": "debt-to-income-ratio-calculator/assets/js/simplekit-tool-links.js",
+    "revision": "d3c05a120862cc5c46e27fd527d2369fd6679121",
+    "sha256": "c57fe30b599ff9a66784d83e8eb33e0193cbd7bd7886c23c2546def1c65a3b44"
+  },
+  {
+    "file": "contractor-effective-hourly-rate-calculator/assets/js/app.js",
+    "revision": "f8feb8c5d6193dc1a300a7632a26203223e95ecd",
+    "sha256": "80f7851da5fb59c33352e8a7a9a4cb3117f1990473dd02dd447ae3c03ce09b34"
+  },
+  {
+    "file": "contractor-effective-hourly-rate-calculator/assets/js/simplekit-tool-links.js",
+    "revision": "f8feb8c5d6193dc1a300a7632a26203223e95ecd",
+    "sha256": "8ce0effc94da02d300c9c3bd420f793ab058a029db96186fbf0a8a9e9c7de147"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "planCommit": "866f691b2ef4f23431e1642f65f8337dd5b41d85",
+  "mainCommit": "ca7826db75cb4353488786aab80857b3a71c1be1",
+  "node": "v24.19.0",
+  "protectedInputHashes": {
+    "data/tools.json": "d9927e29984ef63a7c41ab167da2efe8e67a219573d090a586aced3ac37ead84",
+    "data/site-pages.json": "bcde775f7d5b877582312ab652ac7c7901d66cdfa4049dd32a73296c98b15b6c",
+    "data/calculator-sources.json": "66bd3439c4790e75ef35f7a6d1751b9475abf529f30fd5a3b53288ceff4297c0",
+    "index.html": "71237e9bb94bea09891c6c2fd5929ee86891eb0bf92082198f1d7d6651feef82",
+    "tools/index.html": "ab473ef760ad9597e94a11202e95a11fc802c4cf63332bae63b83d8ee1fefecb",
+    "CNAME": "f823a1144cf33c204f56579209e8f32b4d06fc71181c4bd48bd34df2b553167d",
+    ".github/workflows/validate.yml": "6e1d7ced5202d2eab2c0123ce630ad256f8ab248a1632d10428bffefb6a806ea",
+    ".github/workflows/cloudflare-preview.yml": "13dc4ec1aa7c735395c3fe8c7a726645d118eb89b0c82c77ae4a30244e90297e",
+    "assets/site.css": "acf9c494da3f0b76e0b4922fa2e63afa2fbc1d586105db03a3e7169fc2a9d914"
+  }
+}

@@ -87,21 +87,21 @@ Reusable Codex execution prompt:
 
 ## Phase 0 — Baseline inventory and regression guardrails
 
-Status: `[ ]`. Prerequisite: plan/reference PR reviewed; implementation requested.
+Status: `[~]`. Baseline tasks and acceptance checks passed; plan/phase review pending. Implementation requested by owner. PR #6 is open with no recorded review decision; do not begin Phase 1 before review.
 
-- [ ] Reinspect the latest approved commit, repository instructions, templates, registry generation, CSS consumers, source pins and hosting workflows; record baseline SHAs.
-- [ ] Capture the current homepage, header/menu, directory and representative tool screenshots; save route/link inventories and deterministic tool input/output fixtures.
-- [ ] Record all 22 tools from the inventory below, all existing site/sitemap URLs, compatibility routes and configured legacy redirect destinations. Confirm the currently documented 53 sitemap URLs against actual manifests/output.
-- [ ] Establish the current build, SEO/output validation and browser-smoke results; document existing failures separately from v2 regressions.
-- [ ] Record production deployment identity/configuration through permitted read-only evidence and preserve the previous deployment/artifact for later comparison and rollback.
+- [x] Reinspect the latest approved commit, repository instructions, templates, registry generation, CSS consumers, source pins and hosting workflows; record baseline SHAs.
+- [x] Capture the current homepage, header/menu, directory and representative tool screenshots; save route/link inventories and deterministic tool input/output fixtures.
+- [x] Record all 22 tools from the inventory below, all existing site/sitemap URLs, compatibility routes and configured legacy redirect destinations. Confirm the currently documented 53 sitemap URLs against actual manifests/output.
+- [x] Establish the current build, SEO/output validation and browser-smoke results; document existing failures separately from v2 regressions.
+- [x] Record production deployment identity/configuration through permitted read-only evidence and preserve the previous deployment/artifact for later comparison and rollback.
 
 Acceptance:
 
-- [ ] Inventory contains exactly 22 unique tool IDs and unchanged canonical paths; every route returns the expected working page in local output.
-- [ ] Baseline fixture evidence exists for Retirement Planner demo, Budget Planner recalculation, mortgage principal/payment, and one meaningful input/output or checklist/planner interaction for every remaining tool.
-- [ ] A reproducible baseline build and artifact inventory are saved with any unresolved blocker; no new code is started with unexplained baseline failures.
+- [x] Inventory contains exactly 22 unique tool IDs and unchanged canonical paths; every route returns the expected working page in local output.
+- [x] Baseline fixture evidence exists for Retirement Planner demo, Budget Planner recalculation, mortgage principal/payment, and one meaningful input/output or checklist/planner interaction for every remaining tool.
+- [x] A reproducible baseline build and artifact inventory are saved with any unresolved blocker; no new code is started with unexplained baseline failures.
 
-Codex guidance: start with manifests/build outputs rather than assuming the checked-in root is the new deployment artifact. Add meaningful preservation checks that compare the baseline contracts and pinned calculator assets, not tests that merely mirror HTML styling. Evidence link: pending.
+Codex guidance: start with manifests/build outputs rather than assuming the checked-in root is the new deployment artifact. Add meaningful preservation checks that compare the baseline contracts and pinned calculator assets, not tests that merely mirror HTML styling. Evidence: [Phase 0 verification](v2/phase-00-verification.md), including 22 runtime fixtures, 28 screenshots, complete route/artifact inventories, 49 configured redirects, preserved production artifact and read-only hosting evidence. Branch: `feature/simplekit-v2-phase-0`. Live edge requests return HTTP 403 from this environment; configuration/deployment identity and downloaded artifact are verified separately.
 
 ## Phase 1 — Design tokens, typography and assets
 
@@ -364,7 +364,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 
 | Phase | State | Evidence / next step |
 | --- | --- | --- |
-| 0 Baseline and guardrails | `[ ]` | Begin here after plan review and implementation request. |
+| 0 Baseline and guardrails | `[~]` | [Baseline evidence](v2/phase-00-verification.md) and all acceptance checks pass; plan/phase review pending. Live edge HTTP checks limited by 403. |
 | 1 Tokens and assets | `[ ]` | Pending Phase 0. |
 | 2 Header and hero | `[ ]` | Pending Phase 1. |
 | 3 Search and questions | `[ ]` | Pending Phase 2. |

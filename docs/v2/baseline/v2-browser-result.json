@@ -1,0 +1,10 @@
+{
+  "mode": "record",
+  "tools": 22,
+  "pageErrors": [],
+  "failedLocalRequests": [],
+  "stubbedExternalHosts": [
+    "www.googletagmanager.com"
+  ],
+  "browser": "151.0.7922.173"
+}

@@ -1,0 +1,3315 @@
+{
+  "frozenTime": "2026-10-09T12:00:00.000Z",
+  "locale": "en-CA",
+  "timezone": "UTC",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "comparison": "Exact displayed text (calculator rounding); exact input values. No numerical tolerance beyond the tool display.",
+  "tools": [
+    {
+      "id": "retirement-planner",
+      "path": "/retirement-planner/",
+      "initialInputs": [
+        {
+          "selector": "#dashboardStressToggle",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#dollarModeToggle",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#coverageTableToggle",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#yearScrubber",
+          "value": "65"
+        },
+        {
+          "selector": "#notesInput",
+          "value": ""
+        }
+      ],
+      "before": {
+        "#resultLiveSummary": "Plan health: Shortfall Likely. You may be short by $98,093 per year.",
+        "#readinessSummaryModule": "Top numbers The simplest read of your current retirement plan. Retirement readiness Shortfall Likely Base plan Monthly retirement income $9,510 Estimated spendable income Shortfall or surplus -$98,093 First retirement year after tax Years until retirement 30 Target age 65 Projected portfolio value $1,146,480 At retirement Money lasts Age 74 Projection under current assumptions"
+      },
+      "steps": [
+        {
+          "operation": "click",
+          "selector": "#landingDemoBtn",
+          "value": null,
+          "outputs": {
+            "#resultLiveSummary": "Plan health: Shortfall Likely. You may be short by $93,531 per year.",
+            "#readinessSummaryModule": "Top numbers The simplest read of your current retirement plan. Retirement readiness Shortfall Likely Base plan Monthly retirement income $8,748 Estimated spendable income Shortfall or surplus -$93,531 First retirement year after tax Years until retirement 18 Target age 63 Projected portfolio value $1,268,983 At retirement Money lasts Age 77 Projection under current assumptions"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#dashboardStressToggle",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#dollarModeToggle",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#coverageTableToggle",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#yearScrubber",
+          "value": "65"
+        },
+        {
+          "selector": "#notesInput",
+          "value": "Demo assumptions loaded. Review advanced strategy and stress tests."
+        }
+      ],
+      "after": {
+        "#resultLiveSummary": "Plan health: Shortfall Likely. You may be short by $93,531 per year.",
+        "#readinessSummaryModule": "Top numbers The simplest read of your current retirement plan. Retirement readiness Shortfall Likely Base plan Monthly retirement income $8,748 Estimated spendable income Shortfall or surplus -$93,531 First retirement year after tax Years until retirement 18 Target age 63 Projected portfolio value $1,268,983 At retirement Money lasts Age 77 Projection under current assumptions"
+      }
+    },
+    {
+      "id": "fire-calculator",
+      "path": "/fire-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#currentAge",
+          "value": "38"
+        },
+        {
+          "selector": "#targetAge",
+          "value": "55"
+        },
+        {
+          "selector": "#currentAssets",
+          "value": "220000"
+        },
+        {
+          "selector": "#annualSpending",
+          "value": "70000"
+        },
+        {
+          "selector": "#annualSavings",
+          "value": "30000"
+        },
+        {
+          "selector": "#expectedReturn",
+          "value": "5"
+        },
+        {
+          "selector": "#withdrawalRate",
+          "value": "4"
+        },
+        {
+          "selector": "#passiveIncome",
+          "value": "0"
+        },
+        {
+          "selector": "#salaryIncome",
+          "value": "120000"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#contributionGrowth",
+          "value": "1"
+        },
+        {
+          "selector": "#lumpSumAmount",
+          "value": "0"
+        },
+        {
+          "selector": "#lumpSumYear",
+          "value": "5"
+        },
+        {
+          "selector": "#returnModeNominal",
+          "value": "nominal",
+          "checked": true
+        },
+        {
+          "selector": "#returnModeReal",
+          "value": "real",
+          "checked": false
+        }
+      ],
+      "before": {
+        "#resultsGrid": "Estimated FIRE number $1,750,000 $70,000 annual need after passive income Remaining to FI $1,530,000 Gap between current assets and target Estimated years to FIRE 27 Crosses target around age 65 Portfolio at target age $1,059,537 61% of FIRE target by age 55 Estimated FI age 65 Projected age when target is reached Return assumption used 2.9% Inflation-adjusted from nominal return"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#annualSpending",
+          "value": "80000",
+          "outputs": {
+            "#resultsGrid": "Estimated FIRE number $2,000,000 $80,000 annual need after passive income Remaining to FI $1,780,000 Gap between current assets and target Estimated years to FIRE 29 Crosses target around age 67 Portfolio at target age $1,059,537 53% of FIRE target by age 55 Estimated FI age 67 Projected age when target is reached Return assumption used 2.9% Inflation-adjusted from nominal return"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#currentAge",
+          "value": "38"
+        },
+        {
+          "selector": "#targetAge",
+          "value": "55"
+        },
+        {
+          "selector": "#currentAssets",
+          "value": "220000"
+        },
+        {
+          "selector": "#annualSpending",
+          "value": "80000"
+        },
+        {
+          "selector": "#annualSavings",
+          "value": "30000"
+        },
+        {
+          "selector": "#expectedReturn",
+          "value": "5"
+        },
+        {
+          "selector": "#withdrawalRate",
+          "value": "4"
+        },
+        {
+          "selector": "#passiveIncome",
+          "value": "0"
+        },
+        {
+          "selector": "#salaryIncome",
+          "value": "120000"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#contributionGrowth",
+          "value": "1"
+        },
+        {
+          "selector": "#lumpSumAmount",
+          "value": "0"
+        },
+        {
+          "selector": "#lumpSumYear",
+          "value": "5"
+        },
+        {
+          "selector": "#returnModeNominal",
+          "value": "nominal",
+          "checked": true
+        },
+        {
+          "selector": "#returnModeReal",
+          "value": "real",
+          "checked": false
+        }
+      ],
+      "after": {
+        "#resultsGrid": "Estimated FIRE number $2,000,000 $80,000 annual need after passive income Remaining to FI $1,780,000 Gap between current assets and target Estimated years to FIRE 29 Crosses target around age 67 Portfolio at target age $1,059,537 53% of FIRE target by age 55 Estimated FI age 67 Projected age when target is reached Return assumption used 2.9% Inflation-adjusted from nominal return"
+      }
+    },
+    {
+      "id": "cpp-calculator",
+      "path": "/cpp-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#monthlyAt65",
+          "value": "900"
+        },
+        {
+          "selector": "#lifeExpectancy",
+          "value": "90"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "4"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#comparisonAgeOne",
+          "value": "75"
+        },
+        {
+          "selector": "#comparisonAgeTwo",
+          "value": "85"
+        }
+      ],
+      "before": {
+        "#resultsPanel": "Recommendation Your answer first, then your three choices, then the proof. Fast answer Waiting until 70 may maximize lifetime CPP in this scenario. Waiting until 70 may maximize lifetime CPP in this scenario. The higher monthly CPP may pay off if you expect a longer retirement, with the strongest total by age 90. BREAK-EVEN AGE Age 81.8 70 catches up to 65 around Age 81.8. Planning estimate only. Confirm your exact CPP amount with Service Canada. Your scenario summary Quick scan for the main tradeoffs. Highest monthly income CPP at 70 Income soonest CPP at 60 Standard baseline CPP at 65 Break-even in this scenario Age 81.8 Compare 60, 65, and 70 Quick side-by-side comparison. CPP at 60 Income sooner Age 60 $576 / month Monthly CPP $576 Total by age 90 $207,936 Income sooner, lower for life. Best fit: People who want income sooner or need cash flow now. CPP at 65 Standard baseline Age 65 $900 / month Monthly CPP $900 Total by age 90 $270,900 Standard baseline option. Best fit: People who want the standard comparison point. CPP at 70 Highest later income Recommended Age 70 $1,278 / month Monthly CPP $1,278 Total by age 90 $307,998 Higher later income. Best fit: People with other income sources while they wait. Was this helpful? I build free Canadian planning tools like this. Support helps keep them free and improving. ☕ Support this tool Proof: chart and full comparison"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#monthlyAt65",
+          "value": "1200",
+          "outputs": {
+            "#resultsPanel": "Recommendation Your answer first, then your three choices, then the proof. Fast answer Waiting until 70 may maximize lifetime CPP in this scenario. Waiting until 70 may maximize lifetime CPP in this scenario. The higher monthly CPP may pay off if you expect a longer retirement, with the strongest total by age 90. BREAK-EVEN AGE Age 81.8 70 catches up to 65 around Age 81.8. Planning estimate only. Confirm your exact CPP amount with Service Canada. Your scenario summary Quick scan for the main tradeoffs. Highest monthly income CPP at 70 Income soonest CPP at 60 Standard baseline CPP at 65 Break-even in this scenario Age 81.8 Compare 60, 65, and 70 Quick side-by-side comparison. CPP at 60 Income sooner Age 60 $768 / month Monthly CPP $768 Total by age 90 $277,248 Income sooner, lower for life. Best fit: People who want income sooner or need cash flow now. CPP at 65 Standard baseline Age 65 $1,200 / month Monthly CPP $1,200 Total by age 90 $361,200 Standard baseline option. Best fit: People who want the standard comparison point. CPP at 70 Highest later income Recommended Age 70 $1,704 / month Monthly CPP $1,704 Total by age 90 $410,664 Higher later income. Best fit: People with other income sources while they wait. Was this helpful? I build free Canadian planning tools like this. Support helps keep them free and improving. ☕ Support this tool Proof: chart and full comparison"
+          }
+        },
+        {
+          "operation": "click",
+          "selector": "#compareBtn",
+          "value": null,
+          "outputs": {
+            "#resultsPanel": "Recommendation Your answer first, then your three choices, then the proof. Fast answer Waiting until 70 may maximize lifetime CPP in this scenario. Waiting until 70 may maximize lifetime CPP in this scenario. The higher monthly CPP may pay off if you expect a longer retirement, with the strongest total by age 90. BREAK-EVEN AGE Age 81.8 70 catches up to 65 around Age 81.8. Planning estimate only. Confirm your exact CPP amount with Service Canada. Your scenario summary Quick scan for the main tradeoffs. Highest monthly income CPP at 70 Income soonest CPP at 60 Standard baseline CPP at 65 Break-even in this scenario Age 81.8 Compare 60, 65, and 70 Quick side-by-side comparison. CPP at 60 Income sooner Age 60 $768 / month Monthly CPP $768 Total by age 90 $277,248 Income sooner, lower for life. Best fit: People who want income sooner or need cash flow now. CPP at 65 Standard baseline Age 65 $1,200 / month Monthly CPP $1,200 Total by age 90 $361,200 Standard baseline option. Best fit: People who want the standard comparison point. CPP at 70 Highest later income Recommended Age 70 $1,704 / month Monthly CPP $1,704 Total by age 90 $410,664 Higher later income. Best fit: People with other income sources while they wait. Was this helpful? I build free Canadian planning tools like this. Support helps keep them free and improving. ☕ Support this tool Proof: chart and full comparison"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#monthlyAt65",
+          "value": "1200"
+        },
+        {
+          "selector": "#lifeExpectancy",
+          "value": "90"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "4"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#comparisonAgeOne",
+          "value": "75"
+        },
+        {
+          "selector": "#comparisonAgeTwo",
+          "value": "85"
+        }
+      ],
+      "after": {
+        "#resultsPanel": "Recommendation Your answer first, then your three choices, then the proof. Fast answer Waiting until 70 may maximize lifetime CPP in this scenario. Waiting until 70 may maximize lifetime CPP in this scenario. The higher monthly CPP may pay off if you expect a longer retirement, with the strongest total by age 90. BREAK-EVEN AGE Age 81.8 70 catches up to 65 around Age 81.8. Planning estimate only. Confirm your exact CPP amount with Service Canada. Your scenario summary Quick scan for the main tradeoffs. Highest monthly income CPP at 70 Income soonest CPP at 60 Standard baseline CPP at 65 Break-even in this scenario Age 81.8 Compare 60, 65, and 70 Quick side-by-side comparison. CPP at 60 Income sooner Age 60 $768 / month Monthly CPP $768 Total by age 90 $277,248 Income sooner, lower for life. Best fit: People who want income sooner or need cash flow now. CPP at 65 Standard baseline Age 65 $1,200 / month Monthly CPP $1,200 Total by age 90 $361,200 Standard baseline option. Best fit: People who want the standard comparison point. CPP at 70 Highest later income Recommended Age 70 $1,704 / month Monthly CPP $1,704 Total by age 90 $410,664 Higher later income. Best fit: People with other income sources while they wait. Was this helpful? I build free Canadian planning tools like this. Support helps keep them free and improving. ☕ Support this tool Proof: chart and full comparison"
+      }
+    },
+    {
+      "id": "rrsp-vs-tfsa-calculator",
+      "path": "/rrsp-vs-tfsa-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#income",
+          "value": "95000"
+        },
+        {
+          "selector": "#province",
+          "value": "ON"
+        },
+        {
+          "selector": "#contributionInput",
+          "value": "10000"
+        },
+        {
+          "selector": "#currentAge",
+          "value": "35"
+        },
+        {
+          "selector": "#retirementAge",
+          "value": "65"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "5.5"
+        },
+        {
+          "selector": "#growthMode",
+          "value": "nominal"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2.2"
+        },
+        {
+          "selector": "#retirementTaxRate",
+          "value": "25"
+        },
+        {
+          "selector": "#useManualCurrentTaxRate",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#manualCurrentTaxRate",
+          "value": "35"
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "annual"
+        },
+        {
+          "selector": "#currentRrspBalance",
+          "value": "25000"
+        },
+        {
+          "selector": "#currentTfsaBalance",
+          "value": "18000"
+        }
+      ],
+      "before": {
+        "#detailedResults": "Leading option $758,037 RRSP if refund is reinvested Refund impact $214,771 Extra retirement value if the RRSP refund is reinvested Equal out-of-pocket cost note: If you compare equal out-of-pocket cost, the TFSA equivalent contribution would be about $7,035 instead of $10,000. Leading option $758,037 RRSP with refund reinvested • $214,771 from refund reinvestment Top alternative $724,355 TFSA option • $509,584 on equal-cost basis • $33,682 behind Compare the three outcomes These numbers focus on this contribution decision, not your full retirement plan. TFSA $724,355 RRSP if refund is spent $543,266 RRSP if refund is reinvested $758,037 See the full math and assumptions"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#contributionInput",
+          "value": "12000",
+          "outputs": {
+            "#detailedResults": "Leading option $758,037 RRSP if refund is reinvested Refund impact $214,771 Extra retirement value if the RRSP refund is reinvested Equal out-of-pocket cost note: If you compare equal out-of-pocket cost, the TFSA equivalent contribution would be about $7,035 instead of $10,000. Leading option $758,037 RRSP with refund reinvested • $214,771 from refund reinvestment Top alternative $724,355 TFSA option • $509,584 on equal-cost basis • $33,682 behind Compare the three outcomes These numbers focus on this contribution decision, not your full retirement plan. TFSA $724,355 RRSP if refund is spent $543,266 RRSP if refund is reinvested $758,037 See the full math and assumptions"
+          }
+        },
+        {
+          "operation": "click",
+          "selector": "#calculateBtn",
+          "value": null,
+          "outputs": {
+            "#detailedResults": "Leading option $909,645 RRSP if refund is reinvested Refund impact $257,725 Extra retirement value if the RRSP refund is reinvested Equal out-of-pocket cost note: If you compare equal out-of-pocket cost, the TFSA equivalent contribution would be about $8,442 instead of $12,000. Leading option $909,645 RRSP with refund reinvested • $257,725 from refund reinvestment Top alternative $869,226 TFSA option • $611,500 on equal-cost basis • $40,419 behind Compare the three outcomes These numbers focus on this contribution decision, not your full retirement plan. TFSA $869,226 RRSP if refund is spent $651,919 RRSP if refund is reinvested $909,645 See the full math and assumptions"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#income",
+          "value": "95000"
+        },
+        {
+          "selector": "#province",
+          "value": "ON"
+        },
+        {
+          "selector": "#contributionInput",
+          "value": "12000"
+        },
+        {
+          "selector": "#currentAge",
+          "value": "35"
+        },
+        {
+          "selector": "#retirementAge",
+          "value": "65"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "5.5"
+        },
+        {
+          "selector": "#growthMode",
+          "value": "nominal"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2.2"
+        },
+        {
+          "selector": "#retirementTaxRate",
+          "value": "25"
+        },
+        {
+          "selector": "#useManualCurrentTaxRate",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#manualCurrentTaxRate",
+          "value": "35"
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "annual"
+        },
+        {
+          "selector": "#currentRrspBalance",
+          "value": "25000"
+        },
+        {
+          "selector": "#currentTfsaBalance",
+          "value": "18000"
+        }
+      ],
+      "after": {
+        "#detailedResults": "Leading option $909,645 RRSP if refund is reinvested Refund impact $257,725 Extra retirement value if the RRSP refund is reinvested Equal out-of-pocket cost note: If you compare equal out-of-pocket cost, the TFSA equivalent contribution would be about $8,442 instead of $12,000. Leading option $909,645 RRSP with refund reinvested • $257,725 from refund reinvestment Top alternative $869,226 TFSA option • $611,500 on equal-cost basis • $40,419 behind Compare the three outcomes These numbers focus on this contribution decision, not your full retirement plan. TFSA $869,226 RRSP if refund is spent $651,919 RRSP if refund is reinvested $909,645 See the full math and assumptions"
+      }
+    },
+    {
+      "id": "compound-interest-calculator",
+      "path": "/compound-interest-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#startingAmount",
+          "value": "10000"
+        },
+        {
+          "selector": "#recurringContribution",
+          "value": "500"
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "6"
+        },
+        {
+          "selector": "#years",
+          "value": "25"
+        },
+        {
+          "selector": "#extraMonths",
+          "value": "0"
+        },
+        {
+          "selector": "#compoundingFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#annualFee",
+          "value": "0.5"
+        },
+        {
+          "selector": "#contributionIncrease",
+          "value": "0"
+        },
+        {
+          "selector": "#startAge",
+          "value": "35"
+        },
+        {
+          "selector": "#endAge",
+          "value": "60"
+        },
+        {
+          "selector": "#overrideEndAge",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#showRealValues",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#includeFees",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#futureLumpSum",
+          "value": "0"
+        },
+        {
+          "selector": "#futureLumpSumYear",
+          "value": "10"
+        }
+      ],
+      "before": {
+        "#headlineResult": "Final portfolio value $351,088 After 25 years, this estimate is now being driven more by compounding than by new money going in. Contribution total $160,000 Compound growth $191,088"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#startingAmount",
+          "value": "20000",
+          "outputs": {
+            "#headlineResult": "Final portfolio value $388,952 After 25 years, this estimate is now being driven more by compounding than by new money going in. Contribution total $170,000 Compound growth $218,952"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#startingAmount",
+          "value": "20000"
+        },
+        {
+          "selector": "#recurringContribution",
+          "value": "500"
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "6"
+        },
+        {
+          "selector": "#years",
+          "value": "25"
+        },
+        {
+          "selector": "#extraMonths",
+          "value": "0"
+        },
+        {
+          "selector": "#compoundingFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#annualFee",
+          "value": "0.5"
+        },
+        {
+          "selector": "#contributionIncrease",
+          "value": "0"
+        },
+        {
+          "selector": "#startAge",
+          "value": "35"
+        },
+        {
+          "selector": "#endAge",
+          "value": "60"
+        },
+        {
+          "selector": "#overrideEndAge",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#showRealValues",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#includeFees",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#futureLumpSum",
+          "value": "0"
+        },
+        {
+          "selector": "#futureLumpSumYear",
+          "value": "10"
+        }
+      ],
+      "after": {
+        "#headlineResult": "Final portfolio value $388,952 After 25 years, this estimate is now being driven more by compounding than by new money going in. Contribution total $170,000 Compound growth $218,952"
+      }
+    },
+    {
+      "id": "savings-goal-calculator",
+      "path": "/savings-goal-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#scenarioName",
+          "value": "Starter Goal"
+        },
+        {
+          "selector": "#goalCategory",
+          "value": "emergency_fund"
+        },
+        {
+          "selector": "#goalAmount",
+          "value": "10000"
+        },
+        {
+          "selector": "#currentSavings",
+          "value": "1000"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-10-09"
+        },
+        {
+          "selector": "#targetDate",
+          "value": "2028-10-09"
+        },
+        {
+          "selector": "#contributionAmount",
+          "value": "300"
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#annualInterestRate",
+          "value": "3"
+        },
+        {
+          "selector": "#compounding",
+          "value": "monthly"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#notes",
+          "value": ""
+        },
+        {
+          "selector": "#comparisonSortSelect",
+          "value": "speed"
+        },
+        {
+          "selector": "#projectionViewSelect",
+          "value": "milestones"
+        }
+      ],
+      "before": {
+        "#summaryCardsPrimary": "GOAL DATE Mar 9, 2029 About 2 years 5 months from the selected start date. CONTRIBUTION AMOUNT $300.00 $300 monthly equivalent. GOAL PROGRESS 84.7% 10.0% already saved today. FINAL PROJECTED BALANCE $10,086 Balance by target date: $8,473."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#goalAmount",
+          "value": "20000",
+          "outputs": {
+            "#summaryCardsPrimary": "GOAL DATE Sep 9, 2031 About 4 years 11 months from the selected start date. CONTRIBUTION AMOUNT $300.00 $300 monthly equivalent. GOAL PROGRESS 42.4% 5.0% already saved today. FINAL PROJECTED BALANCE $20,205 Balance by target date: $8,473."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#scenarioName",
+          "value": "Starter Goal"
+        },
+        {
+          "selector": "#goalCategory",
+          "value": "emergency_fund"
+        },
+        {
+          "selector": "#goalAmount",
+          "value": "20000"
+        },
+        {
+          "selector": "#currentSavings",
+          "value": "1000"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-10-09"
+        },
+        {
+          "selector": "#targetDate",
+          "value": "2028-10-09"
+        },
+        {
+          "selector": "#contributionAmount",
+          "value": "300"
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#annualInterestRate",
+          "value": "3"
+        },
+        {
+          "selector": "#compounding",
+          "value": "monthly"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#notes",
+          "value": ""
+        },
+        {
+          "selector": "#comparisonSortSelect",
+          "value": "speed"
+        },
+        {
+          "selector": "#projectionViewSelect",
+          "value": "milestones"
+        }
+      ],
+      "after": {
+        "#summaryCardsPrimary": "GOAL DATE Sep 9, 2031 About 4 years 11 months from the selected start date. CONTRIBUTION AMOUNT $300.00 $300 monthly equivalent. GOAL PROGRESS 42.4% 5.0% already saved today. FINAL PROJECTED BALANCE $20,205 Balance by target date: $8,473."
+      }
+    },
+    {
+      "id": "emergency-fund-calculator",
+      "path": "/emergency-fund-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#monthlyExpenses",
+          "value": ""
+        },
+        {
+          "selector": "#currentSavings",
+          "value": ""
+        },
+        {
+          "selector": "#monthlyContribution",
+          "value": ""
+        },
+        {
+          "selector": "#annualRate",
+          "value": ""
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#lumpSum",
+          "value": ""
+        },
+        {
+          "selector": "#customTargetMonths",
+          "value": "6"
+        },
+        {
+          "selector": "#incomeStability",
+          "value": "somewhat-stable"
+        },
+        {
+          "selector": "#dependents",
+          "value": "none"
+        }
+      ],
+      "before": {
+        "#resultCards": "YOUR TARGET FUND Add essentials This starts with your monthly essentials. SAVED SO FAR $0.00 Cash currently counted toward your target. STILL NEEDED Not calculated You are already at or above your current target. TIME TO TARGET Add essentials Add or increase contributions to create a timeline."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#monthlyExpenses",
+          "value": "2500",
+          "outputs": {
+            "#resultCards": "YOUR TARGET FUND $15,000 6 months of essential expenses. SAVED SO FAR $0.00 Cash currently counted toward your target. STILL NEEDED $15,000 Amount left to fully fund this target. TIME TO TARGET No timeline yet Add or increase contributions to create a timeline."
+          }
+        },
+        {
+          "operation": "fill",
+          "selector": "#currentSavings",
+          "value": "5000",
+          "outputs": {
+            "#resultCards": "YOUR TARGET FUND $15,000 6 months of essential expenses. SAVED SO FAR $5,000 Cash currently counted toward your target. STILL NEEDED $10,000 Amount left to fully fund this target. TIME TO TARGET No timeline yet Add or increase contributions to create a timeline."
+          }
+        },
+        {
+          "operation": "fill",
+          "selector": "#monthlyContribution",
+          "value": "300",
+          "outputs": {
+            "#resultCards": "YOUR TARGET FUND $15,000 6 months of essential expenses. SAVED SO FAR $5,000 Cash currently counted toward your target. STILL NEEDED $10,000 Amount left to fully fund this target. TIME TO TARGET 34 months Estimated target date: August 2029. Planning estimate only."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#monthlyExpenses",
+          "value": "2500"
+        },
+        {
+          "selector": "#currentSavings",
+          "value": "5000"
+        },
+        {
+          "selector": "#monthlyContribution",
+          "value": "300"
+        },
+        {
+          "selector": "#annualRate",
+          "value": ""
+        },
+        {
+          "selector": "#contributionFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#lumpSum",
+          "value": ""
+        },
+        {
+          "selector": "#customTargetMonths",
+          "value": "6"
+        },
+        {
+          "selector": "#incomeStability",
+          "value": "somewhat-stable"
+        },
+        {
+          "selector": "#dependents",
+          "value": "none"
+        }
+      ],
+      "after": {
+        "#resultCards": "YOUR TARGET FUND $15,000 6 months of essential expenses. SAVED SO FAR $5,000 Cash currently counted toward your target. STILL NEEDED $10,000 Amount left to fully fund this target. TIME TO TARGET 34 months Estimated target date: August 2029. Planning estimate only."
+      }
+    },
+    {
+      "id": "net-worth-calculator",
+      "path": "/net-worth-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#cash",
+          "value": ""
+        },
+        {
+          "selector": "#tfsa",
+          "value": ""
+        },
+        {
+          "selector": "#rrsp",
+          "value": ""
+        },
+        {
+          "selector": "#fhsa",
+          "value": ""
+        },
+        {
+          "selector": "#nonRegistered",
+          "value": ""
+        },
+        {
+          "selector": "#pension",
+          "value": ""
+        },
+        {
+          "selector": "#homeValue",
+          "value": ""
+        },
+        {
+          "selector": "#otherRealEstate",
+          "value": ""
+        },
+        {
+          "selector": "#vehicle",
+          "value": ""
+        },
+        {
+          "selector": "#business",
+          "value": ""
+        },
+        {
+          "selector": "#otherAssets",
+          "value": ""
+        },
+        {
+          "selector": "#mortgage",
+          "value": ""
+        },
+        {
+          "selector": "#heloc",
+          "value": ""
+        },
+        {
+          "selector": "#carLoan",
+          "value": ""
+        },
+        {
+          "selector": "#studentLoan",
+          "value": ""
+        },
+        {
+          "selector": "#creditCard",
+          "value": ""
+        },
+        {
+          "selector": "#lineOfCredit",
+          "value": ""
+        },
+        {
+          "selector": "#otherDebt",
+          "value": ""
+        },
+        {
+          "selector": "#annualContributions",
+          "value": ""
+        },
+        {
+          "selector": "#growthRate",
+          "value": "5"
+        },
+        {
+          "selector": "#projectionYears",
+          "value": "10"
+        },
+        {
+          "selector": "#annualDebtPaydown",
+          "value": ""
+        }
+      ],
+      "before": {
+        "#netWorthValue": "$0",
+        "#summaryGrid": "Total assets $0 Everything you included on the asset side. Total liabilities $0 All debts and balances entered above. Debt-to-asset ratio No assets entered yet Enter assets to calculate the ratio. Investable assets $0 Cash, TFSA, RRSP, FHSA, and non-registered accounts. Real estate equity $0 Properties minus mortgage and HELOC balances. Projection end point $0 Estimated after 10 years."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#cash",
+          "value": "15000",
+          "outputs": {
+            "#netWorthValue": "$15,000",
+            "#summaryGrid": "Total assets $15,000 Everything you included on the asset side. Total liabilities $0 All debts and balances entered above. Debt-to-asset ratio 0% Lower ratios generally mean less leverage. Investable assets $15,000 Cash, TFSA, RRSP, FHSA, and non-registered accounts. Real estate equity $0 Properties minus mortgage and HELOC balances. Projection end point $24,433 Estimated after 10 years."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#cash",
+          "value": "15,000"
+        },
+        {
+          "selector": "#tfsa",
+          "value": ""
+        },
+        {
+          "selector": "#rrsp",
+          "value": ""
+        },
+        {
+          "selector": "#fhsa",
+          "value": ""
+        },
+        {
+          "selector": "#nonRegistered",
+          "value": ""
+        },
+        {
+          "selector": "#pension",
+          "value": ""
+        },
+        {
+          "selector": "#homeValue",
+          "value": ""
+        },
+        {
+          "selector": "#otherRealEstate",
+          "value": ""
+        },
+        {
+          "selector": "#vehicle",
+          "value": ""
+        },
+        {
+          "selector": "#business",
+          "value": ""
+        },
+        {
+          "selector": "#otherAssets",
+          "value": ""
+        },
+        {
+          "selector": "#mortgage",
+          "value": ""
+        },
+        {
+          "selector": "#heloc",
+          "value": ""
+        },
+        {
+          "selector": "#carLoan",
+          "value": ""
+        },
+        {
+          "selector": "#studentLoan",
+          "value": ""
+        },
+        {
+          "selector": "#creditCard",
+          "value": ""
+        },
+        {
+          "selector": "#lineOfCredit",
+          "value": ""
+        },
+        {
+          "selector": "#otherDebt",
+          "value": ""
+        },
+        {
+          "selector": "#annualContributions",
+          "value": ""
+        },
+        {
+          "selector": "#growthRate",
+          "value": "5"
+        },
+        {
+          "selector": "#projectionYears",
+          "value": "10"
+        },
+        {
+          "selector": "#annualDebtPaydown",
+          "value": ""
+        }
+      ],
+      "after": {
+        "#netWorthValue": "$15,000",
+        "#summaryGrid": "Total assets $15,000 Everything you included on the asset side. Total liabilities $0 All debts and balances entered above. Debt-to-asset ratio 0% Lower ratios generally mean less leverage. Investable assets $15,000 Cash, TFSA, RRSP, FHSA, and non-registered accounts. Real estate equity $0 Properties minus mortgage and HELOC balances. Projection end point $24,433 Estimated after 10 years."
+      }
+    },
+    {
+      "id": "budget-planner",
+      "path": "/budget-planner/",
+      "initialInputs": [
+        {
+          "selector": "[data-group=\"income\"][data-index=\"0\"] .row-name",
+          "value": "Primary Income"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"0\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"1\"] .row-name",
+          "value": "Secondary Income"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"1\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"2\"] .row-name",
+          "value": "Other Income"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"2\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"0\"] .row-name",
+          "value": "Housing"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"0\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"1\"] .row-name",
+          "value": "Utilities"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"1\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"2\"] .row-name",
+          "value": "Insurance"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"2\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"3\"] .row-name",
+          "value": "Debt Payments"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"3\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"4\"] .row-name",
+          "value": "Childcare / Family"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"4\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"5\"] .row-name",
+          "value": "Health / Medical"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"5\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"0\"] .row-name",
+          "value": "Groceries"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"0\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"1\"] .row-name",
+          "value": "Transportation"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"1\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"2\"] .row-name",
+          "value": "Entertainment"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"2\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"3\"] .row-name",
+          "value": "Dining Out"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"3\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"4\"] .row-name",
+          "value": "Shopping"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"4\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"5\"] .row-name",
+          "value": "Travel"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"5\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"6\"] .row-name",
+          "value": "Subscriptions"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"6\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"7\"] .row-name",
+          "value": "Miscellaneous"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"7\"] .row-amount",
+          "value": ""
+        },
+        {
+          "selector": "#monthlySavingsGoal",
+          "value": ""
+        },
+        {
+          "selector": "#monthlyInvestingGoal",
+          "value": ""
+        },
+        {
+          "selector": "#monthlyDebtGoal",
+          "value": ""
+        }
+      ],
+      "before": {
+        "#primarySummaryCards": "MONTHLY SURPLUS / DEFICIT $0 Income remaining after expenses. TOTAL MONTHLY INCOME $0 Combined across all monthly income sources. TOTAL MONTHLY EXPENSES $0 Fixed and variable expense categories combined. SAVINGS RATE 0% Calculated as surplus divided by total income."
+      },
+      "steps": [
+        {
+          "operation": "click",
+          "selector": "#loadSampleBtn",
+          "value": null,
+          "outputs": {
+            "#primarySummaryCards": "MONTHLY SURPLUS / DEFICIT $1,991 Income remaining after expenses. TOTAL MONTHLY INCOME $6,250 Combined across all monthly income sources. TOTAL MONTHLY EXPENSES $4,259 Fixed and variable expense categories combined. SAVINGS RATE 31.9% Calculated as surplus divided by total income."
+          }
+        },
+        {
+          "operation": "fill",
+          "selector": "[data-group=\"income\"][data-index=\"0\"] .row-amount",
+          "value": "7000",
+          "outputs": {
+            "#primarySummaryCards": "MONTHLY SURPLUS / DEFICIT $3,591 Income remaining after expenses. TOTAL MONTHLY INCOME $7,850 Combined across all monthly income sources. TOTAL MONTHLY EXPENSES $4,259 Fixed and variable expense categories combined. SAVINGS RATE 45.7% Calculated as surplus divided by total income."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "[data-group=\"income\"][data-index=\"0\"] .row-name",
+          "value": "Primary Income"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"0\"] .row-amount",
+          "value": "7000"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"1\"] .row-name",
+          "value": "Secondary Income"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"1\"] .row-amount",
+          "value": "700"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"2\"] .row-name",
+          "value": "Other Income"
+        },
+        {
+          "selector": "[data-group=\"income\"][data-index=\"2\"] .row-amount",
+          "value": "150"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"0\"] .row-name",
+          "value": "Housing"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"0\"] .row-amount",
+          "value": "1850"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"1\"] .row-name",
+          "value": "Utilities"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"1\"] .row-amount",
+          "value": "240"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"2\"] .row-name",
+          "value": "Insurance"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"2\"] .row-amount",
+          "value": "180"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"3\"] .row-name",
+          "value": "Debt Payments"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"3\"] .row-amount",
+          "value": "320"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"4\"] .row-name",
+          "value": "Childcare / Family"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"4\"] .row-amount",
+          "value": "0"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"5\"] .row-name",
+          "value": "Health / Medical"
+        },
+        {
+          "selector": "[data-group=\"fixedExpenses\"][data-index=\"5\"] .row-amount",
+          "value": "90"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"0\"] .row-name",
+          "value": "Groceries"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"0\"] .row-amount",
+          "value": "650"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"1\"] .row-name",
+          "value": "Transportation"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"1\"] .row-amount",
+          "value": "280"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"2\"] .row-name",
+          "value": "Entertainment"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"2\"] .row-amount",
+          "value": "160"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"3\"] .row-name",
+          "value": "Dining Out"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"3\"] .row-amount",
+          "value": "140"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"4\"] .row-name",
+          "value": "Shopping"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"4\"] .row-amount",
+          "value": "120"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"5\"] .row-name",
+          "value": "Travel"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"5\"] .row-amount",
+          "value": "80"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"6\"] .row-name",
+          "value": "Subscriptions"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"6\"] .row-amount",
+          "value": "54"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"7\"] .row-name",
+          "value": "Miscellaneous"
+        },
+        {
+          "selector": "[data-group=\"variableExpenses\"][data-index=\"7\"] .row-amount",
+          "value": "95"
+        },
+        {
+          "selector": "#monthlySavingsGoal",
+          "value": "600"
+        },
+        {
+          "selector": "#monthlyInvestingGoal",
+          "value": "350"
+        },
+        {
+          "selector": "#monthlyDebtGoal",
+          "value": "150"
+        }
+      ],
+      "after": {
+        "#primarySummaryCards": "MONTHLY SURPLUS / DEFICIT $3,591 Income remaining after expenses. TOTAL MONTHLY INCOME $7,850 Combined across all monthly income sources. TOTAL MONTHLY EXPENSES $4,259 Fixed and variable expense categories combined. SAVINGS RATE 45.7% Calculated as surplus divided by total income."
+      }
+    },
+    {
+      "id": "take-home-pay-calculator",
+      "path": "/take-home-pay-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#taxYear",
+          "value": "2026"
+        },
+        {
+          "selector": "#province",
+          "value": "ON"
+        },
+        {
+          "selector": "#salaryMode",
+          "value": "monthly"
+        },
+        {
+          "selector": "#salaryAmount",
+          "value": "5000"
+        },
+        {
+          "selector": "#includeCpp",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#includeEi",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#comparisonProvince",
+          "value": "NL"
+        },
+        {
+          "selector": "#compareAll",
+          "value": "on",
+          "checked": false
+        }
+      ],
+      "before": {
+        "#monthlyNetValue": "$3,885",
+        "#resultCards": "ANNUAL GROSS INCOME $60,000 This is the annual salary figure used for the tax-year calculations. FEDERAL INCOME TAX $6,035 Estimated using the selected tax year's federal brackets and credits. PROVINCIAL OR TERRITORIAL TAX $3,008 Estimated using Ontario's tax rules for the selected year. CPP CONTRIBUTIONS $3,362 Includes pension contributions for Canada based on a steady salary assumption. EI PREMIUMS $978 EI is estimated with annual maximum employee premiums for the selected year. EFFECTIVE DEDUCTION RATE 22.3% A quick way to compare total deductions against gross income."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#salaryAmount",
+          "value": "6000",
+          "outputs": {
+            "#monthlyNetValue": "$4,530",
+            "#resultCards": "ANNUAL GROSS INCOME $72,000 This is the annual salary figure used for the tax-year calculations. FEDERAL INCOME TAX $8,387 Estimated using the selected tax year's federal brackets and credits. PROVINCIAL OR TERRITORIAL TAX $4,070 Estimated using Ontario's tax rules for the selected year. CPP CONTRIBUTIONS $4,076 Includes pension contributions for Canada based on a steady salary assumption. EI PREMIUMS $1,104 EI is estimated with annual maximum employee premiums for the selected year. EFFECTIVE DEDUCTION RATE 24.5% A quick way to compare total deductions against gross income."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#taxYear",
+          "value": "2026"
+        },
+        {
+          "selector": "#province",
+          "value": "ON"
+        },
+        {
+          "selector": "#salaryMode",
+          "value": "monthly"
+        },
+        {
+          "selector": "#salaryAmount",
+          "value": "6000"
+        },
+        {
+          "selector": "#includeCpp",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#includeEi",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#comparisonProvince",
+          "value": "NL"
+        },
+        {
+          "selector": "#compareAll",
+          "value": "on",
+          "checked": false
+        }
+      ],
+      "after": {
+        "#monthlyNetValue": "$4,530",
+        "#resultCards": "ANNUAL GROSS INCOME $72,000 This is the annual salary figure used for the tax-year calculations. FEDERAL INCOME TAX $8,387 Estimated using the selected tax year's federal brackets and credits. PROVINCIAL OR TERRITORIAL TAX $4,070 Estimated using Ontario's tax rules for the selected year. CPP CONTRIBUTIONS $4,076 Includes pension contributions for Canada based on a steady salary assumption. EI PREMIUMS $1,104 EI is estimated with annual maximum employee premiums for the selected year. EFFECTIVE DEDUCTION RATE 24.5% A quick way to compare total deductions against gross income."
+      }
+    },
+    {
+      "id": "debt-payoff-calculator",
+      "path": "/debt-payoff-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#extraPayment",
+          "value": "150"
+        },
+        {
+          "selector": "#strategy",
+          "value": "snowball"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-10"
+        }
+      ],
+      "before": {
+        "#resultCards": "TIME TO DEBT-FREE 3 years, 9 months Projected payoff date: Jun 2030. TOTAL INTEREST PAID $3,180 Across all debts under the Snowball method. STARTING DEBT $19,000 Current balances entered before future interest is added. BETTER FIT Both cost the same Both strategies cost the same in this scenario, so your best choice may come down to motivation and preference."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#extraPayment",
+          "value": "300",
+          "outputs": {
+            "#resultCards": "TIME TO DEBT-FREE 2 years, 9 months Projected payoff date: Jun 2029. TOTAL INTEREST PAID $2,245 Across all debts under the Snowball method. STARTING DEBT $19,000 Current balances entered before future interest is added. BETTER FIT Both cost the same Both strategies cost the same in this scenario, so your best choice may come down to motivation and preference."
+          }
+        },
+        {
+          "operation": "click",
+          "selector": "#calculateBtn",
+          "value": null,
+          "outputs": {
+            "#resultCards": "TIME TO DEBT-FREE 2 years, 9 months Projected payoff date: Jun 2029. TOTAL INTEREST PAID $2,245 Across all debts under the Snowball method. STARTING DEBT $19,000 Current balances entered before future interest is added. BETTER FIT Both cost the same Both strategies cost the same in this scenario, so your best choice may come down to motivation and preference."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#extraPayment",
+          "value": "300"
+        },
+        {
+          "selector": "#strategy",
+          "value": "snowball"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-10"
+        }
+      ],
+      "after": {
+        "#resultCards": "TIME TO DEBT-FREE 2 years, 9 months Projected payoff date: Jun 2029. TOTAL INTEREST PAID $2,245 Across all debts under the Snowball method. STARTING DEBT $19,000 Current balances entered before future interest is added. BETTER FIT Both cost the same Both strategies cost the same in this scenario, so your best choice may come down to motivation and preference."
+      }
+    },
+    {
+      "id": "credit-card-interest-calculator",
+      "path": "/credit-card-interest-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#currentBalance",
+          "value": "6500"
+        },
+        {
+          "selector": "#annualInterestRate",
+          "value": "19.99"
+        },
+        {
+          "selector": "#monthlyPayment",
+          "value": "200"
+        },
+        {
+          "selector": "#extraMonthlyPayment",
+          "value": "50"
+        }
+      ],
+      "before": {
+        "#resultCards": "PAYOFF TIME 2 years 11 months Estimated time until the balance reaches zero at your full monthly payment. TOTAL INTEREST PAID $2,090 The estimated interest cost over the full payoff period. TOTAL AMOUNT PAID $8,590 Your estimated balance plus interest over time. MONTHLY PAYMENT EFFECT Extra payment added Adding $50.00 per month saves about 1 year 1 month and $848 in interest. PAYOFF STATUS Moderate Your plan is workable, but interest still adds a noticeable cost over time. MONTHLY INTEREST NOW $108 A rough first-month estimate of the interest charge at this balance and APR."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#monthlyPayment",
+          "value": "300",
+          "outputs": {
+            "#resultCards": "PAYOFF TIME 1 year 11 months Estimated time until the balance reaches zero at your full monthly payment. TOTAL INTEREST PAID $1,342 The estimated interest cost over the full payoff period. TOTAL AMOUNT PAID $7,842 Your estimated balance plus interest over time. MONTHLY PAYMENT EFFECT Extra payment added Adding $50.00 per month saves about 5 months and $288 in interest. PAYOFF STATUS Aggressive You are paying this down quickly based on the current monthly amount. MONTHLY INTEREST NOW $108 A rough first-month estimate of the interest charge at this balance and APR."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#currentBalance",
+          "value": "6500"
+        },
+        {
+          "selector": "#annualInterestRate",
+          "value": "19.99"
+        },
+        {
+          "selector": "#monthlyPayment",
+          "value": "300"
+        },
+        {
+          "selector": "#extraMonthlyPayment",
+          "value": "50"
+        }
+      ],
+      "after": {
+        "#resultCards": "PAYOFF TIME 1 year 11 months Estimated time until the balance reaches zero at your full monthly payment. TOTAL INTEREST PAID $1,342 The estimated interest cost over the full payoff period. TOTAL AMOUNT PAID $7,842 Your estimated balance plus interest over time. MONTHLY PAYMENT EFFECT Extra payment added Adding $50.00 per month saves about 5 months and $288 in interest. PAYOFF STATUS Aggressive You are paying this down quickly based on the current monthly amount. MONTHLY INTEREST NOW $108 A rough first-month estimate of the interest charge at this balance and APR."
+      }
+    },
+    {
+      "id": "loan-calculator",
+      "path": "/loan-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#currencySelect",
+          "value": "CAD"
+        },
+        {
+          "selector": "#scenarioName",
+          "value": "Family Car Loan"
+        },
+        {
+          "selector": "#loanAmount",
+          "value": "25000"
+        },
+        {
+          "selector": "#annualRate",
+          "value": "6.49"
+        },
+        {
+          "selector": "#termYears",
+          "value": "5"
+        },
+        {
+          "selector": "#termMonths",
+          "value": "0"
+        },
+        {
+          "selector": "#paymentFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#compounding",
+          "value": "monthly"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-10-09"
+        },
+        {
+          "selector": "#fees",
+          "value": "0"
+        },
+        {
+          "selector": "#notes",
+          "value": ""
+        },
+        {
+          "selector": "#recurringEnabled",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#recurringAmount",
+          "value": "100"
+        },
+        {
+          "selector": "#recurringFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#comparisonIncludeExtras",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#lumpDate",
+          "value": ""
+        },
+        {
+          "selector": "#lumpAmount",
+          "value": ""
+        },
+        {
+          "selector": "#lumpNote",
+          "value": ""
+        }
+      ],
+      "before": {
+        "#summaryCards": "REGULAR PAYMENT $489.04 Monthly payment amount. TOTAL INTEREST $3,265.08 Interest paid over the full payoff timeline. TOTAL PAID $28,265.08 Scheduled payments, extra payments, and upfront fees. PAYOFF DATE Sep 9, 2030 47 payments in total. INTEREST SAVED $1,077.10 Compared with the same loan and no extra payments. TIME SAVED 1y 1m Estimated payoff acceleration from prepayments."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#loanAmount",
+          "value": "30000",
+          "outputs": {
+            "#summaryCards": "REGULAR PAYMENT $586.84 Monthly payment amount. TOTAL INTEREST $4,091.69 Interest paid over the full payoff timeline. TOTAL PAID $34,091.69 Scheduled payments, extra payments, and upfront fees. PAYOFF DATE Nov 9, 2030 49 payments in total. INTEREST SAVED $1,119.02 Compared with the same loan and no extra payments. TIME SAVED 1 year Estimated payoff acceleration from prepayments."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#currencySelect",
+          "value": "CAD"
+        },
+        {
+          "selector": "#scenarioName",
+          "value": "Family Car Loan"
+        },
+        {
+          "selector": "#loanAmount",
+          "value": "30000"
+        },
+        {
+          "selector": "#annualRate",
+          "value": "6.49"
+        },
+        {
+          "selector": "#termYears",
+          "value": "5"
+        },
+        {
+          "selector": "#termMonths",
+          "value": "0"
+        },
+        {
+          "selector": "#paymentFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#compounding",
+          "value": "monthly"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-10-09"
+        },
+        {
+          "selector": "#fees",
+          "value": "0"
+        },
+        {
+          "selector": "#notes",
+          "value": ""
+        },
+        {
+          "selector": "#recurringEnabled",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#recurringAmount",
+          "value": "100"
+        },
+        {
+          "selector": "#recurringFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#comparisonIncludeExtras",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#lumpDate",
+          "value": ""
+        },
+        {
+          "selector": "#lumpAmount",
+          "value": ""
+        },
+        {
+          "selector": "#lumpNote",
+          "value": ""
+        }
+      ],
+      "after": {
+        "#summaryCards": "REGULAR PAYMENT $586.84 Monthly payment amount. TOTAL INTEREST $4,091.69 Interest paid over the full payoff timeline. TOTAL PAID $34,091.69 Scheduled payments, extra payments, and upfront fees. PAYOFF DATE Nov 9, 2030 49 payments in total. INTEREST SAVED $1,119.02 Compared with the same loan and no extra payments. TIME SAVED 1 year Estimated payoff acceleration from prepayments."
+      }
+    },
+    {
+      "id": "house-affordability-calculator",
+      "path": "/house-affordability-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#modeSimple",
+          "value": "simple",
+          "checked": true
+        },
+        {
+          "selector": "#modeAdvanced",
+          "value": "advanced",
+          "checked": false
+        },
+        {
+          "selector": "#annualIncome",
+          "value": "120000"
+        },
+        {
+          "selector": "#monthlyDebtPayments",
+          "value": "850"
+        },
+        {
+          "selector": "#downPayment",
+          "value": "60000"
+        },
+        {
+          "selector": "#mortgageRate",
+          "value": "5.25"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "25"
+        },
+        {
+          "selector": "#propertyTaxesAnnual",
+          "value": "4200"
+        },
+        {
+          "selector": "#homeInsuranceAnnual",
+          "value": "1400"
+        },
+        {
+          "selector": "#condoFeesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#utilitiesMonthly",
+          "value": "350"
+        },
+        {
+          "selector": "#maintenanceReserveMonthly",
+          "value": "250"
+        }
+      ],
+      "before": {
+        "#resultsRange": "PLANNING TARGET $560,628 A fast first-pass number before fuller ownership costs. UPPER SCREENING LIMIT $652,409 What looser lender-style screening caps might allow, even if it feels tighter in real life."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#annualIncome",
+          "value": "150000",
+          "outputs": {
+            "#resultsRange": "PLANNING TARGET $685,785 A fast first-pass number before fuller ownership costs. UPPER SCREENING LIMIT $835,973 What looser lender-style screening caps might allow, even if it feels tighter in real life."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#modeSimple",
+          "value": "simple",
+          "checked": true
+        },
+        {
+          "selector": "#modeAdvanced",
+          "value": "advanced",
+          "checked": false
+        },
+        {
+          "selector": "#annualIncome",
+          "value": "150000"
+        },
+        {
+          "selector": "#monthlyDebtPayments",
+          "value": "850"
+        },
+        {
+          "selector": "#downPayment",
+          "value": "60000"
+        },
+        {
+          "selector": "#mortgageRate",
+          "value": "5.25"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "25"
+        },
+        {
+          "selector": "#propertyTaxesAnnual",
+          "value": "4200"
+        },
+        {
+          "selector": "#homeInsuranceAnnual",
+          "value": "1400"
+        },
+        {
+          "selector": "#condoFeesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#utilitiesMonthly",
+          "value": "350"
+        },
+        {
+          "selector": "#maintenanceReserveMonthly",
+          "value": "250"
+        }
+      ],
+      "after": {
+        "#resultsRange": "PLANNING TARGET $685,785 A fast first-pass number before fuller ownership costs. UPPER SCREENING LIMIT $835,973 What looser lender-style screening caps might allow, even if it feels tighter in real life."
+      }
+    },
+    {
+      "id": "rent-vs-buy-calculator",
+      "path": "/rent-vs-buy-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#homePrice",
+          "value": "550000"
+        },
+        {
+          "selector": "#downPayment",
+          "value": "110000"
+        },
+        {
+          "selector": "#mortgageRate",
+          "value": "5.25"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "25"
+        },
+        {
+          "selector": "#mortgageTermYears",
+          "value": "5"
+        },
+        {
+          "selector": "#closingCosts",
+          "value": "11000"
+        },
+        {
+          "selector": "#sellingCostsPct",
+          "value": "5"
+        },
+        {
+          "selector": "#propertyTaxesAnnual",
+          "value": "4800"
+        },
+        {
+          "selector": "#homeInsuranceAnnual",
+          "value": "1400"
+        },
+        {
+          "selector": "#maintenanceMode",
+          "value": "annual"
+        },
+        {
+          "selector": "#maintenanceAnnual",
+          "value": "5500"
+        },
+        {
+          "selector": "#maintenanceRatePct",
+          "value": "1"
+        },
+        {
+          "selector": "#condoFeesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#monthlyRent",
+          "value": "2400"
+        },
+        {
+          "selector": "#rentIncreaseRate",
+          "value": "3"
+        },
+        {
+          "selector": "#rentersInsuranceMonthly",
+          "value": "25"
+        },
+        {
+          "selector": "#movingCosts",
+          "value": "1500"
+        },
+        {
+          "selector": "#comparisonYears",
+          "value": "10"
+        },
+        {
+          "selector": "#appreciationRate",
+          "value": "3"
+        },
+        {
+          "selector": "#investmentReturnRate",
+          "value": "6"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#investUpfrontCapital",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#investMonthlySavings",
+          "value": "on",
+          "checked": true
+        }
+      ],
+      "before": {
+        "#resultHeadline": "Buying may leave you ahead by $3,078",
+        "#heroMonthly": "Rent $2,425 vs Buy $3,612"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#homePrice",
+          "value": "650000",
+          "outputs": {
+            "#resultHeadline": "Renting may leave you ahead by $41,482",
+            "#heroMonthly": "Rent $2,425 vs Buy $4,211"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#homePrice",
+          "value": "650000"
+        },
+        {
+          "selector": "#downPayment",
+          "value": "110000"
+        },
+        {
+          "selector": "#mortgageRate",
+          "value": "5.25"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "25"
+        },
+        {
+          "selector": "#mortgageTermYears",
+          "value": "5"
+        },
+        {
+          "selector": "#closingCosts",
+          "value": "11000"
+        },
+        {
+          "selector": "#sellingCostsPct",
+          "value": "5"
+        },
+        {
+          "selector": "#propertyTaxesAnnual",
+          "value": "4800"
+        },
+        {
+          "selector": "#homeInsuranceAnnual",
+          "value": "1400"
+        },
+        {
+          "selector": "#maintenanceMode",
+          "value": "annual"
+        },
+        {
+          "selector": "#maintenanceAnnual",
+          "value": "5500"
+        },
+        {
+          "selector": "#maintenanceRatePct",
+          "value": "1"
+        },
+        {
+          "selector": "#condoFeesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#monthlyRent",
+          "value": "2400"
+        },
+        {
+          "selector": "#rentIncreaseRate",
+          "value": "3"
+        },
+        {
+          "selector": "#rentersInsuranceMonthly",
+          "value": "25"
+        },
+        {
+          "selector": "#movingCosts",
+          "value": "1500"
+        },
+        {
+          "selector": "#comparisonYears",
+          "value": "10"
+        },
+        {
+          "selector": "#appreciationRate",
+          "value": "3"
+        },
+        {
+          "selector": "#investmentReturnRate",
+          "value": "6"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#investUpfrontCapital",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#investMonthlySavings",
+          "value": "on",
+          "checked": true
+        }
+      ],
+      "after": {
+        "#resultHeadline": "Renting may leave you ahead by $41,482",
+        "#heroMonthly": "Rent $2,425 vs Buy $4,211"
+      }
+    },
+    {
+      "id": "mortgage-paydown-vs-invest-calculator",
+      "path": "/mortgage-paydown-vs-invest-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#mortgageBalance",
+          "value": "425000"
+        },
+        {
+          "selector": "#mortgageRate",
+          "value": "4.75"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "22"
+        },
+        {
+          "selector": "#monthlyPayment",
+          "value": "2700"
+        },
+        {
+          "selector": "#extraMonthly",
+          "value": "500"
+        },
+        {
+          "selector": "#homeValue",
+          "value": "640000"
+        },
+        {
+          "selector": "#investmentReturn",
+          "value": "5.5"
+        },
+        {
+          "selector": "#accountType",
+          "value": "tfsa"
+        },
+        {
+          "selector": "#timeHorizonYears",
+          "value": "10"
+        },
+        {
+          "selector": "#taxDrag",
+          "value": "0"
+        },
+        {
+          "selector": "#mer",
+          "value": "0.25"
+        },
+        {
+          "selector": "#inflation",
+          "value": "2"
+        },
+        {
+          "selector": "#homeGrowth",
+          "value": "2"
+        },
+        {
+          "selector": "#lumpSum",
+          "value": "0"
+        },
+        {
+          "selector": "#contributionTiming",
+          "value": "end"
+        },
+        {
+          "selector": "#compoundMode",
+          "value": "monthly"
+        }
+      ],
+      "before": {
+        "#results": "Live results summary Estimates update as you type. Expected growth wins Investing comes out ahead by an estimated $1,563. At the 10-year horizon, strategy A reaches $587,704 and strategy B reaches $589,267. In today's dollars, the gap is $1,282. Net worth difference $1,563 Invest strategy ahead Mortgage payoff 15y 9m Prepay strategy vs 20y 7m when investing Interest paid $151,452 $16,611 less with prepayments Investment value $78,174 Projected under invest strategy Home equity $587,704 At horizon under mortgage strategy Real net worth difference $1,282 Inflation-adjusted to today's dollars Break-even return 5.10% Estimated annual return needed Interpretation The projected outcome is fairly close, so certainty, liquidity, and comfort may matter more than the headline difference. Prepaying shortens payoff by 4y 10m."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#extraMonthly",
+          "value": "1000",
+          "outputs": {
+            "#results": "Live results summary Estimates update as you type. Expected growth wins Investing comes out ahead by an estimated $3,125. At the 10-year horizon, strategy A reaches $664,315 and strategy B reaches $667,441. In today's dollars, the gap is $2,564. Net worth difference $3,125 Invest strategy ahead Mortgage payoff 12y 10m Prepay strategy vs 20y 7m when investing Interest paid $134,841 $33,223 less with prepayments Investment value $156,348 Projected under invest strategy Home equity $664,315 At horizon under mortgage strategy Real net worth difference $2,564 Inflation-adjusted to today's dollars Break-even return 5.10% Estimated annual return needed Interpretation The projected outcome is fairly close, so certainty, liquidity, and comfort may matter more than the headline difference. Prepaying shortens payoff by 7y 9m."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#mortgageBalance",
+          "value": "425000"
+        },
+        {
+          "selector": "#mortgageRate",
+          "value": "4.75"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "22"
+        },
+        {
+          "selector": "#monthlyPayment",
+          "value": "2700"
+        },
+        {
+          "selector": "#extraMonthly",
+          "value": "1000"
+        },
+        {
+          "selector": "#homeValue",
+          "value": "640000"
+        },
+        {
+          "selector": "#investmentReturn",
+          "value": "5.5"
+        },
+        {
+          "selector": "#accountType",
+          "value": "tfsa"
+        },
+        {
+          "selector": "#timeHorizonYears",
+          "value": "10"
+        },
+        {
+          "selector": "#taxDrag",
+          "value": "0"
+        },
+        {
+          "selector": "#mer",
+          "value": "0.25"
+        },
+        {
+          "selector": "#inflation",
+          "value": "2"
+        },
+        {
+          "selector": "#homeGrowth",
+          "value": "2"
+        },
+        {
+          "selector": "#lumpSum",
+          "value": "0"
+        },
+        {
+          "selector": "#contributionTiming",
+          "value": "end"
+        },
+        {
+          "selector": "#compoundMode",
+          "value": "monthly"
+        }
+      ],
+      "after": {
+        "#results": "Live results summary Estimates update as you type. Expected growth wins Investing comes out ahead by an estimated $3,125. At the 10-year horizon, strategy A reaches $664,315 and strategy B reaches $667,441. In today's dollars, the gap is $2,564. Net worth difference $3,125 Invest strategy ahead Mortgage payoff 12y 10m Prepay strategy vs 20y 7m when investing Interest paid $134,841 $33,223 less with prepayments Investment value $156,348 Projected under invest strategy Home equity $664,315 At horizon under mortgage strategy Real net worth difference $2,564 Inflation-adjusted to today's dollars Break-even return 5.10% Estimated annual return needed Interpretation The projected outcome is fairly close, so certainty, liquidity, and comfort may matter more than the headline difference. Prepaying shortens payoff by 7y 9m."
+      }
+    },
+    {
+      "id": "investment-fee-calculator",
+      "path": "/investment-fee-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#initialInvestment",
+          "value": "25000"
+        },
+        {
+          "selector": "#monthlyContribution",
+          "value": "500"
+        },
+        {
+          "selector": "#years",
+          "value": "30"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "6.5"
+        },
+        {
+          "selector": "#feeA",
+          "value": "0.25"
+        },
+        {
+          "selector": "#feeB",
+          "value": "2"
+        },
+        {
+          "selector": "#contributionGrowth",
+          "value": "0"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#taxDrag",
+          "value": "0"
+        },
+        {
+          "selector": "#futureLumpSum",
+          "value": "0"
+        },
+        {
+          "selector": "#futureLumpSumYear",
+          "value": "10"
+        },
+        {
+          "selector": "#accountType",
+          "value": "TFSA"
+        },
+        {
+          "selector": "#compoundingFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#valueMode",
+          "value": "nominal"
+        }
+      ],
+      "before": {
+        "#summaryGrid": "Portfolio A ending value $694,077 Lower-fee option at 0.25% Portfolio B ending value $487,156 Higher-fee option at 2.00% Difference in ending wealth $206,921 +42.5% relative gap Total contributions $205,000 Initial, monthly, and future lump sum contributions Growth retained by Portfolio A $489,077 Ending value minus contributions Growth retained by Portfolio B $282,156 Ending value minus contributions Fee drag vs no-fee case for A $36,803 Simplified comparison against the same gross-return path Estimated gap caused by the higher-fee option $206,921 Shown as the ending-wealth gap, not a simple fee sum"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#feeB",
+          "value": "1",
+          "outputs": {
+            "#summaryGrid": "Portfolio A ending value $694,077 Lower-fee option at 0.25% Portfolio B ending value $595,355 Higher-fee option at 1.00% Difference in ending wealth $98,722 +16.6% relative gap Total contributions $205,000 Initial, monthly, and future lump sum contributions Growth retained by Portfolio A $489,077 Ending value minus contributions Growth retained by Portfolio B $390,355 Ending value minus contributions Fee drag vs no-fee case for A $36,803 Simplified comparison against the same gross-return path Estimated gap caused by the higher-fee option $98,722 Shown as the ending-wealth gap, not a simple fee sum"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#initialInvestment",
+          "value": "25000"
+        },
+        {
+          "selector": "#monthlyContribution",
+          "value": "500"
+        },
+        {
+          "selector": "#years",
+          "value": "30"
+        },
+        {
+          "selector": "#annualReturn",
+          "value": "6.5"
+        },
+        {
+          "selector": "#feeA",
+          "value": "0.25"
+        },
+        {
+          "selector": "#feeB",
+          "value": "1"
+        },
+        {
+          "selector": "#contributionGrowth",
+          "value": "0"
+        },
+        {
+          "selector": "#inflationRate",
+          "value": "2"
+        },
+        {
+          "selector": "#taxDrag",
+          "value": "0"
+        },
+        {
+          "selector": "#futureLumpSum",
+          "value": "0"
+        },
+        {
+          "selector": "#futureLumpSumYear",
+          "value": "10"
+        },
+        {
+          "selector": "#accountType",
+          "value": "TFSA"
+        },
+        {
+          "selector": "#compoundingFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#valueMode",
+          "value": "nominal"
+        }
+      ],
+      "after": {
+        "#summaryGrid": "Portfolio A ending value $694,077 Lower-fee option at 0.25% Portfolio B ending value $595,355 Higher-fee option at 1.00% Difference in ending wealth $98,722 +16.6% relative gap Total contributions $205,000 Initial, monthly, and future lump sum contributions Growth retained by Portfolio A $489,077 Ending value minus contributions Growth retained by Portfolio B $390,355 Ending value minus contributions Fee drag vs no-fee case for A $36,803 Simplified comparison against the same gross-return path Estimated gap caused by the higher-fee option $98,722 Shown as the ending-wealth gap, not a simple fee sum"
+      }
+    },
+    {
+      "id": "mortgage-calculator",
+      "path": "/mortgage-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#loanAmount",
+          "value": "480000"
+        },
+        {
+          "selector": "#homePrice",
+          "value": "620000"
+        },
+        {
+          "selector": "#downPayment",
+          "value": "140000"
+        },
+        {
+          "selector": "#annualRate",
+          "value": "5.25"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "25"
+        },
+        {
+          "selector": "#termYears",
+          "value": "5"
+        },
+        {
+          "selector": "#paymentFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#extraPerPayment",
+          "value": "0"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-04-01"
+        },
+        {
+          "selector": "#compounding",
+          "value": "semi-annual"
+        },
+        {
+          "selector": "#prepaymentCapPercent",
+          "value": "0"
+        },
+        {
+          "selector": "#investingReturn",
+          "value": "6"
+        }
+      ],
+      "before": {
+        "#headlineSummary": "QUICK ANSWER Your mortgage at a glance At 5.25% over 25 years, your monthly payment is $2,860, and the mortgage is projected to be paid off in 25 years. YOUR PAYMENT $2,860 Monthly schedule. MORTGAGE-FREE BY Mar 2, 2051 25 years from the start date. TOTAL INTEREST $378,122 With the current baseline scenario. EXTRA PAYMENTS SAVE $0 Add extra payments to compare savings."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#loanAmount",
+          "value": "960000",
+          "outputs": {
+            "#headlineSummary": "QUICK ANSWER Your mortgage at a glance At 5.25% over 25 years, your monthly payment is $5,721, and the mortgage is projected to be paid off in 25 years. YOUR PAYMENT $5,721 Monthly schedule. MORTGAGE-FREE BY Mar 2, 2051 25 years from the start date. TOTAL INTEREST $756,244 With the current baseline scenario. EXTRA PAYMENTS SAVE $0 Add extra payments to compare savings."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#loanAmount",
+          "value": "960000"
+        },
+        {
+          "selector": "#homePrice",
+          "value": "620000"
+        },
+        {
+          "selector": "#downPayment",
+          "value": "140000"
+        },
+        {
+          "selector": "#annualRate",
+          "value": "5.25"
+        },
+        {
+          "selector": "#amortizationYears",
+          "value": "25"
+        },
+        {
+          "selector": "#termYears",
+          "value": "5"
+        },
+        {
+          "selector": "#paymentFrequency",
+          "value": "monthly"
+        },
+        {
+          "selector": "#extraPerPayment",
+          "value": "0"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-04-01"
+        },
+        {
+          "selector": "#compounding",
+          "value": "semi-annual"
+        },
+        {
+          "selector": "#prepaymentCapPercent",
+          "value": "0"
+        },
+        {
+          "selector": "#investingReturn",
+          "value": "6"
+        }
+      ],
+      "after": {
+        "#headlineSummary": "QUICK ANSWER Your mortgage at a glance At 5.25% over 25 years, your monthly payment is $5,721, and the mortgage is projected to be paid off in 25 years. YOUR PAYMENT $5,721 Monthly schedule. MORTGAGE-FREE BY Mar 2, 2051 25 years from the start date. TOTAL INTEREST $756,244 With the current baseline scenario. EXTRA PAYMENTS SAVE $0 Add extra payments to compare savings."
+      }
+    },
+    {
+      "id": "canadian-tax-checklist",
+      "path": "/canadian-tax-checklist/",
+      "initialInputs": [
+        {
+          "selector": "#searchInput",
+          "value": ""
+        },
+        {
+          "selector": "#filterSelect",
+          "value": "all"
+        },
+        {
+          "selector": "#familyNameInput",
+          "value": ""
+        },
+        {
+          "selector": "#taxYearLabelInput",
+          "value": "2025 Tax Season"
+        },
+        {
+          "selector": "#plannerNotesInput",
+          "value": ""
+        }
+      ],
+      "before": {
+        "#summaryTasks": "43",
+        "#summaryCompleted": "0",
+        "#summaryProgress": "43"
+      },
+      "steps": [
+        {
+          "operation": "click",
+          "selector": "[data-action=\"toggle-category\"]",
+          "value": 0,
+          "outputs": {
+            "#summaryTasks": "43",
+            "#summaryCompleted": "0",
+            "#summaryProgress": "43"
+          }
+        },
+        {
+          "operation": "check",
+          "selector": ".item-checkbox:visible",
+          "value": 0,
+          "outputs": {
+            "#summaryTasks": "43",
+            "#summaryCompleted": "1",
+            "#summaryProgress": "42"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#searchInput",
+          "value": ""
+        },
+        {
+          "selector": "#filterSelect",
+          "value": "all"
+        },
+        {
+          "selector": "#familyNameInput",
+          "value": ""
+        },
+        {
+          "selector": "#taxYearLabelInput",
+          "value": "2025 Tax Season"
+        },
+        {
+          "selector": "#plannerNotesInput",
+          "value": ""
+        }
+      ],
+      "after": {
+        "#summaryTasks": "43",
+        "#summaryCompleted": "1",
+        "#summaryProgress": "42"
+      }
+    },
+    {
+      "id": "travel-planner",
+      "path": "/travel-planner/",
+      "initialInputs": [
+        {
+          "selector": "#activityDate",
+          "value": ""
+        },
+        {
+          "selector": "#activityTime",
+          "value": ""
+        },
+        {
+          "selector": "#activityTitle",
+          "value": ""
+        },
+        {
+          "selector": "#activityLocation",
+          "value": ""
+        },
+        {
+          "selector": "#activityNotes",
+          "value": ""
+        },
+        {
+          "selector": "#activityCategory",
+          "value": "Lodging"
+        },
+        {
+          "selector": "#activityCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#activityPlannedUsd",
+          "value": ""
+        },
+        {
+          "selector": "#activityPaidUsd",
+          "value": "0"
+        },
+        {
+          "selector": "#activityStatus",
+          "value": "Planned"
+        },
+        {
+          "selector": "#costItemTitle",
+          "value": ""
+        },
+        {
+          "selector": "#costItemCategory",
+          "value": "Transportation"
+        },
+        {
+          "selector": "#costItemCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#costItemPlannedUsd",
+          "value": ""
+        },
+        {
+          "selector": "#costItemPaidUsd",
+          "value": "0"
+        },
+        {
+          "selector": "#costItemIncludeInItinerary",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#costItemItineraryDate",
+          "value": ""
+        },
+        {
+          "selector": "#costItemItineraryTime",
+          "value": ""
+        },
+        {
+          "selector": "#costItemItineraryLocation",
+          "value": ""
+        },
+        {
+          "selector": "#costItemNotes",
+          "value": ""
+        },
+        {
+          "selector": "#costItemItineraryStatus",
+          "value": "Planned"
+        },
+        {
+          "selector": "#tripName",
+          "value": ""
+        },
+        {
+          "selector": "#startDate",
+          "value": ""
+        },
+        {
+          "selector": "#endDate",
+          "value": ""
+        },
+        {
+          "selector": "#settingsAdults",
+          "value": "2"
+        },
+        {
+          "selector": "#settingsChildren",
+          "value": "0"
+        },
+        {
+          "selector": "#totalBudgetCad",
+          "value": "0"
+        },
+        {
+          "selector": "#displayCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#usdToCadRate",
+          "value": "1.36"
+        },
+        {
+          "selector": "#eurToCadRate",
+          "value": "1.47"
+        },
+        {
+          "selector": "#dashboardQuickActivityDate",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityTitle",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityTime",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityLocation",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityNotes",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityCategory",
+          "value": "Activities"
+        },
+        {
+          "selector": "#dashboardQuickActivityCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#dashboardQuickActivityPlannedUsd",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityPaidUsd",
+          "value": "0"
+        },
+        {
+          "selector": "#dashboardQuickActivityStatus",
+          "value": "Planned"
+        }
+      ],
+      "before": {
+        "#dashboardTripTitle": "Trip",
+        "#dashboardTripMeta": "TBD to TBD • 2 traveler(s) • Dates TBD",
+        "#dashboardItinerary": "No itinerary items yet."
+      },
+      "steps": [
+        {
+          "operation": "click",
+          "selector": "#heroLoadDemoBtn",
+          "value": null,
+          "outputs": {
+            "#dashboardTripTitle": "Sample Family Theme Park Trip (Demo)",
+            "#dashboardTripMeta": "Apr 27, 2026 to May 7, 2026 • 4 traveler(s) • 11 days",
+            "#dashboardItinerary": "Mon • Apr 27 Airport Parking Flight to Orlando +3 more Tue • Apr 28 Epic Universe Wed • Apr 29 Dinner Reservation Thu • Apr 30 - Fri • May 1 Magic Kingdom Sat • May 2 Pool + Rest Day Sun • May 3 Kennedy Space Center Mon • May 4 LEGOLAND Day Trip Tue • May 5 - Wed • May 6 Souvenir Shopping Thu • May 7 Return Flight Home"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#activityDate",
+          "value": ""
+        },
+        {
+          "selector": "#activityTime",
+          "value": ""
+        },
+        {
+          "selector": "#activityTitle",
+          "value": ""
+        },
+        {
+          "selector": "#activityLocation",
+          "value": ""
+        },
+        {
+          "selector": "#activityNotes",
+          "value": ""
+        },
+        {
+          "selector": "#activityCategory",
+          "value": "Lodging"
+        },
+        {
+          "selector": "#activityCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#activityPlannedUsd",
+          "value": ""
+        },
+        {
+          "selector": "#activityPaidUsd",
+          "value": "0"
+        },
+        {
+          "selector": "#activityStatus",
+          "value": "Planned"
+        },
+        {
+          "selector": "#costItemTitle",
+          "value": ""
+        },
+        {
+          "selector": "#costItemCategory",
+          "value": "Transportation"
+        },
+        {
+          "selector": "#costItemCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#costItemPlannedUsd",
+          "value": ""
+        },
+        {
+          "selector": "#costItemPaidUsd",
+          "value": "0"
+        },
+        {
+          "selector": "#costItemIncludeInItinerary",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#costItemItineraryDate",
+          "value": ""
+        },
+        {
+          "selector": "#costItemItineraryTime",
+          "value": ""
+        },
+        {
+          "selector": "#costItemItineraryLocation",
+          "value": ""
+        },
+        {
+          "selector": "#costItemNotes",
+          "value": ""
+        },
+        {
+          "selector": "#costItemItineraryStatus",
+          "value": "Planned"
+        },
+        {
+          "selector": "#tripName",
+          "value": "Sample Family Theme Park Trip (Demo)"
+        },
+        {
+          "selector": "#startDate",
+          "value": "2026-04-27"
+        },
+        {
+          "selector": "#endDate",
+          "value": "2026-05-07"
+        },
+        {
+          "selector": "#settingsAdults",
+          "value": "2"
+        },
+        {
+          "selector": "#settingsChildren",
+          "value": "2"
+        },
+        {
+          "selector": "#totalBudgetCad",
+          "value": "8088.24"
+        },
+        {
+          "selector": "#displayCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#usdToCadRate",
+          "value": "1.36"
+        },
+        {
+          "selector": "#eurToCadRate",
+          "value": "1.47"
+        },
+        {
+          "selector": "#dashboardQuickActivityDate",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityTitle",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityTime",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityLocation",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityNotes",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityCategory",
+          "value": "Activities"
+        },
+        {
+          "selector": "#dashboardQuickActivityCurrency",
+          "value": "USD"
+        },
+        {
+          "selector": "#dashboardQuickActivityPlannedUsd",
+          "value": ""
+        },
+        {
+          "selector": "#dashboardQuickActivityPaidUsd",
+          "value": "0"
+        },
+        {
+          "selector": "#dashboardQuickActivityStatus",
+          "value": "Planned"
+        }
+      ],
+      "after": {
+        "#dashboardTripTitle": "Sample Family Theme Park Trip (Demo)",
+        "#dashboardTripMeta": "Apr 27, 2026 to May 7, 2026 • 4 traveler(s) • 11 days",
+        "#dashboardItinerary": "Mon • Apr 27 Airport Parking Flight to Orlando +3 more Tue • Apr 28 Epic Universe Wed • Apr 29 Dinner Reservation Thu • Apr 30 - Fri • May 1 Magic Kingdom Sat • May 2 Pool + Rest Day Sun • May 3 Kennedy Space Center Mon • May 4 LEGOLAND Day Trip Tue • May 5 - Wed • May 6 Souvenir Shopping Thu • May 7 Return Flight Home"
+      }
+    },
+    {
+      "id": "debt-to-income-ratio-calculator",
+      "path": "/debt-to-income-ratio-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#grossMonthlyIncome",
+          "value": "6000"
+        },
+        {
+          "selector": "#dtiMode",
+          "value": "current-plus-proposed"
+        },
+        {
+          "selector": "#provinceOrRegion",
+          "value": "canada-general"
+        },
+        {
+          "selector": "#includeCurrentHousing",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#includeProposedHousing",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#currentHousingPayment",
+          "value": "0"
+        },
+        {
+          "selector": "#proposedHousingPayment",
+          "value": "2200"
+        },
+        {
+          "selector": "#carLoansMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#studentLoansMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#creditCardMinimumsMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#personalLoansMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#propertyTaxesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#heatingMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#condoFeesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#linesOfCreditMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#childSupportAlimonyMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#otherMonthlyDebt",
+          "value": "0"
+        },
+        {
+          "selector": "#scenarioName",
+          "value": "Base scenario"
+        },
+        {
+          "selector": "#useFrontEndRatio",
+          "value": "on",
+          "checked": true
+        }
+      ],
+      "before": {
+        "#resultCards": "BACK-END DTI 36.7% The share of income already spoken for in the proposed housing plan. FRONT-END DTI 36.7% The housing-only version of the ratio. MONTHLY DEBT USED $2,200 The monthly total behind the main answer. HOUSING IN THE RESULT $2,200 Includes the proposed payment and any extras you added. ROOM BEFORE 36% $0 Rough monthly room left before a lower planning threshold. INCOME NEEDED FOR 36% $6,111 A rough monthly income target for a lower range."
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#grossMonthlyIncome",
+          "value": "8000",
+          "outputs": {
+            "#resultCards": "BACK-END DTI 27.5% The share of income already spoken for in the proposed housing plan. FRONT-END DTI 27.5% The housing-only version of the ratio. MONTHLY DEBT USED $2,200 The monthly total behind the main answer. HOUSING IN THE RESULT $2,200 Includes the proposed payment and any extras you added. ROOM BEFORE 36% $680 Rough monthly room left before a lower planning threshold. INCOME NEEDED FOR 36% $6,111 A rough monthly income target for a lower range."
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#grossMonthlyIncome",
+          "value": "8000"
+        },
+        {
+          "selector": "#dtiMode",
+          "value": "current-plus-proposed"
+        },
+        {
+          "selector": "#provinceOrRegion",
+          "value": "canada-general"
+        },
+        {
+          "selector": "#includeCurrentHousing",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#includeProposedHousing",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "selector": "#currentHousingPayment",
+          "value": "0"
+        },
+        {
+          "selector": "#proposedHousingPayment",
+          "value": "2200"
+        },
+        {
+          "selector": "#carLoansMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#studentLoansMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#creditCardMinimumsMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#personalLoansMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#propertyTaxesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#heatingMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#condoFeesMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#linesOfCreditMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#childSupportAlimonyMonthly",
+          "value": "0"
+        },
+        {
+          "selector": "#otherMonthlyDebt",
+          "value": "0"
+        },
+        {
+          "selector": "#scenarioName",
+          "value": "Base scenario"
+        },
+        {
+          "selector": "#useFrontEndRatio",
+          "value": "on",
+          "checked": true
+        }
+      ],
+      "after": {
+        "#resultCards": "BACK-END DTI 27.5% The share of income already spoken for in the proposed housing plan. FRONT-END DTI 27.5% The housing-only version of the ratio. MONTHLY DEBT USED $2,200 The monthly total behind the main answer. HOUSING IN THE RESULT $2,200 Includes the proposed payment and any extras you added. ROOM BEFORE 36% $680 Rough monthly room left before a lower planning threshold. INCOME NEEDED FOR 36% $6,111 A rough monthly income target for a lower range."
+      }
+    },
+    {
+      "id": "contractor-effective-hourly-rate-calculator",
+      "path": "/contractor-effective-hourly-rate-calculator/",
+      "initialInputs": [
+        {
+          "selector": "#hourlyRate",
+          "value": "100"
+        },
+        {
+          "selector": "#hoursPerWeek",
+          "value": "40"
+        },
+        {
+          "selector": "#weeksPerYear",
+          "value": "52"
+        },
+        {
+          "selector": "#vacationIsPaid",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#unpaidVacationWeeks",
+          "value": "2"
+        },
+        {
+          "selector": "#benefitsAreEmployerPaid",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#annualBenefitsCost",
+          "value": "5000"
+        },
+        {
+          "selector": "#workDaysPerWeek",
+          "value": "5"
+        },
+        {
+          "selector": "#hoursPerDay",
+          "value": "8"
+        },
+        {
+          "selector": "#paidHolidayDays",
+          "value": "0"
+        },
+        {
+          "selector": "#unpaidSickDays",
+          "value": "0"
+        },
+        {
+          "selector": "#annualBonus",
+          "value": "0"
+        },
+        {
+          "selector": "#annualContractCosts",
+          "value": "0"
+        },
+        {
+          "selector": "#compareEnabled",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#compareHourlyRate",
+          "value": "108"
+        },
+        {
+          "selector": "#compareUnpaidVacationWeeks",
+          "value": "0"
+        },
+        {
+          "selector": "#compareAnnualBenefitsCost",
+          "value": "0"
+        }
+      ],
+      "before": {
+        "#summaryEffectiveRate": "$93.75/hr",
+        "#summaryAnnualEarnings": "$195,000"
+      },
+      "steps": [
+        {
+          "operation": "fill",
+          "selector": "#hourlyRate",
+          "value": "120",
+          "outputs": {
+            "#summaryEffectiveRate": "$112.98/hr",
+            "#summaryAnnualEarnings": "$235,000"
+          }
+        }
+      ],
+      "finalInputs": [
+        {
+          "selector": "#hourlyRate",
+          "value": "120"
+        },
+        {
+          "selector": "#hoursPerWeek",
+          "value": "40"
+        },
+        {
+          "selector": "#weeksPerYear",
+          "value": "52"
+        },
+        {
+          "selector": "#vacationIsPaid",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#unpaidVacationWeeks",
+          "value": "2"
+        },
+        {
+          "selector": "#benefitsAreEmployerPaid",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#annualBenefitsCost",
+          "value": "5000"
+        },
+        {
+          "selector": "#workDaysPerWeek",
+          "value": "5"
+        },
+        {
+          "selector": "#hoursPerDay",
+          "value": "8"
+        },
+        {
+          "selector": "#paidHolidayDays",
+          "value": "0"
+        },
+        {
+          "selector": "#unpaidSickDays",
+          "value": "0"
+        },
+        {
+          "selector": "#annualBonus",
+          "value": "0"
+        },
+        {
+          "selector": "#annualContractCosts",
+          "value": "0"
+        },
+        {
+          "selector": "#compareEnabled",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "selector": "#compareHourlyRate",
+          "value": "108"
+        },
+        {
+          "selector": "#compareUnpaidVacationWeeks",
+          "value": "0"
+        },
+        {
+          "selector": "#compareAnnualBenefitsCost",
+          "value": "0"
+        }
+      ],
+      "after": {
+        "#summaryEffectiveRate": "$112.98/hr",
+        "#summaryAnnualEarnings": "$235,000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "retirement-planner",
+    "legacy": "https://retirement.simplekit.app/",
+    "canonical": "https://simplekit.app/retirement-planner/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "fire-calculator",
+    "legacy": "https://fire.simplekit.app/",
+    "canonical": "https://simplekit.app/fire-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "cpp-calculator",
+    "legacy": "https://cpp.simplekit.app/",
+    "canonical": "https://simplekit.app/cpp-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "rrsp-vs-tfsa-calculator",
+    "legacy": "https://rrsptfsa.simplekit.app/",
+    "canonical": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "compound-interest-calculator",
+    "legacy": "https://investment.simplekit.app/",
+    "canonical": "https://simplekit.app/compound-interest-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "savings-goal-calculator",
+    "legacy": "https://savingsgoal.simplekit.app/",
+    "canonical": "https://simplekit.app/savings-goal-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "legacy": "https://emergency.simplekit.app/",
+    "canonical": "https://simplekit.app/emergency-fund-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "net-worth-calculator",
+    "legacy": "https://networth.simplekit.app/",
+    "canonical": "https://simplekit.app/net-worth-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "budget-planner",
+    "legacy": "https://monthlybudget.simplekit.app/",
+    "canonical": "https://simplekit.app/budget-planner/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "take-home-pay-calculator",
+    "legacy": "https://takehomepay.simplekit.app/",
+    "canonical": "https://simplekit.app/take-home-pay-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "legacy": "https://debt.simplekit.app/",
+    "canonical": "https://simplekit.app/debt-payoff-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "credit-card-interest-calculator",
+    "legacy": "https://creditcard.simplekit.app/",
+    "canonical": "https://simplekit.app/credit-card-interest-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "loan-calculator",
+    "legacy": "https://loan.simplekit.app/",
+    "canonical": "https://simplekit.app/loan-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "house-affordability-calculator",
+    "legacy": "https://houseaffordability.simplekit.app/",
+    "canonical": "https://simplekit.app/house-affordability-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "legacy": "https://rentvsbuy.simplekit.app/",
+    "canonical": "https://simplekit.app/rent-vs-buy-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "mortgage-paydown-vs-invest-calculator",
+    "legacy": "https://mortgage.simplekit.app/",
+    "canonical": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "investment-fee-calculator",
+    "legacy": "https://fees.simplekit.app/",
+    "canonical": "https://simplekit.app/investment-fee-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "mortgage-calculator",
+    "legacy": "https://mortgagecalculator.simplekit.app/",
+    "canonical": "https://simplekit.app/mortgage-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "canadian-tax-checklist",
+    "legacy": "https://taxchecklist.simplekit.app/",
+    "canonical": "https://simplekit.app/canadian-tax-checklist/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "travel-planner",
+    "legacy": "https://travel.simplekit.app/",
+    "canonical": "https://simplekit.app/travel-planner/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "debt-to-income-ratio-calculator",
+    "legacy": "https://dti.simplekit.app/",
+    "canonical": "https://simplekit.app/debt-to-income-ratio-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  },
+  {
+    "id": "contractor-effective-hourly-rate-calculator",
+    "legacy": "https://contractorrate.simplekit.app/",
+    "canonical": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+    "configuredEntries": 1,
+    "matches": true
+  }
+]
