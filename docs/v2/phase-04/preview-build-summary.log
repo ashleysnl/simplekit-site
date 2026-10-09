@@ -1,0 +1,19 @@
+2026-10-09T18:40:51.7998702Z   ref: 03f0b9e994d465529df89fb8fa3ede0a6d1baa1e
+2026-10-09T18:40:51.7999254Z   persist-credentials: false
+2026-10-09T18:40:54.3304660Z HEAD is now at 03f0b9e Implement Phase 4 trust indicators and audit input privacy
+2026-10-09T18:41:10.8965114Z Verified 23 pinned GitHub sources.
+2026-10-09T18:41:11.1736188Z ℹ tests 23
+2026-10-09T18:41:11.1737267Z ℹ pass 23
+2026-10-09T18:41:11.1737571Z ℹ fail 0
+2026-10-09T18:41:11.5194113Z Verified 23 pinned GitHub sources.
+2026-10-09T18:41:11.7322915Z Built 22 calculators into /home/runner/work/simplekit-site/simplekit-site/dist
+2026-10-09T18:41:11.9531598Z SEO validation passed for 22 tools.
+2026-10-09T18:41:12.1628735Z Output validation passed: 22 calculator routes, 53 sitemap URLs, 67 HTML pages, 146 local assets.
+2026-10-09T18:41:12.1734290Z ##[group]Run rm -f dist/CNAME
+2026-10-09T18:41:12.1734597Z rm -f dist/CNAME
+2026-10-09T18:41:12.1734945Z printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > dist/_headers
+2026-10-09T18:41:12.1735389Z printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+2026-10-09T18:41:12.4307556Z With the provided path, there will be 322 files uploaded
+2026-10-09T18:41:13.8784925Z SHA256 digest of uploaded artifact zip is e23ae036589dbd73ddd054e7d18d5b93cb50463ad1a8afd6d2f74d30dbd74868
+2026-10-09T18:41:14.1478949Z Artifact preview-site.zip successfully finalized. Artifact ID 11638340639
+2026-10-09T18:41:14.1480563Z Artifact preview-site has been successfully uploaded! Final size is 6107602 bytes. Artifact ID is 11638340639

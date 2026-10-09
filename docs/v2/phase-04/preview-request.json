@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "03f0b9e994d465529df89fb8fa3ede0a6d1baa1e",
+  "defaultWorkflowCommit": "ca7826db75cb4353488786aab80857b3a71c1be1",
+  "workflowRun": 37974947775,
+  "workflowURL": "https://github.com/ashleysnl/simplekit-site/actions/runs/37974947775",
+  "project": "simplekit-preview",
+  "uploadBranch": "codex-preview",
+  "status": "waiting for environment review",
+  "build": "success",
+  "environment": {
+    "name": "simplekit-preview",
+    "can_admins_bypass": false,
+    "requiredReviewer": "ashleysnl"
+  },
+  "approvalAttempt": {
+    "current_user_can_approve": true,
+    "httpStatus": 403,
+    "message": "Resource not accessible by integration",
+    "endpoint": "review-pending-deployments-for-a-workflow-run"
+  },
+  "productionChanged": false,
+  "currentPreview": "Existing preview is older; do not present it as the Phase 4 candidate.",
+  "artifact": {
+    "id": 11638340639,
+    "files": 322,
+    "bytes": 6107602,
+    "sha256": "e23ae036589dbd73ddd054e7d18d5b93cb50463ad1a8afd6d2f74d30dbd74868",
+    "downloadedAndCompared": false
+  }
+}
