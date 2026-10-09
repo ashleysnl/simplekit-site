@@ -1,0 +1,25 @@
+{
+  "authorship": "Original SimpleKit SVG paths authored in Phase 1; no third-party icon dependency",
+  "coordinateSystem": "24 by 24; 1.75 stroke; round caps/joins",
+  "names": [
+    "search",
+    "menu",
+    "chevron-right",
+    "arrow-right",
+    "arrow-left",
+    "close",
+    "lock",
+    "laptop",
+    "maple-leaf",
+    "bank",
+    "home",
+    "wallet",
+    "growth",
+    "piggy-bank",
+    "calculator",
+    "flame",
+    "bulb",
+    "check"
+  ],
+  "usage": "Default decorative: aria-hidden=true, focusable=false on outer svg. Icon-only button must have aria-label; standalone meaningful SVG uses role=img and labelled title. Use sprite for currentColor; img source is fixed intrinsic stroke color."
+}

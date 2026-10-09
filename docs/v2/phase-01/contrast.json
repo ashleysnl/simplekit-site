@@ -1,0 +1,114 @@
+[
+  {
+    "foreground": "navy",
+    "background": "canvas",
+    "ratio": 16.14,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "navy",
+    "background": "surface",
+    "ratio": 16.57,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "slate",
+    "background": "surface",
+    "ratio": 6.18,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "slate",
+    "background": "tint",
+    "ratio": 5.63,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "blue",
+    "background": "surface",
+    "ratio": 6.1,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "blue",
+    "background": "blue-soft",
+    "ratio": 5.55,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "surface",
+    "background": "blue",
+    "ratio": 6.1,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "surface",
+    "background": "blue-hover",
+    "ratio": 7.98,
+    "required": 4.5,
+    "passes": true
+  },
+  {
+    "foreground": "teal",
+    "background": "teal-soft",
+    "ratio": 5.57,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "amber",
+    "background": "amber-soft",
+    "ratio": 6.19,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "purple",
+    "background": "purple-soft",
+    "ratio": 6.84,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "control-border",
+    "background": "surface",
+    "ratio": 3.45,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "focus",
+    "background": "surface",
+    "ratio": 6.1,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "focus",
+    "background": "canvas",
+    "ratio": 5.95,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "focus",
+    "background": "tint",
+    "ratio": 5.56,
+    "required": 3,
+    "passes": true
+  },
+  {
+    "foreground": "error",
+    "background": "surface",
+    "ratio": 7.34,
+    "required": 4.5,
+    "passes": true
+  }
+]

@@ -1,0 +1,255 @@
+{
+  "browser": "151.0.7922.173",
+  "results": [
+    {
+      "width": 320,
+      "scale": 1,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-mobile-400.avif",
+        "width": 320,
+        "height": 400,
+        "renderedWidth": 288,
+        "renderedHeight": 360
+      }
+    },
+    {
+      "width": 375,
+      "scale": 1,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-mobile-400.avif",
+        "width": 374,
+        "height": 468,
+        "renderedWidth": 343,
+        "renderedHeight": 428.75
+      }
+    },
+    {
+      "width": 390,
+      "scale": 1,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-mobile-400.avif",
+        "width": 390,
+        "height": 487,
+        "renderedWidth": 358,
+        "renderedHeight": 447.5
+      }
+    },
+    {
+      "width": 390,
+      "scale": 2,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-mobile-800.avif",
+        "width": 390,
+        "height": 487,
+        "renderedWidth": 358,
+        "renderedHeight": 447.5
+      }
+    },
+    {
+      "width": 768,
+      "scale": 1,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-desktop-768.avif",
+        "width": 768,
+        "height": 432,
+        "renderedWidth": 706.546875,
+        "renderedHeight": 397.421875
+      }
+    },
+    {
+      "width": 1440,
+      "scale": 1,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-desktop-1536.avif",
+        "width": 1152,
+        "height": 648,
+        "renderedWidth": 1152,
+        "renderedHeight": 648
+      }
+    },
+    {
+      "width": 1920,
+      "scale": 1,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ],
+      "hero": {
+        "source": "http://127.0.0.1:8001/assets/v2/images/coastal-desktop-1536.avif",
+        "width": 1152,
+        "height": 648,
+        "renderedWidth": 1152,
+        "renderedHeight": 648
+      }
+    }
+  ],
+  "pageErrors": [],
+  "failedResponses": [],
+  "externalRequests": [],
+  "fontFallbackVisible": true,
+  "scope": "Synthetic Phase 1 specimen, local generated assets; no homepage implementation or real-device claim"
+}

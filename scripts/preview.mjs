@@ -6,7 +6,7 @@ import { validateOutput, resolveLocal } from "./validate-output.mjs";
 
 validateOutput();
 const port = Number(process.env.PORT || 8000);
-const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".xml": "application/xml", ".svg": "image/svg+xml", ".png": "image/png", ".webmanifest": "application/manifest+json", ".txt": "text/plain" };
+const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".xml": "application/xml", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp", ".avif": "image/avif", ".woff": "font/woff", ".webmanifest": "application/manifest+json", ".txt": "text/plain" };
 createServer((request, response) => {
   response.setHeader("X-Robots-Tag", "noindex, nofollow");
   try {

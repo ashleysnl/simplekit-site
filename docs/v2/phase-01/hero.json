@@ -1,0 +1,122 @@
+{
+  "source": "Generated with image_gen on 2026-10-09 for SimpleKit v2; fictional coastal scene, not a verified geographic location",
+  "sourceFile": "docs/v2/phase-01/coastal-source.png",
+  "sourceDimensions": [
+    1536,
+    1024
+  ],
+  "sourceSHA256": "0539cd9e86b48a0587e4566f21b0bd4e44f5bbea6e5169a1083d7f63ffbe1664",
+  "content": "Text-free coast, misty mountains and evergreen shore. Live UI text/fade implemented separately in Phase 2.",
+  "focalPoint": "70% x / 55% y",
+  "desktopCrop": [
+    0,
+    80,
+    1536,
+    944
+  ],
+  "mobileCrop": [
+    500,
+    0,
+    1319,
+    1024
+  ],
+  "approval": "Implementation candidate; owner visual review pending in Phase 1 PR. No production release approval.",
+  "variants": [
+    {
+      "file": "assets/v2/images/coastal-desktop-768.avif",
+      "format": "AVIF",
+      "width": 768,
+      "height": 432,
+      "bytes": 21426,
+      "sha256": "b6fa3a6e7311bcffebe29bd14c34d98b0c5a3e3c2f1f2d8c9f0769d3ea21802f"
+    },
+    {
+      "file": "assets/v2/images/coastal-desktop-768.webp",
+      "format": "WEBP",
+      "width": 768,
+      "height": 432,
+      "bytes": 28900,
+      "sha256": "fe456c7959e14febc263d7dc9cb62469eef82cade8ef1175108ab7ea17c4184e"
+    },
+    {
+      "file": "assets/v2/images/coastal-desktop-768.jpg",
+      "format": "JPEG",
+      "width": 768,
+      "height": 432,
+      "bytes": 49003,
+      "sha256": "20766c32b1cd631bde6ec45cf7ab3e7be90b31bef53346ec3fae94ba067f1bb0"
+    },
+    {
+      "file": "assets/v2/images/coastal-desktop-1536.avif",
+      "format": "AVIF",
+      "width": 1536,
+      "height": 864,
+      "bytes": 69305,
+      "sha256": "18262b51a5295e4cba511c22e4b7c714f43a2a45ae82b9adbf5b3dcd23846a1a"
+    },
+    {
+      "file": "assets/v2/images/coastal-desktop-1536.webp",
+      "format": "WEBP",
+      "width": 1536,
+      "height": 864,
+      "bytes": 91018,
+      "sha256": "16214af2d305237e47cdefa73b1d3ac5cc5827d01bca9d7a24055e6603dd46ad"
+    },
+    {
+      "file": "assets/v2/images/coastal-desktop-1536.jpg",
+      "format": "JPEG",
+      "width": 1536,
+      "height": 864,
+      "bytes": 165201,
+      "sha256": "6d24c4319dc9df5d37322be5680d55c89bd3141cdc6d534a64214f3a3560e784"
+    },
+    {
+      "file": "assets/v2/images/coastal-mobile-400.avif",
+      "format": "AVIF",
+      "width": 400,
+      "height": 500,
+      "bytes": 15024,
+      "sha256": "8c8e827729fd1c1546c7895fd22a39f1ffb27cbfac5509aacc96b95f4e63be7f"
+    },
+    {
+      "file": "assets/v2/images/coastal-mobile-400.webp",
+      "format": "WEBP",
+      "width": 400,
+      "height": 500,
+      "bytes": 20324,
+      "sha256": "9efd8ab125b030efcbe842ee5849fbb31564f26ad60e667d235d96684a5b8c2e"
+    },
+    {
+      "file": "assets/v2/images/coastal-mobile-400.jpg",
+      "format": "JPEG",
+      "width": 400,
+      "height": 500,
+      "bytes": 33313,
+      "sha256": "9399ccb8ae4504b00a3941846085d0608bf7cd90736f86d93049aece762988d0"
+    },
+    {
+      "file": "assets/v2/images/coastal-mobile-800.avif",
+      "format": "AVIF",
+      "width": 800,
+      "height": 1000,
+      "bytes": 48259,
+      "sha256": "b3d160eeec7f3df9ccbcb24db47c84c8d4848f3f01beda8528f1607738f18445"
+    },
+    {
+      "file": "assets/v2/images/coastal-mobile-800.webp",
+      "format": "WEBP",
+      "width": 800,
+      "height": 1000,
+      "bytes": 62572,
+      "sha256": "ebce9d3fdb1581657d0294b69a6e25723b077fe5d705377a2d26580e27757df8"
+    },
+    {
+      "file": "assets/v2/images/coastal-mobile-800.jpg",
+      "format": "JPEG",
+      "width": 800,
+      "height": 1000,
+      "bytes": 109334,
+      "sha256": "3f5010ab30a8dea3e318f828576fabc0b2fa9dedaa3068f09e787abd37fe8ec6"
+    }
+  ]
+}

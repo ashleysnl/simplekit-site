@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-CA">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimpleKit v2 foundation specimens — Phase 1</title>
+<link rel="stylesheet" href="/assets/v2/foundations.css">
+<style>body{margin:0}.specimen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem}.specimen{padding:1rem;border:1px solid var(--v2-border);border-radius:1rem}.hero-specimen{position:relative;isolation:isolate;border-radius:1.75rem;overflow:hidden}.hero-specimen img{display:block}.hero-specimen::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(252 252 251 / .96),rgb(252 252 251 / .35) 70%),linear-gradient(0deg,var(--v2-canvas),transparent 45%)}.hero-copy{position:absolute;inset:1.5rem;z-index:1;max-width:36rem;pointer-events:none}.hero-copy h1{font-size:clamp(2rem,4vw,4rem)}.specimen-note{padding:1rem;background:var(--v2-tint)}.v2-goal h3{font-size:1.25rem}</style>
+<body class="sk-v2">
+<main class="v2-container v2-stack v2-section">
+<p class="specimen-note">Phase 1 foundation review only. This file is excluded from deployment. It is not the Phase 2 homepage.</p>
+<p class="v2-eyebrow">SimpleKit v2 · Foundations</p>
+<h1>Better financial decisions start here.</h1>
+<p class="v2-muted">Local serif display and sans-serif interface text. No external font requests. Amounts: $1,250.00 · RRSP / TFSA · français.</p>
+<section class="hero-specimen" aria-label="Coastal crop and illustrative fade">
+<picture>
+<source media="(max-width:767px)" type="image/avif" srcset="/assets/v2/images/coastal-mobile-400.avif 400w,/assets/v2/images/coastal-mobile-800.avif 800w" sizes="100vw" width="800" height="1000">
+<source media="(max-width:767px)" type="image/webp" srcset="/assets/v2/images/coastal-mobile-400.webp 400w,/assets/v2/images/coastal-mobile-800.webp 800w" sizes="100vw" width="800" height="1000">
+<source media="(max-width:767px)" srcset="/assets/v2/images/coastal-mobile-400.jpg 400w,/assets/v2/images/coastal-mobile-800.jpg 800w" sizes="100vw" width="800" height="1000">
+<source type="image/avif" srcset="/assets/v2/images/coastal-desktop-768.avif 768w,/assets/v2/images/coastal-desktop-1536.avif 1536w" sizes="(min-width:1200px) 1152px,100vw" width="1536" height="864">
+<source type="image/webp" srcset="/assets/v2/images/coastal-desktop-768.webp 768w,/assets/v2/images/coastal-desktop-1536.webp 1536w" sizes="(min-width:1200px) 1152px,100vw" width="1536" height="864">
+<img class="v2-hero-media" src="/assets/v2/images/coastal-desktop-1536.jpg" width="1536" height="864" alt="" fetchpriority="high">
+</picture>
+<div class="hero-copy"><p class="v2-eyebrow">Your money, made clearer</p><h1>Free planning tools with a clearer next step.</h1></div>
+</section>
+<section class="v2-stack"><h2>Interface primitives</h2><div class="v2-panel v2-stack"><label for="sample-search">Search control style (non-functional specimen)</label><input id="sample-search" class="v2-search-field" placeholder="What would you like to figure out?"><div><button class="v2-button">Get started</button> <button class="v2-button v2-button--quiet">View all tools</button></div><p class="v2-muted">Muted supporting copy stays readable on white and pale blue.</p></div></section>
+<section class="v2-stack"><h2>Goal card styles</h2><div class="v2-goals" id="goals"></div></section>
+<section class="v2-stack"><h2>Outlined icon family</h2><div id="icons" class="specimen-grid"></div></section>
+<section class="v2-guide v2-stack"><h2>Not sure where to start?</h2><p class="v2-muted">Guidance panel style only. Onboarding behavior belongs to Phase 7.</p><button class="v2-button">Get started</button></section>
+</main>
+<script>
+const icons=['search','menu','chevron-right','arrow-right','arrow-left','close','lock','laptop','maple-leaf','bank','home','wallet','growth','piggy-bank','calculator','flame','bulb','check'];
+const svg=name=>`<svg class="v2-icon" aria-hidden="true" focusable="false"><use href="/assets/v2/icons/sprite.svg#${name}"></use></svg>`;
+document.querySelector('#icons').innerHTML=icons.map(name=>`<div class="specimen"><span class="v2-icon-disc">${svg(name)}</span><p>${name}</p></div>`).join('');
+document.querySelector('#goals').innerHTML=[['bank','Retirement','blue'],['home','Home & mortgage','teal'],['wallet','Budget & debt','amber'],['growth','Investing','purple']].map(([icon,title,accent])=>`<a class="v2-goal" href="#goals"><span class="v2-icon-disc" data-accent="${accent}">${svg(icon)}</span><h3>${title}</h3></a>`).join('');
+</script>
+</body>
+</html>

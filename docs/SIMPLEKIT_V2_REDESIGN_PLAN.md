@@ -87,7 +87,7 @@ Reusable Codex execution prompt:
 
 ## Phase 0 — Baseline inventory and regression guardrails
 
-Status: `[~]`. Baseline tasks and acceptance checks passed; plan/phase review pending. Implementation requested by owner. PR #6 is open with no recorded review decision; do not begin Phase 1 before review.
+Status: `[x]`. Baseline tasks and acceptance checks passed. Owner instructed proceeding to Phase 1 on 2026-10-09; this clears the execution pause without representing a GitHub review or production release approval.
 
 - [x] Reinspect the latest approved commit, repository instructions, templates, registry generation, CSS consumers, source pins and hosting workflows; record baseline SHAs.
 - [x] Capture the current homepage, header/menu, directory and representative tool screenshots; save route/link inventories and deterministic tool input/output fixtures.
@@ -105,22 +105,22 @@ Codex guidance: start with manifests/build outputs rather than assuming the chec
 
 ## Phase 1 — Design tokens, typography and assets
 
-Status: `[ ]`. Depends on Phase 0.
+Status: `[~]`. Phase 0 complete; technical acceptance passed. Proposed coastal asset awaits owner visual acceptance; no Phase 2 work begun.
 
-- [ ] Define documented CSS tokens for navy/blue/slate neutrals, blue/teal/amber/purple category accents, type scale, spacing, radii, shadows, borders, content widths, focus rings and responsive breakpoints.
-- [ ] Select licensed serif/sans-serif fonts matching the reference hierarchy; document source/license, fallback stacks, limited weights and loading strategy.
-- [ ] Create or source an approved coastal hero with no baked-in text, responsive AVIF/WebP variants and fallback; document provenance and focal point. Keep the original mockup unchanged.
-- [ ] Create a consistent local SVG icon set for search/menu/chevrons, trust items, goals, calculator rows and onboarding; define decorative versus labelled usage.
-- [ ] Add component foundations scoped to v2 and asset dimensions; document asset filenames, fonts and token usage for subsequent phases.
+- [x] Define documented CSS tokens for navy/blue/slate neutrals, blue/teal/amber/purple category accents, type scale, spacing, radii, shadows, borders, content widths, focus rings and responsive breakpoints.
+- [x] Select licensed serif/sans-serif fonts matching the reference hierarchy; document source/license, fallback stacks, limited weights and loading strategy.
+- [~] Create or source an approved coastal hero with no baked-in text, responsive AVIF/WebP variants and fallback; document provenance and focal point. Keep the original mockup unchanged.
+- [x] Create a consistent local SVG icon set for search/menu/chevrons, trust items, goals, calculator rows and onboarding; define decorative versus labelled usage.
+- [x] Add component foundations scoped to v2 and asset dimensions; document asset filenames, fonts and token usage for subsequent phases.
 
 Acceptance:
 
-- [ ] Tokens cover every v2 component; contrast checks meet 4.5:1 for normal text, 3:1 for large text and required non-text controls.
-- [ ] Fonts have valid licenses, readable system fallbacks and no invisible text period; no external font request is required to use the page.
-- [ ] Hero variants have declared dimensions/aspect ratio, mobile and desktop crops, no embedded UI text and a largest initial mobile variant budget of 250 KB; icons render crisply at normal and 2× density.
-- [ ] Original reference hash is unchanged; production assets are separate; generated `dist/` excludes `docs/` and the reference PNG.
+- [x] Tokens cover every v2 component; contrast checks meet 4.5:1 for normal text, 3:1 for large text and required non-text controls.
+- [x] Fonts have valid licenses, readable system fallbacks and no invisible text period; no external font request is required to use the page.
+- [x] Hero variants have declared dimensions/aspect ratio, mobile and desktop crops, no embedded UI text and a largest initial mobile variant budget of 250 KB; icons render crisply at normal and 2× density.
+- [x] Original reference hash is unchanged; production assets are separate; generated `dist/` excludes `docs/` and the reference PNG.
 
-Codex guidance: prefer existing code/vector assets for UI icons. If an image generation skill is used, read its instructions and the saved reference first. Record chosen token/font values as implementation decisions, not values measured precisely from the mockup. Evidence link: pending.
+Codex guidance: prefer existing code/vector assets for UI icons. If an image generation skill is used, read its instructions and the saved reference first. Record chosen token/font values as implementation decisions, not values measured precisely from the mockup. Evidence: [Phase 1 verification](v2/phase-01-verification.md). Branch `feature/simplekit-v2-phase-1`; four licensed local fonts, scoped tokens/primitives, 18 SVG icons and 12 validated image variants. Technical checks pass; generated coastal visual candidate is ready for owner review.
 
 ## Phase 2 — Responsive header and coastal hero
 
@@ -364,8 +364,8 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 
 | Phase | State | Evidence / next step |
 | --- | --- | --- |
-| 0 Baseline and guardrails | `[~]` | [Baseline evidence](v2/phase-00-verification.md) and all acceptance checks pass; plan/phase review pending. Live edge HTTP checks limited by 403. |
-| 1 Tokens and assets | `[ ]` | Pending Phase 0. |
+| 0 Baseline and guardrails | `[x]` | [Baseline evidence](v2/phase-00-verification.md); owner instructed Phase 1. Live edge HTTP checks limited by 403. |
+| 1 Tokens and assets | `[~]` | [Foundation evidence](v2/phase-01-verification.md); technical checks pass, coastal visual acceptance pending. |
 | 2 Header and hero | `[ ]` | Pending Phase 1. |
 | 3 Search and questions | `[ ]` | Pending Phase 2. |
 | 4 Trust indicators | `[ ]` | Pending Phase 3. |

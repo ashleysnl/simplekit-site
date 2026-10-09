@@ -1,8 +1,8 @@
 # SimpleKit v2 Phase 0 verification
 
-Recorded 2026-10-09 UTC on `feature/simplekit-v2-phase-0`. Phase 0 only; no redesign code, calculator edits, source revision changes, hosting changes, merge or deployment.
+Recorded 2026-10-09 UTC on `feature/simplekit-v2-phase-0`. [Phase 0 PR #7](https://github.com/ashleysnl/simplekit-site/pull/7), evidence commit `0e3d0cc747f5a4d07e4747d0460bb67e6d954c1d`. Phase 0 only; no redesign code, calculator edits, source revision changes, hosting changes, merge or deployment.
 
-Baseline tasks and acceptance checks pass. Phase status remains `[~]` pending plan/phase review: [plan PR #6](https://github.com/ashleysnl/simplekit-site/pull/6) was OPEN with no recorded review decision when inspected. The owner explicitly requested this baseline work. Phase 1 must wait for review of the finished Phase 0 PR. Live edge responses remain unverified because this environment receives HTTP 403; that limitation does not invalidate the separate generated-output fixtures.
+Baseline tasks and acceptance checks pass. The owner instructed proceeding to Phase 1 on 2026-10-09, clearing the roadmap execution pause; Phase 0 is `[x]`. This does not claim a GitHub review or production release approval. At baseline capture, [plan PR #6](https://github.com/ashleysnl/simplekit-site/pull/6) was OPEN with no recorded review decision when inspected. The owner explicitly requested this baseline work. Phase 1 is authorized by that subsequent instruction. Live edge responses remain unverified because this environment receives HTTP 403; that limitation does not invalidate the separate generated-output fixtures.
 
 ## Source and architecture inventory
 
@@ -123,4 +123,4 @@ Screenshots default to `/tmp/simplekit-v2-screenshots`; comparison result defaul
 
 Authored changes are only this evidence, Phase 0 checklist updates, a preservation inventory script and optional/browser plus Node contract tests. No runtime dependencies were added. Production root pages, templates, CSS, calculator routes/formulas/defaults/data behavior, all source pins, CNAME and hosting workflows/configuration remain unchanged. Nothing from this task is deployed.
 
-Next bounded action: review plan PR #6 and the Phase 0 evidence PR; resolve or accept the documented live-access limitation. Only after review should Phase 1 begin. All Phase 1–12 states remain `[ ]`.
+Next bounded action: Phase 1 foundations, as subsequently requested by the owner. Resolve live-access limitations before release; Phases 2–12 remain pending.
