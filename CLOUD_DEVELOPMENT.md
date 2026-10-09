@@ -117,4 +117,4 @@ After the owner approves production deployment:
 
 ## Clean-environment evidence
 
-Exact final results and browser smoke-test scope are recorded in [docs/cloud-native-validation.md](docs/cloud-native-validation.md). Browser analytics requests are stubbed during functional checks; live Google Analytics and external government/support destinations are outside this build validation. Preview deployment and hosted Actions execution remain unrun until their settings and review are complete.
+Exact final results and browser smoke-test scope are recorded in [docs/cloud-native-validation.md](docs/cloud-native-validation.md). Browser analytics requests are stubbed during functional checks; live Google Analytics and external government/support destinations are outside this build validation. The validation workflow passed on GitHub for build commit `a0666afc3d7e2889ac584aba5c1410eb0746cdef`; preview deployment remains unrun until its settings and review are complete.
