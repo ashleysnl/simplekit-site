@@ -1,0 +1,12 @@
+{
+  "repository": "ashleysnl/simplekit-site",
+  "pullRequest": 9,
+  "implementationCommit": "f72f9135c7f17c0a33b0ff0b016543c8e2db088c",
+  "workflow": "Validate static site",
+  "runId": 37953858560,
+  "url": "https://github.com/ashleysnl/simplekit-site/actions/runs/37953858560",
+  "conclusion": "success",
+  "validated": ["sources:fetch", "npm test", "build", "seo:validate", "output:validate", "tracked file cleanliness", "artifact upload"],
+  "deployment": false,
+  "handoffCommitScope": "Documentation links and CI evidence only; final head validation is tracked in PR #9."
+}

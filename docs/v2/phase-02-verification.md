@@ -1,6 +1,6 @@
 # SimpleKit v2 Phase 2 — responsive header and coastal hero
 
-Branch: `feature/simplekit-v2-phase-2`, based on Phase 1 handoff `e79168da277c52ecb226464cb91c69ef411624d3` ([PR #8](https://github.com/ashleysnl/simplekit-site/pull/8)). The owner directed Phase 2 on 2026-10-09, accepting the Phase 1 foundations and coastal asset for implementation. The workspace was clean before creating this branch. No existing work was discarded.
+[Phase 2 PR #9](https://github.com/ashleysnl/simplekit-site/pull/9), implementation/evidence commit `f72f9135c7f17c0a33b0ff0b016543c8e2db088c`. Branch: `feature/simplekit-v2-phase-2`, based on Phase 1 handoff `e79168da277c52ecb226464cb91c69ef411624d3` ([PR #8](https://github.com/ashleysnl/simplekit-site/pull/8)). The owner directed Phase 2 on 2026-10-09, accepting the Phase 1 foundations and coastal asset for implementation. The workspace was clean before creating this branch. No existing work was discarded.
 
 Implementation and available automated checks are complete. Phase 2 remains `[~]` for feature PR review and manual browser/AT coverage. The two acceptance criteria requiring those manual checks remain `[~]`; their automation passes, and the unavailable combinations are retained for Phase 8. This evidence does not represent a GitHub approval or production release permission. No merge, deployment, hosting change, source-pin change, or workflow dispatch was performed. Phases 3–12 remain `[ ]`.
 
@@ -55,6 +55,7 @@ Additional evidence: [320 px](phase-02/homepage-320.jpg), [1920 px](phase-02/hom
 - [Artifact delta](phase-02/artifact-delta.json): **317 files**; only generated `index.html` changes relative to Phase 1, and `assets/v2/home.css` / `home.js` are added. The other **314 Phase 1 files** remain byte-identical (277 baseline files plus all 37 foundation assets). Docs, original reference, source cache and browser dependencies are excluded from output.
 - The existing Google tag and metadata remain unchanged. Tests stub that external tag and use loopback calculator paths; they do not follow canonical links into production or send test interactions to analytics. The Phase 2 browser report records zero page errors and failed responses.
 - [Remote references](phase-02/remote-refs.txt) confirm main/production remains `ca7826db75cb4353488786aab80857b3a71c1be1` and the Phase 1 handoff remains unchanged. Existing Phase 0 limitations on live edge HTTP validation still apply. Nothing was merged or deployed.
+- Hosted **Validate static site** passed for implementation/evidence commit `f72f9135c7f17c0a33b0ff0b016543c8e2db088c`: [run 37953858560](https://github.com/ashleysnl/simplekit-site/actions/runs/37953858560). Source acquisition, tests, build, SEO/output validation, tracked-file cleanliness and artifact upload all succeeded. The follow-up handoff commit only adds the PR/CI record; its current status is available in PR #9.
 
 To reproduce browser acceptance, build the site and serve `dist/` on loopback (`PORT=8001 npm run preview`), then run the scripts with an isolated Playwright installation:
 
