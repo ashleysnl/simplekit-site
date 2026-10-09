@@ -1,0 +1,15 @@
+/* Phase 4: a static, opt-in trust strip with qualified privacy copy. */
+.sk-v2.v2-home-trust { padding-block: 0 3rem; }
+.sk-v2.v2-home-trust .v2-trust { margin: 0; padding: 0; list-style: none; gap: 0; }
+.sk-v2 .v2-trust-item { display: flex; align-items: center; gap: 1rem; min-width: 0; padding-block: 1rem; }
+.sk-v2 .v2-trust-item + .v2-trust-item { border-top: 1px solid var(--v2-border); }
+.sk-v2 .v2-trust-item > div { min-width: 0; overflow-wrap: anywhere; }
+.sk-v2 .v2-trust-title { font-weight: 700; line-height: 1.4; }
+.sk-v2 .v2-trust-detail { margin-top: .25rem; color: var(--v2-slate); font-size: var(--v2-text-sm); }
+.sk-v2 .v2-trust-note { margin-top: 1rem; max-width: 62rem; color: var(--v2-slate); font-size: var(--v2-text-sm); }
+.sk-v2 .v2-trust-note a { display: inline-block; min-height: var(--v2-target-size); padding-block: .5rem; font-weight: 700; }
+@media (min-width: 48rem) {
+  .sk-v2 .v2-trust-item { padding-block: .5rem; padding-inline-end: 1.25rem; }
+  .sk-v2 .v2-trust-item + .v2-trust-item { border-top: 0; border-inline-start: 1px solid var(--v2-border); padding-inline-start: 1.25rem; }
+}
+@media (forced-colors: active) { .sk-v2 .v2-trust-item + .v2-trust-item { border-color: CanvasText; } }

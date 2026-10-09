@@ -1,0 +1,24 @@
+{
+  "parentCommit": "b1b07f9454f9d8214197e4c673a184832f011860",
+  "parentFiles": 321,
+  "totalFiles": 322,
+  "unchangedParentFiles": 320,
+  "changedFiles": [
+    "index.html"
+  ],
+  "newFiles": [
+    "assets/v2/trust.css"
+  ],
+  "removedFiles": [],
+  "newAssets": {
+    "assets/v2/trust.css": {
+      "sha256": "29d8dddab57029f650c1b259ece2ba5e1fc475dd5eb25b448a537dc08df19fd1",
+      "bytes": 1227
+    }
+  },
+  "homepage": {
+    "sha256": "a7ee80814cd9c6edca4ca74ca3c97a35442cb08971992645cd33320ff93d8a18",
+    "bytes": 34523
+  },
+  "docsExcluded": true
+}

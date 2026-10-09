@@ -1,0 +1,5 @@
+
+> output:validate
+> node scripts/validate-output.mjs
+
+Output validation passed: 22 calculator routes, 53 sitemap URLs, 67 HTML pages, 146 local assets.

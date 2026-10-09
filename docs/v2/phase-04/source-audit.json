@@ -1,0 +1,755 @@
+{
+  "parentCommit": "b1b07f9454f9d8214197e4c673a184832f011860",
+  "date": "2026-10-09",
+  "method": "Read pinned generated HTML/JavaScript, audit request APIs/storage/analytics call sites; pair with 22 fresh-context interaction fixtures. Classify tool scope, not the accuracy/currency of regulated formulas.",
+  "analytics": "All 22 calculator pages and the homepage load G-6SS26QC3C9. Four calculator apps queue categorical interaction events. Existing analytics remains unchanged.",
+  "onboarding": "Phase 7 not implemented. No v2 onboarding UI, data store or submissions exist.",
+  "tools": [
+    {
+      "id": "retirement-planner",
+      "canonicalPath": "/retirement-planner/",
+      "canonicalUrl": "https://simplekit.app/retirement-planner/",
+      "scope": "Canadian retirement planning: CPP/OAS, registered savings and retirement tax assumptions; educational estimates.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1476,
+          "code": "if (typeof localStorage !== \"undefined\") storages.push(localStorage);"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1481,
+          "code": "if (typeof sessionStorage !== \"undefined\") storages.push(sessionStorage);"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1505,
+          "code": "if (typeof localStorage !== \"undefined\") {"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1506,
+          "code": "localStorage.setItem(storageKey, serialized);"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1507,
+          "code": "if (localStorage.getItem(storageKey) === serialized) saved = true;"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1514,
+          "code": "if (typeof sessionStorage !== \"undefined\") {"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1515,
+          "code": "sessionStorage.setItem(storageKey, serialized);"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1516,
+          "code": "if (sessionStorage.getItem(storageKey) === serialized) saved = true;"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1527,
+          "code": "if (typeof localStorage !== \"undefined\") localStorage.removeItem(storageKey);"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 1532,
+          "code": "if (typeof sessionStorage !== \"undefined\") sessionStorage.removeItem(storageKey);"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 9025,
+          "code": "return sessionStorage.getItem(\"supportMomentShown\") === \"1\";"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 10662,
+          "code": "try { sessionStorage.setItem(\"supportMomentShown\", \"1\"); } catch {}"
+        },
+        {
+          "file": "retirement-planner/app.classic.js",
+          "line": 10686,
+          "code": "try { sessionStorage.setItem(\"supportMomentShown\", \"1\"); } catch {}"
+        },
+        {
+          "file": "retirement-planner/app.js",
+          "line": 274,
+          "code": "return sessionStorage.getItem(\"supportMomentShown\") === \"1\";"
+        },
+        {
+          "file": "retirement-planner/app.js",
+          "line": 1904,
+          "code": "try { sessionStorage.setItem(\"supportMomentShown\", \"1\"); } catch {}"
+        },
+        {
+          "file": "retirement-planner/app.js",
+          "line": 1928,
+          "code": "try { sessionStorage.setItem(\"supportMomentShown\", \"1\"); } catch {}"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 4,
+          "code": "if (typeof localStorage !== \"undefined\") storages.push(localStorage);"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 9,
+          "code": "if (typeof sessionStorage !== \"undefined\") storages.push(sessionStorage);"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 33,
+          "code": "if (typeof localStorage !== \"undefined\") {"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 34,
+          "code": "localStorage.setItem(storageKey, serialized);"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 35,
+          "code": "if (localStorage.getItem(storageKey) === serialized) saved = true;"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 42,
+          "code": "if (typeof sessionStorage !== \"undefined\") {"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 43,
+          "code": "sessionStorage.setItem(storageKey, serialized);"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 44,
+          "code": "if (sessionStorage.getItem(storageKey) === serialized) saved = true;"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 55,
+          "code": "if (typeof localStorage !== \"undefined\") localStorage.removeItem(storageKey);"
+        },
+        {
+          "file": "retirement-planner/src/model/planStore.js",
+          "line": 60,
+          "code": "if (typeof sessionStorage !== \"undefined\") sessionStorage.removeItem(storageKey);"
+        }
+      ],
+      "requestAPIs": [
+        {
+          "file": "retirement-planner/sw.js",
+          "line": 43,
+          "code": "const response = await fetch(request);"
+        }
+      ],
+      "analytics": []
+    },
+    {
+      "id": "fire-calculator",
+      "canonicalPath": "/fire-calculator/",
+      "canonicalUrl": "https://simplekit.app/fire-calculator/",
+      "scope": "General financial independence math, with Canadian planning context; not a tax assessment.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "fire-calculator/app.js",
+          "line": 158,
+          "code": "const raw = localStorage.getItem(APP.storageKey);"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 232,
+          "code": "localStorage.setItem(APP.storageKey, JSON.stringify({ inputs: state.inputs }));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": [
+        {
+          "file": "fire-calculator/app.js",
+          "line": 145,
+          "code": "track(\"related_tool_click\", { tool: link.getAttribute(\"data-track-link\") || \"unknown\" });"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 151,
+          "code": "link.addEventListener(\"click\", () => track(\"support_click\", { location: link.id }));"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 227,
+          "code": "track(\"calculator_interaction\", { field: event.target?.id || \"unknown\" });"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 235,
+          "code": "track(\"calculator_save\", { mode: \"manual\" });"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 244,
+          "code": "track(\"calculator_reset\", { source: \"button\" });"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 253,
+          "code": "track(\"sample_data_load\", { source });"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 261,
+          "code": "track(\"advanced_settings_toggle\", { state: ui.advancedOpen ? \"open\" : \"closed\" });"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 887,
+          "code": "function track(name, params = {}) {"
+        },
+        {
+          "file": "fire-calculator/app.js",
+          "line": 889,
+          "code": "window.gtag(\"event\", name, params);"
+        }
+      ]
+    },
+    {
+      "id": "cpp-calculator",
+      "canonicalPath": "/cpp-calculator/",
+      "canonicalUrl": "https://simplekit.app/cpp-calculator/",
+      "scope": "Canadian CPP claiming-age estimates; not an official benefit entitlement.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "cpp-calculator/app.js",
+          "line": 161,
+          "code": "const raw = localStorage.getItem(TEMPLATE.storageKey);"
+        },
+        {
+          "file": "cpp-calculator/app.js",
+          "line": 170,
+          "code": "localStorage.setItem(TEMPLATE.storageKey, JSON.stringify(state));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "rrsp-vs-tfsa-calculator",
+      "canonicalPath": "/rrsp-vs-tfsa-calculator/",
+      "canonicalUrl": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "scope": "Canadian registered-account comparison with user tax assumptions; not personal tax advice.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "rrsp-vs-tfsa-calculator/app.js",
+          "line": 362,
+          "code": "const raw = localStorage.getItem(TEMPLATE.storageKey);"
+        },
+        {
+          "file": "rrsp-vs-tfsa-calculator/app.js",
+          "line": 392,
+          "code": "localStorage.setItem(TEMPLATE.storageKey, JSON.stringify(state));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "compound-interest-calculator",
+      "canonicalPath": "/compound-interest-calculator/",
+      "canonicalUrl": "https://simplekit.app/compound-interest-calculator/",
+      "scope": "General compound-growth math; Canadian audience/currency context, not Canadian tax rules.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "savings-goal-calculator",
+      "canonicalPath": "/savings-goal-calculator/",
+      "canonicalUrl": "https://simplekit.app/savings-goal-calculator/",
+      "scope": "General savings-goal math; not a Canadian tax calculator.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "savings-goal-calculator/assets/js/app.js",
+          "line": 777,
+          "code": "localStorage.setItem(STORAGE_KEY, JSON.stringify(serializeState()));"
+        },
+        {
+          "file": "savings-goal-calculator/assets/js/app.js",
+          "line": 786,
+          "code": "const raw = localStorage.getItem(STORAGE_KEY);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "emergency-fund-calculator",
+      "canonicalPath": "/emergency-fund-calculator/",
+      "canonicalUrl": "https://simplekit.app/emergency-fund-calculator/",
+      "scope": "General emergency-savings planning; no jurisdiction-specific tax calculation.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "net-worth-calculator",
+      "canonicalPath": "/net-worth-calculator/",
+      "canonicalUrl": "https://simplekit.app/net-worth-calculator/",
+      "scope": "General assets/liabilities and growth math, with Canadian audience context.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 167,
+          "code": "const raw = localStorage.getItem(STORAGE_KEY);"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 205,
+          "code": "localStorage.removeItem(STORAGE_KEY);"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 210,
+          "code": "localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": [
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 120,
+          "code": "trackEvent(\"jump_to_calculator\");"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 137,
+          "code": "trackEvent(\"load_sample_data\");"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 145,
+          "code": "trackEvent(\"reset_calculator\");"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 150,
+          "code": "trackEvent(\"related_tool_click\", {"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 158,
+          "code": "trackEvent(\"results_next_step_click\", {"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 238,
+          "code": "trackEvent(\"calculator_interaction\", { field_name: key });"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 891,
+          "code": "function trackEvent(name, params = {}) {"
+        },
+        {
+          "file": "net-worth-calculator/app.js",
+          "line": 893,
+          "code": "window.gtag(\"event\", name, params);"
+        }
+      ]
+    },
+    {
+      "id": "budget-planner",
+      "canonicalPath": "/budget-planner/",
+      "canonicalUrl": "https://simplekit.app/budget-planner/",
+      "scope": "General household cash-flow planning; no Canadian tax assessment.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "budget-planner/assets/js/app.js",
+          "line": 217,
+          "code": "const raw = window.localStorage.getItem(STORAGE_KEY);"
+        },
+        {
+          "file": "budget-planner/assets/js/app.js",
+          "line": 287,
+          "code": "window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "take-home-pay-calculator",
+      "canonicalPath": "/take-home-pay-calculator/",
+      "canonicalUrl": "https://simplekit.app/take-home-pay-calculator/",
+      "scope": "Canadian federal/provincial payroll estimates including CPP/EI; approximate take-home pay.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "debt-payoff-calculator",
+      "canonicalPath": "/debt-payoff-calculator/",
+      "canonicalUrl": "https://simplekit.app/debt-payoff-calculator/",
+      "scope": "General snowball/avalanche debt comparison; Canadian planning context.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "debt-payoff-calculator/assets/js/app.js",
+          "line": 77,
+          "code": "const savedState = window.localStorage.getItem(STORAGE_KEY);"
+        },
+        {
+          "file": "debt-payoff-calculator/assets/js/app.js",
+          "line": 462,
+          "code": "window.localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToStore));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "credit-card-interest-calculator",
+      "canonicalPath": "/credit-card-interest-calculator/",
+      "canonicalUrl": "https://simplekit.app/credit-card-interest-calculator/",
+      "scope": "General interest/payoff model; not lender-specific terms or a tax calculation.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "loan-calculator",
+      "canonicalPath": "/loan-calculator/",
+      "canonicalUrl": "https://simplekit.app/loan-calculator/",
+      "scope": "General loan/amortization and extra-payment math; not a lender offer.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "loan-calculator/assets/js/app.js",
+          "line": 477,
+          "code": "window.localStorage.removeItem(STORAGE_KEY);"
+        },
+        {
+          "file": "loan-calculator/assets/js/app.js",
+          "line": 479,
+          "code": "// Ignore localStorage cleanup issues and continue with fresh in-memory state."
+        },
+        {
+          "file": "loan-calculator/assets/js/app.js",
+          "line": 1621,
+          "code": "window.localStorage.setItem(STORAGE_KEY, JSON.stringify(exportState()));"
+        },
+        {
+          "file": "loan-calculator/assets/js/app.js",
+          "line": 1630,
+          "code": "const saved = window.localStorage.getItem(STORAGE_KEY);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "house-affordability-calculator",
+      "canonicalPath": "/house-affordability-calculator/",
+      "canonicalUrl": "https://simplekit.app/house-affordability-calculator/",
+      "scope": "Canadian mortgage/down-payment and qualifying assumptions; not mortgage approval.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "rent-vs-buy-calculator",
+      "canonicalPath": "/rent-vs-buy-calculator/",
+      "canonicalUrl": "https://simplekit.app/rent-vs-buy-calculator/",
+      "scope": "Housing cost and wealth comparison with Canadian context; user-dependent assumptions.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "rent-vs-buy-calculator/assets/js/app.js",
+          "line": 325,
+          "code": "window.localStorage.setItem(STORAGE_KEY, JSON.stringify(nextState));"
+        },
+        {
+          "file": "rent-vs-buy-calculator/assets/js/app.js",
+          "line": 333,
+          "code": "const stored = window.localStorage.getItem(STORAGE_KEY);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "mortgage-paydown-vs-invest-calculator",
+      "canonicalPath": "/mortgage-paydown-vs-invest-calculator/",
+      "canonicalUrl": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "scope": "Canadian TFSA/RRSP/taxable investing assumptions compared with mortgage paydown.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 176,
+          "code": "const saved = JSON.parse(localStorage.getItem(TEMPLATE.storageKey) || \"null\");"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 184,
+          "code": "localStorage.setItem(TEMPLATE.storageKey, JSON.stringify(state));"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": [
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 159,
+          "code": "trackEvent(\"load_sample_data\", { source: \"calculator\" });"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 166,
+          "code": "trackEvent(\"reset_calculator\", { source: \"calculator\" });"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 169,
+          "code": "trackEvent(\"toggle_advanced_settings\", { open: el.advancedSettings.open ? \"true\" : \"false\" });"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 222,
+          "code": "trackEvent(\"calculator_interaction\", { field: id });"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 854,
+          "code": "trackEvent(\"related_tool_click\", { tool: node.getAttribute(\"data-related-tool\") || \"unknown\" });"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 964,
+          "code": "function trackEvent(name, params = {}) {"
+        },
+        {
+          "file": "mortgage-paydown-vs-invest-calculator/app.js",
+          "line": 966,
+          "code": "window.gtag(\"event\", name, params);"
+        }
+      ]
+    },
+    {
+      "id": "investment-fee-calculator",
+      "canonicalPath": "/investment-fee-calculator/",
+      "canonicalUrl": "https://simplekit.app/investment-fee-calculator/",
+      "scope": "General fee drag and growth comparison for ETF/MER/fund costs; not a recommendation.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 759,
+          "code": "localStorage.setItem(STORAGE_KEY, JSON.stringify(state));"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 800,
+          "code": "const raw = localStorage.getItem(STORAGE_KEY);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": [
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 184,
+          "code": "track(\"load_sample_data\");"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 193,
+          "code": "track(\"load_sample_data\", { placement: \"hero\" });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 202,
+          "code": "track(\"reset_calculator\");"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 206,
+          "code": "if (el.advancedSettings.open) track(\"open_advanced_settings\");"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 218,
+          "code": "track(\"related_tool_click\", { tool: trackedLink.getAttribute(\"data-track-link\") || \"unknown\" });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 222,
+          "code": "if (event.target.closest(\"#supportCta\")) track(\"support_cta_click\", { placement: \"section\" });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 223,
+          "code": "if (event.target.closest(\"#heroSupportLink\")) track(\"support_cta_click\", { placement: \"hero\" });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 224,
+          "code": "if (event.target.closest(\"#footerSupportLink\")) track(\"support_cta_click\", { placement: \"footer\" });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 225,
+          "code": "if (event.target.closest(\"#globalSupportBtn\")) track(\"support_cta_click\", { placement: \"floating\" });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 240,
+          "code": "track(\"calculator_interaction\", { field: key });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 634,
+          "code": "track(\"apply_scenario\", { scenario: id });"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 808,
+          "code": "function track(eventName, params = {}) {"
+        },
+        {
+          "file": "investment-fee-calculator/app.js",
+          "line": 810,
+          "code": "window.gtag(\"event\", eventName, params);"
+        }
+      ]
+    },
+    {
+      "id": "mortgage-calculator",
+      "canonicalPath": "/mortgage-calculator/",
+      "canonicalUrl": "https://simplekit.app/mortgage-calculator/",
+      "scope": "Canadian mortgage payment conventions and amortization estimates; not lender approval.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "canadian-tax-checklist",
+      "canonicalPath": "/canadian-tax-checklist/",
+      "canonicalUrl": "https://simplekit.app/canadian-tax-checklist/",
+      "scope": "Canadian slips, receipts and tax organization; a checklist, not a tax-return calculation.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "canadian-tax-checklist/assets/js/app.js",
+          "line": 338,
+          "code": "const saved = window.localStorage.getItem(STORAGE_KEY);"
+        },
+        {
+          "file": "canadian-tax-checklist/assets/js/app.js",
+          "line": 354,
+          "code": "const broken = window.localStorage.getItem(STORAGE_KEY);"
+        },
+        {
+          "file": "canadian-tax-checklist/assets/js/app.js",
+          "line": 356,
+          "code": "window.localStorage.setItem(STORAGE_BACKUP_KEY, broken);"
+        },
+        {
+          "file": "canadian-tax-checklist/assets/js/app.js",
+          "line": 371,
+          "code": "window.localStorage.setItem(STORAGE_KEY, serializePlannerForStorage());"
+        },
+        {
+          "file": "canadian-tax-checklist/assets/js/app.js",
+          "line": 1104,
+          "code": "window.localStorage.removeItem(STORAGE_KEY);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "travel-planner",
+      "canonicalPath": "/travel-planner/",
+      "canonicalUrl": "https://simplekit.app/travel-planner/",
+      "scope": "General trip planning, itinerary and budgets; no Canadian tax-rule calculation.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "travel-planner/app.js",
+          "line": 19,
+          "code": "const value = localStorage.getItem(key);"
+        },
+        {
+          "file": "travel-planner/app.js",
+          "line": 30,
+          "code": "localStorage.setItem(key, next);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "debt-to-income-ratio-calculator",
+      "canonicalPath": "/debt-to-income-ratio-calculator/",
+      "canonicalUrl": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "scope": "General debt-service ratio screening with Canadian context; not approval.",
+      "analyticsTag": true,
+      "storage": [
+        {
+          "file": "debt-to-income-ratio-calculator/assets/js/app.js",
+          "line": 855,
+          "code": "localStorage.setItem(STORAGE_KEY, JSON.stringify(comparisonScenario));"
+        },
+        {
+          "file": "debt-to-income-ratio-calculator/assets/js/app.js",
+          "line": 864,
+          "code": "localStorage.removeItem(STORAGE_KEY);"
+        },
+        {
+          "file": "debt-to-income-ratio-calculator/assets/js/app.js",
+          "line": 874,
+          "code": "const raw = localStorage.getItem(STORAGE_KEY);"
+        }
+      ],
+      "requestAPIs": [],
+      "analytics": []
+    },
+    {
+      "id": "contractor-effective-hourly-rate-calculator",
+      "canonicalPath": "/contractor-effective-hourly-rate-calculator/",
+      "canonicalUrl": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "scope": "General contract-income comparison; explicitly excludes taxes and province-specific rules.",
+      "analyticsTag": true,
+      "storage": [],
+      "requestAPIs": [],
+      "analytics": []
+    }
+  ],
+  "shared": {
+    "requestAPIs": [],
+    "storage": [],
+    "analytics": []
+  },
+  "exceptions": [
+    "Retirement service worker fetches/caches existing GET assets and navigations, not calculator inputs.",
+    "Travel Planner pinned copy says no tracking while its HTML loads the site Google tag. This pre-existing wording discrepancy is recorded for a separately reviewed upstream correction; source pins, tool text and analytics are preserved.",
+    "Exports/imports are user-directed local files, not automatic server persistence. No export/import behavior is changed.",
+    "Third-party tag implementation and remotely configured Google Analytics settings are outside this local source audit. External scripts are stubbed in automated interaction tests; inspect site-authored queued event parameters and requests."
+  ]
+}

@@ -1,0 +1,40 @@
+
+> test
+> node --test tests/*.test.mjs
+
+Output validation passed: 1 calculator routes, 1 sitemap URLs, 1 HTML pages, 1 local assets.
+✔ every canonical calculator has one completed, immutable GitHub source (3.010287ms)
+✔ source acquisition rejects branch pins, duplicate IDs and traversal (1.998871ms)
+✔ historical reports are excluded only in source checks; published legacy links fail (3.217364ms)
+✔ SEO checks reject legacy URLs in robots, sitemap and browser code (2.577943ms)
+✔ intentional compatibility registry is allowed, adjacent production files are checked (1.50159ms)
+✔ canonical manifest rejects mismatched, duplicate and unsafe routes (1.424741ms)
+✔ all restored sitemap routes still resolve to the same canonical host (0.811672ms)
+✔ URL resolver handles relative/query assets and refuses external or encoded traversal (1.567652ms)
+✔ bundled Core loads as an ES module for classic and module callers (0.521583ms)
+✔ cached sources fail verification after edits, ignored files, or origin changes (66.807191ms)
+✔ output checks detect wrong metadata, missing assets and module dependencies (6.928199ms)
+✔ v2 preserves the 22 canonical tools and declared sitemap inventory (4.620935ms)
+✔ v2 leaves calculator and Core source revisions unchanged (0.371979ms)
+✔ v2 preserves checked-in production landing pages and hostname (1.306834ms)
+✔ v2 keeps the original design reference unchanged (7.121248ms)
+(node:30039) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/simplekit-site/assets/v2/discovery-engine.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /workspace/simplekit-site/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ discovery covers every canonical tool and derives names and destinations from the manifest (1.142079ms)
+✔ discovery rejects missing, duplicate, unknown and stale metadata IDs (2.903877ms)
+✔ discovery rejects a second route authority, stale URLs and invalid metadata (1.918442ms)
+✔ suggested questions map to their four intended primary and optional related tools (1.860244ms)
+✔ each of the 22 exact names and slugs ranks its intended tool first, ahead of synonym collisions (18.823072ms)
+✔ money questions and common Canadian synonyms find the intended tool first (2.450963ms)
+✔ normalization handles mixed case, whitespace, accents and punctuation; empty/unknown/HTML-like queries are harmless (2.167843ms)
+✔ static questions escape metadata and generated browser data preserves canonical destinations (4.15344ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 176.93546

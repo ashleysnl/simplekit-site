@@ -1,0 +1,305 @@
+{
+  "browser": "151.0.7922.173",
+  "method": "Existing 22 exact regression fixtures in fresh contexts. Capture all context requests after initial load and queued analytics commands after each interaction. External libraries are stubbed; this checks site-authored payloads, not Google remote configuration.",
+  "tools": [
+    {
+      "id": "retirement-planner",
+      "path": "/retirement-planner/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "retirementPlanner.plan.v2"
+      ],
+      "sessionStorageKeys": [
+        "retirementPlanner.plan.v2",
+        "supportMomentShown"
+      ]
+    },
+    {
+      "id": "fire-calculator",
+      "path": "/fire-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field": "annualSpending"
+          }
+        ],
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field": "annualSpending"
+          }
+        ]
+      ],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "cpp-calculator",
+      "path": "/cpp-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit.cppTimingCalculator.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "rrsp-vs-tfsa-calculator",
+      "path": "/rrsp-vs-tfsa-calculator/",
+      "noSignup": true,
+      "interactionRequests": [
+        {
+          "url": "http://127.0.0.1:8001/rrsp-vs-tfsa-calculator/icons/favicon.svg",
+          "method": "GET",
+          "postData": null
+        },
+        {
+          "url": "http://127.0.0.1:8001/rrsp-vs-tfsa-calculator/icons/favicon.svg",
+          "method": "GET",
+          "postData": null
+        }
+      ],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit.rrspTfsaOptimizer.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "compound-interest-calculator",
+      "path": "/compound-interest-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "savings-goal-calculator",
+      "path": "/savings-goal-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit.savings-goal-calculator.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "emergency-fund-calculator",
+      "path": "/emergency-fund-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "net-worth-calculator",
+      "path": "/net-worth-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field_name": "cash"
+          }
+        ]
+      ],
+      "localStorageKeys": [
+        "simplekit.netWorthCalculator.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "budget-planner",
+      "path": "/budget-planner/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit-budget-planner-v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "take-home-pay-calculator",
+      "path": "/take-home-pay-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "debt-payoff-calculator",
+      "path": "/debt-payoff-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit-debt-payoff-state-v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "credit-card-interest-calculator",
+      "path": "/credit-card-interest-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "loan-calculator",
+      "path": "/loan-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit-loan-calculator-state-v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "house-affordability-calculator",
+      "path": "/house-affordability-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "rent-vs-buy-calculator",
+      "path": "/rent-vs-buy-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit-rent-vs-buy-state"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "mortgage-paydown-vs-invest-calculator",
+      "path": "/mortgage-paydown-vs-invest-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field": "extraMonthly"
+          }
+        ],
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field": "extraMonthly"
+          }
+        ]
+      ],
+      "localStorageKeys": [
+        "simplekit.mortgage-vs-invest.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "investment-fee-calculator",
+      "path": "/investment-fee-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field": "feeB"
+          }
+        ],
+        [
+          "event",
+          "calculator_interaction",
+          {
+            "field": "feeB"
+          }
+        ]
+      ],
+      "localStorageKeys": [
+        "simplekit.investmentFeeCalculator.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "mortgage-calculator",
+      "path": "/mortgage-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "canadian-tax-checklist",
+      "path": "/canadian-tax-checklist/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "simplekit.taxChecklist.planner.v1"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "travel-planner",
+      "path": "/travel-planner/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [
+        "travelplanner_active_mode",
+        "travelplanner_blank_default_migration_v1",
+        "travelplanner_cost_form_mode",
+        "travelplanner_family_split_toggle",
+        "travelplanner_itin_form_mode",
+        "travelplanner_onboarding_dismissed",
+        "travelplanner_trip_adults",
+        "travelplanner_trip_children",
+        "vacationTripTracker.v2"
+      ],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "debt-to-income-ratio-calculator",
+      "path": "/debt-to-income-ratio-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    {
+      "id": "contractor-effective-hourly-rate-calculator",
+      "path": "/contractor-effective-hourly-rate-calculator/",
+      "noSignup": true,
+      "interactionRequests": [],
+      "analyticsEvents": [],
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    }
+  ]
+}

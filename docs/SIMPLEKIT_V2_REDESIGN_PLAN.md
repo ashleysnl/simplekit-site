@@ -142,7 +142,7 @@ Codex guidance: change `templates/index.html` and scoped assets, leaving root `i
 
 ## Phase 3 — Interactive search and suggested questions
 
-Status: `[~]`. Implementation and available automated checks pass; feature PR review and manual screen-reader coverage remain. Owner instructed Phase 3 on 2026-10-09; Phase 2 manual coverage remains recorded for Phase 8.
+Status: `[~]`. Implementation and available automated checks pass. Owner instructed Phase 4 on 2026-10-09, clearing the phase review pause; manual screen-reader coverage and Phase 2 manual coverage remain recorded for Phase 8.
 
 - [x] Build a labelled search input and local discovery index covering all 22 manifest tool IDs, names, descriptions, goal tags and common synonyms. Validate IDs/routes against the canonical manifest at build/test time.
 - [x] Rank exact names first, then keyword/synonym/intent matches; normalize case, whitespace and punctuation. Escape user input; render it as text, never executable HTML.
@@ -170,20 +170,20 @@ Codex guidance: local deterministic matching is sufficient; “intelligent” di
 
 ## Phase 4 — Trust indicators and honest privacy copy
 
-Status: `[ ]`. Depends on Phases 1–3.
+Status: `[~]`. Implementation, audit and available automated checks pass on `feature/simplekit-v2-phase-4`; feature review and actual browser-toolbar zoom remain. Owner requested an early dedicated preview with all changes to date; production remains unchanged.
 
-- [ ] Implement the three reference trust indicators with local icons, separators and readable responsive wrapping.
-- [ ] Verify no-signup use for every linked calculator; audit search/onboarding, local persistence, calculator behavior and existing analytics before adopting “Private / Stays in your browser”.
-- [ ] Keep calculator inputs and discovery answers local; qualify privacy copy to distinguish calculation data from existing usage analytics, and link existing privacy/methodology information.
-- [ ] Verify Canadian context claims against tool scope; avoid implying every tool applies tax rules or offers professional advice, official endorsement, security guarantees or unverified popularity.
+- [x] Implement the three reference trust indicators with local icons, separators and readable responsive wrapping.
+- [x] Verify no-signup use for every linked calculator; audit search/onboarding, local persistence, calculator behavior and existing analytics before adopting “Private / Stays in your browser”.
+- [x] Keep calculator inputs and discovery answers local; qualify privacy copy to distinguish calculation data from existing usage analytics, and link existing privacy/methodology information.
+- [x] Verify Canadian context claims against tool scope; avoid implying every tool applies tax rules or offers professional advice, official endorsement, security guarantees or unverified popularity.
 
 Acceptance:
 
-- [ ] Trust items remain readable at 320 px and 200% zoom, with text conveying meaning independently of icons/color.
-- [ ] Copy is supported by an audit and aligns with the privacy page. If analytics remains, no absolute claim that all browsing information stays local is shipped.
-- [ ] A network check confirms no search strings, onboarding choices or calculator financial values are added to requests or analytics payloads by v2.
+- [~] Trust items remain readable at 320 px and 200% zoom, with text conveying meaning independently of icons/color. Six widths, CSS magnification, 200% text at 320 px and no-JS/hidden-icon/forced-color checks pass; actual toolbar zoom remains for Phase 8.
+- [x] Copy is supported by an audit and aligns with the privacy page. If analytics remains, no absolute claim that all browsing information stays local is shipped.
+- [x] A network check confirms no search strings, onboarding choices or calculator financial values are added to requests or analytics payloads by v2.
 
-Codex guidance: preserve the target's trust layout, but truth takes precedence over mockup wording. Do not silently add/remove analytics; document any required separately reviewed change. Evidence link: pending.
+Codex guidance: preserve the target's trust layout, but truth takes precedence over mockup wording. Do not silently add/remove analytics; document any required separately reviewed change. Evidence: [Phase 4 verification](v2/phase-04-verification.md). All 22 fresh-context calculator fixtures and the source/storage/analytics/scope audit pass. Financial inputs add no data-bearing request or queued analytics value; two existing favicon GETs carry no query/body. Four search probes add zero requests/analytics/storage. V2 onboarding is unimplemented until Phase 7. New copy discloses existing Google Analytics and qualifies Canadian context. Only generated homepage HTML and one scoped stylesheet change; no production merge/deploy.
 
 ## Phase 5 — Explore-by-goal navigation
 
@@ -367,8 +367,8 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 0 Baseline and guardrails | `[x]` | [Baseline evidence](v2/phase-00-verification.md); owner instructed Phase 1. Live edge HTTP checks limited by 403. |
 | 1 Tokens and assets | `[x]` | [Foundation evidence](v2/phase-01-verification.md); owner instructed Phase 2. |
 | 2 Header and hero | `[~]` | [Header/hero evidence](v2/phase-02-verification.md), [PR #9](https://github.com/ashleysnl/simplekit-site/pull/9); implementation complete; owner instructed Phase 3, manual coverage pending. |
-| 3 Search and questions | `[~]` | [Search evidence](v2/phase-03-verification.md), [PR #10](https://github.com/ashleysnl/simplekit-site/pull/10); implementation/automated checks pass, PR review/manual AT coverage pending. |
-| 4 Trust indicators | `[ ]` | Pending Phase 3. |
+| 3 Search and questions | `[~]` | [Search evidence](v2/phase-03-verification.md), [PR #10](https://github.com/ashleysnl/simplekit-site/pull/10); owner instructed Phase 4; implementation/automated checks pass, manual AT coverage pending. |
+| 4 Trust indicators | `[~]` | [Trust/privacy evidence](v2/phase-04-verification.md); implementation/audit/automated checks pass; review and manual toolbar zoom remain. Owner requested early dedicated preview. |
 | 5 Goal navigation | `[ ]` | Pending Phase 4. |
 | 6 Popular calculators | `[ ]` | Pending Phase 5. |
 | 7 Guided onboarding | `[ ]` | Pending Phases 3, 5, 6. |
