@@ -1,0 +1,5 @@
+
+> seo:validate
+> node scripts/validate-seo.mjs
+
+SEO validation passed for 22 tools.

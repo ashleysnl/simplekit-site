@@ -1,0 +1,4 @@
+
+> seo:build
+> node scripts/generate-seo.mjs
+

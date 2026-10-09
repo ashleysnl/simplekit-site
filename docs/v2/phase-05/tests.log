@@ -1,0 +1,16 @@
+
+> test
+> node --test tests/*.test.mjs
+
+✔ tests/cloud-build.test.mjs (151.328708ms)
+✔ tests/v2-baseline-contracts.test.mjs (86.84999ms)
+✔ tests/v2-discovery.test.mjs (108.953615ms)
+✔ tests/v2-goals.test.mjs (71.158304ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 172.007884

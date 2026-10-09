@@ -225,20 +225,20 @@ Codex guidance: preserve the target's trust layout, but truth takes precedence o
 
 ## Phase 5 — Explore-by-goal navigation
 
-Status: `[ ]`. Depends on Phases 1–4.
+Status: `[x]`. Depends on Phases 1–4.
 
-- [ ] Implement the four goal cards in reference order, with matching icon/accent/name/description and accessible full-card links.
-- [ ] Map each goal to an existing directory section or deterministic filtered directory state; define stable anchors/query handling without renaming existing routes.
-- [ ] Ensure every tool has at least one documented discovery category. Surface tax, travel, pay and contractor tools through the complete directory/secondary groupings rather than hiding them because the mockup has only four goals.
-- [ ] Generate “View all 22 tools” from `{{toolCount}}`; preserve the unfiltered `/tools/` directory and a reset/all-tools option.
+- [x] Implement the four goal cards in reference order, with matching icon/accent/name/description and accessible full-card links.
+- [x] Map each goal to an existing directory section or deterministic filtered directory state; define stable anchors/query handling without renaming existing routes.
+- [x] Ensure every tool has at least one documented discovery category. Surface tax, travel, pay and contractor tools through the complete directory/secondary groupings rather than hiding them because the mockup has only four goals.
+- [x] Generate “View all 22 tools” from `{{toolCount}}`; preserve the unfiltered `/tools/` directory and a reset/all-tools option.
 
 Acceptance:
 
-- [ ] Retirement, Home & mortgage, Budget & debt, and Investing open the expected populated directory view; direct/back/reload links preserve their intended state.
-- [ ] The full directory contains all 22 tools, reachable without search or onboarding, with no duplicates or missing canonical destinations.
-- [ ] Cards use one column at narrow widths when needed and the reference two-column treatment where space permits; each link target is at least 44 × 44 CSS px.
+- [x] Retirement, Home & mortgage, Budget & debt, and Investing open the expected populated directory view; direct/back/reload links preserve their intended state.
+- [x] The full directory contains all 22 tools, reachable without search or onboarding, with no duplicates or missing canonical destinations.
+- [x] Cards use one column at narrow widths when needed and the reference two-column treatment where space permits; each link target is at least 44 × 44 CSS px.
 
-Codex guidance: modify authored directory templates alongside the homepage if filtering/anchors need support. Keep categories as discovery metadata tied to manifest IDs, not a competing route list. Evidence link: pending.
+Codex guidance: modify authored directory templates alongside the homepage if filtering/anchors need support. Keep categories as discovery metadata tied to manifest IDs, not a competing route list. Evidence: [Phase 5 verification](v2/phase-05-verification.md). Native fragment links reach four populated goal sections; all 22 canonical tools appear once across seven primary/secondary groups. Six widths, keyboard/focus/touch/direct/reload/Back/Forward/no-JS/fallback/enlargement checks pass. 27 repository checks, 22 exact calculator fixtures, earlier header/search/trust regressions, build/SEO/output/preservation and repeat-build checks pass. Implementation is on `develop-v2`; main and production remain unchanged. Earlier manual accessibility/toolbar-zoom limitations remain for Phase 8.
 
 ## Phase 6 — Popular calculators
 
@@ -407,8 +407,8 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 2 Header and hero | `[~]` | [Header/hero evidence](v2/phase-02-verification.md), [PR #9](https://github.com/ashleysnl/simplekit-site/pull/9); implementation complete; owner instructed Phase 3, manual coverage pending. |
 | 3 Search and questions | `[~]` | [Search evidence](v2/phase-03-verification.md), [PR #10](https://github.com/ashleysnl/simplekit-site/pull/10); owner instructed Phase 4; implementation/automated checks pass, manual AT coverage pending. |
 | 4 Trust indicators | `[~]` | [Trust/privacy evidence](v2/phase-04-verification.md), [PR #11](https://github.com/ashleysnl/simplekit-site/pull/11); implementation/audit/CI pass; review and toolbar zoom remain. [Early preview uploaded](https://73147f8f.simplekit-preview.pages.dev) after owner approval; live checks limited here by certificate/403 errors. |
-| 5 Goal navigation | `[ ]` | Pending Phase 4. |
-| 6 Popular calculators | `[ ]` | Pending Phase 5. |
+| 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner instructed Phase 5 after consolidation; earlier manual/review limitations remain for Phase 8. |
+| 6 Popular calculators | `[ ]` | Ready after Phase 5; awaiting instruction. |
 | 7 Guided onboarding | `[ ]` | Pending Phases 3, 5, 6. |
 | 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |

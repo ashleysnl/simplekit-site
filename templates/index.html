@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="assets/v2/home.css">
   <link rel="stylesheet" href="assets/v2/discovery.css">
   <link rel="stylesheet" href="assets/v2/trust.css">
+  <link rel="stylesheet" href="assets/v2/goals.css">
   <script defer src="assets/v2/home.js"></script>
   <script type="module" src="assets/v2/discovery.js"></script>
   <!-- Google tag (gtag.js) -->
@@ -155,6 +156,16 @@
       </div>
     </section>
 
+    <section class="sk-v2 v2-section v2-home-goals" aria-labelledby="home-goals-title">
+      <div class="v2-container">
+        <div class="v2-goal-heading">
+          <div><p class="v2-eyebrow">Explore by goal</p><h2 id="home-goals-title">What are you planning?</h2></div>
+          <a class="v2-goal-all" href="tools/">View all {{toolCount}} tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
+        </div>
+        <ul class="v2-goals v2-home-goal-list">{{v2GoalCards}}</ul>
+      </div>
+    </section>
+
     <div class="page v2-legacy-page">
     <section class="content">
       <section class="section">
@@ -180,64 +191,6 @@
             <a class="button" href="{{toolUrl:retirement-planner}}">Open Retirement Planner</a>
           </div>
         </article>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <div class="section-kicker">Browse by Goal</div>
-          <h2>Choose from {{toolCount}} tools, grouped by decision.</h2>
-          <p class="section-copy">
-            Find a calculator for the question you have, then open it directly. Each tool focuses on one decision, with related options nearby.
-          </p>
-        </div>
-        <div class="grouped-tool-window">
-          <div class="tool-group-row">
-            <div class="tool-group-label">
-              <div class="tool-group-kicker">Plan Your Future</div>
-              <p>Retirement, growth, and the tools that help you map the bigger picture first.</p>
-            </div>
-            <div class="tool-group-grid">
-              <article class="card"><div class="card-head"><span class="icon-chip">RP</span><span class="label">Planner</span><span class="meta-tag">5 min</span></div><h3>Retirement Planner</h3><p class="card-copy">Model retirement income, savings needs, and future cash flow with a more complete planning view.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:retirement-planner}}">Open Planner</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">FI</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>FIRE Calculator</h3><p class="card-copy">Estimate how much you may need to retire early and how long it could take to get there.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:fire-calculator}}">Explore FIRE</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">CP</span><span class="label">Calculator</span><span class="meta-tag">2 min</span></div><h3>CPP Calculator</h3><p class="card-copy">Explore CPP timing and estimate how starting earlier or later can change future benefits.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:cpp-calculator}}">Estimate CPP</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">RT</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>RRSP / TFSA Calculator</h3><p class="card-copy">Compare account strategies and see how tax treatment changes the long-term result.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:rrsp-vs-tfsa-calculator}}">Compare Accounts</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">IG</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Compound Interest Calculator</h3><p class="card-copy">Estimate how an initial investment plus recurring contributions may grow over time with compounding, fees, inflation, and a clear growth breakdown.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:compound-interest-calculator}}">Open Compound Interest Tool</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">SG</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Savings Goal Calculator</h3><p class="card-copy">Plan your savings target, compare scenarios, and see how long it may take to reach your goal.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:savings-goal-calculator}}">Open Savings Goal Tool</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">EF</span><span class="label">Calculator</span><span class="meta-tag">2 min</span></div><h3>Emergency Fund Calculator</h3><p class="card-copy">Estimate your target, see your savings gap, and understand how long it may take to build your cushion.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:emergency-fund-calculator}}">Open Emergency Fund Tool</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">NW</span><span class="label">Calculator</span><span class="meta-tag">2 min</span></div><h3>Net Worth Calculator</h3><p class="card-copy">See where you stand today by adding up assets, debts, and home equity in one simple snapshot.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:net-worth-calculator}}">View Your Net Worth</a></div></article>
-            </div>
-          </div>
-          <div class="tool-group-row">
-            <div class="tool-group-label">
-              <div class="tool-group-kicker">Reduce Costs &amp; Debt</div>
-              <p>Budgeting, borrowing, take-home pay, and debt-focused tools for decisions where monthly tradeoffs matter.</p>
-            </div>
-            <div class="tool-group-grid">
-              <article class="card"><div class="card-head"><span class="icon-chip">BG</span><span class="label">Planner</span><span class="meta-tag">3 min</span></div><h3>Budget Planner</h3><p class="card-copy">Build a clear monthly budget and see how much room you have for savings, investing, or debt payoff.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:budget-planner}}">Open Budget Planner</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">CR</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Contractor Effective Hourly Rate Calculator</h3><p class="card-copy">Compare your posted contract rate against the annual income and effective hourly rate you actually keep after unpaid vacation and self-paid benefits.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:contractor-effective-hourly-rate-calculator}}">Compare Contract Pay</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">TH</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Canadian Take Home Pay Calculator</h3><p class="card-copy">Estimate monthly net pay, review tax and payroll deductions, and compare how the same salary changes across provinces and territories.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:take-home-pay-calculator}}">Estimate Take Home Pay</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">DB</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Debt Payoff Calculator</h3><p class="card-copy">Compare debt snowball vs avalanche, estimate your debt-free date, and see how extra monthly payments change total interest.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:debt-payoff-calculator}}">Build a Payoff Plan</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">CC</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Credit Card Interest Calculator</h3><p class="card-copy">Estimate payoff time, total interest, and how extra monthly payments could lower the overall cost of carrying a balance.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:credit-card-interest-calculator}}">Estimate Card Payoff</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">LN</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Loan Calculator</h3><p class="card-copy">Estimate payments, compare loan scenarios, model extra payments, and review a full amortization schedule in one clear view.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:loan-calculator}}">Open Loan Calculator</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">HA</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>House Affordability Calculator</h3><p class="card-copy">Estimate a realistic home budget using income, debts, down payment, mortgage rate, and ongoing ownership costs.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:house-affordability-calculator}}">Estimate House Budget</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">DT</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Debt-to-Income Ratio Calculator</h3><p class="card-copy">Check how much of your gross monthly income is already committed to housing and debt payments, then test a future mortgage or rent scenario.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:debt-to-income-ratio-calculator}}">Calculate DTI</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">RV</span><span class="label">Calculator</span><span class="meta-tag">4 min</span></div><h3>Rent vs Buy Calculator</h3><p class="card-copy">Compare the full cost of renting versus buying, estimate break-even timing, and see which path may build more wealth.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:rent-vs-buy-calculator}}">Compare Rent vs Buy</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">MG</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Mortgage Paydown vs Invest</h3><p class="card-copy">Compare paying down your mortgage faster versus investing the difference so you can see which path may fit better.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:mortgage-paydown-vs-invest-calculator}}">Compare Paydown vs Invest</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">FE</span><span class="label">Calculator</span><span class="meta-tag">2 min</span></div><h3>Investment Fee Calculator</h3><p class="card-copy">See how investment fees may cost you over time and understand how small percentages can compound into a bigger drag.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:investment-fee-calculator}}">See Fee Impact</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">MC</span><span class="label">Calculator</span><span class="meta-tag">3 min</span></div><h3>Mortgage Calculator</h3><p class="card-copy">See your payment, amortization timeline, and total interest clearly, then test how weekly timing, recurring extras, and lump sums change the result.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:mortgage-calculator}}">Calculate Mortgage Payments</a></div></article>
-            </div>
-          </div>
-          <div class="tool-group-row">
-            <div class="tool-group-label">
-              <div class="tool-group-kicker">Lifestyle Planning</div>
-              <p>Tools for organizing recurring real-life plans like tax season and travel when clarity matters more than a long-term forecast.</p>
-            </div>
-            <div class="tool-group-grid">
-              <article class="card"><div class="card-head"><span class="icon-chip">TX</span><span class="label">Checklist</span><span class="meta-tag">3 min</span></div><h3>Canadian Tax Checklist</h3><p class="card-copy">Organize recurring slips, receipts, notes, and family tax tasks in one reusable checklist you can save and reload each year.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:canadian-tax-checklist}}">Open Tax Checklist</a></div></article>
-              <article class="card"><div class="card-head"><span class="icon-chip">TR</span><span class="label">Planner</span><span class="meta-tag">4 min</span></div><h3>Travel Planner</h3><p class="card-copy">Organize trip costs, compare scenarios, and build a travel plan that feels easier to adjust.</p><div class="card-actions"><a class="button-secondary" href="{{toolUrl:travel-planner}}">Plan a Trip</a></div></article>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section class="section">

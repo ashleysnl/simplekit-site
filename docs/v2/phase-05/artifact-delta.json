@@ -1,0 +1,14 @@
+{
+  "parentCommit": "f47189720c09d535ad7a72e495b36eaa861e58e7",
+  "parentFiles": 322,
+  "totalFiles": 323,
+  "changedFiles": [
+    "index.html",
+    "tools/index.html"
+  ],
+  "newFiles": [
+    "assets/v2/goals.css"
+  ],
+  "removedFiles": [],
+  "unchangedParentFiles": 320
+}

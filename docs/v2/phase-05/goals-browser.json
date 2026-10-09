@@ -1,0 +1,1766 @@
+{
+  "browser": "151.0.7922.173",
+  "layouts": [
+    {
+      "state": "width-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "columns": 1,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 16,
+            "y": 1756.328125,
+            "width": 288,
+            "height": 79.6875,
+            "top": 1756.328125,
+            "right": 304,
+            "bottom": 1836.015625,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1773.328125,
+            "width": 210,
+            "height": 45.6875,
+            "top": 1773.328125,
+            "right": 275,
+            "bottom": 1819.015625,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1780.171875,
+            "width": 32,
+            "height": 32,
+            "top": 1780.171875,
+            "right": 59,
+            "bottom": 1812.171875,
+            "left": 27
+          },
+          "chevron": {
+            "x": 281,
+            "y": 1783.765625,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1783.765625,
+            "right": 293,
+            "bottom": 1808.5625,
+            "left": 281
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 16,
+            "y": 1852.015625,
+            "width": 288,
+            "height": 79.6875,
+            "top": 1852.015625,
+            "right": 304,
+            "bottom": 1931.703125,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1869.015625,
+            "width": 210,
+            "height": 45.6875,
+            "top": 1869.015625,
+            "right": 275,
+            "bottom": 1914.703125,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1875.859375,
+            "width": 32,
+            "height": 32,
+            "top": 1875.859375,
+            "right": 59,
+            "bottom": 1907.859375,
+            "left": 27
+          },
+          "chevron": {
+            "x": 281,
+            "y": 1879.453125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1879.453125,
+            "right": 293,
+            "bottom": 1904.25,
+            "left": 281
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 16,
+            "y": 1947.703125,
+            "width": 288,
+            "height": 79.6875,
+            "top": 1947.703125,
+            "right": 304,
+            "bottom": 2027.390625,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1964.703125,
+            "width": 210,
+            "height": 45.6875,
+            "top": 1964.703125,
+            "right": 275,
+            "bottom": 2010.390625,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1971.546875,
+            "width": 32,
+            "height": 32,
+            "top": 1971.546875,
+            "right": 59,
+            "bottom": 2003.546875,
+            "left": 27
+          },
+          "chevron": {
+            "x": 281,
+            "y": 1975.140625,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1975.140625,
+            "right": 293,
+            "bottom": 1999.9375,
+            "left": 281
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 16,
+            "y": 2043.390625,
+            "width": 288,
+            "height": 79.6875,
+            "top": 2043.390625,
+            "right": 304,
+            "bottom": 2123.078125,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 2060.390625,
+            "width": 210,
+            "height": 45.6875,
+            "top": 2060.390625,
+            "right": 275,
+            "bottom": 2106.078125,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 2067.234375,
+            "width": 32,
+            "height": 32,
+            "top": 2067.234375,
+            "right": 59,
+            "bottom": 2099.234375,
+            "left": 27
+          },
+          "chevron": {
+            "x": 281,
+            "y": 2070.828125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 2070.828125,
+            "right": 293,
+            "bottom": 2095.625,
+            "left": 281
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "width-375",
+      "width": 375,
+      "scrollWidth": 375,
+      "columns": 1,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 16,
+            "y": 1578.890625,
+            "width": 343,
+            "height": 79.6875,
+            "top": 1578.890625,
+            "right": 359,
+            "bottom": 1658.578125,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1595.890625,
+            "width": 265,
+            "height": 45.6875,
+            "top": 1595.890625,
+            "right": 330,
+            "bottom": 1641.578125,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1602.734375,
+            "width": 32,
+            "height": 32,
+            "top": 1602.734375,
+            "right": 59,
+            "bottom": 1634.734375,
+            "left": 27
+          },
+          "chevron": {
+            "x": 336,
+            "y": 1606.328125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1606.328125,
+            "right": 348,
+            "bottom": 1631.125,
+            "left": 336
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 16,
+            "y": 1674.578125,
+            "width": 343,
+            "height": 79.6875,
+            "top": 1674.578125,
+            "right": 359,
+            "bottom": 1754.265625,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1691.578125,
+            "width": 265,
+            "height": 45.6875,
+            "top": 1691.578125,
+            "right": 330,
+            "bottom": 1737.265625,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1698.421875,
+            "width": 32,
+            "height": 32,
+            "top": 1698.421875,
+            "right": 59,
+            "bottom": 1730.421875,
+            "left": 27
+          },
+          "chevron": {
+            "x": 336,
+            "y": 1702.015625,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1702.015625,
+            "right": 348,
+            "bottom": 1726.8125,
+            "left": 336
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 16,
+            "y": 1770.265625,
+            "width": 343,
+            "height": 79.6875,
+            "top": 1770.265625,
+            "right": 359,
+            "bottom": 1849.953125,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1787.265625,
+            "width": 265,
+            "height": 45.6875,
+            "top": 1787.265625,
+            "right": 330,
+            "bottom": 1832.953125,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1794.109375,
+            "width": 32,
+            "height": 32,
+            "top": 1794.109375,
+            "right": 59,
+            "bottom": 1826.109375,
+            "left": 27
+          },
+          "chevron": {
+            "x": 336,
+            "y": 1797.703125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1797.703125,
+            "right": 348,
+            "bottom": 1822.5,
+            "left": 336
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 16,
+            "y": 1865.953125,
+            "width": 343,
+            "height": 79.6875,
+            "top": 1865.953125,
+            "right": 359,
+            "bottom": 1945.640625,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1882.953125,
+            "width": 265,
+            "height": 45.6875,
+            "top": 1882.953125,
+            "right": 330,
+            "bottom": 1928.640625,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1889.796875,
+            "width": 32,
+            "height": 32,
+            "top": 1889.796875,
+            "right": 59,
+            "bottom": 1921.796875,
+            "left": 27
+          },
+          "chevron": {
+            "x": 336,
+            "y": 1893.390625,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1893.390625,
+            "right": 348,
+            "bottom": 1918.1875,
+            "left": 336
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "width-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "columns": 2,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 16,
+            "y": 1580.140625,
+            "width": 171,
+            "height": 121.375,
+            "top": 1580.140625,
+            "right": 187,
+            "bottom": 1701.515625,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1607.140625,
+            "width": 93,
+            "height": 67.375,
+            "top": 1607.140625,
+            "right": 158,
+            "bottom": 1674.515625,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1624.828125,
+            "width": 32,
+            "height": 32,
+            "top": 1624.828125,
+            "right": 59,
+            "bottom": 1656.828125,
+            "left": 27
+          },
+          "chevron": {
+            "x": 164,
+            "y": 1628.421875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1628.421875,
+            "right": 176,
+            "bottom": 1653.21875,
+            "left": 164
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 203,
+            "y": 1580.140625,
+            "width": 171,
+            "height": 121.375,
+            "top": 1580.140625,
+            "right": 374,
+            "bottom": 1701.515625,
+            "left": 203
+          },
+          "copy": {
+            "x": 252,
+            "y": 1597.140625,
+            "width": 93,
+            "height": 87.375,
+            "top": 1597.140625,
+            "right": 345,
+            "bottom": 1684.515625,
+            "left": 252
+          },
+          "icon": {
+            "x": 214,
+            "y": 1624.828125,
+            "width": 32,
+            "height": 32,
+            "top": 1624.828125,
+            "right": 246,
+            "bottom": 1656.828125,
+            "left": 214
+          },
+          "chevron": {
+            "x": 351,
+            "y": 1628.421875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1628.421875,
+            "right": 363,
+            "bottom": 1653.21875,
+            "left": 351
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 16,
+            "y": 1717.515625,
+            "width": 171,
+            "height": 121.375,
+            "top": 1717.515625,
+            "right": 187,
+            "bottom": 1838.890625,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1734.515625,
+            "width": 93,
+            "height": 87.375,
+            "top": 1734.515625,
+            "right": 158,
+            "bottom": 1821.890625,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1762.203125,
+            "width": 32,
+            "height": 32,
+            "top": 1762.203125,
+            "right": 59,
+            "bottom": 1794.203125,
+            "left": 27
+          },
+          "chevron": {
+            "x": 164,
+            "y": 1765.796875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1765.796875,
+            "right": 176,
+            "bottom": 1790.59375,
+            "left": 164
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 203,
+            "y": 1717.515625,
+            "width": 171,
+            "height": 121.375,
+            "top": 1717.515625,
+            "right": 374,
+            "bottom": 1838.890625,
+            "left": 203
+          },
+          "copy": {
+            "x": 252,
+            "y": 1744.515625,
+            "width": 93,
+            "height": 67.375,
+            "top": 1744.515625,
+            "right": 345,
+            "bottom": 1811.890625,
+            "left": 252
+          },
+          "icon": {
+            "x": 214,
+            "y": 1762.203125,
+            "width": 32,
+            "height": 32,
+            "top": 1762.203125,
+            "right": 246,
+            "bottom": 1794.203125,
+            "left": 214
+          },
+          "chevron": {
+            "x": 351,
+            "y": 1765.796875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1765.796875,
+            "right": 363,
+            "bottom": 1790.59375,
+            "left": 351
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "width-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "columns": 2,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 30.71875,
+            "y": 1331.71875,
+            "width": 345.265625,
+            "height": 98.296875,
+            "top": 1331.71875,
+            "right": 375.984375,
+            "bottom": 1430.015625,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 123.71875,
+            "y": 1352.71875,
+            "width": 203.265625,
+            "height": 56.296875,
+            "top": 1352.71875,
+            "right": 326.984375,
+            "bottom": 1409.015625,
+            "left": 123.71875
+          },
+          "icon": {
+            "x": 51.71875,
+            "y": 1352.859375,
+            "width": 56,
+            "height": 56,
+            "top": 1352.859375,
+            "right": 107.71875,
+            "bottom": 1408.859375,
+            "left": 51.71875
+          },
+          "chevron": {
+            "x": 342.984375,
+            "y": 1368.46875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1368.46875,
+            "right": 354.984375,
+            "bottom": 1393.265625,
+            "left": 342.984375
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 391.984375,
+            "y": 1331.71875,
+            "width": 345.28125,
+            "height": 98.296875,
+            "top": 1331.71875,
+            "right": 737.265625,
+            "bottom": 1430.015625,
+            "left": 391.984375
+          },
+          "copy": {
+            "x": 484.984375,
+            "y": 1352.71875,
+            "width": 203.28125,
+            "height": 56.296875,
+            "top": 1352.71875,
+            "right": 688.265625,
+            "bottom": 1409.015625,
+            "left": 484.984375
+          },
+          "icon": {
+            "x": 412.984375,
+            "y": 1352.859375,
+            "width": 56,
+            "height": 56,
+            "top": 1352.859375,
+            "right": 468.984375,
+            "bottom": 1408.859375,
+            "left": 412.984375
+          },
+          "chevron": {
+            "x": 704.265625,
+            "y": 1368.46875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1368.46875,
+            "right": 716.265625,
+            "bottom": 1393.265625,
+            "left": 704.265625
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 30.71875,
+            "y": 1446.015625,
+            "width": 345.265625,
+            "height": 98.296875,
+            "top": 1446.015625,
+            "right": 375.984375,
+            "bottom": 1544.3125,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 123.71875,
+            "y": 1467.015625,
+            "width": 203.265625,
+            "height": 56.296875,
+            "top": 1467.015625,
+            "right": 326.984375,
+            "bottom": 1523.3125,
+            "left": 123.71875
+          },
+          "icon": {
+            "x": 51.71875,
+            "y": 1467.15625,
+            "width": 56,
+            "height": 56,
+            "top": 1467.15625,
+            "right": 107.71875,
+            "bottom": 1523.15625,
+            "left": 51.71875
+          },
+          "chevron": {
+            "x": 342.984375,
+            "y": 1482.765625,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1482.765625,
+            "right": 354.984375,
+            "bottom": 1507.5625,
+            "left": 342.984375
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 391.984375,
+            "y": 1446.015625,
+            "width": 345.28125,
+            "height": 98.296875,
+            "top": 1446.015625,
+            "right": 737.265625,
+            "bottom": 1544.3125,
+            "left": 391.984375
+          },
+          "copy": {
+            "x": 484.984375,
+            "y": 1467.015625,
+            "width": 203.28125,
+            "height": 56.296875,
+            "top": 1467.015625,
+            "right": 688.265625,
+            "bottom": 1523.3125,
+            "left": 484.984375
+          },
+          "icon": {
+            "x": 412.984375,
+            "y": 1467.15625,
+            "width": 56,
+            "height": 56,
+            "top": 1467.15625,
+            "right": 468.984375,
+            "bottom": 1523.15625,
+            "left": 412.984375
+          },
+          "chevron": {
+            "x": 704.265625,
+            "y": 1482.765625,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1482.765625,
+            "right": 716.265625,
+            "bottom": 1507.5625,
+            "left": 704.265625
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "width-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "columns": 2,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 144,
+            "y": 1341.984375,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1341.984375,
+            "right": 712,
+            "bottom": 1440.28125,
+            "left": 144
+          },
+          "copy": {
+            "x": 237,
+            "y": 1362.984375,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1362.984375,
+            "right": 663,
+            "bottom": 1419.28125,
+            "left": 237
+          },
+          "icon": {
+            "x": 165,
+            "y": 1363.125,
+            "width": 56,
+            "height": 56,
+            "top": 1363.125,
+            "right": 221,
+            "bottom": 1419.125,
+            "left": 165
+          },
+          "chevron": {
+            "x": 679,
+            "y": 1378.734375,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1378.734375,
+            "right": 691,
+            "bottom": 1403.53125,
+            "left": 679
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 728,
+            "y": 1341.984375,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1341.984375,
+            "right": 1296,
+            "bottom": 1440.28125,
+            "left": 728
+          },
+          "copy": {
+            "x": 821,
+            "y": 1362.984375,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1362.984375,
+            "right": 1247,
+            "bottom": 1419.28125,
+            "left": 821
+          },
+          "icon": {
+            "x": 749,
+            "y": 1363.125,
+            "width": 56,
+            "height": 56,
+            "top": 1363.125,
+            "right": 805,
+            "bottom": 1419.125,
+            "left": 749
+          },
+          "chevron": {
+            "x": 1263,
+            "y": 1378.734375,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1378.734375,
+            "right": 1275,
+            "bottom": 1403.53125,
+            "left": 1263
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 144,
+            "y": 1456.28125,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1456.28125,
+            "right": 712,
+            "bottom": 1554.578125,
+            "left": 144
+          },
+          "copy": {
+            "x": 237,
+            "y": 1477.28125,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1477.28125,
+            "right": 663,
+            "bottom": 1533.578125,
+            "left": 237
+          },
+          "icon": {
+            "x": 165,
+            "y": 1477.421875,
+            "width": 56,
+            "height": 56,
+            "top": 1477.421875,
+            "right": 221,
+            "bottom": 1533.421875,
+            "left": 165
+          },
+          "chevron": {
+            "x": 679,
+            "y": 1493.03125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1493.03125,
+            "right": 691,
+            "bottom": 1517.828125,
+            "left": 679
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 728,
+            "y": 1456.28125,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1456.28125,
+            "right": 1296,
+            "bottom": 1554.578125,
+            "left": 728
+          },
+          "copy": {
+            "x": 821,
+            "y": 1477.28125,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1477.28125,
+            "right": 1247,
+            "bottom": 1533.578125,
+            "left": 821
+          },
+          "icon": {
+            "x": 749,
+            "y": 1477.421875,
+            "width": 56,
+            "height": 56,
+            "top": 1477.421875,
+            "right": 805,
+            "bottom": 1533.421875,
+            "left": 749
+          },
+          "chevron": {
+            "x": 1263,
+            "y": 1493.03125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1493.03125,
+            "right": 1275,
+            "bottom": 1517.828125,
+            "left": 1263
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "width-1920",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "columns": 2,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 384,
+            "y": 1342.78125,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1342.78125,
+            "right": 952,
+            "bottom": 1441.078125,
+            "left": 384
+          },
+          "copy": {
+            "x": 477,
+            "y": 1363.78125,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1363.78125,
+            "right": 903,
+            "bottom": 1420.078125,
+            "left": 477
+          },
+          "icon": {
+            "x": 405,
+            "y": 1363.921875,
+            "width": 56,
+            "height": 56,
+            "top": 1363.921875,
+            "right": 461,
+            "bottom": 1419.921875,
+            "left": 405
+          },
+          "chevron": {
+            "x": 919,
+            "y": 1379.53125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1379.53125,
+            "right": 931,
+            "bottom": 1404.328125,
+            "left": 919
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 968,
+            "y": 1342.78125,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1342.78125,
+            "right": 1536,
+            "bottom": 1441.078125,
+            "left": 968
+          },
+          "copy": {
+            "x": 1061,
+            "y": 1363.78125,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1363.78125,
+            "right": 1487,
+            "bottom": 1420.078125,
+            "left": 1061
+          },
+          "icon": {
+            "x": 989,
+            "y": 1363.921875,
+            "width": 56,
+            "height": 56,
+            "top": 1363.921875,
+            "right": 1045,
+            "bottom": 1419.921875,
+            "left": 989
+          },
+          "chevron": {
+            "x": 1503,
+            "y": 1379.53125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1379.53125,
+            "right": 1515,
+            "bottom": 1404.328125,
+            "left": 1503
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 384,
+            "y": 1457.078125,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1457.078125,
+            "right": 952,
+            "bottom": 1555.375,
+            "left": 384
+          },
+          "copy": {
+            "x": 477,
+            "y": 1478.078125,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1478.078125,
+            "right": 903,
+            "bottom": 1534.375,
+            "left": 477
+          },
+          "icon": {
+            "x": 405,
+            "y": 1478.21875,
+            "width": 56,
+            "height": 56,
+            "top": 1478.21875,
+            "right": 461,
+            "bottom": 1534.21875,
+            "left": 405
+          },
+          "chevron": {
+            "x": 919,
+            "y": 1493.828125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1493.828125,
+            "right": 931,
+            "bottom": 1518.625,
+            "left": 919
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 968,
+            "y": 1457.078125,
+            "width": 568,
+            "height": 98.296875,
+            "top": 1457.078125,
+            "right": 1536,
+            "bottom": 1555.375,
+            "left": 968
+          },
+          "copy": {
+            "x": 1061,
+            "y": 1478.078125,
+            "width": 426,
+            "height": 56.296875,
+            "top": 1478.078125,
+            "right": 1487,
+            "bottom": 1534.375,
+            "left": 1061
+          },
+          "icon": {
+            "x": 989,
+            "y": 1478.21875,
+            "width": 56,
+            "height": 56,
+            "top": 1478.21875,
+            "right": 1045,
+            "bottom": 1534.21875,
+            "left": 989
+          },
+          "chevron": {
+            "x": 1503,
+            "y": 1493.828125,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1493.828125,
+            "right": 1515,
+            "bottom": 1518.625,
+            "left": 1503
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "CSS zoom 200%",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "columns": 2,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 96,
+            "y": 3225.421875,
+            "width": 608,
+            "height": 251.59375,
+            "top": 3225.421875,
+            "right": 704,
+            "bottom": 3477.015625,
+            "left": 96
+          },
+          "copy": {
+            "x": 282,
+            "y": 3294.921875,
+            "width": 324,
+            "height": 112.59375,
+            "top": 3294.921875,
+            "right": 606,
+            "bottom": 3407.515625,
+            "left": 282
+          },
+          "icon": {
+            "x": 138,
+            "y": 3295.21875,
+            "width": 112,
+            "height": 112,
+            "top": 3295.21875,
+            "right": 250,
+            "bottom": 3407.21875,
+            "left": 138
+          },
+          "chevron": {
+            "x": 638,
+            "y": 3326.421875,
+            "width": 24,
+            "height": 49.59375,
+            "top": 3326.421875,
+            "right": 662,
+            "bottom": 3376.015625,
+            "left": 638
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 736,
+            "y": 3225.421875,
+            "width": 608,
+            "height": 251.59375,
+            "top": 3225.421875,
+            "right": 1344,
+            "bottom": 3477.015625,
+            "left": 736
+          },
+          "copy": {
+            "x": 922,
+            "y": 3267.421875,
+            "width": 324,
+            "height": 167.59375,
+            "top": 3267.421875,
+            "right": 1246,
+            "bottom": 3435.015625,
+            "left": 922
+          },
+          "icon": {
+            "x": 778,
+            "y": 3295.21875,
+            "width": 112,
+            "height": 112,
+            "top": 3295.21875,
+            "right": 890,
+            "bottom": 3407.21875,
+            "left": 778
+          },
+          "chevron": {
+            "x": 1278,
+            "y": 3326.421875,
+            "width": 24,
+            "height": 49.59375,
+            "top": 3326.421875,
+            "right": 1302,
+            "bottom": 3376.015625,
+            "left": 1278
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 96,
+            "y": 3509.015625,
+            "width": 608,
+            "height": 196.59375,
+            "top": 3509.015625,
+            "right": 704,
+            "bottom": 3705.609375,
+            "left": 96
+          },
+          "copy": {
+            "x": 282,
+            "y": 3551.015625,
+            "width": 324,
+            "height": 112.59375,
+            "top": 3551.015625,
+            "right": 606,
+            "bottom": 3663.609375,
+            "left": 282
+          },
+          "icon": {
+            "x": 138,
+            "y": 3551.3125,
+            "width": 112,
+            "height": 112,
+            "top": 3551.3125,
+            "right": 250,
+            "bottom": 3663.3125,
+            "left": 138
+          },
+          "chevron": {
+            "x": 638,
+            "y": 3582.515625,
+            "width": 24,
+            "height": 49.59375,
+            "top": 3582.515625,
+            "right": 662,
+            "bottom": 3632.109375,
+            "left": 638
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 736,
+            "y": 3509.015625,
+            "width": 608,
+            "height": 196.59375,
+            "top": 3509.015625,
+            "right": 1344,
+            "bottom": 3705.609375,
+            "left": 736
+          },
+          "copy": {
+            "x": 922,
+            "y": 3551.015625,
+            "width": 324,
+            "height": 112.59375,
+            "top": 3551.015625,
+            "right": 1246,
+            "bottom": 3663.609375,
+            "left": 922
+          },
+          "icon": {
+            "x": 778,
+            "y": 3551.3125,
+            "width": 112,
+            "height": 112,
+            "top": 3551.3125,
+            "right": 890,
+            "bottom": 3663.3125,
+            "left": 778
+          },
+          "chevron": {
+            "x": 1278,
+            "y": 3582.515625,
+            "width": 24,
+            "height": 49.59375,
+            "top": 3582.515625,
+            "right": 1302,
+            "bottom": 3632.109375,
+            "left": 1278
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "text 200% at 320",
+      "width": 320,
+      "scrollWidth": 320,
+      "columns": 1,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 32,
+            "y": 8409.515625,
+            "width": 256,
+            "height": 284.171875,
+            "top": 8409.515625,
+            "right": 288,
+            "bottom": 8693.6875,
+            "left": 32
+          },
+          "copy": {
+            "x": 129,
+            "y": 8442.515625,
+            "width": 102,
+            "height": 218.171875,
+            "top": 8442.515625,
+            "right": 231,
+            "bottom": 8660.6875,
+            "left": 129
+          },
+          "icon": {
+            "x": 53,
+            "y": 8519.59375,
+            "width": 64,
+            "height": 64,
+            "top": 8519.59375,
+            "right": 117,
+            "bottom": 8583.59375,
+            "left": 53
+          },
+          "chevron": {
+            "x": 243,
+            "y": 8526.796875,
+            "width": 24,
+            "height": 49.59375,
+            "top": 8526.796875,
+            "right": 267,
+            "bottom": 8576.390625,
+            "left": 243
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 32,
+            "y": 8725.6875,
+            "width": 256,
+            "height": 364.171875,
+            "top": 8725.6875,
+            "right": 288,
+            "bottom": 9089.859375,
+            "left": 32
+          },
+          "copy": {
+            "x": 129,
+            "y": 8758.6875,
+            "width": 102,
+            "height": 298.171875,
+            "top": 8758.6875,
+            "right": 231,
+            "bottom": 9056.859375,
+            "left": 129
+          },
+          "icon": {
+            "x": 53,
+            "y": 8875.765625,
+            "width": 64,
+            "height": 64,
+            "top": 8875.765625,
+            "right": 117,
+            "bottom": 8939.765625,
+            "left": 53
+          },
+          "chevron": {
+            "x": 243,
+            "y": 8882.96875,
+            "width": 24,
+            "height": 49.59375,
+            "top": 8882.96875,
+            "right": 267,
+            "bottom": 8932.5625,
+            "left": 243
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 32,
+            "y": 9121.859375,
+            "width": 256,
+            "height": 240.78125,
+            "top": 9121.859375,
+            "right": 288,
+            "bottom": 9362.640625,
+            "left": 32
+          },
+          "copy": {
+            "x": 129,
+            "y": 9154.859375,
+            "width": 102,
+            "height": 174.78125,
+            "top": 9154.859375,
+            "right": 231,
+            "bottom": 9329.640625,
+            "left": 129
+          },
+          "icon": {
+            "x": 53,
+            "y": 9210.25,
+            "width": 64,
+            "height": 64,
+            "top": 9210.25,
+            "right": 117,
+            "bottom": 9274.25,
+            "left": 53
+          },
+          "chevron": {
+            "x": 243,
+            "y": 9217.453125,
+            "width": 24,
+            "height": 49.59375,
+            "top": 9217.453125,
+            "right": 267,
+            "bottom": 9267.046875,
+            "left": 243
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 32,
+            "y": 9394.640625,
+            "width": 256,
+            "height": 284.171875,
+            "top": 9394.640625,
+            "right": 288,
+            "bottom": 9678.8125,
+            "left": 32
+          },
+          "copy": {
+            "x": 129,
+            "y": 9427.640625,
+            "width": 102,
+            "height": 218.171875,
+            "top": 9427.640625,
+            "right": 231,
+            "bottom": 9645.8125,
+            "left": 129
+          },
+          "icon": {
+            "x": 53,
+            "y": 9504.71875,
+            "width": 64,
+            "height": 64,
+            "top": 9504.71875,
+            "right": 117,
+            "bottom": 9568.71875,
+            "left": 53
+          },
+          "chevron": {
+            "x": 243,
+            "y": 9511.921875,
+            "width": 24,
+            "height": 49.59375,
+            "top": 9511.921875,
+            "right": 267,
+            "bottom": 9561.515625,
+            "left": 243
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "state": "no JS, blocked fonts/icons, forced colors",
+      "width": 390,
+      "scrollWidth": 390,
+      "columns": 2,
+      "cards": [
+        {
+          "id": "retirement",
+          "href": "tools/#retirement",
+          "rect": {
+            "x": 16,
+            "y": 1581.59375,
+            "width": 171,
+            "height": 121.375,
+            "top": 1581.59375,
+            "right": 187,
+            "bottom": 1702.96875,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1608.59375,
+            "width": 93,
+            "height": 67.375,
+            "top": 1608.59375,
+            "right": 158,
+            "bottom": 1675.96875,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1626.28125,
+            "width": 32,
+            "height": 32,
+            "top": 1626.28125,
+            "right": 59,
+            "bottom": 1658.28125,
+            "left": 27
+          },
+          "chevron": {
+            "x": 164,
+            "y": 1629.875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1629.875,
+            "right": 176,
+            "bottom": 1654.671875,
+            "left": 164
+          },
+          "overflow": false
+        },
+        {
+          "id": "home",
+          "href": "tools/#home",
+          "rect": {
+            "x": 203,
+            "y": 1581.59375,
+            "width": 171,
+            "height": 121.375,
+            "top": 1581.59375,
+            "right": 374,
+            "bottom": 1702.96875,
+            "left": 203
+          },
+          "copy": {
+            "x": 252,
+            "y": 1598.59375,
+            "width": 93,
+            "height": 87.375,
+            "top": 1598.59375,
+            "right": 345,
+            "bottom": 1685.96875,
+            "left": 252
+          },
+          "icon": {
+            "x": 214,
+            "y": 1626.28125,
+            "width": 32,
+            "height": 32,
+            "top": 1626.28125,
+            "right": 246,
+            "bottom": 1658.28125,
+            "left": 214
+          },
+          "chevron": {
+            "x": 351,
+            "y": 1629.875,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1629.875,
+            "right": 363,
+            "bottom": 1654.671875,
+            "left": 351
+          },
+          "overflow": false
+        },
+        {
+          "id": "budget",
+          "href": "tools/#budget",
+          "rect": {
+            "x": 16,
+            "y": 1718.96875,
+            "width": 171,
+            "height": 121.375,
+            "top": 1718.96875,
+            "right": 187,
+            "bottom": 1840.34375,
+            "left": 16
+          },
+          "copy": {
+            "x": 65,
+            "y": 1735.96875,
+            "width": 93,
+            "height": 87.375,
+            "top": 1735.96875,
+            "right": 158,
+            "bottom": 1823.34375,
+            "left": 65
+          },
+          "icon": {
+            "x": 27,
+            "y": 1763.65625,
+            "width": 32,
+            "height": 32,
+            "top": 1763.65625,
+            "right": 59,
+            "bottom": 1795.65625,
+            "left": 27
+          },
+          "chevron": {
+            "x": 164,
+            "y": 1767.25,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1767.25,
+            "right": 176,
+            "bottom": 1792.046875,
+            "left": 164
+          },
+          "overflow": false
+        },
+        {
+          "id": "investing",
+          "href": "tools/#investing",
+          "rect": {
+            "x": 203,
+            "y": 1718.96875,
+            "width": 171,
+            "height": 121.375,
+            "top": 1718.96875,
+            "right": 374,
+            "bottom": 1840.34375,
+            "left": 203
+          },
+          "copy": {
+            "x": 252,
+            "y": 1745.96875,
+            "width": 93,
+            "height": 67.375,
+            "top": 1745.96875,
+            "right": 345,
+            "bottom": 1813.34375,
+            "left": 252
+          },
+          "icon": {
+            "x": 214,
+            "y": 1763.65625,
+            "width": 32,
+            "height": 32,
+            "top": 1763.65625,
+            "right": 246,
+            "bottom": 1795.65625,
+            "left": 214
+          },
+          "chevron": {
+            "x": 351,
+            "y": 1767.25,
+            "width": 12,
+            "height": 24.796875,
+            "top": 1767.25,
+            "right": 363,
+            "bottom": 1792.046875,
+            "left": 351
+          },
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "retirement",
+      "keyboard": true,
+      "direct": true,
+      "reload": true,
+      "backForward": true,
+      "focus": true
+    },
+    {
+      "id": "home",
+      "keyboard": true,
+      "direct": true,
+      "reload": true,
+      "backForward": true,
+      "focus": true
+    },
+    {
+      "id": "budget",
+      "keyboard": true,
+      "direct": true,
+      "reload": true,
+      "backForward": true,
+      "focus": true
+    },
+    {
+      "id": "investing",
+      "keyboard": true,
+      "direct": true,
+      "reload": true,
+      "backForward": true,
+      "focus": true
+    }
+  ],
+  "localRoutes": [
+    "/retirement-planner/",
+    "/fire-calculator/",
+    "/cpp-calculator/",
+    "/rrsp-vs-tfsa-calculator/",
+    "/compound-interest-calculator/",
+    "/savings-goal-calculator/",
+    "/emergency-fund-calculator/",
+    "/net-worth-calculator/",
+    "/budget-planner/",
+    "/take-home-pay-calculator/",
+    "/debt-payoff-calculator/",
+    "/credit-card-interest-calculator/",
+    "/loan-calculator/",
+    "/house-affordability-calculator/",
+    "/rent-vs-buy-calculator/",
+    "/mortgage-paydown-vs-invest-calculator/",
+    "/investment-fee-calculator/",
+    "/mortgage-calculator/",
+    "/canadian-tax-checklist/",
+    "/travel-planner/",
+    "/debt-to-income-ratio-calculator/",
+    "/contractor-effective-hourly-rate-calculator/"
+  ],
+  "tools": 22,
+  "categoryRule": "First existing discovery goal is the primary directory category; secondary tags remain in search.",
+  "allToolsReset": true,
+  "secondaryCategories": true,
+  "touch": true,
+  "noJavaScript": true,
+  "blockedFontsIcons": true,
+  "forcedColors": true,
+  "pageErrors": [],
+  "failedLocalResponses": [],
+  "limitations": "CSS zoom and text enlargement only; no native toolbar zoom, real-device or manual screen-reader claim. External analytics are stubbed."
+}

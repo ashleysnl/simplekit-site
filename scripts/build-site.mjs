@@ -14,6 +14,7 @@ import { repoRoot, outputRoot } from "./paths.mjs";
 import { acquireSources, sourceDirectory } from "./acquire-sources.mjs";
 import { localizeCoreHtml } from "./site-html.mjs";
 import { createDiscoveryIndex, discoveryModule, loadDiscoveryMetadata, renderDiscoveryQuestions } from "./v2-discovery.mjs";
+import { createGoalGroups, renderGoalCards, renderGoalDirectory, renderGoalNavigation } from "./v2-goals.mjs";
 
 const sourceById = new Map(acquireSources().map(source => [source.id, source]));
 const templatesRoot = path.join(repoRoot, "templates");
@@ -30,6 +31,7 @@ const toolCountPattern = /\{\{toolCount\}\}/g;
 
 runSeoValidation(manifest, repoRoot, { scanRepo: false });
 const discovery = createDiscoveryIndex(manifest, loadDiscoveryMetadata(repoRoot));
+const goalGroups = createGoalGroups(discovery);
 validateTemplates();
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(path.join(outputRoot, "data"), { recursive: true });
@@ -64,6 +66,9 @@ function buildTemplates(relativeDir = ".") {
     mkdirSync(path.dirname(destinationPath), { recursive: true });
     const template = readFileSync(absolutePath, "utf8");
     const rendered = template
+      .replaceAll("{{v2GoalCards}}", renderGoalCards(goalGroups))
+      .replaceAll("{{v2GoalNavigation}}", renderGoalNavigation(goalGroups))
+      .replaceAll("{{v2GoalDirectory}}", renderGoalDirectory(goalGroups))
       .replace(toolUrlPattern, (_, toolId) => {
         const tool = toolById.get(toolId);
         if (!tool) {
@@ -328,7 +333,8 @@ function collectTemplateAudit(files, relativeDir = ".") {
       continue;
     }
 
-    const template = readFileSync(absolutePath, "utf8");
+    const template = readFileSync(absolutePath, "utf8")
+      .replaceAll("{{v2GoalDirectory}}", renderGoalDirectory(goalGroups));
     const toolIds = [...template.matchAll(toolUrlPattern)].map((match) => match[1]);
     if (toolIds.length === 0) {
       continue;

@@ -1,0 +1,40 @@
+/* Phase 5: native goal anchors, with every directory tool always available. */
+.sk-v2 .v2-goal-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: .75rem 1.5rem; margin-bottom: 1.25rem; }
+.sk-v2 .v2-goal-heading h2 { margin-top: .375rem; }
+.sk-v2 .v2-goal-all { display: inline-flex; align-items: center; gap: .5rem; min-height: var(--v2-target-size); font-weight: 700; text-decoration: none; }
+.sk-v2 .v2-home-goal-list { padding: 0; margin: 0; list-style: none; }
+.sk-v2 .v2-home-goal-list li { min-width: 0; display: flex; }
+.sk-v2 .v2-home-goal-list .v2-goal { width: 100%; gap: .375rem; padding: 1rem .625rem; }
+.sk-v2 .v2-home-goal-list .v2-icon-disc { width: 2rem; height: 2rem; }
+.sk-v2 .v2-goal-copy { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.sk-v2 .v2-goal-name { display: block; font: 700 1rem/1.25 var(--v2-display); }
+.sk-v2 .v2-goal-description { display: block; margin-top: .25rem; color: var(--v2-slate); font-size: .875rem; }
+.sk-v2 .v2-goal-chevron { flex: none; color: var(--v2-slate); }
+.sk-v2 .v2-goal-chevron .v2-icon { width: .75rem; height: .75rem; }
+.sk-v2.v2-directory { padding: 1.5rem 0; border-top: 1px solid var(--v2-border); }
+.sk-v2 .v2-directory-intro { margin-block: .75rem; color: var(--v2-slate); }
+.sk-v2 .v2-directory-nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: 1rem 2rem; }
+.sk-v2 .v2-directory-nav a { display: inline-flex; align-items: center; min-height: var(--v2-target-size); padding: .625rem .875rem; border: 1px solid var(--v2-border); border-radius: var(--v2-radius-sm); text-decoration: none; }
+.sk-v2 .v2-directory-nav a:hover { background: var(--v2-blue-soft); }
+.sk-v2 .v2-directory-group { margin-top: 2.5rem; }
+.sk-v2 .v2-directory-group h3, .sk-v2 #all-tools { scroll-margin-block-start: 1.5rem; }
+.sk-v2 .v2-directory-group h3:target { text-decoration: underline; text-decoration-color: var(--v2-blue); text-underline-offset: .25em; }
+.sk-v2 .v2-directory-description { margin-block: .5rem 1rem; color: var(--v2-slate); }
+.sk-v2 .v2-directory-tools { display: grid; gap: .875rem; padding: 0; margin: 0; list-style: none; }
+.sk-v2 .v2-directory-tools li { display: flex; min-width: 0; }
+.sk-v2 .v2-directory-tool { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; min-height: var(--v2-target-size); padding: 1rem; border: 1px solid var(--v2-border); border-radius: var(--v2-radius-card); background: var(--v2-surface); color: var(--v2-navy); text-decoration: none; }
+.sk-v2 .v2-directory-tool > span { min-width: 0; overflow-wrap: anywhere; }
+.sk-v2 .v2-directory-tool:hover { border-color: var(--v2-blue); }
+.sk-v2 .v2-directory-name { display: block; font-weight: 700; }
+.sk-v2 .v2-directory-detail { display: block; margin-top: .375rem; color: var(--v2-slate); font-size: var(--v2-text-sm); }
+@media (min-width: 48rem) {
+  .sk-v2 .v2-home-goal-list .v2-goal { padding: 1.25rem; gap: 1rem; }
+  .sk-v2 .v2-home-goal-list .v2-icon-disc { width: var(--v2-icon-disc); height: var(--v2-icon-disc); }
+  .sk-v2 .v2-goal-name { font-size: 1.375rem; }
+  .sk-v2 .v2-goal-description { font-size: 1rem; }
+  .sk-v2 .v2-directory-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (forced-colors: active) {
+  .sk-v2 .v2-directory-nav a, .sk-v2 .v2-directory-tool { border-color: ButtonText; }
+  .sk-v2 .v2-goal-description, .sk-v2 .v2-directory-detail { color: CanvasText; }
+}
