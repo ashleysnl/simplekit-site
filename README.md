@@ -1,45 +1,30 @@
 # SimpleKit Main Site
 
-This repo is the landing-page and SEO control plane for SimpleKit.
+SimpleKit is a static HTML/CSS/JavaScript site. Build it on Linux, Codex Cloud, or a local machine with Git and Node.js (the tested version is pinned in [.node-version](.node-version)). No npm package installation is required for the build.
 
-## Source Of Truth
+```sh
+git clone https://github.com/ashleysnl/simplekit-site.git
+cd simplekit-site
+npm run sources:fetch
+npm test
+npm run build
+npm run seo:validate
+npm run output:validate
+npm run preview
+```
 
-SEO and canonical tool URLs live in [data/tools.json](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/data/tools.json).
+The preview serves `dist/` on port 8000. All generating scripts resolve paths from their own repository location. Downloaded sources live under ignored `.cache/calculator-sources/`; output lives under ignored `dist/`. Neither should be committed. The checked-in site root is preserved for the current GitHub Pages/Cloudflare hosting arrangement.
 
-Add new tools there first. The manifest drives:
+- [data/tools.json](data/tools.json): canonical calculator URLs and primary SEO settings.
+- [data/site-pages.json](data/site-pages.json): existing guide and retirement subpage sitemap additions.
+- [data/calculator-sources.json](data/calculator-sources.json): independent GitHub repositories pinned to full commits, including shared Core.
+- [data/tool-migration-tracker.json](data/tool-migration-tracker.json): migration history with portable source IDs.
+- [data/core-shell-migration-tracker.json](data/core-shell-migration-tracker.json): shared shell rollout status.
 
-- landing-page tool URLs
-- `robots.txt`
-- `sitemap.xml`
-- the compatibility registry in `data/tool-registry.json`
-- the browser helper in `assets/tool-registry.js`
+Edit landing-page sources in `templates/`, keep authored pages without templates in their existing route directories, and change calculator logic in its original repository. Add a tool to the canonical manifest, source lock, and tracker; use `{{toolUrl:tool-slug}}` in templates. Update source pins through reviewed pull requests.
 
-## Common Commands
+`npm run seo:build` refreshes SEO files in an existing `dist/` build. SEO validation checks published links and canonical metadata without treating historical reports as production navigation.
 
-- `npm run build`
-  Rebuilds the site, regenerates `robots.txt` and `sitemap.xml`, refreshes `data/tool-registry.json`, and renders the static site from `templates/`.
+See [CLOUD_DEVELOPMENT.md](CLOUD_DEVELOPMENT.md) for the dependency map, Codex Cloud setup, CI, manual Cloudflare previews, source revision updates, clean-environment results, and production deployment procedure. [SEO-MIGRATION.md](SEO-MIGRATION.md) and [CORE-SHELL-MIGRATION.md](CORE-SHELL-MIGRATION.md) cover the tool migration workflows.
 
-- `npm run seo:build`
-  Regenerates just the SEO outputs from the manifest.
-
-- `npm run seo:validate`
-  Validates the manifest and fails if canonical URLs drift or legacy subdomain links still appear in repo content.
-
-## Add A New Tool
-
-1. Add the tool to [data/tools.json](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/data/tools.json).
-2. Use `{{toolUrl:tool-slug}}` tokens in templates instead of hardcoded URLs.
-3. Run `npm run seo:validate`.
-4. Run `npm run build`.
-
-## Notes
-
-- Canonical production URLs should follow `https://simplekit.app/<slug>/`.
-- Legacy subdomains can remain live, but this repo should only promote canonical path URLs in SEO outputs.
-- `data/tool-registry.json` is still generated for compatibility with the existing migration workflow, but it should not be edited by hand.
-
-## Core Shell Rollout
-
-Tools that still need the shared Core header/footer navigation are tracked in [data/core-shell-migration-tracker.json](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/data/core-shell-migration-tracker.json).
-
-Use [CORE-SHELL-MIGRATION.md](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/CORE-SHELL-MIGRATION.md) as the one-by-one rollout checklist.
+The included Actions validate and prepare artifacts. Production merge and deployment remain separate approved actions.

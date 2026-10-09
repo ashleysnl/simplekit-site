@@ -1,0 +1,97 @@
+[
+  {
+    "loc": "https://simplekit.app/methodology/",
+    "changefreq": "monthly",
+    "priority": 0.5
+  },
+  {
+    "loc": "https://simplekit.app/privacy/",
+    "changefreq": "monthly",
+    "priority": 0.4
+  },
+  {
+    "loc": "https://simplekit.app/learn/mortgage-affordability-canada/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/rent-vs-buy-canada/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/mortgage-costs-beyond-the-payment/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/mortgage-prepayment-vs-investing/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/monthly-budgeting-and-cash-flow/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/emergency-fund-and-savings-goals/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/debt-snowball-vs-avalanche/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/credit-card-interest-and-payoff/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/loan-payments-and-amortization/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/learn/compound-interest-and-investment-fees/",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/canadian-retirement-income-calculator.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/cpp-timing-calculator-canada.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/oas-clawback-calculator.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/retirement-tax-calculator-canada.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/rrif-minimum-withdrawal-calculator.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/rrif-withdrawal-calculator.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  },
+  {
+    "loc": "https://simplekit.app/retirement-planner/rrsp-withdrawal-strategy-canada.html",
+    "changefreq": "monthly",
+    "priority": 0.6
+  }
+]

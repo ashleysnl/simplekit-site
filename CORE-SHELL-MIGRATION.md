@@ -6,7 +6,7 @@ Retirement Planner is intentionally excluded from this queue.
 
 ## Source Of Truth
 
-Track status in [data/core-shell-migration-tracker.json](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4/data/core-shell-migration-tracker.json).
+Track status in [data/core-shell-migration-tracker.json](data/core-shell-migration-tracker.json).
 
 Each entry should move through:
 
@@ -35,5 +35,5 @@ Each entry should move through:
    - support labels and any related shell config
 3. Verify the shared Core shell renders the header and footer correctly.
 4. Verify mobile and desktop spacing still feel right after Core mounts.
-5. Refresh [52_SimpleKit V4](/Users/AshleySkinner/Documents/00_Engineering/04_Code/52_SimpleKit%20V4) from the updated tool repo if needed.
+5. Update the pinned revision in [data/calculator-sources.json](data/calculator-sources.json), then run `npm run build` and validate `dist/`.
 6. Mark the tracker entry `completed` only after visual QA passes.

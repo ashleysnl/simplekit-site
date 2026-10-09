@@ -1,42 +1,23 @@
 # SimpleKit Tool URL Migration
 
-This repo now uses a single source of truth for tool public URLs and SEO metadata in `data/tools.json`.
+[data/tools.json](data/tools.json) remains the authoritative calculator canonical URL manifest. Existing guide/subpage sitemap additions live in [data/site-pages.json](data/site-pages.json). Do not put retired compatibility routes in the sitemap.
 
-Each tool entry includes:
+To migrate a tool, update its independent GitHub repository first. Pin the reviewed full commit in [data/calculator-sources.json](data/calculator-sources.json) and set the matching `sourceId` in [data/tool-migration-tracker.json](data/tool-migration-tracker.json). No local tool repository paths are used.
 
-- `name`
-- `slug`
-- `canonicalPath`
-- `canonicalUrl`
-- `legacySubdomain`
-- `includeInSitemap`
+Run:
 
-This manifest is the SEO control plane for the site. The landing pages, `robots.txt`, and `sitemap.xml` are generated from it.
+```sh
+npm run sources:fetch
+npm test
+npm run build
+npm run seo:validate
+npm run output:validate
+```
 
-## How to migrate one tool
+The build writes rendered templates, all 22 calculator route directories, pinned Core assets, robots, sitemap, active tools, and compatibility registries into ignored `dist/`. The tracked site root stays unchanged for the existing hosting arrangement. Deploy `dist/` only after separate approval and hosting configuration review; pushing this feature branch does not deploy it through these workflows.
 
-1. Add or update that tool in `data/tools.json` with its canonical `https://simplekit.app/<tool-slug>/` URL.
-2. Make sure the tool is marked complete in `data/tool-migration-tracker.json` and includes its `toolRepoPath`.
-3. Run `npm run build`.
-4. Commit and push this repo, then deploy the repo root output.
+The validator checks both published source pages/templates and the generated bundle. Historical `docs/` reports and named developer Markdown documents are omitted from source link checks because they are not copied into the bundle. They are **not** excluded when validating deployment output. Only the generated compatibility registries retain intentional legacy identities; navigation code, HTML, CSS, robots, and sitemaps remain subject to legacy-link checks.
 
-To migrate a tool, update `data/tools.json`, regenerate with `npm run build`, then deploy this repo.
+The 13 retired `/tools/<calculator>/` pages retain their noindex/canonical/refresh fallback behavior and now use the same canonical destination for Open Graph metadata. Cloudflare's existing edge redirects are unchanged.
 
-## What the build updates
-
-- Rendered HTML pages from `templates/`
-- Root path tool folders like `/cpp-calculator/` for completed path-mode tools
-- `robots.txt`
-- `simplekit-active-tools.md`
-- `sitemap.xml`
-- `assets/tool-registry.js`
-- `data/tool-registry.json`
-- `data/tool-link-audit.json`
-
-## Notes
-
-- Canonical path URLs now drive SEO output, even if legacy subdomains still exist.
-- Completed tools are only published into root path folders when their tracker entry is complete and has a valid `toolRepoPath`.
-- The repo root is now the single deployable site output. There is no separate `publish/` bundle.
-- The repo remains static-friendly: published files are plain HTML, CSS, JS, XML, and Markdown.
-- `data/tool-registry.json` remains as a generated compatibility file for the existing migration workflow. Edit `data/tools.json` instead.
+See [CLOUD_DEVELOPMENT.md](CLOUD_DEVELOPMENT.md) for source updates, previews, validation, and the separately approved production procedure.

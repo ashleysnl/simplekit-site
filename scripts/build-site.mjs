@@ -3,7 +3,6 @@ import path from "node:path";
 import {
   getCanonicalToolRegistry,
   getManifestToolMap,
-  getTemplateToolUrls,
   loadSeoManifest,
   runSeoValidation,
   writeCompatToolRegistry,
@@ -11,7 +10,11 @@ import {
   writeSitemapXml
 } from "./seo-utils.mjs";
 
-const repoRoot = process.cwd();
+import { repoRoot, outputRoot } from "./paths.mjs";
+import { acquireSources, sourceDirectory } from "./acquire-sources.mjs";
+import { localizeCoreHtml } from "./site-html.mjs";
+
+const sourceById = new Map(acquireSources().map(source => [source.id, source]));
 const templatesRoot = path.join(repoRoot, "templates");
 const trackerPath = path.join(repoRoot, "data", "tool-migration-tracker.json");
 const manifest = loadSeoManifest(repoRoot);
@@ -19,22 +22,28 @@ const registry = getCanonicalToolRegistry(manifest);
 const tracker = JSON.parse(readFileSync(trackerPath, "utf8"));
 const trackerById = new Map(tracker.map((entry) => [entry.id, entry]));
 const toolById = new Map(registry.map((tool) => [tool.id, tool]));
-const manifestToolUrls = getTemplateToolUrls(manifest);
 const manifestToolMap = getManifestToolMap(manifest);
 const migratedTools = registry.filter((tool) => tool.status === "path");
 const toolUrlPattern = /\{\{toolUrl:([a-z0-9-]+)\}\}/g;
 const toolCountPattern = /\{\{toolCount\}\}/g;
 
 runSeoValidation(manifest, repoRoot, { scanRepo: false });
-writeCompatToolRegistry(repoRoot, manifest);
+validateTemplates();
+rmSync(outputRoot, { recursive: true, force: true });
+mkdirSync(path.join(outputRoot, "data"), { recursive: true });
+copySiteFiles();
+writeCompatToolRegistry(outputRoot, manifest);
 buildTemplates();
 syncMigratedToolSites();
 writeToolRegistryAsset();
 writeActiveToolsMarkdown();
-writeRobotsTxt(repoRoot, manifest);
-writeSitemapXml(repoRoot, manifest);
+writeRobotsTxt(outputRoot, manifest);
+writeSitemapXml(outputRoot, manifest);
 writeToolUrlAudit();
-validateTemplates();
+copyCoreAssets();
+localizeCoreAssets(outputRoot);
+runSeoValidation(manifest, outputRoot, { published: true });
+console.log(`Built ${registry.length} calculators into ${outputRoot}`);
 
 function buildTemplates(relativeDir = ".") {
   const absoluteDir = path.join(templatesRoot, relativeDir);
@@ -48,7 +57,7 @@ function buildTemplates(relativeDir = ".") {
       continue;
     }
 
-    const destinationPath = path.join(repoRoot, relativePath);
+    const destinationPath = path.join(outputRoot, relativePath);
     mkdirSync(path.dirname(destinationPath), { recursive: true });
     const template = readFileSync(absolutePath, "utf8");
     const rendered = template
@@ -65,7 +74,7 @@ function buildTemplates(relativeDir = ".") {
 }
 
 function writeToolRegistryAsset() {
-  const outputPath = path.join(repoRoot, "assets", "tool-registry.js");
+  const outputPath = path.join(outputRoot, "assets", "tool-registry.js");
   const browserRegistry = registry.map(({ id, name, slug, subdomainUrl, pathUrl, status, currentPublicUrl }) => ({
     id,
     name,
@@ -96,19 +105,18 @@ function syncMigratedToolSites() {
   for (const tool of migratedTools) {
     const trackerEntry = trackerById.get(tool.id);
     if (!trackerEntry?.completed) {
-      continue;
+      throw new Error(`Tracker entry for ${tool.id} must be completed`);
     }
-    if (!trackerEntry.toolRepoPath) {
-      throw new Error(`Tracker entry for ${tool.id} is missing toolRepoPath`);
-    }
+    const source = sourceById.get(trackerEntry.sourceId);
+    if (!source || source.id !== tool.id) throw new Error(`Missing pinned source for ${tool.id}`);
 
-    const sourceDir = trackerEntry.toolRepoPath;
+    const sourceDir = sourceDirectory(source);
     const sourceIndexPath = path.join(sourceDir, "index.html");
     if (!existsSync(sourceIndexPath)) {
       throw new Error(`Tool repo for ${tool.id} does not contain index.html at ${sourceDir}`);
     }
 
-    const destinationDir = path.join(repoRoot, tool.slug);
+    const destinationDir = path.join(outputRoot, tool.slug);
     rmSync(destinationDir, { recursive: true, force: true });
     mkdirSync(destinationDir, { recursive: true });
 
@@ -136,12 +144,12 @@ function shouldCopyMigratedToolFile(sourceRoot, sourcePath) {
 
   if (statSync(sourcePath).isDirectory()) {
     const directoryName = path.basename(sourcePath);
-    const blockedDirectories = new Set([".git", ".factory", "docs", "src", "tests", "tools"]);
+    const blockedDirectories = new Set([".git", ".github", ".factory", "node_modules", "dist", "docs", "tests", "tools"]);
     return !blockedDirectories.has(directoryName) && !duplicateNamePattern.test(directoryName);
   }
 
   const parts = relativePath.split(path.sep);
-  const blockedTopLevel = new Set([".git", ".factory", "docs", "src", "tests", "tools"]);
+  const blockedTopLevel = new Set([".git", ".github", ".factory", "node_modules", "dist", "docs", "tests", "tools"]);
   const blockedNames = new Set([
     ".DS_Store",
     "README.md",
@@ -150,7 +158,9 @@ function shouldCopyMigratedToolFile(sourceRoot, sourcePath) {
     "AGENTS.md",
     "FACTORY_CONTEXT.md",
     "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
-    "calculator-spec.yaml"
+    "calculator-spec.yaml",
+    "package.json",
+    "package-lock.json"
   ]);
 
   if (blockedTopLevel.has(parts[0])) {
@@ -190,7 +200,7 @@ function shouldCopyMigratedToolFile(sourceRoot, sourcePath) {
 }
 
 function pruneMigratedToolSite(destinationDir) {
-  const blockedTopLevel = ["docs", "src", "tests", "tools", ".factory", ".git"];
+  const blockedTopLevel = ["docs", "tests", "tools", ".factory", ".git"];
   const blockedFiles = [
     "README.md",
     "LICENSE",
@@ -199,6 +209,8 @@ function pruneMigratedToolSite(destinationDir) {
     "FACTORY_CONTEXT.md",
     "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
     "calculator-spec.yaml",
+    "package.json",
+    "package-lock.json",
     ".DS_Store"
   ];
 
@@ -263,7 +275,7 @@ function rewriteMigratedToolUrls(destinationDir) {
 }
 
 function writeActiveToolsMarkdown() {
-  const outputPath = path.join(repoRoot, "simplekit-active-tools.md");
+  const outputPath = path.join(outputRoot, "simplekit-active-tools.md");
   const lines = ["# SimpleKit Active Tools", ""];
 
   registry.forEach((tool, index) => {
@@ -275,7 +287,7 @@ function writeActiveToolsMarkdown() {
 }
 
 function writeToolUrlAudit() {
-  const outputPath = path.join(repoRoot, "data", "tool-link-audit.json");
+  const outputPath = path.join(outputRoot, "data", "tool-link-audit.json");
   const files = [];
 
   collectTemplateAudit(files);
@@ -361,6 +373,41 @@ function validateTemplates(relativeDir = ".") {
       if (!manifestToolMap.has(toolId)) {
         throw new Error(`Template ${relativePath} references unknown tool token "${toolId}"`);
       }
+    }
+  }
+}
+
+// Only site inputs are copied. Documentation, workflow files, Git metadata,
+// downloaded checkouts, and build scripts never enter the deployment bundle.
+function copySiteFiles() {
+  for (const directory of ["assets", "tools", "learn", "about", "support", "privacy", "methodology"]) {
+    cpSync(path.join(repoRoot, directory), path.join(outputRoot, directory), { recursive: true });
+  }
+  for (const entry of readdirSync(repoRoot)) {
+    if (/\.(html|png|svg|ico|webmanifest)$/.test(entry) || entry === "CNAME") {
+      cpSync(path.join(repoRoot, entry), path.join(outputRoot, entry));
+    }
+  }
+}
+
+function copyCoreAssets() {
+  const core = sourceById.get("simplekit-core");
+  if (!core) throw new Error("Missing pinned SimpleKit Core source");
+  const destination = path.join(outputRoot, "assets", "core");
+  mkdirSync(destination, { recursive: true });
+  for (const name of ["core.css", "core.js"]) {
+    cpSync(path.join(sourceDirectory(core), name), path.join(destination, name));
+  }
+}
+
+function localizeCoreAssets(directory) {
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const filename = path.join(directory, entry.name);
+    if (entry.isDirectory()) localizeCoreAssets(filename);
+    else if (entry.name.endsWith(".html")) {
+      const html = readFileSync(filename, "utf8");
+      const localized = localizeCoreHtml(html);
+      if (localized !== html) writeFileSync(filename, localized);
     }
   }
 }

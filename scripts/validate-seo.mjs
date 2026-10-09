@@ -1,13 +1,12 @@
-import { findLegacySubdomainReferences, loadSeoManifest, runSeoValidation } from "./seo-utils.mjs";
+import { existsSync } from "node:fs";
+import { loadSeoManifest, runSeoValidation } from "./seo-utils.mjs";
+import { repoRoot, outputRoot } from "./paths.mjs";
 
-const repoRoot = process.cwd();
 const manifest = loadSeoManifest(repoRoot);
 
 runSeoValidation(manifest, repoRoot);
 
-const legacyMatches = findLegacySubdomainReferences(repoRoot, manifest);
-if (legacyMatches.length > 0) {
-  throw new Error(`Legacy subdomain references found:\n${legacyMatches.map((match) => `${match.file}: ${match.url}`).join("\n")}`);
-}
+if (!existsSync(outputRoot)) throw new Error("Run npm run build first; generated output must also pass SEO validation.");
+runSeoValidation(manifest, outputRoot, { published: true });
 
 console.log(`SEO validation passed for ${manifest.tools.length} tools.`);
