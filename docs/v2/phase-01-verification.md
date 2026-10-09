@@ -1,6 +1,6 @@
 # SimpleKit v2 Phase 1 — foundations and asset evidence
 
-Branch: `feature/simplekit-v2-phase-1`, based on Phase 0 evidence commit `0e3d0cc747f5a4d07e4747d0460bb67e6d954c1d` ([PR #7](https://github.com/ashleysnl/simplekit-site/pull/7)). Owner explicitly directed Phase 1 on 2026-10-09, clearing the roadmap review pause. This records execution authorization, not a GitHub approval or production release permission.
+[Phase 1 PR #8](https://github.com/ashleysnl/simplekit-site/pull/8), implementation/evidence commit `52cc961f5a5695b5d9547e5948d132898e64abff`. Branch: `feature/simplekit-v2-phase-1`, based on Phase 0 evidence commit `0e3d0cc747f5a4d07e4747d0460bb67e6d954c1d` ([PR #7](https://github.com/ashleysnl/simplekit-site/pull/7)). Owner explicitly directed Phase 1 on 2026-10-09, clearing the roadmap review pause. This records execution authorization, not a GitHub approval or production release permission.
 
 Phase 1 technical acceptance checks pass. The generated coastal image remains a **visual-review candidate**, so the image approval task and overall phase stay `[~]`. No Phase 2 layout/menu implementation, production merge or deployment occurred.
 
