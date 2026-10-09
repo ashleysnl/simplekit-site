@@ -26,7 +26,7 @@ Tools: Node **24.19.0**, npm **11.9.0**, Chromium **151.0.7922.173** on Debian L
 | Chromium smoke | **22/22** calculator pages loaded; Core navigation mounted on every route; **0 page errors, 0 failed local responses**. |
 | Functional interaction | Doubling the mortgage principal changed rounded monthly payment from **$2,860 to $5,721**, within $1 of double. |
 | Actions syntax/semantics | Both workflows parsed; **actionlint 1.7.7 passed**, its Linux binary verified against the official release SHA256 checksum. |
-| GitHub-hosted validation | [Run 37928920339](https://github.com/ashleysnl/simplekit-site/actions/runs/37928920339), implementation commit `a0666af`, **Success**, total duration **29 seconds**. |
+| GitHub-hosted validation | [Run 37928920339](https://github.com/ashleysnl/simplekit-site/actions/runs/37928920339), implementation commit `a0666af`, **Success**, total duration **29 seconds**. The follow-up review commit `9e3e22c` also passed [run 37929580971](https://github.com/ashleysnl/simplekit-site/actions/runs/37929580971). |
 | Wrangler preview command | Wrangler **4.45.0** `pages deploy --help` exited 0 with supported `--project-name` and `--branch` options; no upload executed. |
 
 The tests exercise immutable source declarations, cache edits/ignored files/origin changes, historical documentation scope, legacy URLs in HTML/robots/sitemap/navigation JS, compatibility registry exceptions, canonical routes, URL resolution, Core module loading and missing output assets/module imports.
@@ -57,7 +57,7 @@ Set `SIMPLEKIT_PREVIEW_URL` if using another loopback port. The script refuses a
 
 ## Outstanding external steps
 
-The feature branch is pushed and reviewable. Creating a PR through `gh` is blocked by a **Forbidden** response for `api.github.com` under the current cloud egress policy; native Git read/push already succeeded. The environment draft includes that domain for review. After applying the network setting, retry GitHub API access before requesting any new credential. Do not supply tokens in chat.
+The feature branch is pushed and [PR #5](https://github.com/ashleysnl/simplekit-site/pull/5) is open for review. Native Git read/push and GitHub API access succeeded. The saved cloud environment draft includes the `api.github.com` destination and portable installation/startup instructions; draft saving is separate from environment publication. No additional credential was requested.
 
 The Cloudflare preview workflow is prepared and linted but **not dispatched or deployed**. The owner confirmed no preview project exists. Create and protect the dedicated preview-only project/environment as documented in `CLOUD_DEVELOPMENT.md` before using it. Existing live Cloudflare account settings were unavailable; no DNS, redirects or production hosting were changed.
 
