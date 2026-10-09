@@ -2,7 +2,45 @@
 
 Prepared: 2026-10-09. Repository: `ashleysnl/simplekit-site`.
 
-This is an execution roadmap, not an implementation or release approval. All new tasks start incomplete. Implement one phase at a time through a feature branch and reviewed PR, preserving all 22 calculators, their URLs, and production until the owner explicitly approves release.
+This is an execution roadmap, not an implementation or release approval. All new tasks start incomplete. Implement one phase at a time on `develop-v2`, using a PR targeting `develop-v2` only when required, preserving all 22 calculators, their URLs, and production until the owner explicitly approves release.
+
+## Git Branch Strategy — Mandatory
+
+SimpleKit V2 uses a simplified development workflow.
+
+### Permanent branches
+
+* `main`: Stable production branch. Do not use for ongoing V2 development.
+* `develop-v2`: The only persistent development branch for SimpleKit V2.
+
+### Rules for all future Codex tasks
+
+1. Always begin by checking out `develop-v2` and synchronizing with its latest remote state.
+2. Implement all V2 tasks, fixes, refinements, SEO improvements, and documentation updates on `develop-v2`.
+3. Do not create new persistent feature, phase, experiment, or Codex development branches.
+4. Commit completed work directly to `develop-v2` when repository permissions and execution environment allow.
+5. If Codex Cloud or GitHub requires a temporary task branch, create only the minimum necessary branch and merge it back into `develop-v2` as soon as the task passes validation.
+6. Never leave completed work isolated on a temporary branch.
+7. Before starting a new task, verify that previous completed changes have been integrated into `develop-v2`.
+8. Do not merge V2 into `main` until the V2 release checklist and testing requirements have been satisfied.
+9. Do not deploy V2 to the production website until explicitly authorized.
+10. Treat `develop-v2` as the single source of truth for current V2 development.
+
+### Standard Codex workflow
+
+Checkout `develop-v2` → Sync → Implement → Test → Commit → Push → Update V2 plan
+
+If the environment requires a pull request, target `develop-v2`, not `main`.
+
+Start with a clean working tree, `git fetch origin`, `git switch develop-v2`, and `git pull --ff-only origin develop-v2`. If synchronization cannot fast-forward, inspect and preserve both histories; do not force-push or reset away work. Review outstanding PRs targeting `develop-v2` before beginning another task. Commit and push the plan update too so its handoff remains current.
+
+### Release workflow
+
+`develop-v2` → Final QA → Approved PR into `main` → Production deployment
+
+After release, preserve `main` as the production source of truth and explicitly decide whether `develop-v2` is still required.
+
+The [2026-10-09 branch audit and consolidation](v2/branch-consolidation-2026-10-09.md) records the inherited plan/Phase 0–4 history and archived branches. Those historical branches and PR references are evidence, not development destinations. Phase acceptance, unfinished checks, and release approval gates below remain in force.
 
 ## Task state convention
 
@@ -57,12 +95,12 @@ Non-negotiable boundaries:
 
 1. Preserve calculator formulas, defaults, storage/export/import behavior, source pins and public routes. Keep existing `/tools/` compatibility pages, legacy redirects, guides, privacy/methodology/support links, and sitemap inventory.
 2. Keep production root pages, `CNAME`, GitHub Pages publishing configuration, DNS, Cloudflare production settings and deployed commit untouched during implementation/preview phases. Do not copy `dist/` over checked-in root pages.
-3. No automatic merge, production deploy, hosting migration, account requirement or remote collection of search/onboarding answers. Explicit production approval must identify the exact commit/artifact and deployment destination.
+3. No automatic merge into `main`, production deploy, hosting migration, account requirement or remote collection of search/onboarding answers. Explicit production approval must identify the exact commit/artifact and deployment destination.
 4. Existing canonical navigation may point to `simplekit.app` even in previews. Distinguish canonical-link verification from exercising a calculator in the preview: open its canonical **path** on the preview origin. Never mistake a successful production navigation for a preview test.
 
 ## Execution protocol for every phase
 
-Read this plan, repository instructions, relevant source files and the target PNG before changing code. Confirm prerequisite phases and start from the latest reviewed work. Continue on a dedicated implementation feature branch (for example `feature/simplekit-v2`), or use focused phase PRs; do not edit `main` directly. A documentation-plan PR does not authorize implementation or release.
+Read this plan, repository instructions, relevant source files and the target PNG before changing code. Confirm prerequisite phases and start from the latest reviewed work. Check out and synchronize `develop-v2` as required above, and verify previous completed work is integrated. Continue directly on `develop-v2`; use a temporary task branch and a PR targeting `develop-v2` only if the environment requires it. Do not edit `main` directly. A documentation-plan PR does not authorize implementation or release.
 
 Set only the active phase/task to `[~]`. Implement its bounded scope. Reuse the current static HTML/CSS/JavaScript architecture unless a separate decision is approved. Capture before/after screenshots at 375, 390, 768 and 1440 CSS pixels; check 320 and 1920 widths, portrait/landscape and zoom. Compare section order, typography, landscape fade/crop, spacing, colors and controls with the reference; document differences.
 
@@ -79,11 +117,11 @@ npm run preview
 
 Use the isolated Playwright setup documented in `docs/cloud-native-validation.md` for `tests/browser-smoke.cjs`. Do not add runtime dependencies just to run browser checks. Run focused interaction checks appropriate to the phase. Build must leave tracked files unchanged apart from intentional authored changes; do not commit `dist/` or `.cache/`.
 
-Record evidence in a phase PR and a future `docs/v2/phase-NN-verification.md`: source commit, task states, files changed, commands/results, browser/device scope, screenshot paths, comparison notes, route checks, known limitations, and preview workflow/deployment links if used. Add evidence links to this plan. Mark `[x]` only after the criteria pass; report blockers without checking them off. Obtain review of the finished phase before proceeding to the next phase when working through the roadmap step by step.
+Record evidence in the `develop-v2` commit (and a PR targeting `develop-v2` if required) and a future `docs/v2/phase-NN-verification.md`: source commit, task states, files changed, commands/results, browser/device scope, screenshot paths, comparison notes, route checks, known limitations, and preview workflow/deployment links if used. Add evidence links to this plan. Mark `[x]` only after the criteria pass; report blockers without checking them off. Obtain review of the finished phase before proceeding to the next phase when working through the roadmap step by step.
 
 Reusable Codex execution prompt:
 
-> Implement Phase NN only from `docs/SIMPLEKIT_V2_REDESIGN_PLAN.md` on a feature branch. Read `docs/design-reference/simplekit-v2-target.png` and the repository instructions first. Confirm prerequisites, set active tasks to `[~]`, implement the phase using existing source/template/registry contracts, and run its acceptance checks and the supported build validations. Preserve all 22 calculators, existing URLs, source pins, production files/configuration and deployment. Record screenshots, results, limitations and evidence links; set passing tasks to `[x]`. Open or update a focused PR and report the next incomplete task. Do not merge or deploy production.
+> Implement Phase NN only from `docs/SIMPLEKIT_V2_REDESIGN_PLAN.md` on synchronized `develop-v2`. Read `docs/design-reference/simplekit-v2-target.png` and the repository instructions first. Confirm prerequisites, set active tasks to `[~]`, implement the phase using existing source/template/registry contracts, and run its acceptance checks and the supported build validations. Preserve all 22 calculators, existing URLs, source pins, production files/configuration and deployment. Record screenshots, results, limitations and evidence links; set passing tasks to `[x]`. Commit completed work to `develop-v2`; if a temporary branch is required, open or update a focused PR targeting `develop-v2` and integrate it after validation. Update this plan and report the next incomplete task. Do not merge or deploy production.
 
 ## Phase 0 — Baseline inventory and regression guardrails
 
@@ -297,10 +335,10 @@ Codex guidance: the existing browser smoke script is a starting point, not proof
 Status: `[ ]`. Depends on Phase 10.
 
 - [ ] Inspect the manual preview workflow and dedicated project/environment protections through permitted tools; retain production branch guard and absence of custom domains.
-- [ ] Dispatch “Manual Cloudflare preview” from the trusted default workflow with `source_ref` set to the exact reviewed feature commit; satisfy existing environment approvals without weakening protections.
+- [ ] Dispatch “Manual Cloudflare preview” from the trusted default workflow with `source_ref` set to the exact reviewed `develop-v2` commit; satisfy existing environment approvals without weakening protections.
 - [ ] Record source SHA, workflow URL, artifact checksum and exact deployment URL from upload output; verify the shared branch alias points to that candidate.
 - [ ] Verify deployed homepage, discovery flows and all 22 calculator paths/assets on the preview origin; compare the deployed file inventory with the approved artifact and rerun key calculator interactions.
-- [ ] Present mobile/tablet/desktop comparisons with the saved mockup, verification evidence and deviations for owner design/release review; resolve feedback on the feature branch.
+- [ ] Present mobile/tablet/desktop comparisons with the saved mockup, verification evidence and deviations for owner design/release review; resolve feedback on `develop-v2`.
 
 Acceptance:
 
@@ -378,4 +416,4 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |
 | 12 Production rollout | `[ ]` | Pending Phase 11 and explicit release approval. |
 
-End each execution with the active phase, completed criteria/evidence, unfinished work or blocker, current branch/PR/commit, preview identity if applicable, production unchanged status, and the next bounded phase/task. Keep this file updated in the same phase PR so the next Codex task can resume from evidence instead of conversation memory.
+End each execution with the active phase, completed criteria/evidence, unfinished work or blocker, current branch/PR/commit, preview identity if applicable, production unchanged status, and the next bounded phase/task. Keep this file updated in the same phase commit on `develop-v2` (or required temporary PR targeting it) so the next Codex task can resume from evidence instead of conversation memory.

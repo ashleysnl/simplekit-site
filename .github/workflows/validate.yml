@@ -3,7 +3,7 @@ name: Validate static site
 on:
   pull_request:
   push:
-    branches: [main, 'feat/**', 'fix/**', 'chore/**']
+    branches: [main, develop-v2, 'feat/**', 'fix/**', 'chore/**']
   workflow_dispatch:
 
 permissions:

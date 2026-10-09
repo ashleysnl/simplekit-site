@@ -5,6 +5,8 @@ SimpleKit is a static HTML/CSS/JavaScript site. Build it on Linux, Codex Cloud, 
 ```sh
 git clone https://github.com/ashleysnl/simplekit-site.git
 cd simplekit-site
+git switch develop-v2
+git pull --ff-only origin develop-v2
 npm run sources:fetch
 npm test
 npm run build
@@ -28,3 +30,5 @@ Edit landing-page sources in `templates/`, keep authored pages without templates
 See [CLOUD_DEVELOPMENT.md](CLOUD_DEVELOPMENT.md) for the dependency map, Codex Cloud setup, CI, manual Cloudflare previews, source revision updates, clean-environment results, and production deployment procedure. [SEO-MIGRATION.md](SEO-MIGRATION.md) and [CORE-SHELL-MIGRATION.md](CORE-SHELL-MIGRATION.md) cover the tool migration workflows.
 
 The included Actions validate and prepare artifacts. Production merge and deployment remain separate approved actions.
+
+SimpleKit V2 development uses only `develop-v2`; `main` stays stable until the approved release. Start by checking out and synchronizing `develop-v2`, commit validated V2 work there, and target it for any required temporary PR. See [Git Branch Strategy — Mandatory](docs/SIMPLEKIT_V2_REDESIGN_PLAN.md#git-branch-strategy--mandatory) for the binding workflow and [branch audit](docs/v2/branch-consolidation-2026-10-09.md) for historical branches. Production deployment requires explicit approval.

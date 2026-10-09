@@ -2,7 +2,7 @@
 
 ## Codex Cloud and Linux setup
 
-Use the existing checkout in `/workspace/simplekit-site`. Cloud tasks are already isolated: do not create another worktree unless explicitly requested. For a new machine, clone this repository and check out the reviewed feature branch or merge commit. Install/use Git and the Node.js version in `.node-version` (24.19.0); no Mac tools or npm dependencies are needed to build. Network access to GitHub over HTTPS is required. Public source repositories need no personal token; use Codex's supplied Git proxy authentication for private access. Never store credentials here.
+Use the existing checkout in `/workspace/simplekit-site`. Cloud tasks are already isolated: do not create another worktree unless explicitly requested. For a new machine, clone this repository and check out `develop-v2` and synchronize it with `git pull --ff-only origin develop-v2` for all V2 work. Follow [Git Branch Strategy — Mandatory](docs/SIMPLEKIT_V2_REDESIGN_PLAN.md#git-branch-strategy--mandatory); any required temporary PR targets `develop-v2` and must be integrated after validation. `main` is reserved for the approved release. Install/use Git and the Node.js version in `.node-version` (24.19.0); no Mac tools or npm dependencies are needed to build. Network access to GitHub over HTTPS is required. Public source repositories need no personal token; use Codex's supplied Git proxy authentication for private access. Never store credentials here.
 
 ```sh
 npm run sources:fetch
@@ -86,7 +86,7 @@ For shared Core changes, follow the same process for `simplekit-core`; verify he
 
 ## GitHub Actions
 
-`.github/workflows/validate.yml` runs for PRs, main and feature/fix/chore pushes, or manual dispatch. It pins the Actions revisions, uses `.node-version`, retrieves all sources, runs tests/build/SEO/output checks, verifies that tracked files stay unchanged and uploads `dist/` as the `simplekit-site` artifact. It has only `contents: read` and contains no deployment step. Configure this validation job as a required branch-protection check before production merges. An actual hosted Actions run is distinct from executing its commands locally.
+`.github/workflows/validate.yml` runs for PRs, main/develop-v2 and temporary feature/fix/chore pushes, or manual dispatch. It pins the Actions revisions, uses `.node-version`, retrieves all sources, runs tests/build/SEO/output checks, verifies that tracked files stay unchanged and uploads `dist/` as the `simplekit-site` artifact. It has only `contents: read` and contains no deployment step. Configure this validation job as a required branch-protection check before production merges. An actual hosted Actions run is distinct from executing its commands locally.
 
 ## Cloudflare previews
 
@@ -99,13 +99,13 @@ Before using it (these resources have **not** been created):
 1. Create a separate Cloudflare Pages Direct Upload project named `simplekit-preview`; set its production branch to `__production_disabled__`, disable Git-based automatic deployment, and attach no custom domains. This should be reviewed in Cloudflare settings before first upload.
 2. Create the GitHub environment `simplekit-preview`, require reviewer approval, and restrict permitted workflow branches to the trusted default branch. Without configuring these rules, GitHub's environment name alone does not enforce approval.
 3. Store `CLOUDFLARE_API_TOKEN` as an environment secret and `CLOUDFLARE_ACCOUNT_ID` as an environment variable. Use only the Cloudflare Pages permissions required for the preview account; do not enter secrets into repository files or chat.
-4. After the workflow is reviewed and available on the default branch, manually dispatch it with the desired feature ref. Approve the preview environment job, then use the Cloudflare preview URL from Wrangler's output.
+4. After the workflow is reviewed and available on the default branch, manually dispatch it with the exact reviewed `develop-v2` commit. Approve the preview environment job, then use the Cloudflare preview URL from Wrangler's output.
 
 No preview was uploaded during this task. CI artifacts and the local noindex preview work without these prerequisites. Do not configure the production site as the preview project to bypass the guards.
 
 ## Production deployment (separate approval)
 
-This feature branch must not be merged or deployed automatically. The included workflows have no production deployment permission or step. Existing root files/CNAME remain intact for current hosting.
+V2 must not be merged into `main` or deployed to production automatically. Validated V2 work is committed to `develop-v2`; required temporary PRs target and integrate into `develop-v2`. The included workflows have no production deployment permission or step. Existing root files/CNAME remain intact for current hosting.
 
 After the owner approves production deployment:
 
