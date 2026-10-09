@@ -1,0 +1,121 @@
+{
+  "origin": "https://73147f8f.simplekit-preview.pages.dev",
+  "routes": [
+    {
+      "path": "/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/retirement-planner/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/fire-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/cpp-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/rrsp-vs-tfsa-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/compound-interest-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/savings-goal-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/emergency-fund-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/net-worth-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/budget-planner/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/take-home-pay-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/debt-payoff-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/credit-card-interest-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/loan-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/house-affordability-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/rent-vs-buy-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/mortgage-paydown-vs-invest-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/investment-fee-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/mortgage-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/canadian-tax-checklist/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/travel-planner/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/debt-to-income-ratio-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "path": "/contractor-effective-hourly-rate-calculator/",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "files": [
+    {
+      "file": "index.html",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "assets/v2/trust.css",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "assets/v2/discovery-index.js",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "assets/v2/discovery.js",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "robots.txt",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "allRoutes200Noindex": false,
+  "allFilesMatch": false
+}

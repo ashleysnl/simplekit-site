@@ -1,0 +1,9 @@
+2026-10-09T18:51:43.1474452Z SHA256 digest of downloaded artifact is e23ae036589dbd73ddd054e7d18d5b93cb50463ad1a8afd6d2f74d30dbd74868
+2026-10-09T18:51:43.1475575Z Artifact download completed successfully.
+2026-10-09T18:51:43.1640574Z assert project['production_branch'] == '__production_disabled__', 'Refusing a production-capable project'
+2026-10-09T18:51:43.1641205Z assert not project.get('domains') or all(d.endswith('.pages.dev') for d in project['domains']), 'Refusing custom domains'
+2026-10-09T18:51:43.5680561Z ##[group]Run npm exec --yes --package=wrangler@4.45.0 -- wrangler pages deploy dist --project-name=simplekit-preview --branch=codex-preview
+2026-10-09T18:51:43.5681367Z npm exec --yes --package=wrangler@4.45.0 -- wrangler pages deploy dist --project-name=simplekit-preview --branch=codex-preview
+2026-10-09T18:51:56.5395142Z ✨ Success! Uploaded 45 files (276 already uploaded) (3.42 sec)
+2026-10-09T18:52:01.3649592Z ✨ Deployment complete! Take a peek over at https://73147f8f.simplekit-preview.pages.dev
+2026-10-09T18:52:01.3650797Z ✨ Deployment alias URL: https://codex-preview.simplekit-preview.pages.dev

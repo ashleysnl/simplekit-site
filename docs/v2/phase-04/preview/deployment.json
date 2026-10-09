@@ -1,0 +1,37 @@
+{
+  "sourceCommit": "03f0b9e994d465529df89fb8fa3ede0a6d1baa1e",
+  "workflowRun": 37974947775,
+  "workflowURL": "https://github.com/ashleysnl/simplekit-site/actions/runs/37974947775",
+  "project": "simplekit-preview",
+  "branch": "codex-preview",
+  "immutableURL": "https://73147f8f.simplekit-preview.pages.dev",
+  "aliasURL": "https://codex-preview.simplekit-preview.pages.dev",
+  "jobs": [
+    {
+      "id": 113970768821,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 113970964191,
+      "name": "preview",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "guards": {
+    "projectName": true,
+    "productionBranchDisabled": true,
+    "noCustomDomains": true,
+    "previewOnlyIndexingIsolation": true
+  },
+  "ownerApproval": "Owner confirmed approval and deployment; existing GitHub reviewer gate was retained.",
+  "liveVerification": {
+    "status": "blocked in this execution environment",
+    "browser": "ERR_CERT_AUTHORITY_INVALID",
+    "http": "23 preview route HEAD requests and 5 file GETs returned HTTP 403; not evidence of a public-site failure.",
+    "localChecks": "23 repository tests, 22 exact calculator fixtures, 9 trust checks, header/search regression all pass."
+  },
+  "productionChanged": false
+}

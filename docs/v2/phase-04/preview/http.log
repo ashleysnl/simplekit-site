@@ -1,0 +1,6 @@
+{"routes": 23, "allRoutes200Noindex": false, "allFilesMatch": false}
+Traceback (most recent call last):
+  File "/tmp/simplekit-phase4-live/http-check.py", line 25, in <module>
+    assert report['allRoutes200Noindex'] and report['allFilesMatch'], 'See http.json for exact preview/environment failure'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: See http.json for exact preview/environment failure

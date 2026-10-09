@@ -5,7 +5,7 @@
   "workflowURL": "https://github.com/ashleysnl/simplekit-site/actions/runs/37974947775",
   "project": "simplekit-preview",
   "uploadBranch": "codex-preview",
-  "status": "waiting for environment review",
+  "status": "uploaded successfully after owner review",
   "build": "success",
   "environment": {
     "name": "simplekit-preview",
@@ -19,12 +19,15 @@
     "endpoint": "review-pending-deployments-for-a-workflow-run"
   },
   "productionChanged": false,
-  "currentPreview": "Existing preview is older; do not present it as the Phase 4 candidate.",
+  "currentPreview": "Immutable URL identifies the Phase 4 implementation commit; see preview/deployment.json and upload-summary.log.",
   "artifact": {
     "id": 11638340639,
     "files": 322,
     "bytes": 6107602,
     "sha256": "e23ae036589dbd73ddd054e7d18d5b93cb50463ad1a8afd6d2f74d30dbd74868",
     "downloadedAndCompared": false
-  }
+  },
+  "resolvedBy": "Owner confirmed Approved and deployed; existing GitHub gate retained.",
+  "immutableURL": "https://73147f8f.simplekit-preview.pages.dev",
+  "aliasURL": "https://codex-preview.simplekit-preview.pages.dev"
 }
