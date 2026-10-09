@@ -1,9 +1,14 @@
 {
   "name": "simplekit-main-site",
   "private": true,
+  "engines": { "node": ">=22" },
   "scripts": {
+    "sources:fetch": "node scripts/acquire-sources.mjs",
     "build": "node scripts/build-site.mjs",
     "seo:build": "node scripts/generate-seo.mjs",
-    "seo:validate": "node scripts/validate-seo.mjs"
+    "seo:validate": "node scripts/validate-seo.mjs",
+    "output:validate": "node scripts/validate-output.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node scripts/preview.mjs"
   }
 }

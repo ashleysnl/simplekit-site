@@ -20,3 +20,5 @@
 18. [Mortgage Calculator]({{toolUrl:mortgage-calculator}})
 19. [Canadian Tax Checklist]({{toolUrl:canadian-tax-checklist}})
 20. [Travel Planner]({{toolUrl:travel-planner}})
+21. [Debt-to-Income Ratio Calculator]({{toolUrl:debt-to-income-ratio-calculator}})
+22. [Contractor Effective Hourly Rate Calculator]({{toolUrl:contractor-effective-hourly-rate-calculator}})

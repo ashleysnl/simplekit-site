@@ -12,6 +12,11 @@ export function loadSeoManifest(repoRoot) {
     throw new Error(`SEO manifest at ${absolutePath} must contain "site" and "tools"`);
   }
 
+  const supplemental = path.join(repoRoot, "data", "site-pages.json");
+  if (existsSync(supplemental)) {
+    manifest.site.pages = [...manifest.site.pages, ...JSON.parse(readFileSync(supplemental, "utf8"))];
+  }
+
   return manifest;
 }
 
@@ -36,7 +41,7 @@ export function getTemplateToolUrls(manifest) {
 }
 
 export function runSeoValidation(manifest, repoRoot, options = {}) {
-  const { scanRepo = true } = options;
+  const { scanRepo = true, published = false } = options;
   const issues = [];
   const slugSet = new Set();
   const urlSet = new Set();
@@ -57,6 +62,9 @@ export function runSeoValidation(manifest, repoRoot, options = {}) {
     if (page.loc.includes("?")) {
       issues.push(`Site page loc must not include query parameters: ${page.loc}`);
     }
+    if (!page.loc.startsWith(`${host}/`) || page.loc.includes("#")) {
+      issues.push(`Site page loc must use the canonical host without fragments: ${page.loc}`);
+    }
 
     if (sitePageUrlSet.has(page.loc)) {
       issues.push(`Duplicate site page URL found: ${page.loc}`);
@@ -65,6 +73,9 @@ export function runSeoValidation(manifest, repoRoot, options = {}) {
   }
 
   for (const tool of manifest.tools) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(tool.slug) || tool.canonicalPath !== `/${tool.slug}/`) {
+      issues.push(`Invalid slug or canonical path for ${tool.slug}`);
+    }
     if (!tool.slug) {
       issues.push(`Tool "${tool.name || "Unnamed tool"}" is missing slug`);
     }
@@ -98,7 +109,7 @@ export function runSeoValidation(manifest, repoRoot, options = {}) {
   }
 
   if (scanRepo) {
-    const legacyMatches = findLegacySubdomainReferences(repoRoot, manifest);
+    const legacyMatches = findLegacySubdomainReferences(repoRoot, manifest, { published });
     if (legacyMatches.length > 0) {
       const formatted = legacyMatches
         .map((match) => `${match.file}: ${match.url}`)
@@ -178,12 +189,11 @@ export function writeSitemapXml(repoRoot, manifest) {
   writeFileSync(outputPath, content);
 }
 
-export function findLegacySubdomainReferences(repoRoot, manifest) {
+export function findLegacySubdomainReferences(repoRoot, manifest, { published = false } = {}) {
   const ignoredDirectories = new Set([
     ".git",
     "node_modules",
-    "data",
-    "scripts"
+    ...(!published ? [".cache", ".github", "dist", "tests", "docs", "data", "scripts"] : [])
   ]);
   const ignoredFiles = new Set([
     "tool-registry.json",
@@ -191,8 +201,11 @@ export function findLegacySubdomainReferences(repoRoot, manifest) {
     "tool-link-audit.json",
     "tools.json",
     "assets/tool-registry.js",
-    "robots.txt",
-    "sitemap.xml"
+    // These generated registries intentionally retain legacy source identities.
+    "data/tool-registry.json",
+    "data/tool-link-audit.json",
+    "data/calculator-sources.json",
+    ...(!published ? ["README.md", "CLOUD_DEVELOPMENT.md", "SEO-MIGRATION.md", "TOOL-MIGRATION-PROMPT.md", "CORE-SHELL-MIGRATION.md", "SEO-IMPROVEMENT-PLAN.md"] : [])
   ]);
 
   const legacyUrls = manifest.tools

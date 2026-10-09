@@ -4,69 +4,69 @@
     "name": "CPP Calculator",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/32_Simplekit CPP Calculator",
     "priority": 1,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom bottom support/footer shell."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom bottom support/footer shell.",
+    "sourceId": "cpp-calculator"
   },
   {
     "id": "net-worth-calculator",
     "name": "Net Worth Calculator",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/34_Net Worth",
     "priority": 2,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom suite navigation plus custom support/footer shell."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom suite navigation plus custom support/footer shell.",
+    "sourceId": "net-worth-calculator"
   },
   {
     "id": "mortgage-paydown-vs-invest-calculator",
     "name": "Mortgage Paydown vs Invest",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/36_Mortgage Investment Simple Kit",
     "priority": 3,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell plus related support-link JS."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell plus related support-link JS.",
+    "sourceId": "mortgage-paydown-vs-invest-calculator"
   },
   {
     "id": "investment-fee-calculator",
     "name": "Investment Fee Calculator",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/37_Investment Fee SimpleKit",
     "priority": 4,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell.",
+    "sourceId": "investment-fee-calculator"
   },
   {
     "id": "rrsp-vs-tfsa-calculator",
     "name": "RRSP / TFSA Calculator",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Simplekit RRSP TFSA Calculator",
     "priority": 5,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom suite navigation plus custom footer shell."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom suite navigation plus custom footer shell.",
+    "sourceId": "rrsp-vs-tfsa-calculator"
   },
   {
     "id": "fire-calculator",
     "name": "FIRE Calculator",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/35_FIRE Simplekit",
     "priority": 6,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell plus related support-link JS."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell plus related support-link JS.",
+    "sourceId": "fire-calculator"
   },
   {
     "id": "travel-planner",
     "name": "Travel Planner",
     "status": "completed",
     "usesCoreNow": true,
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/26_Vacation Tracker",
     "priority": 7,
     "completedAt": "2026-03-22",
-    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell while keeping the app-specific quick-save flow."
+    "notes": "Updated the main entry page to load core.css/core.js, added window.SimpleKitPage config, mounted the shared Core header/support/footer, and removed the custom support/footer shell while keeping the app-specific quick-save flow.",
+    "sourceId": "travel-planner"
   }
 ]

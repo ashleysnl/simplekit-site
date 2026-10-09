@@ -4,175 +4,175 @@
     "name": "Retirement Planner",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Retirement Planner V3",
-    "notes": "Moved the retirement planner mini-site to /retirement-planner/, updated planner and subpage public URLs, fixed path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Moved the retirement planner mini-site to /retirement-planner/, updated planner and subpage public URLs, fixed path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "retirement-planner"
   },
   {
     "id": "cpp-calculator",
     "name": "CPP Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/32_Simplekit CPP Calculator",
-    "notes": "Updated the CPP calculator repo for the /cpp-calculator/ path and flipped the main-site registry plus sitemap/link generation to path mode."
+    "notes": "Updated the CPP calculator repo for the /cpp-calculator/ path and flipped the main-site registry plus sitemap/link generation to path mode.",
+    "sourceId": "cpp-calculator"
   },
   {
     "id": "take-home-pay-calculator",
     "name": "Canadian Take Home Pay Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/take-home-pay-canada",
-    "notes": "Updated canonical and schema URLs for the /take-home-pay-calculator/ path, added path crawl metadata, refreshed shared tool links, and flipped the main-site registry to path mode."
+    "notes": "Updated canonical and schema URLs for the /take-home-pay-calculator/ path, added path crawl metadata, refreshed shared tool links, and flipped the main-site registry to path mode.",
+    "sourceId": "take-home-pay-calculator"
   },
   {
     "id": "debt-payoff-calculator",
     "name": "Debt Payoff Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/44_SimpleKitDebt",
-    "notes": "Aligned the debt tool with the /debt-payoff-calculator/ path, added path crawl metadata, updated shared-shell tool identity, and flipped the main-site registry to path mode."
+    "notes": "Aligned the debt tool with the /debt-payoff-calculator/ path, added path crawl metadata, updated shared-shell tool identity, and flipped the main-site registry to path mode.",
+    "sourceId": "debt-payoff-calculator"
   },
   {
     "id": "mortgage-calculator",
     "name": "Mortgage Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/40_SimpleKit Mortgage Projection",
-    "notes": "Aligned the mortgage calculator with the /mortgage-calculator/ path, updated the shared-shell tool identity, added path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the mortgage calculator with the /mortgage-calculator/ path, updated the shared-shell tool identity, added path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "mortgage-calculator"
   },
   {
     "id": "house-affordability-calculator",
     "name": "House Affordability Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/house-affordability",
-    "notes": "Aligned the house affordability calculator with the /house-affordability-calculator/ path, updated canonical and social metadata, set the shared-shell tool identity to the canonical slug, added path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the house affordability calculator with the /house-affordability-calculator/ path, updated canonical and social metadata, set the shared-shell tool identity to the canonical slug, added path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "house-affordability-calculator"
   },
   {
     "id": "credit-card-interest-calculator",
     "name": "Credit Card Interest Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/credit-card",
-    "notes": "Aligned the credit card interest calculator with the /credit-card-interest-calculator/ path, updated canonical and social metadata, refreshed the local shared tool link map for already-migrated tools, added path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the credit card interest calculator with the /credit-card-interest-calculator/ path, updated canonical and social metadata, refreshed the local shared tool link map for already-migrated tools, added path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "credit-card-interest-calculator"
   },
   {
     "id": "loan-calculator",
     "name": "Loan Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/48_SimpleKit Loan Calculator",
-    "notes": "Aligned the loan calculator with the /loan-calculator/ path, fixed the shared-shell tools-nav target, added path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the loan calculator with the /loan-calculator/ path, fixed the shared-shell tools-nav target, added path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "loan-calculator"
   },
   {
     "id": "rent-vs-buy-calculator",
     "name": "Rent vs Buy Calculator",
     "completed": true,
     "completedAt": "2026-03-17",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/46_SimpleKit RentVsBuy",
-    "notes": "Aligned the rent vs buy calculator with the /rent-vs-buy-calculator/ path, fixed the shared-shell tools-nav target, added path crawl metadata, flipped the main-site registry to path mode, and taught the build to rewrite copied SimpleKit tool URLs from the central registry."
+    "notes": "Aligned the rent vs buy calculator with the /rent-vs-buy-calculator/ path, fixed the shared-shell tools-nav target, added path crawl metadata, flipped the main-site registry to path mode, and taught the build to rewrite copied SimpleKit tool URLs from the central registry.",
+    "sourceId": "rent-vs-buy-calculator"
   },
   {
     "id": "budget-planner",
     "name": "Budget Planner",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/45_Simplekit Budget Planner",
-    "notes": "Aligned the budget planner with the /budget-planner/ path, fixed the shared-shell tools-nav target, added path crawl metadata, flipped the main-site registry to path mode, and expanded copied-site URL rewrites to normalize doubled-slash subdomain links."
+    "notes": "Aligned the budget planner with the /budget-planner/ path, fixed the shared-shell tools-nav target, added path crawl metadata, flipped the main-site registry to path mode, and expanded copied-site URL rewrites to normalize doubled-slash subdomain links.",
+    "sourceId": "budget-planner"
   },
   {
     "id": "compound-interest-calculator",
     "name": "Compound Interest Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/43_SimpleKit Investment Growth",
-    "notes": "Aligned the compound interest calculator with the /compound-interest-calculator/ path, updated canonical and schema metadata from the old investment-growth path, fixed the shared-shell tools-nav target and tool identity, added path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the compound interest calculator with the /compound-interest-calculator/ path, updated canonical and schema metadata from the old investment-growth path, fixed the shared-shell tools-nav target and tool identity, added path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "compound-interest-calculator"
   },
   {
     "id": "net-worth-calculator",
     "name": "Net Worth Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/34_Net Worth",
-    "notes": "Aligned the net worth calculator with the /net-worth-calculator/ path, updated canonical, social, and schema metadata from the old retirement subpath, refreshed in-tool navigation links, kept the RRSP / TFSA calculator on subdomain mode, updated crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the net worth calculator with the /net-worth-calculator/ path, updated canonical, social, and schema metadata from the old retirement subpath, refreshed in-tool navigation links, kept the RRSP / TFSA calculator on subdomain mode, updated crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "net-worth-calculator"
   },
   {
     "id": "savings-goal-calculator",
     "name": "Savings Goal Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/49_SimpleKit Savings Goal",
-    "notes": "Aligned the savings goal calculator with the /savings-goal-calculator/ path, updated the shared-shell tools-nav target, added path crawl metadata, and flipped the main-site registry to path mode."
+    "notes": "Aligned the savings goal calculator with the /savings-goal-calculator/ path, updated the shared-shell tools-nav target, added path crawl metadata, and flipped the main-site registry to path mode.",
+    "sourceId": "savings-goal-calculator"
   },
   {
     "id": "emergency-fund-calculator",
     "name": "Emergency Fund Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/47_SimpleKit Emergency Fund",
-    "notes": "Aligned the emergency fund calculator with the /emergency-fund-calculator/ path, added path crawl metadata in the tool repo, and flipped the main-site registry to path mode."
+    "notes": "Aligned the emergency fund calculator with the /emergency-fund-calculator/ path, added path crawl metadata in the tool repo, and flipped the main-site registry to path mode.",
+    "sourceId": "emergency-fund-calculator"
   },
   {
     "id": "mortgage-paydown-vs-invest-calculator",
     "name": "Mortgage Paydown vs Invest",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/36_Mortgage Investment Simple Kit",
-    "notes": "Aligned mortgage paydown vs invest with the /mortgage-paydown-vs-invest-calculator/ path, replaced placeholder metadata with the live path URL, fixed robots and sitemap, updated the manifest for path scope, and flipped the main-site registry to path mode."
+    "notes": "Aligned mortgage paydown vs invest with the /mortgage-paydown-vs-invest-calculator/ path, replaced placeholder metadata with the live path URL, fixed robots and sitemap, updated the manifest for path scope, and flipped the main-site registry to path mode.",
+    "sourceId": "mortgage-paydown-vs-invest-calculator"
   },
   {
     "id": "investment-fee-calculator",
     "name": "Investment Fee Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/37_Investment Fee SimpleKit",
-    "notes": "Verified the tool repo was already path-ready for /investment-fee-calculator/, kept canonical/OG/schema/robots/sitemap on the path URL, and flipped the main-site registry so all generated site links now resolve to the main-domain path."
+    "notes": "Verified the tool repo was already path-ready for /investment-fee-calculator/, kept canonical/OG/schema/robots/sitemap on the path URL, and flipped the main-site registry so all generated site links now resolve to the main-domain path.",
+    "sourceId": "investment-fee-calculator"
   },
   {
     "id": "rrsp-vs-tfsa-calculator",
     "name": "RRSP / TFSA Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/33_Simplekit RRSP TFSA Calculator",
-    "notes": "Updated the tool repo from the old retirement.simplekit.app/rrsp-vs-tfsa-calculator/ URL to https://simplekit.app/rrsp-vs-tfsa-calculator/ across canonical, OG, schema, app config, robots, and sitemap, then flipped the main-site registry so all generated links resolve to the main-domain path."
+    "notes": "Updated the tool repo from the old retirement.simplekit.app/rrsp-vs-tfsa-calculator/ URL to https://simplekit.app/rrsp-vs-tfsa-calculator/ across canonical, OG, schema, app config, robots, and sitemap, then flipped the main-site registry so all generated links resolve to the main-domain path.",
+    "sourceId": "rrsp-vs-tfsa-calculator"
   },
   {
     "id": "fire-calculator",
     "name": "FIRE Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/35_FIRE Simplekit",
-    "notes": "Updated the FIRE tool repo from template/example.com metadata to https://simplekit.app/fire-calculator/ across OG, Twitter image fallback, app share fallback, robots, sitemap, and manifest scope, then flipped the main-site registry so generated links now resolve to the main-domain path."
+    "notes": "Updated the FIRE tool repo from template/example.com metadata to https://simplekit.app/fire-calculator/ across OG, Twitter image fallback, app share fallback, robots, sitemap, and manifest scope, then flipped the main-site registry so generated links now resolve to the main-domain path.",
+    "sourceId": "fire-calculator"
   },
   {
     "id": "canadian-tax-checklist",
     "name": "Canadian Tax Checklist",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/tax-checklist",
-    "notes": "Updated the tax checklist tool repo for https://simplekit.app/canadian-tax-checklist/ by adding canonical/OG/schema URL metadata, setting shared-shell navigation to the main site tools hub, adding robots and sitemap files, adding a path-safe manifest, and flipping the main-site registry to path mode."
+    "notes": "Updated the tax checklist tool repo for https://simplekit.app/canadian-tax-checklist/ by adding canonical/OG/schema URL metadata, setting shared-shell navigation to the main site tools hub, adding robots and sitemap files, adding a path-safe manifest, and flipping the main-site registry to path mode.",
+    "sourceId": "canadian-tax-checklist"
   },
   {
     "id": "travel-planner",
     "name": "Travel Planner",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/26_Vacation Tracker",
-    "notes": "Updated the standalone Travel Planner repo for https://simplekit.app/travel-planner/ by adding canonical/OG/Twitter/schema metadata, share fallbacks, robots, sitemap, and a path-safe manifest, then flipped the main-site registry so generated links now resolve to the main-domain path."
+    "notes": "Updated the standalone Travel Planner repo for https://simplekit.app/travel-planner/ by adding canonical/OG/Twitter/schema metadata, share fallbacks, robots, sitemap, and a path-safe manifest, then flipped the main-site registry so generated links now resolve to the main-domain path.",
+    "sourceId": "travel-planner"
   },
   {
     "id": "debt-to-income-ratio-calculator",
     "name": "Debt-to-Income Ratio Calculator",
     "completed": true,
     "completedAt": "2026-03-18",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/dti",
-    "notes": "Added DTI to the migration tracker, updated the tool repo from the dti.simplekit.app subdomain to https://simplekit.app/debt-to-income-ratio-calculator/ across canonical, OG, schema, shell config, robots, sitemap, and manifest, and flipped the main-site registry so generated links now resolve to the main-domain path."
+    "notes": "Added DTI to the migration tracker, updated the tool repo from the dti.simplekit.app subdomain to https://simplekit.app/debt-to-income-ratio-calculator/ across canonical, OG, schema, shell config, robots, sitemap, and manifest, and flipped the main-site registry so generated links now resolve to the main-domain path.",
+    "sourceId": "debt-to-income-ratio-calculator"
   },
   {
     "id": "contractor-effective-hourly-rate-calculator",
     "name": "Contractor Effective Hourly Rate Calculator",
     "completed": true,
     "completedAt": "2026-03-20",
-    "toolRepoPath": "/Users/AshleySkinner/Documents/00_Engineering/04_Code/50_SimpleKit App Factory/workspaces/rate-calculator",
-    "notes": "Added the contractor rate calculator to the landing site and registry in path mode, updated the contractor-rate tool repo from contractorrate.simplekit.app to https://simplekit.app/contractor-effective-hourly-rate-calculator/ across canonical, OG, schema, robots, sitemap, and manifest, and ensured all new landing-page links use the path URL."
+    "notes": "Added the contractor rate calculator to the landing site and registry in path mode, updated the contractor-rate tool repo from contractorrate.simplekit.app to https://simplekit.app/contractor-effective-hourly-rate-calculator/ across canonical, OG, schema, robots, sitemap, and manifest, and ensured all new landing-page links use the path URL.",
+    "sourceId": "contractor-effective-hourly-rate-calculator"
   }
 ]
