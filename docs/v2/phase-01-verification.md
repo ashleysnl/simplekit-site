@@ -2,7 +2,7 @@
 
 [Phase 1 PR #8](https://github.com/ashleysnl/simplekit-site/pull/8), implementation/evidence commit `52cc961f5a5695b5d9547e5948d132898e64abff`. Branch: `feature/simplekit-v2-phase-1`, based on Phase 0 evidence commit `0e3d0cc747f5a4d07e4747d0460bb67e6d954c1d` ([PR #7](https://github.com/ashleysnl/simplekit-site/pull/7)). Owner explicitly directed Phase 1 on 2026-10-09, clearing the roadmap review pause. This records execution authorization, not a GitHub approval or production release permission.
 
-Phase 1 technical acceptance checks pass. The generated coastal image remains a **visual-review candidate**, so the image approval task and overall phase stay `[~]`. No Phase 2 layout/menu implementation, production merge or deployment occurred.
+Phase 1 technical acceptance checks pass. The owner instructed proceeding to Phase 2 on 2026-10-09, accepting these foundations and coastal asset for implementation; Phase 1 is `[x]`. That instruction is not a GitHub review or production release approval. At Phase 1 completion no header/menu implementation or production deployment had occurred.
 
 ## Implemented contract
 
@@ -30,7 +30,7 @@ The font pairing preserves the reference's serif display / sans-serif interface 
 
 The original mockup remains unchanged. A separate text-free 1536×1024 coastal image was generated with `image_gen` on 2026-10-09, then inspected visually. It represents a fictional misty inlet, not a verified location. The generation prompt requested pale left/upper space, layered mountains, calm water and evergreen shore concentrated on the right. No typography, UI, logo or mockup pixels are baked into the image.
 
-Master: `docs/v2/phase-01/coastal-source.png` (excluded from deployment). Production derivatives: `assets/v2/images/coastal-{mobile|desktop}-{width}.{avif|webp|jpg}`. [Provenance, dimensions, hashes and byte counts](phase-01/hero.json). No third-party photograph/license claim is made. This is a proposed visual asset; owner acceptance remains pending in the feature PR.
+Master: `docs/v2/phase-01/coastal-source.png` (excluded from deployment). Production derivatives: `assets/v2/images/coastal-{mobile|desktop}-{width}.{avif|webp|jpg}`. [Provenance, dimensions, hashes and byte counts](phase-01/hero.json). No third-party photograph/license claim is made. The owner accepted this asset for implementation by directing Phase 2 on 2026-10-09.
 
 | Crop | Dimensions | Encoding / budget |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ Focal point: **70% horizontally / 55% vertically**. Desktop master crop `[0,80,1
 
 The isolated review specimen demonstrates a `<picture>` with mobile art direction, AVIF → WebP → JPEG fallback, explicit source/image dimensions and CSS aspect ratio. All twelve files were reopened to verify their actual formats and dimensions. A first ImageMagick attempt lacked an AVIF encoder; the files were regenerated and verified with Pillow rather than committing mislabeled images.
 
-The specimen fade is illustrative. Phase 2 must verify final live text contrast across the actual hero crop/overlay at all widths; a token contrast result does not prove contrast over every landscape pixel. No hero image is loaded by the existing homepage yet.
+The specimen fade is illustrative. Phase 2 must verify final live text contrast across the actual hero crop/overlay at all widths; a token contrast result does not prove contrast over every landscape pixel. At Phase 1 completion the homepage had not yet loaded the hero image.
 
 ## SVG icon contract
 
@@ -71,6 +71,6 @@ SIMPLEKIT_PREVIEW_URL=http://127.0.0.1:8001 NODE_PATH="$browser_test_dir/node_mo
 
 The review script defaults screenshots/results to `/tmp/simplekit-v2-foundations`; set `SIMPLEKIT_EVIDENCE_DIR` explicitly to replace saved review evidence. Baseline fixtures are compared, not refreshed.
 
-Current homepage and every calculator remain visually/functionally unchanged; production configuration, source pins, CNAME and hosting workflows are untouched. No preview workflow or production deployment was dispatched. Phase 0's live HTTP 403 limitation and pre-existing mortgage overflow remain documented; this phase does not assert they are fixed.
+At Phase 1 completion, the homepage and every calculator remained visually/functionally unchanged; production configuration, source pins, CNAME and hosting workflows were untouched. No preview workflow or production deployment was dispatched. Phase 0's live HTTP 403 limitation and pre-existing mortgage overflow remain documented; this phase does not assert they are fixed.
 
-Next bounded item: owner visual review of the proposed coastal asset and font/icon foundation decisions in this Phase 1 PR. Header/hero integration belongs to Phase 2 after Phase 1 review or further owner instruction. Phases 2–12 remain `[ ]`.
+The owner subsequently instructed Phase 2 on 2026-10-09. Header/hero integration proceeds in its own feature PR; Phases 3–12 remain `[ ]`.

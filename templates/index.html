@@ -27,7 +27,12 @@
   <meta name="twitter:description" content="Free Canadian tools for retirement, budgeting, mortgages, debt, investing, taxes, and travel. Clear estimates and next steps, with no signup.">
   <meta name="twitter:image" content="https://simplekit.app/og-image.png?v=2">
   <meta name="twitter:image:alt" content="SimpleKit — free Canadian financial calculators and planning tools">
+  <link rel="preload" href="assets/v2/fonts/simplekit-display-700.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/v2/fonts/simplekit-sans-400.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/v2/foundations.css">
+  <link rel="stylesheet" href="assets/v2/home.css">
+  <script defer src="assets/v2/home.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
   <script>
@@ -66,67 +71,52 @@
 }
 </script>
 </head>
-<body>
-  <main class="page">
-    <nav class="site-nav" aria-label="Primary">
-      <a class="nav-home" href="./">
-        <span class="nav-title">SimpleKit</span>
-        <span class="nav-subtitle">Free planning tools with clearer next steps</span>
-      </a>
-      <div class="nav-links">
-        <a class="nav-link active" href="./">Home</a>
-        <a class="nav-link" href="tools/">Tools</a>
-        <a class="nav-link" href="learn/">Learn</a>
-        <a class="nav-link" href="about/">About</a>
-        <a class="nav-link" href="support/">Support</a>
+<body class="v2-home">
+  <div class="sk-v2 v2-home-top">
+    <a class="v2-skip-link" href="#main-content">Skip to main content</a>
+    <header class="v2-header v2-container" data-v2-header>
+      <div class="v2-brand">
+        <a class="v2-wordmark" href="./" aria-label="SimpleKit home">Simple<span>Kit.</span></a>
+        <p class="v2-tagline">Free planning tools for Canadians</p>
       </div>
-    </nav>
+      <button class="v2-menu-toggle" type="button" hidden data-v2-menu-toggle aria-label="Open navigation menu" aria-expanded="false" aria-controls="home-navigation">
+        <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#menu"></use></svg>
+      </button>
+      <nav class="v2-navigation" id="home-navigation" aria-label="Primary" data-v2-navigation>
+        <a href="./" aria-current="page">Home</a>
+        <a href="tools/">Tools</a>
+        <a href="learn/">Learn</a>
+        <a href="about/">About</a>
+        <a href="support/">Support</a>
+      </nav>
+    </header>
+  </div>
 
-    <section class="content">
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="page-intro">
-            <div class="eyebrow">Free planning tools from SimpleKit</div>
-            <h1>Make your next money decision clearer.</h1>
-            <p class="lede">
-              Start with the question you have today. Use a free Canadian calculator for retirement, a mortgage, debt, budgeting, investing, taxes, or travel—and see a useful estimate without signing up.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="tools/">Choose a tool</a>
-              <a class="button-secondary" href="{{toolUrl:retirement-planner}}">Plan for retirement</a>
-            </div>
-            <div class="meta-row" aria-label="SimpleKit highlights">
-              <span class="meta-tag">No signup</span>
-              <span class="meta-tag">Browser-based</span>
-              <span class="meta-tag">Fast starts</span>
-              <span class="meta-tag">Clear next steps</span>
-            </div>
+  <main id="main-content" tabindex="-1">
+    <section class="sk-v2 v2-home-hero" aria-labelledby="home-hero-title">
+      <picture class="v2-coastal-picture" aria-hidden="true">
+        <source media="(max-width: 767px)" type="image/avif" srcset="assets/v2/images/coastal-mobile-400.avif 400w, assets/v2/images/coastal-mobile-800.avif 800w" sizes="100vw" width="800" height="1000">
+        <source media="(max-width: 767px)" type="image/webp" srcset="assets/v2/images/coastal-mobile-400.webp 400w, assets/v2/images/coastal-mobile-800.webp 800w" sizes="100vw" width="800" height="1000">
+        <source media="(max-width: 767px)" type="image/jpeg" srcset="assets/v2/images/coastal-mobile-400.jpg 400w, assets/v2/images/coastal-mobile-800.jpg 800w" sizes="100vw" width="800" height="1000">
+        <source type="image/avif" srcset="assets/v2/images/coastal-desktop-768.avif 768w, assets/v2/images/coastal-desktop-1536.avif 1536w" sizes="100vw">
+        <source type="image/webp" srcset="assets/v2/images/coastal-desktop-768.webp 768w, assets/v2/images/coastal-desktop-1536.webp 1536w" sizes="100vw">
+        <img src="assets/v2/images/coastal-desktop-1536.jpg" srcset="assets/v2/images/coastal-desktop-768.jpg 768w, assets/v2/images/coastal-desktop-1536.jpg 1536w" sizes="100vw" width="1536" height="864" alt="" fetchpriority="high">
+      </picture>
+      <div class="v2-container v2-hero-content">
+        <div class="v2-hero-copy">
+          <p class="v2-eyebrow">Your money, made clearer</p>
+          <h1 id="home-hero-title">Better financial decisions start here.</h1>
+          <p class="v2-hero-body">Free, practical calculators to plan your money with confidence. No signup required.</p>
+          <div class="v2-discovery-slot">
+            <a class="v2-button" href="tools/">Explore all {{toolCount}} tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
+            <a class="v2-retirement-link" href="{{toolUrl:retirement-planner}}">Plan for retirement</a>
           </div>
-
-          <aside class="hero-panel" aria-label="Why SimpleKit works">
-            <div class="pill">Why people start here</div>
-            <div class="hero-metrics">
-              <div class="metric">
-                <strong>{{toolCount}} connected tools</strong>
-                <span class="meta-copy">Move from a broad plan to focused calculators without losing the thread.</span>
-              </div>
-              <div class="metric">
-                <strong>Start simple</strong>
-                <span class="meta-copy">Get useful estimates quickly, then go deeper only when the decision needs it.</span>
-              </div>
-              <div class="metric">
-                <strong>Less friction</strong>
-                <span class="meta-copy">No account wall when you just want to model a question and see what changes.</span>
-              </div>
-            </div>
-            <div class="support-inline">
-              <span class="meta-copy">If SimpleKit helps you plan more clearly, support future tool development.</span>
-              <a class="text-link" href="https://buymeacoffee.com/ashleysnl">Buy Me a Coffee</a>
-            </div>
-          </aside>
         </div>
-      </section>
+      </div>
+    </section>
 
+    <div class="page v2-legacy-page">
+    <section class="content">
       <section class="section">
         <div class="section-head">
           <div class="section-kicker">Featured Tool</div>
@@ -314,7 +304,10 @@
 
     </section>
 
-    <footer class="footer">
+    </div>
+  </main>
+
+  <footer class="footer page v2-legacy-footer">
       <section class="footer-grid">
         <div class="footer-list">
           <h3>Tools</h3>
@@ -359,7 +352,6 @@
           <p class="footer-note">© SimpleKit</p>
         </div>
       </section>
-    </footer>
-  </main>
+  </footer>
 </body>
 </html>

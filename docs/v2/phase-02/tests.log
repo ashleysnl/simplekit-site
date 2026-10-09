@@ -1,0 +1,28 @@
+
+> test
+> node --test tests/*.test.mjs
+
+Output validation passed: 1 calculator routes, 1 sitemap URLs, 1 HTML pages, 1 local assets.
+✔ every canonical calculator has one completed, immutable GitHub source (2.412426ms)
+✔ source acquisition rejects branch pins, duplicate IDs and traversal (1.830138ms)
+✔ historical reports are excluded only in source checks; published legacy links fail (2.850978ms)
+✔ SEO checks reject legacy URLs in robots, sitemap and browser code (2.5275ms)
+✔ intentional compatibility registry is allowed, adjacent production files are checked (1.435739ms)
+✔ canonical manifest rejects mismatched, duplicate and unsafe routes (1.378383ms)
+✔ all restored sitemap routes still resolve to the same canonical host (0.796497ms)
+✔ URL resolver handles relative/query assets and refuses external or encoded traversal (1.601078ms)
+✔ bundled Core loads as an ES module for classic and module callers (0.507284ms)
+✔ cached sources fail verification after edits, ignored files, or origin changes (56.067915ms)
+✔ output checks detect wrong metadata, missing assets and module dependencies (7.288619ms)
+✔ v2 preserves the 22 canonical tools and declared sitemap inventory (3.478582ms)
+✔ v2 leaves calculator and Core source revisions unchanged (0.41919ms)
+✔ v2 preserves checked-in production landing pages and hostname (1.25754ms)
+✔ v2 keeps the original design reference unchanged (2.922924ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 157.57649

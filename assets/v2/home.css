@@ -1,0 +1,46 @@
+/* Phase 2 only: opt-in homepage header/hero, without changing shared site/Core CSS. */
+body.v2-home { margin: 0; background: #fcfcfb; }
+.v2-home .v2-legacy-page { margin-block: 0 1.5rem; }
+.v2-home .v2-legacy-footer { margin-block: 0 1.5rem; }
+.sk-v2.v2-home-top { position: relative; z-index: 10; }
+.sk-v2 .v2-skip-link { position: absolute; top: .5rem; left: var(--v2-gutter); transform: translateY(-200%); padding: .75rem 1rem; background: var(--v2-surface); z-index: 20; }
+.sk-v2 .v2-skip-link:focus { transform: none; }
+.sk-v2 .v2-header { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
+.sk-v2 .v2-brand { min-width: 0; flex: 1; }
+.sk-v2 .v2-wordmark { display: inline-block; font: 700 clamp(1.875rem, 1.7rem + .7vw, 2.375rem)/1.1 var(--v2-body); letter-spacing: -.045em; color: var(--v2-navy); text-decoration: none; }
+.sk-v2 .v2-wordmark span { color: var(--v2-blue); }
+.sk-v2 .v2-tagline { font-size: .875rem; line-height: 1.4; color: var(--v2-slate); margin-top: .375rem; }
+.sk-v2 .v2-menu-toggle { width: 3rem; height: 3rem; flex: none; display: inline-grid; place-items: center; border: 1px solid var(--v2-control-border); border-radius: var(--v2-radius-sm); background: var(--v2-surface); color: var(--v2-navy); cursor: pointer; box-shadow: var(--v2-shadow-soft); }
+.sk-v2 .v2-menu-toggle:hover { color: var(--v2-blue); }
+.sk-v2 .v2-menu-toggle[hidden], .sk-v2 .v2-navigation[hidden] { display: none; }
+.sk-v2 .v2-navigation { display: flex; flex-wrap: wrap; gap: .25rem; width: 100%; }
+.sk-v2 .v2-navigation a { display: inline-flex; align-items: center; min-height: var(--v2-target-size); padding: .625rem .875rem; border-radius: var(--v2-radius-sm); color: var(--v2-navy); text-decoration: none; }
+.sk-v2 .v2-navigation a:hover, .sk-v2 .v2-navigation a[aria-current="page"] { color: var(--v2-blue); background: var(--v2-blue-soft); }
+.sk-v2 .v2-header[data-menu-enhanced] .v2-navigation { position: absolute; top: calc(100% - .25rem); inset-inline: 0; width: auto; flex-direction: column; padding: .75rem; background: var(--v2-surface); border: 1px solid var(--v2-border); border-radius: var(--v2-radius-card); box-shadow: var(--v2-shadow-panel); }
+.sk-v2.v2-home-hero { position: relative; isolation: isolate; overflow: clip; }
+.sk-v2 .v2-coastal-picture { position: absolute; inset: 0; z-index: -2; pointer-events: none; }
+.sk-v2 .v2-coastal-picture img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--v2-hero-position); }
+.sk-v2.v2-home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(252 252 251 / .98), rgb(252 252 251 / .88)), linear-gradient(0deg, var(--v2-canvas), transparent 55%); }
+.sk-v2 .v2-hero-content { position: relative; padding-block: clamp(2rem, 5vw, 4rem) 5rem; min-height: 30rem; }
+.sk-v2 .v2-hero-copy { max-width: 37rem; }
+.sk-v2 .v2-hero-copy h1 { margin-top: 1rem; max-width: 18ch; }
+.sk-v2 .v2-hero-body { margin-top: 1.5rem; max-width: 33ch; font-size: clamp(1.1875rem, 1.1rem + .4vw, 1.375rem); color: var(--v2-slate); line-height: 1.5; }
+.sk-v2 .v2-discovery-slot { margin-top: 2rem; display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; }
+.sk-v2 .v2-retirement-link { display: inline-flex; align-items: center; min-height: var(--v2-target-size); font-size: var(--v2-text-sm); font-weight: 700; }
+@media (min-width: 48rem) {
+  .sk-v2.v2-home-hero::before { background: linear-gradient(90deg, rgb(252 252 251 / .98) 0%, rgb(252 252 251 / .94) 72%, rgb(252 252 251 / .18) 100%), linear-gradient(0deg, var(--v2-canvas), transparent 65%); }
+  .sk-v2 .v2-hero-content { min-height: 35rem; }
+  .sk-v2 .v2-hero-copy { max-width: 70%; }
+}
+@media (min-width: 64rem) {
+  .sk-v2.v2-home-hero::before { background: linear-gradient(90deg, rgb(252 252 251 / .98) 0%, rgb(252 252 251 / .94) 54%, rgb(252 252 251 / .18) 100%), linear-gradient(0deg, var(--v2-canvas), transparent 65%); }
+  .sk-v2 .v2-hero-copy { max-width: 52%; }
+}
+@media (min-width: 56.25rem) {
+  .sk-v2 .v2-brand { flex: initial; }
+  .sk-v2 .v2-navigation, .sk-v2 .v2-header[data-menu-enhanced] .v2-navigation { position: static; width: auto; flex-direction: row; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+}
+@media (forced-colors: active) {
+  .sk-v2 .v2-menu-toggle { border-color: ButtonText; }
+  .sk-v2 .v2-wordmark, .sk-v2 .v2-wordmark span { color: LinkText; }
+}

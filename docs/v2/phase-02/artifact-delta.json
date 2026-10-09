@@ -1,0 +1,29 @@
+{
+  "parentCommit": "e79168da277c52ecb226464cb91c69ef411624d3",
+  "totalFiles": 317,
+  "unchangedPhase1Files": 314,
+  "changedFiles": [
+    "index.html"
+  ],
+  "newFiles": [
+    "assets/v2/home.css",
+    "assets/v2/home.js"
+  ],
+  "unchangedBaselineFiles": 277,
+  "unchangedPhase1Assets": 37,
+  "docsExcluded": true,
+  "changedHomepage": {
+    "bytes": 29460,
+    "sha256": "152ffcf9677f11767ac4c9906020e97744404caac065a4a5a64930ea64d71013"
+  },
+  "newAssetHashes": {
+    "assets/v2/home.css": {
+      "bytes": 4519,
+      "sha256": "74e9e05737f6e5caf880bf24cab87361c89ea9ad4e18ba2d72f0df0ccd066a36"
+    },
+    "assets/v2/home.js": {
+      "bytes": 2088,
+      "sha256": "d564ac66f70ab25dd6bbd85ea81e9a8172b464a2301e74dbc949f0ba5b0c24e1"
+    }
+  }
+}
