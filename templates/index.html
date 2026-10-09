@@ -32,7 +32,9 @@
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/v2/foundations.css">
   <link rel="stylesheet" href="assets/v2/home.css">
+  <link rel="stylesheet" href="assets/v2/discovery.css">
   <script defer src="assets/v2/home.js"></script>
+  <script type="module" src="assets/v2/discovery.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
   <script>
@@ -107,11 +109,28 @@
           <p class="v2-eyebrow">Your money, made clearer</p>
           <h1 id="home-hero-title">Better financial decisions start here.</h1>
           <p class="v2-hero-body">Free, practical calculators to plan your money with confidence. No signup required.</p>
-          <div class="v2-discovery-slot">
-            <a class="v2-button" href="tools/">Explore all {{toolCount}} tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
-            <a class="v2-retirement-link" href="{{toolUrl:retirement-planner}}">Plan for retirement</a>
-          </div>
         </div>
+        <section class="v2-discovery-slot v2-discovery" aria-labelledby="discovery-heading" data-v2-discovery>
+          <div role="search" aria-label="Find a financial calculator" data-v2-search-controls hidden>
+            <label class="v2-visually-hidden" for="tool-search">What would you like to figure out?</label>
+            <div class="v2-search-bar">
+              <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#search"></use></svg>
+              <input id="tool-search" type="search" placeholder="What would you like to figure out?" maxlength="160" autocomplete="off" spellcheck="false" aria-describedby="search-help" aria-controls="discovery-results">
+              <button class="v2-search-clear" type="button" aria-label="Clear search" data-v2-search-clear hidden><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#close"></use></svg></button>
+            </div>
+            <p class="v2-search-help" id="search-help">Type a tool or money question, then tab to a result.</p>
+          </div>
+          <div class="v2-discovery-panel">
+            <div class="v2-discovery-head">
+              <h2 class="v2-discovery-heading" id="discovery-heading">Suggested questions</h2>
+              <p class="v2-search-status" role="status" aria-live="polite" aria-atomic="true" data-v2-search-status>4 suggested questions</p>
+            </div>
+            <ul class="v2-discovery-list" data-v2-questions>{{v2Questions}}</ul>
+            <ul class="v2-discovery-list" id="discovery-results" hidden></ul>
+            <p class="v2-search-empty" data-v2-search-empty hidden>No tools match this search. Try retirement, mortgage, budget or tax, or browse all tools below.</p>
+            <a class="v2-view-all" href="tools/">View all {{toolCount}} tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
+          </div>
+        </section>
       </div>
     </section>
 

@@ -1,0 +1,1129 @@
+{
+  "browser": "151.0.7922.173",
+  "testDevice": {
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "logicalCPUs": 5,
+    "scope": "Managed Linux Chromium headless runner with touch/viewport emulation; no physical mobile device claim"
+  },
+  "layouts": [
+    {
+      "state": "suggestions",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": {
+        "x": 16,
+        "y": 167.890625,
+        "width": 288,
+        "height": 129.5625,
+        "top": 167.890625,
+        "right": 304,
+        "bottom": 297.453125,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 438.953125,
+        "width": 288,
+        "height": 554.5,
+        "top": 438.953125,
+        "right": 304,
+        "bottom": 993.453125,
+        "left": 16
+      },
+      "picture": {
+        "x": 0,
+        "y": 100.390625,
+        "width": 320,
+        "height": 608,
+        "top": 100.390625,
+        "right": 320,
+        "bottom": 708.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 69,
+        "y": 448.953125,
+        "width": 218,
+        "height": 44,
+        "top": 448.953125,
+        "right": 287,
+        "bottom": 492.953125,
+        "left": 69
+      }
+    },
+    {
+      "state": "results",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": {
+        "x": 16,
+        "y": 167.890625,
+        "width": 288,
+        "height": 129.5625,
+        "top": 167.890625,
+        "right": 304,
+        "bottom": 297.453125,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 438.953125,
+        "width": 288,
+        "height": 2508,
+        "top": 438.953125,
+        "right": 304,
+        "bottom": 2946.953125,
+        "left": 16
+      },
+      "picture": {
+        "x": 0,
+        "y": 100.390625,
+        "width": 320,
+        "height": 608,
+        "top": 100.390625,
+        "right": 320,
+        "bottom": 708.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 69,
+        "y": 448.953125,
+        "width": 162,
+        "height": 44,
+        "top": 448.953125,
+        "right": 231,
+        "bottom": 492.953125,
+        "left": 69
+      }
+    },
+    {
+      "state": "suggestions",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": {
+        "x": 16,
+        "y": 167.890625,
+        "width": 343,
+        "height": 86.375,
+        "top": 167.890625,
+        "right": 359,
+        "bottom": 254.265625,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 396.1875,
+        "width": 343,
+        "height": 459.96875,
+        "top": 396.1875,
+        "right": 359,
+        "bottom": 856.15625,
+        "left": 16
+      },
+      "picture": {
+        "x": 0,
+        "y": 100.390625,
+        "width": 375,
+        "height": 608,
+        "top": 100.390625,
+        "right": 375,
+        "bottom": 708.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 69,
+        "y": 406.1875,
+        "width": 273,
+        "height": 44,
+        "top": 406.1875,
+        "right": 342,
+        "bottom": 450.1875,
+        "left": 69
+      }
+    },
+    {
+      "state": "results",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": {
+        "x": 16,
+        "y": 167.890625,
+        "width": 343,
+        "height": 86.375,
+        "top": 167.890625,
+        "right": 359,
+        "bottom": 254.265625,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 396.1875,
+        "width": 343,
+        "height": 2063.171875,
+        "top": 396.1875,
+        "right": 359,
+        "bottom": 2459.359375,
+        "left": 16
+      },
+      "picture": {
+        "x": 0,
+        "y": 100.390625,
+        "width": 375,
+        "height": 608,
+        "top": 100.390625,
+        "right": 375,
+        "bottom": 708.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 69,
+        "y": 406.1875,
+        "width": 217,
+        "height": 44,
+        "top": 406.1875,
+        "right": 286,
+        "bottom": 450.1875,
+        "left": 69
+      }
+    },
+    {
+      "state": "suggestions",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 167.890625,
+        "width": 358,
+        "height": 87.34375,
+        "top": 167.890625,
+        "right": 374,
+        "bottom": 255.234375,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 397.4375,
+        "width": 358,
+        "height": 459.96875,
+        "top": 397.4375,
+        "right": 374,
+        "bottom": 857.40625,
+        "left": 16
+      },
+      "picture": {
+        "x": 0,
+        "y": 100.390625,
+        "width": 390,
+        "height": 608,
+        "top": 100.390625,
+        "right": 390,
+        "bottom": 708.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 69,
+        "y": 407.4375,
+        "width": 288,
+        "height": 44,
+        "top": 407.4375,
+        "right": 357,
+        "bottom": 451.4375,
+        "left": 69
+      }
+    },
+    {
+      "state": "results",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 167.890625,
+        "width": 358,
+        "height": 87.34375,
+        "top": 167.890625,
+        "right": 374,
+        "bottom": 255.234375,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 397.4375,
+        "width": 358,
+        "height": 2015.125,
+        "top": 397.4375,
+        "right": 374,
+        "bottom": 2412.5625,
+        "left": 16
+      },
+      "picture": {
+        "x": 0,
+        "y": 100.390625,
+        "width": 390,
+        "height": 608,
+        "top": 100.390625,
+        "right": 390,
+        "bottom": 708.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 69,
+        "y": 407.4375,
+        "width": 232,
+        "height": 44,
+        "top": 407.4375,
+        "right": 301,
+        "bottom": 451.4375,
+        "left": 69
+      }
+    },
+    {
+      "state": "suggestions",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": {
+        "x": 30.71875,
+        "y": 175.3125,
+        "width": 486.28125,
+        "height": 116.71875,
+        "top": 175.3125,
+        "right": 517,
+        "bottom": 292.03125,
+        "left": 30.71875
+      },
+      "discovery": {
+        "x": 30.71875,
+        "y": 441.03125,
+        "width": 706.546875,
+        "height": 440.46875,
+        "top": 441.03125,
+        "right": 737.265625,
+        "bottom": 881.5,
+        "left": 30.71875
+      },
+      "picture": {
+        "x": 0,
+        "y": 101.421875,
+        "width": 768,
+        "height": 608,
+        "top": 101.421875,
+        "right": 768,
+        "bottom": 709.421875,
+        "left": 0
+      },
+      "input": {
+        "x": 91.71875,
+        "y": 450.3125,
+        "width": 620.546875,
+        "height": 45.4375,
+        "top": 450.3125,
+        "right": 712.265625,
+        "bottom": 495.75,
+        "left": 91.71875
+      }
+    },
+    {
+      "state": "results",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": {
+        "x": 30.71875,
+        "y": 175.3125,
+        "width": 486.28125,
+        "height": 116.71875,
+        "top": 175.3125,
+        "right": 517,
+        "bottom": 292.03125,
+        "left": 30.71875
+      },
+      "discovery": {
+        "x": 30.71875,
+        "y": 441.03125,
+        "width": 706.546875,
+        "height": 1603.078125,
+        "top": 441.03125,
+        "right": 737.265625,
+        "bottom": 2044.109375,
+        "left": 30.71875
+      },
+      "picture": {
+        "x": 0,
+        "y": 101.421875,
+        "width": 768,
+        "height": 608,
+        "top": 101.421875,
+        "right": 768,
+        "bottom": 709.421875,
+        "left": 0
+      },
+      "input": {
+        "x": 91.71875,
+        "y": 450.3125,
+        "width": 564.546875,
+        "height": 45.4375,
+        "top": 450.3125,
+        "right": 656.265625,
+        "bottom": 495.75,
+        "left": 91.71875
+      }
+    },
+    {
+      "state": "suggestions",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": {
+        "x": 144,
+        "y": 206.09375,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.09375,
+        "right": 743.03125,
+        "bottom": 370.25,
+        "left": 144
+      },
+      "discovery": {
+        "x": 144,
+        "y": 525.25,
+        "width": 832,
+        "height": 440.46875,
+        "top": 525.25,
+        "right": 976,
+        "bottom": 965.71875,
+        "left": 144
+      },
+      "picture": {
+        "x": 0,
+        "y": 106.59375,
+        "width": 1440,
+        "height": 608,
+        "top": 106.59375,
+        "right": 1440,
+        "bottom": 714.59375,
+        "left": 0
+      },
+      "input": {
+        "x": 205,
+        "y": 534.53125,
+        "width": 746,
+        "height": 45.4375,
+        "top": 534.53125,
+        "right": 951,
+        "bottom": 579.96875,
+        "left": 205
+      }
+    },
+    {
+      "state": "results",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": {
+        "x": 144,
+        "y": 206.09375,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.09375,
+        "right": 743.03125,
+        "bottom": 370.25,
+        "left": 144
+      },
+      "discovery": {
+        "x": 144,
+        "y": 525.25,
+        "width": 832,
+        "height": 1603.078125,
+        "top": 525.25,
+        "right": 976,
+        "bottom": 2128.328125,
+        "left": 144
+      },
+      "picture": {
+        "x": 0,
+        "y": 106.59375,
+        "width": 1440,
+        "height": 608,
+        "top": 106.59375,
+        "right": 1440,
+        "bottom": 714.59375,
+        "left": 0
+      },
+      "input": {
+        "x": 205,
+        "y": 534.53125,
+        "width": 690,
+        "height": 45.4375,
+        "top": 534.53125,
+        "right": 895,
+        "bottom": 579.96875,
+        "left": 205
+      }
+    },
+    {
+      "state": "suggestions",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "h1": {
+        "x": 384,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 983.03125,
+        "bottom": 371.046875,
+        "left": 384
+      },
+      "discovery": {
+        "x": 384,
+        "y": 526.046875,
+        "width": 832,
+        "height": 440.46875,
+        "top": 526.046875,
+        "right": 1216,
+        "bottom": 966.515625,
+        "left": 384
+      },
+      "picture": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1920,
+        "height": 608,
+        "top": 107.390625,
+        "right": 1920,
+        "bottom": 715.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 445,
+        "y": 535.328125,
+        "width": 746,
+        "height": 45.4375,
+        "top": 535.328125,
+        "right": 1191,
+        "bottom": 580.765625,
+        "left": 445
+      }
+    },
+    {
+      "state": "results",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "h1": {
+        "x": 384,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 983.03125,
+        "bottom": 371.046875,
+        "left": 384
+      },
+      "discovery": {
+        "x": 384,
+        "y": 526.046875,
+        "width": 832,
+        "height": 1603.078125,
+        "top": 526.046875,
+        "right": 1216,
+        "bottom": 2129.125,
+        "left": 384
+      },
+      "picture": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1920,
+        "height": 608,
+        "top": 107.390625,
+        "right": 1920,
+        "bottom": 715.390625,
+        "left": 0
+      },
+      "input": {
+        "x": 445,
+        "y": 535.328125,
+        "width": 690,
+        "height": 45.4375,
+        "top": 535.328125,
+        "right": 1135,
+        "bottom": 580.765625,
+        "left": 445
+      }
+    }
+  ],
+  "ranking": [
+    {
+      "query": "Retirement Planner",
+      "first": "retirement-planner",
+      "count": 4
+    },
+    {
+      "query": "retirement-planner",
+      "first": "retirement-planner",
+      "count": 4
+    },
+    {
+      "query": "FIRE Calculator",
+      "first": "fire-calculator",
+      "count": 1
+    },
+    {
+      "query": "fire-calculator",
+      "first": "fire-calculator",
+      "count": 1
+    },
+    {
+      "query": "CPP Calculator",
+      "first": "cpp-calculator",
+      "count": 1
+    },
+    {
+      "query": "cpp-calculator",
+      "first": "cpp-calculator",
+      "count": 1
+    },
+    {
+      "query": "RRSP / TFSA Calculator",
+      "first": "rrsp-vs-tfsa-calculator",
+      "count": 1
+    },
+    {
+      "query": "rrsp-vs-tfsa-calculator",
+      "first": "rrsp-vs-tfsa-calculator",
+      "count": 1
+    },
+    {
+      "query": "Compound Interest Calculator",
+      "first": "compound-interest-calculator",
+      "count": 1
+    },
+    {
+      "query": "compound-interest-calculator",
+      "first": "compound-interest-calculator",
+      "count": 1
+    },
+    {
+      "query": "Savings Goal Calculator",
+      "first": "savings-goal-calculator",
+      "count": 1
+    },
+    {
+      "query": "savings-goal-calculator",
+      "first": "savings-goal-calculator",
+      "count": 1
+    },
+    {
+      "query": "Emergency Fund Calculator",
+      "first": "emergency-fund-calculator",
+      "count": 1
+    },
+    {
+      "query": "emergency-fund-calculator",
+      "first": "emergency-fund-calculator",
+      "count": 1
+    },
+    {
+      "query": "Net Worth Calculator",
+      "first": "net-worth-calculator",
+      "count": 1
+    },
+    {
+      "query": "net-worth-calculator",
+      "first": "net-worth-calculator",
+      "count": 1
+    },
+    {
+      "query": "Budget Planner",
+      "first": "budget-planner",
+      "count": 12
+    },
+    {
+      "query": "budget-planner",
+      "first": "budget-planner",
+      "count": 12
+    },
+    {
+      "query": "Canadian Take Home Pay Calculator",
+      "first": "take-home-pay-calculator",
+      "count": 1
+    },
+    {
+      "query": "take-home-pay-calculator",
+      "first": "take-home-pay-calculator",
+      "count": 1
+    },
+    {
+      "query": "Debt Payoff Calculator",
+      "first": "debt-payoff-calculator",
+      "count": 1
+    },
+    {
+      "query": "debt-payoff-calculator",
+      "first": "debt-payoff-calculator",
+      "count": 1
+    },
+    {
+      "query": "Credit Card Interest Calculator",
+      "first": "credit-card-interest-calculator",
+      "count": 1
+    },
+    {
+      "query": "credit-card-interest-calculator",
+      "first": "credit-card-interest-calculator",
+      "count": 1
+    },
+    {
+      "query": "Loan Calculator",
+      "first": "loan-calculator",
+      "count": 2
+    },
+    {
+      "query": "loan-calculator",
+      "first": "loan-calculator",
+      "count": 2
+    },
+    {
+      "query": "House Affordability Calculator",
+      "first": "house-affordability-calculator",
+      "count": 1
+    },
+    {
+      "query": "house-affordability-calculator",
+      "first": "house-affordability-calculator",
+      "count": 1
+    },
+    {
+      "query": "Rent vs Buy Calculator",
+      "first": "rent-vs-buy-calculator",
+      "count": 1
+    },
+    {
+      "query": "rent-vs-buy-calculator",
+      "first": "rent-vs-buy-calculator",
+      "count": 1
+    },
+    {
+      "query": "Mortgage Paydown vs Invest",
+      "first": "mortgage-paydown-vs-invest-calculator",
+      "count": 1
+    },
+    {
+      "query": "mortgage-paydown-vs-invest-calculator",
+      "first": "mortgage-paydown-vs-invest-calculator",
+      "count": 1
+    },
+    {
+      "query": "Investment Fee Calculator",
+      "first": "investment-fee-calculator",
+      "count": 1
+    },
+    {
+      "query": "investment-fee-calculator",
+      "first": "investment-fee-calculator",
+      "count": 1
+    },
+    {
+      "query": "Mortgage Calculator",
+      "first": "mortgage-calculator",
+      "count": 2
+    },
+    {
+      "query": "mortgage-calculator",
+      "first": "mortgage-calculator",
+      "count": 2
+    },
+    {
+      "query": "Canadian Tax Checklist",
+      "first": "canadian-tax-checklist",
+      "count": 1
+    },
+    {
+      "query": "canadian-tax-checklist",
+      "first": "canadian-tax-checklist",
+      "count": 1
+    },
+    {
+      "query": "Travel Planner",
+      "first": "travel-planner",
+      "count": 1
+    },
+    {
+      "query": "travel-planner",
+      "first": "travel-planner",
+      "count": 1
+    },
+    {
+      "query": "Debt-to-Income Ratio Calculator",
+      "first": "debt-to-income-ratio-calculator",
+      "count": 1
+    },
+    {
+      "query": "debt-to-income-ratio-calculator",
+      "first": "debt-to-income-ratio-calculator",
+      "count": 1
+    },
+    {
+      "query": "Contractor Effective Hourly Rate Calculator",
+      "first": "contractor-effective-hourly-rate-calculator",
+      "count": 1
+    },
+    {
+      "query": "contractor-effective-hourly-rate-calculator",
+      "first": "contractor-effective-hourly-rate-calculator",
+      "count": 1
+    },
+    {
+      "query": "retire at 55",
+      "first": "retirement-planner",
+      "count": 1
+    },
+    {
+      "query": "rent or buy",
+      "first": "rent-vs-buy-calculator",
+      "count": 1
+    },
+    {
+      "query": "afford a house",
+      "first": "house-affordability-calculator",
+      "count": 1
+    },
+    {
+      "query": "pay debt",
+      "first": "debt-payoff-calculator",
+      "count": 4
+    },
+    {
+      "query": "RRSP TFSA",
+      "first": "rrsp-vs-tfsa-calculator",
+      "count": 1
+    },
+    {
+      "query": "  RéTiRE... AT   55?! ",
+      "first": "retirement-planner",
+      "count": 1
+    },
+    {
+      "query": "RENT—OR—BUY",
+      "first": "rent-vs-buy-calculator",
+      "count": 1
+    }
+  ],
+  "timings": [
+    {
+      "width": 320,
+      "query": "calculator",
+      "domMs": 11.799999999813735,
+      "frameMs": 12
+    },
+    {
+      "width": 375,
+      "query": "calculator",
+      "domMs": 39,
+      "frameMs": 39.5
+    },
+    {
+      "width": 390,
+      "query": "calculator",
+      "domMs": 7.7000000001862645,
+      "frameMs": 8.900000000372529
+    },
+    {
+      "width": 768,
+      "query": "calculator",
+      "domMs": 8.700000000186265,
+      "frameMs": 8.799999999813735
+    },
+    {
+      "width": 1440,
+      "query": "calculator",
+      "domMs": 13,
+      "frameMs": 13.200000000186265
+    },
+    {
+      "width": 1920,
+      "query": "calculator",
+      "domMs": 27.799999999813735,
+      "frameMs": 28
+    },
+    {
+      "query": "Retirement Planner",
+      "domMs": 10.300000000745058,
+      "frameMs": 12.100000000558794
+    },
+    {
+      "query": "retirement-planner",
+      "domMs": 1.2999999998137355,
+      "frameMs": 1.6000000005587935
+    },
+    {
+      "query": "FIRE Calculator",
+      "domMs": 0.6000000005587935,
+      "frameMs": 1.1000000005587935
+    },
+    {
+      "query": "fire-calculator",
+      "domMs": 0.40000000037252903,
+      "frameMs": 5.900000000372529
+    },
+    {
+      "query": "CPP Calculator",
+      "domMs": 0.20000000018626451,
+      "frameMs": 8
+    },
+    {
+      "query": "cpp-calculator",
+      "domMs": 0.5,
+      "frameMs": 3.2000000001862645
+    },
+    {
+      "query": "RRSP / TFSA Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 5.699999999254942
+    },
+    {
+      "query": "rrsp-vs-tfsa-calculator",
+      "domMs": 0.5,
+      "frameMs": 7.7999999998137355
+    },
+    {
+      "query": "Compound Interest Calculator",
+      "domMs": 0.20000000018626451,
+      "frameMs": 6.599999999627471
+    },
+    {
+      "query": "compound-interest-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 6.2999999998137355
+    },
+    {
+      "query": "Savings Goal Calculator",
+      "domMs": 0.6000000005587935,
+      "frameMs": 5.6000000005587935
+    },
+    {
+      "query": "savings-goal-calculator",
+      "domMs": 0.7000000001862645,
+      "frameMs": 5.1000000005587935
+    },
+    {
+      "query": "Emergency Fund Calculator",
+      "domMs": 0.40000000037252903,
+      "frameMs": 5.1000000005587935
+    },
+    {
+      "query": "emergency-fund-calculator",
+      "domMs": 0.30000000074505806,
+      "frameMs": 7
+    },
+    {
+      "query": "Net Worth Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 7.2999999998137355
+    },
+    {
+      "query": "net-worth-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 7.7000000001862645
+    },
+    {
+      "query": "Budget Planner",
+      "domMs": 0.5,
+      "frameMs": 9.200000000186265
+    },
+    {
+      "query": "budget-planner",
+      "domMs": 2.2000000001862645,
+      "frameMs": 2.599999999627471
+    },
+    {
+      "query": "Canadian Take Home Pay Calculator",
+      "domMs": 1,
+      "frameMs": 1.2000000001862645
+    },
+    {
+      "query": "take-home-pay-calculator",
+      "domMs": 1.1000000005587935,
+      "frameMs": 8.800000000745058
+    },
+    {
+      "query": "Debt Payoff Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 2.2999999998137355
+    },
+    {
+      "query": "debt-payoff-calculator",
+      "domMs": 0.30000000074505806,
+      "frameMs": 3.7000000001862645
+    },
+    {
+      "query": "Credit Card Interest Calculator",
+      "domMs": 0.39999999944120646,
+      "frameMs": 0.599999999627471
+    },
+    {
+      "query": "credit-card-interest-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 0.5
+    },
+    {
+      "query": "Loan Calculator",
+      "domMs": 0.40000000037252903,
+      "frameMs": 0.5
+    },
+    {
+      "query": "loan-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 1.1000000005587935
+    },
+    {
+      "query": "House Affordability Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 8.100000000558794
+    },
+    {
+      "query": "house-affordability-calculator",
+      "domMs": 0.20000000018626451,
+      "frameMs": 0.2999999998137355
+    },
+    {
+      "query": "Rent vs Buy Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 0.5
+    },
+    {
+      "query": "rent-vs-buy-calculator",
+      "domMs": 0.30000000074505806,
+      "frameMs": 0.40000000037252903
+    },
+    {
+      "query": "Mortgage Paydown vs Invest",
+      "domMs": 0.2999999998137355,
+      "frameMs": 2.900000000372529
+    },
+    {
+      "query": "mortgage-paydown-vs-invest-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 0.40000000037252903
+    },
+    {
+      "query": "Investment Fee Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 0.2999999998137355
+    },
+    {
+      "query": "investment-fee-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 4
+    },
+    {
+      "query": "Mortgage Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 0.5
+    },
+    {
+      "query": "mortgage-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 11.299999999813735
+    },
+    {
+      "query": "Canadian Tax Checklist",
+      "domMs": 0.30000000074505806,
+      "frameMs": 4.300000000745058
+    },
+    {
+      "query": "canadian-tax-checklist",
+      "domMs": 0.20000000018626451,
+      "frameMs": 0.39999999944120646
+    },
+    {
+      "query": "Travel Planner",
+      "domMs": 0.20000000018626451,
+      "frameMs": 6.2000000001862645
+    },
+    {
+      "query": "travel-planner",
+      "domMs": 0.09999999962747097,
+      "frameMs": 3.5
+    },
+    {
+      "query": "Debt-to-Income Ratio Calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 5.8999999994412065
+    },
+    {
+      "query": "debt-to-income-ratio-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 3.5
+    },
+    {
+      "query": "Contractor Effective Hourly Rate Calculator",
+      "domMs": 0.20000000018626451,
+      "frameMs": 6.099999999627471
+    },
+    {
+      "query": "contractor-effective-hourly-rate-calculator",
+      "domMs": 0.2999999998137355,
+      "frameMs": 6.5
+    },
+    {
+      "query": "retire at 55",
+      "domMs": 0.20000000018626451,
+      "frameMs": 7.2999999998137355
+    },
+    {
+      "query": "rent or buy",
+      "domMs": 0.20000000018626451,
+      "frameMs": 5.599999999627471
+    },
+    {
+      "query": "afford a house",
+      "domMs": 0.2999999998137355,
+      "frameMs": 8.199999999254942
+    },
+    {
+      "query": "pay debt",
+      "domMs": 0.2999999998137355,
+      "frameMs": 16.59999999962747
+    },
+    {
+      "query": "RRSP TFSA",
+      "domMs": 2.800000000745058,
+      "frameMs": 3.1000000005587935
+    },
+    {
+      "query": "  RéTiRE... AT   55?! ",
+      "domMs": 6.800000000745058,
+      "frameMs": 11
+    },
+    {
+      "query": "RENT—OR—BUY",
+      "domMs": 0.39999999944120646,
+      "frameMs": 4.599999999627471
+    }
+  ],
+  "maxDOMMs": 39,
+  "maxNextFrameMs": 39.5,
+  "privacy": {
+    "requestsDuringSearch": 0,
+    "consoleMessagesDuringSearch": 0,
+    "analyticsDataUnchanged": true,
+    "noStorageOrURLQuery": true
+  },
+  "canonicalNavigationIntercepted": [
+    "https://simplekit.app/retirement-planner/",
+    "https://simplekit.app/retirement-planner/",
+    "https://simplekit.app/rent-vs-buy-calculator/",
+    "https://simplekit.app/house-affordability-calculator/",
+    "https://simplekit.app/debt-payoff-calculator/"
+  ],
+  "externalHostsStubbed": [
+    "www.googletagmanager.com"
+  ],
+  "noJavaScriptFallback": true,
+  "failedModuleFallback": true,
+  "injectionCheckPassed": true,
+  "keyboardPattern": "Native searchbox, Tab through Clear and ordinary result links, Enter activates link, Escape clears/returns input focus",
+  "chromiumAXSearchboxAndPoliteStatus": true,
+  "manualAT": "VoiceOver/NVDA unavailable; retained for Phase 8",
+  "zoomScope": "CSS zoom 2; browser toolbar zoom unavailable, retained for Phase 8",
+  "pageErrors": [],
+  "failedResponses": []
+}

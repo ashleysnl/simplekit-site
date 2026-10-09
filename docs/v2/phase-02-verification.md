@@ -2,7 +2,7 @@
 
 [Phase 2 PR #9](https://github.com/ashleysnl/simplekit-site/pull/9), implementation/evidence commit `f72f9135c7f17c0a33b0ff0b016543c8e2db088c`. Branch: `feature/simplekit-v2-phase-2`, based on Phase 1 handoff `e79168da277c52ecb226464cb91c69ef411624d3` ([PR #8](https://github.com/ashleysnl/simplekit-site/pull/8)). The owner directed Phase 2 on 2026-10-09, accepting the Phase 1 foundations and coastal asset for implementation. The workspace was clean before creating this branch. No existing work was discarded.
 
-Implementation and available automated checks are complete. Phase 2 remains `[~]` for feature PR review and manual browser/AT coverage. The two acceptance criteria requiring those manual checks remain `[~]`; their automation passes, and the unavailable combinations are retained for Phase 8. This evidence does not represent a GitHub approval or production release permission. No merge, deployment, hosting change, source-pin change, or workflow dispatch was performed. Phases 3–12 remain `[ ]`.
+Implementation and available automated checks are complete. The owner instructed Phase 3 on 2026-10-09, clearing the phase review pause. Phase 2 remains `[~]` for the recorded manual browser/AT coverage. The two acceptance criteria requiring those manual checks remain `[~]`; their automation passes, and the unavailable combinations are retained for Phase 8. This evidence does not represent a GitHub approval or production release permission. No merge, deployment, hosting change, source-pin change, or workflow dispatch was performed. Phase 3 proceeds in its own feature branch; Phases 4–12 remain `[ ]`.
 
 ## Scope and reference adaptation
 

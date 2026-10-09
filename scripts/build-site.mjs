@@ -13,6 +13,7 @@ import {
 import { repoRoot, outputRoot } from "./paths.mjs";
 import { acquireSources, sourceDirectory } from "./acquire-sources.mjs";
 import { localizeCoreHtml } from "./site-html.mjs";
+import { createDiscoveryIndex, discoveryModule, loadDiscoveryMetadata, renderDiscoveryQuestions } from "./v2-discovery.mjs";
 
 const sourceById = new Map(acquireSources().map(source => [source.id, source]));
 const templatesRoot = path.join(repoRoot, "templates");
@@ -28,6 +29,7 @@ const toolUrlPattern = /\{\{toolUrl:([a-z0-9-]+)\}\}/g;
 const toolCountPattern = /\{\{toolCount\}\}/g;
 
 runSeoValidation(manifest, repoRoot, { scanRepo: false });
+const discovery = createDiscoveryIndex(manifest, loadDiscoveryMetadata(repoRoot));
 validateTemplates();
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(path.join(outputRoot, "data"), { recursive: true });
@@ -36,6 +38,7 @@ writeCompatToolRegistry(outputRoot, manifest);
 buildTemplates();
 syncMigratedToolSites();
 writeToolRegistryAsset();
+writeFileSync(path.join(outputRoot, "assets", "v2", "discovery-index.js"), discoveryModule(discovery));
 writeActiveToolsMarkdown();
 writeRobotsTxt(outputRoot, manifest);
 writeSitemapXml(outputRoot, manifest);
@@ -68,7 +71,8 @@ function buildTemplates(relativeDir = ".") {
         }
         return tool.currentPublicUrl;
       })
-      .replace(toolCountPattern, String(registry.length));
+      .replace(toolCountPattern, String(registry.length))
+      .replaceAll("{{v2Questions}}", renderDiscoveryQuestions(discovery));
     writeFileSync(destinationPath, rendered);
   }
 }

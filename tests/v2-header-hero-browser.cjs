@@ -91,7 +91,10 @@ async function menu(p, screenshot) {
   await button.press('Space'); assert.equal(await button.getAttribute('aria-expanded'), 'true');
   await p.getByRole('link', { name: 'Support', exact: true }).focus(); await p.keyboard.press('Tab');
   assert.equal(await button.getAttribute('aria-expanded'), 'false', 'Tab leaving header must close disclosure');
-  assert(await p.locator('.v2-discovery-slot a').first().evaluate(n => n === document.activeElement), 'Disclosure must allow onward tabbing');
+  assert(await p.locator('.v2-discovery-slot').evaluate(root => {
+    const next = root.querySelector('[data-v2-search-controls]:not([hidden]) input') || root.querySelector('a');
+    return next === document.activeElement;
+  }), 'Disclosure must allow onward tabbing');
   await button.click(); await p.getByRole('link', { name: 'Home', exact: true }).focus();
   await p.locator('.v2-home-hero').click({ position: { x: 2, y: 20 } });
   assert.equal(await button.getAttribute('aria-expanded'), 'false');

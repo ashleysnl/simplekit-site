@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "tools": [
+    {"id":"retirement-planner","description":"Model retirement income, savings, pensions and withdrawals in one plan.","goals":["retirement"],"synonyms":["retire at 55","can I retire at 55","retire early","retirement income","pension planning","when can I retire"]},
+    {"id":"fire-calculator","description":"Estimate financial independence and what early retirement could take.","goals":["retirement","investing"],"synonyms":["FIRE","financial independence","retire early","early retirement","freedom number"]},
+    {"id":"cpp-calculator","description":"Compare Canada Pension Plan estimates and different start ages.","goals":["retirement"],"synonyms":["CPP","Canada Pension Plan","government pension","CPP at 60","CPP at 65","CPP at 70"]},
+    {"id":"rrsp-vs-tfsa-calculator","description":"Compare RRSP and TFSA savings using contribution and tax assumptions.","goals":["investing","retirement","tax"],"synonyms":["RRSP TFSA","RRSP vs TFSA","registered retirement savings plan","tax free savings account","which savings account"]},
+    {"id":"compound-interest-calculator","description":"See how contributions and compound growth may build savings over time.","goals":["investing"],"synonyms":["compound interest","compounding","investment growth","grow savings","future value","interest on interest"]},
+    {"id":"savings-goal-calculator","description":"Estimate contributions and time needed to reach a savings target.","goals":["budget","investing"],"synonyms":["savings goal","save for a goal","saving target","save for a car","down payment savings","how much to save"]},
+    {"id":"emergency-fund-calculator","description":"Plan a cash buffer using expenses, savings and monthly contributions.","goals":["budget"],"synonyms":["emergency fund","rainy day fund","cash buffer","emergency savings","safety net"]},
+    {"id":"net-worth-calculator","description":"Add up assets and debts to see your current net worth.","goals":["budget","investing"],"synonyms":["net worth","networth","assets minus liabilities","assets and debts","wealth snapshot"]},
+    {"id":"budget-planner","description":"Plan monthly income, expenses and savings in one clear budget.","goals":["budget"],"synonyms":["budget","monthly budget","cash flow","spending plan","household budget","manage money"]},
+    {"id":"take-home-pay-calculator","description":"Estimate Canadian pay after tax and payroll deductions.","goals":["income","budget","tax"],"synonyms":["take home pay","takehomepay","net salary","after tax salary","paycheque","paycheck","payroll deductions"]},
+    {"id":"debt-payoff-calculator","description":"Compare debt repayment plans, extra payments and payoff timelines.","goals":["budget"],"synonyms":["pay debt","pay off debt faster","how do I pay off debt faster","debt payoff","debt repayment","snowball","avalanche","debt free"]},
+    {"id":"credit-card-interest-calculator","description":"Estimate credit card interest and the effect of repayment amounts.","goals":["budget"],"synonyms":["credit card","credit card interest","card balance","minimum payment","pay credit card debt","APR"]},
+    {"id":"loan-calculator","description":"Estimate loan payments and total interest across a repayment term.","goals":["budget"],"synonyms":["loan","personal loan","car loan","auto loan","borrowing costs","loan payment"]},
+    {"id":"house-affordability-calculator","description":"Estimate a home price range using income, debts and down payment.","goals":["home"],"synonyms":["afford a house","house affordability","how much house can I afford","how much home can I afford","buy a house","home budget"]},
+    {"id":"rent-vs-buy-calculator","description":"Compare renting and buying using housing costs and assumptions.","goals":["home"],"synonyms":["rent or buy","rent vs buy","should I rent or buy a home","renting versus buying","rent versus buy","housing choice"]},
+    {"id":"mortgage-paydown-vs-invest-calculator","description":"Compare extra mortgage payments with investing the same amount.","goals":["home","investing"],"synonyms":["mortgage paydown vs invest","pay mortgage or invest","pay down mortgage","mortgage versus investing","extra mortgage payments"]},
+    {"id":"investment-fee-calculator","description":"Compare how investment fees may affect long-term portfolio growth.","goals":["investing"],"synonyms":["investment fees","management fee","MER","expense ratio","portfolio fees","fund costs"]},
+    {"id":"mortgage-calculator","description":"Estimate mortgage payments and interest from loan and rate assumptions.","goals":["home"],"synonyms":["mortgage","mortgage payment","monthly mortgage","home loan","amortization","amortisation","mortgage interest"]},
+    {"id":"canadian-tax-checklist","description":"Organize Canadian tax documents and track filing preparation tasks.","goals":["tax"],"synonyms":["tax checklist","income tax","tax return","filing taxes","tax documents","T4","CRA"]},
+    {"id":"travel-planner","description":"Plan trip details, itinerary and travel spending in one place.","goals":["travel","budget"],"synonyms":["travel","trip planner","itinerary","vacation budget","holiday budget","travel budget"]},
+    {"id":"debt-to-income-ratio-calculator","description":"Compare debt payments with income to estimate your debt-to-income ratio.","goals":["home","budget"],"synonyms":["DTI","debt to income","debt income ratio","debt service ratio","debt burden","income and debt"]},
+    {"id":"contractor-effective-hourly-rate-calculator","description":"Estimate a contractor's effective rate after costs and working-time assumptions.","goals":["income","budget"],"synonyms":["contractor rate","freelance rate","hourly rate","self employed","consulting rate","effective hourly rate"]}
+  ],
+  "questions": [
+    {"id":"retire-at-55","text":"Can I retire at 55?","toolId":"retirement-planner","relatedToolId":"fire-calculator"},
+    {"id":"rent-or-buy","text":"Should I rent or buy a home?","toolId":"rent-vs-buy-calculator","relatedToolId":"mortgage-calculator"},
+    {"id":"house-affordability","text":"How much house can I afford?","toolId":"house-affordability-calculator","relatedToolId":"debt-to-income-ratio-calculator"},
+    {"id":"pay-debt-faster","text":"How do I pay off debt faster?","toolId":"debt-payoff-calculator","relatedToolId":"credit-card-interest-calculator"}
+  ]
+}

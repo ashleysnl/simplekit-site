@@ -1,0 +1,40 @@
+{
+  "parentCommit": "586d5942439661437de0776f40449f52993e3081",
+  "parentFiles": 317,
+  "totalFiles": 321,
+  "unchangedParentFiles": 316,
+  "changedFiles": [
+    "index.html"
+  ],
+  "newFiles": [
+    "assets/v2/discovery-engine.js",
+    "assets/v2/discovery-index.js",
+    "assets/v2/discovery.css",
+    "assets/v2/discovery.js"
+  ],
+  "newAssets": {
+    "assets/v2/discovery-engine.js": {
+      "sha256": "034995051f3e1687b9792fe61b604219df58b8bf53de19eaf4c6b81f14b1f916",
+      "bytes": 2238
+    },
+    "assets/v2/discovery-index.js": {
+      "sha256": "4c069e944d36af8fd443793683b60d728e9d5a54bfc439e851efb04d4382b2bb",
+      "bytes": 12651
+    },
+    "assets/v2/discovery.css": {
+      "sha256": "392cc866d34b1c74b70f9b5ccdde3ffce9eb09a05d4a881cecb90fb4a7aac9ad",
+      "bytes": 3595
+    },
+    "assets/v2/discovery.js": {
+      "sha256": "5ba0c24bf852d6b27c078842e0ce98a236a3e51a6944602907efad47ad234773",
+      "bytes": 3174
+    }
+  },
+  "newAssetBytes": 21658,
+  "homepage": {
+    "sha256": "835fb6da3b434f7432f11d72927adbb0e02b3291035b7c7b3b7301f7640c9912",
+    "bytes": 32890
+  },
+  "docsExcluded": true,
+  "metadataSourceNotPublished": true
+}
