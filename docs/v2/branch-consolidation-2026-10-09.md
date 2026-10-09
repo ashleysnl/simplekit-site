@@ -64,4 +64,19 @@ Browser checks use isolated Playwright 1.56.1 and system Chromium against the lo
 
 Execution logs, browser reports and screenshots are saved under `/tmp/simplekit-v2-consolidation/` in this workspace; historical committed phase evidence is preserved. Source files/assets/calculator pins are byte-identical to Phase 4; no runtime files were changed by this task.
 
-Remote publication and cleanup pending. No branch is deleted until browser validation finishes and its tip is confirmed to be contained in the published `develop-v2` history.
+Published `develop-v2` at consolidation commit `066c60ef102460472cd41eeb37788e0011e6a72c`. [Hosted push validation run 37979895599](https://github.com/ashleysnl/simplekit-site/actions/runs/37979895599) **passed** for this exact commit. Its non-deploying workflow ran directly on `develop-v2`.
+
+After validation, re-read remote tips and verified all six V2 tips were unchanged, ancestors of the published commit, and had zero commits outside `develop-v2`. Closed superseded PRs #6–#11 without merging into `main`; each body records preservation in `develop-v2`, and old branch-based evidence links were changed to permanent commit links. Then atomically deleted the six remote V2 branches:
+
+- `feature/simplekit-v2-plan`
+- `feature/simplekit-v2-phase-0`
+- `feature/simplekit-v2-phase-1`
+- `feature/simplekit-v2-phase-2`
+- `feature/simplekit-v2-phase-3`
+- `feature/simplekit-v2-phase-4`
+
+Deleted local `work`, which was identical to the production baseline and fully contained in `develop-v2`. All deleted V2 commits remain reachable through `develop-v2`; no unique work was discarded. Remote-tracking refs were pruned only after confirmed remote deletion.
+
+Retained `main`, `develop-v2`, `feat/cloud-native-build` (also local), `seo-phase4-hubs`, `seo-phase5-trust`, `seo-phase6-clusters`, and `seo-phase7-crawl-hygiene`: **7 remote branches** remain. The five old build/SEO branches contain historical commits absent by ID from the squash/consolidated production history, but no missing functionality. They are archival only; optional later cleanup should first retain their exact commit provenance in archive tags or another approved archive. No uncertain branch deletion is requested or performed here.
+
+No V2 work remains isolated and no consolidation conflict remains. The only active V2 development destination is `develop-v2`; the workspace is left on it, synchronized with origin. `main` remains exactly `ca7826db75cb4353488786aab80857b3a71c1be1`. No production/deployment/preview upload, hosting/DNS change, force-push, or shared-history rewrite was performed. The checkout initially fetched only `main` by default; its local origin fetch refspec now tracks all heads, and `develop-v2` tracks `origin/develop-v2`, so the mandatory fetch/sync workflow works normally. The final handoff documentation commit records these outcomes without changing the validated implementation.
