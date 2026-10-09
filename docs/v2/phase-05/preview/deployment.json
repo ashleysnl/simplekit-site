@@ -1,0 +1,52 @@
+{
+  "sourceCommit": "882b745cf879c70f852a8cd665f0ec0e3eca2b0a",
+  "defaultWorkflowCommit": "ca7826db75cb4353488786aab80857b3a71c1be1",
+  "workflowRun": 38006282182,
+  "workflowURL": "https://github.com/ashleysnl/simplekit-site/actions/runs/38006282182",
+  "project": "simplekit-preview",
+  "branch": "codex-preview",
+  "deploymentId": "e9070fe2-5331-4308-acf8-54d4a77a7eca",
+  "immutableURL": "https://e9070fe2.simplekit-preview.pages.dev",
+  "aliasURL": "https://codex-preview.simplekit-preview.pages.dev",
+  "createdOn": "2026-10-09T23:50:26.69953Z",
+  "jobs": [
+    {
+      "id": 114075717776,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 114075847050,
+      "name": "preview",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "guards": {
+    "productionBranchDisabled": true,
+    "noCustomDomains": true,
+    "noProductionDeployment": true,
+    "previewIndexingIsolation": true,
+    "hostingSettingsUnchanged": true
+  },
+  "artifact": {
+    "artifactId": 11651576388,
+    "sha256": "c429fe3fc8fa6f88c8d243a7203adf0cf23fc600d9ca4603ce99cd174eef9d43",
+    "bytes": 6106545,
+    "files": 323,
+    "matchesTestedLocalOutputExceptPreviewIsolation": true,
+    "noCNAME": true,
+    "noindexHeaderRule": "/*\n  X-Robots-Tag: noindex, nofollow\n",
+    "robots": "User-agent: *\nDisallow: /\n",
+    "documentationExcluded": true,
+    "fourPhase5GoalLinks": true,
+    "uniqueDirectoryTools": 22
+  },
+  "liveVerification": {
+    "status": "blocked from this execution environment",
+    "http": "28 TLS-verifying route/file/alias checks returned HTTP 403. Not evidence of a public-site failure; live headers/content/interactions are not claimed passing.",
+    "localChecks": "Phase 5 and calculator/header/search/trust regressions passed before upload; downloaded preview artifact exactly matches tested output apart from intended CNAME/robots/header isolation."
+  },
+  "productionChanged": false
+}

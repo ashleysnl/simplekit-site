@@ -1,0 +1,13 @@
+{
+  "artifactId": 11651576388,
+  "sha256": "c429fe3fc8fa6f88c8d243a7203adf0cf23fc600d9ca4603ce99cd174eef9d43",
+  "bytes": 6106545,
+  "files": 323,
+  "matchesTestedLocalOutputExceptPreviewIsolation": true,
+  "noCNAME": true,
+  "noindexHeaderRule": "/*\n  X-Robots-Tag: noindex, nofollow\n",
+  "robots": "User-agent: *\nDisallow: /\n",
+  "documentationExcluded": true,
+  "fourPhase5GoalLinks": true,
+  "uniqueDirectoryTools": 22
+}

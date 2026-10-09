@@ -1,0 +1,22 @@
+2026-10-09T23:49:33.0529272Z   ref: 882b745cf879c70f852a8cd665f0ec0e3eca2b0a
+2026-10-09T23:49:33.3136575Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 882b745cf879c70f852a8cd665f0ec0e3eca2b0a
+2026-10-09T23:49:35.2553712Z  * branch            882b745cf879c70f852a8cd665f0ec0e3eca2b0a -> FETCH_HEAD
+2026-10-09T23:49:35.2668569Z [command]/usr/bin/git checkout --progress --force 882b745cf879c70f852a8cd665f0ec0e3eca2b0a
+2026-10-09T23:49:35.4542461Z Note: switching to '882b745cf879c70f852a8cd665f0ec0e3eca2b0a'.
+2026-10-09T23:49:35.4552067Z HEAD is now at 882b745 Record Phase 5 hosted validation and development handoff
+2026-10-09T23:49:35.4637608Z 882b745cf879c70f852a8cd665f0ec0e3eca2b0a
+2026-10-09T23:49:53.4481355Z Output validation passed: 1 calculator routes, 1 sitemap URLs, 1 HTML pages, 1 local assets.
+2026-10-09T23:49:53.4904808Z ℹ tests 27
+2026-10-09T23:49:53.4905659Z ℹ pass 27
+2026-10-09T23:49:54.0992078Z Built 22 calculators into /home/runner/work/simplekit-site/simplekit-site/dist
+2026-10-09T23:49:54.3279909Z SEO validation passed for 22 tools.
+2026-10-09T23:49:54.5469544Z Output validation passed: 22 calculator routes, 53 sitemap URLs, 67 HTML pages, 147 local assets.
+2026-10-09T23:49:54.5592231Z ##[group]Run rm -f dist/CNAME
+2026-10-09T23:49:54.5592711Z rm -f dist/CNAME
+2026-10-09T23:49:54.5593059Z printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > dist/_headers
+2026-10-09T23:49:54.5593525Z printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+2026-10-09T23:49:54.5816808Z   name: preview-site
+2026-10-09T23:49:54.8483340Z With the provided path, there will be 323 files uploaded
+2026-10-09T23:49:56.6367336Z SHA256 digest of uploaded artifact zip is c429fe3fc8fa6f88c8d243a7203adf0cf23fc600d9ca4603ce99cd174eef9d43
+2026-10-09T23:49:56.9127937Z Artifact preview-site.zip successfully finalized. Artifact ID 11651576388
+2026-10-09T23:49:56.9128937Z Artifact preview-site has been successfully uploaded! Final size is 6106545 bytes. Artifact ID is 11651576388

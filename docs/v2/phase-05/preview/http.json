@@ -1,0 +1,173 @@
+{
+  "tlsVerification": true,
+  "checks": [
+    {
+      "method": "GET",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "GET",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/tools/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "GET",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/robots.txt",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "GET",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/assets/v2/goals.css",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/CNAME",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/retirement-planner/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/fire-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/cpp-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/rrsp-vs-tfsa-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/compound-interest-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/savings-goal-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/emergency-fund-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/net-worth-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/budget-planner/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/take-home-pay-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/debt-payoff-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/credit-card-interest-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/loan-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/house-affordability-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/rent-vs-buy-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/mortgage-paydown-vs-invest-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/investment-fee-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/mortgage-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/canadian-tax-checklist/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/travel-planner/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/debt-to-income-ratio-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "HEAD",
+      "url": "https://e9070fe2.simplekit-preview.pages.dev/contractor-effective-hourly-rate-calculator/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "method": "GET",
+      "url": "https://codex-preview.simplekit-preview.pages.dev/",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

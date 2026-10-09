@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "882b745cf879c70f852a8cd665f0ec0e3eca2b0a",
+  "validatedRun": 38005906854,
+  "defaultWorkflowCommit": "ca7826db75cb4353488786aab80857b3a71c1be1",
+  "project": "simplekit-preview",
+  "uploadBranch": "codex-preview",
+  "authorization": "User requested Upload to the demo",
+  "status": "uploaded successfully",
+  "environment": {
+    "name": "simplekit-preview",
+    "can_admins_bypass": false,
+    "protection_rules": [],
+    "note": "Current live settings observed; no environment protection or hosting setting changed by this task."
+  },
+  "projectBefore": {
+    "productionBranch": "__production_disabled__",
+    "domains": [
+      "simplekit-preview.pages.dev"
+    ],
+    "source": null,
+    "productionDeployment": null,
+    "latestDeployment": "73147f8f-3df7-45e7-b2c1-c71d1ea204fe"
+  },
+  "productionChanged": false,
+  "previousRunIds": [
+    37974947775,
+    37935648268
+  ],
+  "dispatchTime": "2026-10-09T23:49:25.406467+00:00",
+  "workflowRun": 38006282182,
+  "workflowURL": "https://github.com/ashleysnl/simplekit-site/actions/runs/38006282182",
+  "immutableURL": "https://e9070fe2.simplekit-preview.pages.dev",
+  "aliasURL": "https://codex-preview.simplekit-preview.pages.dev",
+  "build": "success",
+  "upload": "success",
+  "artifact": {
+    "artifactId": 11651576388,
+    "sha256": "c429fe3fc8fa6f88c8d243a7203adf0cf23fc600d9ca4603ce99cd174eef9d43",
+    "bytes": 6106545,
+    "files": 323,
+    "matchesTestedLocalOutputExceptPreviewIsolation": true,
+    "noCNAME": true,
+    "noindexHeaderRule": "/*\n  X-Robots-Tag: noindex, nofollow\n",
+    "robots": "User-agent: *\nDisallow: /\n",
+    "documentationExcluded": true,
+    "fourPhase5GoalLinks": true,
+    "uniqueDirectoryTools": 22
+  }
+}

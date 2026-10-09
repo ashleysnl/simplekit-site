@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "status": 200,
+  "errors": [],
+  "name": "simplekit-preview",
+  "productionBranch": "__production_disabled__",
+  "domains": [
+    "simplekit-preview.pages.dev"
+  ],
+  "source": null,
+  "productionDeployment": null,
+  "latestDeployment": {
+    "id": "e9070fe2-5331-4308-acf8-54d4a77a7eca",
+    "url": "https://e9070fe2.simplekit-preview.pages.dev",
+    "aliases": [
+      "https://codex-preview.simplekit-preview.pages.dev"
+    ],
+    "environment": "preview",
+    "createdOn": "2026-10-09T23:50:26.69953Z",
+    "status": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-10-09T23:50:28.018394Z",
+      "status": "success"
+    }
+  }
+}
