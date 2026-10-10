@@ -85,13 +85,23 @@ async function controlContrast(p) {
   const a=luminance(colors.border),b=luminance(colors.background),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);
   assert(ratio>=3,'Search field boundary must retain 3:1 non-text contrast');return {...colors,ratio};
 }
+async function capture(p, file) {
+  const height=await p.evaluate(()=>document.documentElement.scrollHeight);
+  // Firefox cannot encode a >32767px screenshot. Keep full-document glyph/
+  // target checks; capture a usable viewport and the flow for oversized pages.
+  const fullPage=height<=16000;
+  await p.screenshot({path:path.join(output,file),type:'jpeg',quality:80,fullPage});
+  if(!fullPage && await p.locator('[data-onboarding-flow]:not([hidden])').count())
+    await p.locator('[data-onboarding-flow]').screenshot({path:path.join(output,file.replace('.jpg','-flow.jpg')),type:'jpeg',quality:80});
+  return {file,documentHeight:height,fullPage};
+}
 (async()=>{
  try{
  for(const engine of requested){
   assert(['chromium','firefox','webkit'].includes(engine),'Unsupported engine');
   const browser=await ({chromium,firefox,webkit}[engine]).launch({...(engine==='chromium'&&process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:engine==='chromium'?['--no-sandbox']:[]});
   try{
-   const e={engine,version:browser.version(),layouts:[],audits:[],errors:[],failedResponses:[]};report.engines.push(e);
+   const e={engine,version:browser.version(),layouts:[],audits:[],captures:[],errors:[],failedResponses:[]};report.engines.push(e);
    console.log(`Phase 8: auditing ${engine} ${e.version}`);
    const c=await context(browser),p=await c.newPage();
    p.on('pageerror',err=>e.errors.push(err.message));p.on('response',r=>{if(r.status()>=400)e.failedResponses.push(r.url());});
@@ -121,7 +131,7 @@ async function controlContrast(p) {
     await p.addStyleTag({content:'html{font-size:200% !important}'});
     if(route==='/')await p.locator('[data-onboarding-start]').click();
     e.layouts.push(await geometry(p,`${route}-200-percent-text-320`));
-    await p.screenshot({path:path.join(output,`${engine}-${route==='/'?'home':'directory'}-text-200.jpg`),type:'jpeg',quality:80,fullPage:true});
+    e.captures.push(await capture(p,`${engine}-${route==='/'?'home':'directory'}-text-200.jpg`));
     await p.goto(origin+route,{waitUntil:'networkidle'});
     await p.addStyleTag({content:'*{line-height:1.5 !important;letter-spacing:.12em !important;word-spacing:.16em !important}p{margin-bottom:2em !important}'});
     if(route==='/')await p.locator('[data-onboarding-start]').click();
@@ -132,7 +142,7 @@ async function controlContrast(p) {
    }
    await p.goto(origin+'/',{waitUntil:'networkidle'});
    assert(await p.evaluate(()=>[...document.querySelectorAll('*')].every(n=>getComputedStyle(n).transitionDuration.split(',').every(v=>parseFloat(v)===0)&&getComputedStyle(n).animationName==='none')),'Reduced motion must cover retained lower sections too');e.reducedMotion=true;
-   await p.screenshot({path:path.join(output,`${engine}-home-320.jpg`),type:'jpeg',quality:80,fullPage:true});
+   e.captures.push(await capture(p,`${engine}-home-320.jpg`));
    await c.close();
    const fallback=await context(browser,{forcedColors:engine==='chromium'?'active':'none'},true);const fp=await fallback.newPage();
    for(const route of ['/','/tools/']){await fp.goto(origin+route,{waitUntil:'networkidle'});e.layouts.push(await geometry(fp,`${route}-blocked-font-image-icons`));}
