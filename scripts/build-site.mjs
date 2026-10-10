@@ -37,6 +37,11 @@ validateTemplates();
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(path.join(outputRoot, "data"), { recursive: true });
 copySiteFiles();
+// Publish the V2 share image at retained URLs without changing production inputs
+// or rewriting the pinned calculator pages that reference social-preview.png.
+for (const filename of ['og-image.png', 'social-preview.png']) {
+  cpSync(path.join(repoRoot, 'assets/v2/social-share.png'), path.join(outputRoot, filename));
+}
 writeFileSync(path.join(outputRoot, "assets", "v2", "home.bundle.css"), homepageStyles(repoRoot));
 writeCompatToolRegistry(outputRoot, manifest);
 buildTemplates();

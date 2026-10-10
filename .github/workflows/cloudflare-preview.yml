@@ -136,6 +136,9 @@ jobs:
           export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-08/lighthouse"
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-lighthouse.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/lighthouse.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-09"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-seo-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
