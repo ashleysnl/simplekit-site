@@ -73,6 +73,7 @@ jobs:
           path: dist/
       - name: Verify candidate build and prepare preview indexing fixture
         run: |
+          npm run sources:fetch
           node scripts/v2-baseline-inventory.mjs
           node scripts/v2-release-artifact.mjs --compare docs/v2/phase-10/release-inventory.json
           rm -f dist/CNAME
@@ -104,10 +105,21 @@ jobs:
           export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence/seo"
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-seo-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/site-inventory-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node scripts/v2-site-inventory.mjs "$SIMPLEKIT_EVIDENCE_DIR/site-inventory.json" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/source-inventory.log"
+          node tests/v2-site-inventory-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: owner-review-evidence
           path: ${{ runner.temp }}/owner-review-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: site-inventory-evidence
+          path: ${{ runner.temp }}/site-inventory-evidence/
           if-no-files-found: warn
           retention-days: 30
