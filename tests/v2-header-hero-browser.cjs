@@ -185,6 +185,10 @@ async function menu(p, screenshot) {
     for (const link of await z.getByRole('navigation').getByRole('link').all()) { await link.focus(); assert(await link.isVisible()); }
     await z.screenshot({ path: path.join(output, 'magnification-200-percent.jpg'), type: 'jpeg', quality: 85 });
     await z.evaluate(() => document.body.style.zoom = ''); await z.setViewportSize({ width: 720, height: 450 });
+    // matchMedia change events are asynchronous after a viewport resize. Wait for
+    // the actual disclosure state before asserting its accessibility exposure.
+    await z.waitForFunction(() => document.querySelector('#home-navigation').hidden
+      && !document.querySelector('.v2-menu-toggle').hidden);
     await assertLayout(z); await menu(z); await zoom.close();
     assert.deepEqual(errors, []); assert.deepEqual(failed, []);
     fs.writeFileSync(path.join(output, 'browser.json'), JSON.stringify({

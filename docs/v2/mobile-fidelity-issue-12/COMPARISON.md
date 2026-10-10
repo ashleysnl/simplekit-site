@@ -22,13 +22,13 @@ Iteration 1: reviewed both phone screenshots plus tablet/desktop. Goals moved to
 
 Iteration 3: fixed fractional rounding at the 375px breakpoint and a 2px trust-label overflow. Browser testing found 200% text overflow in the retained lower homepage grid; scoped minimum widths/wrapping and narrow trust icons correct it. Search testing also found a photo-crop change when results expand at wide widths; explicit photo height now keeps the crop independent of result count.
 
-Iteration 4 (final local review): moved the full, visible privacy/analytics/planning disclosure immediately below the goal cards. The truthful trust indicators lead directly into goals. No disclosure content or links are hidden. Reviewed 375/390/768/1440 captures in `after/` against the unchanged reference.
+Iteration 4: moved the full, visible privacy/analytics/planning disclosure immediately below the goal cards. The truthful trust indicators lead directly into goals. No disclosure content or links are hidden. Reviewed 375/390/768/1440 captures against the unchanged reference. The following table and `after/` captures include iteration 5's final typography and crop refinement.
 
 | Measured element | Before 375 / 390px | After 375 / 390px |
 | --- | --- | --- |
 | Header height | 100 / 100px | 85 / 85px |
 | Question panel | 352 / 352px | 222 / 222px |
-| Trust starts | 936 / 937px | 585 / 587px |
+| Trust starts | 936 / 937px | 610 / 613px |
 | Goals section starts | 1447 / 1448px | 706 / 708px |
 | First goal cards start | 1579 / 1580px | 822 / 824px |
 | Goal columns | 1 / 2 | 2 / 2 |
@@ -65,3 +65,5 @@ The runner securely captured `https://e9070fe2.simplekit-preview.pages.dev` at 3
 
 
 Iteration 5: live delayed-font testing found the earlier Georgia/Segoe UI fallbacks could change line wrapping on the runner. Times New Roman/Liberation Serif and Arial/Liberation Sans now match the bundled font metrics; font files and loaded typography are unchanged. Supporting text uses the reference's three-line composition, with “No signup required” kept together. Copy remains in the light side of the gradient (≤80% of phone width), while the lower landscape crop exposes more coastline on the right. The contrast check now uses the actual mobile gradient and painted headline glyph bounds: body ≥4.5:1 and large heading ≥3:1 even over a black source pixel. All 27 widths and delayed loading pass locally; diagnostics are recorded before the hosted assertion. Goals start at 706/708px locally, still approximately 740px earlier than baseline.
+
+Hosted iteration 5 verification: run `38010558881` passed build/SEO, 24 hosted routes, four screenshot widths and delayed font/image loading (discovery top 310.578125px before/after; CLS 0). Its later magnification-to-mobile transition exposed a test race: `setViewportSize` returns before the asynchronous `matchMedia` listener necessarily hides desktop navigation. The test now waits for the required hidden-navigation/visible-toggle state, then performs all original keyboard/AX assertions. No navigation implementation or acceptance thresholds were changed. Full hosted regression verification is rerun before declaring this task verified.
