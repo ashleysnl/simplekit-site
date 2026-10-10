@@ -36,8 +36,10 @@
   <link rel="stylesheet" href="assets/v2/trust.css">
   <link rel="stylesheet" href="assets/v2/goals.css">
   <link rel="stylesheet" href="assets/v2/featured.css">
+  <link rel="stylesheet" href="assets/v2/onboarding.css">
   <script defer src="assets/v2/home.js"></script>
   <script type="module" src="assets/v2/discovery.js"></script>
+  <script type="module" src="assets/v2/onboarding.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SS26QC3C9"></script>
   <script>
@@ -180,6 +182,31 @@
           <li><a class="v2-featured-tool" data-featured-tool="budget-planner" href="{{toolUrl:budget-planner}}"><span class="v2-icon-disc"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#calculator"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">Budget Planner</span><span class="v2-featured-description">Plan income, expenses, and savings.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
           <li><a class="v2-featured-tool" data-featured-tool="fire-calculator" href="{{toolUrl:fire-calculator}}"><span class="v2-icon-disc" data-accent="purple"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#growth"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">FIRE Calculator</span><span class="v2-featured-description">Estimate financial independence.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="sk-v2 v2-home-onboarding" aria-labelledby="home-onboarding-title" data-v2-onboarding>
+      <div class="v2-container">
+        <div class="v2-onboarding-panel">
+          <span class="v2-icon-disc"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#bulb"></use></svg></span>
+          <div class="v2-onboarding-copy"><h2 id="home-onboarding-title">Not sure where to start?</h2><p>Answer a few quick questions and we’ll suggest tools to explore.</p></div>
+          <button class="v2-button" type="button" aria-expanded="false" aria-controls="onboarding-flow" data-onboarding-start hidden>Get started <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></button>
+          <a class="v2-button" href="tools/" data-onboarding-fallback>Browse all tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a>
+        </div>
+        <div class="v2-onboarding-flow" id="onboarding-flow" aria-labelledby="onboarding-flow-title" data-onboarding-flow hidden>
+          <p class="v2-onboarding-status" role="status" aria-live="polite" aria-atomic="true" data-onboarding-status></p>
+          <h3 id="onboarding-flow-title" tabindex="-1"></h3>
+          <div data-onboarding-content></div>
+          <div class="v2-onboarding-actions">
+            <button class="v2-button v2-button--quiet" type="button" data-onboarding-back>Back</button>
+            <button class="v2-button" type="button" data-onboarding-next>Continue</button>
+            <button class="v2-button v2-button--quiet" type="button" data-onboarding-skip>Skip</button>
+            <button class="v2-button v2-button--quiet" type="button" data-onboarding-restart>Restart</button>
+            <button class="v2-button v2-button--quiet" type="button" data-onboarding-close>Close</button>
+          </div>
+          <a class="v2-onboarding-directory" href="tools/">Browse all {{toolCount}} tools</a>
+          <p class="v2-onboarding-note">Your choices aren’t saved. Close or restart to clear them.</p>
+        </div>
       </div>
     </section>
 

@@ -123,7 +123,7 @@ jobs:
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
           node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
-          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-baseline; do
+          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline; do
             export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/regression/$suite"
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
             node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"

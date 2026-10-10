@@ -101,7 +101,7 @@ async function readable(p,state) {
     await fp.locator('.v2-home-trust').screenshot({path:path.join(output,'trust-nojs-forced-colors.jpg'),type:'jpeg',quality:85});
     await fallback.close();
     assert.deepEqual(errors,[]);
-    fs.writeFileSync(path.join(output,'trust-browser.json'),JSON.stringify({browser:browser.version(),layouts,pageErrors:errors,search:{queries:4,requests:[],analyticsChanged:false,storageChanged:false},onboarding:'Not implemented until Phase 7; no onboarding choices exist to submit.',zoom:'CSS 200%, text 200% at 320, viewport reflow. Actual browser-toolbar zoom remains a manual Phase 8 check.'},null,2)+'\n');
+    fs.writeFileSync(path.join(output,'trust-browser.json'),JSON.stringify({browser:browser.version(),layouts,pageErrors:errors,search:{queries:4,requests:[],analyticsChanged:false,storageChanged:false},onboarding:'Guided discovery is audited separately by v2-onboarding-browser.cjs; this suite covers trust and search privacy.',zoom:'CSS 200%, text 200% at 320, viewport reflow. Actual browser-toolbar zoom remains a manual Phase 8 check.'},null,2)+'\n');
     console.log(`${layouts.length} layout/fallback checks; privacy/methodology keyboard links and 4 private searches passed.`);
   } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

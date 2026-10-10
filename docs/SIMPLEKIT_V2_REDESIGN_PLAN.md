@@ -251,7 +251,7 @@ Status: `[~]`. Focused composition pass after Phase 5, before later homepage pha
 - [x] Verify 28 repository tests, portable build, source pins, SEO/output and preservation guard.
 - [x] Deploy the verified candidate to isolated Cloudflare preview and record the exact source/artifact.
 - [x] Capture secure live hosted screenshots and verify hosted interactions. Run 38013211800 passes all hosted suites; runner evidence is separate from loopback captures.
-- [ ] Open the temporary feature PR targeting develop-v2 and update issue #12 with verified results.
+- [x] Open the temporary feature PR targeting develop-v2 and update issue #12 with verified results.
 - [ ] Obtain owner visual approval; no merge or production deployment is authorized.
 
 Evidence: [mobile comparison and iteration log](v2/mobile-fidelity-issue-12/COMPARISON.md). This task explicitly requires temporary `feature/simplekit-v2-mobile-fidelity` and a review PR into `develop-v2`; keep it unmerged until explicit approval, then return ongoing work to the authoritative development branch. Existing phase completion and remaining manual accessibility checks are preserved. The owner subsequently instructed Phase 6; that work continues in the same review PR. Guided onboarding remains Phase 7.
@@ -277,10 +277,10 @@ Codex guidance: favor semantic lists and real anchors over clickable containers.
 
 Status: `[~]`. Owner instructed implementation after verified Phase 6. Continue in the existing temporary PR #13; preserve all previous work and the explicit no-merge/no-production limits.
 
-- [ ] Implement the reference “Not sure where to start?” panel and “Get started” control, with a lightweight accessible dialog or inline step flow.
-- [ ] Ask up to three optional non-sensitive questions about planning goal, immediate question and preferred level of detail; offer skip, back, close and restart.
-- [ ] Document deterministic answer-to-tool mappings covering all four primary goals and secondary needs; return one to three tools with brief reasons and direct manifest links.
-- [ ] Keep answers ephemeral in memory, clear them on restart/close, request no account or personal financial details, and retain an all-tools fallback with JavaScript disabled.
+- [x] Implement the reference “Not sure where to start?” panel and “Get started” control, with a lightweight accessible dialog or inline step flow.
+- [x] Ask up to three optional non-sensitive questions about planning goal, immediate question and preferred level of detail; offer skip, back, close and restart.
+- [x] Document deterministic answer-to-tool mappings covering all four primary goals and secondary needs; return one to three tools with brief reasons and direct manifest links.
+- [x] Keep answers ephemeral in memory, clear them on restart/close, request no account or personal financial details, and retain an all-tools fallback with JavaScript disabled.
 
 Acceptance:
 
@@ -289,7 +289,7 @@ Acceptance:
 - [ ] No answers are transmitted or persisted by default; recommendations describe tools and do not promise financial conclusions.
 - [ ] Starting with retirement, housing, debt/budget or investing produces the expected documented tool IDs and working links.
 
-Codex guidance: test the mapping table and real user paths. Keep the flow optional; users can open every calculator directly. Evidence link: pending.
+Codex guidance: test the mapping table and real user paths. Keep the flow optional; users can open every calculator directly. Evidence: [Phase 7 verification and mapping](v2/phase-07-verification.md). All 93 local browser paths, 24 layout/fallback states and 30 repository tests pass; hosted candidate verification is in progress. Chromium AX/keyboard coverage is automated; manual screen-reader coverage remains Phase 8.
 
 ## Phase 8 — Responsive polish, accessibility and performance
 
