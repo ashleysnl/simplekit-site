@@ -7,7 +7,7 @@ const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:80
 require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-trust';
 fs.mkdirSync(output,{recursive:true});
-const titles = ['No signup','Local calculations','Built for Canadians'];
+const titles = ['No signup','Local results','Built for Canadians'];
 const errors = [], layouts = [];
 async function makeContext(browser,options={}) {
   const c = await browser.newContext({viewport:{width:390,height:1000},locale:'en-CA',...options});
@@ -20,11 +20,21 @@ async function readable(p,state) {
   assert.deepEqual(await p.locator('.v2-trust-title').allTextContents(),titles);
   const result = await p.locator('.v2-home-trust').evaluate(section=>{
     const rect=n=>n.getBoundingClientRect().toJSON();
+    const splitTitleWords = [...section.querySelectorAll('.v2-trust-title')].flatMap(title => {
+      const node = title.firstChild;
+      return [...node.textContent.matchAll(/\S+/g)].filter(word => {
+        const range = document.createRange();
+        range.setStart(node, word.index); range.setEnd(node, word.index + word[0].length);
+        return range.getClientRects().length > 1;
+      }).map(word => word[0]);
+    });
     return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,section:rect(section),
+      splitTitleWords,
       items:[...section.querySelectorAll('li')].map(n=>({rect:rect(n),title:rect(n.querySelector('.v2-trust-title')),detail:rect(n.querySelector('.v2-trust-detail')),icon:rect(n.querySelector('.v2-icon-disc')),overflow:n.scrollWidth>n.clientWidth+1})),
       links:[...document.querySelectorAll('.v2-trust-note a')].map(n=>({href:n.href,rect:rect(n)}))};
   });
   assert(result.scrollWidth<=result.width,`${state}: horizontal overflow`);
+  assert.deepEqual(result.splitTitleWords, [], `${state}: trust title splits inside a word`);
   for(const item of result.items) {
     assert(!item.overflow,`${state}: item clipped`);
     assert(item.icon.right<=item.title.left,`${state}: icon overlaps text`);
