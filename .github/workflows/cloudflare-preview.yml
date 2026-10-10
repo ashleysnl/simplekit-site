@@ -46,7 +46,7 @@ jobs:
   preview:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     environment: simplekit-preview
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -83,8 +83,8 @@ jobs:
           PY
       - name: Prepare isolated browser verification
         run: |
-          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1
-          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium
+          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3 lighthouse@12.8.2
+          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
       - name: Capture the previous hosted preview
         if: inputs.baseline_url != ''
         continue-on-error: true
@@ -95,6 +95,8 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/preview-browser-evidence/before"
           NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules" SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/before" node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$RUNNER_TEMP/preview-browser-evidence/before/capture.log"
+          mkdir -p "$RUNNER_TEMP/preview-browser-evidence/baseline-lighthouse"
+          NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules" SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/baseline-lighthouse" node tests/v2-lighthouse.cjs 2>&1 | tee "$RUNNER_TEMP/preview-browser-evidence/baseline-lighthouse/lighthouse.log"
       - name: Upload a preview branch only
         id: upload
         shell: bash
@@ -128,6 +130,12 @@ jobs:
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
             node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           done
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-08/accessibility"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit node tests/v2-accessibility-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-08/lighthouse"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-lighthouse.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/lighthouse.log"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:

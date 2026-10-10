@@ -74,6 +74,8 @@ Browser-only external dependencies include optional Google Analytics (`www.googl
 
 `npm test` uses Node's built-in test runner; it checks pin/route contracts, cache tampering, historical report scope, legacy URLs in production files, compatibility exceptions, canonical validation, local path resolution, Core module integration and broken output dependencies. Build output validation is also required; unit tests alone do not establish site readiness.
 
+Phase 8 adds test-only axe/Lighthouse checks; install `playwright@1.56.1 axe-core@4.10.3 lighthouse@12.8.2` into a temporary prefix, not the website package. Set `NODE_PATH` to that prefix's `node_modules`, `SIMPLEKIT_PREVIEW_URL` to loopback or an explicitly enabled isolated preview, and `SIMPLEKIT_EVIDENCE_DIR` to an evidence directory. Run `node tests/v2-accessibility-browser.cjs` (use `SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit` where all browser dependencies are available) and `node tests/v2-lighthouse.cjs`. The latter gates medians across three cold-storage mobile runs. `CHROMIUM_PATH` can select installed Chromium. The preview workflow installs all three engines with their Linux dependencies and persists JSON/logs/screenshots/full Lighthouse HTML reports. The local preview serves compressed text like a CDN; its lab results must be distinguished from hosted transport and field data. See [Phase 8 evidence and manual coverage limits](docs/v2/phase-08-verification.md).
+
 ## Updating calculator revisions
 
 1. Change calculator code in its original GitHub repository through a reviewed PR. Review its HTML, metadata, assets and logic there.

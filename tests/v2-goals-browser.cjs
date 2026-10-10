@@ -18,7 +18,7 @@ async function context(browser, options = {}, blockAssets = false) {
   await c.route('**/*', route => {
     const url = new URL(route.request().url());
     if (url.origin !== origin) return route.fulfill({ body: '', contentType: 'text/javascript' });
-    if (blockAssets && (/\.woff$/.test(url.pathname) || url.pathname.endsWith('sprite.svg'))) return route.abort();
+    if (blockAssets && (/\.woff2?$/.test(url.pathname) || url.pathname.endsWith('sprite.svg'))) return route.abort();
     return route.continue();
   });
   c.on('page', p => {

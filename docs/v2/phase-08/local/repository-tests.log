@@ -1,0 +1,45 @@
+Output validation passed: 1 calculator routes, 1 sitemap URLs, 1 HTML pages, 1 local assets.
+✔ every canonical calculator has one completed, immutable GitHub source (2.737871ms)
+✔ source acquisition rejects branch pins, duplicate IDs and traversal (1.428711ms)
+✔ historical reports are excluded only in source checks; published legacy links fail (1.60267ms)
+✔ SEO checks reject legacy URLs in robots, sitemap and browser code (1.090293ms)
+✔ intentional compatibility registry is allowed, adjacent production files are checked (0.823949ms)
+✔ canonical manifest rejects mismatched, duplicate and unsafe routes (1.334973ms)
+✔ all restored sitemap routes still resolve to the same canonical host (0.37605ms)
+✔ URL resolver handles relative/query assets and refuses external or encoded traversal (1.340722ms)
+✔ bundled Core loads as an ES module for classic and module callers (0.401288ms)
+✔ cached sources fail verification after edits, ignored files, or origin changes (44.846592ms)
+✔ output checks detect wrong metadata, missing assets and module dependencies (5.791619ms)
+✔ v2 preserves the 22 canonical tools and declared sitemap inventory (0.292894ms)
+✔ v2 leaves calculator and Core source revisions unchanged (0.49506ms)
+✔ v2 preserves checked-in production landing pages and hostname (1.103993ms)
+✔ v2 keeps the original design reference unchanged (2.714074ms)
+✔ discovery covers every canonical tool and derives names and destinations from the manifest (0.147373ms)
+✔ discovery rejects missing, duplicate, unknown and stale metadata IDs (1.599795ms)
+✔ discovery rejects a second route authority, stale URLs and invalid metadata (1.361624ms)
+✔ suggested questions map to their four intended primary and optional related tools (1.17423ms)
+✔ each of the 22 exact names and slugs ranks its intended tool first, ahead of synonym collisions (12.004838ms)
+✔ money questions and common Canadian synonyms find the intended tool first (1.25998ms)
+✔ normalization handles mixed case, whitespace, accents and punctuation; empty/unknown/HTML-like queries are harmless (0.794615ms)
+✔ static questions escape metadata and generated browser data preserves canonical destinations (2.286767ms)
+✔ goal destinations contain their intended tools and keep tax, pay/work and travel visible (0.235267ms)
+✔ duplicate tools, missing primary categories and empty goal destinations fail the build contract (0.702615ms)
+✔ directory rendering escapes manifest copy and emits canonical tool tokens once each (0.380807ms)
+✔ the four reference cards and all seven directory anchors use the same category IDs (0.550494ms)
+✔ every guided-discovery answer/skip combination returns canonical tools or an explicit fallback (0.944251ms)
+✔ documented goals and immediate needs preserve relevance when earlier answers change (0.477253ms)
+✔ homepage bundle preserves CSS order and resolves local font resources (0.894386ms)
+✔ navigation enhancement is synchronous at its markup boundary, with JS-free fallback (0.32953ms)
+✔ browser suites require explicit isolated-preview opt-in and reject production or lookalike hosts (0.525467ms)
+(node:11782) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/simplekit-site/assets/v2/discovery-engine.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /workspace/simplekit-site/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 131.37525

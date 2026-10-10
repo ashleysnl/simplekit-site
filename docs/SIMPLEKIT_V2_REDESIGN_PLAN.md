@@ -293,7 +293,7 @@ Codex guidance: test the mapping table and real user paths. Keep the flow option
 
 ## Phase 8 — Responsive polish, accessibility and performance
 
-Status: `[ ]`. Depends on Phases 1–7; apply accessibility throughout earlier phases too.
+Status: `[~]`. Owner authorized Phase 8. Continue in temporary PR #13 targeting `develop-v2`, without merging or touching production. Automated auditing and fixes are in progress; unavailable manual screen-reader/real-device coverage must remain explicitly pending.
 
 - [ ] Audit homepage/directory/menu/search/onboarding for WCAG 2.2 AA: landmarks, headings, labels, focus order/visibility, contrast, target size, announcements and alternatives.
 - [ ] Test keyboard-only use, VoiceOver/Safari and a second documented screen-reader/browser combination; test touch and 200% text enlargement/400% reflow.
@@ -426,7 +426,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner-requested [demo uploaded](https://e9070fe2.simplekit-preview.pages.dev); workflow and artifact verification pass, live checks limited here by 403. Earlier manual/review limitations remain for Phase 8. |
 | 6 Popular calculators | `[x]` | Curated “Featured calculators” rows in PR #13. [Phase 6 verification](v2/phase-06-verification.md); all local/hosted checks pass in run 38013211800. |
 | 7 Guided onboarding | `[~]` | Implementation and local/hosted automation verified; manual screen-reader acceptance remains Phase 8. Same unmerged PR #13. |
-| 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
+| 8 Accessibility/responsiveness/performance | `[~]` | Owner authorized implementation; same unmerged PR #13. Automated audit/fixes in progress; manual devices/assistive technology pending. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
 | 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
 | 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |

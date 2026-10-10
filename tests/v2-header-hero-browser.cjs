@@ -18,7 +18,7 @@ async function context(browser, options = {}, mode = 'normal') {
       assert.equal(url.hostname, 'www.googletagmanager.com', 'Unexpected external dependency');
       return r.fulfill({ body: '', contentType: 'text/javascript' });
     }
-    const asset = url.pathname.endsWith('.woff') || url.pathname.includes('/v2/images/');
+    const asset = /\.woff2?$/.test(url.pathname) || url.pathname.includes('/v2/images/');
     if (asset && mode === 'blocked') return r.abort();
     if (mode === 'delayed' && (asset || url.pathname.endsWith('/v2/discovery-index.js')))
       await new Promise(resolve => setTimeout(resolve, 500));
