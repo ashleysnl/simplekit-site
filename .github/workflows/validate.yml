@@ -67,6 +67,17 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version-file: .node-version
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: simplekit-site
+          path: dist/
+      - name: Verify candidate build and prepare preview indexing fixture
+        run: |
+          node scripts/v2-baseline-inventory.mjs
+          node scripts/v2-release-artifact.mjs --compare docs/v2/phase-10/release-inventory.json
+          rm -f dist/CNAME
+          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > dist/_headers
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
       - name: Prepare isolated test-only browser
         run: |
           npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1
