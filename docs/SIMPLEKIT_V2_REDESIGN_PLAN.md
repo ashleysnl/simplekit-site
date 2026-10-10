@@ -311,9 +311,9 @@ Acceptance:
 
 Codex guidance: use the existing SEO generators and route authority. Review [SEO improvement plan](../SEO-IMPROVEMENT-PLAN.md) for context; v2 does not automatically complete its separate checklist. Evidence link: pending.
 
-## Phase 10 — Full regression and release candidate
+## Phase 10 — Interim homepage/discovery regression checkpoint
 
-Status: `[ ]`. Depends on Phases 0–9.
+Status: `[ ]`. Depends on Phases 0–9. This is an interim checkpoint, not approval of a complete V2 website or permission to deploy.
 
 - [ ] Run the supported commands from a clean checkout and compare repeated build inventories for deterministic output.
 - [ ] Run all 22 tools on the local generated origin; verify inputs render, shared Core mounts, navigation/assets/modules load and each baseline interaction/output fixture still passes.
@@ -330,9 +330,109 @@ Acceptance:
 
 Codex guidance: the existing browser smoke script is a starting point, not proof of every calculation. Add fixture coverage appropriate to each tool type, and test preview paths rather than accidentally following production canonicals. Evidence link: pending.
 
-## Phase 11 — Cloudflare preview and owner review
+## Expanded V2 release scope — entire website, one coordinated launch
 
-Status: `[ ]`. Depends on Phase 10.
+**Owner decision (2026-10-10):** V2 is a complete visual and interaction redesign of the entire SimpleKit site, not a homepage-only launch. The homepage, tool directory, all 22 calculator experiences, Learn hub, articles, methodology/about/privacy/support and other publicly accessible pages must share a coherent premium design before any V2 production release. Preserve existing content, semantics, URLs, SEO equity, calculation behavior and user data. New visual styling does not authorize rewriting financial advice, deleting articles or changing formula logic.
+
+The original mobile mockup in `docs/design-reference/simplekit-v2-target.png` remains the north star for brand hierarchy, colour, typography and atmosphere, **not** a literal template for calculator charts or article reading layouts. Derive responsive page-family references and compare screenshots. Do not put a new shell around untouched legacy-looking calculator content and call the site complete.
+
+**Release gate:** Phases 0–16 plus Phase 17 owner review must pass before Phase 18 production deployment. Phase 10 is now an **interim homepage/discovery regression checkpoint**, not final V2 release candidate approval. Every new phase starts `[ ]` and may be completed only with linked evidence. Current earlier-phase statuses remain as recorded; do not retrospectively mark them complete.
+
+**Source ownership:** The site assembles calculators and shared Core from pinned upstream repositories. Inventory each component's owner and choose the lowest-risk styling integration: reusable Core tokens/components, per-calculator upstream source updates, and site-owned templates as appropriate. Never edit generated `dist/`, cache, or copied calculator files as the authoritative source. Any upstream changes require separate review, tests and deliberate `data/calculator-sources.json` pin updates. Preserve calculations, defaults, local storage, import/export, charts' data semantics, routes and accessibility. Do not silently force all tools into the same form layout.
+
+## Phase 11 — Site-wide visual and content inventory
+
+Status: `[ ]`. Depends on Phase 10 interim regression checkpoint.
+
+- [ ] Enumerate every published page from templates, manifests, sitemap and generated output; classify homepage, directory, calculator, article/guide, hub, legal, support, methodology and any other page family.
+- [ ] Capture representative and exceptional pages at 375, 390, 768 and 1440 CSS pixels; include article long-form, charts/tables, mobile calculator inputs/results, menus, footers and dark/forced-colour where supported.
+- [ ] Audit header/footer, typography, breadcrumbs, cards, content width, forms, charts, result panels, navigation, cross-links, accessibility and visual drift against the V2 reference.
+- [ ] Trace Core and all 22 calculator source repositories, their pinned SHAs, styling ownership and shared-versus-unique components; document safe migration order and regression risks.
+- [ ] Create a page-by-page checklist and explicit visual acceptance rubric; distinguish site-owned templates from upstream calculator changes.
+
+Acceptance:
+- [ ] Every sitemap and public route is assigned a page family, migration owner and target; no article, guide or support page is omitted.
+- [ ] Existing content, URLs, metadata, schemas, redirects and numerical fixture baselines are captured.
+- [ ] Screenshots and gap analysis are linked from `docs/v2/phase-11-verification.md`.
+
+## Phase 12 — Unified V2 design system and shared site shell
+
+Status: `[ ]`. Depends on Phase 11.
+
+- [ ] Extend Phase 1 tokens into documented, reusable site-wide typography, responsive spacing, surfaces, elevations, colours, icons and states, with a versioned migration contract.
+- [ ] Define shared header/menu, breadcrumbs, footer, article navigation, related-content blocks, disclosures, alerts, CTA links and search/navigation conventions.
+- [ ] Define calculator UI primitives: labelled currency/percent/number inputs, selects, toggles, sliders, inline help, validation, results/KPIs, charts, tables, accordions, export actions and empty/loading states.
+- [ ] Create accessible page-family visual specifications for homepage, directory, editorial content and interactive calculators; use the saved target PNG for brand fidelity and documented functional deviations.
+- [ ] Plan shared Core and upstream calculator changes without unreviewed formula or source-pin changes.
+
+Acceptance:
+- [ ] Components satisfy WCAG-oriented keyboard/focus/contrast/reflow expectations and mobile tap-target requirements; manual assistive-tech checks remain explicit.
+- [ ] Representative desktop/mobile design references exist for editorial and calculator page families.
+- [ ] No legacy styling regressions or numerical behavior changes; evidence in `docs/v2/phase-12-verification.md`.
+
+## Phase 13 — Articles, Learn hub and supporting pages redesign
+
+Status: `[ ]`. Depends on Phase 12.
+
+- [ ] Redesign Learn hub, all existing article and educational guide templates, tool directory and supporting pages (About, Methodology, Privacy, Support and other inventoried routes) to match V2.
+- [ ] Apply consistent header/footer, breadcrumb trails, reading widths, serif headings, sans-serif body, author/date information only where substantiated, section navigation, lists, tables, callouts, citations and related tools.
+- [ ] Improve mobile reading, long tables, inline links, imagery and article-to-calculator discovery without intrusive CTAs or misleading trust claims.
+- [ ] Preserve all article bodies, metadata, structured data, canonical URLs, indexability and internal links unless separately approved and documented.
+- [ ] Verify no-JS accessibility, print/readability and representative short/long-form content.
+
+Acceptance:
+- [ ] Every non-calculator page in the Phase 11 inventory is migrated or has an explicitly reviewed exception; screenshots compare mobile/tablet/desktop.
+- [ ] No lost articles, broken fragments, metadata regressions, layout overflow or unexpected analytics/privacy changes.
+- [ ] Evidence and per-route coverage in `docs/v2/phase-13-verification.md`.
+
+## Phase 14 — Pilot calculator redesign and upstream integration
+
+Status: `[ ]`. Depends on Phases 12–13.
+
+- [ ] Select Retirement Planner as the primary complex pilot and Mortgage Calculator as a contrasting numerical/form pilot; inspect Core and their source repositories before changes.
+- [ ] Apply the V2 shell and shared input, validation, result, chart, table and export styles while preserving each calculator's purpose-specific information architecture.
+- [ ] Implement changes in the correct upstream Core/calculator repositories where necessary; test and review upstream commits before updating pinned SHAs in SimpleKit.
+- [ ] Validate mobile input ergonomics, results visibility, readable chart labels, keyboard/screen-reader semantics, persistence, export/import and error states.
+- [ ] Compare outputs with Phase 0 fixtures, including precision and rounding, and capture screenshots of initial, populated, error and results states.
+
+Acceptance:
+- [ ] Both pilots feel like the V2 homepage and editorial pages without sacrificing calculator usability.
+- [ ] All numerical and state/export regression fixtures pass; source changes and pins are traceable/reproducible.
+- [ ] Owner reviews pilot screenshots before authorizing rollout to the remaining 20 calculators; evidence in `docs/v2/phase-14-verification.md`.
+
+## Phase 15 — Redesign remaining 20 calculators in controlled batches
+
+Status: `[ ]`. Depends on owner acceptance of Phase 14.
+
+- [ ] Group remaining tools by interaction pattern (retirement/investing, housing, debt, income/tax, budgeting/planning, checklists/travel); inventory unique UI and state cases.
+- [ ] Apply shared V2 visual primitives and appropriate tool-specific layouts to every remaining calculator; avoid blanket CSS that breaks complex charts, tables or input controls.
+- [ ] Update upstream sources and source pins only after isolated review and fixture tests; record per-tool old/new pins, changed files and rollback path.
+- [ ] For every tool verify mobile/desktop screenshots, meaningful input/output calculations, data persistence where supported, import/export, validation, keyboard focus, zoom/reflow and related-tool links.
+- [ ] Maintain a 22-row tool-by-tool migration checklist with `[ ]`, `[~]`, `[x]` and direct evidence; do not mark the phase complete based only on shared CSS application.
+
+Acceptance:
+- [ ] All 22 calculator routes are visually migrated and have tool-specific passing regression evidence, including the two pilots.
+- [ ] No unintended calculation, storage, download, route, canonical, analytics or accessibility regressions.
+- [ ] Evidence in `docs/v2/phase-15-verification.md` includes the complete 22-tool matrix.
+
+## Phase 16 — End-to-end visual coherence and final release candidate
+
+Status: `[ ]`. Depends on Phases 11–15 and closure or documented owner acceptance of earlier manual accessibility checks.
+
+- [ ] Audit the full site as a user journey: homepage → search/goals → calculator → related guide/article → another calculator → supporting pages.
+- [ ] Compare representative and exceptional page families to the saved mockup and approved derived references at 320, 375, 390, 768, 1440 and 1920 widths, with 200% zoom, reduced motion and mobile devices.
+- [ ] Run clean pinned-source builds, deterministic artifact comparisons, SEO/output validations, every calculator numerical/state fixture, accessibility checks and browser regression suites.
+- [ ] Check all published routes, article anchors, schema, canonical metadata, sitemap, robots, redirects, fonts, imagery, performance and privacy claims.
+- [ ] Capture final full-site screenshot gallery, resolved deviations, known issues, upstream pin manifest, versioned release artifact/checksum and rollback package.
+
+Acceptance:
+- [ ] Homepage, articles, directory, all 22 calculators and supporting pages meet the unified V2 design acceptance rubric; no unapproved legacy-styled page remains.
+- [ ] All critical functionality, SEO, accessibility and performance gates pass; any noncritical exceptions are specifically owner-accepted.
+- [ ] The **entire-site** release candidate and its exact commit/artifact are documented in `docs/v2/phase-16-verification.md`; no production merge/deploy.
+
+## Phase 17 — Cloudflare preview and owner review
+
+Status: `[ ]`. Depends on Phase 16 full-site release candidate.
 
 - [ ] Inspect the manual preview workflow and dedicated project/environment protections through permitted tools; retain production branch guard and absence of custom domains.
 - [ ] Dispatch “Manual Cloudflare preview” from the trusted default workflow with `source_ref` set to the exact reviewed `develop-v2` commit; satisfy existing environment approvals without weakening protections.
@@ -349,9 +449,9 @@ Acceptance:
 
 Codex guidance: the prior verified alias was `https://codex-preview.simplekit-preview.pages.dev`; `https://simplekit-preview.pages.dev` returned 404 because only a preview branch was uploaded. Use upload output as the current authority. The `codex-preview` alias is shared/replaceable: coordinate preview uploads and retain the immutable candidate URL. Preview approval never grants production approval. Evidence link: pending.
 
-## Phase 12 — Controlled production rollout and rollback
+## Phase 18 — Controlled production rollout and rollback
 
-Status: `[ ]`. Depends on Phase 11 plus explicit owner production approval.
+Status: `[ ]`. Depends on Phase 17 plus explicit owner production approval.
 
 - [ ] Prepare the concrete release package: exact source commit/artifact/checksum, all passing checks, preview approval, intended existing production destination, deploy procedure, previous artifact/commit and rollback procedure.
 - [ ] Inspect the actual GitHub Pages publishing source and Cloudflare configuration. If publishing `dist/` needs a workflow, create a separate reviewed proposal with protected approvals; do not assume merging templates deploys the new site.
@@ -371,7 +471,7 @@ Codex guidance: this phase is an approval gate. Complete the reviewable release 
 
 ## Protected calculator inventory
 
-Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs use `https://simplekit.app` plus the path below. Preserve legacy subdomain values from the manifest and existing redirect behavior; do not repoint them in this project. During every phase verify all 22 remain discoverable; Phase 0/10/11/12 verify runtime behavior on the relevant origin.
+Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs use `https://simplekit.app` plus the path below. Preserve legacy subdomain values from the manifest and existing redirect behavior; do not repoint them in this project. During every phase verify all 22 remain discoverable; Phase 0/10/16/17/18 verify runtime behavior on the relevant origin.
 
 | # | Tool | Canonical path / ID |
 | --- | --- | --- |
@@ -413,7 +513,13 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
 | 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
-| 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |
-| 12 Production rollout | `[ ]` | Pending Phase 11 and explicit release approval. |
+| 11 Site-wide inventory | `[ ]` | Pending Phase 10; inventory every page family and upstream calculator owner. |
+| 12 Unified design system | `[ ]` | Pending Phase 11; site-wide shell and calculator primitives. |
+| 13 Articles and supporting pages | `[ ]` | Pending Phase 12; migrate all editorial and informational pages. |
+| 14 Calculator pilots | `[ ]` | Pending Phase 13; Retirement and Mortgage pilots with owner review. |
+| 15 Remaining calculators | `[ ]` | Pending Phase 14; complete all 22 tool migrations. |
+| 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |
+| 17 Cloudflare preview/review | `[ ]` | Pending Phase 16; owner approves full-site preview. |
+| 18 Production rollout | `[ ]` | Pending Phase 17 and explicit release approval. |
 
 End each execution with the active phase, completed criteria/evidence, unfinished work or blocker, current branch/PR/commit, preview identity if applicable, production unchanged status, and the next bounded phase/task. Keep this file updated in the same phase commit on `develop-v2` (or required temporary PR targeting it) so the next Codex task can resume from evidence instead of conversation memory.
