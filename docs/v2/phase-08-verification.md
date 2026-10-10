@@ -1,6 +1,6 @@
 # Phase 8 — accessibility, responsive polish and performance
 
-Status: `[~]`. Owner authorized Phase 8 in the existing temporary PR #13 targeting `develop-v2`. No merge, production or DNS changes are authorized.
+Status: `[~]`. Phase 8 implementation and available automated verification are complete in the existing temporary PR #13 targeting `develop-v2`. Manual assistive-technology/device/zoom/contrast reviews and field data remain pending. No merge, production or DNS changes are authorized.
 
 ## Baseline
 
@@ -20,7 +20,7 @@ The search field now uses the existing control-border token rather than the deco
 
 WOFF2 containers reduce the three used homepage fonts from 162,480 to 125,520 bytes (22.7%). All four files retain the WOFF fallback and SIL OFL; cmap/advance metrics are verified unchanged. [Font identities and sizes](phase-08/fonts.json). Conversion uses optional fontTools only during asset maintenance; the Node/Linux build does not need Python or a new package dependency.
 
-The preview server now negotiates ordinary Brotli/gzip text transport, matching the CDN's transport rather than inflating local lab payloads. Three final local runs give performance 99/99/99, accessibility 100/100/100, LCP 1959.0/1959.0/1957.0ms and CLS 0. This includes the transport change and must not be presented as the effect of client changes alone. The uncompressed first refinement was 95–96 with CLS 0 and LCP around 2554ms. Hosted before/after runs will use the same CDN and lab settings for a fair transport comparison. [Final local lab settings/results](phase-08/local/lighthouse-summary.json).
+The preview server now negotiates ordinary Brotli/gzip text transport, matching the CDN's transport rather than inflating local lab payloads. Three final local runs give performance 99/99/99, accessibility 100/100/100, LCP 1959.0/1959.0/1957.0ms and CLS 0. This includes the transport change and must not be presented as the effect of client changes alone. The uncompressed first refinement was 95–96 with CLS 0 and LCP around 2554ms. Final hosted before/after runs below use the same CDN and lab settings for a fair transport comparison. [Final local lab settings/results](phase-08/local/lighthouse-summary.json).
 
 32 repository tests and portable build/source, SEO, output and preservation checks pass: all 23 pins verified, all 22 calculators and 53 sitemap URLs preserved, 67 HTML routes, 333 artifact files, 94 calculator JavaScript files identical to pinned upstream. New test-only browser tools live in a temporary prefix and are excluded from deployment.
 
@@ -50,3 +50,40 @@ The secure Phase 7 baseline on the same CDN/settings has median performance 94, 
 Runs `38064705068` and `38065077127` complete all seven regression suites, then reach Firefox's 32,767px screenshot encoder limit during 200% text testing. Screenshot capture now records viewport/component shots for documents over 16,000px, while retaining full-document glyph/target checks and reporting capture mode. No geometry assertion is relaxed.
 
 Checkpoint run `38065658115` passes all three engines, 78 reflow/fallback layouts, 24 axe states, all seven regression suites and three Lighthouse runs (median performance 98, accessibility 100, LCP 2289.6ms, CLS 0). Screenshot review still finds About/Support directory navigation labels overlapping at 200% text: the viewport-only text check did not detect that overlap. The scoped directory grid now uses a rem-based minimum that reduces its column count when text grows, retaining three columns on ordinary phones. Glyphs are now checked against their interactive control bounds in every layout, as well as the viewport. All 26 local Chromium layouts and eight axe states pass after that correction; final hosted verification repeats the stricter checks.
+
+Run `38066917456` passes all seven regressions and the stricter Chromium checks, then identifies a Firefox-only enlarged-text footer defect: “Understanding Net Worth” extends outside its link control. Scoped footer wrapping and minimum-width safeguards now preserve that label at 200% text. The full strict three-engine suite is rerun against runtime `997a24480f9bc1c4dfc4abee0371b8bf9f0621b0`; no glyph-bound assertion is removed or relaxed.
+
+## Before/after comparison
+
+The approved premium composition remains intact: no hero redesign, smaller text or reduced touch targets is used to improve the score. At ordinary mobile widths, the visible changes are a stronger search boundary and consistent focus treatment. Cold loading no longer shifts the page when the navigation enhancement arrives. The directory navigation and retained homepage footer wrap safely with enlarged text. The same coastal image, curated tool links, optional onboarding and all 22 calculators remain available.
+
+| Check | Before | Phase 8 change |
+| --- | --- | --- |
+| Cold navigation layout | Deferred enhancement can shift the whole main region | Enhancement runs at the header markup boundary; no-JS links remain visible |
+| Critical styles/fonts | Eight stylesheet requests; WOFF only | Ordered CSS bundle; metric-preserving WOFF2 with WOFF fallback |
+| Search boundary | Decorative border, 1.30:1 against white | Control border, measured above 3:1 in all engines |
+| Directory keyboard/touch access | No focused skip destination; uneven small links | Skip link, visible focus and 44px targets |
+| Enlarged text | Directory nav and Firefox footer labels can overlap/escape controls | Responsive nav column minimum and safe footer wrapping; glyph-bound assertions |
+
+Hosted screenshots at 375/390/768/1440px are retained in [before](phase-08/hosted/before/) and [after](phase-08/hosted/after/). Cross-engine enlarged-text screenshots and full report are in [accessibility evidence](phase-08/hosted/phase-08/accessibility/). These automated captures do not substitute for the pending human/device reviews above.
+
+## Final hosted verification — 2026-10-10
+
+Runtime `997a24480f9bc1c4dfc4abee0371b8bf9f0621b0` passes [repository CI](https://github.com/ashleysnl/simplekit-site/actions/runs/38067761497) and [full hosted validation](https://github.com/ashleysnl/simplekit-site/actions/runs/38067758043). [Verified demo](https://4bb45d9d.simplekit-preview.pages.dev). All seven prior regression suites pass, including 93 onboarding answer/skip paths, all 22 exact calculator fixtures and 24 HTTP routes. Homepage/directory canonicals and sitemap URLs remain unchanged. Screenshot review confirms the ordinary 390px composition is preserved and enlarged Firefox directory navigation no longer overlaps.
+
+Chromium 141.0.7390.37, Firefox 142.0.1 and WebKit 26.0 each pass 26 responsive/fallback layouts, eight axe states, keyboard/focus, reduced-motion and no-JS checks: 78 layouts and 24 states total, zero changed-UI axe violations, console errors or failed HTTP responses. Strict control-glyph bounds pass in every layout, including the Firefox footer at 200% text. Search border contrast is 3.44555:1 in all three engines; Chromium touch-emulated onboarding also passes. This is automation, not Safari/VoiceOver or real-phone testing.
+
+Three cold Lighthouse 12.8.2 runs use the settings documented above, with the same hosted CDN for baseline and candidate:
+
+| Metric | Phase 7 baseline runs | Phase 8 final runs | Baseline → final median |
+| --- | --- | --- | --- |
+| Performance | 95 / 96 / 93 | 99 / 99 / 99 | 95 → 99 |
+| Accessibility | 100 / 100 / 100 | 100 / 100 / 100 | 100 → 100 |
+| LCP (ms) | 2603.3 / 2606.9 / 2594.8 | 1976.8 / 2130.1 / 2127.2 | 2603.3 → 2127.2 |
+| CLS | 0 / 0 / 0.112511 | 0 / 0 / 0 | 0 → 0 |
+
+The baseline's intermittent navigation shift appears in one of these three runs and in two runs of the earlier checkpoint. Do not claim every baseline run shifted or that final lab results establish field p75/INP. All final lab thresholds pass. [Baseline settings/results](phase-08/hosted/baseline-lighthouse/lighthouse-summary.json), [final settings/results](phase-08/hosted/phase-08/lighthouse/lighthouse-summary.json). Full six JSON/HTML Lighthouse reports remain in the workflow's browser artifact; compact reports/screenshots are committed here.
+
+[Deployment identity](phase-08/deployment.json) confirms environment `preview`, production branch `__production_disabled__`, only the dedicated pages.dev domain and no canonical production deployment. [Site artifact identity and comparison](phase-08/preview-artifact.json) records SHA-256 `f8126abb2ce25253f20f83361d5308182e0eb8c022c0e11f270750406ee0162b`: 333 files; all 331 ordinary files byte-identical to the local build. Only CNAME removal, disallow-all robots and noindex/nofollow headers differ intentionally. [Browser artifact identity](phase-08/browser-artifact.json) records SHA-256 `2f3f475dedb3608a9c951f134f6b8edefb805dff678da0425947e7a29d9dcecf`.
+
+Main remains `ca7826db75cb4353488786aab80857b3a71c1be1`; `develop-v2` remains `6e3acc72506b40ec11c1bd0015c6eee2ca473213`. Production root pages, source pins, calculator logic, production deployment and DNS are unchanged. The final tracking/evidence commit changes documentation only; the preview intentionally identifies the verified runtime commit above. PR #13 remains open and unmerged pending explicit approval.

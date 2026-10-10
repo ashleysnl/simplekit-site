@@ -293,11 +293,11 @@ Codex guidance: test the mapping table and real user paths. Keep the flow option
 
 ## Phase 8 — Responsive polish, accessibility and performance
 
-Status: `[~]`. Owner authorized Phase 8. Continue in temporary PR #13 targeting `develop-v2`, without merging or touching production. Automated auditing and fixes are in progress; unavailable manual screen-reader/real-device coverage must remain explicitly pending.
+Status: `[~]`. Phase 8 implementation and available local/hosted automated verification pass. Continue in temporary PR #13 targeting `develop-v2`, without merging or touching production. Manual screen-reader, real-device, native-zoom and human contrast review remain pending; no field performance dataset is available.
 
 - [~] Audit homepage/directory/menu/search/onboarding for WCAG 2.2 AA: landmarks, headings, labels, focus order/visibility, contrast, target size, announcements and alternatives. Automated axe/keyboard checks pass; human contrast and screen-reader review remain pending.
 - [~] Test keyboard-only use, VoiceOver/Safari and a second documented screen-reader/browser combination; test touch and 200% text enlargement/400% reflow. Automated keyboard, touch emulation, 200% text and 320 CSS px reflow pass; manual AT/native zoom unavailable in Linux.
-- [~] Test 320, 375, 390, 768, 1024, 1440 and 1920 widths and landscape; check Chrome, Safari, Firefox and at least one real iPhone/Android browser where available. Local Chromium passes; hosted multi-engine verification in progress; actual Safari and real phones require manual review.
+- [~] Test 320, 375, 390, 768, 1024, 1440 and 1920 widths and landscape; check Chrome, Safari, Firefox and at least one real iPhone/Android browser where available. Hosted Chromium 141, Firefox 142 and WebKit 26 pass all 78 layout/fallback cases and 24 axe states. Actual Safari and real phones require manual review; WebKit automation is not Safari/VoiceOver verification.
 - [x] Respect reduced motion, avoid hover-only controls, support image/font/JavaScript failures, and check long labels and empty/results/dialog states. Inline onboarding has no modal/focus trap; all tested states retain readable labels and 44px targets.
 - [x] Optimize hero loading, fonts and modules; reserve layout space, avoid blocking scripts and unnecessary dependencies. Existing responsive/high-priority hero retained; one ordered CSS bundle, early header enhancement, module preloads and metric-preserving WOFF2 improve loading without framework/runtime dependencies.
 
@@ -305,10 +305,10 @@ Acceptance:
 
 - [~] No critical/serious automated accessibility findings remain in changed UI; manual keyboard and screen-reader paths pass. Changed UI has zero axe violations; automated keyboard paths pass; inherited tool findings documented separately. Manual assistive-technology review remains pending.
 - [~] Page reflows at 320 CSS px/400% zoom without two-dimensional scrolling for normal content; controls retain 44 px targets as the project design goal, readable labels and visible focus. 320 CSS px, 200% text and text-spacing geometry/glyph tests pass; native toolbar zoom remains a manual check.
-- [ ] Three documented mobile Lighthouse lab runs achieve median performance ≥90, accessibility ≥95, LCP ≤2.5 s and CLS ≤0.1 on the same settings; record device/throttling and limitations. Do not call lab results real-user INP evidence.
+- [x] Three documented mobile Lighthouse lab runs achieve median performance ≥90, accessibility ≥95, LCP ≤2.5 s and CLS ≤0.1 on the same settings; record device/throttling and limitations. Hosted Lighthouse 12.8.2 at 390×844, simulated 150ms RTT/1,638.4 Kbps/4× CPU: median performance 99, accessibility 100, LCP 2127.2ms, CLS 0. These are lab results, not real-user INP evidence.
 - [ ] Where field data later exists, monitor p75 LCP ≤2.5 s, INP ≤200 ms and CLS ≤0.1; new interactions are responsive in local/preview tests.
 
-Codex guidance: accessibility/performance failures are acceptance blockers, not optional polish. Report device combinations unavailable to automation without pretending they were tested. Evidence: [Phase 8 audit, lab settings, inherited tool findings and outstanding manual review](v2/phase-08-verification.md). The initial incomplete staging revision failed build checks before deployment; corrected runtime source `3c0e72d5a14710de697b040891664f09ac1cc692` passes [CI 38064389905](https://github.com/ashleysnl/simplekit-site/actions/runs/38064389905). Hosted verification is in progress; do not equate implementation with full manual acceptance.
+Codex guidance: accessibility/performance failures are acceptance blockers, not optional polish. Report device combinations unavailable to automation without pretending they were tested. Evidence: [Phase 8 audit, before/after screenshots, lab settings, inherited tool findings and manual review matrix](v2/phase-08-verification.md). Runtime `997a24480f9bc1c4dfc4abee0371b8bf9f0621b0` passes [CI 38067761497](https://github.com/ashleysnl/simplekit-site/actions/runs/38067761497) and [hosted run 38067758043](https://github.com/ashleysnl/simplekit-site/actions/runs/38067758043): 32 repository tests, portable build/SEO/preservation, seven regression suites, all 22 calculator fixtures, three browser engines and three Lighthouse runs. [Verified isolated preview](https://4bb45d9d.simplekit-preview.pages.dev); 333-file artifact SHA-256 and byte comparison recorded. Main, production and DNS unchanged; PR #13 remains unmerged. Manual acceptance remains pending.
 
 ## Phase 9 — SEO and content integrity
 
@@ -426,7 +426,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner-requested [demo uploaded](https://e9070fe2.simplekit-preview.pages.dev); workflow and artifact verification pass, live checks limited here by 403. Earlier manual/review limitations remain for Phase 8. |
 | 6 Popular calculators | `[x]` | Curated “Featured calculators” rows in PR #13. [Phase 6 verification](v2/phase-06-verification.md); all local/hosted checks pass in run 38013211800. |
 | 7 Guided onboarding | `[~]` | Implementation and local/hosted automation verified; manual screen-reader acceptance remains Phase 8. Same unmerged PR #13. |
-| 8 Accessibility/responsiveness/performance | `[~]` | Owner authorized implementation; same unmerged PR #13. Automated audit/fixes in progress; manual devices/assistive technology pending. |
+| 8 Accessibility/responsiveness/performance | `[~]` | Implementation and local/hosted automation pass in run 38067758043; three engines, 78 layouts, 24 axe states, mobile Lighthouse median 99/100, LCP 2.127s, CLS 0. Same unmerged PR #13; manual devices/assistive technology/native zoom/human review pending. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
 | 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
 | 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |
