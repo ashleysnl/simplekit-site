@@ -1,0 +1,14 @@
+{
+  "sourceValidation": "23 pins verified",
+  "repositoryTests": {
+    "passed": 36,
+    "failed": 0
+  },
+  "portableBuild": "22 calculators, 335 files",
+  "SEO": "53 indexed pages, 919 internal links, 13 compatibility pages",
+  "output": "67 HTML pages, 151 local assets",
+  "preservation": "94 calculator JS files exact upstream; all 335 files match Phase 10 inventory fee13044a585439a75a01c998a51fa6f2a4fb161f8e04d899f9b6c7b1f80b1e1",
+  "inventoryDeterministic": true,
+  "sourceCommit": "1e9c807adac081593790c716a0647c176545b5a6",
+  "workingTreeFollowup": "Inventory-only metadata records redirect checksum and Phase 10 public-asset inventory pointer; no built file changes."
+}

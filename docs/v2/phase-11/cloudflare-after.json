@@ -1,0 +1,44 @@
+{
+  "preview": {
+    "success": true,
+    "name": "simplekit-preview",
+    "production_branch": "__production_disabled__",
+    "domains": [
+      "simplekit-preview.pages.dev"
+    ],
+    "canonical_deployment": null,
+    "latest_deployment": {
+      "id": "68d6205d-37ff-4827-86d9-6c2e3f861f82",
+      "url": "https://68d6205d.simplekit-preview.pages.dev",
+      "environment": "preview",
+      "commit_hash": "",
+      "aliases": [
+        "https://codex-preview.simplekit-preview.pages.dev"
+      ],
+      "status": "success"
+    }
+  },
+  "productionZone": {
+    "success": true,
+    "status": "active",
+    "id": "38858140fb2eff5e1e8035576f5ca9e1",
+    "name": "simplekit.app",
+    "name_servers": [
+      "delilah.ns.cloudflare.com",
+      "phil.ns.cloudflare.com"
+    ],
+    "dnsSuccess": true,
+    "dnsStatus": 200,
+    "dnsPagination": {
+      "page": 1,
+      "per_page": 500,
+      "count": 34,
+      "total_count": 34,
+      "total_pages": 1
+    },
+    "recordCount": 34,
+    "recordsSHA256": "ff7e64d789b16e3f7d3dd2ef62254e7f1e42648aec9a8d993867cf4d1106537c",
+    "unchangedSinceFirstObservation": true,
+    "observation": "Read-only comparison after validation; first observation was after trusted preview upload."
+  }
+}

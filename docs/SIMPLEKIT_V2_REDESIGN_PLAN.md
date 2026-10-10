@@ -358,18 +358,20 @@ The original mobile mockup in `docs/design-reference/simplekit-v2-target.png` re
 
 ## Phase 11 — Site-wide visual and content inventory
 
-Status: `[ ]`. Depends on Phase 10 interim regression checkpoint.
+Status: `[x]`. Site-wide inventory and local/hosted evidence verified; migration work remains in Phases 12–16.
 
-- [ ] Enumerate every published page from templates, manifests, sitemap and generated output; classify homepage, directory, calculator, article/guide, hub, legal, support, methodology and any other page family.
-- [ ] Capture representative and exceptional pages at 375, 390, 768 and 1440 CSS pixels; include article long-form, charts/tables, mobile calculator inputs/results, menus, footers and dark/forced-colour where supported.
-- [ ] Audit header/footer, typography, breadcrumbs, cards, content width, forms, charts, result panels, navigation, cross-links, accessibility and visual drift against the V2 reference.
-- [ ] Trace Core and all 22 calculator source repositories, their pinned SHAs, styling ownership and shared-versus-unique components; document safe migration order and regression risks.
-- [ ] Create a page-by-page checklist and explicit visual acceptance rubric; distinguish site-owned templates from upstream calculator changes.
+- [x] Enumerate every published page from templates, manifests, sitemap and generated output; classify homepage, directory, calculator, article/guide, hub, legal, support, methodology and any other page family.
+- [x] Capture representative and exceptional pages at 375, 390, 768 and 1440 CSS pixels; include article long-form, charts/tables, mobile calculator inputs/results, menus, footers and dark/forced-colour where supported.
+- [x] Audit header/footer, typography, breadcrumbs, cards, content width, forms, charts, result panels, navigation, cross-links, accessibility and visual drift against the V2 reference.
+- [x] Trace Core and all 22 calculator source repositories, their pinned SHAs, styling ownership and shared-versus-unique components; document safe migration order and regression risks.
+- [x] Create a page-by-page checklist and explicit visual acceptance rubric; distinguish site-owned templates from upstream calculator changes.
 
 Acceptance:
-- [ ] Every sitemap and public route is assigned a page family, migration owner and target; no article, guide or support page is omitted.
-- [ ] Existing content, URLs, metadata, schemas, redirects and numerical fixture baselines are captured.
-- [ ] Screenshots and gap analysis are linked from `docs/v2/phase-11-verification.md`.
+- [x] Every sitemap and public route is assigned a page family, migration owner and target; no article, guide or support page is omitted.
+- [x] Existing content, URLs, metadata, schemas, redirects and numerical fixture baselines are captured.
+- [x] Screenshots and gap analysis are linked from `docs/v2/phase-11-verification.md`.
+
+Evidence: [Phase 11 verification](v2/phase-11-verification.md), [155-capture gallery](v2/phase-11/GALLERY.md), [67-route checklist](v2/phase-11/ROUTE_CHECKLIST.md), [source ownership](v2/phase-11/SOURCE_MATRIX.md) and [migration/visual acceptance contract](v2/phase-11/MIGRATION_CONTRACT.md). Hosted run 38088742754 passes all eight interaction suites, all 22 exact fixtures, SEO and the inventory. 67 HTML pages, 53 indexed URLs, 22 tools, 23 pinned sources and 335 build files are reconciled. Four inherited calculator overflows and earlier accessibility/link/manual findings remain documented for migration. Main/production/DNS unchanged; PR #13 remains unmerged. Inventory completion does not mark pages redesigned or complete Phase 17 owner review.
 
 ## Phase 12 — Unified V2 design system and shared site shell
 
@@ -529,7 +531,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 8 Accessibility/responsiveness/performance | `[~]` | Implementation and local/hosted automation pass in run 38067758043; three engines, 78 layouts, 24 axe states, mobile Lighthouse median 99/100, LCP 2.127s, CLS 0. Same unmerged PR #13; manual devices/assistive technology/native zoom/human review pending. |
 | 9 SEO/content integrity | `[x]` | [Phase 9 verification](v2/phase-09-verification.md); local/hosted metadata, 53 indexed URLs, 66 routes, 99 assets, no-JS and V2 share-image checks pass in run 38069894661. Inherited source findings documented; Phase 8 manual checks remain pending. |
 | 10 Interim homepage/discovery regression | `[x]` | [Phase 10 verification](v2/phase-10-verification.md); clean/repeated builds, all 22 fixtures, import/export/reload, hosted cross-engine/SEO/performance and preserved candidate pass in run 38072049423. Manual release gates remain. |
-| 11 Site-wide inventory | `[ ]` | Pending Phase 10; inventory every page family and upstream calculator owner. |
+| 11 Site-wide inventory | `[x]` | [Inventory/evidence](v2/phase-11-verification.md): 67 pages, 23 sources, 155 captures; hosted run 38088742754 passes. Phase 12 is next; migrations and manual review remain. |
 | 12 Unified design system | `[ ]` | Pending Phase 11; site-wide shell and calculator primitives. |
 | 13 Articles and supporting pages | `[ ]` | Pending Phase 12; migrate all editorial and informational pages. |
 | 14 Calculator pilots | `[ ]` | Pending Phase 13; Retirement and Mortgage pilots with owner review. |

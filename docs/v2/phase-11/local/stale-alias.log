@@ -1,0 +1,16 @@
+AssertionError [ERR_ASSERTION]: index.html bytes
+
+33043 !== 33042
+
+    at /workspace/simplekit-site/tests/v2-preview-review.cjs:44:47
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9)
+    at async Promise.all (index 3)
+    at async /workspace/simplekit-site/tests/v2-preview-review.cjs:39:5 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 33043,
+  expected: 33042,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

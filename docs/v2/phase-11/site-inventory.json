@@ -12267,6 +12267,8 @@
     "sitemapSHA256": "fc4b1f42a892912aab15a1fd40f1663d3f348fbf74fdd45ad5862cf95b518532",
     "numericalFixtureSHA256": "e696a5a3e46359e26aa24e53051c5c08d2240146e9eda8160007f30b7605e935",
     "redirectBaseline": "docs/seo/redirect-verification-2026-10-02.json",
+    "redirectSHA256": "a556e72d7f7a58aafc87674a4034b1198750ebdad40246deafbfa02a1674c06c",
+    "publicAssetInventory": "docs/v2/phase-10/release-inventory.json",
     "phase0Contracts": "docs/v2/baseline/contracts.json"
   }
 }

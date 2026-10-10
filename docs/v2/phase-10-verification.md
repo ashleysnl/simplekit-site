@@ -2,6 +2,8 @@
 
 Status: `[x]`. Implementation, local/hosted regression, candidate preservation and Phase 10 acceptance checks pass. This completes the automated release-candidate phase, not production release approval. Owner instructed Phase 10 on 2026-10-10. Continue temporary PR [#13](https://github.com/ashleysnl/simplekit-site/pull/13), targeting `develop-v2`; do not merge or deploy to production. Phase 8 manual accessibility/device checks and final owner review remain release gates.
 
+Owner roadmap expansion in develop-v2 commit `dd72499d7db3170d6bb7a0eadaaa8f469e3d1eff` reclassifies this completed work as the **interim homepage/discovery regression checkpoint**. The archived artifact remains valid historical evidence; it is not the final full-site V2 release candidate. Phases 11–16 cover site-wide inventory, design system, editorial pages, all calculators and final coherence; owner review and production rollout are Phases 17–18.
+
 ## Candidate and reproducibility
 
 Candidate source: `f978df5c48209a02b107d4a31a81f7ba49088335`. [CI 38071970522](https://github.com/ashleysnl/simplekit-site/actions/runs/38071970522) passes. [Isolated preview workflow 38072049423](https://github.com/ashleysnl/simplekit-site/actions/runs/38072049423) checks out that exact commit and passes supported source fetch, test, portable build, SEO/output validation, preservation and repeat-build comparison. Both the original clean checkout and clean candidate checkout pass the supported commands; the latter also explicitly runs all 36 meaningful repository tests with `--test-isolation=none` because Node's default isolation can hide file-loading test bodies in this environment. [Logs](phase-10/local/).

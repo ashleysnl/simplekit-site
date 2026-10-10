@@ -1,0 +1,78 @@
+name: Manual Cloudflare preview
+
+# Deliberately not triggered by pushes or PRs. This project must be separate
+# from production, with its production branch set to __production_disabled__.
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: Feature branch or commit to preview
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.source_ref }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - run: npm run sources:fetch && npm test && npm run build && npm run seo:validate && npm run output:validate
+      - name: Isolate preview indexing and hostname
+        run: |
+          rm -f dist/CNAME
+          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > dist/_headers
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: preview-site
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+  preview:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: simplekit-preview
+    steps:
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.19.0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: preview-site
+          path: dist/
+      - name: Verify the dedicated preview project
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          account = os.environ['CLOUDFLARE_ACCOUNT_ID']
+          token = os.environ['CLOUDFLARE_API_TOKEN']
+          assert account and token, 'Configure the simplekit-preview environment first'
+          request = urllib.request.Request(
+              f'https://api.cloudflare.com/client/v4/accounts/{account}/pages/projects/simplekit-preview',
+              headers={'Authorization': f'Bearer {token}'})
+          with urllib.request.urlopen(request, timeout=30) as response:
+              data = json.load(response)
+          assert data.get('success'), 'Cloudflare project read failed'
+          project = data['result']
+          assert project['name'] == 'simplekit-preview'
+          assert project['production_branch'] == '__production_disabled__', 'Refusing a production-capable project'
+          assert not project.get('domains') or all(d.endswith('.pages.dev') for d in project['domains']), 'Refusing custom domains'
+          PY
+      - name: Upload a preview branch only
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: npm exec --yes --package=wrangler@4.45.0 -- wrangler pages deploy dist --project-name=simplekit-preview --branch=codex-preview
