@@ -9,6 +9,9 @@ const output=process.env.SIMPLEKIT_EVIDENCE_DIR||'/tmp/simplekit-phase12-system'
 const engines=(process.env.SIMPLEKIT_BROWSER_ENGINES||'chromium').split(',');
 fs.mkdirSync(output,{recursive:true});
 const report={axeVersion:axe.version,engines:[],limitations:['Review references, not migrated financial tools.','Browser engines/emulations are not real devices, manual AT, native zoom or human visual approval.','Inline prose links use the WCAG inline-text target exception; menu/actions/inputs/disclosures use 44px targets.']};
+async function bounded(label,operation,milliseconds=30000){
+ let timer;try{return await Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(label+' timed out')),milliseconds);})]);}finally{clearTimeout(timer);}
+}
 async function geometry(page,name){
  const result=await page.evaluate(()=>{
   const visible=n=>n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden';
@@ -46,12 +49,13 @@ async function geometry(page,name){
   async function reference(c,name){
    const p=await c.newPage();p.on('pageerror',e=>result.errors.push(e.message));p.on('response',r=>{if(new URL(r.url()).origin===origin&&r.status()>=400&&!/\.woff2?$/.test(r.url()))result.failed.push(r.url());});
    p.on('requestfailed',r=>{if(new URL(r.url()).origin===origin&&!/\.woff2?$/.test(r.url()))result.failed.push(r.url());});
-   await p.goto(origin+'/__v2-reference/'+name,{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);return p;
+   await p.goto(origin+'/__v2-reference/'+name,{waitUntil:'networkidle'});await bounded(engine+' '+name+' fonts',p.evaluate(()=>document.fonts.ready));return p;
   }
-  async function scan(p,name){await p.addScriptTag({content:axe.source});const a=await p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','best-practice']}}));result.axe.push({name,violations:a.violations,incomplete:a.incomplete.map(i=>({id:i.id,impact:i.impact,nodes:i.nodes.length}))});assert.deepEqual(a.violations,[],name+': axe violations');}
+  async function scan(p,name){console.log(engine+': axe '+name);await p.addScriptTag({content:axe.source});const a=await bounded(engine+' '+name+' axe',p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','best-practice']}})));result.axe.push({name,violations:a.violations,incomplete:a.incomplete.map(i=>({id:i.id,impact:i.impact,nodes:i.nodes.length}))});assert.deepEqual(a.violations,[],name+': axe violations');}
   try{
    for(const name of ['editorial','calculator','components']){
     for(const width of [320,375,390,768,1440,1920]){
+     console.log(engine+': '+name+' '+width);
      const c=await context({viewport:{width,height:1000}});const p=await reference(c,name);
      result.layouts.push({name,state:'initial',...await geometry(p,name+' '+width)});
      if([375,390,768,1440].includes(width))await p.screenshot({path:path.join(output,`${engine}-${name}-${width}.jpg`),type:'jpeg',quality:78,fullPage:true});
@@ -59,6 +63,7 @@ async function geometry(page,name){
      await c.close();
     }
     for(const [state,options]of [['no-js',{javaScriptEnabled:false}],['forced-colors',{forcedColors:'active'}],['dark',{colorScheme:'dark'}],['font-fallback',{blockFonts:true}],['text-200',{}]]){
+     console.log(engine+': '+name+' '+state);
      const c=await context(options);const p=await reference(c,name);
      if(state==='text-200')await p.addStyleTag({content:'html {font-size:200% !important}'});
      if(state==='no-js'){assert(await p.locator('.v2s-nav').isVisible());assert.equal(await p.locator('.v2s-nav a').count(),5);}
@@ -71,7 +76,7 @@ async function geometry(page,name){
    const c=await context();const p=await reference(c,'components');
    // Axe typography probes can load an otherwise-unused font face. Warm all local
    // faces before measuring action requests so the audit isolates input behavior.
-   await p.evaluate(async()=>Promise.all(['SimpleKit Display','SimpleKit Sans'].flatMap(family=>[400,700].map(weight=>document.fonts.load(`${weight} 16px "${family}"`)))));
+   await bounded(engine+' font warmup',p.evaluate(async()=>Promise.all(['SimpleKit Display','SimpleKit Sans'].flatMap(family=>[400,700].map(weight=>document.fonts.load(`${weight} 16px "${family}"`))))));
    const actionRequests=[];p.on('request',r=>actionRequests.push({url:r.url(),method:r.method()}));
    await p.keyboard.press('Tab');assert(await p.locator('.v2s-skip').evaluate(n=>n===document.activeElement));await p.keyboard.press('Enter');assert(await p.locator('#main').evaluate(n=>n===document.activeElement));
    await p.locator('[data-v2s-menu]').focus();await p.keyboard.press('Enter');assert(await p.locator('.v2s-nav').isVisible());await p.keyboard.press('Tab');assert(await p.locator('.v2s-nav a').first().evaluate(n=>n===document.activeElement));
@@ -92,7 +97,8 @@ async function geometry(page,name){
    await p.emulateMedia({media:'print'});assert(!(await p.locator('.v2s-header').isVisible()));await p.screenshot({path:path.join(output,`${engine}-print.jpg`),type:'jpeg',quality:75,fullPage:true});await c.close();
    // Load new CSS and navigation on old pages: geometry, typography and controls remain exact.
    for(const route of ['/','/learn/mortgage-affordability-canada/','/mortgage-calculator/','/retirement-planner/']){
-    const c=await context();const p=await c.newPage();await p.goto(origin+route,{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);
+    console.log(engine+': legacy isolation '+route);
+    const c=await context();const p=await c.newPage();await p.goto(origin+route,{waitUntil:'networkidle'});await bounded(engine+' legacy fonts '+route,p.evaluate(()=>document.fonts.ready));
     const sample=()=>p.evaluate(()=>[...document.querySelectorAll('h1,nav,footer,input,button,main')].map(n=>{const s=getComputedStyle(n),r=n.getBoundingClientRect();return {tag:n.tagName,id:n.id,font:s.fontFamily,color:s.color,background:s.backgroundColor,rect:[r.x,r.y,r.width,r.height],hidden:n.hidden};}));
     const before=await sample();await p.addStyleTag({url:origin+'/assets/v2/system.css'});await p.addScriptTag({url:origin+'/assets/v2/shell.js'});assert.deepEqual(await sample(),before,route+': legacy isolation');result.legacyIsolation.push(route);await c.close();
    }
