@@ -5,6 +5,22 @@ on:
   push:
     branches: [main, develop-v2, 'feat/**', 'fix/**', 'chore/**']
   workflow_dispatch:
+    inputs:
+      preview_url:
+        description: Optional immutable isolated preview for read-only owner-review verification
+        required: false
+        default: ''
+        type: string
+      preview_alias:
+        description: Shared isolated preview alias to compare with the candidate
+        required: false
+        default: https://codex-preview.simplekit-preview.pages.dev
+        type: string
+      candidate_sha:
+        description: Exact preserved Phase 10 source commit (required with preview_url)
+        required: false
+        default: ''
+        type: string
 
 permissions:
   contents: read
@@ -37,3 +53,50 @@ jobs:
           path: dist/
           if-no-files-found: error
           retention-days: 7
+
+  preview-review:
+    if: github.event_name == 'workflow_dispatch' && inputs.preview_url != ''
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # No deployment environment or secrets: this job only reads preview URLs.
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - name: Prepare isolated test-only browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1
+          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Verify preserved candidate and owner-review preview
+        shell: bash
+        env:
+          SIMPLEKIT_HOSTED_PREVIEW: '1'
+          SIMPLEKIT_PREVIEW_URL: ${{ inputs.preview_url }}
+          SIMPLEKIT_PREVIEW_ALIAS: ${{ inputs.preview_alias }}
+          SIMPLEKIT_CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-preview-review.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/inventory.log"
+          node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
+          node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
+          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline v2-release; do
+            export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence/regression/$suite"
+            mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+            node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          done
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence/seo"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-seo-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: owner-review-evidence
+          path: ${{ runner.temp }}/owner-review-evidence/
+          if-no-files-found: warn
+          retention-days: 30
