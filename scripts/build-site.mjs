@@ -15,6 +15,7 @@ import { acquireSources, sourceDirectory } from "./acquire-sources.mjs";
 import { localizeCoreHtml } from "./site-html.mjs";
 import { createDiscoveryIndex, discoveryModule, loadDiscoveryMetadata, renderDiscoveryQuestions } from "./v2-discovery.mjs";
 import { createGoalGroups, renderGoalCards, renderGoalDirectory, renderGoalNavigation } from "./v2-goals.mjs";
+import { homepageStyles, navigationScript } from "./v2-home-resources.mjs";
 
 const sourceById = new Map(acquireSources().map(source => [source.id, source]));
 const templatesRoot = path.join(repoRoot, "templates");
@@ -36,6 +37,12 @@ validateTemplates();
 rmSync(outputRoot, { recursive: true, force: true });
 mkdirSync(path.join(outputRoot, "data"), { recursive: true });
 copySiteFiles();
+// Publish the V2 share image at retained URLs without changing production inputs
+// or rewriting the pinned calculator pages that reference social-preview.png.
+for (const filename of ['og-image.png', 'social-preview.png']) {
+  cpSync(path.join(repoRoot, 'assets/v2/social-share.png'), path.join(outputRoot, filename));
+}
+writeFileSync(path.join(outputRoot, "assets", "v2", "home.bundle.css"), homepageStyles(repoRoot));
 writeCompatToolRegistry(outputRoot, manifest);
 buildTemplates();
 syncMigratedToolSites();
@@ -66,6 +73,7 @@ function buildTemplates(relativeDir = ".") {
     mkdirSync(path.dirname(destinationPath), { recursive: true });
     const template = readFileSync(absolutePath, "utf8");
     const rendered = template
+      .replaceAll("{{v2NavigationScript}}", navigationScript(repoRoot))
       .replaceAll("{{v2GoalCards}}", renderGoalCards(goalGroups))
       .replaceAll("{{v2GoalNavigation}}", renderGoalNavigation(goalGroups))
       .replaceAll("{{v2GoalDirectory}}", renderGoalDirectory(goalGroups))

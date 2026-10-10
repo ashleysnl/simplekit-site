@@ -1,0 +1,152 @@
+{
+  "origin": "https://48daf1d5.simplekit-preview.pages.dev",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/"
+    },
+    {
+      "path": "/tools/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/tools/"
+    },
+    {
+      "path": "/retirement-planner/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/retirement-planner/"
+    },
+    {
+      "path": "/fire-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/fire-calculator/"
+    },
+    {
+      "path": "/cpp-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/cpp-calculator/"
+    },
+    {
+      "path": "/rrsp-vs-tfsa-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/rrsp-vs-tfsa-calculator/"
+    },
+    {
+      "path": "/compound-interest-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/compound-interest-calculator/"
+    },
+    {
+      "path": "/savings-goal-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/savings-goal-calculator/"
+    },
+    {
+      "path": "/emergency-fund-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/emergency-fund-calculator/"
+    },
+    {
+      "path": "/net-worth-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/net-worth-calculator/"
+    },
+    {
+      "path": "/budget-planner/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/budget-planner/"
+    },
+    {
+      "path": "/take-home-pay-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/take-home-pay-calculator/"
+    },
+    {
+      "path": "/debt-payoff-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/debt-payoff-calculator/"
+    },
+    {
+      "path": "/credit-card-interest-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/credit-card-interest-calculator/"
+    },
+    {
+      "path": "/loan-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/loan-calculator/"
+    },
+    {
+      "path": "/house-affordability-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/house-affordability-calculator/"
+    },
+    {
+      "path": "/rent-vs-buy-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/rent-vs-buy-calculator/"
+    },
+    {
+      "path": "/mortgage-paydown-vs-invest-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/"
+    },
+    {
+      "path": "/investment-fee-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/investment-fee-calculator/"
+    },
+    {
+      "path": "/mortgage-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/mortgage-calculator/"
+    },
+    {
+      "path": "/canadian-tax-checklist/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/canadian-tax-checklist/"
+    },
+    {
+      "path": "/travel-planner/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/travel-planner/"
+    },
+    {
+      "path": "/debt-to-income-ratio-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/debt-to-income-ratio-calculator/"
+    },
+    {
+      "path": "/contractor-effective-hourly-rate-calculator/",
+      "status": 200,
+      "noindex": true,
+      "canonical": "https://simplekit.app/contractor-effective-hourly-rate-calculator/"
+    }
+  ],
+  "robotsDisallowAll": true,
+  "productionCNAMEAbsent": true,
+  "cnameHTTPStatus": 200
+}

@@ -1,0 +1,12 @@
+{"run":1,"performance":95,"accessibility":100,"lcp_ms":2603.2920000000004,"cls":0}
+{"run":2,"performance":96,"accessibility":100,"lcp_ms":2606.886,"cls":0}
+{"run":3,"performance":93,"accessibility":100,"lcp_ms":2594.7822,"cls":0.11251102885436086}
+AssertionError [ERR_ASSERTION]: Median LCP above 2500ms
+    at /home/runner/work/simplekit-site/simplekit-site/tests/v2-lighthouse.cjs:25:145 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

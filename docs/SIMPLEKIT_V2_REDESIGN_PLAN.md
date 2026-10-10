@@ -240,95 +240,111 @@ Acceptance:
 
 Codex guidance: modify authored directory templates alongside the homepage if filtering/anchors need support. Keep categories as discovery metadata tied to manifest IDs, not a competing route list. Evidence: [Phase 5 verification](v2/phase-05-verification.md). Native fragment links reach four populated goal sections; all 22 canonical tools appear once across seven primary/secondary groups. Six widths, keyboard/focus/touch/direct/reload/Back/Forward/no-JS/fallback/enlargement checks pass. 27 repository checks, 22 exact calculator fixtures, earlier header/search/trust regressions, build/SEO/output/preservation and repeat-build checks pass. Implementation/evidence commit `c7dd255` is pushed to `develop-v2`; [hosted validation](https://github.com/ashleysnl/simplekit-site/actions/runs/38005820544) passes. Main and production remain unchanged. Owner-requested [Phase 5 demo](https://e9070fe2.simplekit-preview.pages.dev) uploaded through [run 38006282182](https://github.com/ashleysnl/simplekit-site/actions/runs/38006282182); build/upload and artifact verification pass. Live automated checks return 403 here, so deployed interactions are not claimed passing. This early snapshot does not complete Phase 11. Earlier manual accessibility/toolbar-zoom limitations remain for Phase 8.
 
+## Issue #12 — Premium mobile visual fidelity
+
+Status: `[~]`. Focused composition pass after Phase 5, before later homepage phases. Approved reference remains `docs/design-reference/simplekit-v2-target.png`.
+
+- [x] Locate the approved reference and measure the existing 375/390px composition before edits.
+- [x] Capture matching local baseline screenshots at 375/390/768/1440px; document the blocked secure hosted-browser attempt separately.
+- [x] Refine header/hero spacing, coastline visibility, typography, integrated search/questions, trust density and two-column mobile goals through five screenshot reviews.
+- [x] Verify 44px controls, search/questions/menu, responsive reflow, keyboard/AX semantics and all 22 calculator fixtures.
+- [x] Verify 28 repository tests, portable build, source pins, SEO/output and preservation guard.
+- [x] Deploy the verified candidate to isolated Cloudflare preview and record the exact source/artifact.
+- [x] Capture secure live hosted screenshots and verify hosted interactions. Run 38013211800 passes all hosted suites; runner evidence is separate from loopback captures.
+- [x] Open the temporary feature PR targeting develop-v2 and update issue #12 with verified results.
+- [ ] Obtain owner visual approval; no merge or production deployment is authorized.
+
+Evidence: [mobile comparison and iteration log](v2/mobile-fidelity-issue-12/COMPARISON.md). This task explicitly requires temporary `feature/simplekit-v2-mobile-fidelity` and a review PR into `develop-v2`; keep it unmerged until explicit approval, then return ongoing work to the authoritative development branch. Existing phase completion and remaining manual accessibility checks are preserved. The owner subsequently instructed Phase 6; that work continues in the same review PR. Guided onboarding remains Phase 7.
+
 ## Phase 6 — Popular calculators
 
-Status: `[ ]`. Depends on Phase 5.
+Status: `[x]`. Implementation, screenshot comparison and local/hosted automated acceptance pass. Owner subsequently instructed Phase 7. PR #13 still targets `develop-v2`; no merge or production deployment is authorized.
 
-- [ ] Implement the five reference rows in order: Retirement Planner, Mortgage Calculator, Compound Interest Calculator, Budget Planner, FIRE Calculator.
-- [ ] Add concise factual descriptions, matching icons and chevrons, subtle row dividers and accessible link/focus states.
-- [ ] Keep “View all tools” visible and use validated tool tokens for every destination.
-- [ ] Establish evidence for the “Popular” label; use “Featured calculators” pending owner acceptance if no usage evidence supports popularity.
+- [x] Implement the five reference rows in order: Retirement Planner, Mortgage Calculator, Compound Interest Calculator, Budget Planner, FIRE Calculator.
+- [x] Add concise factual descriptions, matching icons and chevrons, subtle row dividers and accessible link/focus states.
+- [x] Keep “View all tools” visible and use validated tool tokens for every destination.
+- [x] Establish evidence for the “Popular” label; use “Featured calculators” pending owner acceptance if no usage evidence supports popularity. No popularity dataset is available; the section explicitly describes a curated selection.
 
 Acceptance:
 
-- [ ] Five distinct manifest-backed tools appear in the required order, descriptions match tool behavior, and all links resolve.
-- [ ] Long descriptions wrap at 320 px without hiding names/chevrons; each row has a single clear accessible link and keyboard focus indicator.
-- [ ] Visual comparison confirms the reference row hierarchy and icon treatment, while all 22 tools remain available through the directory.
+- [x] Five distinct manifest-backed tools appear in the required order, descriptions match tool behavior, and all links resolve.
+- [x] Long descriptions wrap at 320 px without hiding names/chevrons; each row has a single clear accessible link and keyboard focus indicator.
+- [x] Visual comparison confirms the reference row hierarchy and icon treatment, while all 22 tools remain available through the directory.
 
-Codex guidance: favor semantic lists and real anchors over clickable containers. Do not add unsupported star ratings, user counts or financial outcomes. Evidence link: pending.
+Codex guidance: favor semantic lists and real anchors over clickable containers. Do not add unsupported star ratings, user counts or financial outcomes. Evidence: [Phase 6 verification](v2/phase-06-verification.md). All ten layout/fallback cases and canonical/keyboard/directory checks pass locally and on the isolated hosted preview.
 
 ## Phase 7 — Guided onboarding and calculator discovery
 
-Status: `[ ]`. Depends on Phases 3, 5 and 6.
+Status: `[~]`. Implementation and local/hosted automated verification are complete. Manual screen-reader acceptance remains for Phase 8. The existing temporary PR #13 targets `develop-v2`; explicit no-merge/no-production limits remain.
 
-- [ ] Implement the reference “Not sure where to start?” panel and “Get started” control, with a lightweight accessible dialog or inline step flow.
-- [ ] Ask up to three optional non-sensitive questions about planning goal, immediate question and preferred level of detail; offer skip, back, close and restart.
-- [ ] Document deterministic answer-to-tool mappings covering all four primary goals and secondary needs; return one to three tools with brief reasons and direct manifest links.
-- [ ] Keep answers ephemeral in memory, clear them on restart/close, request no account or personal financial details, and retain an all-tools fallback with JavaScript disabled.
+- [x] Implement the reference “Not sure where to start?” panel and “Get started” control, with a lightweight accessible dialog or inline step flow.
+- [x] Ask up to three optional non-sensitive questions about planning goal, immediate question and preferred level of detail; offer skip, back, close and restart.
+- [x] Document deterministic answer-to-tool mappings covering all four primary goals and secondary needs; return one to three tools with brief reasons and direct manifest links.
+- [x] Keep answers ephemeral in memory, clear them on restart/close, request no account or personal financial details, and retain an all-tools fallback with JavaScript disabled.
 
 Acceptance:
 
-- [ ] Every answer path, skip path and incomplete path terminates with a relevant recommendation or all-tools fallback; back/restart/close work without stale state.
-- [ ] Flow supports keyboard and screen reader, announces step progress and restores focus on close; modal focus is contained when applicable.
-- [ ] No answers are transmitted or persisted by default; recommendations describe tools and do not promise financial conclusions.
-- [ ] Starting with retirement, housing, debt/budget or investing produces the expected documented tool IDs and working links.
+- [x] Every answer path, skip path and incomplete path terminates with a relevant recommendation or all-tools fallback; back/restart/close work without stale state.
+- [~] Flow supports keyboard and screen reader, announces step progress and restores focus on close; modal focus is contained when applicable. Native keyboard/Chromium AX checks pass for the nonmodal inline flow; manual screen-reader verification remains Phase 8.
+- [x] No answers are transmitted or persisted by default; recommendations describe tools and do not promise financial conclusions.
+- [x] Starting with retirement, housing, debt/budget or investing produces the expected documented tool IDs and working links.
 
-Codex guidance: test the mapping table and real user paths. Keep the flow optional; users can open every calculator directly. Evidence link: pending.
+Codex guidance: test the mapping table and real user paths. Keep the flow optional; users can open every calculator directly. Evidence: [Phase 7 verification and mapping](v2/phase-07-verification.md). All 93 browser paths, 24 layout/fallback states, 30 repository tests and seven hosted regression suites pass. [Verified preview](https://6feb3be4.simplekit-preview.pages.dev), runtime source `9abcee3f2a6b0eb157ae5feaacfcb6598616ea1c`, [hosted run 38060246506](https://github.com/ashleysnl/simplekit-site/actions/runs/38060246506). Chromium AX/keyboard coverage is automated; manual screen-reader coverage remains Phase 8.
 
 ## Phase 8 — Responsive polish, accessibility and performance
 
-Status: `[ ]`. Depends on Phases 1–7; apply accessibility throughout earlier phases too.
+Status: `[~]`. Phase 8 implementation and available local/hosted automated verification pass. Continue in temporary PR #13 targeting `develop-v2`, without merging or touching production. Manual screen-reader, real-device, native-zoom and human contrast review remain pending; no field performance dataset is available.
 
-- [ ] Audit homepage/directory/menu/search/onboarding for WCAG 2.2 AA: landmarks, headings, labels, focus order/visibility, contrast, target size, announcements and alternatives.
-- [ ] Test keyboard-only use, VoiceOver/Safari and a second documented screen-reader/browser combination; test touch and 200% text enlargement/400% reflow.
-- [ ] Test 320, 375, 390, 768, 1024, 1440 and 1920 widths and landscape; check Chrome, Safari, Firefox and at least one real iPhone/Android browser where available.
-- [ ] Respect reduced motion, avoid hover-only controls, support image/font/JavaScript failures, and check long labels and empty/results/dialog states.
-- [ ] Optimize hero loading, fonts and modules; reserve layout space, avoid blocking scripts and unnecessary dependencies.
+- [~] Audit homepage/directory/menu/search/onboarding for WCAG 2.2 AA: landmarks, headings, labels, focus order/visibility, contrast, target size, announcements and alternatives. Automated axe/keyboard checks pass; human contrast and screen-reader review remain pending.
+- [~] Test keyboard-only use, VoiceOver/Safari and a second documented screen-reader/browser combination; test touch and 200% text enlargement/400% reflow. Automated keyboard, touch emulation, 200% text and 320 CSS px reflow pass; manual AT/native zoom unavailable in Linux.
+- [~] Test 320, 375, 390, 768, 1024, 1440 and 1920 widths and landscape; check Chrome, Safari, Firefox and at least one real iPhone/Android browser where available. Hosted Chromium 141, Firefox 142 and WebKit 26 pass all 78 layout/fallback cases and 24 axe states. Actual Safari and real phones require manual review; WebKit automation is not Safari/VoiceOver verification.
+- [x] Respect reduced motion, avoid hover-only controls, support image/font/JavaScript failures, and check long labels and empty/results/dialog states. Inline onboarding has no modal/focus trap; all tested states retain readable labels and 44px targets.
+- [x] Optimize hero loading, fonts and modules; reserve layout space, avoid blocking scripts and unnecessary dependencies. Existing responsive/high-priority hero retained; one ordered CSS bundle, early header enhancement, module preloads and metric-preserving WOFF2 improve loading without framework/runtime dependencies.
 
 Acceptance:
 
-- [ ] No critical/serious automated accessibility findings remain in changed UI; manual keyboard and screen-reader paths pass. Document tool-page pre-existing issues separately and fix any v2-introduced regression.
-- [ ] Page reflows at 320 CSS px/400% zoom without two-dimensional scrolling for normal content; controls retain 44 px targets as the project design goal, readable labels and visible focus.
-- [ ] Three documented mobile Lighthouse lab runs achieve median performance ≥90, accessibility ≥95, LCP ≤2.5 s and CLS ≤0.1 on the same settings; record device/throttling and limitations. Do not call lab results real-user INP evidence.
+- [~] No critical/serious automated accessibility findings remain in changed UI; manual keyboard and screen-reader paths pass. Changed UI has zero axe violations; automated keyboard paths pass; inherited tool findings documented separately. Manual assistive-technology review remains pending.
+- [~] Page reflows at 320 CSS px/400% zoom without two-dimensional scrolling for normal content; controls retain 44 px targets as the project design goal, readable labels and visible focus. 320 CSS px, 200% text and text-spacing geometry/glyph tests pass; native toolbar zoom remains a manual check.
+- [x] Three documented mobile Lighthouse lab runs achieve median performance ≥90, accessibility ≥95, LCP ≤2.5 s and CLS ≤0.1 on the same settings; record device/throttling and limitations. Hosted Lighthouse 12.8.2 at 390×844, simulated 150ms RTT/1,638.4 Kbps/4× CPU: median performance 99, accessibility 100, LCP 2127.2ms, CLS 0. These are lab results, not real-user INP evidence.
 - [ ] Where field data later exists, monitor p75 LCP ≤2.5 s, INP ≤200 ms and CLS ≤0.1; new interactions are responsive in local/preview tests.
 
-Codex guidance: accessibility/performance failures are acceptance blockers, not optional polish. Report device combinations unavailable to automation without pretending they were tested. Evidence link: pending.
+Codex guidance: accessibility/performance failures are acceptance blockers, not optional polish. Report device combinations unavailable to automation without pretending they were tested. Evidence: [Phase 8 audit, before/after screenshots, lab settings, inherited tool findings and manual review matrix](v2/phase-08-verification.md). Runtime `997a24480f9bc1c4dfc4abee0371b8bf9f0621b0` passes [CI 38067761497](https://github.com/ashleysnl/simplekit-site/actions/runs/38067761497) and [hosted run 38067758043](https://github.com/ashleysnl/simplekit-site/actions/runs/38067758043): 32 repository tests, portable build/SEO/preservation, seven regression suites, all 22 calculator fixtures, three browser engines and three Lighthouse runs. [Verified isolated preview](https://4bb45d9d.simplekit-preview.pages.dev); 333-file artifact SHA-256 and byte comparison recorded. Main, production and DNS unchanged; PR #13 remains unmerged. Manual acceptance remains pending.
 
 ## Phase 9 — SEO and content integrity
 
-Status: `[ ]`. Depends on Phase 8.
+Status: `[x]`. Owner explicitly instructed Phase 9 on 2026-10-10. Local and hosted SEO/content/route/no-JS checks pass in the existing unmerged PR #13. The owner-selected V2 share image and retained metadata are validated. Phase 8 manual acceptance remains pending and is not waived.
 
-- [ ] Retain semantic copy, a single H1, meaningful section headings, useful descriptions and crawlable ordinary links to directory/tools/guides.
-- [ ] Verify titles/descriptions, production canonicals, Open Graph/Twitter metadata, approved share image and valid structured data; keep existing verification tags and maintainer attribution.
-- [ ] Preserve all canonical paths, sitemap/robots contracts and existing compatibility/noindex rules. Do not introduce query/filter duplicates into the sitemap.
-- [ ] Validate metadata against the finished design without inventing ratings, reviews or a search schema endpoint that does not exist.
+- [x] Retain semantic copy, a single H1, meaningful section headings, useful descriptions and crawlable ordinary links to directory/tools/guides.
+- [x] Verify titles/descriptions, production canonicals, Open Graph/Twitter metadata, approved share image and valid structured data; keep existing verification tags and maintainer attribution.
+- [x] Preserve all canonical paths, sitemap/robots contracts and existing compatibility/noindex rules. Do not introduce query/filter duplicates into the sitemap.
+- [x] Validate metadata against the finished design without inventing ratings, reviews or a search schema endpoint that does not exist.
 
 Acceptance:
 
-- [ ] `seo:validate` and `output:validate` pass; each indexed page has one correct production canonical, matching Open Graph URL and preserved manifest sitemap membership (baseline currently 53 URLs).
-- [ ] All 22 calculator paths, existing guides, compatibility pages and documented legacy redirect destinations remain intact; no new broken internal links or assets.
-- [ ] Main discovery links are present with JavaScript disabled; preview indexing protections remain isolated to preview artifacts and never replace production robots policy.
+- [x] `seo:validate` and `output:validate` pass; each indexed page has one correct production canonical, matching Open Graph URL and preserved manifest sitemap membership (baseline currently 53 URLs).
+- [x] All 22 calculator paths, existing guides, compatibility pages and documented legacy redirect destinations remain intact; no new broken internal links or assets.
+- [x] Main discovery links are present with JavaScript disabled; preview indexing protections remain isolated to preview artifacts and never replace production robots policy.
 
-Codex guidance: use the existing SEO generators and route authority. Review [SEO improvement plan](../SEO-IMPROVEMENT-PLAN.md) for context; v2 does not automatically complete its separate checklist. Evidence link: pending.
+Codex guidance: use the existing SEO generators and route authority. Review [SEO improvement plan](../SEO-IMPROVEMENT-PLAN.md) for context; v2 does not automatically complete its separate checklist. Evidence: [Phase 9 metadata/content audit, owner-selected V2 share image, inherited findings and validation](v2/phase-09-verification.md). Runtime `ad7018f39a15348e16007ea2585968e1017eccbc` passes [CI 38069897288](https://github.com/ashleysnl/simplekit-site/actions/runs/38069897288) and [hosted run 38069894661](https://github.com/ashleysnl/simplekit-site/actions/runs/38069894661): 36 tests, 53 indexed URLs, 66 indexed/compatibility routes, 99 assets, no-JS discovery and 23 documented redirect destinations. [Verified preview](https://1ef797bf.simplekit-preview.pages.dev). All prior interaction/calculator and three-engine checks pass; mobile Lighthouse median 99/100, LCP 2.131s, CLS 0. Source-pinned optional social gaps and 42 stale retirement guide fragments remain documented upstream work; no new V2 broken link/asset is introduced. Do not patch copied calculators or change pins to hide inherited findings. Main, production and DNS unchanged; final visual/release approval remains separate.
 
 ## Phase 10 — Full regression and release candidate
 
-Status: `[ ]`. Depends on Phases 0–9.
+Status: `[x]`. Depends on Phases 0–9.
 
-- [ ] Run the supported commands from a clean checkout and compare repeated build inventories for deterministic output.
-- [ ] Run all 22 tools on the local generated origin; verify inputs render, shared Core mounts, navigation/assets/modules load and each baseline interaction/output fixture still passes.
-- [ ] Specifically rerun Retirement Planner demo, Budget Planner recalculation, mortgage principal/payment, storage reload and export/import where supported; compare with Phase 0.
-- [ ] Exercise search, suggested questions, all goals, all featured rows, onboarding, no-JS fallback and compatibility routes; collect console errors and failed requests.
-- [ ] Review the artifact diff: calculator logic/pins and routes unchanged, expected homepage/assets changed, no docs/mockup/cache/developer files published; preserve a versioned candidate artifact and checksum.
+- [x] Run the supported commands from a clean checkout and compare repeated build inventories for deterministic output.
+- [x] Run all 22 tools on the local generated origin; verify inputs render, shared Core mounts, navigation/assets/modules load and each baseline interaction/output fixture still passes.
+- [x] Specifically rerun Retirement Planner demo, Budget Planner recalculation, mortgage principal/payment, storage reload and export/import where supported; compare with Phase 0.
+- [x] Exercise search, suggested questions, all goals, all featured rows, onboarding, no-JS fallback and compatibility routes; collect console errors and failed requests.
+- [x] Review the artifact diff: calculator logic/pins and routes unchanged, expected homepage/assets changed, no docs/mockup/cache/developer files published; preserve a versioned candidate artifact and checksum.
 
 Acceptance:
 
-- [ ] All existing validation and meaningful new behavior tests pass; all 22 baseline fixtures match within documented tool rounding/tolerance rules.
-- [ ] Zero new browser errors, failed same-origin asset requests or broken internal links; external analytics/support checks are explicitly distinguished from stubbed tests.
-- [ ] Build reproducibility and unchanged calculator logic are demonstrated; any generated wrapper differences are reviewed and explained.
-- [ ] PR contains screenshot comparisons, accessibility/performance/SEO/regression evidence, candidate commit/artifact identity and known limitations; required hosted validation passes for that commit.
+- [x] All existing validation and meaningful new behavior tests pass; all 22 baseline fixtures match within documented tool rounding/tolerance rules.
+- [x] Zero new browser errors, failed same-origin asset requests or broken internal links; external analytics/support checks are explicitly distinguished from stubbed tests.
+- [x] Build reproducibility and unchanged calculator logic are demonstrated; any generated wrapper differences are reviewed and explained.
+- [x] PR contains screenshot comparisons, accessibility/performance/SEO/regression evidence, candidate commit/artifact identity and known limitations; required hosted validation passes for that commit.
 
-Codex guidance: the existing browser smoke script is a starting point, not proof of every calculation. Add fixture coverage appropriate to each tool type, and test preview paths rather than accidentally following production canonicals. Evidence link: pending.
+Codex guidance: the existing browser smoke script is a starting point, not proof of every calculation. Add fixture coverage appropriate to each tool type, and test preview paths rather than accidentally following production canonicals. Evidence: [Phase 10 verification](v2/phase-10-verification.md). Candidate `f978df5c48209a02b107d4a31a81f7ba49088335` passes CI 38071970522 and [hosted run 38072049423](https://github.com/ashleysnl/simplekit-site/actions/runs/38072049423): 36 tests, all 22 exact fixtures, JSON/import/storage/CSV regression, 78 layouts/24 axe states, SEO and mobile Lighthouse median 98/100, LCP 2.290s, CLS 0. Two builds have identical 335-file inventories; preserved candidate artifact 11676733662 has tar.gz SHA-256 `e329da8c7c6afd7e7a36d0bb23805c336aa147deb406549d59a62bad86b868d4`. [Verified preview](https://7d44ae88.simplekit-preview.pages.dev). Screenshots at all four widths are unchanged; calculator/Core logic/pins, routes and production inputs are preserved. Main, production and DNS unchanged; PR #13 remains unmerged. Phase 8 manual checks and final owner release approval remain pending.
 
 ## Phase 11 — Cloudflare preview and owner review
 
@@ -408,12 +424,12 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 3 Search and questions | `[~]` | [Search evidence](v2/phase-03-verification.md), [PR #10](https://github.com/ashleysnl/simplekit-site/pull/10); owner instructed Phase 4; implementation/automated checks pass, manual AT coverage pending. |
 | 4 Trust indicators | `[~]` | [Trust/privacy evidence](v2/phase-04-verification.md), [PR #11](https://github.com/ashleysnl/simplekit-site/pull/11); implementation/audit/CI pass; review and toolbar zoom remain. [Early preview uploaded](https://73147f8f.simplekit-preview.pages.dev) after owner approval; live checks limited here by certificate/403 errors. |
 | 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner-requested [demo uploaded](https://e9070fe2.simplekit-preview.pages.dev); workflow and artifact verification pass, live checks limited here by 403. Earlier manual/review limitations remain for Phase 8. |
-| 6 Popular calculators | `[ ]` | Ready after Phase 5; awaiting instruction. |
-| 7 Guided onboarding | `[ ]` | Pending Phases 3, 5, 6. |
-| 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
-| 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
-| 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
-| 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |
+| 6 Popular calculators | `[x]` | Curated “Featured calculators” rows in PR #13. [Phase 6 verification](v2/phase-06-verification.md); all local/hosted checks pass in run 38013211800. |
+| 7 Guided onboarding | `[~]` | Implementation and local/hosted automation verified; manual screen-reader acceptance remains Phase 8. Same unmerged PR #13. |
+| 8 Accessibility/responsiveness/performance | `[~]` | Implementation and local/hosted automation pass in run 38067758043; three engines, 78 layouts, 24 axe states, mobile Lighthouse median 99/100, LCP 2.127s, CLS 0. Same unmerged PR #13; manual devices/assistive technology/native zoom/human review pending. |
+| 9 SEO/content integrity | `[x]` | [Phase 9 verification](v2/phase-09-verification.md); local/hosted metadata, 53 indexed URLs, 66 routes, 99 assets, no-JS and V2 share-image checks pass in run 38069894661. Inherited source findings documented; Phase 8 manual checks remain pending. |
+| 10 Full regression/candidate | `[x]` | [Phase 10 verification](v2/phase-10-verification.md); clean/repeated builds, all 22 fixtures, import/export/reload, hosted cross-engine/SEO/performance and preserved candidate pass in run 38072049423. Manual release gates remain. |
+| 11 Cloudflare preview/review | `[ ]` | Phase 10 candidate verified; final owner review and outstanding manual checks remain. |
 | 12 Production rollout | `[ ]` | Pending Phase 11 and explicit release approval. |
 
 End each execution with the active phase, completed criteria/evidence, unfinished work or blocker, current branch/PR/commit, preview identity if applicable, production unchanged status, and the next bounded phase/task. Keep this file updated in the same phase commit on `develop-v2` (or required temporary PR targeting it) so the next Codex task can resume from evidence instead of conversation memory.

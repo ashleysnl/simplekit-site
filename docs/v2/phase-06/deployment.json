@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "name": "simplekit-preview",
+  "production_branch": "__production_disabled__",
+  "domains": [
+    "simplekit-preview.pages.dev"
+  ],
+  "canonical_deployment": null,
+  "latest_deployment": {
+    "id": "48daf1d5-191b-4afb-8a2f-627d26e7ca03",
+    "url": "https://48daf1d5.simplekit-preview.pages.dev",
+    "source_commit": "5532bfa2ea1d1d79df04fb7a5dd85ac2f8d577ec",
+    "environment": "preview",
+    "status": "success",
+    "created_on": "2026-10-10T01:28:23.60782Z"
+  }
+}

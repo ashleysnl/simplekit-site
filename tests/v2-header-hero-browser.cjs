@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8001').origin;
-assert(['127.0.0.1', 'localhost'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-header-hero';
 fs.mkdirSync(output, { recursive: true });
 const errors = [], failed = [], external = new Set();
@@ -18,9 +18,10 @@ async function context(browser, options = {}, mode = 'normal') {
       assert.equal(url.hostname, 'www.googletagmanager.com', 'Unexpected external dependency');
       return r.fulfill({ body: '', contentType: 'text/javascript' });
     }
-    const asset = url.pathname.endsWith('.woff') || url.pathname.includes('/v2/images/');
+    const asset = /\.woff2?$/.test(url.pathname) || url.pathname.includes('/v2/images/');
     if (asset && mode === 'blocked') return r.abort();
-    if (asset && mode === 'delayed') await new Promise(resolve => setTimeout(resolve, 500));
+    if (mode === 'delayed' && (asset || url.pathname.endsWith('/v2/discovery-index.js')))
+      await new Promise(resolve => setTimeout(resolve, 500));
     return r.continue();
   });
   c.on('page', p => {
@@ -61,7 +62,7 @@ function luminance(rgb) {
 }
 function worstContrast(width, right, color) {
   const x = right / width, end = width < 1024 ? .72 : .54;
-  const alpha = width < 768 ? .98 - .10 * x : x <= end ? .98 - .04 * x / end : .94 - .76 * (x - end) / (1 - end);
+  const alpha = width < 768 ? (x <= .8 ? .96 - .06 * x / .8 : .90 - .78 * (x - .8) / .2) : x <= end ? .98 - .04 * x / end : .94 - .76 * (x - end) / (1 - end);
   // Black is the darkest possible landscape pixel. The additional bottom fade only raises contrast.
   const background = [252, 252, 251].map(v => v * alpha);
   return (luminance(background) + .05) / (luminance(color) + .05);
@@ -121,7 +122,9 @@ async function menu(p, screenshot) {
       await p.evaluate(() => document.fonts.ready);
       const value = await assertLayout(p); results.push({ width, ...value });
       for (const [key, color, minimum] of [['body', [82, 98, 124], 4.5], ['headline', [16, 27, 70], 3]]) {
-        const ratio = worstContrast(width, value[key].right, color);
+        // Contrast applies to painted glyphs, not the empty right side of a heading box.
+        const right = key === 'headline' ? Math.max(...value.textRects.map(rect => rect.right)) : value[key].right;
+        const ratio = worstContrast(width, right, color);
         assert(ratio >= minimum, `Hero ${key} contrast ${ratio} at ${width}`);
         contrasts.push({ width, text: key, darkestPossiblePixelRatio: ratio, minimum });
       }
@@ -141,10 +144,13 @@ async function menu(p, screenshot) {
     // Resize with active menu link, then with active desktop link: focus stays on a visible control.
     await p.locator('.v2-menu-toggle').click(); await p.getByRole('link', { name: 'Home', exact: true }).focus();
     await p.setViewportSize({ width: 1440, height: 900 });
+    await p.waitForFunction(() => document.querySelector('[data-v2-menu-toggle]').hidden && !document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.getByRole('link', { name: 'Home', exact: true }).evaluate(n => n === document.activeElement));
     await p.setViewportSize({ width: 390, height: 900 });
+    await p.waitForFunction(() => !document.querySelector('[data-v2-menu-toggle]').hidden && document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.locator('.v2-menu-toggle').evaluate(n => n === document.activeElement));
     await p.setViewportSize({ width: 1440, height: 900 });
+    await p.waitForFunction(() => document.querySelector('[data-v2-menu-toggle]').hidden && !document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.getByRole('link', { name: 'Home', exact: true }).evaluate(n => n === document.activeElement));
     await p.screenshot({ path: path.join(output, 'homepage-full.jpg'), type: 'jpeg', quality: 80, fullPage: true });
     await c.close();
@@ -167,12 +173,14 @@ async function menu(p, screenshot) {
     await fallback.close();
     const delayed = await context(browser, {}, 'delayed'); const d = await delayed.newPage();
     await d.addInitScript(() => { window.v2Shifts = []; new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) if (!entry.hadRecentInput) window.v2Shifts.push(entry.value);
+      for (const entry of list.getEntries()) if (!entry.hadRecentInput) window.v2Shifts.push({value: entry.value, time: entry.startTime,
+        sources: entry.sources.map(source => ({node: source.node?.className || source.node?.nodeName, previous: source.previousRect.toJSON(), current: source.currentRect.toJSON()}))});
     }).observe({ type: 'layout-shift', buffered: true }); });
     await d.goto(origin, { waitUntil: 'domcontentloaded' }); const before = await layout(d);
     await d.waitForLoadState('networkidle'); await d.evaluate(() => document.fonts.ready);
-    const after = await assertLayout(d), cls = await d.evaluate(() => window.v2Shifts.reduce((a, b) => a + b, 0));
-    assert(Math.abs(before.discovery.top - after.discovery.top) <= 1, 'Font/image loading moved hero controls');
+    const after = await assertLayout(d), shifts = await d.evaluate(() => window.v2Shifts), cls = shifts.reduce((a, b) => a + b.value, 0);
+    fs.writeFileSync(path.join(output, 'delayed-loading.json'), JSON.stringify({before, after, cls, shifts}, null, 2) + '\n');
+    assert(Math.abs(before.discovery.top - after.discovery.top) <= 1, `Font/image loading moved hero controls: ${before.discovery.top} -> ${after.discovery.top}`);
     assert(cls <= .01, `Local delayed-load CLS ${cls}`); await delayed.close();
     // CSS magnification plus half-width reflow cover 200% reading and navigation geometry.
     // This is not an OS/browser toolbar zoom or a real-device claim.
@@ -182,6 +190,10 @@ async function menu(p, screenshot) {
     for (const link of await z.getByRole('navigation').getByRole('link').all()) { await link.focus(); assert(await link.isVisible()); }
     await z.screenshot({ path: path.join(output, 'magnification-200-percent.jpg'), type: 'jpeg', quality: 85 });
     await z.evaluate(() => document.body.style.zoom = ''); await z.setViewportSize({ width: 720, height: 450 });
+    // matchMedia change events are asynchronous after a viewport resize. Wait for
+    // the actual disclosure state before asserting its accessibility exposure.
+    await z.waitForFunction(() => document.querySelector('#home-navigation').hidden
+      && !document.querySelector('.v2-menu-toggle').hidden);
     await assertLayout(z); await menu(z); await zoom.close();
     assert.deepEqual(errors, []); assert.deepEqual(failed, []);
     fs.writeFileSync(path.join(output, 'browser.json'), JSON.stringify({

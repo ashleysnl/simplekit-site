@@ -1,0 +1,15 @@
+{
+  "commit": "f978df5c48209a02b107d4a31a81f7ba49088335",
+  "workflow": 38072049423,
+  "artifactId": 11676733662,
+  "artifactZipSHA256": "7015dba2961858a26281ed409b45b4ac075b81f775d99154acdb6f8ada7ca71f",
+  "candidateTarGzSHA256": "e329da8c7c6afd7e7a36d0bb23805c336aa147deb406549d59a62bad86b868d4",
+  "localTarGzSHA256": "3bd208d6268a92015e22e515e4a4cc77725af974a6e9a5048314917befbd00d6",
+  "publishedFiles": 335,
+  "localAndHostedInventoryAndFileBytesIdentical": true,
+  "archiveMetadataDifference": "Hosted directories/files 0755/0644; managed local workspace 0700/0600. Ownership, mtime, member paths and all content identical. Hosted archive is the preserved release candidate.",
+  "retentionDays": 30,
+  "localPath": "/workspace/artifacts/simplekit-v2/f978df5c48209a02b107d4a31a81f7ba49088335/release-candidate.tar.gz",
+  "normalizedLocalArchiveByteIdenticalToHosted": true,
+  "permissionNormalization": "tar --mode=u=rwX,go=rX produces the exact hosted gzip SHA-256"
+}

@@ -1,0 +1,35 @@
+{
+  "browser": "141.0.7390.37",
+  "origin": "https://7d44ae88.simplekit-preview.pages.dev",
+  "results": [
+    {
+      "slug": "budget-planner",
+      "jsonRoundTrip": true,
+      "reloadBeforeAndAfterImport": true,
+      "csvRows": 13,
+      "baseline": "Exact Phase 0 displayed results"
+    },
+    {
+      "slug": "retirement-planner",
+      "jsonRoundTrip": true,
+      "freshContextImport": true,
+      "reloadBeforeAndAfterImport": true,
+      "comparison": "All financial fields exact; UI navigation state intentionally excluded"
+    },
+    {
+      "slug": "mortgage-calculator",
+      "principalPayment": true,
+      "yearlyRows": 26,
+      "paymentRows": 300,
+      "csvReconciliation": true,
+      "importAndPersistence": "Not supported by this pinned tool"
+    }
+  ],
+  "pageErrors": [],
+  "failedSameOrigin": [],
+  "stubbedExternalHosts": [
+    "www.google-analytics.com",
+    "www.googletagmanager.com"
+  ],
+  "externalScope": "Analytics/support stubs do not verify external services"
+}

@@ -1,0 +1,1160 @@
+{
+  "origin": "http://127.0.0.1:8004",
+  "hosted": false,
+  "routes": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "canonical": "https://simplekit.app/",
+      "noindex": true
+    },
+    {
+      "pathname": "/tools/",
+      "status": 200,
+      "canonical": "https://simplekit.app/tools/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/",
+      "noindex": true
+    },
+    {
+      "pathname": "/about/",
+      "status": 200,
+      "canonical": "https://simplekit.app/about/",
+      "noindex": true
+    },
+    {
+      "pathname": "/support/",
+      "status": 200,
+      "canonical": "https://simplekit.app/support/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/retirement-planning-basics/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/retirement-planning-basics/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/cpp-basics/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/cpp-basics/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/fire-explained/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/fire-explained/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/rrsp-vs-tfsa-basics/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/rrsp-vs-tfsa-basics/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/net-worth-basics/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/net-worth-basics/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/travel-budget-planning-basics/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/travel-budget-planning-basics/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/budget-to-cash-flow-plan/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/budget-to-cash-flow-plan/",
+      "noindex": true
+    },
+    {
+      "pathname": "/methodology/",
+      "status": 200,
+      "canonical": "https://simplekit.app/methodology/",
+      "noindex": true
+    },
+    {
+      "pathname": "/privacy/",
+      "status": 200,
+      "canonical": "https://simplekit.app/privacy/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/mortgage-affordability-canada/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/mortgage-affordability-canada/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/rent-vs-buy-canada/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/rent-vs-buy-canada/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/mortgage-costs-beyond-the-payment/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/mortgage-costs-beyond-the-payment/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/mortgage-prepayment-vs-investing/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/mortgage-prepayment-vs-investing/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/monthly-budgeting-and-cash-flow/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/monthly-budgeting-and-cash-flow/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/emergency-fund-and-savings-goals/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/emergency-fund-and-savings-goals/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/debt-snowball-vs-avalanche/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/debt-snowball-vs-avalanche/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/credit-card-interest-and-payoff/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/credit-card-interest-and-payoff/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/loan-payments-and-amortization/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/loan-payments-and-amortization/",
+      "noindex": true
+    },
+    {
+      "pathname": "/learn/compound-interest-and-investment-fees/",
+      "status": 200,
+      "canonical": "https://simplekit.app/learn/compound-interest-and-investment-fees/",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/canadian-retirement-income-calculator.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/canadian-retirement-income-calculator.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/cpp-timing-calculator-canada.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/cpp-timing-calculator-canada.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/oas-clawback-calculator.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/oas-clawback-calculator.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/retirement-tax-calculator-canada.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/retirement-tax-calculator-canada.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/rrif-minimum-withdrawal-calculator.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/rrif-minimum-withdrawal-calculator.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/rrif-withdrawal-calculator.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/rrif-withdrawal-calculator.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/rrsp-withdrawal-strategy-canada.html",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/rrsp-withdrawal-strategy-canada.html",
+      "noindex": true
+    },
+    {
+      "pathname": "/retirement-planner/",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/",
+      "noindex": true
+    },
+    {
+      "pathname": "/fire-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/fire-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/cpp-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/cpp-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/rrsp-vs-tfsa-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/compound-interest-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/compound-interest-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/savings-goal-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/savings-goal-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/emergency-fund-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/emergency-fund-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/net-worth-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/net-worth-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/budget-planner/",
+      "status": 200,
+      "canonical": "https://simplekit.app/budget-planner/",
+      "noindex": true
+    },
+    {
+      "pathname": "/take-home-pay-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/take-home-pay-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/debt-payoff-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/debt-payoff-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/credit-card-interest-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/credit-card-interest-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/loan-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/loan-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/house-affordability-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/house-affordability-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/rent-vs-buy-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/rent-vs-buy-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/mortgage-paydown-vs-invest-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/investment-fee-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/investment-fee-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/mortgage-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/mortgage-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/canadian-tax-checklist/",
+      "status": 200,
+      "canonical": "https://simplekit.app/canadian-tax-checklist/",
+      "noindex": true
+    },
+    {
+      "pathname": "/travel-planner/",
+      "status": 200,
+      "canonical": "https://simplekit.app/travel-planner/",
+      "noindex": true
+    },
+    {
+      "pathname": "/debt-to-income-ratio-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/contractor-effective-hourly-rate-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "noindex": true
+    },
+    {
+      "pathname": "/tools/budget-planner/",
+      "status": 200,
+      "canonical": "https://simplekit.app/budget-planner/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/cpp-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/cpp-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/debt-payoff-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/debt-payoff-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/emergency-fund-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/emergency-fund-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/fire-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/fire-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/investment-growth-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/compound-interest-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/loan-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/loan-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/net-worth-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/net-worth-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/rent-vs-buy-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/rent-vs-buy-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/retirement-planner/",
+      "status": 200,
+      "canonical": "https://simplekit.app/retirement-planner/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/rrsp-tfsa-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/savings-goal-calculator/",
+      "status": 200,
+      "canonical": "https://simplekit.app/savings-goal-calculator/",
+      "noindex": true,
+      "compatibility": true
+    },
+    {
+      "pathname": "/tools/travel-planner/",
+      "status": 200,
+      "canonical": "https://simplekit.app/travel-planner/",
+      "noindex": true,
+      "compatibility": true
+    }
+  ],
+  "resources": [
+    {
+      "pathname": "/assets/core/core.css",
+      "status": 200,
+      "bytes": 7500
+    },
+    {
+      "pathname": "/assets/core/core.js",
+      "status": 200,
+      "bytes": 15122
+    },
+    {
+      "pathname": "/assets/site.css",
+      "status": 200,
+      "bytes": 11728
+    },
+    {
+      "pathname": "/assets/v2/accessibility.css",
+      "status": 200,
+      "bytes": 1560
+    },
+    {
+      "pathname": "/assets/v2/discovery-engine.js",
+      "status": 200,
+      "bytes": 2238
+    },
+    {
+      "pathname": "/assets/v2/discovery-index.js",
+      "status": 200,
+      "bytes": 12651
+    },
+    {
+      "pathname": "/assets/v2/discovery.js",
+      "status": 200,
+      "bytes": 3174
+    },
+    {
+      "pathname": "/assets/v2/fonts/simplekit-display-700.woff2",
+      "status": 200,
+      "bytes": 43072
+    },
+    {
+      "pathname": "/assets/v2/fonts/simplekit-sans-400.woff2",
+      "status": 200,
+      "bytes": 41460
+    },
+    {
+      "pathname": "/assets/v2/foundations.css",
+      "status": 200,
+      "bytes": 8092
+    },
+    {
+      "pathname": "/assets/v2/goals.css",
+      "status": 200,
+      "bytes": 4780
+    },
+    {
+      "pathname": "/assets/v2/home.bundle.css",
+      "status": 200,
+      "bytes": 46394
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-desktop-1536.avif",
+      "status": 200,
+      "bytes": 69305
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-desktop-1536.jpg",
+      "status": 200,
+      "bytes": 165201
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-desktop-1536.webp",
+      "status": 200,
+      "bytes": 91018
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-desktop-768.avif",
+      "status": 200,
+      "bytes": 21426
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-desktop-768.jpg",
+      "status": 200,
+      "bytes": 49003
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-desktop-768.webp",
+      "status": 200,
+      "bytes": 28900
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-mobile-400.avif",
+      "status": 200,
+      "bytes": 15024
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-mobile-400.jpg",
+      "status": 200,
+      "bytes": 33313
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-mobile-400.webp",
+      "status": 200,
+      "bytes": 20324
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-mobile-800.avif",
+      "status": 200,
+      "bytes": 48259
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-mobile-800.jpg",
+      "status": 200,
+      "bytes": 109334
+    },
+    {
+      "pathname": "/assets/v2/images/coastal-mobile-800.webp",
+      "status": 200,
+      "bytes": 62572
+    },
+    {
+      "pathname": "/assets/v2/onboarding-engine.js",
+      "status": 200,
+      "bytes": 4342
+    },
+    {
+      "pathname": "/assets/v2/onboarding.js",
+      "status": 200,
+      "bytes": 4499
+    },
+    {
+      "pathname": "/budget-planner/assets/css/styles.css",
+      "status": 200,
+      "bytes": 25173
+    },
+    {
+      "pathname": "/budget-planner/assets/js/app.js",
+      "status": 200,
+      "bytes": 54783
+    },
+    {
+      "pathname": "/canadian-tax-checklist/assets/css/styles.css",
+      "status": 200,
+      "bytes": 17794
+    },
+    {
+      "pathname": "/canadian-tax-checklist/assets/js/app.js",
+      "status": 200,
+      "bytes": 55723
+    },
+    {
+      "pathname": "/canadian-tax-checklist/assets/js/simplekit-tool-links.js",
+      "status": 200,
+      "bytes": 1197
+    },
+    {
+      "pathname": "/canadian-tax-checklist/manifest.webmanifest",
+      "status": 200,
+      "bytes": 403
+    },
+    {
+      "pathname": "/compound-interest-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 17394
+    },
+    {
+      "pathname": "/compound-interest-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 38424
+    },
+    {
+      "pathname": "/contractor-effective-hourly-rate-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 14156
+    },
+    {
+      "pathname": "/contractor-effective-hourly-rate-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 29389
+    },
+    {
+      "pathname": "/contractor-effective-hourly-rate-calculator/assets/js/simplekit-tool-links.js",
+      "status": 200,
+      "bytes": 1197
+    },
+    {
+      "pathname": "/contractor-effective-hourly-rate-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 508
+    },
+    {
+      "pathname": "/cpp-calculator/app.js",
+      "status": 200,
+      "bytes": 25647
+    },
+    {
+      "pathname": "/cpp-calculator/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/cpp-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 731
+    },
+    {
+      "pathname": "/cpp-calculator/styles.css",
+      "status": 200,
+      "bytes": 16163
+    },
+    {
+      "pathname": "/credit-card-interest-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 17218
+    },
+    {
+      "pathname": "/credit-card-interest-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 28267
+    },
+    {
+      "pathname": "/credit-card-interest-calculator/assets/js/simplekit-tool-links.js",
+      "status": 200,
+      "bytes": 1197
+    },
+    {
+      "pathname": "/debt-payoff-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 23366
+    },
+    {
+      "pathname": "/debt-payoff-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 52610
+    },
+    {
+      "pathname": "/debt-to-income-ratio-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 18339
+    },
+    {
+      "pathname": "/debt-to-income-ratio-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 33857
+    },
+    {
+      "pathname": "/debt-to-income-ratio-calculator/assets/js/simplekit-tool-links.js",
+      "status": 200,
+      "bytes": 1286
+    },
+    {
+      "pathname": "/debt-to-income-ratio-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 439
+    },
+    {
+      "pathname": "/emergency-fund-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 14633
+    },
+    {
+      "pathname": "/emergency-fund-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 26122
+    },
+    {
+      "pathname": "/fire-calculator/app.js",
+      "status": 200,
+      "bytes": 36691
+    },
+    {
+      "pathname": "/fire-calculator/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/fire-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 734
+    },
+    {
+      "pathname": "/fire-calculator/styles.css",
+      "status": 200,
+      "bytes": 17785
+    },
+    {
+      "pathname": "/house-affordability-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 15479
+    },
+    {
+      "pathname": "/house-affordability-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 33563
+    },
+    {
+      "pathname": "/investment-fee-calculator/app.js",
+      "status": 200,
+      "bytes": 30984
+    },
+    {
+      "pathname": "/investment-fee-calculator/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/investment-fee-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 770
+    },
+    {
+      "pathname": "/investment-fee-calculator/styles.css",
+      "status": 200,
+      "bytes": 14851
+    },
+    {
+      "pathname": "/loan-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 27807
+    },
+    {
+      "pathname": "/loan-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 69819
+    },
+    {
+      "pathname": "/mortgage-calculator/app.js",
+      "status": 200,
+      "bytes": 39881
+    },
+    {
+      "pathname": "/mortgage-calculator/calculator.js",
+      "status": 200,
+      "bytes": 29567
+    },
+    {
+      "pathname": "/mortgage-calculator/charts.js",
+      "status": 200,
+      "bytes": 7440
+    },
+    {
+      "pathname": "/mortgage-calculator/styles.css",
+      "status": 200,
+      "bytes": 20247
+    },
+    {
+      "pathname": "/mortgage-paydown-vs-invest-calculator/app.js",
+      "status": 200,
+      "bytes": 36601
+    },
+    {
+      "pathname": "/mortgage-paydown-vs-invest-calculator/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/mortgage-paydown-vs-invest-calculator/icons/icon.svg",
+      "status": 200,
+      "bytes": 768
+    },
+    {
+      "pathname": "/mortgage-paydown-vs-invest-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 603
+    },
+    {
+      "pathname": "/mortgage-paydown-vs-invest-calculator/styles.css",
+      "status": 200,
+      "bytes": 13592
+    },
+    {
+      "pathname": "/net-worth-calculator/app.js",
+      "status": 200,
+      "bytes": 31794
+    },
+    {
+      "pathname": "/net-worth-calculator/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/net-worth-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 512
+    },
+    {
+      "pathname": "/net-worth-calculator/styles.css",
+      "status": 200,
+      "bytes": 18706
+    },
+    {
+      "pathname": "/og-image.png",
+      "status": 200,
+      "bytes": 1878348
+    },
+    {
+      "pathname": "/rent-vs-buy-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 17691
+    },
+    {
+      "pathname": "/rent-vs-buy-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 50987
+    },
+    {
+      "pathname": "/retirement-planner/assets/css/styles.css",
+      "status": 200,
+      "bytes": 538
+    },
+    {
+      "pathname": "/retirement-planner/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/retirement-planner/manifest.webmanifest",
+      "status": 200,
+      "bytes": 576
+    },
+    {
+      "pathname": "/retirement-planner/styles.css",
+      "status": 200,
+      "bytes": 56889
+    },
+    {
+      "pathname": "/rrsp-vs-tfsa-calculator/app.js",
+      "status": 200,
+      "bytes": 33988
+    },
+    {
+      "pathname": "/rrsp-vs-tfsa-calculator/icons/favicon.svg",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "pathname": "/rrsp-vs-tfsa-calculator/manifest.webmanifest",
+      "status": 200,
+      "bytes": 724
+    },
+    {
+      "pathname": "/rrsp-vs-tfsa-calculator/styles.css",
+      "status": 200,
+      "bytes": 15629
+    },
+    {
+      "pathname": "/savings-goal-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 23387
+    },
+    {
+      "pathname": "/savings-goal-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 67717
+    },
+    {
+      "pathname": "/social-preview.png",
+      "status": 200,
+      "bytes": 1878348
+    },
+    {
+      "pathname": "/take-home-pay-calculator/assets/css/styles.css",
+      "status": 200,
+      "bytes": 12046
+    },
+    {
+      "pathname": "/take-home-pay-calculator/assets/js/app.js",
+      "status": 200,
+      "bytes": 36711
+    },
+    {
+      "pathname": "/take-home-pay-calculator/assets/js/simplekit-tool-links.js",
+      "status": 200,
+      "bytes": 1431
+    },
+    {
+      "pathname": "/travel-planner/app.js",
+      "status": 200,
+      "bytes": 155980
+    },
+    {
+      "pathname": "/travel-planner/assets/screenshots/dashboard-overview.svg",
+      "status": 200,
+      "bytes": 5492
+    },
+    {
+      "pathname": "/travel-planner/manifest.webmanifest",
+      "status": 200,
+      "bytes": 358
+    },
+    {
+      "pathname": "/travel-planner/styles.css",
+      "status": 200,
+      "bytes": 64716
+    }
+  ],
+  "noJS": {
+    "home": {
+      "questions": [
+        {
+          "text": "Can I retire at 55?",
+          "href": "https://simplekit.app/retirement-planner/"
+        },
+        {
+          "text": "Should I rent or buy a home?",
+          "href": "https://simplekit.app/rent-vs-buy-calculator/"
+        },
+        {
+          "text": "How much house can I afford?",
+          "href": "https://simplekit.app/house-affordability-calculator/"
+        },
+        {
+          "text": "How do I pay off debt faster?",
+          "href": "https://simplekit.app/debt-payoff-calculator/"
+        }
+      ],
+      "featured": [
+        "https://simplekit.app/retirement-planner/",
+        "https://simplekit.app/mortgage-calculator/",
+        "https://simplekit.app/compound-interest-calculator/",
+        "https://simplekit.app/budget-planner/",
+        "https://simplekit.app/fire-calculator/"
+      ],
+      "goals": [
+        "http://127.0.0.1:8004/tools/#retirement",
+        "http://127.0.0.1:8004/tools/#home",
+        "http://127.0.0.1:8004/tools/#budget",
+        "http://127.0.0.1:8004/tools/#investing"
+      ],
+      "fullDirectoryFallback": true
+    },
+    "directory": [
+      {
+        "href": "https://simplekit.app/retirement-planner/",
+        "text": "Retirement PlannerModel retirement income, savings, pensions and withdrawals in one plan."
+      },
+      {
+        "href": "https://simplekit.app/fire-calculator/",
+        "text": "FIRE CalculatorEstimate financial independence and what early retirement could take."
+      },
+      {
+        "href": "https://simplekit.app/cpp-calculator/",
+        "text": "CPP CalculatorCompare Canada Pension Plan estimates and different start ages."
+      },
+      {
+        "href": "https://simplekit.app/house-affordability-calculator/",
+        "text": "House Affordability CalculatorEstimate a home price range using income, debts and down payment."
+      },
+      {
+        "href": "https://simplekit.app/rent-vs-buy-calculator/",
+        "text": "Rent vs Buy CalculatorCompare renting and buying using housing costs and assumptions."
+      },
+      {
+        "href": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+        "text": "Mortgage Paydown vs InvestCompare extra mortgage payments with investing the same amount."
+      },
+      {
+        "href": "https://simplekit.app/mortgage-calculator/",
+        "text": "Mortgage CalculatorEstimate mortgage payments and interest from loan and rate assumptions."
+      },
+      {
+        "href": "https://simplekit.app/debt-to-income-ratio-calculator/",
+        "text": "Debt-to-Income Ratio CalculatorCompare debt payments with income to estimate your debt-to-income ratio."
+      },
+      {
+        "href": "https://simplekit.app/savings-goal-calculator/",
+        "text": "Savings Goal CalculatorEstimate contributions and time needed to reach a savings target."
+      },
+      {
+        "href": "https://simplekit.app/emergency-fund-calculator/",
+        "text": "Emergency Fund CalculatorPlan a cash buffer using expenses, savings and monthly contributions."
+      },
+      {
+        "href": "https://simplekit.app/net-worth-calculator/",
+        "text": "Net Worth CalculatorAdd up assets and debts to see your current net worth."
+      },
+      {
+        "href": "https://simplekit.app/budget-planner/",
+        "text": "Budget PlannerPlan monthly income, expenses and savings in one clear budget."
+      },
+      {
+        "href": "https://simplekit.app/debt-payoff-calculator/",
+        "text": "Debt Payoff CalculatorCompare debt repayment plans, extra payments and payoff timelines."
+      },
+      {
+        "href": "https://simplekit.app/credit-card-interest-calculator/",
+        "text": "Credit Card Interest CalculatorEstimate credit card interest and the effect of repayment amounts."
+      },
+      {
+        "href": "https://simplekit.app/loan-calculator/",
+        "text": "Loan CalculatorEstimate loan payments and total interest across a repayment term."
+      },
+      {
+        "href": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+        "text": "RRSP / TFSA CalculatorCompare RRSP and TFSA savings using contribution and tax assumptions."
+      },
+      {
+        "href": "https://simplekit.app/compound-interest-calculator/",
+        "text": "Compound Interest CalculatorSee how contributions and compound growth may build savings over time."
+      },
+      {
+        "href": "https://simplekit.app/investment-fee-calculator/",
+        "text": "Investment Fee CalculatorCompare how investment fees may affect long-term portfolio growth."
+      },
+      {
+        "href": "https://simplekit.app/canadian-tax-checklist/",
+        "text": "Canadian Tax ChecklistOrganize Canadian tax documents and track filing preparation tasks."
+      },
+      {
+        "href": "https://simplekit.app/take-home-pay-calculator/",
+        "text": "Canadian Take Home Pay CalculatorEstimate Canadian pay after tax and payroll deductions."
+      },
+      {
+        "href": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+        "text": "Contractor Effective Hourly Rate CalculatorEstimate a contractor's effective rate after costs and working-time assumptions."
+      },
+      {
+        "href": "https://simplekit.app/travel-planner/",
+        "text": "Travel PlannerPlan trip details, itinerary and travel spending in one place."
+      }
+    ]
+  },
+  "redirectDestinations": [
+    {
+      "target": "https://simplekit.app/retirement-planner/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/fire-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/cpp-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/rrsp-vs-tfsa-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/compound-interest-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/savings-goal-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/emergency-fund-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/net-worth-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/budget-planner/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/take-home-pay-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/debt-payoff-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/credit-card-interest-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/loan-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/house-affordability-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/rent-vs-buy-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/mortgage-paydown-vs-invest-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/investment-fee-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/mortgage-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/canadian-tax-checklist/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/travel-planner/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/debt-to-income-ratio-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/contractor-effective-hourly-rate-calculator/",
+      "status": 200
+    },
+    {
+      "target": "https://simplekit.app/",
+      "status": 200
+    }
+  ],
+  "inheritedFragments": [
+    {
+      "id": "dashboard",
+      "presentAfterJavaScript": false
+    },
+    {
+      "id": "learn",
+      "presentAfterJavaScript": false
+    },
+    {
+      "id": "start",
+      "presentAfterJavaScript": false
+    },
+    {
+      "id": "methodology",
+      "presentAfterJavaScript": false
+    },
+    {
+      "id": "about",
+      "presentAfterJavaScript": false
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "sitemapUrls": 53,
+  "robotsPolicy": "production allow/sitemap preserved; local server sends noindex",
+  "inheritedFragmentLinks": 42,
+  "passed": true
+}

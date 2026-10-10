@@ -1,0 +1,19 @@
+{
+  "source": "assets/v2/social-share.png",
+  "sha256": "456f008e4ba581ed284832931dc580113a5b947fb29975a5a2ee09a561489105",
+  "bytes": 1878348,
+  "width": 1730,
+  "height": 909,
+  "publishedAliases": [
+    "/og-image.png",
+    "/social-preview.png"
+  ],
+  "cacheVersion": 3,
+  "authorization": "Owner selected a new image matching the approved V2 design on 2026-10-10.",
+  "provenance": "Generated with image_gen using unchanged docs/design-reference/simplekit-v2-target.png. No raster editing or old production asset replacement.",
+  "oldProductionAsset": {
+    "sha256": "370d997ea3ab5e2420648f980892646af7f9e3d490f8e52bd2d4fb04f35d0678",
+    "bytes": 7284,
+    "unchanged": true
+  }
+}

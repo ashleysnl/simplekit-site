@@ -1,0 +1,6 @@
+
+> seo:validate
+> node scripts/validate-seo.mjs
+
+SEO integrity passed: 53 indexed pages, 919 internal links, 13 compatibility pages.
+SEO validation passed for 22 tools.
