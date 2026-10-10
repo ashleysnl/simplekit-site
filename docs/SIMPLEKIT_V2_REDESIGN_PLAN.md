@@ -329,22 +329,22 @@ Codex guidance: use the existing SEO generators and route authority. Review [SEO
 
 ## Phase 10 — Full regression and release candidate
 
-Status: `[ ]`. Depends on Phases 0–9.
+Status: `[x]`. Depends on Phases 0–9.
 
-- [ ] Run the supported commands from a clean checkout and compare repeated build inventories for deterministic output.
-- [ ] Run all 22 tools on the local generated origin; verify inputs render, shared Core mounts, navigation/assets/modules load and each baseline interaction/output fixture still passes.
-- [ ] Specifically rerun Retirement Planner demo, Budget Planner recalculation, mortgage principal/payment, storage reload and export/import where supported; compare with Phase 0.
-- [ ] Exercise search, suggested questions, all goals, all featured rows, onboarding, no-JS fallback and compatibility routes; collect console errors and failed requests.
-- [ ] Review the artifact diff: calculator logic/pins and routes unchanged, expected homepage/assets changed, no docs/mockup/cache/developer files published; preserve a versioned candidate artifact and checksum.
+- [x] Run the supported commands from a clean checkout and compare repeated build inventories for deterministic output.
+- [x] Run all 22 tools on the local generated origin; verify inputs render, shared Core mounts, navigation/assets/modules load and each baseline interaction/output fixture still passes.
+- [x] Specifically rerun Retirement Planner demo, Budget Planner recalculation, mortgage principal/payment, storage reload and export/import where supported; compare with Phase 0.
+- [x] Exercise search, suggested questions, all goals, all featured rows, onboarding, no-JS fallback and compatibility routes; collect console errors and failed requests.
+- [x] Review the artifact diff: calculator logic/pins and routes unchanged, expected homepage/assets changed, no docs/mockup/cache/developer files published; preserve a versioned candidate artifact and checksum.
 
 Acceptance:
 
-- [ ] All existing validation and meaningful new behavior tests pass; all 22 baseline fixtures match within documented tool rounding/tolerance rules.
-- [ ] Zero new browser errors, failed same-origin asset requests or broken internal links; external analytics/support checks are explicitly distinguished from stubbed tests.
-- [ ] Build reproducibility and unchanged calculator logic are demonstrated; any generated wrapper differences are reviewed and explained.
-- [ ] PR contains screenshot comparisons, accessibility/performance/SEO/regression evidence, candidate commit/artifact identity and known limitations; required hosted validation passes for that commit.
+- [x] All existing validation and meaningful new behavior tests pass; all 22 baseline fixtures match within documented tool rounding/tolerance rules.
+- [x] Zero new browser errors, failed same-origin asset requests or broken internal links; external analytics/support checks are explicitly distinguished from stubbed tests.
+- [x] Build reproducibility and unchanged calculator logic are demonstrated; any generated wrapper differences are reviewed and explained.
+- [x] PR contains screenshot comparisons, accessibility/performance/SEO/regression evidence, candidate commit/artifact identity and known limitations; required hosted validation passes for that commit.
 
-Codex guidance: the existing browser smoke script is a starting point, not proof of every calculation. Add fixture coverage appropriate to each tool type, and test preview paths rather than accidentally following production canonicals. Evidence link: pending.
+Codex guidance: the existing browser smoke script is a starting point, not proof of every calculation. Add fixture coverage appropriate to each tool type, and test preview paths rather than accidentally following production canonicals. Evidence: [Phase 10 verification](v2/phase-10-verification.md). Candidate `f978df5c48209a02b107d4a31a81f7ba49088335` passes CI 38071970522 and [hosted run 38072049423](https://github.com/ashleysnl/simplekit-site/actions/runs/38072049423): 36 tests, all 22 exact fixtures, JSON/import/storage/CSV regression, 78 layouts/24 axe states, SEO and mobile Lighthouse median 98/100, LCP 2.290s, CLS 0. Two builds have identical 335-file inventories; preserved candidate artifact 11676733662 has tar.gz SHA-256 `e329da8c7c6afd7e7a36d0bb23805c336aa147deb406549d59a62bad86b868d4`. [Verified preview](https://7d44ae88.simplekit-preview.pages.dev). Screenshots at all four widths are unchanged; calculator/Core logic/pins, routes and production inputs are preserved. Main, production and DNS unchanged; PR #13 remains unmerged. Phase 8 manual checks and final owner release approval remain pending.
 
 ## Phase 11 — Cloudflare preview and owner review
 
@@ -428,8 +428,8 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 7 Guided onboarding | `[~]` | Implementation and local/hosted automation verified; manual screen-reader acceptance remains Phase 8. Same unmerged PR #13. |
 | 8 Accessibility/responsiveness/performance | `[~]` | Implementation and local/hosted automation pass in run 38067758043; three engines, 78 layouts, 24 axe states, mobile Lighthouse median 99/100, LCP 2.127s, CLS 0. Same unmerged PR #13; manual devices/assistive technology/native zoom/human review pending. |
 | 9 SEO/content integrity | `[x]` | [Phase 9 verification](v2/phase-09-verification.md); local/hosted metadata, 53 indexed URLs, 66 routes, 99 assets, no-JS and V2 share-image checks pass in run 38069894661. Inherited source findings documented; Phase 8 manual checks remain pending. |
-| 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
-| 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |
+| 10 Full regression/candidate | `[x]` | [Phase 10 verification](v2/phase-10-verification.md); clean/repeated builds, all 22 fixtures, import/export/reload, hosted cross-engine/SEO/performance and preserved candidate pass in run 38072049423. Manual release gates remain. |
+| 11 Cloudflare preview/review | `[ ]` | Phase 10 candidate verified; final owner review and outstanding manual checks remain. |
 | 12 Production rollout | `[ ]` | Pending Phase 11 and explicit release approval. |
 
 End each execution with the active phase, completed criteria/evidence, unfinished work or blocker, current branch/PR/commit, preview identity if applicable, production unchanged status, and the next bounded phase/task. Keep this file updated in the same phase commit on `develop-v2` (or required temporary PR targeting it) so the next Codex task can resume from evidence instead of conversation memory.

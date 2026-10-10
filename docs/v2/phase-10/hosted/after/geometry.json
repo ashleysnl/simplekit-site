@@ -1,0 +1,598 @@
+[
+  {
+    "width": 375,
+    "overflow": false,
+    "sections": {
+      ".v2-header": {
+        "x": 16,
+        "y": 0,
+        "width": 343,
+        "height": 84.984375,
+        "top": 0,
+        "right": 359,
+        "bottom": 84.984375,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-hero-copy": {
+        "x": 16,
+        "y": 100.984375,
+        "width": 343,
+        "height": 187.09375,
+        "top": 100.984375,
+        "right": 359,
+        "bottom": 288.078125,
+        "left": 16,
+        "font": "16px"
+      },
+      "h1": {
+        "x": 16,
+        "y": 128.484375,
+        "width": 284,
+        "height": 69.09375,
+        "top": 128.484375,
+        "right": 300,
+        "bottom": 197.578125,
+        "left": 16,
+        "font": "32px"
+      },
+      ".v2-hero-body": {
+        "x": 16,
+        "y": 211.578125,
+        "width": 261,
+        "height": 76.5,
+        "top": 211.578125,
+        "right": 277,
+        "bottom": 288.078125,
+        "left": 16,
+        "font": "17px"
+      },
+      ".v2-discovery-slot": {
+        "x": 16,
+        "y": 308.078125,
+        "width": 343,
+        "height": 278,
+        "top": 308.078125,
+        "right": 359,
+        "bottom": 586.078125,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-search-bar": {
+        "x": 16,
+        "y": 308.078125,
+        "width": 343,
+        "height": 56,
+        "top": 308.078125,
+        "right": 359,
+        "bottom": 364.078125,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-discovery-panel": {
+        "x": 16,
+        "y": 364.078125,
+        "width": 343,
+        "height": 222,
+        "top": 364.078125,
+        "right": 359,
+        "bottom": 586.078125,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-home-trust": {
+        "x": 0,
+        "y": 610.078125,
+        "width": 375,
+        "height": 95.5625,
+        "top": 610.078125,
+        "right": 375,
+        "bottom": 705.640625,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-trust": {
+        "x": 16,
+        "y": 610.078125,
+        "width": 343,
+        "height": 95.5625,
+        "top": 610.078125,
+        "right": 359,
+        "bottom": 705.640625,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-trust-note": {
+        "x": 16,
+        "y": 1716.40625,
+        "width": 343,
+        "height": 102.5,
+        "top": 1716.40625,
+        "right": 359,
+        "bottom": 1818.90625,
+        "left": 16,
+        "font": "13px"
+      },
+      ".v2-home-goals": {
+        "x": 0,
+        "y": 705.640625,
+        "width": 375,
+        "height": 360.609375,
+        "top": 705.640625,
+        "right": 375,
+        "bottom": 1066.25,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-goal-heading": {
+        "x": 16,
+        "y": 729.640625,
+        "width": 343,
+        "height": 78.234375,
+        "top": 729.640625,
+        "right": 359,
+        "bottom": 807.875,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-home-goal-list": {
+        "x": 16,
+        "y": 821.875,
+        "width": 343,
+        "height": 228.375,
+        "top": 821.875,
+        "right": 359,
+        "bottom": 1050.25,
+        "left": 16,
+        "font": "16px"
+      }
+    }
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "sections": {
+      ".v2-header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 84.984375,
+        "top": 0,
+        "right": 374,
+        "bottom": 84.984375,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-hero-copy": {
+        "x": 16,
+        "y": 100.984375,
+        "width": 358,
+        "height": 189.59375,
+        "top": 100.984375,
+        "right": 374,
+        "bottom": 290.578125,
+        "left": 16,
+        "font": "16px"
+      },
+      "h1": {
+        "x": 16,
+        "y": 128.484375,
+        "width": 296,
+        "height": 71.59375,
+        "top": 128.484375,
+        "right": 312,
+        "bottom": 200.078125,
+        "left": 16,
+        "font": "33.15px"
+      },
+      ".v2-hero-body": {
+        "x": 16,
+        "y": 214.078125,
+        "width": 261,
+        "height": 76.5,
+        "top": 214.078125,
+        "right": 277,
+        "bottom": 290.578125,
+        "left": 16,
+        "font": "17px"
+      },
+      ".v2-discovery-slot": {
+        "x": 16,
+        "y": 310.578125,
+        "width": 358,
+        "height": 278,
+        "top": 310.578125,
+        "right": 374,
+        "bottom": 588.578125,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-search-bar": {
+        "x": 16,
+        "y": 310.578125,
+        "width": 358,
+        "height": 56,
+        "top": 310.578125,
+        "right": 374,
+        "bottom": 366.578125,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-discovery-panel": {
+        "x": 16,
+        "y": 366.578125,
+        "width": 358,
+        "height": 222,
+        "top": 366.578125,
+        "right": 374,
+        "bottom": 588.578125,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-home-trust": {
+        "x": 0,
+        "y": 612.578125,
+        "width": 390,
+        "height": 95.5625,
+        "top": 612.578125,
+        "right": 390,
+        "bottom": 708.140625,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-trust": {
+        "x": 16,
+        "y": 612.578125,
+        "width": 358,
+        "height": 95.5625,
+        "top": 612.578125,
+        "right": 374,
+        "bottom": 708.140625,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-trust-note": {
+        "x": 16,
+        "y": 1698.90625,
+        "width": 358,
+        "height": 102.5,
+        "top": 1698.90625,
+        "right": 374,
+        "bottom": 1801.40625,
+        "left": 16,
+        "font": "13px"
+      },
+      ".v2-home-goals": {
+        "x": 0,
+        "y": 708.140625,
+        "width": 390,
+        "height": 340.609375,
+        "top": 708.140625,
+        "right": 390,
+        "bottom": 1048.75,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-goal-heading": {
+        "x": 16,
+        "y": 732.140625,
+        "width": 358,
+        "height": 78.234375,
+        "top": 732.140625,
+        "right": 374,
+        "bottom": 810.375,
+        "left": 16,
+        "font": "16px"
+      },
+      ".v2-home-goal-list": {
+        "x": 16,
+        "y": 824.375,
+        "width": 358,
+        "height": 208.375,
+        "top": 824.375,
+        "right": 374,
+        "bottom": 1032.75,
+        "left": 16,
+        "font": "16px"
+      }
+    }
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "sections": {
+      ".v2-header": {
+        "x": 30.71875,
+        "y": 0,
+        "width": 706.546875,
+        "height": 101.421875,
+        "top": 0,
+        "right": 737.265625,
+        "bottom": 101.421875,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      ".v2-hero-copy": {
+        "x": 30.71875,
+        "y": 139.8125,
+        "width": 494.578125,
+        "height": 269.21875,
+        "top": 139.8125,
+        "right": 525.296875,
+        "bottom": 409.03125,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      "h1": {
+        "x": 30.71875,
+        "y": 175.3125,
+        "width": 486,
+        "height": 116.71875,
+        "top": 175.3125,
+        "right": 516.71875,
+        "bottom": 292.03125,
+        "left": 30.71875,
+        "font": "54.048px"
+      },
+      ".v2-hero-body": {
+        "x": 30.71875,
+        "y": 316.03125,
+        "width": 396,
+        "height": 93,
+        "top": 316.03125,
+        "right": 426.71875,
+        "bottom": 409.03125,
+        "left": 30.71875,
+        "font": "20.672px"
+      },
+      ".v2-discovery-slot": {
+        "x": 30.71875,
+        "y": 441.03125,
+        "width": 706.546875,
+        "height": 296.9375,
+        "top": 441.03125,
+        "right": 737.265625,
+        "bottom": 737.96875,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      ".v2-search-bar": {
+        "x": 30.71875,
+        "y": 441.03125,
+        "width": 706.546875,
+        "height": 57.4375,
+        "top": 441.03125,
+        "right": 737.265625,
+        "bottom": 498.46875,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      ".v2-discovery-panel": {
+        "x": 30.71875,
+        "y": 498.46875,
+        "width": 706.546875,
+        "height": 239.5,
+        "top": 498.46875,
+        "right": 737.265625,
+        "bottom": 737.96875,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      ".v2-home-trust": {
+        "x": 0,
+        "y": 817.96875,
+        "width": 768,
+        "height": 136.03125,
+        "top": 817.96875,
+        "right": 768,
+        "bottom": 954,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-trust": {
+        "x": 30.71875,
+        "y": 817.96875,
+        "width": 706.546875,
+        "height": 88.03125,
+        "top": 817.96875,
+        "right": 737.265625,
+        "bottom": 906,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      ".v2-trust-note": {
+        "x": 30.71875,
+        "y": 1995.0625,
+        "width": 706.546875,
+        "height": 90.5,
+        "top": 1995.0625,
+        "right": 737.265625,
+        "bottom": 2085.5625,
+        "left": 30.71875,
+        "font": "15px"
+      },
+      ".v2-home-goals": {
+        "x": 0,
+        "y": 954,
+        "width": 768,
+        "height": 296.28125,
+        "top": 954,
+        "right": 768,
+        "bottom": 1250.28125,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-goal-heading": {
+        "x": 30.71875,
+        "y": 954,
+        "width": 706.546875,
+        "height": 63.6875,
+        "top": 954,
+        "right": 737.265625,
+        "bottom": 1017.6875,
+        "left": 30.71875,
+        "font": "16px"
+      },
+      ".v2-home-goal-list": {
+        "x": 30.71875,
+        "y": 1037.6875,
+        "width": 706.546875,
+        "height": 212.59375,
+        "top": 1037.6875,
+        "right": 737.265625,
+        "bottom": 1250.28125,
+        "left": 30.71875,
+        "font": "16px"
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "sections": {
+      ".v2-header": {
+        "x": 144,
+        "y": 0,
+        "width": 1152,
+        "height": 106.59375,
+        "top": 0,
+        "right": 1296,
+        "bottom": 106.59375,
+        "left": 144,
+        "font": "16px"
+      },
+      ".v2-hero-copy": {
+        "x": 144,
+        "y": 170.59375,
+        "width": 599.03125,
+        "height": 322.65625,
+        "top": 170.59375,
+        "right": 743.03125,
+        "bottom": 493.25,
+        "left": 144,
+        "font": "16px"
+      },
+      "h1": {
+        "x": 144,
+        "y": 206.09375,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.09375,
+        "right": 743.03125,
+        "bottom": 370.25,
+        "left": 144,
+        "font": "76px"
+      },
+      ".v2-hero-body": {
+        "x": 144,
+        "y": 394.25,
+        "width": 396,
+        "height": 99,
+        "top": 394.25,
+        "right": 540,
+        "bottom": 493.25,
+        "left": 144,
+        "font": "22px"
+      },
+      ".v2-discovery-slot": {
+        "x": 144,
+        "y": 525.25,
+        "width": 832,
+        "height": 296.9375,
+        "top": 525.25,
+        "right": 976,
+        "bottom": 822.1875,
+        "left": 144,
+        "font": "16px"
+      },
+      ".v2-search-bar": {
+        "x": 144,
+        "y": 525.25,
+        "width": 832,
+        "height": 57.4375,
+        "top": 525.25,
+        "right": 976,
+        "bottom": 582.6875,
+        "left": 144,
+        "font": "16px"
+      },
+      ".v2-discovery-panel": {
+        "x": 144,
+        "y": 582.6875,
+        "width": 832,
+        "height": 239.5,
+        "top": 582.6875,
+        "right": 976,
+        "bottom": 822.1875,
+        "left": 144,
+        "font": "16px"
+      },
+      ".v2-home-trust": {
+        "x": 0,
+        "y": 902.1875,
+        "width": 1440,
+        "height": 120,
+        "top": 902.1875,
+        "right": 1440,
+        "bottom": 1022.1875,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-trust": {
+        "x": 144,
+        "y": 902.1875,
+        "width": 1152,
+        "height": 72,
+        "top": 902.1875,
+        "right": 1296,
+        "bottom": 974.1875,
+        "left": 144,
+        "font": "16px"
+      },
+      ".v2-trust-note": {
+        "x": 144,
+        "y": 2047.78125,
+        "width": 992,
+        "height": 67.25,
+        "top": 2047.78125,
+        "right": 1136,
+        "bottom": 2115.03125,
+        "left": 144,
+        "font": "15px"
+      },
+      ".v2-home-goals": {
+        "x": 0,
+        "y": 1022.1875,
+        "width": 1440,
+        "height": 305.609375,
+        "top": 1022.1875,
+        "right": 1440,
+        "bottom": 1327.796875,
+        "left": 0,
+        "font": "16px"
+      },
+      ".v2-goal-heading": {
+        "x": 144,
+        "y": 1022.1875,
+        "width": 1152,
+        "height": 73.015625,
+        "top": 1022.1875,
+        "right": 1296,
+        "bottom": 1095.203125,
+        "left": 144,
+        "font": "16px"
+      },
+      ".v2-home-goal-list": {
+        "x": 144,
+        "y": 1115.203125,
+        "width": 1152,
+        "height": 212.59375,
+        "top": 1115.203125,
+        "right": 1296,
+        "bottom": 1327.796875,
+        "left": 144,
+        "font": "16px"
+      }
+    }
+  }
+]

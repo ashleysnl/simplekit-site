@@ -1,0 +1,31 @@
+{
+  "baseline": "https://1ef797bf.simplekit-preview.pages.dev",
+  "candidate": "https://7d44ae88.simplekit-preview.pages.dev",
+  "note": "Phase 10 changes test/build/evidence tooling only; identical visual composition expected and verified. Earlier approved-reference comparison remains applicable.",
+  "viewports": {
+    "375": {
+      "before": "docs/v2/phase-10/hosted/before/viewport-375.jpg",
+      "after": "docs/v2/phase-10/hosted/after/viewport-375.jpg",
+      "byteIdentical": true,
+      "sha256": "6c4d9fbeb82c445a55a6462f31c33c5ccef9b0680eccb95cc8f0315fb8f84ca2"
+    },
+    "390": {
+      "before": "docs/v2/phase-10/hosted/before/viewport-390.jpg",
+      "after": "docs/v2/phase-10/hosted/after/viewport-390.jpg",
+      "byteIdentical": true,
+      "sha256": "d15d8d0f35d78a3c2c9bd0db23b39f4f1959e9108d9831a067c88d47169cc768"
+    },
+    "768": {
+      "before": "docs/v2/phase-10/hosted/before/viewport-768.jpg",
+      "after": "docs/v2/phase-10/hosted/after/viewport-768.jpg",
+      "byteIdentical": true,
+      "sha256": "3014826af858d3f103332c0d9548e4dcc3c53542057b16d1058c5c78449cfd95"
+    },
+    "1440": {
+      "before": "docs/v2/phase-10/hosted/before/viewport-1440.jpg",
+      "after": "docs/v2/phase-10/hosted/after/viewport-1440.jpg",
+      "byteIdentical": true,
+      "sha256": "e29f92c2389509dc491385649444460e3288d14cd93e270a427a6ef1a457764d"
+    }
+  }
+}
