@@ -79,6 +79,12 @@ async function keyboard(p, directory=false) {
   await p.keyboard.press('ArrowDown');assert(await p.locator(':focus').isChecked());
   await p.keyboard.press('Escape');assert(await p.locator('[data-onboarding-start]').evaluate(n=>n===document.activeElement));
 }
+async function controlContrast(p) {
+  const colors=await p.locator('.v2-search-bar').evaluate(n=>{const s=getComputedStyle(n);return {border:s.borderTopColor,background:s.backgroundColor};});
+  const luminance=value=>value.match(/[\d.]+/g).slice(0,3).map(v=>Number(v)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+  const a=luminance(colors.border),b=luminance(colors.background),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+  assert(ratio>=3,'Search field boundary must retain 3:1 non-text contrast');return {...colors,ratio};
+}
 (async()=>{
  try{
  for(const engine of requested){
@@ -98,6 +104,7 @@ async function keyboard(p, directory=false) {
     e.layouts.push(await geometry(p,`${route}-landscape`));
    }
    await p.setViewportSize({width:390,height:844});await p.goto(origin+'/',{waitUntil:'networkidle'});await keyboard(p);
+   e.searchBoundaryContrast=await controlContrast(p);
    e.keyboard=true;e.audits.push(await audit(p,'home'));
    await p.locator('[data-v2-menu-toggle]').click();e.audits.push(await audit(p,'menu'));await p.keyboard.press('Escape');
    await p.locator('#tool-search').fill('mortgage');e.audits.push(await audit(p,'search-results'));
@@ -133,6 +140,16 @@ async function keyboard(p, directory=false) {
    const nojs=await context(browser,{javaScriptEnabled:false});const np=await nojs.newPage();
    for(const route of ['/','/tools/']){await np.goto(origin+route,{waitUntil:'networkidle'});e.layouts.push(await geometry(np,`${route}-no-js`));}
    assert.equal(await np.locator('.v2-directory-tool').count(),22);e.noJS=true;await nojs.close();
+   if(engine==='chromium'){
+    const touch=await context(browser,{hasTouch:true,isMobile:true,viewport:{width:390,height:844}}),tp=await touch.newPage();
+    await tp.goto(origin+'/',{waitUntil:'networkidle'});
+    await tp.locator('[data-onboarding-start]').tap();await tp.locator('.v2-onboarding-choice').first().tap();
+    assert(await tp.locator('.v2-onboarding-choice input').first().isChecked());
+    await tp.locator('[data-onboarding-next]').tap();await tp.locator('[data-onboarding-skip]').tap();await tp.locator('[data-onboarding-skip]').tap();
+    assert.equal(await tp.locator('[data-onboarding-tool]').count(),1);
+    await tp.locator('[data-onboarding-close]').tap();assert(await tp.locator('[data-onboarding-flow]').isHidden());
+    e.touchOnboarding=true;await touch.close();
+   }
    // Tool findings are recorded separately; copied tool logic/pins are not edited.
    if(engine==='chromium'){
     const tc=await context(browser),tp=await tc.newPage();const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/tools.json')));

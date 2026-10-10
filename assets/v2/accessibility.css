@@ -1,4 +1,5 @@
 /* Phase 8 changes are confined to authored V2 landing pages. */
+.sk-v2 .v2-search-bar { border-color: var(--v2-control-border); }
 :is(.v2-home, .v2-tools) :where(a, button, input, select, textarea, [tabindex]):focus-visible {
   outline: 3px solid #0759d9;
   outline-offset: 3px;

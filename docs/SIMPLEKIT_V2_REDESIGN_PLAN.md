@@ -295,20 +295,20 @@ Codex guidance: test the mapping table and real user paths. Keep the flow option
 
 Status: `[~]`. Owner authorized Phase 8. Continue in temporary PR #13 targeting `develop-v2`, without merging or touching production. Automated auditing and fixes are in progress; unavailable manual screen-reader/real-device coverage must remain explicitly pending.
 
-- [ ] Audit homepage/directory/menu/search/onboarding for WCAG 2.2 AA: landmarks, headings, labels, focus order/visibility, contrast, target size, announcements and alternatives.
-- [ ] Test keyboard-only use, VoiceOver/Safari and a second documented screen-reader/browser combination; test touch and 200% text enlargement/400% reflow.
-- [ ] Test 320, 375, 390, 768, 1024, 1440 and 1920 widths and landscape; check Chrome, Safari, Firefox and at least one real iPhone/Android browser where available.
-- [ ] Respect reduced motion, avoid hover-only controls, support image/font/JavaScript failures, and check long labels and empty/results/dialog states.
-- [ ] Optimize hero loading, fonts and modules; reserve layout space, avoid blocking scripts and unnecessary dependencies.
+- [~] Audit homepage/directory/menu/search/onboarding for WCAG 2.2 AA: landmarks, headings, labels, focus order/visibility, contrast, target size, announcements and alternatives. Automated axe/keyboard checks pass; human contrast and screen-reader review remain pending.
+- [~] Test keyboard-only use, VoiceOver/Safari and a second documented screen-reader/browser combination; test touch and 200% text enlargement/400% reflow. Automated keyboard, touch emulation, 200% text and 320 CSS px reflow pass; manual AT/native zoom unavailable in Linux.
+- [~] Test 320, 375, 390, 768, 1024, 1440 and 1920 widths and landscape; check Chrome, Safari, Firefox and at least one real iPhone/Android browser where available. Local Chromium passes; hosted multi-engine verification in progress; actual Safari and real phones require manual review.
+- [x] Respect reduced motion, avoid hover-only controls, support image/font/JavaScript failures, and check long labels and empty/results/dialog states. Inline onboarding has no modal/focus trap; all tested states retain readable labels and 44px targets.
+- [x] Optimize hero loading, fonts and modules; reserve layout space, avoid blocking scripts and unnecessary dependencies. Existing responsive/high-priority hero retained; one ordered CSS bundle, early header enhancement, module preloads and metric-preserving WOFF2 improve loading without framework/runtime dependencies.
 
 Acceptance:
 
-- [ ] No critical/serious automated accessibility findings remain in changed UI; manual keyboard and screen-reader paths pass. Document tool-page pre-existing issues separately and fix any v2-introduced regression.
-- [ ] Page reflows at 320 CSS px/400% zoom without two-dimensional scrolling for normal content; controls retain 44 px targets as the project design goal, readable labels and visible focus.
+- [~] No critical/serious automated accessibility findings remain in changed UI; manual keyboard and screen-reader paths pass. Changed UI has zero axe violations; automated keyboard paths pass; inherited tool findings documented separately. Manual assistive-technology review remains pending.
+- [~] Page reflows at 320 CSS px/400% zoom without two-dimensional scrolling for normal content; controls retain 44 px targets as the project design goal, readable labels and visible focus. 320 CSS px, 200% text and text-spacing geometry/glyph tests pass; native toolbar zoom remains a manual check.
 - [ ] Three documented mobile Lighthouse lab runs achieve median performance ≥90, accessibility ≥95, LCP ≤2.5 s and CLS ≤0.1 on the same settings; record device/throttling and limitations. Do not call lab results real-user INP evidence.
 - [ ] Where field data later exists, monitor p75 LCP ≤2.5 s, INP ≤200 ms and CLS ≤0.1; new interactions are responsive in local/preview tests.
 
-Codex guidance: accessibility/performance failures are acceptance blockers, not optional polish. Report device combinations unavailable to automation without pretending they were tested. Evidence link: pending.
+Codex guidance: accessibility/performance failures are acceptance blockers, not optional polish. Report device combinations unavailable to automation without pretending they were tested. Evidence: [Phase 8 audit, lab settings, inherited tool findings and outstanding manual review](v2/phase-08-verification.md). The initial incomplete staging revision failed build checks before deployment; corrected runtime source `3c0e72d5a14710de697b040891664f09ac1cc692` passes [CI 38064389905](https://github.com/ashleysnl/simplekit-site/actions/runs/38064389905). Hosted verification is in progress; do not equate implementation with full manual acceptance.
 
 ## Phase 9 — SEO and content integrity
 

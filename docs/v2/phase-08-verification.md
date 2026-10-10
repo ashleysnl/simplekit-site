@@ -16,6 +16,8 @@ The portable build now publishes one ordered homepage CSS bundle without alterin
 
 The directory gains a skip link, a current-page navigation announcement, readable focus outlines and 44px link targets. New styles are scoped to V2 homepage/directory; reduced-motion handling covers retained lower sections as well. Native radio inputs retain the full labelled row as their touch target. The onboarding flow is now a named section, fixing axe's uncertain ARIA-name finding for a generic div.
 
+The search field now uses the existing control-border token rather than the decorative card border. Its boundary against the white field improves from 1.30:1 to 3.44:1, exceeding the 3:1 non-text contrast target without changing dimensions, text or image composition. The browser suite measures the rendered border/background pair. A Chromium touch-emulation path directly taps onboarding choices/actions; this is not a real-phone or virtual-keyboard test.
+
 WOFF2 containers reduce the three used homepage fonts from 162,480 to 125,520 bytes (22.7%). All four files retain the WOFF fallback and SIL OFL; cmap/advance metrics are verified unchanged. [Font identities and sizes](phase-08/fonts.json). Conversion uses optional fontTools only during asset maintenance; the Node/Linux build does not need Python or a new package dependency.
 
 The preview server now negotiates ordinary Brotli/gzip text transport, matching the CDN's transport rather than inflating local lab payloads. Three final local runs give performance 99/99/99, accessibility 100/100/100, LCP 1959.0/1959.0/1957.0ms and CLS 0. This includes the transport change and must not be presented as the effect of client changes alone. The uncompressed first refinement was 95–96 with CLS 0 and LCP around 2554ms. Hosted before/after runs will use the same CDN and lab settings for a fair transport comparison. [Final local lab settings/results](phase-08/local/lighthouse-summary.json).
@@ -38,3 +40,9 @@ The preview server now negotiates ordinary Brotli/gzip text transport, matching 
 | Field p75 LCP/INP/CLS | Incomplete; no field dataset | Monitor existing approved field sources once available; target ≤2.5s/≤200ms/≤0.1. Do not add collection of financial inputs or onboarding answers. |
 
 Manual VoiceOver/Safari, a second documented real screen-reader/browser combination, native toolbar zoom and real iPhone/Android tests cannot be performed by Playwright on Linux. These acceptance items remain pending. WebKit automation must not be labelled Safari/VoiceOver coverage. No field data is available and no additional analytics is introduced.
+
+## Hosted refinement log
+
+The first Phase 8 staging commit accidentally omitted the two landing templates; CI/build checks failed before deployment. A normal follow-up commit preserved shared history and included them. Runtime `3c0e72d5a14710de697b040891664f09ac1cc692` passes CI/build/SEO and hosted 24-route checks; its preview upload succeeds, but run `38064386344` exposes a timing race in a pre-existing rapid-resize focus test. `setViewportSize` does not await the application's matchMedia handler. The test now waits for the expected navigation disclosure state before making the same strict focus assertions; no assertion or threshold is weakened. Run `38064705068` exercises that correction, followed by the final contrast/touch refinement.
+
+The secure Phase 7 baseline on the same CDN/settings has median performance 94, accessibility 100, LCP 2626.3ms and CLS 0.112511 across three runs; raw settings/results are retained in the hosted artifact. This confirms the cold-navigation issue is intermittent rather than disproving it when a single faster load yields CLS 0. Final Phase 8 hosted measurements remain pending at this checkpoint.
