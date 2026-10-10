@@ -8,7 +8,7 @@ const manifest = require('../data/tools.json');
 const metadata = require('../data/v2-discovery.json');
 const expected = new Map(manifest.tools.map(t => [t.slug, t.canonicalUrl]));
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8001').origin;
-assert(['localhost', '127.0.0.1'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-discovery';
 fs.mkdirSync(output, { recursive: true });
 const errors = [], failed = [], navigation = [], external = new Set();

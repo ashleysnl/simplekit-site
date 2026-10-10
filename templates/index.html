@@ -120,12 +120,12 @@
               <input id="tool-search" type="search" placeholder="What would you like to figure out?" maxlength="160" autocomplete="off" spellcheck="false" aria-describedby="search-help" aria-controls="discovery-results">
               <button class="v2-search-clear" type="button" aria-label="Clear search" data-v2-search-clear hidden><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#close"></use></svg></button>
             </div>
-            <p class="v2-search-help" id="search-help">Type a tool or money question, then tab to a result.</p>
+            <p class="v2-search-help v2-visually-hidden" id="search-help">Type a tool or money question, then tab to a result.</p>
           </div>
           <div class="v2-discovery-panel">
             <div class="v2-discovery-head">
               <h2 class="v2-discovery-heading" id="discovery-heading">Suggested questions</h2>
-              <p class="v2-search-status" role="status" aria-live="polite" aria-atomic="true" data-v2-search-status>4 suggested questions</p>
+              <p class="v2-search-status v2-visually-hidden" role="status" aria-live="polite" aria-atomic="true" data-v2-search-status>4 suggested questions</p>
             </div>
             <ul class="v2-discovery-list" data-v2-questions>{{v2Questions}}</ul>
             <ul class="v2-discovery-list" id="discovery-results" hidden></ul>
@@ -141,30 +141,36 @@
         <ul class="v2-trust">
           <li class="v2-trust-item">
             <span class="v2-icon-disc"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#lock"></use></svg></span>
-            <div><p class="v2-trust-title">No signup</p><p class="v2-trust-detail">Just open and use</p></div>
+            <div><p class="v2-trust-title">No signup</p><p class="v2-trust-detail">Open and use</p></div>
           </li>
           <li class="v2-trust-item">
             <span class="v2-icon-disc" data-accent="teal"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#laptop"></use></svg></span>
-            <div><p class="v2-trust-title">Local calculations</p><p class="v2-trust-detail">Inputs stay in your browser</p></div>
+            <div><p class="v2-trust-title">Local calculations</p><p class="v2-trust-detail">Inputs stay local</p></div>
           </li>
           <li class="v2-trust-item">
             <span class="v2-icon-disc" data-accent="amber"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#maple-leaf"></use></svg></span>
-            <div><p class="v2-trust-title">Built for Canadians</p><p class="v2-trust-detail">Canadian context where relevant</p></div>
+            <div><p class="v2-trust-title">Built for Canadians</p><p class="v2-trust-detail">Canadian context</p></div>
           </li>
         </ul>
-        <p class="v2-trust-note">Search and calculation inputs stay local; some tools save data on your device. The site uses Google Analytics to measure visits and interactions. <a href="privacy/">Privacy details</a>. Educational estimates, with Canadian rules where applicable. <a href="methodology/">Methodology &amp; sources</a>.</p>
+
       </div>
     </section>
 
     <section class="sk-v2 v2-section v2-home-goals" aria-labelledby="home-goals-title">
       <div class="v2-container">
         <div class="v2-goal-heading">
-          <div><p class="v2-eyebrow">Explore by goal</p><h2 id="home-goals-title">What are you planning?</h2></div>
+          <div class="v2-goal-title-wrap"><p class="v2-eyebrow">Explore by goal</p><h2 id="home-goals-title">What are you planning?</h2></div>
           <a class="v2-goal-all" href="tools/">View all {{toolCount}} tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
         </div>
         <ul class="v2-goals v2-home-goal-list">{{v2GoalCards}}</ul>
       </div>
     </section>
+
+    <aside class="sk-v2 v2-home-disclosure" aria-label="Privacy and planning notes">
+      <div class="v2-container">
+        <div class="v2-trust-note"><p>Inputs stay local; some tools save on-device. Google Analytics measures usage. Educational estimates; Canadian rules vary.</p><p class="v2-trust-links"><a href="privacy/">Privacy details</a><a href="methodology/">Methodology &amp; sources</a></p></div>
+      </div>
+    </aside>
 
     <div class="page v2-legacy-page">
     <section class="content">

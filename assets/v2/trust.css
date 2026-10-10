@@ -13,3 +13,29 @@
   .sk-v2 .v2-trust-item + .v2-trust-item { border-top: 0; border-inline-start: 1px solid var(--v2-border); padding-inline-start: 1.25rem; }
 }
 @media (forced-colors: active) { .sk-v2 .v2-trust-item + .v2-trust-item { border-color: CanvasText; } }
+
+@media (max-width: 47.999rem) {
+  .sk-v2.v2-home-trust { padding-block: 0; }
+  .sk-v2 .v2-trust-note { margin-top: .25rem; font-size: .8125rem; line-height: 1.5; }
+  .sk-v2 .v2-trust-item { padding-block: .5rem; gap: .5rem; }
+}
+/* A rem breakpoint lets enlarged text return to stacked, readable indicators. */
+@media (min-width: 23.4375rem) and (max-width: 47.999rem) {
+  .sk-v2.v2-home-trust .v2-trust { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+  .sk-v2 .v2-trust-item { align-items: flex-start; gap: .25rem; }
+  .sk-v2 .v2-trust-item + .v2-trust-item { border-top: 0; }
+  .sk-v2 .v2-trust-item .v2-icon-disc { width: 1.5rem; height: 1.5rem; }
+  .sk-v2 .v2-trust-item .v2-icon { width: 1.125rem; height: 1.125rem; }
+  .sk-v2 .v2-trust-title { font-size: .875rem; }
+  .sk-v2 .v2-trust-detail { font-size: .8125rem; line-height: 1.4; }
+}
+
+.sk-v2 .v2-trust-links { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+@media (max-width: 47.999rem) {
+  .sk-v2 .v2-trust-note { max-width: 40rem; }
+}
+
+@media (max-width: 23.4rem) {
+  .sk-v2 .v2-trust-item .v2-icon-disc { width: 1.5rem; height: 1.5rem; }
+  .sk-v2 .v2-trust-item .v2-icon { width: 1.125rem; height: 1.125rem; }
+}

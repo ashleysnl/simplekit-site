@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8001').origin;
-assert(['127.0.0.1','localhost'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-trust';
 fs.mkdirSync(output,{recursive:true});
 const titles = ['No signup','Local calculations','Built for Canadians'];
@@ -22,7 +22,7 @@ async function readable(p,state) {
     const rect=n=>n.getBoundingClientRect().toJSON();
     return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,section:rect(section),
       items:[...section.querySelectorAll('li')].map(n=>({rect:rect(n),title:rect(n.querySelector('.v2-trust-title')),detail:rect(n.querySelector('.v2-trust-detail')),icon:rect(n.querySelector('.v2-icon-disc')),overflow:n.scrollWidth>n.clientWidth+1})),
-      links:[...section.querySelectorAll('a')].map(n=>({href:n.href,rect:rect(n)}))};
+      links:[...document.querySelectorAll('.v2-trust-note a')].map(n=>({href:n.href,rect:rect(n)}))};
   });
   assert(result.scrollWidth<=result.width,`${state}: horizontal overflow`);
   for(const item of result.items) {

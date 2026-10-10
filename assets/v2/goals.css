@@ -38,3 +38,26 @@
   .sk-v2 .v2-directory-nav a, .sk-v2 .v2-directory-tool { border-color: ButtonText; }
   .sk-v2 .v2-goal-description, .sk-v2 .v2-directory-detail { color: CanvasText; }
 }
+
+/* Issue #12: align the directory action with the eyebrow on narrow phones. */
+@media (max-width: 47.999rem) {
+  .sk-v2 .v2-goal-heading { display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; align-items: center; margin-bottom: .875rem; }
+  .sk-v2 .v2-goal-title-wrap { display: contents; }
+  .sk-v2 .v2-goal-heading .v2-eyebrow { grid-column: 1; grid-row: 1; font-size: .75rem; }
+  .sk-v2 .v2-goal-all { grid-column: 2; grid-row: 1; font-size: .8125rem; gap: .25rem; }
+  .sk-v2 .v2-goal-all .v2-icon { width: 1rem; height: 1rem; }
+  .sk-v2 .v2-goal-heading h2 { grid-column: 1 / -1; grid-row: 2; margin-top: 0; }
+  .sk-v2 .v2-home-goal-list { gap: .625rem; }
+  .sk-v2 .v2-home-goal-list .v2-goal { padding: .75rem .5rem; gap: .375rem; border-radius: 1rem; }
+  .sk-v2 .v2-home-goal-list .v2-icon-disc { width: 1.75rem; height: 1.75rem; }
+  .sk-v2 .v2-home-goal-list .v2-icon { width: 1.25rem; height: 1.25rem; }
+  .sk-v2 .v2-goal-chevron .v2-icon { width: .625rem; height: .625rem; }
+  .sk-v2 .v2-goal-description { line-height: 1.4; }
+}
+@media (min-width: 23.4375rem) and (max-width: 47.999rem) {
+  .sk-v2 .v2-home-goal-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 23.4rem) {
+  .sk-v2 .v2-goal-heading { display: flex; }
+  .sk-v2 .v2-goal-title-wrap { display: block; }
+}

@@ -44,3 +44,24 @@ body.v2-home { margin: 0; background: #fcfcfb; }
   .sk-v2 .v2-menu-toggle { border-color: ButtonText; }
   .sk-v2 .v2-wordmark, .sk-v2 .v2-wordmark span { color: LinkText; }
 }
+
+/* Issue #12: compact mobile composition; desktop layout keeps its proportions. */
+@media (max-width: 47.999rem) {
+  .sk-v2 .v2-header { padding-block: .875rem; gap: .75rem; }
+  .sk-v2 .v2-tagline { font-size: .8125rem; margin-top: .25rem; }
+  .sk-v2 .v2-menu-toggle { width: 2.75rem; height: 2.75rem; }
+  .sk-v2 .v2-hero-content { padding-block: 1rem 1.5rem; min-height: 0; }
+  .sk-v2 .v2-hero-copy h1 { margin-top: .5rem; font-size: clamp(2rem, 8.5vw, 2.5rem); max-width: 20ch; letter-spacing: -.035em; }
+  .sk-v2 .v2-hero-body { margin-top: .875rem; max-width: 36ch; font-size: 1.0625rem; line-height: 1.5; }
+  .sk-v2 .v2-discovery-slot { margin-top: 1.25rem; }
+  .sk-v2 .v2-coastal-picture { height: 28rem; max-height: 28rem; mask-image: linear-gradient(#000 65%, transparent); }
+  .sk-v2 .v2-coastal-picture img { object-position: 70% 75%; }
+  .sk-v2.v2-home-hero::before { background: linear-gradient(90deg, rgb(252 252 251 / .96) 0%, rgb(252 252 251 / .82) 45%, rgb(252 252 251 / .12) 100%), linear-gradient(0deg, var(--v2-canvas) 0%, transparent 50%); }
+  .sk-v2.v2-home-goals { padding-block: 1.5rem 1rem; }
+}
+
+/* Existing lower sections must also reflow under 200% text enlargement. */
+.v2-home .v2-legacy-page .content, .v2-home .v2-legacy-page .section { min-width: 0; }
+.v2-home .v2-legacy-page { overflow-wrap: anywhere; }
+
+.sk-v2.v2-home-disclosure { padding-block: 0 1.5rem; }

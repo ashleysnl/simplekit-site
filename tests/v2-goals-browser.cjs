@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8002').origin;
-assert(['localhost', '127.0.0.1'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-goals';
 fs.mkdirSync(output, { recursive: true });
 const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/tools.json')));
@@ -70,7 +70,7 @@ async function checkDirectory(p) {
       const c = await context(browser, { viewport: { width, height: 1200 } }), p = await c.newPage();
       await p.goto(origin, { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready);
       const geometry = await checkCards(p, `width-${width}`);
-      assert.equal(geometry.columns, width < 390 ? 1 : 2);
+      assert.equal(geometry.columns, width < 375 ? 1 : 2);
       // Ordinary card copy should wrap between words, never split "Retirement"
       // or "Understand" just to squeeze in the reference's two-column layout.
       const splitWords = await p.locator('.v2-goal-copy span').evaluateAll(nodes => nodes.flatMap(n => {

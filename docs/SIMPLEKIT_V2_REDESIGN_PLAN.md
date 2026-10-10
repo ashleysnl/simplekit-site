@@ -240,6 +240,22 @@ Acceptance:
 
 Codex guidance: modify authored directory templates alongside the homepage if filtering/anchors need support. Keep categories as discovery metadata tied to manifest IDs, not a competing route list. Evidence: [Phase 5 verification](v2/phase-05-verification.md). Native fragment links reach four populated goal sections; all 22 canonical tools appear once across seven primary/secondary groups. Six widths, keyboard/focus/touch/direct/reload/Back/Forward/no-JS/fallback/enlargement checks pass. 27 repository checks, 22 exact calculator fixtures, earlier header/search/trust regressions, build/SEO/output/preservation and repeat-build checks pass. Implementation/evidence commit `c7dd255` is pushed to `develop-v2`; [hosted validation](https://github.com/ashleysnl/simplekit-site/actions/runs/38005820544) passes. Main and production remain unchanged. Owner-requested [Phase 5 demo](https://e9070fe2.simplekit-preview.pages.dev) uploaded through [run 38006282182](https://github.com/ashleysnl/simplekit-site/actions/runs/38006282182); build/upload and artifact verification pass. Live automated checks return 403 here, so deployed interactions are not claimed passing. This early snapshot does not complete Phase 11. Earlier manual accessibility/toolbar-zoom limitations remain for Phase 8.
 
+## Issue #12 — Premium mobile visual fidelity
+
+Status: `[~]`. Focused composition pass after Phase 5, before later homepage phases. Approved reference remains `docs/design-reference/simplekit-v2-target.png`.
+
+- [x] Locate the approved reference and measure the existing 375/390px composition before edits.
+- [x] Capture matching local baseline screenshots at 375/390/768/1440px; document the blocked secure hosted-browser attempt separately.
+- [x] Refine header/hero spacing, coastline visibility, typography, integrated search/questions, trust density and two-column mobile goals through four screenshot reviews.
+- [x] Verify 44px controls, search/questions/menu, responsive reflow, keyboard/AX semantics and all 22 calculator fixtures.
+- [x] Verify 28 repository tests, portable build, source pins, SEO/output and preservation guard.
+- [ ] Deploy the verified candidate to isolated Cloudflare preview and record the exact source/artifact.
+- [ ] Capture secure live hosted screenshots and verify hosted interactions (environment blocks navigation; loopback evidence is identified explicitly).
+- [ ] Open the temporary feature PR targeting develop-v2 and update issue #12 with verified results.
+- [ ] Obtain owner visual approval; no merge or production deployment is authorized.
+
+Evidence: [mobile comparison and iteration log](v2/mobile-fidelity-issue-12/COMPARISON.md). This task explicitly requires temporary `feature/simplekit-v2-mobile-fidelity` and a review PR into `develop-v2`; keep it unmerged until explicit approval, then return ongoing work to the authoritative development branch. Existing phase completion and remaining manual accessibility checks are preserved. The target's popular-tool rows and guided onboarding remain Phases 6/7.
+
 ## Phase 6 — Popular calculators
 
 Status: `[ ]`. Depends on Phase 5.

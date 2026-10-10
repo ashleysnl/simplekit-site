@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8001').origin;
-assert(['127.0.0.1', 'localhost'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-header-hero';
 fs.mkdirSync(output, { recursive: true });
 const errors = [], failed = [], external = new Set();
