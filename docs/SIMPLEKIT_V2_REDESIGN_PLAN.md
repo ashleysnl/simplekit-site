@@ -375,20 +375,22 @@ Evidence: [Phase 11 verification](v2/phase-11-verification.md), [155-capture gal
 
 ## Phase 12 — Unified V2 design system and shared site shell
 
-Status: `[~]`. System v1 and review references implemented; hosted cross-engine validation pending.
+Status: `[x]`. System v1 and review references verified; hosted three-engine run 38094002072 passes.
 
-- [ ] Extend Phase 1 tokens into documented, reusable site-wide typography, responsive spacing, surfaces, elevations, colours, icons and states, with a versioned migration contract.
-- [ ] Define shared header/menu, breadcrumbs, footer, article navigation, related-content blocks, disclosures, alerts, CTA links and search/navigation conventions.
-- [ ] Define calculator UI primitives: labelled currency/percent/number inputs, selects, toggles, sliders, inline help, validation, results/KPIs, charts, tables, accordions, export actions and empty/loading states.
-- [ ] Create accessible page-family visual specifications for homepage, directory, editorial content and interactive calculators; use the saved target PNG for brand fidelity and documented functional deviations.
-- [ ] Plan shared Core and upstream calculator changes without unreviewed formula or source-pin changes.
+- [x] Extend Phase 1 tokens into documented, reusable site-wide typography, responsive spacing, surfaces, elevations, colours, icons and states, with a versioned migration contract.
+- [x] Define shared header/menu, breadcrumbs, footer, article navigation, related-content blocks, disclosures, alerts, CTA links and search/navigation conventions.
+- [x] Define calculator UI primitives: labelled currency/percent/number inputs, selects, toggles, sliders, inline help, validation, results/KPIs, charts, tables, accordions, export actions and empty/loading states.
+- [x] Create accessible page-family visual specifications for homepage, directory, editorial content and interactive calculators; use the saved target PNG for brand fidelity and documented functional deviations.
+- [x] Plan shared Core and upstream calculator changes without unreviewed formula or source-pin changes.
 
 Acceptance:
-- [ ] Components satisfy WCAG-oriented keyboard/focus/contrast/reflow expectations and mobile tap-target requirements; manual assistive-tech checks remain explicit.
-- [ ] Representative desktop/mobile design references exist for editorial and calculator page families.
-- [ ] No legacy styling regressions or numerical behavior changes; evidence in `docs/v2/phase-12-verification.md`.
+- [x] Components satisfy WCAG-oriented keyboard/focus/contrast/reflow expectations and mobile tap-target requirements; manual assistive-tech checks remain explicit.
+- [x] Representative desktop/mobile design references exist for editorial and calculator page families.
+- [x] No legacy styling regressions or numerical behavior changes; evidence in `docs/v2/phase-12-verification.md`.
 
-Evidence in progress: [Phase 12 verification](v2/phase-12-verification.md), [System v1 contract](v2/phase-12/DESIGN_SYSTEM.md), [page-family references](v2/phase-12/PAGE_FAMILIES.md) and [Core adoption plan](v2/phase-12/CORE_MIGRATION.md). No legacy page or numerical behavior is migrated in this foundation phase.
+Verified evidence: [Phase 12 verification](v2/phase-12-verification.md), [System v1 contract](v2/phase-12/DESIGN_SYSTEM.md), [page-family references](v2/phase-12/PAGE_FAMILIES.md) and [Core adoption plan](v2/phase-12/CORE_MIGRATION.md). No legacy page or numerical behavior is migrated in this foundation phase.
+
+[90 responsive reference screenshots](v2/phase-12/GALLERY.md): 99 browser layouts, 33 clean axe states and 12 legacy isolation comparisons. 38 tests, all 22 calculator fixtures, state/export checks, build and SEO pass. Manual AT/device/zoom review and owner acceptance remain explicit; Phases 13–18 are incomplete.
 
 ## Phase 13 — Articles, Learn hub and supporting pages redesign
 
@@ -534,7 +536,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 9 SEO/content integrity | `[x]` | [Phase 9 verification](v2/phase-09-verification.md); local/hosted metadata, 53 indexed URLs, 66 routes, 99 assets, no-JS and V2 share-image checks pass in run 38069894661. Inherited source findings documented; Phase 8 manual checks remain pending. |
 | 10 Interim homepage/discovery regression | `[x]` | [Phase 10 verification](v2/phase-10-verification.md); clean/repeated builds, all 22 fixtures, import/export/reload, hosted cross-engine/SEO/performance and preserved candidate pass in run 38072049423. Manual release gates remain. |
 | 11 Site-wide inventory | `[x]` | [Inventory/evidence](v2/phase-11-verification.md): 67 pages, 23 sources, 155 captures; hosted run 38088742754 passes. Phase 12 is next; migrations and manual review remain. |
-| 12 Unified design system | `[~]` | [System/reference implementation](v2/phase-12-verification.md); hosted three-engine and preservation validation pending. |
+| 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[ ]` | Pending Phase 12; migrate all editorial and informational pages. |
 | 14 Calculator pilots | `[ ]` | Pending Phase 13; Retirement and Mortgage pilots with owner review. |
 | 15 Remaining calculators | `[ ]` | Pending Phase 14; complete all 22 tool migrations. |

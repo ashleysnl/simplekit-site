@@ -1,0 +1,75 @@
+{
+  "method": "WCAG sRGB relative luminance. Declared component pairs; not human contrast certification.",
+  "pairs": [
+    {
+      "purpose": "Body",
+      "foreground": "#101b46",
+      "background": "#fcfcfb",
+      "ratio": 16.1423,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Secondary",
+      "foreground": "#52627c",
+      "background": "#ffffff",
+      "ratio": 6.1821,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Primary action",
+      "foreground": "#ffffff",
+      "background": "#0759d9",
+      "ratio": 6.1048,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Hover action",
+      "foreground": "#ffffff",
+      "background": "#0349b6",
+      "ratio": 7.9776,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Error text",
+      "foreground": "#a52229",
+      "background": "#ffffff",
+      "ratio": 7.3409,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Warning text",
+      "foreground": "#8d4b08",
+      "background": "#fff5e6",
+      "ratio": 6.1912,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Success text",
+      "foreground": "#006f62",
+      "background": "#eaf8f2",
+      "ratio": 5.5672,
+      "minimum": 4.5
+    },
+    {
+      "purpose": "Control border",
+      "foreground": "#7e8ba1",
+      "background": "#ffffff",
+      "ratio": 3.4456,
+      "minimum": 3
+    },
+    {
+      "purpose": "Focus",
+      "foreground": "#0759d9",
+      "background": "#fcfcfb",
+      "ratio": 5.9467,
+      "minimum": 3
+    },
+    {
+      "purpose": "Chart line",
+      "foreground": "#0759d9",
+      "background": "#edf5ff",
+      "ratio": 5.5541,
+      "minimum": 3
+    }
+  ]
+}

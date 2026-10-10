@@ -20,6 +20,7 @@ All buttons, navigation/related links, native inputs/selects, range controls and
 ## Shared shell and content components
 
 - `shellHeader(active, prefix)`: named home link, normal Home/Tools/Learn/About/Support links, current-page state, skip link and a native mobile disclosure button. Without JS, navigation remains visible. Keyboard activation, Escape/focus return, selection close and responsive focus recovery are required. This is ordinary navigation, not an application menu or modal; it does not trap focus or lock scrolling.
+- Initialise the disclosure immediately after its header markup, as in the references, so desktop/mobile visibility is established before rendering the remaining page. During adoption, measure layout shifts on the real migrated page; this foundation does not establish a site-wide CLS result.
 - `breadcrumbs(items)`: labelled navigation/list, final current-page text, wrapped separators and normal links. Match the page's actual hierarchy; do not invent a parent URL.
 - `shellFooter()`: concise brand, canonical Tools/Learn/Methodology/Privacy/Support routes and qualified financial-input/analytics disclosure. Preserve any route-specific sources or disclosures when integrating.
 - `.v2s-section-nav`: ordinary article anchors before article content on mobile and alongside on desktop, retaining useful DOM/keyboard order. Related content uses the canonical manifest through `relatedContent(items)`; do not create a second tool registry.
