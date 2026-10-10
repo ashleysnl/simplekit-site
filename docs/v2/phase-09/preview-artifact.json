@@ -1,0 +1,13 @@
+{
+  "source_commit": "ad7018f39a15348e16007ea2585968e1017eccbc",
+  "workflow_run": 38069894661,
+  "artifact_id": 11676540790,
+  "sha256": "589ee55466610d15a938051ec8b9f9ed661cca580711dbdbb46c7b713f56eca8",
+  "files": 335,
+  "ordinary_files_byte_identical": 333,
+  "intentional_preview_changes": [
+    "CNAME removed",
+    "robots.txt Disallow all",
+    "_headers X-Robots-Tag noindex, nofollow"
+  ]
+}

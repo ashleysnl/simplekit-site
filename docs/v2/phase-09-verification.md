@@ -1,6 +1,6 @@
 # Phase 9 — SEO and content integrity
 
-Status: `[~]` while final hosted validation runs. Owner instructed Phase 9 on 2026-10-10; continue the existing temporary PR #13 targeting `develop-v2`, without merging or deploying to production. Phase 8's outstanding manual accessibility/device checks remain unchanged.
+Status: `[x]`. Implementation and local/hosted acceptance checks pass. Owner instructed Phase 9 on 2026-10-10; continue the existing temporary PR #13 targeting `develop-v2`, without merging or deploying to production. Phase 8's outstanding manual accessibility/device checks remain unchanged.
 
 ## Audit and changes
 
@@ -16,7 +16,7 @@ Only the build output replaces `/og-image.png` and supplies `/social-preview.png
 
 [Full SEO inventory](phase-09/seo-inventory.json) covers all 53 indexed pages, 67 HTML files, 919 ordinary same-origin link references (the earlier 1,015 count also included same-page fragment links), 99 distinct HTML-referenced resource URLs, and 13 compatibility pages. No missing internal page destinations or referenced assets remain. Main/home/directory discovery content stays crawlable without JavaScript: four suggested questions, four goal links, five Featured tools and the full-directory fallback; all 22 directory tools have meaningful ordinary anchors.
 
-Manifest/sitemap membership remains exactly 53 production URLs, with no query/filter duplicates. All 22 calculator paths, 16 Learn guides, seven retirement landing pages, support/about/privacy/methodology pages and 13 noindex/follow compatibility pages remain intact. Production robots continues `Allow: /` with the production sitemap. Only isolated preview artifacts remove CNAME and use disallow-all robots plus noindex/nofollow headers.
+Manifest/sitemap membership remains exactly 53 production URLs, with no query/filter duplicates. All 22 calculator paths, 17 Learn guides, seven retirement landing pages, support/about/privacy/methodology pages and 13 noindex/follow compatibility pages remain intact. Production robots continues `Allow: /` with the production sitemap. Only isolated preview artifacts remove CNAME and use disallow-all robots plus noindex/nofollow headers.
 
 The authoritative legacy redirect report has 49 existing mappings with 23 distinct production destinations. All destinations remain in the canonical inventory and return 200 when mapped to the generated local/preview origin. No edge redirect, DNS or production configuration is changed. This verifies destination preservation, not a fresh live production redirect status/check; the prior 2026-10-02 report remains historical evidence.
 
@@ -36,4 +36,10 @@ The separate SEO improvement plan's production indexing, Search Console, organic
 
 ## Hosted verification
 
-Pending final isolated upload and secure browser checks. Source SHA, workflow results, artifact checksums, exact preview URL and hosted SEO results will be recorded before marking Phase 9 complete.
+Runtime `ad7018f39a15348e16007ea2585968e1017eccbc` passes [repository CI](https://github.com/ashleysnl/simplekit-site/actions/runs/38069897288) and [full hosted validation](https://github.com/ashleysnl/simplekit-site/actions/runs/38069894661). [Verified isolated preview](https://1ef797bf.simplekit-preview.pages.dev). [Hosted SEO/HTTP/no-JS report](phase-09/hosted/phase-09/seo-browser.json) passes all 66 indexed/compatibility routes, 99 resources, 53 sitemap URLs, four suggested questions, four goals, five Featured links, all 22 directory anchors and 23 legacy redirect destinations. Zero new V2 page errors or failed same-origin responses. Strict PNG validation and byte equality pass at both retained share aliases; [browser rendering](phase-09/hosted/phase-09/share-image-browser.png) is also captured.
+
+All seven earlier interaction suites and all 22 exact calculator fixtures pass again. Chromium 141, Firefox 142 and WebKit 26 pass 78 responsive/fallback layouts and 24 axe states. Three mobile Lighthouse runs give performance 99/99/98, accessibility 100/100/100, LCP 1984.7/2130.7/2291.4ms, CLS 0 each: median 99/100, LCP 2130.7ms, CLS 0. [Settings/results](phase-09/hosted/phase-08/lighthouse/lighthouse-summary.json); these remain simulated lab results rather than field metrics/manual AT acceptance. No additional runtime dependency or analytics collection is introduced.
+
+[Site artifact verification](phase-09/preview-artifact.json): 335 files, 333 ordinary files byte-identical to the local build; SHA-256 `589ee55466610d15a938051ec8b9f9ed661cca580711dbdbb46c7b713f56eca8`. Only preview CNAME removal, disallow robots and noindex headers differ. [Browser artifact](phase-09/browser-artifact.json): SHA-256 `cb34c584ad162cfab8c9bc5d38191e657a9eca8151f52fe8670cc9272207ff73`, including full Lighthouse JSON/HTML reports. Compact reports, logs and screenshots are committed here.
+
+[Cloudflare deployment identity](phase-09/deployment.json) confirms source SHA above, environment `preview`, production branch `__production_disabled__`, only the dedicated pages.dev domain and no canonical production deployment. Main remains `ca7826db75cb4353488786aab80857b3a71c1be1`; `develop-v2` remains `6e3acc72506b40ec11c1bd0015c6eee2ca473213`. Production pages/assets, calculator/Core pins and copied files, production deployment, DNS and existing edge redirects are unchanged. The final tracking/evidence commit changes documentation only; the preview identifies the verified runtime revision above. PR #13 remains unmerged pending explicit approval.

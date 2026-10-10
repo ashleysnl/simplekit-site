@@ -312,20 +312,20 @@ Codex guidance: accessibility/performance failures are acceptance blockers, not 
 
 ## Phase 9 — SEO and content integrity
 
-Status: `[~]`. Owner explicitly instructed Phase 9 on 2026-10-10. Local SEO/content/route/no-JS checks pass; final hosted validation in progress in the existing unmerged PR #13. Phase 8 manual acceptance remains pending and is not waived.
+Status: `[x]`. Owner explicitly instructed Phase 9 on 2026-10-10. Local and hosted SEO/content/route/no-JS checks pass in the existing unmerged PR #13. The owner-selected V2 share image and retained metadata are validated. Phase 8 manual acceptance remains pending and is not waived.
 
-- [ ] Retain semantic copy, a single H1, meaningful section headings, useful descriptions and crawlable ordinary links to directory/tools/guides.
-- [ ] Verify titles/descriptions, production canonicals, Open Graph/Twitter metadata, approved share image and valid structured data; keep existing verification tags and maintainer attribution.
-- [ ] Preserve all canonical paths, sitemap/robots contracts and existing compatibility/noindex rules. Do not introduce query/filter duplicates into the sitemap.
-- [ ] Validate metadata against the finished design without inventing ratings, reviews or a search schema endpoint that does not exist.
+- [x] Retain semantic copy, a single H1, meaningful section headings, useful descriptions and crawlable ordinary links to directory/tools/guides.
+- [x] Verify titles/descriptions, production canonicals, Open Graph/Twitter metadata, approved share image and valid structured data; keep existing verification tags and maintainer attribution.
+- [x] Preserve all canonical paths, sitemap/robots contracts and existing compatibility/noindex rules. Do not introduce query/filter duplicates into the sitemap.
+- [x] Validate metadata against the finished design without inventing ratings, reviews or a search schema endpoint that does not exist.
 
 Acceptance:
 
-- [ ] `seo:validate` and `output:validate` pass; each indexed page has one correct production canonical, matching Open Graph URL and preserved manifest sitemap membership (baseline currently 53 URLs).
-- [ ] All 22 calculator paths, existing guides, compatibility pages and documented legacy redirect destinations remain intact; no new broken internal links or assets.
-- [ ] Main discovery links are present with JavaScript disabled; preview indexing protections remain isolated to preview artifacts and never replace production robots policy.
+- [x] `seo:validate` and `output:validate` pass; each indexed page has one correct production canonical, matching Open Graph URL and preserved manifest sitemap membership (baseline currently 53 URLs).
+- [x] All 22 calculator paths, existing guides, compatibility pages and documented legacy redirect destinations remain intact; no new broken internal links or assets.
+- [x] Main discovery links are present with JavaScript disabled; preview indexing protections remain isolated to preview artifacts and never replace production robots policy.
 
-Codex guidance: use the existing SEO generators and route authority. Review [SEO improvement plan](../SEO-IMPROVEMENT-PLAN.md) for context; v2 does not automatically complete its separate checklist. Evidence: [Phase 9 metadata/content audit, owner-selected V2 share image, inherited findings and validation](v2/phase-09-verification.md). Source-pinned optional social gaps and stale retirement guide fragments remain documented upstream work; do not patch copied calculators or change pins to hide them.
+Codex guidance: use the existing SEO generators and route authority. Review [SEO improvement plan](../SEO-IMPROVEMENT-PLAN.md) for context; v2 does not automatically complete its separate checklist. Evidence: [Phase 9 metadata/content audit, owner-selected V2 share image, inherited findings and validation](v2/phase-09-verification.md). Runtime `ad7018f39a15348e16007ea2585968e1017eccbc` passes [CI 38069897288](https://github.com/ashleysnl/simplekit-site/actions/runs/38069897288) and [hosted run 38069894661](https://github.com/ashleysnl/simplekit-site/actions/runs/38069894661): 36 tests, 53 indexed URLs, 66 indexed/compatibility routes, 99 assets, no-JS discovery and 23 documented redirect destinations. [Verified preview](https://1ef797bf.simplekit-preview.pages.dev). All prior interaction/calculator and three-engine checks pass; mobile Lighthouse median 99/100, LCP 2.131s, CLS 0. Source-pinned optional social gaps and 42 stale retirement guide fragments remain documented upstream work; no new V2 broken link/asset is introduced. Do not patch copied calculators or change pins to hide inherited findings. Main, production and DNS unchanged; final visual/release approval remains separate.
 
 ## Phase 10 — Full regression and release candidate
 
@@ -427,7 +427,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 6 Popular calculators | `[x]` | Curated “Featured calculators” rows in PR #13. [Phase 6 verification](v2/phase-06-verification.md); all local/hosted checks pass in run 38013211800. |
 | 7 Guided onboarding | `[~]` | Implementation and local/hosted automation verified; manual screen-reader acceptance remains Phase 8. Same unmerged PR #13. |
 | 8 Accessibility/responsiveness/performance | `[~]` | Implementation and local/hosted automation pass in run 38067758043; three engines, 78 layouts, 24 axe states, mobile Lighthouse median 99/100, LCP 2.127s, CLS 0. Same unmerged PR #13; manual devices/assistive technology/native zoom/human review pending. |
-| 9 SEO/content integrity | `[~]` | Owner instructed Phase 9; local metadata, route, resource, no-JS and share-image checks pass. Final hosted validation in progress; Phase 8 manual checks remain pending. |
+| 9 SEO/content integrity | `[x]` | [Phase 9 verification](v2/phase-09-verification.md); local/hosted metadata, 53 indexed URLs, 66 routes, 99 assets, no-JS and V2 share-image checks pass in run 38069894661. Inherited source findings documented; Phase 8 manual checks remain pending. |
 | 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
 | 11 Cloudflare preview/review | `[ ]` | Pending Phase 10. |
 | 12 Production rollout | `[ ]` | Pending Phase 11 and explicit release approval. |
