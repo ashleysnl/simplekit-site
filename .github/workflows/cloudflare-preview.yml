@@ -32,6 +32,28 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm run sources:fetch && npm test && npm run build && npm run seo:validate && npm run output:validate
+      - name: Verify preservation and deterministic release candidate
+        id: candidate
+        run: |
+          node scripts/v2-baseline-inventory.mjs
+          node scripts/v2-release-artifact.mjs --record "$RUNNER_TEMP/release-inventory.json"
+          npm run build
+          node scripts/v2-release-artifact.mjs --compare "$RUNNER_TEMP/release-inventory.json"
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -cf "$RUNNER_TEMP/release-candidate.tar" -C dist .
+          gzip -n "$RUNNER_TEMP/release-candidate.tar"
+          sha256sum "$RUNNER_TEMP/release-candidate.tar.gz" > "$RUNNER_TEMP/release-candidate.sha256"
+          git rev-parse HEAD > "$RUNNER_TEMP/release-source.txt"
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: release-candidate-${{ steps.candidate.outputs.commit }}
+          path: |
+            ${{ runner.temp }}/release-candidate.tar.gz
+            ${{ runner.temp }}/release-candidate.sha256
+            ${{ runner.temp }}/release-inventory.json
+            ${{ runner.temp }}/release-source.txt
+          if-no-files-found: error
+          retention-days: 30
       - name: Isolate preview indexing and hostname
         run: |
           rm -f dist/CNAME
@@ -125,7 +147,7 @@ jobs:
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
           node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
-          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline; do
+          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline v2-release; do
             export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/regression/$suite"
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
             node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
