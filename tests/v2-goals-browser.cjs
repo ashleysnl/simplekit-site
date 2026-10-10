@@ -47,6 +47,12 @@ async function checkCards(p, state) {
     columns: getComputedStyle(document.querySelector('.v2-home-goal-list')).gridTemplateColumns.split(' ').length }));
   assert(geometry.scrollWidth <= geometry.width, `${state}: horizontal overflow`);
   assert.equal(await p.locator('.v2-home-goals .v2-goal-all').innerText(), 'View all 22 tools');
+  // Cover retained homepage/footer links as well as the new goal controls.
+  const smallTargets = await p.locator('a:not(.v2-skip-link), button, input').evaluateAll(nodes => nodes.filter(node => {
+    const rect = node.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && (rect.width < 44 || rect.height < 44);
+  }).map(node => ({ text: node.textContent.trim(), label: node.getAttribute('aria-label') })));
+  assert.deepEqual(smallTargets, [], `${state}: homepage touch target below 44px`);
   layouts.push({ state, ...geometry, cards });
   return geometry;
 }

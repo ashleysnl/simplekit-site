@@ -50,3 +50,8 @@ NODE_PATH=/tmp/simplekit-v2-browser/node_modules CHROMIUM_PATH=/usr/bin/chromium
 ```
 
 Review four viewport/full-page captures and geometry against the approved target, list the largest remaining discrepancies, refine and repeat. Hosted checks require explicit `SIMPLEKIT_HOSTED_PREVIEW=1` and HTTPS under the dedicated `simplekit-preview.pages.dev` project. Production/lookalike hosts are rejected. The manual preview workflow captures previous/candidate deployments from GitHub's runner, checks 24 hosted routes/noindex/canonicals/robots/CNAME isolation, and runs header/search/trust/goals/all-22-fixture browser suites. Browser dependencies remain temporary and test-only. Live results will be recorded after that run completes.
+
+
+Final touch-area check: expanded the wordmark hit area without changing its visual position; retained lower-page/footer links now have ≥44px width and height. The goal acceptance suite checks every visible homepage link/button/input, including no-JS and enlarged text. All cases pass.
+
+Hosted first run: [38008821953](https://github.com/ashleysnl/simplekit-site/actions/runs/38008821953) securely captured the actual previous deployment at all four widths and uploaded candidate `dcc21ac` to `https://ace887ae.simplekit-preview.pages.dev`. Post-upload verification stopped on an overly strict HTML-format assertion for existing self-closing canonical tags. URLs were unchanged; the corrected assertion independently passes on all 22 local calculator tags. Final hosted validation is rerun with the touch-area refinement.

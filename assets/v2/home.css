@@ -65,3 +65,7 @@ body.v2-home { margin: 0; background: #fcfcfb; }
 .v2-home .v2-legacy-page { overflow-wrap: anywhere; }
 
 .sk-v2.v2-home-disclosure { padding-block: 0 1.5rem; }
+/* Preserve the wordmark's visual position while enlarging its hit area. */
+.sk-v2 .v2-wordmark { padding-block: .35rem; margin-block: -.35rem; }
+/* Retained lower-page links need the same accessible touch area as V2 cards. */
+.v2-home :is(.v2-legacy-page, .v2-legacy-footer) a { display: inline-flex; align-items: center; min-width: 2.75rem; min-height: 2.75rem; }

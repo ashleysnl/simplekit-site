@@ -17,7 +17,9 @@ const manifest = require('../data/tools.json');
       const html = await response.text();
       const tool = manifest.tools.find(tool => tool.canonicalPath === pathname);
       const canonical = tool?.canonicalUrl || 'https://simplekit.app' + pathname;
-      assert(html.includes(`<link rel="canonical" href="${canonical}">`), `Canonical changed: ${pathname}`);
+      const tag = html.match(/<link\b(?=[^>]*\brel\s*=\s*["']canonical["'])[^>]*>/i)?.[0];
+      const actualCanonical = tag?.match(/\bhref\s*=\s*["']([^"']+)["']/i)?.[1];
+      assert.equal(actualCanonical, canonical, `Canonical changed: ${pathname}`);
       routes.push({ path: pathname, status: response.status(), noindex: true, canonical });
     }
     const robots = await context.request.get(origin + '/robots.txt');
