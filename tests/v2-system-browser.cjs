@@ -12,6 +12,15 @@ const report={axeVersion:axe.version,engines:[],limitations:['Review references,
 async function bounded(label,operation,milliseconds=30000){
  let timer;try{return await Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(label+' timed out')),milliseconds);})]);}finally{clearTimeout(timer);}
 }
+// Poll from Node: Firefox disables page Promise callbacks in a no-JS context.
+async function fontsReady(page,label){
+ const deadline=Date.now()+30000;
+ while(Date.now()<deadline){
+  if(await bounded(label+' font status',page.evaluate(()=>document.fonts.status==='loaded')))return;
+  await new Promise(resolve=>setTimeout(resolve,50));
+ }
+ throw new Error(label+' fonts timed out');
+}
 async function geometry(page,name){
  const result=await page.evaluate(()=>{
   const visible=n=>n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden';
@@ -49,7 +58,7 @@ async function geometry(page,name){
   async function reference(c,name){
    const p=await c.newPage();p.on('pageerror',e=>result.errors.push(e.message));p.on('response',r=>{if(new URL(r.url()).origin===origin&&r.status()>=400&&!/\.woff2?$/.test(r.url()))result.failed.push(r.url());});
    p.on('requestfailed',r=>{if(new URL(r.url()).origin===origin&&!/\.woff2?$/.test(r.url()))result.failed.push(r.url());});
-   await p.goto(origin+'/__v2-reference/'+name,{waitUntil:'networkidle'});await bounded(engine+' '+name+' fonts',p.evaluate(()=>document.fonts.ready));return p;
+   await p.goto(origin+'/__v2-reference/'+name,{waitUntil:'networkidle'});await fontsReady(p,engine+' '+name);return p;
   }
   async function scan(p,name){console.log(engine+': axe '+name);await p.addScriptTag({content:axe.source});const a=await bounded(engine+' '+name+' axe',p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','best-practice']}})));result.axe.push({name,violations:a.violations,incomplete:a.incomplete.map(i=>({id:i.id,impact:i.impact,nodes:i.nodes.length}))});assert.deepEqual(a.violations,[],name+': axe violations');}
   try{
@@ -98,7 +107,7 @@ async function geometry(page,name){
    // Load new CSS and navigation on old pages: geometry, typography and controls remain exact.
    for(const route of ['/','/learn/mortgage-affordability-canada/','/mortgage-calculator/','/retirement-planner/']){
     console.log(engine+': legacy isolation '+route);
-    const c=await context();const p=await c.newPage();await p.goto(origin+route,{waitUntil:'networkidle'});await bounded(engine+' legacy fonts '+route,p.evaluate(()=>document.fonts.ready));
+    const c=await context();const p=await c.newPage();await p.goto(origin+route,{waitUntil:'networkidle'});await fontsReady(p,engine+' legacy '+route);
     const sample=()=>p.evaluate(()=>[...document.querySelectorAll('h1,nav,footer,input,button,main')].map(n=>{const s=getComputedStyle(n),r=n.getBoundingClientRect();return {tag:n.tagName,id:n.id,font:s.fontFamily,color:s.color,background:s.backgroundColor,rect:[r.x,r.y,r.width,r.height],hidden:n.hidden};}));
     const before=await sample();await p.addStyleTag({url:origin+'/assets/v2/system.css'});await p.addScriptTag({url:origin+'/assets/v2/shell.js'});assert.deepEqual(await sample(),before,route+': legacy isolation');result.legacyIsolation.push(route);await c.close();
    }
