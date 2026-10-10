@@ -2624,6 +2624,23 @@
           ]
         }
       ],
+      "captures": [
+        {
+          "file": "chromium-home-text-200.jpg",
+          "documentHeight": 33762,
+          "fullPage": false
+        },
+        {
+          "file": "chromium-directory-text-200.jpg",
+          "documentHeight": 31487,
+          "fullPage": false
+        },
+        {
+          "file": "chromium-home-320.jpg",
+          "documentHeight": 10277,
+          "fullPage": true
+        }
+      ],
       "errors": [],
       "failedResponses": [],
       "searchBoundaryContrast": {
@@ -7588,14 +7605,14 @@
           "nodes": [
             {
               "target": [
-                ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary"
+                ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary"
               ],
               "html": "<summary class=\"debt-row-summary\">",
               "summary": "Fix any of the following:\n  Element has focusable descendants"
             },
             {
               "target": [
-                ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary"
+                ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary"
               ],
               "html": "<summary class=\"debt-row-summary\">",
               "summary": "Fix any of the following:\n  Element has focusable descendants"
@@ -7767,67 +7784,67 @@
               ".form-toolbar > div:nth-child(1) > .small-copy.muted"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-top > .debt-row-title-wrap > .debt-row-index[data-role=\"debt-heading\"]"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-top > .debt-row-title-wrap > .debt-row-index[data-role=\"debt-heading\"]"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > strong"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > strong"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > strong"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > strong"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > strong"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > strong"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > .debt-name-field > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > .debt-name-field > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > .debt-name-field > small"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > .debt-name-field > small"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > label:nth-child(2) > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > label:nth-child(2) > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > label:nth-child(3) > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > label:nth-child(3) > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > label:nth-child(3) > small"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > label:nth-child(3) > small"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > label:nth-child(4) > span"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > label:nth-child(4) > span"
             ],
             [
-              ".debt-row[open=\"\"][data-debt-id=\"debt-di65w2ph\"] > .debt-row-body > .debt-row-grid > label:nth-child(4) > small"
+              ".debt-row[open=\"\"][data-debt-id=\"debt-5cx0ysxj\"] > .debt-row-body > .debt-row-grid > label:nth-child(4) > small"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-top > .debt-row-title-wrap > .debt-row-index[data-role=\"debt-heading\"]"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-top > .debt-row-title-wrap > .debt-row-index[data-role=\"debt-heading\"]"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > strong"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > strong"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > span"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(1) > span"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > strong"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > strong"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > span"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(2) > span"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > strong"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > strong"
             ],
             [
-              ".debt-row[data-debt-id=\"debt-u3omj499\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > span"
+              ".debt-row[data-debt-id=\"debt-79xdyv36\"] > .debt-row-summary > .debt-row-meta[data-role=\"debt-meta\"] > .debt-meta-pill:nth-child(3) > span"
             ],
             [
               "#addDebtBtn"
@@ -13752,7 +13769,7 @@
               ".checklist-controls > label:nth-child(2) > span"
             ],
             [
-              "#category-cat-c69df471-5b01-45e4-aa0e-5aeb05d0cb59"
+              "#category-cat-8a1e6fbe-19d8-46e6-ac5a-94c6908bbd1d"
             ],
             [
               "div[aria-label=\"Income slip sources progress\"] > .progress-meta > span:nth-child(1)"
@@ -13761,7 +13778,7 @@
               "div[aria-label=\"Income slip sources progress\"] > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-b8a5789e-bcc0-4e4a-adbe-4bba5872ac58"
+              "#category-cat-bc0df2c8-1ced-485e-8d03-e902645b268d"
             ],
             [
               ".category-card:nth-child(2) > .category-head > .category-progress > .progress-meta > span:nth-child(1)"
@@ -13770,7 +13787,7 @@
               ".category-card:nth-child(2) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-2fa364a5-0e9c-4ec9-901a-70e78174f119"
+              "#category-cat-0da0915d-4af6-4843-b0c6-04531226420e"
             ],
             [
               ".category-card:nth-child(3) > .category-head > .category-progress > .progress-meta > span:nth-child(1)"
@@ -13779,7 +13796,7 @@
               ".category-card:nth-child(3) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-e80d38d6-d0bd-46b4-9809-338133420903"
+              "#category-cat-00c16652-12ba-411c-9240-2683beb0c998"
             ],
             [
               ".category-card:nth-child(4) > .category-head > .category-progress > .progress-meta > span:nth-child(1)"
@@ -13788,7 +13805,7 @@
               ".category-card:nth-child(4) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-c44468cd-dfad-48c5-935e-0f0003eb4520"
+              "#category-cat-6be1d3d0-db9a-4b88-9a87-b0efddd4d323"
             ],
             [
               ".category-card:nth-child(5) > .category-head > .category-progress > .progress-meta > span:nth-child(1)"
@@ -13797,7 +13814,7 @@
               ".category-card:nth-child(5) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-b83da86e-de6c-421c-b239-f0d7a03a9461"
+              "#category-cat-f25b8a2f-14d0-4e1a-bc2d-e5c9abcf320a"
             ],
             [
               ".category-card:nth-child(6) > .category-head > .category-progress > .progress-meta > span:nth-child(1)"
@@ -13806,7 +13823,7 @@
               ".category-card:nth-child(6) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-8c8c261b-b941-4983-9fd8-fab5f08fdfb0"
+              "#category-cat-c32b744c-d130-4e61-87d5-cf05f405958b"
             ],
             [
               ".category-card:nth-child(7) > .category-head > .category-progress > .progress-meta > span:nth-child(1)"
@@ -13815,7 +13832,7 @@
               ".category-card:nth-child(7) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-5b04579d-c1e4-417c-bbc1-1dd2ea942c31"
+              "#category-cat-2f807d12-c245-488b-a303-a3965c3adbd5"
             ],
             [
               "div[aria-label=\"Tax filing admin progress\"] > .progress-meta > span:nth-child(1)"
@@ -13824,7 +13841,7 @@
               "div[aria-label=\"Tax filing admin progress\"] > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-ed732c84-ffb0-46a0-be7c-e130b2774b42"
+              "#category-cat-a922a285-9d61-4704-a651-c880d0776cdd"
             ],
             [
               ".category-badge"
@@ -13836,7 +13853,7 @@
               ".category-card:nth-child(9) > .category-head > .category-progress > .progress-meta > span:nth-child(2)"
             ],
             [
-              "#category-cat-cb83921b-9192-4e50-9e5d-d81fe2046aef"
+              "#category-cat-3d6c7d15-8768-475d-bc72-4d37a1992eaf"
             ],
             [
               "div[aria-label=\"Custom progress\"] > .progress-meta > span:nth-child(1)"

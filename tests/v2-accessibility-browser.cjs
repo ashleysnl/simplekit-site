@@ -30,7 +30,13 @@ async function geometry(p, name) {
     const visible = n => n.getClientRects().length && getComputedStyle(n).visibility !== 'hidden';
     const labelledRadio = n => n.matches('input[type=radio]') ? n.closest('label') : n;
     const controls = [...document.querySelectorAll('a,button,input,select,textarea')].filter(visible).map(labelledRadio);
-    const targets = controls.map(n=>({name:n.getAttribute('aria-label')||n.textContent.trim()||n.id,rect:n.getBoundingClientRect().toJSON()}));
+    const targets = controls.map(n=>{
+      const walker=document.createTreeWalker(n,NodeFilter.SHOW_TEXT),glyphs=[];
+      while(walker.nextNode())if(walker.currentNode.textContent.trim()){
+        const range=document.createRange();range.selectNodeContents(walker.currentNode);glyphs.push(...[...range.getClientRects()].map(r=>r.toJSON()));
+      }
+      return {name:n.getAttribute('aria-label')||n.textContent.trim()||n.id,rect:n.getBoundingClientRect().toJSON(),glyphs};
+    });
     const overflow = [];
     // Inspect actual glyphs as well as containers: clipping with overflow:hidden
     // must not make an otherwise unreadable page look like successful reflow.
@@ -46,7 +52,10 @@ async function geometry(p, name) {
   });
   assert(result.scrollWidth<=result.width,`${name}: document overflow`);
   assert.deepEqual(result.overflow,[],`${name}: clipped text glyphs`);
-  for(const t of result.targets) assert(t.rect.width>=43.9&&t.rect.height>=43.9,`${name}: small target ${t.name} ${t.rect.width}x${t.rect.height}`);
+  for(const t of result.targets) {
+    assert(t.rect.width>=43.9&&t.rect.height>=43.9,`${name}: small target ${t.name} ${t.rect.width}x${t.rect.height}`);
+    for(const g of t.glyphs)assert(g.left>=t.rect.left-.75&&g.right<=t.rect.right+.75&&g.top>=t.rect.top-.75&&g.bottom<=t.rect.bottom+.75,`${name}: clipped/overlapping control label ${t.name}`);
+  }
   return {name,width:result.width,scrollWidth:result.scrollWidth,controls:result.targets.length};
 }
 async function audit(p, name, blocking = true) {

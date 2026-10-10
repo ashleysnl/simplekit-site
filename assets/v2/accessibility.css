@@ -9,6 +9,10 @@
 .v2-tools a { min-width: 2.75rem; min-height: 2.75rem; display: inline-flex; align-items: center; }
 .v2-tools :is(.content, .section, .footer-list, .article-card, .callout) { min-width: 0; overflow-wrap: anywhere; }
 .v2-tools .v2-directory-tool { display: flex; }
+@media (max-width: 759px) {
+  .v2-tools .nav-links { grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr)); }
+  .v2-tools .nav-link:last-child { grid-column: auto; }
+}
 /* Radio inputs have native UI; the entire labelled row is the touch target. */
 @media (prefers-reduced-motion: reduce) {
   :is(.v2-home, .v2-tools), :is(.v2-home, .v2-tools) *, :is(.v2-home, .v2-tools) *::before, :is(.v2-home, .v2-tools) *::after { scroll-behavior: auto; animation: none; transition: none; }
