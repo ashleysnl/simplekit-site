@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="assets/v2/discovery.css">
   <link rel="stylesheet" href="assets/v2/trust.css">
   <link rel="stylesheet" href="assets/v2/goals.css">
+  <link rel="stylesheet" href="assets/v2/featured.css">
   <script defer src="assets/v2/home.js"></script>
   <script type="module" src="assets/v2/discovery.js"></script>
   <!-- Google tag (gtag.js) -->
@@ -163,6 +164,22 @@
           <a class="v2-goal-all" href="tools/">View all {{toolCount}} tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
         </div>
         <ul class="v2-goals v2-home-goal-list">{{v2GoalCards}}</ul>
+      </div>
+    </section>
+
+    <section class="sk-v2 v2-home-featured" aria-labelledby="home-featured-title">
+      <div class="v2-container">
+        <div class="v2-featured-heading">
+          <h2 id="home-featured-title" class="v2-eyebrow">Featured calculators</h2>
+          <a class="v2-featured-all" href="tools/">View all tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a>
+        </div>
+        <ul class="v2-featured-list">
+          <li><a class="v2-featured-tool" data-featured-tool="retirement-planner" href="{{toolUrl:retirement-planner}}"><span class="v2-icon-disc"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#bank"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">Retirement Planner</span><span class="v2-featured-description">Model retirement income and savings.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
+          <li><a class="v2-featured-tool" data-featured-tool="mortgage-calculator" href="{{toolUrl:mortgage-calculator}}"><span class="v2-icon-disc" data-accent="teal"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#home"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">Mortgage Calculator</span><span class="v2-featured-description">Estimate payments and total interest.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
+          <li><a class="v2-featured-tool" data-featured-tool="compound-interest-calculator" href="{{toolUrl:compound-interest-calculator}}"><span class="v2-icon-disc" data-accent="amber"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#piggy-bank"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">Compound Interest Calculator</span><span class="v2-featured-description">Explore how savings may grow.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
+          <li><a class="v2-featured-tool" data-featured-tool="budget-planner" href="{{toolUrl:budget-planner}}"><span class="v2-icon-disc"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#calculator"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">Budget Planner</span><span class="v2-featured-description">Plan income, expenses, and savings.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
+          <li><a class="v2-featured-tool" data-featured-tool="fire-calculator" href="{{toolUrl:fire-calculator}}"><span class="v2-icon-disc" data-accent="purple"><svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#growth"></use></svg></span><span class="v2-featured-copy"><span class="v2-featured-name">FIRE Calculator</span><span class="v2-featured-description">Estimate financial independence.</span></span><svg class="v2-icon v2-featured-chevron" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a></li>
+        </ul>
       </div>
     </section>
 

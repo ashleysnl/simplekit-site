@@ -20,7 +20,8 @@ async function context(browser, options = {}, mode = 'normal') {
     }
     const asset = url.pathname.endsWith('.woff') || url.pathname.includes('/v2/images/');
     if (asset && mode === 'blocked') return r.abort();
-    if (asset && mode === 'delayed') await new Promise(resolve => setTimeout(resolve, 500));
+    if (mode === 'delayed' && (asset || url.pathname.endsWith('/v2/discovery-index.js')))
+      await new Promise(resolve => setTimeout(resolve, 500));
     return r.continue();
   });
   c.on('page', p => {
@@ -169,12 +170,13 @@ async function menu(p, screenshot) {
     await fallback.close();
     const delayed = await context(browser, {}, 'delayed'); const d = await delayed.newPage();
     await d.addInitScript(() => { window.v2Shifts = []; new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) if (!entry.hadRecentInput) window.v2Shifts.push(entry.value);
+      for (const entry of list.getEntries()) if (!entry.hadRecentInput) window.v2Shifts.push({value: entry.value, time: entry.startTime,
+        sources: entry.sources.map(source => ({node: source.node?.className || source.node?.nodeName, previous: source.previousRect.toJSON(), current: source.currentRect.toJSON()}))});
     }).observe({ type: 'layout-shift', buffered: true }); });
     await d.goto(origin, { waitUntil: 'domcontentloaded' }); const before = await layout(d);
     await d.waitForLoadState('networkidle'); await d.evaluate(() => document.fonts.ready);
-    const after = await assertLayout(d), cls = await d.evaluate(() => window.v2Shifts.reduce((a, b) => a + b, 0));
-    fs.writeFileSync(path.join(output, 'delayed-loading.json'), JSON.stringify({before, after, cls}, null, 2) + '\n');
+    const after = await assertLayout(d), shifts = await d.evaluate(() => window.v2Shifts), cls = shifts.reduce((a, b) => a + b.value, 0);
+    fs.writeFileSync(path.join(output, 'delayed-loading.json'), JSON.stringify({before, after, cls, shifts}, null, 2) + '\n');
     assert(Math.abs(before.discovery.top - after.discovery.top) <= 1, `Font/image loading moved hero controls: ${before.discovery.top} -> ${after.discovery.top}`);
     assert(cls <= .01, `Local delayed-load CLS ${cls}`); await delayed.close();
     // CSS magnification plus half-width reflow cover 200% reading and navigation geometry.

@@ -1,0 +1,2399 @@
+{
+  "browser": "151.0.7922.173",
+  "layouts": [
+    {
+      "state": "width-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": 1394.4375,
+        "width": 320,
+        "height": 557.375,
+        "top": 1394.4375,
+        "right": 320,
+        "bottom": 1951.8125,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 16,
+            "y": 1485.4375,
+            "width": 288,
+            "height": 92.09375,
+            "top": 1485.4375,
+            "right": 304,
+            "bottom": 1577.53125,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1514.984375,
+            "width": 32,
+            "height": 32,
+            "top": 1514.984375,
+            "right": 48,
+            "bottom": 1546.984375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1497.4375,
+            "width": 216,
+            "height": 67.09375,
+            "top": 1497.4375,
+            "right": 276,
+            "bottom": 1564.53125,
+            "left": 60
+          },
+          "chevron": {
+            "x": 288,
+            "y": 1522.984375,
+            "width": 16,
+            "height": 16,
+            "top": 1522.984375,
+            "right": 304,
+            "bottom": 1538.984375,
+            "left": 288
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1577.53125,
+            "width": 288,
+            "height": 92.09375,
+            "top": 1577.53125,
+            "right": 304,
+            "bottom": 1669.625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1607.078125,
+            "width": 32,
+            "height": 32,
+            "top": 1607.078125,
+            "right": 48,
+            "bottom": 1639.078125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1589.53125,
+            "width": 216,
+            "height": 67.09375,
+            "top": 1589.53125,
+            "right": 276,
+            "bottom": 1656.625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 288,
+            "y": 1615.078125,
+            "width": 16,
+            "height": 16,
+            "top": 1615.078125,
+            "right": 304,
+            "bottom": 1631.078125,
+            "left": 288
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1669.625,
+            "width": 288,
+            "height": 94.296875,
+            "top": 1669.625,
+            "right": 304,
+            "bottom": 1763.921875,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1700.265625,
+            "width": 32,
+            "height": 32,
+            "top": 1700.265625,
+            "right": 48,
+            "bottom": 1732.265625,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1681.625,
+            "width": 216,
+            "height": 69.296875,
+            "top": 1681.625,
+            "right": 276,
+            "bottom": 1750.921875,
+            "left": 60
+          },
+          "chevron": {
+            "x": 288,
+            "y": 1708.265625,
+            "width": 16,
+            "height": 16,
+            "top": 1708.265625,
+            "right": 304,
+            "bottom": 1724.265625,
+            "left": 288
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 16,
+            "y": 1763.921875,
+            "width": 288,
+            "height": 92.09375,
+            "top": 1763.921875,
+            "right": 304,
+            "bottom": 1856.015625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1793.46875,
+            "width": 32,
+            "height": 32,
+            "top": 1793.46875,
+            "right": 48,
+            "bottom": 1825.46875,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1775.921875,
+            "width": 216,
+            "height": 67.09375,
+            "top": 1775.921875,
+            "right": 276,
+            "bottom": 1843.015625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 288,
+            "y": 1801.46875,
+            "width": 16,
+            "height": 16,
+            "top": 1801.46875,
+            "right": 304,
+            "bottom": 1817.46875,
+            "left": 288
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1856.015625,
+            "width": 288,
+            "height": 71.796875,
+            "top": 1856.015625,
+            "right": 304,
+            "bottom": 1927.8125,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1875.40625,
+            "width": 32,
+            "height": 32,
+            "top": 1875.40625,
+            "right": 48,
+            "bottom": 1907.40625,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1868.015625,
+            "width": 216,
+            "height": 46.796875,
+            "top": 1868.015625,
+            "right": 276,
+            "bottom": 1914.8125,
+            "left": 60
+          },
+          "chevron": {
+            "x": 288,
+            "y": 1883.40625,
+            "width": 16,
+            "height": 16,
+            "top": 1883.40625,
+            "right": 304,
+            "bottom": 1899.40625,
+            "left": 288
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "width-375",
+      "width": 375,
+      "scrollWidth": 375,
+      "section": {
+        "x": 0,
+        "y": 1046.65625,
+        "width": 375,
+        "height": 451.984375,
+        "top": 1046.65625,
+        "right": 375,
+        "bottom": 1498.640625,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 16,
+            "y": 1115.65625,
+            "width": 343,
+            "height": 71.796875,
+            "top": 1115.65625,
+            "right": 359,
+            "bottom": 1187.453125,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1135.046875,
+            "width": 32,
+            "height": 32,
+            "top": 1135.046875,
+            "right": 48,
+            "bottom": 1167.046875,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1127.65625,
+            "width": 271,
+            "height": 46.796875,
+            "top": 1127.65625,
+            "right": 331,
+            "bottom": 1174.453125,
+            "left": 60
+          },
+          "chevron": {
+            "x": 343,
+            "y": 1143.046875,
+            "width": 16,
+            "height": 16,
+            "top": 1143.046875,
+            "right": 359,
+            "bottom": 1159.046875,
+            "left": 343
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1187.453125,
+            "width": 343,
+            "height": 71.796875,
+            "top": 1187.453125,
+            "right": 359,
+            "bottom": 1259.25,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1206.84375,
+            "width": 32,
+            "height": 32,
+            "top": 1206.84375,
+            "right": 48,
+            "bottom": 1238.84375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1199.453125,
+            "width": 271,
+            "height": 46.796875,
+            "top": 1199.453125,
+            "right": 331,
+            "bottom": 1246.25,
+            "left": 60
+          },
+          "chevron": {
+            "x": 343,
+            "y": 1214.84375,
+            "width": 16,
+            "height": 16,
+            "top": 1214.84375,
+            "right": 359,
+            "bottom": 1230.84375,
+            "left": 343
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1259.25,
+            "width": 343,
+            "height": 71.796875,
+            "top": 1259.25,
+            "right": 359,
+            "bottom": 1331.046875,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1278.640625,
+            "width": 32,
+            "height": 32,
+            "top": 1278.640625,
+            "right": 48,
+            "bottom": 1310.640625,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1271.25,
+            "width": 271,
+            "height": 46.796875,
+            "top": 1271.25,
+            "right": 331,
+            "bottom": 1318.046875,
+            "left": 60
+          },
+          "chevron": {
+            "x": 343,
+            "y": 1286.640625,
+            "width": 16,
+            "height": 16,
+            "top": 1286.640625,
+            "right": 359,
+            "bottom": 1302.640625,
+            "left": 343
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 16,
+            "y": 1331.046875,
+            "width": 343,
+            "height": 71.796875,
+            "top": 1331.046875,
+            "right": 359,
+            "bottom": 1402.84375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1350.4375,
+            "width": 32,
+            "height": 32,
+            "top": 1350.4375,
+            "right": 48,
+            "bottom": 1382.4375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1343.046875,
+            "width": 271,
+            "height": 46.796875,
+            "top": 1343.046875,
+            "right": 331,
+            "bottom": 1389.84375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 343,
+            "y": 1358.4375,
+            "width": 16,
+            "height": 16,
+            "top": 1358.4375,
+            "right": 359,
+            "bottom": 1374.4375,
+            "left": 343
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1402.84375,
+            "width": 343,
+            "height": 71.796875,
+            "top": 1402.84375,
+            "right": 359,
+            "bottom": 1474.640625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1422.234375,
+            "width": 32,
+            "height": 32,
+            "top": 1422.234375,
+            "right": 48,
+            "bottom": 1454.234375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1414.84375,
+            "width": 271,
+            "height": 46.796875,
+            "top": 1414.84375,
+            "right": 331,
+            "bottom": 1461.640625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 343,
+            "y": 1430.234375,
+            "width": 16,
+            "height": 16,
+            "top": 1430.234375,
+            "right": 359,
+            "bottom": 1446.234375,
+            "left": 343
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "width-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 1048.75,
+        "width": 390,
+        "height": 451.984375,
+        "top": 1048.75,
+        "right": 390,
+        "bottom": 1500.734375,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 16,
+            "y": 1117.75,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1117.75,
+            "right": 374,
+            "bottom": 1189.546875,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1137.140625,
+            "width": 32,
+            "height": 32,
+            "top": 1137.140625,
+            "right": 48,
+            "bottom": 1169.140625,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1129.75,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1129.75,
+            "right": 346,
+            "bottom": 1176.546875,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1145.140625,
+            "width": 16,
+            "height": 16,
+            "top": 1145.140625,
+            "right": 374,
+            "bottom": 1161.140625,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1189.546875,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1189.546875,
+            "right": 374,
+            "bottom": 1261.34375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1208.9375,
+            "width": 32,
+            "height": 32,
+            "top": 1208.9375,
+            "right": 48,
+            "bottom": 1240.9375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1201.546875,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1201.546875,
+            "right": 346,
+            "bottom": 1248.34375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1216.9375,
+            "width": 16,
+            "height": 16,
+            "top": 1216.9375,
+            "right": 374,
+            "bottom": 1232.9375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1261.34375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1261.34375,
+            "right": 374,
+            "bottom": 1333.140625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1280.734375,
+            "width": 32,
+            "height": 32,
+            "top": 1280.734375,
+            "right": 48,
+            "bottom": 1312.734375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1273.34375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1273.34375,
+            "right": 346,
+            "bottom": 1320.140625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1288.734375,
+            "width": 16,
+            "height": 16,
+            "top": 1288.734375,
+            "right": 374,
+            "bottom": 1304.734375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 16,
+            "y": 1333.140625,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1333.140625,
+            "right": 374,
+            "bottom": 1404.9375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1352.53125,
+            "width": 32,
+            "height": 32,
+            "top": 1352.53125,
+            "right": 48,
+            "bottom": 1384.53125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1345.140625,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1345.140625,
+            "right": 346,
+            "bottom": 1391.9375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1360.53125,
+            "width": 16,
+            "height": 16,
+            "top": 1360.53125,
+            "right": 374,
+            "bottom": 1376.53125,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1404.9375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1404.9375,
+            "right": 374,
+            "bottom": 1476.734375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1424.328125,
+            "width": 32,
+            "height": 32,
+            "top": 1424.328125,
+            "right": 48,
+            "bottom": 1456.328125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1416.9375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1416.9375,
+            "right": 346,
+            "bottom": 1463.734375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1432.328125,
+            "width": 16,
+            "height": 16,
+            "top": 1432.328125,
+            "right": 374,
+            "bottom": 1448.328125,
+            "left": 358
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "width-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "section": {
+        "x": 0,
+        "y": 1250.28125,
+        "width": 768,
+        "height": 570,
+        "top": 1250.28125,
+        "right": 768,
+        "bottom": 1820.28125,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 30.71875,
+            "y": 1327.28125,
+            "width": 706.546875,
+            "height": 89,
+            "top": 1327.28125,
+            "right": 737.265625,
+            "bottom": 1416.28125,
+            "left": 30.71875
+          },
+          "icon": {
+            "x": 30.71875,
+            "y": 1343.28125,
+            "width": 56,
+            "height": 56,
+            "top": 1343.28125,
+            "right": 86.71875,
+            "bottom": 1399.28125,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 102.71875,
+            "y": 1343.9375,
+            "width": 602.546875,
+            "height": 54.6875,
+            "top": 1343.9375,
+            "right": 705.265625,
+            "bottom": 1398.625,
+            "left": 102.71875
+          },
+          "chevron": {
+            "x": 721.265625,
+            "y": 1363.28125,
+            "width": 16,
+            "height": 16,
+            "top": 1363.28125,
+            "right": 737.265625,
+            "bottom": 1379.28125,
+            "left": 721.265625
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 30.71875,
+            "y": 1416.28125,
+            "width": 706.546875,
+            "height": 89,
+            "top": 1416.28125,
+            "right": 737.265625,
+            "bottom": 1505.28125,
+            "left": 30.71875
+          },
+          "icon": {
+            "x": 30.71875,
+            "y": 1432.28125,
+            "width": 56,
+            "height": 56,
+            "top": 1432.28125,
+            "right": 86.71875,
+            "bottom": 1488.28125,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 102.71875,
+            "y": 1432.9375,
+            "width": 602.546875,
+            "height": 54.6875,
+            "top": 1432.9375,
+            "right": 705.265625,
+            "bottom": 1487.625,
+            "left": 102.71875
+          },
+          "chevron": {
+            "x": 721.265625,
+            "y": 1452.28125,
+            "width": 16,
+            "height": 16,
+            "top": 1452.28125,
+            "right": 737.265625,
+            "bottom": 1468.28125,
+            "left": 721.265625
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 30.71875,
+            "y": 1505.28125,
+            "width": 706.546875,
+            "height": 89,
+            "top": 1505.28125,
+            "right": 737.265625,
+            "bottom": 1594.28125,
+            "left": 30.71875
+          },
+          "icon": {
+            "x": 30.71875,
+            "y": 1521.28125,
+            "width": 56,
+            "height": 56,
+            "top": 1521.28125,
+            "right": 86.71875,
+            "bottom": 1577.28125,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 102.71875,
+            "y": 1521.9375,
+            "width": 602.546875,
+            "height": 54.6875,
+            "top": 1521.9375,
+            "right": 705.265625,
+            "bottom": 1576.625,
+            "left": 102.71875
+          },
+          "chevron": {
+            "x": 721.265625,
+            "y": 1541.28125,
+            "width": 16,
+            "height": 16,
+            "top": 1541.28125,
+            "right": 737.265625,
+            "bottom": 1557.28125,
+            "left": 721.265625
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 30.71875,
+            "y": 1594.28125,
+            "width": 706.546875,
+            "height": 89,
+            "top": 1594.28125,
+            "right": 737.265625,
+            "bottom": 1683.28125,
+            "left": 30.71875
+          },
+          "icon": {
+            "x": 30.71875,
+            "y": 1610.28125,
+            "width": 56,
+            "height": 56,
+            "top": 1610.28125,
+            "right": 86.71875,
+            "bottom": 1666.28125,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 102.71875,
+            "y": 1610.9375,
+            "width": 602.546875,
+            "height": 54.6875,
+            "top": 1610.9375,
+            "right": 705.265625,
+            "bottom": 1665.625,
+            "left": 102.71875
+          },
+          "chevron": {
+            "x": 721.265625,
+            "y": 1630.28125,
+            "width": 16,
+            "height": 16,
+            "top": 1630.28125,
+            "right": 737.265625,
+            "bottom": 1646.28125,
+            "left": 721.265625
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 30.71875,
+            "y": 1683.28125,
+            "width": 706.546875,
+            "height": 89,
+            "top": 1683.28125,
+            "right": 737.265625,
+            "bottom": 1772.28125,
+            "left": 30.71875
+          },
+          "icon": {
+            "x": 30.71875,
+            "y": 1699.28125,
+            "width": 56,
+            "height": 56,
+            "top": 1699.28125,
+            "right": 86.71875,
+            "bottom": 1755.28125,
+            "left": 30.71875
+          },
+          "copy": {
+            "x": 102.71875,
+            "y": 1699.9375,
+            "width": 602.546875,
+            "height": 54.6875,
+            "top": 1699.9375,
+            "right": 705.265625,
+            "bottom": 1754.625,
+            "left": 102.71875
+          },
+          "chevron": {
+            "x": 721.265625,
+            "y": 1719.28125,
+            "width": 16,
+            "height": 16,
+            "top": 1719.28125,
+            "right": 737.265625,
+            "bottom": 1735.28125,
+            "left": 721.265625
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "width-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "section": {
+        "x": 0,
+        "y": 1327.796875,
+        "width": 1440,
+        "height": 570,
+        "top": 1327.796875,
+        "right": 1440,
+        "bottom": 1897.796875,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 144,
+            "y": 1404.796875,
+            "width": 1152,
+            "height": 89,
+            "top": 1404.796875,
+            "right": 1296,
+            "bottom": 1493.796875,
+            "left": 144
+          },
+          "icon": {
+            "x": 144,
+            "y": 1420.796875,
+            "width": 56,
+            "height": 56,
+            "top": 1420.796875,
+            "right": 200,
+            "bottom": 1476.796875,
+            "left": 144
+          },
+          "copy": {
+            "x": 216,
+            "y": 1421.453125,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1421.453125,
+            "right": 1264,
+            "bottom": 1476.140625,
+            "left": 216
+          },
+          "chevron": {
+            "x": 1280,
+            "y": 1440.796875,
+            "width": 16,
+            "height": 16,
+            "top": 1440.796875,
+            "right": 1296,
+            "bottom": 1456.796875,
+            "left": 1280
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 144,
+            "y": 1493.796875,
+            "width": 1152,
+            "height": 89,
+            "top": 1493.796875,
+            "right": 1296,
+            "bottom": 1582.796875,
+            "left": 144
+          },
+          "icon": {
+            "x": 144,
+            "y": 1509.796875,
+            "width": 56,
+            "height": 56,
+            "top": 1509.796875,
+            "right": 200,
+            "bottom": 1565.796875,
+            "left": 144
+          },
+          "copy": {
+            "x": 216,
+            "y": 1510.453125,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1510.453125,
+            "right": 1264,
+            "bottom": 1565.140625,
+            "left": 216
+          },
+          "chevron": {
+            "x": 1280,
+            "y": 1529.796875,
+            "width": 16,
+            "height": 16,
+            "top": 1529.796875,
+            "right": 1296,
+            "bottom": 1545.796875,
+            "left": 1280
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 144,
+            "y": 1582.796875,
+            "width": 1152,
+            "height": 89,
+            "top": 1582.796875,
+            "right": 1296,
+            "bottom": 1671.796875,
+            "left": 144
+          },
+          "icon": {
+            "x": 144,
+            "y": 1598.796875,
+            "width": 56,
+            "height": 56,
+            "top": 1598.796875,
+            "right": 200,
+            "bottom": 1654.796875,
+            "left": 144
+          },
+          "copy": {
+            "x": 216,
+            "y": 1599.453125,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1599.453125,
+            "right": 1264,
+            "bottom": 1654.140625,
+            "left": 216
+          },
+          "chevron": {
+            "x": 1280,
+            "y": 1618.796875,
+            "width": 16,
+            "height": 16,
+            "top": 1618.796875,
+            "right": 1296,
+            "bottom": 1634.796875,
+            "left": 1280
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 144,
+            "y": 1671.796875,
+            "width": 1152,
+            "height": 89,
+            "top": 1671.796875,
+            "right": 1296,
+            "bottom": 1760.796875,
+            "left": 144
+          },
+          "icon": {
+            "x": 144,
+            "y": 1687.796875,
+            "width": 56,
+            "height": 56,
+            "top": 1687.796875,
+            "right": 200,
+            "bottom": 1743.796875,
+            "left": 144
+          },
+          "copy": {
+            "x": 216,
+            "y": 1688.453125,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1688.453125,
+            "right": 1264,
+            "bottom": 1743.140625,
+            "left": 216
+          },
+          "chevron": {
+            "x": 1280,
+            "y": 1707.796875,
+            "width": 16,
+            "height": 16,
+            "top": 1707.796875,
+            "right": 1296,
+            "bottom": 1723.796875,
+            "left": 1280
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 144,
+            "y": 1760.796875,
+            "width": 1152,
+            "height": 89,
+            "top": 1760.796875,
+            "right": 1296,
+            "bottom": 1849.796875,
+            "left": 144
+          },
+          "icon": {
+            "x": 144,
+            "y": 1776.796875,
+            "width": 56,
+            "height": 56,
+            "top": 1776.796875,
+            "right": 200,
+            "bottom": 1832.796875,
+            "left": 144
+          },
+          "copy": {
+            "x": 216,
+            "y": 1777.453125,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1777.453125,
+            "right": 1264,
+            "bottom": 1832.140625,
+            "left": 216
+          },
+          "chevron": {
+            "x": 1280,
+            "y": 1796.796875,
+            "width": 16,
+            "height": 16,
+            "top": 1796.796875,
+            "right": 1296,
+            "bottom": 1812.796875,
+            "left": 1280
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "width-1920",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "section": {
+        "x": 0,
+        "y": 1328.59375,
+        "width": 1920,
+        "height": 570,
+        "top": 1328.59375,
+        "right": 1920,
+        "bottom": 1898.59375,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 384,
+            "y": 1405.59375,
+            "width": 1152,
+            "height": 89,
+            "top": 1405.59375,
+            "right": 1536,
+            "bottom": 1494.59375,
+            "left": 384
+          },
+          "icon": {
+            "x": 384,
+            "y": 1421.59375,
+            "width": 56,
+            "height": 56,
+            "top": 1421.59375,
+            "right": 440,
+            "bottom": 1477.59375,
+            "left": 384
+          },
+          "copy": {
+            "x": 456,
+            "y": 1422.25,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1422.25,
+            "right": 1504,
+            "bottom": 1476.9375,
+            "left": 456
+          },
+          "chevron": {
+            "x": 1520,
+            "y": 1441.59375,
+            "width": 16,
+            "height": 16,
+            "top": 1441.59375,
+            "right": 1536,
+            "bottom": 1457.59375,
+            "left": 1520
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 384,
+            "y": 1494.59375,
+            "width": 1152,
+            "height": 89,
+            "top": 1494.59375,
+            "right": 1536,
+            "bottom": 1583.59375,
+            "left": 384
+          },
+          "icon": {
+            "x": 384,
+            "y": 1510.59375,
+            "width": 56,
+            "height": 56,
+            "top": 1510.59375,
+            "right": 440,
+            "bottom": 1566.59375,
+            "left": 384
+          },
+          "copy": {
+            "x": 456,
+            "y": 1511.25,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1511.25,
+            "right": 1504,
+            "bottom": 1565.9375,
+            "left": 456
+          },
+          "chevron": {
+            "x": 1520,
+            "y": 1530.59375,
+            "width": 16,
+            "height": 16,
+            "top": 1530.59375,
+            "right": 1536,
+            "bottom": 1546.59375,
+            "left": 1520
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 384,
+            "y": 1583.59375,
+            "width": 1152,
+            "height": 89,
+            "top": 1583.59375,
+            "right": 1536,
+            "bottom": 1672.59375,
+            "left": 384
+          },
+          "icon": {
+            "x": 384,
+            "y": 1599.59375,
+            "width": 56,
+            "height": 56,
+            "top": 1599.59375,
+            "right": 440,
+            "bottom": 1655.59375,
+            "left": 384
+          },
+          "copy": {
+            "x": 456,
+            "y": 1600.25,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1600.25,
+            "right": 1504,
+            "bottom": 1654.9375,
+            "left": 456
+          },
+          "chevron": {
+            "x": 1520,
+            "y": 1619.59375,
+            "width": 16,
+            "height": 16,
+            "top": 1619.59375,
+            "right": 1536,
+            "bottom": 1635.59375,
+            "left": 1520
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 384,
+            "y": 1672.59375,
+            "width": 1152,
+            "height": 89,
+            "top": 1672.59375,
+            "right": 1536,
+            "bottom": 1761.59375,
+            "left": 384
+          },
+          "icon": {
+            "x": 384,
+            "y": 1688.59375,
+            "width": 56,
+            "height": 56,
+            "top": 1688.59375,
+            "right": 440,
+            "bottom": 1744.59375,
+            "left": 384
+          },
+          "copy": {
+            "x": 456,
+            "y": 1689.25,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1689.25,
+            "right": 1504,
+            "bottom": 1743.9375,
+            "left": 456
+          },
+          "chevron": {
+            "x": 1520,
+            "y": 1708.59375,
+            "width": 16,
+            "height": 16,
+            "top": 1708.59375,
+            "right": 1536,
+            "bottom": 1724.59375,
+            "left": 1520
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 384,
+            "y": 1761.59375,
+            "width": 1152,
+            "height": 89,
+            "top": 1761.59375,
+            "right": 1536,
+            "bottom": 1850.59375,
+            "left": 384
+          },
+          "icon": {
+            "x": 384,
+            "y": 1777.59375,
+            "width": 56,
+            "height": 56,
+            "top": 1777.59375,
+            "right": 440,
+            "bottom": 1833.59375,
+            "left": 384
+          },
+          "copy": {
+            "x": 456,
+            "y": 1778.25,
+            "width": 1048,
+            "height": 54.6875,
+            "top": 1778.25,
+            "right": 1504,
+            "bottom": 1832.9375,
+            "left": 456
+          },
+          "chevron": {
+            "x": 1520,
+            "y": 1797.59375,
+            "width": 16,
+            "height": 16,
+            "top": 1797.59375,
+            "right": 1536,
+            "bottom": 1813.59375,
+            "left": 1520
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "200% text at 320",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": 5714.21875,
+        "width": 320,
+        "height": 1775.6875,
+        "top": 5714.21875,
+        "right": 320,
+        "bottom": 7489.90625,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 32,
+            "y": 5931.21875,
+            "width": 256,
+            "height": 309.375,
+            "top": 5931.21875,
+            "right": 288,
+            "bottom": 6240.59375,
+            "left": 32
+          },
+          "icon": {
+            "x": 32,
+            "y": 6069.40625,
+            "width": 32,
+            "height": 32,
+            "top": 6069.40625,
+            "right": 64,
+            "bottom": 6101.40625,
+            "left": 32
+          },
+          "copy": {
+            "x": 88,
+            "y": 5955.21875,
+            "width": 160,
+            "height": 260.375,
+            "top": 5955.21875,
+            "right": 248,
+            "bottom": 6215.59375,
+            "left": 88
+          },
+          "chevron": {
+            "x": 272,
+            "y": 6077.40625,
+            "width": 16,
+            "height": 16,
+            "top": 6077.40625,
+            "right": 288,
+            "bottom": 6093.40625,
+            "left": 272
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 32,
+            "y": 6240.59375,
+            "width": 256,
+            "height": 309.375,
+            "top": 6240.59375,
+            "right": 288,
+            "bottom": 6549.96875,
+            "left": 32
+          },
+          "icon": {
+            "x": 32,
+            "y": 6378.78125,
+            "width": 32,
+            "height": 32,
+            "top": 6378.78125,
+            "right": 64,
+            "bottom": 6410.78125,
+            "left": 32
+          },
+          "copy": {
+            "x": 88,
+            "y": 6264.59375,
+            "width": 160,
+            "height": 260.375,
+            "top": 6264.59375,
+            "right": 248,
+            "bottom": 6524.96875,
+            "left": 88
+          },
+          "chevron": {
+            "x": 272,
+            "y": 6386.78125,
+            "width": 16,
+            "height": 16,
+            "top": 6386.78125,
+            "right": 288,
+            "bottom": 6402.78125,
+            "left": 272
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 32,
+            "y": 6549.96875,
+            "width": 256,
+            "height": 313.78125,
+            "top": 6549.96875,
+            "right": 288,
+            "bottom": 6863.75,
+            "left": 32
+          },
+          "icon": {
+            "x": 32,
+            "y": 6690.359375,
+            "width": 32,
+            "height": 32,
+            "top": 6690.359375,
+            "right": 64,
+            "bottom": 6722.359375,
+            "left": 32
+          },
+          "copy": {
+            "x": 88,
+            "y": 6573.96875,
+            "width": 160,
+            "height": 264.78125,
+            "top": 6573.96875,
+            "right": 248,
+            "bottom": 6838.75,
+            "left": 88
+          },
+          "chevron": {
+            "x": 272,
+            "y": 6698.359375,
+            "width": 16,
+            "height": 16,
+            "top": 6698.359375,
+            "right": 288,
+            "bottom": 6714.359375,
+            "left": 272
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 32,
+            "y": 6863.75,
+            "width": 256,
+            "height": 309.375,
+            "top": 6863.75,
+            "right": 288,
+            "bottom": 7173.125,
+            "left": 32
+          },
+          "icon": {
+            "x": 32,
+            "y": 7001.9375,
+            "width": 32,
+            "height": 32,
+            "top": 7001.9375,
+            "right": 64,
+            "bottom": 7033.9375,
+            "left": 32
+          },
+          "copy": {
+            "x": 88,
+            "y": 6887.75,
+            "width": 160,
+            "height": 260.375,
+            "top": 6887.75,
+            "right": 248,
+            "bottom": 7148.125,
+            "left": 88
+          },
+          "chevron": {
+            "x": 272,
+            "y": 7009.9375,
+            "width": 16,
+            "height": 16,
+            "top": 7009.9375,
+            "right": 288,
+            "bottom": 7025.9375,
+            "left": 272
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 32,
+            "y": 7173.125,
+            "width": 256,
+            "height": 268.78125,
+            "top": 7173.125,
+            "right": 288,
+            "bottom": 7441.90625,
+            "left": 32
+          },
+          "icon": {
+            "x": 32,
+            "y": 7291.015625,
+            "width": 32,
+            "height": 32,
+            "top": 7291.015625,
+            "right": 64,
+            "bottom": 7323.015625,
+            "left": 32
+          },
+          "copy": {
+            "x": 88,
+            "y": 7197.125,
+            "width": 160,
+            "height": 219.78125,
+            "top": 7197.125,
+            "right": 248,
+            "bottom": 7416.90625,
+            "left": 88
+          },
+          "chevron": {
+            "x": 272,
+            "y": 7299.015625,
+            "width": 16,
+            "height": 16,
+            "top": 7299.015625,
+            "right": 288,
+            "bottom": 7315.015625,
+            "left": 272
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "no-js",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 1154.34375,
+        "width": 390,
+        "height": 451.984375,
+        "top": 1154.34375,
+        "right": 390,
+        "bottom": 1606.328125,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 16,
+            "y": 1223.34375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1223.34375,
+            "right": 374,
+            "bottom": 1295.140625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1242.734375,
+            "width": 32,
+            "height": 32,
+            "top": 1242.734375,
+            "right": 48,
+            "bottom": 1274.734375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1235.34375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1235.34375,
+            "right": 346,
+            "bottom": 1282.140625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1250.734375,
+            "width": 16,
+            "height": 16,
+            "top": 1250.734375,
+            "right": 374,
+            "bottom": 1266.734375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1295.140625,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1295.140625,
+            "right": 374,
+            "bottom": 1366.9375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1314.53125,
+            "width": 32,
+            "height": 32,
+            "top": 1314.53125,
+            "right": 48,
+            "bottom": 1346.53125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1307.140625,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1307.140625,
+            "right": 346,
+            "bottom": 1353.9375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1322.53125,
+            "width": 16,
+            "height": 16,
+            "top": 1322.53125,
+            "right": 374,
+            "bottom": 1338.53125,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1366.9375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1366.9375,
+            "right": 374,
+            "bottom": 1438.734375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1386.328125,
+            "width": 32,
+            "height": 32,
+            "top": 1386.328125,
+            "right": 48,
+            "bottom": 1418.328125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1378.9375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1378.9375,
+            "right": 346,
+            "bottom": 1425.734375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1394.328125,
+            "width": 16,
+            "height": 16,
+            "top": 1394.328125,
+            "right": 374,
+            "bottom": 1410.328125,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 16,
+            "y": 1438.734375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1438.734375,
+            "right": 374,
+            "bottom": 1510.53125,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1458.125,
+            "width": 32,
+            "height": 32,
+            "top": 1458.125,
+            "right": 48,
+            "bottom": 1490.125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1450.734375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1450.734375,
+            "right": 346,
+            "bottom": 1497.53125,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1466.125,
+            "width": 16,
+            "height": 16,
+            "top": 1466.125,
+            "right": 374,
+            "bottom": 1482.125,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1510.53125,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1510.53125,
+            "right": 374,
+            "bottom": 1582.328125,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1529.921875,
+            "width": 32,
+            "height": 32,
+            "top": 1529.921875,
+            "right": 48,
+            "bottom": 1561.921875,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1522.53125,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1522.53125,
+            "right": 346,
+            "bottom": 1569.328125,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1537.921875,
+            "width": 16,
+            "height": 16,
+            "top": 1537.921875,
+            "right": 374,
+            "bottom": 1553.921875,
+            "left": 358
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "blocked-fonts-icons",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 1048.75,
+        "width": 390,
+        "height": 451.984375,
+        "top": 1048.75,
+        "right": 390,
+        "bottom": 1500.734375,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 16,
+            "y": 1117.75,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1117.75,
+            "right": 374,
+            "bottom": 1189.546875,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1137.140625,
+            "width": 32,
+            "height": 32,
+            "top": 1137.140625,
+            "right": 48,
+            "bottom": 1169.140625,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1129.75,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1129.75,
+            "right": 346,
+            "bottom": 1176.546875,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1145.140625,
+            "width": 16,
+            "height": 16,
+            "top": 1145.140625,
+            "right": 374,
+            "bottom": 1161.140625,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1189.546875,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1189.546875,
+            "right": 374,
+            "bottom": 1261.34375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1208.9375,
+            "width": 32,
+            "height": 32,
+            "top": 1208.9375,
+            "right": 48,
+            "bottom": 1240.9375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1201.546875,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1201.546875,
+            "right": 346,
+            "bottom": 1248.34375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1216.9375,
+            "width": 16,
+            "height": 16,
+            "top": 1216.9375,
+            "right": 374,
+            "bottom": 1232.9375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1261.34375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1261.34375,
+            "right": 374,
+            "bottom": 1333.140625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1280.734375,
+            "width": 32,
+            "height": 32,
+            "top": 1280.734375,
+            "right": 48,
+            "bottom": 1312.734375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1273.34375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1273.34375,
+            "right": 346,
+            "bottom": 1320.140625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1288.734375,
+            "width": 16,
+            "height": 16,
+            "top": 1288.734375,
+            "right": 374,
+            "bottom": 1304.734375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 16,
+            "y": 1333.140625,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1333.140625,
+            "right": 374,
+            "bottom": 1404.9375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1352.53125,
+            "width": 32,
+            "height": 32,
+            "top": 1352.53125,
+            "right": 48,
+            "bottom": 1384.53125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1345.140625,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1345.140625,
+            "right": 346,
+            "bottom": 1391.9375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1360.53125,
+            "width": 16,
+            "height": 16,
+            "top": 1360.53125,
+            "right": 374,
+            "bottom": 1376.53125,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1404.9375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1404.9375,
+            "right": 374,
+            "bottom": 1476.734375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1424.328125,
+            "width": 32,
+            "height": 32,
+            "top": 1424.328125,
+            "right": 48,
+            "bottom": 1456.328125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1416.9375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1416.9375,
+            "right": 346,
+            "bottom": 1463.734375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1432.328125,
+            "width": 16,
+            "height": 16,
+            "top": 1432.328125,
+            "right": 374,
+            "bottom": 1448.328125,
+            "left": 358
+          },
+          "anchors": 1
+        }
+      ]
+    },
+    {
+      "state": "forced-colors",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 1048.75,
+        "width": 390,
+        "height": 451.984375,
+        "top": 1048.75,
+        "right": 390,
+        "bottom": 1500.734375,
+        "left": 0
+      },
+      "splitWords": [],
+      "rows": [
+        {
+          "id": "retirement-planner",
+          "rect": {
+            "x": 16,
+            "y": 1117.75,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1117.75,
+            "right": 374,
+            "bottom": 1189.546875,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1137.140625,
+            "width": 32,
+            "height": 32,
+            "top": 1137.140625,
+            "right": 48,
+            "bottom": 1169.140625,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1129.75,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1129.75,
+            "right": 346,
+            "bottom": 1176.546875,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1145.140625,
+            "width": 16,
+            "height": 16,
+            "top": 1145.140625,
+            "right": 374,
+            "bottom": 1161.140625,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "mortgage-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1189.546875,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1189.546875,
+            "right": 374,
+            "bottom": 1261.34375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1208.9375,
+            "width": 32,
+            "height": 32,
+            "top": 1208.9375,
+            "right": 48,
+            "bottom": 1240.9375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1201.546875,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1201.546875,
+            "right": 346,
+            "bottom": 1248.34375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1216.9375,
+            "width": 16,
+            "height": 16,
+            "top": 1216.9375,
+            "right": 374,
+            "bottom": 1232.9375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "compound-interest-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1261.34375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1261.34375,
+            "right": 374,
+            "bottom": 1333.140625,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1280.734375,
+            "width": 32,
+            "height": 32,
+            "top": 1280.734375,
+            "right": 48,
+            "bottom": 1312.734375,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1273.34375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1273.34375,
+            "right": 346,
+            "bottom": 1320.140625,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1288.734375,
+            "width": 16,
+            "height": 16,
+            "top": 1288.734375,
+            "right": 374,
+            "bottom": 1304.734375,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "budget-planner",
+          "rect": {
+            "x": 16,
+            "y": 1333.140625,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1333.140625,
+            "right": 374,
+            "bottom": 1404.9375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1352.53125,
+            "width": 32,
+            "height": 32,
+            "top": 1352.53125,
+            "right": 48,
+            "bottom": 1384.53125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1345.140625,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1345.140625,
+            "right": 346,
+            "bottom": 1391.9375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1360.53125,
+            "width": 16,
+            "height": 16,
+            "top": 1360.53125,
+            "right": 374,
+            "bottom": 1376.53125,
+            "left": 358
+          },
+          "anchors": 1
+        },
+        {
+          "id": "fire-calculator",
+          "rect": {
+            "x": 16,
+            "y": 1404.9375,
+            "width": 358,
+            "height": 71.796875,
+            "top": 1404.9375,
+            "right": 374,
+            "bottom": 1476.734375,
+            "left": 16
+          },
+          "icon": {
+            "x": 16,
+            "y": 1424.328125,
+            "width": 32,
+            "height": 32,
+            "top": 1424.328125,
+            "right": 48,
+            "bottom": 1456.328125,
+            "left": 16
+          },
+          "copy": {
+            "x": 60,
+            "y": 1416.9375,
+            "width": 286,
+            "height": 46.796875,
+            "top": 1416.9375,
+            "right": 346,
+            "bottom": 1463.734375,
+            "left": 60
+          },
+          "chevron": {
+            "x": 358,
+            "y": 1432.328125,
+            "width": 16,
+            "height": 16,
+            "top": 1432.328125,
+            "right": 374,
+            "bottom": 1448.328125,
+            "left": 358
+          },
+          "anchors": 1
+        }
+      ]
+    }
+  ],
+  "ids": [
+    "retirement-planner",
+    "mortgage-calculator",
+    "compound-interest-calculator",
+    "budget-planner",
+    "fire-calculator"
+  ],
+  "canonicalActivation": true,
+  "keyboard": true,
+  "directoryTools": 22,
+  "pageErrors": [],
+  "failedResponses": [],
+  "label": "Curated featured tools; no popularity claim or usage data implied.",
+  "limitations": "External analytics stubbed; no real-device, manual screen-reader or native toolbar zoom claim."
+}

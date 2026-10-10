@@ -3,6 +3,10 @@
 /* Results can grow; keep the landscape crop independent of the number of matches. */
 .sk-v2 .v2-coastal-picture { height: 38rem; bottom: auto; max-height: 38rem; mask-image: linear-gradient(#000 70%, transparent); }
 .sk-v2 .v2-discovery [hidden] { display: none; }
+/* Reserve the search bar before its module loads. A real directory link uses
+   that same space when JS is unavailable, so neither state shifts the panel. */
+.sk-v2 .v2-discovery { position: relative; }
+.sk-v2 .v2-discovery [data-v2-search-controls][hidden] { display: block; visibility: hidden; }
 .sk-v2 .v2-search-bar { display: flex; align-items: center; gap: .75rem; padding: .5rem 1rem; min-height: 4rem; border: 1px solid var(--v2-control-border); border-radius: var(--v2-radius-panel); background: var(--v2-surface); box-shadow: var(--v2-shadow-soft); }
 .sk-v2 .v2-search-bar:focus-within { outline: var(--v2-focus-width) solid var(--v2-focus); outline-offset: var(--v2-focus-offset); }
 .sk-v2 .v2-search-bar input { min-width: 0; width: 100%; flex: 1; min-height: var(--v2-target-size); padding: .5rem 0; border: 0; border-radius: .25rem; background: transparent; color: var(--v2-navy); font-size: 1rem; }
@@ -38,6 +42,7 @@
 /* The goal section already supplies the directory CTA. Keep it here for search
    results and unenhanced/failed-JS discovery, where it provides recovery. */
 .sk-v2 .v2-discovery:has([data-v2-search-controls]:not([hidden])):has([data-v2-questions]:not([hidden])) .v2-view-all { display: none; }
+.sk-v2 .v2-discovery:has([data-v2-search-controls][hidden]) .v2-view-all { position: absolute; inset-block-start: 0; inset-inline: 0; min-height: 3.5rem; margin: 0; padding: .5rem 1rem; background: var(--v2-surface); border: 1px solid var(--v2-border); border-radius: 1.25rem; box-shadow: var(--v2-shadow-soft); }
 @media (max-width: 47.999rem) {
   .sk-v2 .v2-discovery-panel { padding: .75rem 1rem; }
   .sk-v2 .v2-discovery-heading { font-size: .75rem; }

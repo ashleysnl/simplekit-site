@@ -254,16 +254,16 @@ Status: `[~]`. Focused composition pass after Phase 5, before later homepage pha
 - [ ] Open the temporary feature PR targeting develop-v2 and update issue #12 with verified results.
 - [ ] Obtain owner visual approval; no merge or production deployment is authorized.
 
-Evidence: [mobile comparison and iteration log](v2/mobile-fidelity-issue-12/COMPARISON.md). This task explicitly requires temporary `feature/simplekit-v2-mobile-fidelity` and a review PR into `develop-v2`; keep it unmerged until explicit approval, then return ongoing work to the authoritative development branch. Existing phase completion and remaining manual accessibility checks are preserved. The target's popular-tool rows and guided onboarding remain Phases 6/7.
+Evidence: [mobile comparison and iteration log](v2/mobile-fidelity-issue-12/COMPARISON.md). This task explicitly requires temporary `feature/simplekit-v2-mobile-fidelity` and a review PR into `develop-v2`; keep it unmerged until explicit approval, then return ongoing work to the authoritative development branch. Existing phase completion and remaining manual accessibility checks are preserved. The owner subsequently instructed Phase 6; that work continues in the same review PR. Guided onboarding remains Phase 7.
 
 ## Phase 6 — Popular calculators
 
-Status: `[ ]`. Depends on Phase 5.
+Status: `[~]`. Owner instructed implementation after the mobile-fidelity pass. Work continues on the existing temporary branch and PR #13 targeting `develop-v2`; no merge or production deployment is authorized.
 
-- [ ] Implement the five reference rows in order: Retirement Planner, Mortgage Calculator, Compound Interest Calculator, Budget Planner, FIRE Calculator.
-- [ ] Add concise factual descriptions, matching icons and chevrons, subtle row dividers and accessible link/focus states.
-- [ ] Keep “View all tools” visible and use validated tool tokens for every destination.
-- [ ] Establish evidence for the “Popular” label; use “Featured calculators” pending owner acceptance if no usage evidence supports popularity.
+- [x] Implement the five reference rows in order: Retirement Planner, Mortgage Calculator, Compound Interest Calculator, Budget Planner, FIRE Calculator.
+- [x] Add concise factual descriptions, matching icons and chevrons, subtle row dividers and accessible link/focus states.
+- [x] Keep “View all tools” visible and use validated tool tokens for every destination.
+- [x] Establish evidence for the “Popular” label; use “Featured calculators” pending owner acceptance if no usage evidence supports popularity. No popularity dataset is available; the section explicitly describes a curated selection.
 
 Acceptance:
 
@@ -271,7 +271,7 @@ Acceptance:
 - [ ] Long descriptions wrap at 320 px without hiding names/chevrons; each row has a single clear accessible link and keyboard focus indicator.
 - [ ] Visual comparison confirms the reference row hierarchy and icon treatment, while all 22 tools remain available through the directory.
 
-Codex guidance: favor semantic lists and real anchors over clickable containers. Do not add unsupported star ratings, user counts or financial outcomes. Evidence link: pending.
+Codex guidance: favor semantic lists and real anchors over clickable containers. Do not add unsupported star ratings, user counts or financial outcomes. Evidence: [Phase 6 verification](v2/phase-06-verification.md). Automated browser acceptance and isolated hosted verification are in progress; do not mark the acceptance criteria complete until those results are recorded.
 
 ## Phase 7 — Guided onboarding and calculator discovery
 
@@ -424,7 +424,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 3 Search and questions | `[~]` | [Search evidence](v2/phase-03-verification.md), [PR #10](https://github.com/ashleysnl/simplekit-site/pull/10); owner instructed Phase 4; implementation/automated checks pass, manual AT coverage pending. |
 | 4 Trust indicators | `[~]` | [Trust/privacy evidence](v2/phase-04-verification.md), [PR #11](https://github.com/ashleysnl/simplekit-site/pull/11); implementation/audit/CI pass; review and toolbar zoom remain. [Early preview uploaded](https://73147f8f.simplekit-preview.pages.dev) after owner approval; live checks limited here by certificate/403 errors. |
 | 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner-requested [demo uploaded](https://e9070fe2.simplekit-preview.pages.dev); workflow and artifact verification pass, live checks limited here by 403. Earlier manual/review limitations remain for Phase 8. |
-| 6 Popular calculators | `[ ]` | Ready after Phase 5; awaiting instruction. |
+| 6 Popular calculators | `[~]` | Owner instructed implementation; curated “Featured calculators” rows are in PR #13. [Phase 6 verification](v2/phase-06-verification.md); browser/screenshot/live checks in progress. |
 | 7 Guided onboarding | `[ ]` | Pending Phases 3, 5, 6. |
 | 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
