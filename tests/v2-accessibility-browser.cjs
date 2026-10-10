@@ -54,7 +54,7 @@ async function geometry(p, name) {
   assert.deepEqual(result.overflow,[],`${name}: clipped text glyphs`);
   for(const t of result.targets) {
     assert(t.rect.width>=43.9&&t.rect.height>=43.9,`${name}: small target ${t.name} ${t.rect.width}x${t.rect.height}`);
-    for(const g of t.glyphs)assert(g.left>=t.rect.left-.75&&g.right<=t.rect.right+.75&&g.top>=t.rect.top-.75&&g.bottom<=t.rect.bottom+.75,`${name}: clipped/overlapping control label ${t.name}`);
+    for(const g of t.glyphs)assert(g.left>=t.rect.left-.75&&g.right<=t.rect.right+.75&&g.top>=t.rect.top-.75&&g.bottom<=t.rect.bottom+.75,`${name}: clipped/overlapping control label ${t.name}: ${JSON.stringify({control:t.rect,glyph:g})}`);
   }
   return {name,width:result.width,scrollWidth:result.scrollWidth,controls:result.targets.length};
 }

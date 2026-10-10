@@ -9,6 +9,8 @@
 .v2-tools a { min-width: 2.75rem; min-height: 2.75rem; display: inline-flex; align-items: center; }
 .v2-tools :is(.content, .section, .footer-list, .article-card, .callout) { min-width: 0; overflow-wrap: anywhere; }
 .v2-tools .v2-directory-tool { display: flex; }
+.v2-home .v2-legacy-footer { overflow-wrap: anywhere; }
+.v2-home .v2-legacy-footer :is(.footer-grid, .footer-list) { min-width: 0; }
 @media (max-width: 759px) {
   .v2-tools .nav-links { grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr)); }
   .v2-tools .nav-link:last-child { grid-column: auto; }
