@@ -69,6 +69,9 @@ async function geometry(page,name){
     }
    }
    const c=await context();const p=await reference(c,'components');
+   // Axe typography probes can load an otherwise-unused font face. Warm all local
+   // faces before measuring action requests so the audit isolates input behavior.
+   await p.evaluate(async()=>Promise.all(['SimpleKit Display','SimpleKit Sans'].flatMap(family=>[400,700].map(weight=>document.fonts.load(`${weight} 16px "${family}"`)))));
    const actionRequests=[];p.on('request',r=>actionRequests.push({url:r.url(),method:r.method()}));
    await p.keyboard.press('Tab');assert(await p.locator('.v2s-skip').evaluate(n=>n===document.activeElement));await p.keyboard.press('Enter');assert(await p.locator('#main').evaluate(n=>n===document.activeElement));
    await p.locator('[data-v2s-menu]').focus();await p.keyboard.press('Enter');assert(await p.locator('.v2s-nav').isVisible());await p.keyboard.press('Tab');assert(await p.locator('.v2s-nav a').first().evaluate(n=>n===document.activeElement));
