@@ -275,7 +275,7 @@ Codex guidance: favor semantic lists and real anchors over clickable containers.
 
 ## Phase 7 — Guided onboarding and calculator discovery
 
-Status: `[~]`. Owner instructed implementation after verified Phase 6. Continue in the existing temporary PR #13; preserve all previous work and the explicit no-merge/no-production limits.
+Status: `[~]`. Implementation and local/hosted automated verification are complete. Manual screen-reader acceptance remains for Phase 8. The existing temporary PR #13 targets `develop-v2`; explicit no-merge/no-production limits remain.
 
 - [x] Implement the reference “Not sure where to start?” panel and “Get started” control, with a lightweight accessible dialog or inline step flow.
 - [x] Ask up to three optional non-sensitive questions about planning goal, immediate question and preferred level of detail; offer skip, back, close and restart.
@@ -284,12 +284,12 @@ Status: `[~]`. Owner instructed implementation after verified Phase 6. Continue 
 
 Acceptance:
 
-- [ ] Every answer path, skip path and incomplete path terminates with a relevant recommendation or all-tools fallback; back/restart/close work without stale state.
-- [ ] Flow supports keyboard and screen reader, announces step progress and restores focus on close; modal focus is contained when applicable.
-- [ ] No answers are transmitted or persisted by default; recommendations describe tools and do not promise financial conclusions.
-- [ ] Starting with retirement, housing, debt/budget or investing produces the expected documented tool IDs and working links.
+- [x] Every answer path, skip path and incomplete path terminates with a relevant recommendation or all-tools fallback; back/restart/close work without stale state.
+- [~] Flow supports keyboard and screen reader, announces step progress and restores focus on close; modal focus is contained when applicable. Native keyboard/Chromium AX checks pass for the nonmodal inline flow; manual screen-reader verification remains Phase 8.
+- [x] No answers are transmitted or persisted by default; recommendations describe tools and do not promise financial conclusions.
+- [x] Starting with retirement, housing, debt/budget or investing produces the expected documented tool IDs and working links.
 
-Codex guidance: test the mapping table and real user paths. Keep the flow optional; users can open every calculator directly. Evidence: [Phase 7 verification and mapping](v2/phase-07-verification.md). All 93 local browser paths, 24 layout/fallback states and 30 repository tests pass; hosted candidate verification is in progress. Chromium AX/keyboard coverage is automated; manual screen-reader coverage remains Phase 8.
+Codex guidance: test the mapping table and real user paths. Keep the flow optional; users can open every calculator directly. Evidence: [Phase 7 verification and mapping](v2/phase-07-verification.md). All 93 browser paths, 24 layout/fallback states, 30 repository tests and seven hosted regression suites pass. [Verified preview](https://6feb3be4.simplekit-preview.pages.dev), runtime source `9abcee3f2a6b0eb157ae5feaacfcb6598616ea1c`, [hosted run 38060246506](https://github.com/ashleysnl/simplekit-site/actions/runs/38060246506). Chromium AX/keyboard coverage is automated; manual screen-reader coverage remains Phase 8.
 
 ## Phase 8 — Responsive polish, accessibility and performance
 
@@ -425,7 +425,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 4 Trust indicators | `[~]` | [Trust/privacy evidence](v2/phase-04-verification.md), [PR #11](https://github.com/ashleysnl/simplekit-site/pull/11); implementation/audit/CI pass; review and toolbar zoom remain. [Early preview uploaded](https://73147f8f.simplekit-preview.pages.dev) after owner approval; live checks limited here by certificate/403 errors. |
 | 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner-requested [demo uploaded](https://e9070fe2.simplekit-preview.pages.dev); workflow and artifact verification pass, live checks limited here by 403. Earlier manual/review limitations remain for Phase 8. |
 | 6 Popular calculators | `[x]` | Curated “Featured calculators” rows in PR #13. [Phase 6 verification](v2/phase-06-verification.md); all local/hosted checks pass in run 38013211800. |
-| 7 Guided onboarding | `[~]` | Owner instructed implementation after Phase 6; continue in the same unmerged PR. |
+| 7 Guided onboarding | `[~]` | Implementation and local/hosted automation verified; manual screen-reader acceptance remains Phase 8. Same unmerged PR #13. |
 | 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
 | 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
