@@ -144,10 +144,13 @@ async function menu(p, screenshot) {
     // Resize with active menu link, then with active desktop link: focus stays on a visible control.
     await p.locator('.v2-menu-toggle').click(); await p.getByRole('link', { name: 'Home', exact: true }).focus();
     await p.setViewportSize({ width: 1440, height: 900 });
+    await p.waitForFunction(() => document.querySelector('[data-v2-menu-toggle]').hidden && !document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.getByRole('link', { name: 'Home', exact: true }).evaluate(n => n === document.activeElement));
     await p.setViewportSize({ width: 390, height: 900 });
+    await p.waitForFunction(() => !document.querySelector('[data-v2-menu-toggle]').hidden && document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.locator('.v2-menu-toggle').evaluate(n => n === document.activeElement));
     await p.setViewportSize({ width: 1440, height: 900 });
+    await p.waitForFunction(() => document.querySelector('[data-v2-menu-toggle]').hidden && !document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.getByRole('link', { name: 'Home', exact: true }).evaluate(n => n === document.activeElement));
     await p.screenshot({ path: path.join(output, 'homepage-full.jpg'), type: 'jpeg', quality: 80, fullPage: true });
     await c.close();
