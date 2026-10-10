@@ -71,3 +71,23 @@ Hosted iteration 5 verification: run `38010558881` passed build/SEO, 24 hosted r
 Final hosted screenshot review found “Local calculations” split inside a word at 375px in the runner's browser. The shorter truthful label “Local results” preserves the supporting “Inputs stay local” disclosure, fits both phone widths and avoids reducing type size. The trust suite now checks that each title word occupies a single line fragment, including enlarged-text and fallback layouts. All nine local layouts/privacy checks and 28 repository tests pass after this refinement.
 
 The owner subsequently instructed roadmap Phase 6. The five featured calculator rows are now being implemented in the same temporary review branch; the statement above about their deferred scope describes the initial fidelity pass. Guided onboarding remains Phase 7. A reproducible delayed-module check exposed discovery enhancement shifting the panel by 56px: reserved search space now hosts a real directory link until the module is ready. All original CLS/keyboard/fallback assertions remain in force; the current local delayed-font/image/module result is CLS 0. Final hosted evidence will supersede the earlier partial runs.
+
+## Verified live comparison
+
+Combined fidelity and Phase 6 candidate: [48daf1d5 preview](https://48daf1d5.simplekit-preview.pages.dev), source `5532bfa2ea1d1d79df04fb7a5dd85ac2f8d577ec`. [Run 38013211800](https://github.com/ashleysnl/simplekit-site/actions/runs/38013211800) passes build/SEO, secure before/after captures, HTTP/indexing checks and every hosted browser suite, including all 22 calculator fixtures. Delayed font/image/discovery-module CLS is 0. Local console/network audit across 24 routes records no errors or failed requests.
+
+| Viewport | Live goals before | Live goals after |
+| --- | --- | --- |
+| 375px | 1447px | 706px |
+| 390px | 1425px | 708px |
+| 768px | 1248px | 954px |
+| 1440px | 1249px | 1022px |
+
+| Width | Before | After |
+| --- | --- | --- |
+| 375px | [Screenshot](hosted-before/home-375.jpg) | [Screenshot](hosted-after/home-375.jpg) |
+| 390px | [Screenshot](hosted-before/home-390.jpg) | [Screenshot](hosted-after/home-390.jpg) |
+| 768px | [Screenshot](hosted-before/home-768.jpg) | [Screenshot](hosted-after/home-768.jpg) |
+| 1440px | [Screenshot](hosted-before/home-1440.jpg) | [Screenshot](hosted-after/home-1440.jpg) |
+
+The five calculator rows are now implemented and verified in Phase 6. Intentional differences remain: readable type/44px controls increase height relative to the scaled raster; the existing coast differs from the reference photo; goal names wrap between words; privacy qualification remains visibly below discovery sections; “Featured” avoids an unsupported popularity claim. Guided onboarding is the owner-authorized next Phase 7 work. Manual screen-reader/native-toolbar/real-device coverage and owner visual approval remain pending.

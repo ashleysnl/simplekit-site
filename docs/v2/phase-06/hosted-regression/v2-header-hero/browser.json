@@ -1,0 +1,3117 @@
+{
+  "browser": "141.0.7390.37",
+  "results": [
+    {
+      "width": 320,
+      "viewport": 320,
+      "scrollWidth": 320,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 288,
+        "height": 84.984375,
+        "top": 0,
+        "right": 304,
+        "bottom": 84.984375,
+        "left": 16
+      },
+      "hero": {
+        "x": 0,
+        "y": 84.984375,
+        "width": 320,
+        "height": 651.921875,
+        "top": 84.984375,
+        "right": 320,
+        "bottom": 736.90625,
+        "left": 0
+      },
+      "headline": {
+        "x": 16,
+        "y": 128.484375,
+        "width": 240,
+        "height": 103.640625,
+        "top": 128.484375,
+        "right": 256,
+        "bottom": 232.125,
+        "left": 16
+      },
+      "textRects": [
+        {
+          "x": 16,
+          "y": 127.484375,
+          "width": 194.09375,
+          "height": 36,
+          "top": 127.484375,
+          "right": 210.09375,
+          "bottom": 163.484375,
+          "left": 16
+        },
+        {
+          "x": 16,
+          "y": 162.03125,
+          "width": 111.921875,
+          "height": 36,
+          "top": 162.03125,
+          "right": 127.921875,
+          "bottom": 198.03125,
+          "left": 16
+        },
+        {
+          "x": 16,
+          "y": 196.578125,
+          "width": 126.6875,
+          "height": 36,
+          "top": 196.578125,
+          "right": 142.6875,
+          "bottom": 232.578125,
+          "left": 16
+        }
+      ],
+      "body": {
+        "x": 16,
+        "y": 246.125,
+        "width": 240,
+        "height": 102,
+        "top": 246.125,
+        "right": 256,
+        "bottom": 348.125,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 368.125,
+        "width": 288,
+        "height": 344.78125,
+        "top": 368.125,
+        "right": 304,
+        "bottom": 712.90625,
+        "left": 16
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-400.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 343,
+        "height": 84.984375,
+        "top": 0,
+        "right": 359,
+        "bottom": 84.984375,
+        "left": 16
+      },
+      "hero": {
+        "x": 0,
+        "y": 84.984375,
+        "width": 375,
+        "height": 525.09375,
+        "top": 84.984375,
+        "right": 375,
+        "bottom": 610.078125,
+        "left": 0
+      },
+      "headline": {
+        "x": 16,
+        "y": 128.484375,
+        "width": 284,
+        "height": 69.09375,
+        "top": 128.484375,
+        "right": 300,
+        "bottom": 197.578125,
+        "left": 16
+      },
+      "textRects": [
+        {
+          "x": 16,
+          "y": 127.484375,
+          "width": 194.09375,
+          "height": 36,
+          "top": 127.484375,
+          "right": 210.09375,
+          "bottom": 163.484375,
+          "left": 16
+        },
+        {
+          "x": 16,
+          "y": 162.03125,
+          "width": 245.484375,
+          "height": 36,
+          "top": 162.03125,
+          "right": 261.484375,
+          "bottom": 198.03125,
+          "left": 16
+        }
+      ],
+      "body": {
+        "x": 16,
+        "y": 211.578125,
+        "width": 261,
+        "height": 76.5,
+        "top": 211.578125,
+        "right": 277,
+        "bottom": 288.078125,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 308.078125,
+        "width": 343,
+        "height": 278,
+        "top": 308.078125,
+        "right": 359,
+        "bottom": 586.078125,
+        "left": 16
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-400.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 358,
+        "height": 84.984375,
+        "top": 0,
+        "right": 374,
+        "bottom": 84.984375,
+        "left": 16
+      },
+      "hero": {
+        "x": 0,
+        "y": 84.984375,
+        "width": 390,
+        "height": 527.59375,
+        "top": 84.984375,
+        "right": 390,
+        "bottom": 612.578125,
+        "left": 0
+      },
+      "headline": {
+        "x": 16,
+        "y": 128.484375,
+        "width": 296,
+        "height": 71.59375,
+        "top": 128.484375,
+        "right": 312,
+        "bottom": 200.078125,
+        "left": 16
+      },
+      "textRects": [
+        {
+          "x": 16,
+          "y": 127.484375,
+          "width": 200.4375,
+          "height": 37,
+          "top": 127.484375,
+          "right": 216.4375,
+          "bottom": 164.484375,
+          "left": 16
+        },
+        {
+          "x": 16,
+          "y": 163.28125,
+          "width": 255.640625,
+          "height": 37,
+          "top": 163.28125,
+          "right": 271.640625,
+          "bottom": 200.28125,
+          "left": 16
+        }
+      ],
+      "body": {
+        "x": 16,
+        "y": 214.078125,
+        "width": 261,
+        "height": 76.5,
+        "top": 214.078125,
+        "right": 277,
+        "bottom": 290.578125,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 310.578125,
+        "width": 358,
+        "height": 278,
+        "top": 310.578125,
+        "right": 374,
+        "bottom": 588.578125,
+        "left": 16
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-400.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 400,
+      "viewport": 400,
+      "scrollWidth": 400,
+      "header": {
+        "x": 16,
+        "y": 0,
+        "width": 368,
+        "height": 84.984375,
+        "top": 0,
+        "right": 384,
+        "bottom": 84.984375,
+        "left": 16
+      },
+      "hero": {
+        "x": 0,
+        "y": 84.984375,
+        "width": 400,
+        "height": 529.4375,
+        "top": 84.984375,
+        "right": 400,
+        "bottom": 614.421875,
+        "left": 0
+      },
+      "headline": {
+        "x": 16,
+        "y": 128.484375,
+        "width": 304,
+        "height": 73.4375,
+        "top": 128.484375,
+        "right": 320,
+        "bottom": 201.921875,
+        "left": 16
+      },
+      "textRects": [
+        {
+          "x": 16,
+          "y": 127.484375,
+          "width": 203.96875,
+          "height": 37,
+          "top": 127.484375,
+          "right": 219.96875,
+          "bottom": 164.484375,
+          "left": 16
+        },
+        {
+          "x": 16,
+          "y": 164.203125,
+          "width": 261.015625,
+          "height": 37,
+          "top": 164.203125,
+          "right": 277.015625,
+          "bottom": 201.203125,
+          "left": 16
+        }
+      ],
+      "body": {
+        "x": 16,
+        "y": 215.921875,
+        "width": 261,
+        "height": 76.5,
+        "top": 215.921875,
+        "right": 277,
+        "bottom": 292.421875,
+        "left": 16
+      },
+      "discovery": {
+        "x": 16,
+        "y": 312.421875,
+        "width": 368,
+        "height": 278,
+        "top": 312.421875,
+        "right": 384,
+        "bottom": 590.421875,
+        "left": 16
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-400.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 480,
+      "viewport": 480,
+      "scrollWidth": 480,
+      "header": {
+        "x": 19.203125,
+        "y": 0,
+        "width": 441.59375,
+        "height": 84.984375,
+        "top": 0,
+        "right": 460.796875,
+        "bottom": 84.984375,
+        "left": 19.203125
+      },
+      "hero": {
+        "x": 0,
+        "y": 84.984375,
+        "width": 480,
+        "height": 542.375,
+        "top": 84.984375,
+        "right": 480,
+        "bottom": 627.359375,
+        "left": 0
+      },
+      "headline": {
+        "x": 19.203125,
+        "y": 128.484375,
+        "width": 364.796875,
+        "height": 86.375,
+        "top": 128.484375,
+        "right": 384,
+        "bottom": 214.859375,
+        "left": 19.203125
+      },
+      "textRects": [
+        {
+          "x": 19.203125,
+          "y": 127.484375,
+          "width": 241.609375,
+          "height": 45,
+          "top": 127.484375,
+          "right": 260.8125,
+          "bottom": 172.484375,
+          "left": 19.203125
+        },
+        {
+          "x": 19.203125,
+          "y": 170.671875,
+          "width": 309.609375,
+          "height": 45,
+          "top": 170.671875,
+          "right": 328.8125,
+          "bottom": 215.671875,
+          "left": 19.203125
+        }
+      ],
+      "body": {
+        "x": 19.203125,
+        "y": 228.859375,
+        "width": 261,
+        "height": 76.5,
+        "top": 228.859375,
+        "right": 280.203125,
+        "bottom": 305.359375,
+        "left": 19.203125
+      },
+      "discovery": {
+        "x": 19.203125,
+        "y": 325.359375,
+        "width": 441.59375,
+        "height": 278,
+        "top": 325.359375,
+        "right": 460.796875,
+        "bottom": 603.359375,
+        "left": 19.203125
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-800.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 560,
+      "viewport": 560,
+      "scrollWidth": 560,
+      "header": {
+        "x": 22.40625,
+        "y": 0,
+        "width": 515.1875,
+        "height": 84.984375,
+        "top": 0,
+        "right": 537.59375,
+        "bottom": 84.984375,
+        "left": 22.40625
+      },
+      "hero": {
+        "x": 0,
+        "y": 84.984375,
+        "width": 560,
+        "height": 542.375,
+        "top": 84.984375,
+        "right": 560,
+        "bottom": 627.359375,
+        "left": 0
+      },
+      "headline": {
+        "x": 22.40625,
+        "y": 128.484375,
+        "width": 400,
+        "height": 86.375,
+        "top": 128.484375,
+        "right": 422.40625,
+        "bottom": 214.859375,
+        "left": 22.40625
+      },
+      "textRects": [
+        {
+          "x": 22.40625,
+          "y": 127.484375,
+          "width": 241.609375,
+          "height": 45,
+          "top": 127.484375,
+          "right": 264.015625,
+          "bottom": 172.484375,
+          "left": 22.40625
+        },
+        {
+          "x": 22.40625,
+          "y": 170.671875,
+          "width": 309.609375,
+          "height": 45,
+          "top": 170.671875,
+          "right": 332.015625,
+          "bottom": 215.671875,
+          "left": 22.40625
+        }
+      ],
+      "body": {
+        "x": 22.40625,
+        "y": 228.859375,
+        "width": 261,
+        "height": 76.5,
+        "top": 228.859375,
+        "right": 283.40625,
+        "bottom": 305.359375,
+        "left": 22.40625
+      },
+      "discovery": {
+        "x": 22.40625,
+        "y": 325.359375,
+        "width": 515.1875,
+        "height": 278,
+        "top": 325.359375,
+        "right": 537.59375,
+        "bottom": 603.359375,
+        "left": 22.40625
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-800.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "viewport": 640,
+      "scrollWidth": 640,
+      "header": {
+        "x": 25.59375,
+        "y": 0,
+        "width": 588.796875,
+        "height": 85.984375,
+        "top": 0,
+        "right": 614.390625,
+        "bottom": 85.984375,
+        "left": 25.59375
+      },
+      "hero": {
+        "x": 0,
+        "y": 85.984375,
+        "width": 640,
+        "height": 542.375,
+        "top": 85.984375,
+        "right": 640,
+        "bottom": 628.359375,
+        "left": 0
+      },
+      "headline": {
+        "x": 25.59375,
+        "y": 129.484375,
+        "width": 400,
+        "height": 86.375,
+        "top": 129.484375,
+        "right": 425.59375,
+        "bottom": 215.859375,
+        "left": 25.59375
+      },
+      "textRects": [
+        {
+          "x": 25.59375,
+          "y": 128.484375,
+          "width": 241.609375,
+          "height": 45,
+          "top": 128.484375,
+          "right": 267.203125,
+          "bottom": 173.484375,
+          "left": 25.59375
+        },
+        {
+          "x": 25.59375,
+          "y": 171.671875,
+          "width": 309.609375,
+          "height": 45,
+          "top": 171.671875,
+          "right": 335.203125,
+          "bottom": 216.671875,
+          "left": 25.59375
+        }
+      ],
+      "body": {
+        "x": 25.59375,
+        "y": 229.859375,
+        "width": 261,
+        "height": 76.5,
+        "top": 229.859375,
+        "right": 286.59375,
+        "bottom": 306.359375,
+        "left": 25.59375
+      },
+      "discovery": {
+        "x": 25.59375,
+        "y": 326.359375,
+        "width": 588.796875,
+        "height": 278,
+        "top": 326.359375,
+        "right": 614.390625,
+        "bottom": 604.359375,
+        "left": 25.59375
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-800.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 720,
+      "viewport": 720,
+      "scrollWidth": 720,
+      "header": {
+        "x": 28.796875,
+        "y": 0,
+        "width": 662.390625,
+        "height": 85.984375,
+        "top": 0,
+        "right": 691.1875,
+        "bottom": 85.984375,
+        "left": 28.796875
+      },
+      "hero": {
+        "x": 0,
+        "y": 85.984375,
+        "width": 720,
+        "height": 542.375,
+        "top": 85.984375,
+        "right": 720,
+        "bottom": 628.359375,
+        "left": 0
+      },
+      "headline": {
+        "x": 28.796875,
+        "y": 129.484375,
+        "width": 400,
+        "height": 86.375,
+        "top": 129.484375,
+        "right": 428.796875,
+        "bottom": 215.859375,
+        "left": 28.796875
+      },
+      "textRects": [
+        {
+          "x": 28.796875,
+          "y": 128.484375,
+          "width": 241.609375,
+          "height": 45,
+          "top": 128.484375,
+          "right": 270.40625,
+          "bottom": 173.484375,
+          "left": 28.796875
+        },
+        {
+          "x": 28.796875,
+          "y": 171.671875,
+          "width": 309.609375,
+          "height": 45,
+          "top": 171.671875,
+          "right": 338.40625,
+          "bottom": 216.671875,
+          "left": 28.796875
+        }
+      ],
+      "body": {
+        "x": 28.796875,
+        "y": 229.859375,
+        "width": 261,
+        "height": 76.5,
+        "top": 229.859375,
+        "right": 289.796875,
+        "bottom": 306.359375,
+        "left": 28.796875
+      },
+      "discovery": {
+        "x": 28.796875,
+        "y": 326.359375,
+        "width": 662.390625,
+        "height": 278,
+        "top": 326.359375,
+        "right": 691.1875,
+        "bottom": 604.359375,
+        "left": 28.796875
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-800.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "header": {
+        "x": 30.71875,
+        "y": 0,
+        "width": 706.546875,
+        "height": 101.421875,
+        "top": 0,
+        "right": 737.265625,
+        "bottom": 101.421875,
+        "left": 30.71875
+      },
+      "hero": {
+        "x": 0,
+        "y": 101.421875,
+        "width": 768,
+        "height": 716.546875,
+        "top": 101.421875,
+        "right": 768,
+        "bottom": 817.96875,
+        "left": 0
+      },
+      "headline": {
+        "x": 30.71875,
+        "y": 175.3125,
+        "width": 486,
+        "height": 116.71875,
+        "top": 175.3125,
+        "right": 516.71875,
+        "bottom": 292.03125,
+        "left": 30.71875
+      },
+      "textRects": [
+        {
+          "x": 30.71875,
+          "y": 174.3125,
+          "width": 332.0625,
+          "height": 60,
+          "top": 174.3125,
+          "right": 362.78125,
+          "bottom": 234.3125,
+          "left": 30.71875
+        },
+        {
+          "x": 30.71875,
+          "y": 232.671875,
+          "width": 423.953125,
+          "height": 60,
+          "top": 232.671875,
+          "right": 454.671875,
+          "bottom": 292.671875,
+          "left": 30.71875
+        }
+      ],
+      "body": {
+        "x": 30.71875,
+        "y": 316.03125,
+        "width": 396,
+        "height": 93,
+        "top": 316.03125,
+        "right": 426.71875,
+        "bottom": 409.03125,
+        "left": 30.71875
+      },
+      "discovery": {
+        "x": 30.71875,
+        "y": 441.03125,
+        "width": 706.546875,
+        "height": 296.9375,
+        "top": 441.03125,
+        "right": 737.265625,
+        "bottom": 737.96875,
+        "left": 30.71875
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-768.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 800,
+      "viewport": 800,
+      "scrollWidth": 800,
+      "header": {
+        "x": 32,
+        "y": 0,
+        "width": 736,
+        "height": 102.390625,
+        "top": 0,
+        "right": 768,
+        "bottom": 102.390625,
+        "left": 32
+      },
+      "hero": {
+        "x": 0,
+        "y": 102.390625,
+        "width": 800,
+        "height": 721.21875,
+        "top": 102.390625,
+        "right": 800,
+        "bottom": 823.609375,
+        "left": 0
+      },
+      "headline": {
+        "x": 32,
+        "y": 177.890625,
+        "width": 504,
+        "height": 119.21875,
+        "top": 177.890625,
+        "right": 536,
+        "bottom": 297.109375,
+        "left": 32
+      },
+      "textRects": [
+        {
+          "x": 32,
+          "y": 176.890625,
+          "width": 336.515625,
+          "height": 61,
+          "top": 176.890625,
+          "right": 368.515625,
+          "bottom": 237.890625,
+          "left": 32
+        },
+        {
+          "x": 32,
+          "y": 236.5,
+          "width": 428.234375,
+          "height": 61,
+          "top": 236.5,
+          "right": 460.234375,
+          "bottom": 297.5,
+          "left": 32
+        }
+      ],
+      "body": {
+        "x": 32,
+        "y": 321.109375,
+        "width": 396,
+        "height": 93.5625,
+        "top": 321.109375,
+        "right": 428,
+        "bottom": 414.671875,
+        "left": 32
+      },
+      "discovery": {
+        "x": 32,
+        "y": 446.671875,
+        "width": 736,
+        "height": 296.9375,
+        "top": 446.671875,
+        "right": 768,
+        "bottom": 743.609375,
+        "left": 32
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 880,
+      "viewport": 880,
+      "scrollWidth": 880,
+      "header": {
+        "x": 35.203125,
+        "y": 0,
+        "width": 809.59375,
+        "height": 102.390625,
+        "top": 0,
+        "right": 844.796875,
+        "bottom": 102.390625,
+        "left": 35.203125
+      },
+      "hero": {
+        "x": 0,
+        "y": 102.390625,
+        "width": 880,
+        "height": 732.9375,
+        "top": 102.390625,
+        "right": 880,
+        "bottom": 835.328125,
+        "left": 0
+      },
+      "headline": {
+        "x": 35.203125,
+        "y": 181.890625,
+        "width": 522,
+        "height": 125.4375,
+        "top": 181.890625,
+        "right": 557.203125,
+        "bottom": 307.328125,
+        "left": 35.203125
+      },
+      "textRects": [
+        {
+          "x": 35.203125,
+          "y": 179.890625,
+          "width": 356.125,
+          "height": 65,
+          "top": 179.890625,
+          "right": 391.328125,
+          "bottom": 244.890625,
+          "left": 35.203125
+        },
+        {
+          "x": 35.203125,
+          "y": 242.609375,
+          "width": 456.421875,
+          "height": 65,
+          "top": 242.609375,
+          "right": 491.625,
+          "bottom": 307.609375,
+          "left": 35.203125
+        }
+      ],
+      "body": {
+        "x": 35.203125,
+        "y": 331.328125,
+        "width": 396,
+        "height": 95.0625,
+        "top": 331.328125,
+        "right": 431.203125,
+        "bottom": 426.390625,
+        "left": 35.203125
+      },
+      "discovery": {
+        "x": 35.203125,
+        "y": 458.390625,
+        "width": 809.59375,
+        "height": 296.9375,
+        "top": 458.390625,
+        "right": 844.796875,
+        "bottom": 755.328125,
+        "left": 35.203125
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 899,
+      "viewport": 899,
+      "scrollWidth": 899,
+      "header": {
+        "x": 35.953125,
+        "y": 0,
+        "width": 827.078125,
+        "height": 102.4375,
+        "top": 0,
+        "right": 863.03125,
+        "bottom": 102.4375,
+        "left": 35.953125
+      },
+      "hero": {
+        "x": 0,
+        "y": 102.4375,
+        "width": 899,
+        "height": 735.671875,
+        "top": 102.4375,
+        "right": 899,
+        "bottom": 838.109375,
+        "left": 0
+      },
+      "headline": {
+        "x": 35.953125,
+        "y": 182.875,
+        "width": 540,
+        "height": 126.90625,
+        "top": 182.875,
+        "right": 575.953125,
+        "bottom": 309.78125,
+        "left": 35.953125
+      },
+      "textRects": [
+        {
+          "x": 35.953125,
+          "y": 181.875,
+          "width": 362.796875,
+          "height": 65,
+          "top": 181.875,
+          "right": 398.75,
+          "bottom": 246.875,
+          "left": 35.953125
+        },
+        {
+          "x": 35.953125,
+          "y": 245.328125,
+          "width": 462.984375,
+          "height": 65,
+          "top": 245.328125,
+          "right": 498.9375,
+          "bottom": 310.328125,
+          "left": 35.953125
+        }
+      ],
+      "body": {
+        "x": 35.953125,
+        "y": 333.78125,
+        "width": 396,
+        "height": 95.390625,
+        "top": 333.78125,
+        "right": 431.953125,
+        "bottom": 429.171875,
+        "left": 35.953125
+      },
+      "discovery": {
+        "x": 35.953125,
+        "y": 461.171875,
+        "width": 827.078125,
+        "height": 296.9375,
+        "top": 461.171875,
+        "right": 863.03125,
+        "bottom": 758.109375,
+        "left": 35.953125
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 900,
+      "viewport": 900,
+      "scrollWidth": 900,
+      "header": {
+        "x": 36,
+        "y": 0,
+        "width": 828,
+        "height": 102.4375,
+        "top": 0,
+        "right": 864,
+        "bottom": 102.4375,
+        "left": 36
+      },
+      "hero": {
+        "x": 0,
+        "y": 102.4375,
+        "width": 900,
+        "height": 735.828125,
+        "top": 102.4375,
+        "right": 900,
+        "bottom": 838.265625,
+        "left": 0
+      },
+      "headline": {
+        "x": 36,
+        "y": 182.9375,
+        "width": 540,
+        "height": 127,
+        "top": 182.9375,
+        "right": 576,
+        "bottom": 309.9375,
+        "left": 36
+      },
+      "textRects": [
+        {
+          "x": 36,
+          "y": 181.9375,
+          "width": 362.78125,
+          "height": 65,
+          "top": 181.9375,
+          "right": 398.78125,
+          "bottom": 246.9375,
+          "left": 36
+        },
+        {
+          "x": 36,
+          "y": 245.4375,
+          "width": 462.96875,
+          "height": 65,
+          "top": 245.4375,
+          "right": 498.96875,
+          "bottom": 310.4375,
+          "left": 36
+        }
+      ],
+      "body": {
+        "x": 36,
+        "y": 333.9375,
+        "width": 396,
+        "height": 95.390625,
+        "top": 333.9375,
+        "right": 432,
+        "bottom": 429.328125,
+        "left": 36
+      },
+      "discovery": {
+        "x": 36,
+        "y": 461.328125,
+        "width": 828,
+        "height": 296.9375,
+        "top": 461.328125,
+        "right": 864,
+        "bottom": 758.265625,
+        "left": 36
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 960,
+      "viewport": 960,
+      "scrollWidth": 960,
+      "header": {
+        "x": 38.40625,
+        "y": 0,
+        "width": 883.1875,
+        "height": 103.390625,
+        "top": 0,
+        "right": 921.59375,
+        "bottom": 103.390625,
+        "left": 38.40625
+      },
+      "hero": {
+        "x": 0,
+        "y": 103.390625,
+        "width": 960,
+        "height": 744.5625,
+        "top": 103.390625,
+        "right": 960,
+        "bottom": 847.953125,
+        "left": 0
+      },
+      "headline": {
+        "x": 38.40625,
+        "y": 186.890625,
+        "width": 558,
+        "height": 131.65625,
+        "top": 186.890625,
+        "right": 596.40625,
+        "bottom": 318.546875,
+        "left": 38.40625
+      },
+      "textRects": [
+        {
+          "x": 38.40625,
+          "y": 185.890625,
+          "width": 374.75,
+          "height": 67,
+          "top": 185.890625,
+          "right": 413.15625,
+          "bottom": 252.890625,
+          "left": 38.40625
+        },
+        {
+          "x": 38.40625,
+          "y": 251.71875,
+          "width": 477.609375,
+          "height": 67,
+          "top": 251.71875,
+          "right": 516.015625,
+          "bottom": 318.71875,
+          "left": 38.40625
+        }
+      ],
+      "body": {
+        "x": 38.40625,
+        "y": 342.546875,
+        "width": 396,
+        "height": 96.46875,
+        "top": 342.546875,
+        "right": 434.40625,
+        "bottom": 439.015625,
+        "left": 38.40625
+      },
+      "discovery": {
+        "x": 38.40625,
+        "y": 471.015625,
+        "width": 832,
+        "height": 296.9375,
+        "top": 471.015625,
+        "right": 870.40625,
+        "bottom": 767.953125,
+        "left": 38.40625
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "header": {
+        "x": 40.953125,
+        "y": 0,
+        "width": 942.078125,
+        "height": 103.40625,
+        "top": 0,
+        "right": 983.03125,
+        "bottom": 103.40625,
+        "left": 40.953125
+      },
+      "hero": {
+        "x": 0,
+        "y": 103.40625,
+        "width": 1024,
+        "height": 822.203125,
+        "top": 103.40625,
+        "right": 1024,
+        "bottom": 925.609375,
+        "left": 0
+      },
+      "headline": {
+        "x": 40.953125,
+        "y": 190.09375,
+        "width": 489.875,
+        "height": 204.9375,
+        "top": 190.09375,
+        "right": 530.828125,
+        "bottom": 395.03125,
+        "left": 40.953125
+      },
+      "textRects": [
+        {
+          "x": 40.953125,
+          "y": 189.09375,
+          "width": 389.640625,
+          "height": 70,
+          "top": 189.09375,
+          "right": 430.59375,
+          "bottom": 259.09375,
+          "left": 40.953125
+        },
+        {
+          "x": 40.953125,
+          "y": 257.40625,
+          "width": 226.921875,
+          "height": 70,
+          "top": 257.40625,
+          "right": 267.875,
+          "bottom": 327.40625,
+          "left": 40.953125
+        },
+        {
+          "x": 40.953125,
+          "y": 325.71875,
+          "width": 256.125,
+          "height": 70,
+          "top": 325.71875,
+          "right": 297.078125,
+          "bottom": 395.71875,
+          "left": 40.953125
+        }
+      ],
+      "body": {
+        "x": 40.953125,
+        "y": 419.03125,
+        "width": 396,
+        "height": 97.640625,
+        "top": 419.03125,
+        "right": 436.953125,
+        "bottom": 516.671875,
+        "left": 40.953125
+      },
+      "discovery": {
+        "x": 40.953125,
+        "y": 548.671875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 548.671875,
+        "right": 872.953125,
+        "bottom": 845.609375,
+        "left": 40.953125
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1040,
+      "viewport": 1040,
+      "scrollWidth": 1040,
+      "header": {
+        "x": 41.59375,
+        "y": 0,
+        "width": 956.796875,
+        "height": 103.515625,
+        "top": 0,
+        "right": 998.390625,
+        "bottom": 103.515625,
+        "left": 41.59375
+      },
+      "hero": {
+        "x": 0,
+        "y": 103.515625,
+        "width": 1040,
+        "height": 825.171875,
+        "top": 103.515625,
+        "right": 1040,
+        "bottom": 928.6875,
+        "left": 0
+      },
+      "headline": {
+        "x": 41.59375,
+        "y": 191.015625,
+        "width": 497.53125,
+        "height": 206.8125,
+        "top": 191.015625,
+        "right": 539.125,
+        "bottom": 397.828125,
+        "left": 41.59375
+      },
+      "textRects": [
+        {
+          "x": 41.59375,
+          "y": 189.015625,
+          "width": 392.359375,
+          "height": 71,
+          "top": 189.015625,
+          "right": 433.953125,
+          "bottom": 260.015625,
+          "left": 41.59375
+        },
+        {
+          "x": 41.59375,
+          "y": 257.953125,
+          "width": 228.765625,
+          "height": 71,
+          "top": 257.953125,
+          "right": 270.359375,
+          "bottom": 328.953125,
+          "left": 41.59375
+        },
+        {
+          "x": 41.59375,
+          "y": 326.890625,
+          "width": 256.9375,
+          "height": 71,
+          "top": 326.890625,
+          "right": 298.53125,
+          "bottom": 397.890625,
+          "left": 41.59375
+        }
+      ],
+      "body": {
+        "x": 41.59375,
+        "y": 421.828125,
+        "width": 396,
+        "height": 97.921875,
+        "top": 421.828125,
+        "right": 437.59375,
+        "bottom": 519.75,
+        "left": 41.59375
+      },
+      "discovery": {
+        "x": 41.59375,
+        "y": 551.75,
+        "width": 832,
+        "height": 296.9375,
+        "top": 551.75,
+        "right": 873.59375,
+        "bottom": 848.6875,
+        "left": 41.59375
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1120,
+      "viewport": 1120,
+      "scrollWidth": 1120,
+      "header": {
+        "x": 44.796875,
+        "y": 0,
+        "width": 1030.390625,
+        "height": 104.390625,
+        "top": 0,
+        "right": 1075.1875,
+        "bottom": 104.390625,
+        "left": 44.796875
+      },
+      "hero": {
+        "x": 0,
+        "y": 104.390625,
+        "width": 1120,
+        "height": 767.53125,
+        "top": 104.390625,
+        "right": 1120,
+        "bottom": 871.921875,
+        "left": 0
+      },
+      "headline": {
+        "x": 44.796875,
+        "y": 195.890625,
+        "width": 535.796875,
+        "height": 144.09375,
+        "top": 195.890625,
+        "right": 580.59375,
+        "bottom": 339.984375,
+        "left": 44.796875
+      },
+      "textRects": [
+        {
+          "x": 44.796875,
+          "y": 194.890625,
+          "width": 413.984375,
+          "height": 73,
+          "top": 194.890625,
+          "right": 458.78125,
+          "bottom": 267.890625,
+          "left": 44.796875
+        },
+        {
+          "x": 44.796875,
+          "y": 266.9375,
+          "width": 526.96875,
+          "height": 73,
+          "top": 266.9375,
+          "right": 571.765625,
+          "bottom": 339.9375,
+          "left": 44.796875
+        }
+      ],
+      "body": {
+        "x": 44.796875,
+        "y": 363.984375,
+        "width": 396,
+        "height": 99,
+        "top": 363.984375,
+        "right": 440.796875,
+        "bottom": 462.984375,
+        "left": 44.796875
+      },
+      "discovery": {
+        "x": 44.796875,
+        "y": 494.984375,
+        "width": 832,
+        "height": 296.9375,
+        "top": 494.984375,
+        "right": 876.796875,
+        "bottom": 791.921875,
+        "left": 44.796875
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1200,
+      "viewport": 1200,
+      "scrollWidth": 1200,
+      "header": {
+        "x": 48,
+        "y": 0,
+        "width": 1104,
+        "height": 104.734375,
+        "top": 0,
+        "right": 1152,
+        "bottom": 104.734375,
+        "left": 48
+      },
+      "hero": {
+        "x": 0,
+        "y": 104.734375,
+        "width": 1200,
+        "height": 777.75,
+        "top": 104.734375,
+        "right": 1200,
+        "bottom": 882.484375,
+        "left": 0
+      },
+      "headline": {
+        "x": 48,
+        "y": 200.234375,
+        "width": 574.078125,
+        "height": 150.3125,
+        "top": 200.234375,
+        "right": 622.078125,
+        "bottom": 350.546875,
+        "left": 48
+      },
+      "textRects": [
+        {
+          "x": 48,
+          "y": 199.234375,
+          "width": 428.59375,
+          "height": 77,
+          "top": 199.234375,
+          "right": 476.59375,
+          "bottom": 276.234375,
+          "left": 48
+        },
+        {
+          "x": 48,
+          "y": 274.390625,
+          "width": 547.15625,
+          "height": 77,
+          "top": 274.390625,
+          "right": 595.15625,
+          "bottom": 351.390625,
+          "left": 48
+        }
+      ],
+      "body": {
+        "x": 48,
+        "y": 374.546875,
+        "width": 396,
+        "height": 99,
+        "top": 374.546875,
+        "right": 444,
+        "bottom": 473.546875,
+        "left": 48
+      },
+      "discovery": {
+        "x": 48,
+        "y": 505.546875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 505.546875,
+        "right": 880,
+        "bottom": 802.484375,
+        "left": 48
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "viewport": 1280,
+      "scrollWidth": 1280,
+      "header": {
+        "x": 64,
+        "y": 0,
+        "width": 1152,
+        "height": 105.390625,
+        "top": 0,
+        "right": 1216,
+        "bottom": 105.390625,
+        "left": 64
+      },
+      "hero": {
+        "x": 0,
+        "y": 105.390625,
+        "width": 1280,
+        "height": 788,
+        "top": 105.390625,
+        "right": 1280,
+        "bottom": 893.390625,
+        "left": 0
+      },
+      "headline": {
+        "x": 64,
+        "y": 204.890625,
+        "width": 599.03125,
+        "height": 156.5625,
+        "top": 204.890625,
+        "right": 663.03125,
+        "bottom": 361.453125,
+        "left": 64
+      },
+      "textRects": [
+        {
+          "x": 64,
+          "y": 202.890625,
+          "width": 442.21875,
+          "height": 81,
+          "top": 202.890625,
+          "right": 506.21875,
+          "bottom": 283.890625,
+          "left": 64
+        },
+        {
+          "x": 64,
+          "y": 281.171875,
+          "width": 563.34375,
+          "height": 81,
+          "top": 281.171875,
+          "right": 627.34375,
+          "bottom": 362.171875,
+          "left": 64
+        }
+      ],
+      "body": {
+        "x": 64,
+        "y": 385.453125,
+        "width": 396,
+        "height": 99,
+        "top": 385.453125,
+        "right": 460,
+        "bottom": 484.453125,
+        "left": 64
+      },
+      "discovery": {
+        "x": 64,
+        "y": 516.453125,
+        "width": 832,
+        "height": 296.9375,
+        "top": 516.453125,
+        "right": 896,
+        "bottom": 813.390625,
+        "left": 64
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1360,
+      "viewport": 1360,
+      "scrollWidth": 1360,
+      "header": {
+        "x": 104,
+        "y": 0,
+        "width": 1152,
+        "height": 105.984375,
+        "top": 0,
+        "right": 1256,
+        "bottom": 105.984375,
+        "left": 104
+      },
+      "hero": {
+        "x": 0,
+        "y": 105.984375,
+        "width": 1360,
+        "height": 794.1875,
+        "top": 105.984375,
+        "right": 1360,
+        "bottom": 900.171875,
+        "left": 0
+      },
+      "headline": {
+        "x": 104,
+        "y": 205.484375,
+        "width": 599.03125,
+        "height": 162.75,
+        "top": 205.484375,
+        "right": 703.03125,
+        "bottom": 368.234375,
+        "left": 104
+      },
+      "textRects": [
+        {
+          "x": 104,
+          "y": 204.484375,
+          "width": 461.828125,
+          "height": 83,
+          "top": 204.484375,
+          "right": 565.828125,
+          "bottom": 287.484375,
+          "left": 104
+        },
+        {
+          "x": 104,
+          "y": 285.859375,
+          "width": 587.53125,
+          "height": 83,
+          "top": 285.859375,
+          "right": 691.53125,
+          "bottom": 368.859375,
+          "left": 104
+        }
+      ],
+      "body": {
+        "x": 104,
+        "y": 392.234375,
+        "width": 396,
+        "height": 99,
+        "top": 392.234375,
+        "right": 500,
+        "bottom": 491.234375,
+        "left": 104
+      },
+      "discovery": {
+        "x": 104,
+        "y": 523.234375,
+        "width": 832,
+        "height": 296.9375,
+        "top": 523.234375,
+        "right": 936,
+        "bottom": 820.171875,
+        "left": 104
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "header": {
+        "x": 144,
+        "y": 0,
+        "width": 1152,
+        "height": 106.59375,
+        "top": 0,
+        "right": 1296,
+        "bottom": 106.59375,
+        "left": 144
+      },
+      "hero": {
+        "x": 0,
+        "y": 106.59375,
+        "width": 1440,
+        "height": 795.59375,
+        "top": 106.59375,
+        "right": 1440,
+        "bottom": 902.1875,
+        "left": 0
+      },
+      "headline": {
+        "x": 144,
+        "y": 206.09375,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.09375,
+        "right": 743.03125,
+        "bottom": 370.25,
+        "left": 144
+      },
+      "textRects": [
+        {
+          "x": 144,
+          "y": 205.09375,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.09375,
+          "right": 610.53125,
+          "bottom": 289.09375,
+          "left": 144
+        },
+        {
+          "x": 144,
+          "y": 287.171875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.171875,
+          "right": 740.125,
+          "bottom": 371.171875,
+          "left": 144
+        }
+      ],
+      "body": {
+        "x": 144,
+        "y": 394.25,
+        "width": 396,
+        "height": 99,
+        "top": 394.25,
+        "right": 540,
+        "bottom": 493.25,
+        "left": 144
+      },
+      "discovery": {
+        "x": 144,
+        "y": 525.25,
+        "width": 832,
+        "height": 296.9375,
+        "top": 525.25,
+        "right": 976,
+        "bottom": 822.1875,
+        "left": 144
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1520,
+      "viewport": 1520,
+      "scrollWidth": 1520,
+      "header": {
+        "x": 184,
+        "y": 0,
+        "width": 1152,
+        "height": 107.21875,
+        "top": 0,
+        "right": 1336,
+        "bottom": 107.21875,
+        "left": 184
+      },
+      "hero": {
+        "x": 0,
+        "y": 107.21875,
+        "width": 1520,
+        "height": 795.59375,
+        "top": 107.21875,
+        "right": 1520,
+        "bottom": 902.8125,
+        "left": 0
+      },
+      "headline": {
+        "x": 184,
+        "y": 206.71875,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.71875,
+        "right": 783.03125,
+        "bottom": 370.875,
+        "left": 184
+      },
+      "textRects": [
+        {
+          "x": 184,
+          "y": 205.71875,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.71875,
+          "right": 650.53125,
+          "bottom": 289.71875,
+          "left": 184
+        },
+        {
+          "x": 184,
+          "y": 287.796875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.796875,
+          "right": 780.125,
+          "bottom": 371.796875,
+          "left": 184
+        }
+      ],
+      "body": {
+        "x": 184,
+        "y": 394.875,
+        "width": 396,
+        "height": 99,
+        "top": 394.875,
+        "right": 580,
+        "bottom": 493.875,
+        "left": 184
+      },
+      "discovery": {
+        "x": 184,
+        "y": 525.875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 525.875,
+        "right": 1016,
+        "bottom": 822.8125,
+        "left": 184
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1600,
+      "viewport": 1600,
+      "scrollWidth": 1600,
+      "header": {
+        "x": 224,
+        "y": 0,
+        "width": 1152,
+        "height": 107.390625,
+        "top": 0,
+        "right": 1376,
+        "bottom": 107.390625,
+        "left": 224
+      },
+      "hero": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1600,
+        "height": 795.59375,
+        "top": 107.390625,
+        "right": 1600,
+        "bottom": 902.984375,
+        "left": 0
+      },
+      "headline": {
+        "x": 224,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 823.03125,
+        "bottom": 371.046875,
+        "left": 224
+      },
+      "textRects": [
+        {
+          "x": 224,
+          "y": 205.890625,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.890625,
+          "right": 690.53125,
+          "bottom": 289.890625,
+          "left": 224
+        },
+        {
+          "x": 224,
+          "y": 287.96875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.96875,
+          "right": 820.125,
+          "bottom": 371.96875,
+          "left": 224
+        }
+      ],
+      "body": {
+        "x": 224,
+        "y": 395.046875,
+        "width": 396,
+        "height": 99,
+        "top": 395.046875,
+        "right": 620,
+        "bottom": 494.046875,
+        "left": 224
+      },
+      "discovery": {
+        "x": 224,
+        "y": 526.046875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 526.046875,
+        "right": 1056,
+        "bottom": 822.984375,
+        "left": 224
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1680,
+      "viewport": 1680,
+      "scrollWidth": 1680,
+      "header": {
+        "x": 264,
+        "y": 0,
+        "width": 1152,
+        "height": 107.390625,
+        "top": 0,
+        "right": 1416,
+        "bottom": 107.390625,
+        "left": 264
+      },
+      "hero": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1680,
+        "height": 795.59375,
+        "top": 107.390625,
+        "right": 1680,
+        "bottom": 902.984375,
+        "left": 0
+      },
+      "headline": {
+        "x": 264,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 863.03125,
+        "bottom": 371.046875,
+        "left": 264
+      },
+      "textRects": [
+        {
+          "x": 264,
+          "y": 205.890625,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.890625,
+          "right": 730.53125,
+          "bottom": 289.890625,
+          "left": 264
+        },
+        {
+          "x": 264,
+          "y": 287.96875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.96875,
+          "right": 860.125,
+          "bottom": 371.96875,
+          "left": 264
+        }
+      ],
+      "body": {
+        "x": 264,
+        "y": 395.046875,
+        "width": 396,
+        "height": 99,
+        "top": 395.046875,
+        "right": 660,
+        "bottom": 494.046875,
+        "left": 264
+      },
+      "discovery": {
+        "x": 264,
+        "y": 526.046875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 526.046875,
+        "right": 1096,
+        "bottom": 822.984375,
+        "left": 264
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1760,
+      "viewport": 1760,
+      "scrollWidth": 1760,
+      "header": {
+        "x": 304,
+        "y": 0,
+        "width": 1152,
+        "height": 107.390625,
+        "top": 0,
+        "right": 1456,
+        "bottom": 107.390625,
+        "left": 304
+      },
+      "hero": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1760,
+        "height": 795.59375,
+        "top": 107.390625,
+        "right": 1760,
+        "bottom": 902.984375,
+        "left": 0
+      },
+      "headline": {
+        "x": 304,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 903.03125,
+        "bottom": 371.046875,
+        "left": 304
+      },
+      "textRects": [
+        {
+          "x": 304,
+          "y": 205.890625,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.890625,
+          "right": 770.53125,
+          "bottom": 289.890625,
+          "left": 304
+        },
+        {
+          "x": 304,
+          "y": 287.96875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.96875,
+          "right": 900.125,
+          "bottom": 371.96875,
+          "left": 304
+        }
+      ],
+      "body": {
+        "x": 304,
+        "y": 395.046875,
+        "width": 396,
+        "height": 99,
+        "top": 395.046875,
+        "right": 700,
+        "bottom": 494.046875,
+        "left": 304
+      },
+      "discovery": {
+        "x": 304,
+        "y": 526.046875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 526.046875,
+        "right": 1136,
+        "bottom": 822.984375,
+        "left": 304
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1840,
+      "viewport": 1840,
+      "scrollWidth": 1840,
+      "header": {
+        "x": 344,
+        "y": 0,
+        "width": 1152,
+        "height": 107.390625,
+        "top": 0,
+        "right": 1496,
+        "bottom": 107.390625,
+        "left": 344
+      },
+      "hero": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1840,
+        "height": 795.59375,
+        "top": 107.390625,
+        "right": 1840,
+        "bottom": 902.984375,
+        "left": 0
+      },
+      "headline": {
+        "x": 344,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 943.03125,
+        "bottom": 371.046875,
+        "left": 344
+      },
+      "textRects": [
+        {
+          "x": 344,
+          "y": 205.890625,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.890625,
+          "right": 810.53125,
+          "bottom": 289.890625,
+          "left": 344
+        },
+        {
+          "x": 344,
+          "y": 287.96875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.96875,
+          "right": 940.125,
+          "bottom": 371.96875,
+          "left": 344
+        }
+      ],
+      "body": {
+        "x": 344,
+        "y": 395.046875,
+        "width": 396,
+        "height": 99,
+        "top": 395.046875,
+        "right": 740,
+        "bottom": 494.046875,
+        "left": 344
+      },
+      "discovery": {
+        "x": 344,
+        "y": 526.046875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 526.046875,
+        "right": 1176,
+        "bottom": 822.984375,
+        "left": 344
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "header": {
+        "x": 384,
+        "y": 0,
+        "width": 1152,
+        "height": 107.390625,
+        "top": 0,
+        "right": 1536,
+        "bottom": 107.390625,
+        "left": 384
+      },
+      "hero": {
+        "x": 0,
+        "y": 107.390625,
+        "width": 1920,
+        "height": 795.59375,
+        "top": 107.390625,
+        "right": 1920,
+        "bottom": 902.984375,
+        "left": 0
+      },
+      "headline": {
+        "x": 384,
+        "y": 206.890625,
+        "width": 599.03125,
+        "height": 164.15625,
+        "top": 206.890625,
+        "right": 983.03125,
+        "bottom": 371.046875,
+        "left": 384
+      },
+      "textRects": [
+        {
+          "x": 384,
+          "y": 205.890625,
+          "width": 466.53125,
+          "height": 84,
+          "top": 205.890625,
+          "right": 850.53125,
+          "bottom": 289.890625,
+          "left": 384
+        },
+        {
+          "x": 384,
+          "y": 287.96875,
+          "width": 596.125,
+          "height": 84,
+          "top": 287.96875,
+          "right": 980.125,
+          "bottom": 371.96875,
+          "left": 384
+        }
+      ],
+      "body": {
+        "x": 384,
+        "y": 395.046875,
+        "width": 396,
+        "height": 99,
+        "top": 395.046875,
+        "right": 780,
+        "bottom": 494.046875,
+        "left": 384
+      },
+      "discovery": {
+        "x": 384,
+        "y": 526.046875,
+        "width": 832,
+        "height": 296.9375,
+        "top": 526.046875,
+        "right": 1216,
+        "bottom": 822.984375,
+        "left": 384
+      },
+      "source": "https://48daf1d5.simplekit-preview.pages.dev/assets/v2/images/coastal-desktop-1536.avif",
+      "fontFaces": [
+        {
+          "family": "SimpleKit Display",
+          "weight": "400",
+          "status": "unloaded"
+        },
+        {
+          "family": "SimpleKit Display",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "SimpleKit Sans",
+          "weight": "700",
+          "status": "loaded"
+        }
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "width": 320,
+      "text": "body",
+      "darkestPossiblePixelRatio": 4.805146057766655,
+      "minimum": 4.5
+    },
+    {
+      "width": 320,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.209628136673732,
+      "minimum": 3
+    },
+    {
+      "width": 375,
+      "text": "body",
+      "darkestPossiblePixelRatio": 4.857430469046534,
+      "minimum": 4.5
+    },
+    {
+      "width": 375,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.115570635681314,
+      "minimum": 3
+    },
+    {
+      "width": 390,
+      "text": "body",
+      "darkestPossiblePixelRatio": 4.881768354844888,
+      "minimum": 4.5
+    },
+    {
+      "width": 390,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.117360794220403,
+      "minimum": 3
+    },
+    {
+      "width": 400,
+      "text": "body",
+      "darkestPossiblePixelRatio": 4.89701789710177,
+      "minimum": 4.5
+    },
+    {
+      "width": 400,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.12651927293821,
+      "minimum": 3
+    },
+    {
+      "width": 480,
+      "text": "body",
+      "darkestPossiblePixelRatio": 4.991053673679022,
+      "minimum": 4.5
+    },
+    {
+      "width": 480,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.143838686767662,
+      "minimum": 3
+    },
+    {
+      "width": 560,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.05890224483978,
+      "minimum": 4.5
+    },
+    {
+      "width": 560,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.35740091365015,
+      "minimum": 3
+    },
+    {
+      "width": 640,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.110183120105022,
+      "minimum": 4.5
+    },
+    {
+      "width": 640,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.519032655102118,
+      "minimum": 3
+    },
+    {
+      "width": 720,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.15027056906844,
+      "minimum": 4.5
+    },
+    {
+      "width": 720,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 13.645528711249119,
+      "minimum": 3
+    },
+    {
+      "width": 768,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.381878794287166,
+      "minimum": 4.5
+    },
+    {
+      "width": 768,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.360522264752962,
+      "minimum": 3
+    },
+    {
+      "width": 800,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.395812541117898,
+      "minimum": 4.5
+    },
+    {
+      "width": 800,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.390727045794083,
+      "minimum": 3
+    },
+    {
+      "width": 880,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.426290639432738,
+      "minimum": 4.5
+    },
+    {
+      "width": 880,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.42079098072622,
+      "minimum": 3
+    },
+    {
+      "width": 899,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.432753734812878,
+      "minimum": 4.5
+    },
+    {
+      "width": 899,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.427437229558583,
+      "minimum": 3
+    },
+    {
+      "width": 900,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.433080882682363,
+      "minimum": 4.5
+    },
+    {
+      "width": 900,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.428490374539297,
+      "minimum": 3
+    },
+    {
+      "width": 960,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.451769988182309,
+      "minimum": 4.5
+    },
+    {
+      "width": 960,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.459083613853648,
+      "minimum": 3
+    },
+    {
+      "width": 1024,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.372887178338388,
+      "minimum": 4.5
+    },
+    {
+      "width": 1024,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.417165365528765,
+      "minimum": 3
+    },
+    {
+      "width": 1040,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.378237946424679,
+      "minimum": 4.5
+    },
+    {
+      "width": 1040,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.424978892119391,
+      "minimum": 3
+    },
+    {
+      "width": 1120,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.402740470459251,
+      "minimum": 4.5
+    },
+    {
+      "width": 1120,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.201097806074031,
+      "minimum": 3
+    },
+    {
+      "width": 1200,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.424031600698763,
+      "minimum": 4.5
+    },
+    {
+      "width": 1200,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.235870599665816,
+      "minimum": 3
+    },
+    {
+      "width": 1280,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.433646771748962,
+      "minimum": 4.5
+    },
+    {
+      "width": 1280,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.249877383247048,
+      "minimum": 3
+    },
+    {
+      "width": 1360,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.426160006491947,
+      "minimum": 4.5
+    },
+    {
+      "width": 1360,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.205939783519007,
+      "minimum": 3
+    },
+    {
+      "width": 1440,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.419510448407466,
+      "minimum": 4.5
+    },
+    {
+      "width": 1440,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.19280621022059,
+      "minimum": 3
+    },
+    {
+      "width": 1520,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.413565106527739,
+      "minimum": 4.5
+    },
+    {
+      "width": 1520,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.194563254062711,
+      "minimum": 3
+    },
+    {
+      "width": 1600,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.4082177403144165,
+      "minimum": 4.5
+    },
+    {
+      "width": 1600,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.196144708388767,
+      "minimum": 3
+    },
+    {
+      "width": 1680,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.403382455952047,
+      "minimum": 4.5
+    },
+    {
+      "width": 1680,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.19757564178888,
+      "minimum": 3
+    },
+    {
+      "width": 1760,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.3989890581120745,
+      "minimum": 4.5
+    },
+    {
+      "width": 1760,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.198876567639399,
+      "minimum": 3
+    },
+    {
+      "width": 1840,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.394979620289704,
+      "minimum": 4.5
+    },
+    {
+      "width": 1840,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.200064433802984,
+      "minimum": 3
+    },
+    {
+      "width": 1920,
+      "text": "body",
+      "darkestPossiblePixelRatio": 5.391305916620865,
+      "minimum": 4.5
+    },
+    {
+      "width": 1920,
+      "text": "headline",
+      "darkestPossiblePixelRatio": 14.201153365038705,
+      "minimum": 3
+    }
+  ],
+  "menuResults": [
+    {
+      "width": 375,
+      "keyboardEnterSpaceTab": true,
+      "escapeFocusReturn": true,
+      "outsideClickVisibleFocus": true,
+      "nonModalTabExit": true,
+      "chromiumAXNameExpandedNavigation": true
+    },
+    {
+      "width": 768,
+      "keyboardEnterSpaceTab": true,
+      "escapeFocusReturn": true,
+      "outsideClickVisibleFocus": true,
+      "nonModalTabExit": true,
+      "chromiumAXNameExpandedNavigation": true
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Home",
+      "href": "./"
+    },
+    {
+      "name": "Tools",
+      "href": "tools/"
+    },
+    {
+      "name": "Learn",
+      "href": "learn/"
+    },
+    {
+      "name": "About",
+      "href": "about/"
+    },
+    {
+      "name": "Support",
+      "href": "support/"
+    }
+  ],
+  "touchLandscape": true,
+  "noJavaScriptNavigation": true,
+  "imageFontFailureVisible": true,
+  "resizeFocus": true,
+  "delayedLoading": {
+    "before": 310.578125,
+    "after": 310.578125,
+    "cls": 0
+  },
+  "magnification200Percent": "CSS zoom 2 at 1440 plus 720px reflow; no browser toolbar zoom claim",
+  "accessibilityScope": "Chromium AX tree, role/name/state, keyboard and touch emulation. VoiceOver/NVDA and real devices unavailable; Phase 8 manual coverage remains.",
+  "pageErrors": [],
+  "failedResponses": [],
+  "stubbedExternalHosts": [
+    "www.googletagmanager.com"
+  ]
+}

@@ -249,8 +249,8 @@ Status: `[~]`. Focused composition pass after Phase 5, before later homepage pha
 - [x] Refine header/hero spacing, coastline visibility, typography, integrated search/questions, trust density and two-column mobile goals through five screenshot reviews.
 - [x] Verify 44px controls, search/questions/menu, responsive reflow, keyboard/AX semantics and all 22 calculator fixtures.
 - [x] Verify 28 repository tests, portable build, source pins, SEO/output and preservation guard.
-- [ ] Deploy the verified candidate to isolated Cloudflare preview and record the exact source/artifact.
-- [ ] Capture secure live hosted screenshots and verify hosted interactions (environment blocks navigation; loopback evidence is identified explicitly).
+- [x] Deploy the verified candidate to isolated Cloudflare preview and record the exact source/artifact.
+- [x] Capture secure live hosted screenshots and verify hosted interactions. Run 38013211800 passes all hosted suites; runner evidence is separate from loopback captures.
 - [ ] Open the temporary feature PR targeting develop-v2 and update issue #12 with verified results.
 - [ ] Obtain owner visual approval; no merge or production deployment is authorized.
 
@@ -258,7 +258,7 @@ Evidence: [mobile comparison and iteration log](v2/mobile-fidelity-issue-12/COMP
 
 ## Phase 6 — Popular calculators
 
-Status: `[~]`. Owner instructed implementation after the mobile-fidelity pass. Work continues on the existing temporary branch and PR #13 targeting `develop-v2`; no merge or production deployment is authorized.
+Status: `[x]`. Implementation, screenshot comparison and local/hosted automated acceptance pass. Owner subsequently instructed Phase 7. PR #13 still targets `develop-v2`; no merge or production deployment is authorized.
 
 - [x] Implement the five reference rows in order: Retirement Planner, Mortgage Calculator, Compound Interest Calculator, Budget Planner, FIRE Calculator.
 - [x] Add concise factual descriptions, matching icons and chevrons, subtle row dividers and accessible link/focus states.
@@ -267,15 +267,15 @@ Status: `[~]`. Owner instructed implementation after the mobile-fidelity pass. W
 
 Acceptance:
 
-- [ ] Five distinct manifest-backed tools appear in the required order, descriptions match tool behavior, and all links resolve.
-- [ ] Long descriptions wrap at 320 px without hiding names/chevrons; each row has a single clear accessible link and keyboard focus indicator.
-- [ ] Visual comparison confirms the reference row hierarchy and icon treatment, while all 22 tools remain available through the directory.
+- [x] Five distinct manifest-backed tools appear in the required order, descriptions match tool behavior, and all links resolve.
+- [x] Long descriptions wrap at 320 px without hiding names/chevrons; each row has a single clear accessible link and keyboard focus indicator.
+- [x] Visual comparison confirms the reference row hierarchy and icon treatment, while all 22 tools remain available through the directory.
 
-Codex guidance: favor semantic lists and real anchors over clickable containers. Do not add unsupported star ratings, user counts or financial outcomes. Evidence: [Phase 6 verification](v2/phase-06-verification.md). Automated browser acceptance and isolated hosted verification are in progress; do not mark the acceptance criteria complete until those results are recorded.
+Codex guidance: favor semantic lists and real anchors over clickable containers. Do not add unsupported star ratings, user counts or financial outcomes. Evidence: [Phase 6 verification](v2/phase-06-verification.md). All ten layout/fallback cases and canonical/keyboard/directory checks pass locally and on the isolated hosted preview.
 
 ## Phase 7 — Guided onboarding and calculator discovery
 
-Status: `[ ]`. Depends on Phases 3, 5 and 6.
+Status: `[~]`. Owner instructed implementation after verified Phase 6. Continue in the existing temporary PR #13; preserve all previous work and the explicit no-merge/no-production limits.
 
 - [ ] Implement the reference “Not sure where to start?” panel and “Get started” control, with a lightweight accessible dialog or inline step flow.
 - [ ] Ask up to three optional non-sensitive questions about planning goal, immediate question and preferred level of detail; offer skip, back, close and restart.
@@ -424,8 +424,8 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 3 Search and questions | `[~]` | [Search evidence](v2/phase-03-verification.md), [PR #10](https://github.com/ashleysnl/simplekit-site/pull/10); owner instructed Phase 4; implementation/automated checks pass, manual AT coverage pending. |
 | 4 Trust indicators | `[~]` | [Trust/privacy evidence](v2/phase-04-verification.md), [PR #11](https://github.com/ashleysnl/simplekit-site/pull/11); implementation/audit/CI pass; review and toolbar zoom remain. [Early preview uploaded](https://73147f8f.simplekit-preview.pages.dev) after owner approval; live checks limited here by certificate/403 errors. |
 | 5 Goal navigation | `[x]` | [Goal/directory evidence](v2/phase-05-verification.md); all seven task/acceptance criteria pass on `develop-v2`. Owner-requested [demo uploaded](https://e9070fe2.simplekit-preview.pages.dev); workflow and artifact verification pass, live checks limited here by 403. Earlier manual/review limitations remain for Phase 8. |
-| 6 Popular calculators | `[~]` | Owner instructed implementation; curated “Featured calculators” rows are in PR #13. [Phase 6 verification](v2/phase-06-verification.md); browser/screenshot/live checks in progress. |
-| 7 Guided onboarding | `[ ]` | Pending Phases 3, 5, 6. |
+| 6 Popular calculators | `[x]` | Curated “Featured calculators” rows in PR #13. [Phase 6 verification](v2/phase-06-verification.md); all local/hosted checks pass in run 38013211800. |
+| 7 Guided onboarding | `[~]` | Owner instructed implementation after Phase 6; continue in the same unmerged PR. |
 | 8 Accessibility/responsiveness/performance | `[ ]` | Pending Phase 7. |
 | 9 SEO/content integrity | `[ ]` | Pending Phase 8. |
 | 10 Full regression/candidate | `[ ]` | Pending Phase 9. |
