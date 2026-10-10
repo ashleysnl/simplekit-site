@@ -27,17 +27,12 @@
   <meta name="twitter:description" content="Free Canadian tools for retirement, budgeting, mortgages, debt, investing, taxes, and travel. Clear estimates and next steps, with no signup.">
   <meta name="twitter:image" content="https://simplekit.app/og-image.png?v=2">
   <meta name="twitter:image:alt" content="SimpleKit — free Canadian financial calculators and planning tools">
-  <link rel="preload" href="assets/v2/fonts/simplekit-display-700.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="assets/v2/fonts/simplekit-sans-400.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="assets/site.css">
-  <link rel="stylesheet" href="assets/v2/foundations.css">
-  <link rel="stylesheet" href="assets/v2/home.css">
-  <link rel="stylesheet" href="assets/v2/discovery.css">
-  <link rel="stylesheet" href="assets/v2/trust.css">
-  <link rel="stylesheet" href="assets/v2/goals.css">
-  <link rel="stylesheet" href="assets/v2/featured.css">
-  <link rel="stylesheet" href="assets/v2/onboarding.css">
-  <script defer src="assets/v2/home.js"></script>
+  <link rel="preload" href="assets/v2/fonts/simplekit-display-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/v2/fonts/simplekit-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/v2/home.bundle.css">
+  <link rel="modulepreload" href="assets/v2/discovery-index.js">
+  <link rel="modulepreload" href="assets/v2/discovery-engine.js">
+  <link rel="modulepreload" href="assets/v2/onboarding-engine.js">
   <script type="module" src="assets/v2/discovery.js"></script>
   <script type="module" src="assets/v2/onboarding.js"></script>
   <!-- Google tag (gtag.js) -->
@@ -97,6 +92,7 @@
         <a href="support/">Support</a>
       </nav>
     </header>
+    <script>{{v2NavigationScript}}</script>
   </div>
 
   <main id="main-content" tabindex="-1">
@@ -193,7 +189,7 @@
           <button class="v2-button" type="button" aria-expanded="false" aria-controls="onboarding-flow" data-onboarding-start hidden>Get started <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></button>
           <a class="v2-button" href="tools/" data-onboarding-fallback>Browse all tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#chevron-right"></use></svg></a>
         </div>
-        <div class="v2-onboarding-flow" id="onboarding-flow" aria-labelledby="onboarding-flow-title" data-onboarding-flow hidden>
+        <section class="v2-onboarding-flow" id="onboarding-flow" aria-label="Guided tool discovery" data-onboarding-flow hidden>
           <p class="v2-onboarding-status" role="status" aria-live="polite" aria-atomic="true" data-onboarding-status></p>
           <h3 id="onboarding-flow-title" tabindex="-1"></h3>
           <div data-onboarding-content></div>
@@ -206,7 +202,7 @@
           </div>
           <a class="v2-onboarding-directory" href="tools/">Browse all {{toolCount}} tools</a>
           <p class="v2-onboarding-note">Your choices aren’t saved. Close or restart to clear them.</p>
-        </div>
+        </section>
       </div>
     </section>
 
