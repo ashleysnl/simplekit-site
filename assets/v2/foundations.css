@@ -23,8 +23,8 @@
   --v2-control-border: #7e8ba1;
   --v2-focus: #0759d9;
   --v2-error: #a52229;
-  --v2-display: "SimpleKit Display", Georgia, "Times New Roman", serif;
-  --v2-body: "SimpleKit Sans", "Segoe UI", Arial, sans-serif;
+  --v2-display: "SimpleKit Display", "Times New Roman", "Liberation Serif", serif;
+  --v2-body: "SimpleKit Sans", Arial, "Liberation Sans", sans-serif;
   --v2-text-xs: 0.8125rem;
   --v2-text-sm: 0.9375rem;
   --v2-text-base: 1rem;

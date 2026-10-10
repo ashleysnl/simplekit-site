@@ -61,7 +61,7 @@ function luminance(rgb) {
 }
 function worstContrast(width, right, color) {
   const x = right / width, end = width < 1024 ? .72 : .54;
-  const alpha = width < 768 ? .98 - .10 * x : x <= end ? .98 - .04 * x / end : .94 - .76 * (x - end) / (1 - end);
+  const alpha = width < 768 ? (x <= .8 ? .96 - .06 * x / .8 : .90 - .78 * (x - .8) / .2) : x <= end ? .98 - .04 * x / end : .94 - .76 * (x - end) / (1 - end);
   // Black is the darkest possible landscape pixel. The additional bottom fade only raises contrast.
   const background = [252, 252, 251].map(v => v * alpha);
   return (luminance(background) + .05) / (luminance(color) + .05);
@@ -121,7 +121,9 @@ async function menu(p, screenshot) {
       await p.evaluate(() => document.fonts.ready);
       const value = await assertLayout(p); results.push({ width, ...value });
       for (const [key, color, minimum] of [['body', [82, 98, 124], 4.5], ['headline', [16, 27, 70], 3]]) {
-        const ratio = worstContrast(width, value[key].right, color);
+        // Contrast applies to painted glyphs, not the empty right side of a heading box.
+        const right = key === 'headline' ? Math.max(...value.textRects.map(rect => rect.right)) : value[key].right;
+        const ratio = worstContrast(width, right, color);
         assert(ratio >= minimum, `Hero ${key} contrast ${ratio} at ${width}`);
         contrasts.push({ width, text: key, darkestPossiblePixelRatio: ratio, minimum });
       }
@@ -172,7 +174,8 @@ async function menu(p, screenshot) {
     await d.goto(origin, { waitUntil: 'domcontentloaded' }); const before = await layout(d);
     await d.waitForLoadState('networkidle'); await d.evaluate(() => document.fonts.ready);
     const after = await assertLayout(d), cls = await d.evaluate(() => window.v2Shifts.reduce((a, b) => a + b, 0));
-    assert(Math.abs(before.discovery.top - after.discovery.top) <= 1, 'Font/image loading moved hero controls');
+    fs.writeFileSync(path.join(output, 'delayed-loading.json'), JSON.stringify({before, after, cls}, null, 2) + '\n');
+    assert(Math.abs(before.discovery.top - after.discovery.top) <= 1, `Font/image loading moved hero controls: ${before.discovery.top} -> ${after.discovery.top}`);
     assert(cls <= .01, `Local delayed-load CLS ${cls}`); await delayed.close();
     // CSS magnification plus half-width reflow cover 200% reading and navigation geometry.
     // This is not an OS/browser toolbar zoom or a real-device claim.

@@ -2,9 +2,9 @@
 
 Approved target: `docs/design-reference/simplekit-v2-target.png` (851 × 1848; immutable original). Baseline source: develop-v2 `6e3acc72506b40ec11c1bd0015c6eee2ca473213`; implementation bytes match the verified Phase 5 preview artifact, deployed from `882b745cf879c70f852a8cd665f0ec0e3eca2b0a`. Correct immutable preview: https://e9070fe2.simplekit-preview.pages.dev (the issue's shorter hostname was a typo).
 
-## Baseline completed before implementation
+## Baseline completed before implementation (local render)
 
-`before/` contains 375/390/768/1440px full-page and viewport screenshots and measured DOM geometry. Chromium cannot securely navigate the hosted preview: `ERR_CERT_AUTHORITY_INVALID`; earlier secure HTTP probes returned 403 from this execution environment. No TLS checks were disabled. Screenshots therefore render the matching portable build on loopback, with external analytics stubbed, and are **not claimed as live hosted screenshots**. Hosted visual verification remains a separate check.
+`before/` contains 375/390/768/1440px full-page and viewport screenshots and measured DOM geometry. Chromium cannot securely navigate the hosted preview: `ERR_CERT_AUTHORITY_INVALID`; earlier secure HTTP probes returned 403 from this execution environment. No TLS checks were disabled. Screenshots therefore render the matching portable build on loopback, with external analytics stubbed, and are **not claimed as live hosted screenshots**. Hosted visual verification is performed separately by the GitHub runner; see the live evidence below.
 
 | Discrepancy | Baseline at 375 / 390px | Reference-directed correction |
 | --- | --- | --- |
@@ -29,8 +29,8 @@ Iteration 4 (final local review): moved the full, visible privacy/analytics/plan
 | Header height | 100 / 100px | 85 / 85px |
 | Question panel | 352 / 352px | 222 / 222px |
 | Trust starts | 936 / 937px | 585 / 587px |
-| Goals section starts | 1447 / 1448px | 680 / 683px |
-| First goal cards start | 1579 / 1580px | 796 / 799px |
+| Goals section starts | 1447 / 1448px | 706 / 708px |
+| First goal cards start | 1579 / 1580px | 822 / 824px |
 | Goal columns | 1 / 2 | 2 / 2 |
 
 Remaining reference differences: accessible 44px question rows and readable typography take more space than the raster's half-size proportions; the existing coastal asset differs from the exact reference coast; long goal names wrap without splitting words; the full privacy disclosure remains visible below goals; popular-calculator rows and guided onboarding remain the next roadmap phases. No numerical pixel-match or owner-approval claim is made.
@@ -55,3 +55,13 @@ Review four viewport/full-page captures and geometry against the approved target
 Final touch-area check: expanded the wordmark hit area without changing its visual position; retained lower-page/footer links now have ≥44px width and height. The goal acceptance suite checks every visible homepage link/button/input, including no-JS and enlarged text. All cases pass.
 
 Hosted first run: [38008821953](https://github.com/ashleysnl/simplekit-site/actions/runs/38008821953) securely captured the actual previous deployment at all four widths and uploaded candidate `dcc21ac` to `https://ace887ae.simplekit-preview.pages.dev`. Post-upload verification stopped on an overly strict HTML-format assertion for existing self-closing canonical tags. URLs were unchanged; the corrected assertion independently passes on all 22 local calculator tags. Final hosted validation is rerun with the touch-area refinement.
+
+
+## Live baseline evidence
+
+The runner securely captured `https://e9070fe2.simplekit-preview.pages.dev` at 375/390/768/1440px. Persistent screenshots and geometry are in `hosted-before/`. They confirm the initial local comparison; small line-wrap differences come from the runner browser/font environment. Final hosted before/after measurements are reported separately from the local table above.
+
+[Live baseline 375px](hosted-before/viewport-375.jpg) · [Live baseline 390px](hosted-before/viewport-390.jpg)
+
+
+Iteration 5: live delayed-font testing found the earlier Georgia/Segoe UI fallbacks could change line wrapping on the runner. Times New Roman/Liberation Serif and Arial/Liberation Sans now match the bundled font metrics; font files and loaded typography are unchanged. Supporting text uses the reference's three-line composition, with “No signup required” kept together. Copy remains in the light side of the gradient (≤80% of phone width), while the lower landscape crop exposes more coastline on the right. The contrast check now uses the actual mobile gradient and painted headline glyph bounds: body ≥4.5:1 and large heading ≥3:1 even over a black source pixel. All 27 widths and delayed loading pass locally; diagnostics are recorded before the hosted assertion. Goals start at 706/708px locally, still approximately 740px earlier than baseline.

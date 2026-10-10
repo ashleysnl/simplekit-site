@@ -246,7 +246,7 @@ Status: `[~]`. Focused composition pass after Phase 5, before later homepage pha
 
 - [x] Locate the approved reference and measure the existing 375/390px composition before edits.
 - [x] Capture matching local baseline screenshots at 375/390/768/1440px; document the blocked secure hosted-browser attempt separately.
-- [x] Refine header/hero spacing, coastline visibility, typography, integrated search/questions, trust density and two-column mobile goals through four screenshot reviews.
+- [x] Refine header/hero spacing, coastline visibility, typography, integrated search/questions, trust density and two-column mobile goals through five screenshot reviews.
 - [x] Verify 44px controls, search/questions/menu, responsive reflow, keyboard/AX semantics and all 22 calculator fixtures.
 - [x] Verify 28 repository tests, portable build, source pins, SEO/output and preservation guard.
 - [ ] Deploy the verified candidate to isolated Cloudflare preview and record the exact source/artifact.
