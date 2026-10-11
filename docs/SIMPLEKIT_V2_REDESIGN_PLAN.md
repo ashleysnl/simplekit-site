@@ -411,18 +411,20 @@ Acceptance:
 
 ## Phase 14 — Pilot calculator redesign and upstream integration
 
-Status: `[~]`. Source-owned Retirement/Mortgage pilots and seven retirement guides implemented; final three-engine verification and owner screenshot acceptance are pending. [Report](v2/phase-14-verification.md).
+Status: `[~]`. Source-owned Retirement/Mortgage pilots and seven retirement guides implemented and verified in three engines; isolated demo deployed. Owner screenshot acceptance remains pending. PR #15 is integrated; the chart refinement/evidence follow-up is PR #16. [Report](v2/phase-14-verification.md).
 
-- [ ] Select Retirement Planner as the primary complex pilot and Mortgage Calculator as a contrasting numerical/form pilot; inspect Core and their source repositories before changes.
-- [ ] Apply the V2 shell and shared input, validation, result, chart, table and export styles while preserving each calculator's purpose-specific information architecture.
-- [ ] Implement changes in the correct upstream Core/calculator repositories where necessary; test and review upstream commits before updating pinned SHAs in SimpleKit.
-- [ ] Validate mobile input ergonomics, results visibility, readable chart labels, keyboard/screen-reader semantics, persistence, export/import and error states.
-- [ ] Compare outputs with Phase 0 fixtures, including precision and rounding, and capture screenshots of initial, populated, error and results states.
+- [x] Select Retirement Planner as the primary complex pilot and Mortgage Calculator as a contrasting numerical/form pilot; inspect Core and their source repositories before changes.
+- [x] Apply the V2 shell and shared input, validation, result, chart, table and export styles while preserving each calculator's purpose-specific information architecture.
+- [x] Implement changes in the correct upstream Core/calculator repositories where necessary; test and review upstream commits before updating pinned SHAs in SimpleKit.
+- [x] Validate mobile input ergonomics, results visibility, readable chart labels, keyboard/screen-reader semantics, persistence, export/import and error states.
+- [x] Compare outputs with Phase 0 fixtures, including precision and rounding, and capture screenshots of initial, populated, error and results states.
 
 Acceptance:
 - [ ] Both pilots feel like the V2 homepage and editorial pages without sacrificing calculator usability.
-- [ ] All numerical and state/export regression fixtures pass; source changes and pins are traceable/reproducible.
+- [x] All numerical and state/export regression fixtures pass; source changes and pins are traceable/reproducible.
 - [ ] Owner reviews pilot screenshots before authorizing rollout to the remaining 20 calculators; evidence in `docs/v2/phase-14-verification.md`.
+
+Verified demo: https://1e526422.simplekit-preview.pages.dev. Source CI 38177198543 and preview run 38177218826 pass. Original classic/module retirement summary parity (age 75 vs 77) is preserved and documented as upstream work before release; manual device/AT/native-zoom checks remain open.
 
 ## Phase 15 — Redesign remaining 20 calculators in controlled batches
 
@@ -540,7 +542,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 11 Site-wide inventory | `[x]` | [Inventory/evidence](v2/phase-11-verification.md): 67 pages, 23 sources, 155 captures; hosted run 38088742754 passes. Phase 12 is next; migrations and manual review remain. |
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
-| 14 Calculator pilots | `[~]` | [Source-owned pilots](v2/phase-14-verification.md) implemented; hosted validation and owner review pending. |
+| 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. Owner review and manual device/AT checks pending; classic/module parity documented before release. |
 | 15 Remaining calculators | `[ ]` | Pending Phase 14; complete all 22 tool migrations. |
 | 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |
 | 17 Cloudflare preview/review | `[ ]` | Pending Phase 16; owner approves full-site preview. |

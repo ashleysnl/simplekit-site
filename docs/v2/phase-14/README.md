@@ -1,0 +1,59 @@
+# Phase 14 — Pilot comparison gallery
+
+Candidate `356cfa5297ef48782b74ccbfacdb4d68b36baaa1`; [verified isolated demo](https://1e526422.simplekit-preview.pages.dev). All 102 final pilot screenshots below come from public preview run 38177218826; original before images predate V2 pilot adoption. [Report](../phase-14-verification.md) · [Provenance](provenance.json) · [Browser metrics and audits](hosted/pilot-browser.json).
+
+Owner visual acceptance is pending. Review initial/populated/error states and the seven guides before Phase 15. Automated evidence does not replace real-device, native zoom or screen-reader review.
+
+## Before and after
+
+| Pilot | Original mobile | Final mobile | Original desktop | Final desktop |
+| --- | --- | --- | --- | --- |
+| Retirement Planner | [390px](before-retirement-planner-390.jpg) | [390px](hosted/chromium-retirement-planner-initial-390.jpg) | [1440px](before-retirement-planner-1440.jpg) | [1440px](hosted/chromium-retirement-planner-initial-1440.jpg) |
+| Mortgage Calculator | [390px](before-mortgage-calculator-390.jpg) | [390px](hosted/chromium-mortgage-calculator-initial-390.jpg) | [1440px](before-mortgage-calculator-1440.jpg) | [1440px](hosted/chromium-mortgage-calculator-initial-1440.jpg) |
+
+## Chart refinement
+
+[Earlier mobile result chart composition](history/83530fa/chromium-retirement-planner-populated-390.jpg) → [refined mobile results](hosted/chromium-retirement-planner-populated-390.jpg). Backing width now follows CSS width × DPR, avoiding compressed plots and labels.
+
+[Original classic chart at DPR2](chart-detail/baseline-classic-390-dpr2.png) → [refined classic chart at DPR2](chart-detail/refined-classic-390-dpr2.png). [Refined module chart](chart-detail/module-390-dpr2.png). Original and refined classic financial summaries are exact; inherited module/classic parity remains outstanding, as detailed in the report.
+
+Reproduce supplementary checks with the local preview on port 8004: `NODE_PATH=/tmp/simplekit-v2-browser/node_modules CHROMIUM_PATH=/usr/bin/chromium node docs/v2/phase-14/chart-detail/check.cjs`. Set `SIMPLEKIT_PREVIEW_URL` and `SIMPLEKIT_EVIDENCE_DIR` to change the allowed preview and output directory.
+
+## Final screenshot coverage
+
+| Route, state and CSS viewport width | Chromium | Firefox | WebKit |
+| --- | --- | --- | --- |
+| mortgage-calculator-error-390 | [chromium](hosted/chromium-mortgage-calculator-error-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-error-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-error-390.jpg) |
+| mortgage-calculator-font-fallback-390 | [chromium](hosted/chromium-mortgage-calculator-font-fallback-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-font-fallback-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-font-fallback-390.jpg) |
+| mortgage-calculator-forced-colors-390 | [chromium](hosted/chromium-mortgage-calculator-forced-colors-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-forced-colors-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-forced-colors-390.jpg) |
+| mortgage-calculator-initial-1440 | [chromium](hosted/chromium-mortgage-calculator-initial-1440.jpg) | [firefox](hosted/firefox-mortgage-calculator-initial-1440.jpg) | [webkit](hosted/webkit-mortgage-calculator-initial-1440.jpg) |
+| mortgage-calculator-initial-390 | [chromium](hosted/chromium-mortgage-calculator-initial-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-initial-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-initial-390.jpg) |
+| mortgage-calculator-initial-768 | [chromium](hosted/chromium-mortgage-calculator-initial-768.jpg) | [firefox](hosted/firefox-mortgage-calculator-initial-768.jpg) | [webkit](hosted/webkit-mortgage-calculator-initial-768.jpg) |
+| mortgage-calculator-no-js-390 | [chromium](hosted/chromium-mortgage-calculator-no-js-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-no-js-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-no-js-390.jpg) |
+| mortgage-calculator-populated-1440 | [chromium](hosted/chromium-mortgage-calculator-populated-1440.jpg) | [firefox](hosted/firefox-mortgage-calculator-populated-1440.jpg) | [webkit](hosted/webkit-mortgage-calculator-populated-1440.jpg) |
+| mortgage-calculator-populated-390 | [chromium](hosted/chromium-mortgage-calculator-populated-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-populated-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-populated-390.jpg) |
+| mortgage-calculator-text-200-390 | [chromium](hosted/chromium-mortgage-calculator-text-200-390.jpg) | [firefox](hosted/firefox-mortgage-calculator-text-200-390.jpg) | [webkit](hosted/webkit-mortgage-calculator-text-200-390.jpg) |
+| retirement-planner-canadian-retirement-income-calculator-initial-1440 | [chromium](hosted/chromium-retirement-planner-canadian-retirement-income-calculator-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-canadian-retirement-income-calculator-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-canadian-retirement-income-calculator-initial-1440.jpg) |
+| retirement-planner-canadian-retirement-income-calculator-initial-390 | [chromium](hosted/chromium-retirement-planner-canadian-retirement-income-calculator-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-canadian-retirement-income-calculator-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-canadian-retirement-income-calculator-initial-390.jpg) |
+| retirement-planner-cpp-timing-calculator-canada-initial-1440 | [chromium](hosted/chromium-retirement-planner-cpp-timing-calculator-canada-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-cpp-timing-calculator-canada-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-cpp-timing-calculator-canada-initial-1440.jpg) |
+| retirement-planner-cpp-timing-calculator-canada-initial-390 | [chromium](hosted/chromium-retirement-planner-cpp-timing-calculator-canada-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-cpp-timing-calculator-canada-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-cpp-timing-calculator-canada-initial-390.jpg) |
+| retirement-planner-font-fallback-390 | [chromium](hosted/chromium-retirement-planner-font-fallback-390.jpg) | [firefox](hosted/firefox-retirement-planner-font-fallback-390.jpg) | [webkit](hosted/webkit-retirement-planner-font-fallback-390.jpg) |
+| retirement-planner-forced-colors-390 | [chromium](hosted/chromium-retirement-planner-forced-colors-390.jpg) | [firefox](hosted/firefox-retirement-planner-forced-colors-390.jpg) | [webkit](hosted/webkit-retirement-planner-forced-colors-390.jpg) |
+| retirement-planner-import-error-390 | [chromium](hosted/chromium-retirement-planner-import-error-390.jpg) | [firefox](hosted/firefox-retirement-planner-import-error-390.jpg) | [webkit](hosted/webkit-retirement-planner-import-error-390.jpg) |
+| retirement-planner-initial-1440 | [chromium](hosted/chromium-retirement-planner-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-initial-1440.jpg) |
+| retirement-planner-initial-390 | [chromium](hosted/chromium-retirement-planner-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-initial-390.jpg) |
+| retirement-planner-initial-768 | [chromium](hosted/chromium-retirement-planner-initial-768.jpg) | [firefox](hosted/firefox-retirement-planner-initial-768.jpg) | [webkit](hosted/webkit-retirement-planner-initial-768.jpg) |
+| retirement-planner-no-js-390 | [chromium](hosted/chromium-retirement-planner-no-js-390.jpg) | [firefox](hosted/firefox-retirement-planner-no-js-390.jpg) | [webkit](hosted/webkit-retirement-planner-no-js-390.jpg) |
+| retirement-planner-oas-clawback-calculator-initial-1440 | [chromium](hosted/chromium-retirement-planner-oas-clawback-calculator-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-oas-clawback-calculator-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-oas-clawback-calculator-initial-1440.jpg) |
+| retirement-planner-oas-clawback-calculator-initial-390 | [chromium](hosted/chromium-retirement-planner-oas-clawback-calculator-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-oas-clawback-calculator-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-oas-clawback-calculator-initial-390.jpg) |
+| retirement-planner-populated-1440 | [chromium](hosted/chromium-retirement-planner-populated-1440.jpg) | [firefox](hosted/firefox-retirement-planner-populated-1440.jpg) | [webkit](hosted/webkit-retirement-planner-populated-1440.jpg) |
+| retirement-planner-populated-390 | [chromium](hosted/chromium-retirement-planner-populated-390.jpg) | [firefox](hosted/firefox-retirement-planner-populated-390.jpg) | [webkit](hosted/webkit-retirement-planner-populated-390.jpg) |
+| retirement-planner-retirement-tax-calculator-canada-initial-1440 | [chromium](hosted/chromium-retirement-planner-retirement-tax-calculator-canada-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-retirement-tax-calculator-canada-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-retirement-tax-calculator-canada-initial-1440.jpg) |
+| retirement-planner-retirement-tax-calculator-canada-initial-390 | [chromium](hosted/chromium-retirement-planner-retirement-tax-calculator-canada-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-retirement-tax-calculator-canada-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-retirement-tax-calculator-canada-initial-390.jpg) |
+| retirement-planner-rrif-minimum-withdrawal-calculator-initial-1440 | [chromium](hosted/chromium-retirement-planner-rrif-minimum-withdrawal-calculator-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-rrif-minimum-withdrawal-calculator-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-rrif-minimum-withdrawal-calculator-initial-1440.jpg) |
+| retirement-planner-rrif-minimum-withdrawal-calculator-initial-390 | [chromium](hosted/chromium-retirement-planner-rrif-minimum-withdrawal-calculator-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-rrif-minimum-withdrawal-calculator-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-rrif-minimum-withdrawal-calculator-initial-390.jpg) |
+| retirement-planner-rrif-withdrawal-calculator-initial-1440 | [chromium](hosted/chromium-retirement-planner-rrif-withdrawal-calculator-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-rrif-withdrawal-calculator-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-rrif-withdrawal-calculator-initial-1440.jpg) |
+| retirement-planner-rrif-withdrawal-calculator-initial-390 | [chromium](hosted/chromium-retirement-planner-rrif-withdrawal-calculator-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-rrif-withdrawal-calculator-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-rrif-withdrawal-calculator-initial-390.jpg) |
+| retirement-planner-rrsp-withdrawal-strategy-canada-initial-1440 | [chromium](hosted/chromium-retirement-planner-rrsp-withdrawal-strategy-canada-initial-1440.jpg) | [firefox](hosted/firefox-retirement-planner-rrsp-withdrawal-strategy-canada-initial-1440.jpg) | [webkit](hosted/webkit-retirement-planner-rrsp-withdrawal-strategy-canada-initial-1440.jpg) |
+| retirement-planner-rrsp-withdrawal-strategy-canada-initial-390 | [chromium](hosted/chromium-retirement-planner-rrsp-withdrawal-strategy-canada-initial-390.jpg) | [firefox](hosted/firefox-retirement-planner-rrsp-withdrawal-strategy-canada-initial-390.jpg) | [webkit](hosted/webkit-retirement-planner-rrsp-withdrawal-strategy-canada-initial-390.jpg) |
+| retirement-planner-text-200-390 | [chromium](hosted/chromium-retirement-planner-text-200-390.jpg) | [firefox](hosted/firefox-retirement-planner-text-200-390.jpg) | [webkit](hosted/webkit-retirement-planner-text-200-390.jpg) |
