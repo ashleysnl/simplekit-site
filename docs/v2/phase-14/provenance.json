@@ -1,0 +1,21 @@
+{
+  "source": "356cfa5297ef48782b74ccbfacdb4d68b36baaa1",
+  "sourceValidationRun": 38177198543,
+  "previewRun": 38177218826,
+  "previewUrl": "https://1e526422.simplekit-preview.pages.dev",
+  "runtimeFiles": 354,
+  "runtimeMatchesLocalBuild": true,
+  "retainedPublicPilotScreenshots": 102,
+  "sourceArchiveSHA256": "51817768022ba5fe7aed34e8eaf66f2101584b3def416c813f3926d97ecc54f2",
+  "previewEvidenceArchiveSHA256": "9c783619f31edd65f66285ec1e4889849883ab416508bd20812a6cd02594daed",
+  "sourceEvidenceArchives": {
+    "design-system-evidence": "sha256:e16ac5e9d35f1310f0d162c79f993b3b8537047c22f53ed531cfb8fd183a7a73",
+    "editorial-evidence": "sha256:4fa78817f61109768ecb0e0169c3e408add35bb5a99033d72d5e20a6ee67519c",
+    "pilot-evidence": "sha256:d7c2c2e6c452dbdb403ea799af4b0fd7c882e05a902ba7af8e9b0922863d76e2"
+  },
+  "originalExactRuntimeFiles": 324,
+  "originalExactCalculatorJSFiles": 90,
+  "strictPresentationOnlyCalculatorJSFiles": 4,
+  "manualOwnerAcceptance": "pending",
+  "productionMain": "ca7826db75cb4353488786aab80857b3a71c1be1"
+}

@@ -1,0 +1,7 @@
+Known legacy missing Apple icon: cpp-calculator/index.html (icons/apple-touch-icon.png); repair in its source repository before V2 adoption.
+Known legacy missing Apple icon: fire-calculator/index.html (icons/apple-touch-icon.png); repair in its source repository before V2 adoption.
+Known legacy missing Apple icon: investment-fee-calculator/index.html (icons/apple-touch-icon.png); repair in its source repository before V2 adoption.
+Known legacy missing Apple icon: mortgage-paydown-vs-invest-calculator/index.html (icons/apple-touch-icon.png); repair in its source repository before V2 adoption.
+Known legacy missing Apple icon: rrsp-vs-tfsa-calculator/index.html (icons/apple-touch-icon.png); repair in its source repository before V2 adoption.
+Output validation passed: 22 calculator routes, 53 sitemap URLs, 67 HTML pages, 174 local assets.
+Static preview server listening on port 8007 (dist/, noindex).

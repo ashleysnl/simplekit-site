@@ -1,0 +1,11 @@
+
+> sources:fetch
+> node scripts/acquire-sources.mjs
+
+Fetched retirement-planner at 54bb14f436e0249c4b81e94d4fe042e5de54cc1b
+Verified 23 pinned GitHub sources.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

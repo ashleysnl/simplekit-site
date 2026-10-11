@@ -1,0 +1,56 @@
+[
+  {
+    "mode": "module",
+    "classic": false,
+    "outputs": {
+      "#resultLiveSummary": "Plan health: Shortfall Likely. You may be short by $93,531 per year.",
+      "#readinessSummaryModule": "Top numbers The simplest read of your current retirement plan. Retirement readiness Shortfall Likely Base plan Monthly retirement income $8,748 Estimated spendable income Shortfall or surplus -$93,531 First retirement year after tax Years until retirement 18 Target age 63 Projected portfolio value $1,268,983 At retirement Money lasts Age 77 Projection under current assumptions"
+    },
+    "intentionallyBlockedModule": false,
+    "fallbackLoaded": false,
+    "chart": {
+      "width": 556,
+      "cssWidth": 278,
+      "dpr": 2,
+      "font": "12px \"SimpleKit Sans\", Arial, \"Liberation Sans\", sans-serif"
+    },
+    "financialFixtures": "passed",
+    "pageErrors": []
+  },
+  {
+    "mode": "baseline-classic",
+    "classic": true,
+    "outputs": {
+      "#resultLiveSummary": "Plan health: Shortfall Likely. You may be short by $93,531 per year.",
+      "#readinessSummaryModule": "Top numbers The simplest read of your current retirement plan. Retirement readiness Shortfall Likely Base plan Monthly retirement income $8,748 Estimated spendable income Shortfall or surplus -$93,531 First retirement year after tax Years until retirement 18 Target age 63 Projected portfolio value $1,268,983 At retirement Money lasts Age 75 Projection under current assumptions"
+    },
+    "intentionallyBlockedModule": true,
+    "fallbackLoaded": true,
+    "chart": {
+      "width": 800,
+      "cssWidth": 278,
+      "dpr": 2,
+      "font": "12px \"Avenir Next\""
+    },
+    "financialFixtures": "passed",
+    "pageErrors": []
+  },
+  {
+    "mode": "refined-classic",
+    "classic": true,
+    "outputs": {
+      "#resultLiveSummary": "Plan health: Shortfall Likely. You may be short by $93,531 per year.",
+      "#readinessSummaryModule": "Top numbers The simplest read of your current retirement plan. Retirement readiness Shortfall Likely Base plan Monthly retirement income $8,748 Estimated spendable income Shortfall or surplus -$93,531 First retirement year after tax Years until retirement 18 Target age 63 Projected portfolio value $1,268,983 At retirement Money lasts Age 75 Projection under current assumptions"
+    },
+    "intentionallyBlockedModule": true,
+    "fallbackLoaded": true,
+    "chart": {
+      "width": 556,
+      "cssWidth": 278,
+      "dpr": 2,
+      "font": "12px \"SimpleKit Sans\", Arial, \"Liberation Sans\", sans-serif"
+    },
+    "financialFixtures": "passed",
+    "pageErrors": []
+  }
+]
