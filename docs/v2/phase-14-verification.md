@@ -32,6 +32,14 @@ All 22 Phase 0 numerical fixtures and Budget/Retirement JSON/storage round trips
 
 ## Review and rollback
 
+### CI failure repair and early icon validation
+
+[Run 38161416047](https://github.com/ashleysnl/simplekit-site/actions/runs/38161416047) failed after Chromium pilot checks passed: Firefox requested the existing Retirement Planner Apple-touch icon URL, but the pinned source did not contain that PNG. Upstream commit `acb5a512bb72a520fb9ba5b34656c4ee9eac9c46` supplies the icon from the existing app SVG; the site pin and preservation guards now include that one new source-owned asset. [Run 38170643100](https://github.com/ashleysnl/simplekit-site/actions/runs/38170643100) passes both required jobs with the repaired pin, including the Chromium, Firefox and WebKit checks.
+
+Output validation now checks Apple-touch, precomposed Apple-touch, shortcut and mask icons before the browser job. Regression coverage rejects missing and empty icons, recognizes case-insensitive relation tokens, and verifies that legacy exceptions cannot apply after V2 adoption. Local source verification, build, all 40 named unit tests, SEO/output validation and both preservation guards pass.
+
+Five unchanged pinned legacy pages still reference absent `icons/apple-touch-icon.png`: CPP, FIRE, Investment Fee, Mortgage Paydown vs Invest and RRSP vs TFSA. These exact page/asset pairs emit explicit output-validation warnings while the pages remain unopted. Missing icons on other pages, other asset paths, or pages with `data-v2-system`/`data-v2-pilot` fail validation. Repair those assets in their owning repositories before adopting V2; this change does not alter those calculators or waive the pilot browser checks.
+
 Do not mark owner acceptance or Phase 15 complete based on these automated checks. Manual assistive-technology, real-device/native zoom and owner visual review remain open. The upstream 404 remains an intentional error page, with no claim of V2 redesign. No production, DNS or upstream-default-branch deployment occurs.
 
 Rollback uses the three `before` pins in the transition manifest and a normal revert of the site integration commit; do not rewrite shared history. Rebuild and rerun preservation and numerical fixtures. Upstream review branches/PRs retain the proposed work regardless of whether the site pins are accepted.
