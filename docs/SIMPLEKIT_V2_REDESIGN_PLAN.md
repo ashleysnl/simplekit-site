@@ -396,18 +396,18 @@ Verified evidence: [Phase 12 verification](v2/phase-12-verification.md), [System
 
 ## Phase 13 — Articles, Learn hub and supporting pages redesign
 
-Status: `[ ]`. Depends on Phase 12.
+Status: `[x]`. All 23 site-owned pages verified in three engines; pinned upstream guides/404 are documented Phase 14 exceptions. Manual device/AT and owner acceptance remain open.
 
-- [ ] Redesign Learn hub, all existing article and educational guide templates, tool directory and supporting pages (About, Methodology, Privacy, Support and other inventoried routes) to match V2.
-- [ ] Apply consistent header/footer, breadcrumb trails, reading widths, serif headings, sans-serif body, author/date information only where substantiated, section navigation, lists, tables, callouts, citations and related tools.
-- [ ] Improve mobile reading, long tables, inline links, imagery and article-to-calculator discovery without intrusive CTAs or misleading trust claims.
-- [ ] Preserve all article bodies, metadata, structured data, canonical URLs, indexability and internal links unless separately approved and documented.
-- [ ] Verify no-JS accessibility, print/readability and representative short/long-form content.
+- [x] Redesign Learn hub, all existing article and educational guide templates, tool directory and supporting pages (About, Methodology, Privacy, Support and other inventoried routes) to match V2.
+- [x] Apply consistent header/footer, breadcrumb trails, reading widths, serif headings, sans-serif body, author/date information only where substantiated, section navigation, lists, tables, callouts, citations and related tools.
+- [x] Improve mobile reading, long tables, inline links, imagery and article-to-calculator discovery without intrusive CTAs or misleading trust claims.
+- [x] Preserve all article bodies, metadata, structured data, canonical URLs, indexability and internal links unless separately approved and documented.
+- [x] Verify no-JS accessibility, print/readability and representative short/long-form content.
 
 Acceptance:
-- [ ] Every non-calculator page in the Phase 11 inventory is migrated or has an explicitly reviewed exception; screenshots compare mobile/tablet/desktop.
-- [ ] No lost articles, broken fragments, metadata regressions, layout overflow or unexpected analytics/privacy changes.
-- [ ] Evidence and per-route coverage in `docs/v2/phase-13-verification.md`.
+- [x] Every non-calculator page in the Phase 11 inventory is migrated or has an explicitly reviewed exception; screenshots compare mobile/tablet/desktop.
+- [x] No lost articles, broken fragments, metadata regressions, layout overflow or unexpected analytics/privacy changes.
+- [x] Evidence and per-route coverage in `docs/v2/phase-13-verification.md`.
 
 ## Phase 14 — Pilot calculator redesign and upstream integration
 
@@ -539,7 +539,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 10 Interim homepage/discovery regression | `[x]` | [Phase 10 verification](v2/phase-10-verification.md); clean/repeated builds, all 22 fixtures, import/export/reload, hosted cross-engine/SEO/performance and preserved candidate pass in run 38072049423. Manual release gates remain. |
 | 11 Site-wide inventory | `[x]` | [Inventory/evidence](v2/phase-11-verification.md): 67 pages, 23 sources, 155 captures; hosted run 38088742754 passes. Phase 12 is next; migrations and manual review remain. |
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
-| 13 Articles and supporting pages | `[ ]` | Pending Phase 12; migrate all editorial and informational pages. |
+| 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
 | 14 Calculator pilots | `[ ]` | Pending Phase 13; Retirement and Mortgage pilots with owner review. |
 | 15 Remaining calculators | `[ ]` | Pending Phase 14; complete all 22 tool migrations. |
 | 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |

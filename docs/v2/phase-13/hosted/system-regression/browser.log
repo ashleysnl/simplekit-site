@@ -1,0 +1,147 @@
+chromium: editorial 320
+chromium: editorial 375
+chromium: editorial 390
+chromium: axe editorial 390
+chromium: editorial 768
+chromium: editorial 1440
+chromium: axe editorial 1440
+chromium: editorial 1920
+chromium: editorial no-js
+chromium: editorial forced-colors
+chromium: editorial dark
+chromium: editorial font-fallback
+chromium: editorial text-200
+chromium: axe editorial text-200
+chromium: calculator 320
+chromium: calculator 375
+chromium: calculator 390
+chromium: axe calculator 390
+chromium: calculator 768
+chromium: calculator 1440
+chromium: axe calculator 1440
+chromium: calculator 1920
+chromium: calculator no-js
+chromium: calculator forced-colors
+chromium: calculator dark
+chromium: calculator font-fallback
+chromium: calculator text-200
+chromium: axe calculator text-200
+chromium: components 320
+chromium: components 375
+chromium: components 390
+chromium: axe components 390
+chromium: components 768
+chromium: components 1440
+chromium: axe components 1440
+chromium: components 1920
+chromium: components no-js
+chromium: components forced-colors
+chromium: components dark
+chromium: components font-fallback
+chromium: components text-200
+chromium: axe components text-200
+chromium: axe open menu
+chromium: axe invalid amount
+chromium: legacy isolation /
+chromium: legacy isolation /retirement-planner/rrif-withdrawal-calculator.html
+chromium: legacy isolation /mortgage-calculator/
+chromium: legacy isolation /retirement-planner/
+chromium: 33 layouts, 11 clean axe states, keyboard/validation/reset/export/print and four legacy isolation checks pass.
+firefox: editorial 320
+firefox: editorial 375
+firefox: editorial 390
+firefox: axe editorial 390
+firefox: editorial 768
+firefox: editorial 1440
+firefox: axe editorial 1440
+firefox: editorial 1920
+firefox: editorial no-js
+firefox: editorial forced-colors
+firefox: editorial dark
+firefox: editorial font-fallback
+firefox: editorial text-200
+firefox: axe editorial text-200
+firefox: calculator 320
+firefox: calculator 375
+firefox: calculator 390
+firefox: axe calculator 390
+firefox: calculator 768
+firefox: calculator 1440
+firefox: axe calculator 1440
+firefox: calculator 1920
+firefox: calculator no-js
+firefox: calculator forced-colors
+firefox: calculator dark
+firefox: calculator font-fallback
+firefox: calculator text-200
+firefox: axe calculator text-200
+firefox: components 320
+firefox: components 375
+firefox: components 390
+firefox: axe components 390
+firefox: components 768
+firefox: components 1440
+firefox: axe components 1440
+firefox: components 1920
+firefox: components no-js
+firefox: components forced-colors
+firefox: components dark
+firefox: components font-fallback
+firefox: components text-200
+firefox: axe components text-200
+firefox: axe open menu
+firefox: axe invalid amount
+firefox: legacy isolation /
+firefox: legacy isolation /retirement-planner/rrif-withdrawal-calculator.html
+firefox: legacy isolation /mortgage-calculator/
+firefox: legacy isolation /retirement-planner/
+firefox: 33 layouts, 11 clean axe states, keyboard/validation/reset/export/print and four legacy isolation checks pass.
+webkit: editorial 320
+webkit: editorial 375
+webkit: editorial 390
+webkit: axe editorial 390
+webkit: editorial 768
+webkit: editorial 1440
+webkit: axe editorial 1440
+webkit: editorial 1920
+webkit: editorial no-js
+webkit: editorial forced-colors
+webkit: editorial dark
+webkit: editorial font-fallback
+webkit: editorial text-200
+webkit: axe editorial text-200
+webkit: calculator 320
+webkit: calculator 375
+webkit: calculator 390
+webkit: axe calculator 390
+webkit: calculator 768
+webkit: calculator 1440
+webkit: axe calculator 1440
+webkit: calculator 1920
+webkit: calculator no-js
+webkit: calculator forced-colors
+webkit: calculator dark
+webkit: calculator font-fallback
+webkit: calculator text-200
+webkit: axe calculator text-200
+webkit: components 320
+webkit: components 375
+webkit: components 390
+webkit: axe components 390
+webkit: components 768
+webkit: components 1440
+webkit: axe components 1440
+webkit: components 1920
+webkit: components no-js
+webkit: components forced-colors
+webkit: components dark
+webkit: components font-fallback
+webkit: components text-200
+webkit: axe components text-200
+webkit: axe open menu
+webkit: axe invalid amount
+webkit: legacy isolation /
+webkit: legacy isolation /retirement-planner/rrif-withdrawal-calculator.html
+webkit: legacy isolation /mortgage-calculator/
+webkit: legacy isolation /retirement-planner/
+webkit: 33 layouts, 11 clean axe states, keyboard/validation/reset/export/print and four legacy isolation checks pass.

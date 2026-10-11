@@ -16,6 +16,7 @@ import { localizeCoreHtml } from "./site-html.mjs";
 import { createDiscoveryIndex, discoveryModule, loadDiscoveryMetadata, renderDiscoveryQuestions } from "./v2-discovery.mjs";
 import { createGoalGroups, renderGoalCards, renderGoalDirectory, renderGoalNavigation } from "./v2-goals.mjs";
 import { homepageStyles, navigationScript } from "./v2-home-resources.mjs";
+import { renderEditorialPage } from "./v2-editorial.mjs";
 
 const sourceById = new Map(acquireSources().map(source => [source.id, source]));
 const templatesRoot = path.join(repoRoot, "templates");
@@ -86,7 +87,7 @@ function buildTemplates(relativeDir = ".") {
       })
       .replace(toolCountPattern, String(registry.length))
       .replaceAll("{{v2Questions}}", renderDiscoveryQuestions(discovery));
-    writeFileSync(destinationPath, rendered);
+    writeFileSync(destinationPath, entry.endsWith('.html') ? renderEditorialPage(rendered) : rendered);
   }
 }
 

@@ -84,8 +84,8 @@
   .sk-v2[data-v2-system="1"] .v2s-nav { width: auto; }
   .sk-v2[data-v2-system="1"] .v2s-layout { grid-template-columns: minmax(0,1fr) minmax(14rem,20rem); }
   .sk-v2[data-v2-system="1"] .v2s-layout--editorial { grid-template-areas: "content navigation"; }
-  .sk-v2[data-v2-system="1"] .v2s-layout--editorial article { grid-area: content; }
-  .sk-v2[data-v2-system="1"] .v2s-layout--editorial aside { grid-area: navigation; }
+  .sk-v2[data-v2-system="1"] .v2s-layout--editorial > article { grid-area: content; }
+  .sk-v2[data-v2-system="1"] .v2s-layout--editorial > aside { grid-area: navigation; }
   .sk-v2[data-v2-system="1"] .v2s-layout--calculator { grid-template-columns: minmax(0,.95fr) minmax(0,1.05fr); }
   .sk-v2[data-v2-system="1"] .v2s-footer-inner { grid-template-columns: 1fr 1fr; }
 }

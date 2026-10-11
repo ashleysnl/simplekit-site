@@ -74,7 +74,7 @@ jobs:
         run: |
           npm run sources:fetch
           node scripts/v2-baseline-inventory.mjs
-          node tests/v2-system-artifact.cjs
+          node tests/v2-editorial-preservation.cjs
           node scripts/v2-system-reference.mjs
           git diff --exit-code docs/v2/phase-12/references
       - name: Install isolated test-only browser tools
@@ -99,11 +99,27 @@ jobs:
           node tests/v2-system-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
           node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-editorial-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          for suite in v2-goals v2-seo v2-accessibility; do
+            export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence/regression/$suite"
+            mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+            node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          done
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: design-system-evidence
           path: ${{ runner.temp }}/design-system-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: editorial-evidence
+          path: ${{ runner.temp }}/editorial-evidence/
           if-no-files-found: warn
           retention-days: 30
 
