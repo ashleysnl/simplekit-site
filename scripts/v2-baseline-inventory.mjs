@@ -53,6 +53,7 @@ if(record) {
  for(const s of contracts.sourcePins.sources)if(pilot.transitions[s.id]){assert.equal(s.revision,pilot.transitions[s.id].after);s.revision=pilot.transitions[s.id].before;}
  for(const p of pilot.changedExistingRuntimeFiles)contracts.protectedAssets[p]=previous.protectedAssets[p];
  for(const p of Object.keys(contracts.protectedAssets))if(p.startsWith('assets/core/v2/'))delete contracts.protectedAssets[p];
+ delete contracts.protectedAssets['retirement-planner/icons/apple-touch-icon.png'];
  for(const js of JSON.parse(read(path.join(evidence,'upstream-js.json'))))assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
  assert.deepEqual(contracts,previous,'Protected calculator/route/source/reference contract changed');
 }
