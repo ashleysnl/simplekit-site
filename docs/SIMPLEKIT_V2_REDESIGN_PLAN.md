@@ -411,7 +411,7 @@ Acceptance:
 
 ## Phase 14 — Pilot calculator redesign and upstream integration
 
-Status: `[ ]`. Depends on Phases 12–13.
+Status: `[~]`. Source-owned Retirement/Mortgage pilots and seven retirement guides implemented; final three-engine verification and owner screenshot acceptance are pending. [Report](v2/phase-14-verification.md).
 
 - [ ] Select Retirement Planner as the primary complex pilot and Mortgage Calculator as a contrasting numerical/form pilot; inspect Core and their source repositories before changes.
 - [ ] Apply the V2 shell and shared input, validation, result, chart, table and export styles while preserving each calculator's purpose-specific information architecture.
@@ -540,7 +540,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 11 Site-wide inventory | `[x]` | [Inventory/evidence](v2/phase-11-verification.md): 67 pages, 23 sources, 155 captures; hosted run 38088742754 passes. Phase 12 is next; migrations and manual review remain. |
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
-| 14 Calculator pilots | `[ ]` | Pending Phase 13; Retirement and Mortgage pilots with owner review. |
+| 14 Calculator pilots | `[~]` | [Source-owned pilots](v2/phase-14-verification.md) implemented; hosted validation and owner review pending. |
 | 15 Remaining calculators | `[ ]` | Pending Phase 14; complete all 22 tool migrations. |
 | 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |
 | 17 Cloudflare preview/review | `[ ]` | Pending Phase 16; owner approves full-site preview. |

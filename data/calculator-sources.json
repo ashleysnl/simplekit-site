@@ -4,7 +4,7 @@
     {
       "id": "retirement-planner",
       "repository": "ashleysnl/RetirementPlanner",
-      "revision": "77babb4a4d8da834c3118c80e50b989ba7429130"
+      "revision": "25b0ccc11fc1e325e41132f10e497ea3f46e79bd"
     },
     {
       "id": "cpp-calculator",
@@ -24,7 +24,7 @@
     {
       "id": "mortgage-calculator",
       "repository": "ashleysnl/SimpleKITMortgageCalculator",
-      "revision": "92cf246721bf6b152334b7bc4185c62098abb8b4"
+      "revision": "2a2de947e1874638be280d15ca8676c6351cfe03"
     },
     {
       "id": "house-affordability-calculator",
@@ -114,7 +114,7 @@
     {
       "id": "simplekit-core",
       "repository": "ashleysnl/SimpleKit-Core",
-      "revision": "cb1da347956f66cec40c72f48fae38b6daf201ed"
+      "revision": "092877bebbab2e93afc532bce37c77d700ee2357"
     }
   ]
 }

@@ -57,7 +57,7 @@ jobs:
   design-system:
     needs: validate
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     # Review-only specimens and local build. No deployment environment or secrets.
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -74,7 +74,7 @@ jobs:
         run: |
           npm run sources:fetch
           node scripts/v2-baseline-inventory.mjs
-          node tests/v2-editorial-preservation.cjs
+          node tests/v2-pilot-preservation.cjs
           node scripts/v2-system-reference.mjs
           git diff --exit-code docs/v2/phase-12/references
       - name: Install isolated test-only browser tools
@@ -99,6 +99,9 @@ jobs:
           node tests/v2-system-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
           node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/pilot-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-pilot-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence"
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-editorial-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
@@ -120,6 +123,14 @@ jobs:
         with:
           name: editorial-evidence
           path: ${{ runner.temp }}/editorial-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: pilot-evidence
+          path: ${{ runner.temp }}/pilot-evidence/
           if-no-files-found: warn
           retention-days: 30
 

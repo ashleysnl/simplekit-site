@@ -417,6 +417,9 @@ function copyCoreAssets() {
   for (const name of ["core.css", "core.js"]) {
     cpSync(path.join(sourceDirectory(core), name), path.join(destination, name));
   }
+  // Pilot assets are opt-in upstream sources; legacy Core remains byte-identical.
+  const pilotAssets = path.join(sourceDirectory(core), "v2");
+  if (existsSync(pilotAssets)) cpSync(pilotAssets, path.join(destination, "v2"), { recursive: true });
 }
 
 function localizeCoreAssets(directory) {

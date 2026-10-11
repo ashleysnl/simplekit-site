@@ -13,8 +13,11 @@ test('v2 preserves the 22 canonical tools and declared sitemap inventory',()=>{
  assert.deepEqual(current.tools,baseline.tools);
  assert.deepEqual([...current.site.pages.map(p=>p.loc),...current.tools.filter(t=>t.includeInSitemap).map(t=>t.canonicalUrl)].sort(),baseline.sitemap);
 });
-test('v2 leaves calculator and Core source revisions unchanged',()=>{
- assert.deepEqual(JSON.parse(fs.readFileSync(path.join(repoRoot,'data/calculator-sources.json'))),baseline.sourcePins);
+test('v2 preserves source revisions except the three explicit Phase 14 pilot transitions',()=>{
+ const transitions=JSON.parse(fs.readFileSync(path.join(repoRoot,'data/v2-pilot-sources.json'))).transitions;
+ const expected=structuredClone(baseline.sourcePins);
+ for(const s of expected.sources)if(transitions[s.id]){assert.equal(s.revision,transitions[s.id].before);s.revision=transitions[s.id].after;}
+ assert.deepEqual(JSON.parse(fs.readFileSync(path.join(repoRoot,'data/calculator-sources.json'))),expected);
 });
 test('v2 preserves checked-in production landing pages and hostname',()=>{
  for(const file of ['index.html','tools/index.html','CNAME']) {
