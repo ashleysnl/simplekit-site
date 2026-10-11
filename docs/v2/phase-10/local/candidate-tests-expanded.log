@@ -1,0 +1,49 @@
+Output validation passed: 1 calculator routes, 1 sitemap URLs, 1 HTML pages, 1 local assets.
+✔ every canonical calculator has one completed, immutable GitHub source (2.183169ms)
+✔ source acquisition rejects branch pins, duplicate IDs and traversal (1.236785ms)
+✔ historical reports are excluded only in source checks; published legacy links fail (1.70844ms)
+✔ SEO checks reject legacy URLs in robots, sitemap and browser code (2.539218ms)
+✔ intentional compatibility registry is allowed, adjacent production files are checked (0.751149ms)
+✔ canonical manifest rejects mismatched, duplicate and unsafe routes (0.865752ms)
+✔ all restored sitemap routes still resolve to the same canonical host (0.434309ms)
+✔ URL resolver handles relative/query assets and refuses external or encoded traversal (0.895228ms)
+✔ bundled Core loads as an ES module for classic and module callers (0.363811ms)
+✔ cached sources fail verification after edits, ignored files, or origin changes (40.467159ms)
+✔ output checks detect wrong metadata, missing assets and module dependencies (4.861399ms)
+✔ v2 preserves the 22 canonical tools and declared sitemap inventory (0.44841ms)
+✔ v2 leaves calculator and Core source revisions unchanged (0.186102ms)
+✔ v2 preserves checked-in production landing pages and hostname (0.660331ms)
+✔ v2 keeps the original design reference unchanged (2.363423ms)
+✔ discovery covers every canonical tool and derives names and destinations from the manifest (0.163107ms)
+✔ discovery rejects missing, duplicate, unknown and stale metadata IDs (2.232895ms)
+✔ discovery rejects a second route authority, stale URLs and invalid metadata (1.270276ms)
+✔ suggested questions map to their four intended primary and optional related tools (1.387133ms)
+✔ each of the 22 exact names and slugs ranks its intended tool first, ahead of synonym collisions (11.365437ms)
+✔ money questions and common Canadian synonyms find the intended tool first (1.021448ms)
+✔ normalization handles mixed case, whitespace, accents and punctuation; empty/unknown/HTML-like queries are harmless (0.972885ms)
+✔ static questions escape metadata and generated browser data preserves canonical destinations (2.419077ms)
+✔ goal destinations contain their intended tools and keep tax, pay/work and travel visible (0.713972ms)
+✔ duplicate tools, missing primary categories and empty goal destinations fail the build contract (0.836167ms)
+✔ directory rendering escapes manifest copy and emits canonical tool tokens once each (0.525166ms)
+✔ the four reference cards and all seven directory anchors use the same category IDs (0.385825ms)
+✔ every guided-discovery answer/skip combination returns canonical tools or an explicit fallback (0.83824ms)
+✔ documented goals and immediate needs preserve relevance when earlier answers change (0.249248ms)
+✔ homepage bundle preserves CSS order and resolves local font resources (0.786132ms)
+✔ navigation enhancement is synchronous at its markup boundary, with JS-free fallback (0.329379ms)
+✔ browser suites require explicit isolated-preview opt-in and reject production or lookalike hosts (0.807324ms)
+✔ indexed metadata rejects missing/duplicate canonicals, mismatched social URLs, noindex and invalid JSON-LD (2.578208ms)
+✔ authored social tags are required; inherited optional gaps remain explicitly reportable (0.632018ms)
+✔ share-image integrity rejects truncated payloads, corrupt checksums and trailing bytes (126.094041ms)
+✔ output integrity rejects broken HTML links, preloads, share assets and compatibility indexing (84.092966ms)
+(node:31368) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/simplekit-site/assets/v2/discovery-engine.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /workspace/simplekit-site/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.748562

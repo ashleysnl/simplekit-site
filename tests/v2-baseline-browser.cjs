@@ -9,7 +9,7 @@ const evidence = path.join(root, 'docs/v2/baseline');
 const record = process.argv.includes('--record');
 const privacyAudit = process.env.SIMPLEKIT_PRIVACY_AUDIT === '1';
 const base = process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8000';
-assert(['127.0.0.1', 'localhost'].includes(new URL(base).hostname), 'Local generated output only');
+require('./v2-preview-origin.cjs')(base);
 const origin = new URL(base).origin;
 const fixtures = [
   ['retirement-planner', [['click', '#landingDemoBtn']], ['#resultLiveSummary', '#readinessSummaryModule']],

@@ -4,10 +4,10 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8001').origin;
-assert(['127.0.0.1','localhost'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-trust';
 fs.mkdirSync(output,{recursive:true});
-const titles = ['No signup','Local calculations','Built for Canadians'];
+const titles = ['No signup','Local results','Built for Canadians'];
 const errors = [], layouts = [];
 async function makeContext(browser,options={}) {
   const c = await browser.newContext({viewport:{width:390,height:1000},locale:'en-CA',...options});
@@ -20,11 +20,21 @@ async function readable(p,state) {
   assert.deepEqual(await p.locator('.v2-trust-title').allTextContents(),titles);
   const result = await p.locator('.v2-home-trust').evaluate(section=>{
     const rect=n=>n.getBoundingClientRect().toJSON();
+    const splitTitleWords = [...section.querySelectorAll('.v2-trust-title')].flatMap(title => {
+      const node = title.firstChild;
+      return [...node.textContent.matchAll(/\S+/g)].filter(word => {
+        const range = document.createRange();
+        range.setStart(node, word.index); range.setEnd(node, word.index + word[0].length);
+        return range.getClientRects().length > 1;
+      }).map(word => word[0]);
+    });
     return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,section:rect(section),
+      splitTitleWords,
       items:[...section.querySelectorAll('li')].map(n=>({rect:rect(n),title:rect(n.querySelector('.v2-trust-title')),detail:rect(n.querySelector('.v2-trust-detail')),icon:rect(n.querySelector('.v2-icon-disc')),overflow:n.scrollWidth>n.clientWidth+1})),
-      links:[...section.querySelectorAll('a')].map(n=>({href:n.href,rect:rect(n)}))};
+      links:[...document.querySelectorAll('.v2-trust-note a')].map(n=>({href:n.href,rect:rect(n)}))};
   });
   assert(result.scrollWidth<=result.width,`${state}: horizontal overflow`);
+  assert.deepEqual(result.splitTitleWords, [], `${state}: trust title splits inside a word`);
   for(const item of result.items) {
     assert(!item.overflow,`${state}: item clipped`);
     assert(item.icon.right<=item.title.left,`${state}: icon overlaps text`);
@@ -91,7 +101,7 @@ async function readable(p,state) {
     await fp.locator('.v2-home-trust').screenshot({path:path.join(output,'trust-nojs-forced-colors.jpg'),type:'jpeg',quality:85});
     await fallback.close();
     assert.deepEqual(errors,[]);
-    fs.writeFileSync(path.join(output,'trust-browser.json'),JSON.stringify({browser:browser.version(),layouts,pageErrors:errors,search:{queries:4,requests:[],analyticsChanged:false,storageChanged:false},onboarding:'Not implemented until Phase 7; no onboarding choices exist to submit.',zoom:'CSS 200%, text 200% at 320, viewport reflow. Actual browser-toolbar zoom remains a manual Phase 8 check.'},null,2)+'\n');
+    fs.writeFileSync(path.join(output,'trust-browser.json'),JSON.stringify({browser:browser.version(),layouts,pageErrors:errors,search:{queries:4,requests:[],analyticsChanged:false,storageChanged:false},onboarding:'Guided discovery is audited separately by v2-onboarding-browser.cjs; this suite covers trust and search privacy.',zoom:'CSS 200%, text 200% at 320, viewport reflow. Actual browser-toolbar zoom remains a manual Phase 8 check.'},null,2)+'\n');
     console.log(`${layouts.length} layout/fallback checks; privacy/methodology keyboard links and 4 private searches passed.`);
   } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

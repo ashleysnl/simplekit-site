@@ -1,0 +1,24 @@
+/* Phase 8 changes are confined to authored V2 landing pages. */
+.sk-v2 .v2-search-bar { border-color: var(--v2-control-border); }
+:is(.v2-home, .v2-tools) :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #0759d9;
+  outline-offset: 3px;
+}
+.v2-tools .v2-tools-skip { position: absolute; top: .5rem; left: 1rem; z-index: 20; transform: translateY(-200%); padding: .75rem 1rem; background: #fff; color: #0759d9; }
+.v2-tools .v2-tools-skip:focus { transform: none; }
+.v2-tools a { min-width: 2.75rem; min-height: 2.75rem; display: inline-flex; align-items: center; }
+.v2-tools :is(.content, .section, .footer-list, .article-card, .callout) { min-width: 0; overflow-wrap: anywhere; }
+.v2-tools .v2-directory-tool { display: flex; }
+.v2-home .v2-legacy-footer { overflow-wrap: anywhere; }
+.v2-home .v2-legacy-footer :is(.footer-grid, .footer-list) { min-width: 0; }
+@media (max-width: 759px) {
+  .v2-tools .nav-links { grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr)); }
+  .v2-tools .nav-link:last-child { grid-column: auto; }
+}
+/* Radio inputs have native UI; the entire labelled row is the touch target. */
+@media (prefers-reduced-motion: reduce) {
+  :is(.v2-home, .v2-tools), :is(.v2-home, .v2-tools) *, :is(.v2-home, .v2-tools) *::before, :is(.v2-home, .v2-tools) *::after { scroll-behavior: auto; animation: none; transition: none; }
+}
+@media (forced-colors: active) {
+  :is(.v2-home, .v2-tools) :where(a, button, input, select, textarea, [tabindex]):focus-visible { outline-color: Highlight; }
+}

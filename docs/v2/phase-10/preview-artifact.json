@@ -1,0 +1,12 @@
+{
+  "workflow": 38072049423,
+  "artifactId": 11676609093,
+  "sha256": "132f1ed1e1148863f2391693a8fc11a36f932453a521a7ec7249893a7f8d30aa",
+  "files": 335,
+  "ordinaryFilesByteIdentical": 333,
+  "intentionalPreviewDifferences": [
+    "CNAME removed",
+    "robots.txt Disallow /",
+    "_headers noindex/nofollow"
+  ]
+}

@@ -1,0 +1,4 @@
+{"run":1,"performance":99,"accessibility":100,"lcp_ms":2049.4180000000006,"cls":0}
+{"run":2,"performance":99,"accessibility":100,"lcp_ms":2144.3767000000003,"cls":0}
+{"run":3,"performance":98,"accessibility":100,"lcp_ms":2294.1850999999997,"cls":0}
+Phase 8 Lighthouse medians: {"performance":99,"accessibility":100,"lcp_ms":2144.3767000000003,"cls":0}

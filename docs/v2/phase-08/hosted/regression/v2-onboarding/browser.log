@@ -1,0 +1,5 @@
+(node:7476) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/runner/work/simplekit-site/simplekit-site/assets/v2/onboarding-engine.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/runner/work/simplekit-site/simplekit-site/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Phase 7: all 93 browser answer/skip paths, state reset, keyboard/AX, privacy and 24 layout/fallback states passed.

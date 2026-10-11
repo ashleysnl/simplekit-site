@@ -1,0 +1,42 @@
+[
+  {
+    "source": "assets/v2/fonts/simplekit-display-400.woff",
+    "source_sha256": "fc5eac34cbf9d6811ef0ba70b4f5d450f6fd614da8072c538f06c39fe459f87c",
+    "file": "assets/v2/fonts/simplekit-display-400.woff2",
+    "sha256": "02dca8acfdd91980abede5ae6d1c5d2cc56da674919cb6f5804c4e5b3ee7eaba",
+    "source_bytes": 59680,
+    "bytes": 46084,
+    "glyphs": 636,
+    "cmap_and_advance_metrics_unchanged": true
+  },
+  {
+    "source": "assets/v2/fonts/simplekit-display-700.woff",
+    "source_sha256": "c7febad828f8b43cac380024a6a9c5ab774a58860b1dc3262963e567fccb5155",
+    "file": "assets/v2/fonts/simplekit-display-700.woff2",
+    "sha256": "2aba6481bcec1eb6177b2e8eee8b073f11a541002d083455aba58416d7d0a965",
+    "source_bytes": 56040,
+    "bytes": 43072,
+    "glyphs": 638,
+    "cmap_and_advance_metrics_unchanged": true
+  },
+  {
+    "source": "assets/v2/fonts/simplekit-sans-400.woff",
+    "source_sha256": "3b2a196867ebac2e610b43d0622383831fcc3d49b7363d5f95b7cf80ff645600",
+    "file": "assets/v2/fonts/simplekit-sans-400.woff2",
+    "sha256": "fcd6af99d3360930ff47728be331b5bab99d155ce0a1cad6c829465d225dca46",
+    "source_bytes": 53520,
+    "bytes": 41460,
+    "glyphs": 646,
+    "cmap_and_advance_metrics_unchanged": true
+  },
+  {
+    "source": "assets/v2/fonts/simplekit-sans-700.woff",
+    "source_sha256": "d2c9f1ac5f66f4616ffe8907c4bb76da8dceaf996ea485ff9159daaa26519e32",
+    "file": "assets/v2/fonts/simplekit-sans-700.woff2",
+    "sha256": "969076eb6001321f5349ed719171eedc865dac95e713c81c105f5f225d4ae6c7",
+    "source_bytes": 52920,
+    "bytes": 40988,
+    "glyphs": 646,
+    "cmap_and_advance_metrics_unchanged": true
+  }
+]

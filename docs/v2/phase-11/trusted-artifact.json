@@ -1,0 +1,11 @@
+{
+  "trustedWorkflowRef": "main",
+  "trustedWorkflowCommit": "ca7826db75cb4353488786aab80857b3a71c1be1",
+  "source_ref": "f978df5c48209a02b107d4a31a81f7ba49088335",
+  "workflow": 38073399192,
+  "artifactId": 11678300444,
+  "zipSHA256": "6f86f734935808fa836361bed18f3334666fe77ef5c1354842e46e6258eb1bbe",
+  "files": 335,
+  "everyFileByteIdenticalToPhase10Preview": true,
+  "note": "ZIP digest differs because archive metadata is new; all 335 paths and file contents match Phase 10. Trusted default upload workflow does not stamp source SHA into deployment metadata; source identity is established by exact checkout input, build logs and byte-identical artifact."
+}

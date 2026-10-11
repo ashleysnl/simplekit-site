@@ -5,6 +5,22 @@ on:
   push:
     branches: [main, develop-v2, 'feat/**', 'fix/**', 'chore/**']
   workflow_dispatch:
+    inputs:
+      preview_url:
+        description: Optional immutable isolated preview for read-only owner-review verification
+        required: false
+        default: ''
+        type: string
+      preview_alias:
+        description: Shared isolated preview alias to compare with the candidate
+        required: false
+        default: https://codex-preview.simplekit-preview.pages.dev
+        type: string
+      candidate_sha:
+        description: Exact preserved Phase 10 source commit (required with preview_url)
+        required: false
+        default: ''
+        type: string
 
 permissions:
   contents: read
@@ -37,3 +53,126 @@ jobs:
           path: dist/
           if-no-files-found: error
           retention-days: 7
+
+  design-system:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Review-only specimens and local build. No deployment environment or secrets.
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: simplekit-site
+          path: dist/
+      - name: Verify preservation and reproducible reference markup
+        run: |
+          npm run sources:fetch
+          node scripts/v2-baseline-inventory.mjs
+          node tests/v2-system-artifact.cjs
+          node scripts/v2-system-reference.mjs
+          git diff --exit-code docs/v2/phase-12/references
+      - name: Install isolated test-only browser tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3
+          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
+      - name: Validate system references and unchanged calculator behavior
+        shell: bash
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
+          export SIMPLEKIT_PREVIEW_URL=http://127.0.0.1:8007
+          export SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/design-system-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          PORT=8007 node scripts/preview.mjs > "$SIMPLEKIT_EVIDENCE_DIR/server.log" 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid"' EXIT
+          for attempt in {1..40}; do
+            if curl -fsS "$SIMPLEKIT_PREVIEW_URL/" > /dev/null; then break; fi
+            sleep .25
+          done
+          node tests/v2-system-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
+          node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: design-system-evidence
+          path: ${{ runner.temp }}/design-system-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+
+  preview-review:
+    if: github.event_name == 'workflow_dispatch' && inputs.preview_url != ''
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # No deployment environment or secrets: this job only reads preview URLs.
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: simplekit-site
+          path: dist/
+      - name: Verify candidate build and prepare preview indexing fixture
+        run: |
+          npm run sources:fetch
+          node scripts/v2-baseline-inventory.mjs
+          node scripts/v2-release-artifact.mjs --compare docs/v2/phase-10/release-inventory.json
+          rm -f dist/CNAME
+          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > dist/_headers
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+      - name: Prepare isolated test-only browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1
+          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Verify preserved candidate and owner-review preview
+        shell: bash
+        env:
+          SIMPLEKIT_HOSTED_PREVIEW: '1'
+          SIMPLEKIT_PREVIEW_URL: ${{ inputs.preview_url }}
+          SIMPLEKIT_PREVIEW_ALIAS: ${{ inputs.preview_alias }}
+          SIMPLEKIT_CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-preview-review.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/inventory.log"
+          node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
+          node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
+          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline v2-release; do
+            export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence/regression/$suite"
+            mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+            node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          done
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/owner-review-evidence/seo"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-seo-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/site-inventory-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node scripts/v2-site-inventory.mjs "$SIMPLEKIT_EVIDENCE_DIR/site-inventory.json" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/source-inventory.log"
+          node tests/v2-site-inventory-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: owner-review-evidence
+          path: ${{ runner.temp }}/owner-review-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: site-inventory-evidence
+          path: ${{ runner.temp }}/site-inventory-evidence/
+          if-no-files-found: warn
+          retention-days: 30

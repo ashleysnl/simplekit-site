@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "5532bfa2ea1d1d79df04fb7a5dd85ac2f8d577ec",
+  "run": 38013211800,
+  "artifactId": 11655651388,
+  "zipSHA256": "df426242452b3e5eb624dacf429530c39da85013d49fcace4860c8f4fe5be906",
+  "previewFiles": 324,
+  "byteIdenticalFiles": 322,
+  "intentionalChanges": [
+    "production CNAME removed",
+    "robots disallow all",
+    "noindex headers"
+  ]
+}

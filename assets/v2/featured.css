@@ -1,0 +1,28 @@
+/* Phase 6: curated reference rows, with no unsupported popularity claim. */
+.sk-v2.v2-home-featured { padding-block: 1rem 1.5rem; }
+.sk-v2 .v2-featured-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1rem; margin-bottom: .5rem; }
+.sk-v2 .v2-featured-heading h2 { font-family: var(--v2-body); font-size: .75rem; line-height: 1.5; }
+.sk-v2 .v2-featured-all { display: inline-flex; align-items: center; gap: .375rem; min-height: var(--v2-target-size); font-size: .8125rem; font-weight: 700; text-decoration: none; }
+.sk-v2 .v2-featured-all .v2-icon { width: 1rem; height: 1rem; }
+.sk-v2 .v2-featured-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--v2-border); }
+.sk-v2 .v2-featured-tool { display: flex; align-items: center; gap: .75rem; min-height: var(--v2-target-size); padding-block: .75rem; border-bottom: 1px solid var(--v2-border); color: var(--v2-navy); text-decoration: none; }
+.sk-v2 .v2-featured-tool .v2-icon-disc { width: min(2rem, 32px); height: min(2rem, 32px); }
+.sk-v2 .v2-featured-tool .v2-icon-disc .v2-icon { width: min(1.25rem, 20px); height: min(1.25rem, 20px); }
+.sk-v2 .v2-featured-copy { flex: 1; min-width: 0; }
+.sk-v2 .v2-featured-name { display: block; font: 700 1.125rem/1.25 var(--v2-display); }
+.sk-v2 .v2-featured-description { display: block; margin-top: .25rem; color: var(--v2-slate); font-size: .875rem; line-height: 1.45; }
+.sk-v2 .v2-featured-chevron { width: min(1rem, 16px); height: min(1rem, 16px); color: var(--v2-slate); }
+.sk-v2 .v2-featured-tool:hover { background: var(--v2-blue-soft); }
+@media (min-width: 48rem) {
+  .sk-v2.v2-home-featured { padding-block: 1.5rem 3rem; }
+  .sk-v2 .v2-featured-heading h2, .sk-v2 .v2-featured-all { font-size: .875rem; }
+  .sk-v2 .v2-featured-tool { gap: 1rem; padding-block: 1rem; }
+  .sk-v2 .v2-featured-tool .v2-icon-disc { width: var(--v2-icon-disc); height: var(--v2-icon-disc); }
+  .sk-v2 .v2-featured-tool .v2-icon-disc .v2-icon { width: var(--v2-icon-size); height: var(--v2-icon-size); }
+  .sk-v2 .v2-featured-name { font-size: 1.375rem; }
+  .sk-v2 .v2-featured-description { font-size: 1rem; }
+}
+@media (forced-colors: active) {
+  .sk-v2 .v2-featured-list, .sk-v2 .v2-featured-tool { border-color: CanvasText; }
+  .sk-v2 .v2-featured-description, .sk-v2 .v2-featured-chevron { color: CanvasText; }
+}

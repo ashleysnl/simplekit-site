@@ -1,0 +1,7 @@
+{
+  "workflow_run": 38067758043,
+  "browser_artifact_id": 11675552252,
+  "sha256": "2f3f475dedb3608a9c951f134f6b8edefb805dff678da0425947e7a29d9dcecf",
+  "full_lighthouse_reports": "Three before and three after JSON/HTML reports retained in the GitHub workflow artifact; compact settings/metrics retained here.",
+  "source_commit": "997a24480f9bc1c4dfc4abee0371b8bf9f0621b0"
+}

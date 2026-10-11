@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8002').origin;
-assert(['localhost', '127.0.0.1'].includes(new URL(origin).hostname));
+require('./v2-preview-origin.cjs')(origin);
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-goals';
 fs.mkdirSync(output, { recursive: true });
 const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/tools.json')));
@@ -18,7 +18,7 @@ async function context(browser, options = {}, blockAssets = false) {
   await c.route('**/*', route => {
     const url = new URL(route.request().url());
     if (url.origin !== origin) return route.fulfill({ body: '', contentType: 'text/javascript' });
-    if (blockAssets && (/\.woff$/.test(url.pathname) || url.pathname.endsWith('sprite.svg'))) return route.abort();
+    if (blockAssets && (/\.woff2?$/.test(url.pathname) || url.pathname.endsWith('sprite.svg'))) return route.abort();
     return route.continue();
   });
   c.on('page', p => {
@@ -47,6 +47,12 @@ async function checkCards(p, state) {
     columns: getComputedStyle(document.querySelector('.v2-home-goal-list')).gridTemplateColumns.split(' ').length }));
   assert(geometry.scrollWidth <= geometry.width, `${state}: horizontal overflow`);
   assert.equal(await p.locator('.v2-home-goals .v2-goal-all').innerText(), 'View all 22 tools');
+  // Cover retained homepage/footer links as well as the new goal controls.
+  const smallTargets = await p.locator('a:not(.v2-skip-link), button, input').evaluateAll(nodes => nodes.filter(node => {
+    const rect = node.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && (rect.width < 44 || rect.height < 44);
+  }).map(node => ({ text: node.textContent.trim(), label: node.getAttribute('aria-label') })));
+  assert.deepEqual(smallTargets, [], `${state}: homepage touch target below 44px`);
   layouts.push({ state, ...geometry, cards });
   return geometry;
 }
@@ -70,7 +76,7 @@ async function checkDirectory(p) {
       const c = await context(browser, { viewport: { width, height: 1200 } }), p = await c.newPage();
       await p.goto(origin, { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready);
       const geometry = await checkCards(p, `width-${width}`);
-      assert.equal(geometry.columns, width < 390 ? 1 : 2);
+      assert.equal(geometry.columns, width < 375 ? 1 : 2);
       // Ordinary card copy should wrap between words, never split "Retirement"
       // or "Understand" just to squeeze in the reference's two-column layout.
       const splitWords = await p.locator('.v2-goal-copy span').evaluateAll(nodes => nodes.flatMap(n => {

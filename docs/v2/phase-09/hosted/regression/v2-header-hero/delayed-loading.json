@@ -1,0 +1,202 @@
+{
+  "before": {
+    "viewport": 390,
+    "scrollWidth": 390,
+    "header": {
+      "x": 16,
+      "y": 0,
+      "width": 358,
+      "height": 84.984375,
+      "top": 0,
+      "right": 374,
+      "bottom": 84.984375,
+      "left": 16
+    },
+    "hero": {
+      "x": 0,
+      "y": 84.984375,
+      "width": 390,
+      "height": 527.59375,
+      "top": 84.984375,
+      "right": 390,
+      "bottom": 612.578125,
+      "left": 0
+    },
+    "headline": {
+      "x": 16,
+      "y": 128.484375,
+      "width": 296,
+      "height": 71.59375,
+      "top": 128.484375,
+      "right": 312,
+      "bottom": 200.078125,
+      "left": 16
+    },
+    "textRects": [
+      {
+        "x": 16,
+        "y": 127.484375,
+        "width": 200.8125,
+        "height": 37,
+        "top": 127.484375,
+        "right": 216.8125,
+        "bottom": 164.484375,
+        "left": 16
+      },
+      {
+        "x": 16,
+        "y": 163.28125,
+        "width": 255.765625,
+        "height": 37,
+        "top": 163.28125,
+        "right": 271.765625,
+        "bottom": 200.28125,
+        "left": 16
+      }
+    ],
+    "body": {
+      "x": 16,
+      "y": 214.078125,
+      "width": 274.171875,
+      "height": 76.5,
+      "top": 214.078125,
+      "right": 290.171875,
+      "bottom": 290.578125,
+      "left": 16
+    },
+    "discovery": {
+      "x": 16,
+      "y": 310.578125,
+      "width": 358,
+      "height": 278,
+      "top": 310.578125,
+      "right": 374,
+      "bottom": 588.578125,
+      "left": 16
+    },
+    "source": "https://1ef797bf.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-400.avif",
+    "fontFaces": [
+      {
+        "family": "SimpleKit Display",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "SimpleKit Display",
+        "weight": "700",
+        "status": "loading"
+      },
+      {
+        "family": "SimpleKit Sans",
+        "weight": "400",
+        "status": "loading"
+      },
+      {
+        "family": "SimpleKit Sans",
+        "weight": "700",
+        "status": "loading"
+      }
+    ]
+  },
+  "after": {
+    "viewport": 390,
+    "scrollWidth": 390,
+    "header": {
+      "x": 16,
+      "y": 0,
+      "width": 358,
+      "height": 84.984375,
+      "top": 0,
+      "right": 374,
+      "bottom": 84.984375,
+      "left": 16
+    },
+    "hero": {
+      "x": 0,
+      "y": 84.984375,
+      "width": 390,
+      "height": 527.59375,
+      "top": 84.984375,
+      "right": 390,
+      "bottom": 612.578125,
+      "left": 0
+    },
+    "headline": {
+      "x": 16,
+      "y": 128.484375,
+      "width": 296,
+      "height": 71.59375,
+      "top": 128.484375,
+      "right": 312,
+      "bottom": 200.078125,
+      "left": 16
+    },
+    "textRects": [
+      {
+        "x": 16,
+        "y": 127.484375,
+        "width": 200.4375,
+        "height": 37,
+        "top": 127.484375,
+        "right": 216.4375,
+        "bottom": 164.484375,
+        "left": 16
+      },
+      {
+        "x": 16,
+        "y": 163.28125,
+        "width": 255.640625,
+        "height": 37,
+        "top": 163.28125,
+        "right": 271.640625,
+        "bottom": 200.28125,
+        "left": 16
+      }
+    ],
+    "body": {
+      "x": 16,
+      "y": 214.078125,
+      "width": 261,
+      "height": 76.5,
+      "top": 214.078125,
+      "right": 277,
+      "bottom": 290.578125,
+      "left": 16
+    },
+    "discovery": {
+      "x": 16,
+      "y": 310.578125,
+      "width": 358,
+      "height": 278,
+      "top": 310.578125,
+      "right": 374,
+      "bottom": 588.578125,
+      "left": 16
+    },
+    "source": "https://1ef797bf.simplekit-preview.pages.dev/assets/v2/images/coastal-mobile-400.avif",
+    "fontFaces": [
+      {
+        "family": "SimpleKit Display",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "SimpleKit Display",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "SimpleKit Sans",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "SimpleKit Sans",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ]
+  },
+  "cls": 0,
+  "shifts": []
+}

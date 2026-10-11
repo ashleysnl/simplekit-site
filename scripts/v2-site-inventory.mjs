@@ -1,0 +1,40 @@
+// Phase 11 inventories authored/upstream ownership and immutable content contracts.
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {repoRoot,outputRoot} from './paths.mjs';
+import {loadSeoManifest} from './seo-utils.mjs';
+import {filesIn,attributes} from './validate-output.mjs';
+const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const manifest=loadSeoManifest(repoRoot),pins=JSON.parse(fs.readFileSync(path.join(repoRoot,'data/calculator-sources.json'))).sources;
+const publicFiles=filesIn(outputRoot).map(file=>path.relative(outputRoot,file).split(path.sep).join('/')).sort();
+const indexed=new Set([...manifest.site.pages.filter(p=>p.includeInSitemap!==false).map(p=>p.loc),...manifest.tools.filter(t=>t.includeInSitemap).map(t=>t.canonicalUrl)]);
+const pages=[];
+const strip=html=>html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+for(const file of publicFiles.filter(f=>f.endsWith('.html'))){
+ const html=fs.readFileSync(path.join(outputRoot,file),'utf8'),route='/'+file.replace(/index\.html$/,'');
+ const tool=manifest.tools.find(t=>file.startsWith(t.slug+'/'));
+ const pin=tool&&pins.find(p=>p.id===tool.slug);
+ const template=path.posix.join('templates',file);
+ const authored=fs.existsSync(path.join(repoRoot,template))?template:fs.existsSync(path.join(repoRoot,file))?file:null;
+ let family=route==='/'?'homepage':route==='/tools/'?'directory':route.startsWith('/tools/')?'compatibility':tool?(route===tool.canonicalPath?'calculator':file.endsWith('/404.html')?'error':'retirement-guide'):route==='/learn/'?'learn-hub':route.startsWith('/learn/')?'article':route.startsWith('/privacy')?'legal':route.startsWith('/methodology')?'methodology':route.startsWith('/about')?'about':route.startsWith('/support')?'support':'other';
+ assert(pin||authored,`Missing authoritative source: ${file}`);
+ const owner=pin?{repository:pin.repository,revision:pin.revision,sourceFile:file.slice(tool.slug.length+1),authority:'upstream pinned source; separate reviewed update required'}:{repository:'ashleysnl/simplekit-site',sourceFile:authored,authority:authored.startsWith('templates/')?'authored template':'site-owned source page'};
+ const canonical=Array.from(html.matchAll(/<link\b[^>]*>/gi),m=>attributes(m[0])).find(t=>t.rel==='canonical')?.href||null;
+ const meta=Array.from(html.matchAll(/<meta\b[^>]*>/gi),m=>attributes(m[0]));
+ const styles=Array.from(html.matchAll(/<link\b[^>]*>/gi),m=>attributes(m[0])).filter(t=>t.rel==='stylesheet').map(t=>new URL(t.href,'https://simplekit.app'+route).href);
+ const scripts=Array.from(html.matchAll(/<script\b[^>]*>/gi),m=>attributes(m[0])).filter(t=>t.src).map(t=>new URL(t.src,'https://simplekit.app'+route).href);
+ const schemas=Array.from(html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)).filter(m=>attributes('<script '+m[1]+'>').type==='application/ld+json').map(m=>JSON.parse(m[2]));
+ const body=html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1]||html;
+ const target=family==='calculator'?(tool.slug==='retirement-planner'||tool.slug==='mortgage-calculator'?'Phase 14 pilot':'Phase 15 tool-specific migration'):family==='error'?'Phase 14: retain upstream fallback behavior and indexing':family==='homepage'?'Retain V2; verify full-site coherence in Phase 16':family==='compatibility'?'Phase 13: retain noindex/follow and canonical handoff':'Phase 13 editorial/support migration; upstream retirement guides coordinated with Phase 14';
+ pages.push({file,route,family,indexed:indexed.has('https://simplekit.app'+route),canonical,owner,target,migrationState:family==='homepage'||family==='directory'?'[~]':'[ ]',currentDesign:family==='homepage'?'V2 homepage; human/site-wide acceptance pending':family==='directory'?'V2 discovery with legacy site shell':family==='calculator'?'Pinned legacy tool UI + shared Core':family==='retirement-guide'?'Pinned upstream legacy guide':'Legacy site styles/template',styles,scripts,usesCore:styles.some(s=>s.endsWith('/assets/core/core.css'))||scripts.some(s=>s.endsWith('/assets/core/core.js')),title:strip(html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]||''),description:meta.find(t=>t.name==='description')?.content||null,robots:meta.find(t=>t.name==='robots')?.content||null,schemas,htmlSHA256:hash(html),bodyTextSHA256:hash(strip(body)),bodyText:strip(body),anchors:Array.from(html.matchAll(/\bid=["']([^"']+)["']/g),m=>m[1]),links:Array.from(html.matchAll(/<a\b[^>]*>/gi),m=>attributes(m[0]).href).filter(Boolean),semantics:{headings:Array.from(html.matchAll(/<(h[1-6])\b[^>]*>([\s\S]*?)<\/\1>/gi),m=>({level:m[1],text:strip(m[2])})),formControls:(html.match(/<(?:input|select|textarea)\b/gi)||[]).length,tables:(html.match(/<table\b/gi)||[]).length,chartHooks:(html.match(/(?:<canvas\b|id=["'][^"']*(?:chart|Chart)[^"']*["'])/g)||[]).length}});
+}
+assert.equal(pages.length,67);assert.equal(indexed.size,53);for(const url of indexed)assert(pages.some(p=>'https://simplekit.app'+p.route===url),`Unassigned sitemap URL: ${url}`);
+assert.equal(pages.filter(p=>p.family==='calculator').length,22);assert.equal(pins.length,23);
+const sources=pins.map(pin=>({id:pin.id,repository:pin.repository,revision:pin.revision,role:pin.id==='simplekit-core'?'Shared header/footer, tokens and helpers':'Calculator and any source-owned guide content',pages:pages.filter(p=>p.owner.repository===pin.repository).map(p=>p.route),styleFiles:publicFiles.filter(f=>f.startsWith(pin.id==='simplekit-core'?'assets/core/':pin.id+'/')&&f.endsWith('.css')),scriptFiles:publicFiles.filter(f=>f.startsWith(pin.id==='simplekit-core'?'assets/core/':pin.id+'/')&&f.endsWith('.js')),migrationOwner:'ashleysnl; author changes in '+pin.repository+', never dist or cache'}));
+const result={purpose:'Site-wide inventory only; no visual migration or full-site release acceptance claimed',counts:{htmlPages:pages.length,indexedPages:indexed.size,calculators:22,pinnedSources:pins.length,publicFiles:publicFiles.length},families:Object.fromEntries([...new Set(pages.map(p=>p.family))].sort().map(f=>[f,pages.filter(p=>p.family===f).length])),pages,sources,publicDocuments:[{route:'/simplekit-active-tools.md',owner:'ashleysnl/simplekit-site',source:'templates/simplekit-active-tools.md + generated manifest list',target:'Preserve all 22 links; Phase 13 audit',sha256:hash(fs.readFileSync(path.join(outputRoot,'simplekit-active-tools.md')))}],preservation:{sourcePinsSHA256:hash(fs.readFileSync(path.join(repoRoot,'data/calculator-sources.json'))),sitemapSHA256:hash(fs.readFileSync(path.join(outputRoot,'sitemap.xml'))),numericalFixtureSHA256:hash(fs.readFileSync(path.join(repoRoot,'docs/v2/baseline/tool-fixtures.json'))),redirectBaseline:'docs/seo/redirect-verification-2026-10-02.json',redirectSHA256:hash(fs.readFileSync(path.join(repoRoot,'docs/seo/redirect-verification-2026-10-02.json'))),publicAssetInventory:'docs/v2/phase-10/release-inventory.json',phase0Contracts:'docs/v2/baseline/contracts.json'}};
+const dest=process.argv[2]||path.join(repoRoot,'docs/v2/phase-11/site-inventory.json');fs.writeFileSync(dest,JSON.stringify(result,null,2)+'\n');
+const checklist=['# Site-wide route migration checklist','','Inventory complete does not mean redesigned. `[ ]` = migration incomplete; `[~]` = existing V2 work awaiting unified shell/full-site acceptance; `[x]` requires route-specific verification.','','| State | Route | Family | Authoritative source | Target |','| --- | --- | --- | --- | --- |',...pages.map(p=>`| ${p.migrationState} | ${p.route} | ${p.family} | ${p.owner.repository}: ${p.owner.sourceFile}${p.owner.revision?' @ '+p.owner.revision:''} | ${p.target} |`),'','Public document: `/simplekit-active-tools.md` is generated from `templates/simplekit-active-tools.md` and the canonical tool registry; preserve its 22 links.'];
+fs.writeFileSync(path.join(path.dirname(dest),'ROUTE_CHECKLIST.md'),checklist.join('\n')+'\n');
+console.log(JSON.stringify({counts:result.counts,families:result.families}));

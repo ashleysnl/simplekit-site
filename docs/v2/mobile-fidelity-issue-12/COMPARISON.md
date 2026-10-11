@@ -1,0 +1,93 @@
+# Issue #12 — mobile fidelity comparison
+
+Approved target: `docs/design-reference/simplekit-v2-target.png` (851 × 1848; immutable original). Baseline source: develop-v2 `6e3acc72506b40ec11c1bd0015c6eee2ca473213`; implementation bytes match the verified Phase 5 preview artifact, deployed from `882b745cf879c70f852a8cd665f0ec0e3eca2b0a`. Correct immutable preview: https://e9070fe2.simplekit-preview.pages.dev (the issue's shorter hostname was a typo).
+
+## Baseline completed before implementation (local render)
+
+`before/` contains 375/390/768/1440px full-page and viewport screenshots and measured DOM geometry. Chromium cannot securely navigate the hosted preview: `ERR_CERT_AUTHORITY_INVALID`; earlier secure HTTP probes returned 403 from this execution environment. No TLS checks were disabled. Screenshots therefore render the matching portable build on loopback, with external analytics stubbed, and are **not claimed as live hosted screenshots**. Hosted visual verification is performed separately by the GitHub runner; see the live evidence below.
+
+| Discrepancy | Baseline at 375 / 390px | Reference-directed correction |
+| --- | --- | --- |
+| Header and hero whitespace | Header 100px; hero content starts at 132px; 80px below discovery | Compact header, earlier copy, less trailing hero padding; keep menu ≥44px |
+| Coastal image barely visible | White overlay opacity .98–.88 across full image | Preserve a light text area, expose coastal trees/water on right, fade at discovery |
+| Discovery card disproportionate | 352px panel; visible help, duplicate count and directory CTA; 64px search | Integrated search/panel, minimum 44px question rows, screen-reader help/status, directory CTA when searching or JS unavailable |
+| Trust section pushes goals far below hero | 511px, including 266px stacked indicators and 181px disclosure | Three compact indicators at normal mobile sizes; retain readable privacy/analytics qualification and links |
+| Goal layout changes between nearby phones | Goals start at 1447 / 1448px; one column at 375, two at 390 | Bring goals higher; consistent two-column cards where full words fit, single-column enlarged text/320px fallback |
+
+The reference is a composition guide, not a reason to scale text/touch targets down to its raster's half-size. Keep readable type and 44px controls. Existing desktop hierarchy and later roadmap sections remain intact. Issue #12 explicitly calls for one focused fidelity pass before later phases; popular-calculator rows and guided onboarding remain in their original phases.
+
+## Iteration log
+
+Iteration 1: reviewed both phone screenshots plus tablet/desktop. Goals moved to 848 / 812px and the panel shrank to 222px. Five remaining discrepancies: (1) goal CTA still adds a separate row, (2) goal padding overrides loaded earlier than Phase 5 CSS, (3) trust descriptions wrap excessively, (4) disclosure links fragment inline text into large gaps, (5) goal cards retain excessive description height. Iteration 2 addresses these with the CTA on the eyebrow row, correctly ordered scoped rules, shorter truthful trust descriptions, a separate accessible disclosure-link row, and tighter card rhythm. Full-page differences below the implemented goal section are tracked roadmap scope, not invented replacements.
+
+Iteration 3: fixed fractional rounding at the 375px breakpoint and a 2px trust-label overflow. Browser testing found 200% text overflow in the retained lower homepage grid; scoped minimum widths/wrapping and narrow trust icons correct it. Search testing also found a photo-crop change when results expand at wide widths; explicit photo height now keeps the crop independent of result count.
+
+Iteration 4: moved the full, visible privacy/analytics/planning disclosure immediately below the goal cards. The truthful trust indicators lead directly into goals. No disclosure content or links are hidden. Reviewed 375/390/768/1440 captures against the unchanged reference. The following table and `after/` captures include iteration 5's final typography and crop refinement.
+
+| Measured element | Before 375 / 390px | After 375 / 390px |
+| --- | --- | --- |
+| Header height | 100 / 100px | 85 / 85px |
+| Question panel | 352 / 352px | 222 / 222px |
+| Trust starts | 936 / 937px | 610 / 613px |
+| Goals section starts | 1447 / 1448px | 706 / 708px |
+| First goal cards start | 1579 / 1580px | 822 / 824px |
+| Goal columns | 1 / 2 | 2 / 2 |
+
+Remaining reference differences: accessible 44px question rows and readable typography take more space than the raster's half-size proportions; the existing coastal asset differs from the exact reference coast; long goal names wrap without splitting words; the full privacy disclosure remains visible below goals; popular-calculator rows and guided onboarding remain the next roadmap phases. No numerical pixel-match or owner-approval claim is made.
+
+## Validation
+
+28 repository checks pass, including rejection of production/lookalike hosts by the hosted-test guard. All 23 source pins, portable build, SEO/output and preservation guard pass: 22 calculators, 53 unchanged sitemap URLs, 67 HTML routes, 323 output files and 94 byte-identical calculator JavaScript files. No lint script is configured. Production pages, analytics configuration, source pins, canonicals and sitemap are unchanged.
+
+Local browser checks pass: 27 header/menu widths; 44 exact name/slug searches plus intent/edge cases; four question destinations; nine trust/fallback checks and privacy/methodology keyboard navigation; six goal layouts and native fragment/direct/reload/history routes; all 22 unique directory destinations; foundational specimens; 22 exact calculator fixtures; all-calculator/Core smoke including mortgage recalculation. Zero page errors/failed local requests. Search DOM 9.30ms and next frame 13.70ms (100ms budget). Keyboard/AX/touch, no-JS, blocked assets, forced colors, delayed loading and 200% text/geometry tested. Real-device, manual screen-reader and native browser-toolbar zoom are not claimed.
+
+## Repeatable screenshot review
+
+After `npm run build` and starting `PORT=8003 npm run preview`, use the existing isolated Playwright installation (no new runtime dependencies):
+
+```sh
+NODE_PATH=/tmp/simplekit-v2-browser/node_modules CHROMIUM_PATH=/usr/bin/chromium SIMPLEKIT_PREVIEW_URL=http://127.0.0.1:8003 SIMPLEKIT_EVIDENCE_DIR=/tmp/simplekit-fidelity-review node tests/v2-fidelity-screenshots.cjs
+```
+
+Review four viewport/full-page captures and geometry against the approved target, list the largest remaining discrepancies, refine and repeat. Hosted checks require explicit `SIMPLEKIT_HOSTED_PREVIEW=1` and HTTPS under the dedicated `simplekit-preview.pages.dev` project. Production/lookalike hosts are rejected. The manual preview workflow captures previous/candidate deployments from GitHub's runner, checks 24 hosted routes/noindex/canonicals/robots/CNAME isolation, and runs header/search/trust/goals/all-22-fixture browser suites. Browser dependencies remain temporary and test-only. Live results will be recorded after that run completes.
+
+
+Final touch-area check: expanded the wordmark hit area without changing its visual position; retained lower-page/footer links now have ≥44px width and height. The goal acceptance suite checks every visible homepage link/button/input, including no-JS and enlarged text. All cases pass.
+
+Hosted first run: [38008821953](https://github.com/ashleysnl/simplekit-site/actions/runs/38008821953) securely captured the actual previous deployment at all four widths and uploaded candidate `dcc21ac` to `https://ace887ae.simplekit-preview.pages.dev`. Post-upload verification stopped on an overly strict HTML-format assertion for existing self-closing canonical tags. URLs were unchanged; the corrected assertion independently passes on all 22 local calculator tags. Final hosted validation is rerun with the touch-area refinement.
+
+
+## Live baseline evidence
+
+The runner securely captured `https://e9070fe2.simplekit-preview.pages.dev` at 375/390/768/1440px. Persistent screenshots and geometry are in `hosted-before/`. They confirm the initial local comparison; small line-wrap differences come from the runner browser/font environment. Final hosted before/after measurements are reported separately from the local table above.
+
+[Live baseline 375px](hosted-before/viewport-375.jpg) · [Live baseline 390px](hosted-before/viewport-390.jpg)
+
+
+Iteration 5: live delayed-font testing found the earlier Georgia/Segoe UI fallbacks could change line wrapping on the runner. Times New Roman/Liberation Serif and Arial/Liberation Sans now match the bundled font metrics; font files and loaded typography are unchanged. Supporting text uses the reference's three-line composition, with “No signup required” kept together. Copy remains in the light side of the gradient (≤80% of phone width), while the lower landscape crop exposes more coastline on the right. The contrast check now uses the actual mobile gradient and painted headline glyph bounds: body ≥4.5:1 and large heading ≥3:1 even over a black source pixel. All 27 widths and delayed loading pass locally; diagnostics are recorded before the hosted assertion. Goals start at 706/708px locally, still approximately 740px earlier than baseline.
+
+Hosted iteration 5 verification: run `38010558881` passed build/SEO, 24 hosted routes, four screenshot widths and delayed font/image loading (discovery top 310.578125px before/after; CLS 0). Its later magnification-to-mobile transition exposed a test race: `setViewportSize` returns before the asynchronous `matchMedia` listener necessarily hides desktop navigation. The test now waits for the required hidden-navigation/visible-toggle state, then performs all original keyboard/AX assertions. No navigation implementation or acceptance thresholds were changed. Full hosted regression verification is rerun before declaring this task verified.
+
+Final hosted screenshot review found “Local calculations” split inside a word at 375px in the runner's browser. The shorter truthful label “Local results” preserves the supporting “Inputs stay local” disclosure, fits both phone widths and avoids reducing type size. The trust suite now checks that each title word occupies a single line fragment, including enlarged-text and fallback layouts. All nine local layouts/privacy checks and 28 repository tests pass after this refinement.
+
+The owner subsequently instructed roadmap Phase 6. The five featured calculator rows are now being implemented in the same temporary review branch; the statement above about their deferred scope describes the initial fidelity pass. Guided onboarding remains Phase 7. A reproducible delayed-module check exposed discovery enhancement shifting the panel by 56px: reserved search space now hosts a real directory link until the module is ready. All original CLS/keyboard/fallback assertions remain in force; the current local delayed-font/image/module result is CLS 0. Final hosted evidence will supersede the earlier partial runs.
+
+## Verified live comparison
+
+Combined fidelity and Phase 6 candidate: [48daf1d5 preview](https://48daf1d5.simplekit-preview.pages.dev), source `5532bfa2ea1d1d79df04fb7a5dd85ac2f8d577ec`. [Run 38013211800](https://github.com/ashleysnl/simplekit-site/actions/runs/38013211800) passes build/SEO, secure before/after captures, HTTP/indexing checks and every hosted browser suite, including all 22 calculator fixtures. Delayed font/image/discovery-module CLS is 0. Local console/network audit across 24 routes records no errors or failed requests.
+
+| Viewport | Live goals before | Live goals after |
+| --- | --- | --- |
+| 375px | 1447px | 706px |
+| 390px | 1425px | 708px |
+| 768px | 1248px | 954px |
+| 1440px | 1249px | 1022px |
+
+| Width | Before | After |
+| --- | --- | --- |
+| 375px | [Screenshot](hosted-before/home-375.jpg) | [Screenshot](hosted-after/home-375.jpg) |
+| 390px | [Screenshot](hosted-before/home-390.jpg) | [Screenshot](hosted-after/home-390.jpg) |
+| 768px | [Screenshot](hosted-before/home-768.jpg) | [Screenshot](hosted-after/home-768.jpg) |
+| 1440px | [Screenshot](hosted-before/home-1440.jpg) | [Screenshot](hosted-after/home-1440.jpg) |
+
+The five calculator rows are now implemented and verified in Phase 6. Intentional differences remain: readable type/44px controls increase height relative to the scaled raster; the existing coast differs from the reference photo; goal names wrap between words; privacy qualification remains visibly below discovery sections; “Featured” avoids an unsupported popularity claim. Guided onboarding is the owner-authorized next Phase 7 work. Manual screen-reader/native-toolbar/real-device coverage and owner visual approval remain pending.

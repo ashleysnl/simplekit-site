@@ -10,6 +10,12 @@ on:
         required: true
         type: string
 
+      baseline_url:
+        description: Optional existing isolated preview for before screenshots
+        required: false
+        default: https://e9070fe2.simplekit-preview.pages.dev
+        type: string
+
 permissions:
   contents: read
 
@@ -26,6 +32,28 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm run sources:fetch && npm test && npm run build && npm run seo:validate && npm run output:validate
+      - name: Verify preservation and deterministic release candidate
+        id: candidate
+        run: |
+          node scripts/v2-baseline-inventory.mjs
+          node scripts/v2-release-artifact.mjs --record "$RUNNER_TEMP/release-inventory.json"
+          npm run build
+          node scripts/v2-release-artifact.mjs --compare "$RUNNER_TEMP/release-inventory.json"
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -cf "$RUNNER_TEMP/release-candidate.tar" -C dist .
+          gzip -n "$RUNNER_TEMP/release-candidate.tar"
+          sha256sum "$RUNNER_TEMP/release-candidate.tar.gz" > "$RUNNER_TEMP/release-candidate.sha256"
+          git rev-parse HEAD > "$RUNNER_TEMP/release-source.txt"
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: release-candidate-${{ steps.candidate.outputs.commit }}
+          path: |
+            ${{ runner.temp }}/release-candidate.tar.gz
+            ${{ runner.temp }}/release-candidate.sha256
+            ${{ runner.temp }}/release-inventory.json
+            ${{ runner.temp }}/release-source.txt
+          if-no-files-found: error
+          retention-days: 30
       - name: Isolate preview indexing and hostname
         run: |
           rm -f dist/CNAME
@@ -40,9 +68,13 @@ jobs:
   preview:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     environment: simplekit-preview
     steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.source_ref }}
+          persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 24.19.0
@@ -71,8 +103,68 @@ jobs:
           assert project['production_branch'] == '__production_disabled__', 'Refusing a production-capable project'
           assert not project.get('domains') or all(d.endswith('.pages.dev') for d in project['domains']), 'Refusing custom domains'
           PY
+      - name: Prepare isolated browser verification
+        run: |
+          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3 lighthouse@12.8.2
+          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
+      - name: Capture the previous hosted preview
+        if: inputs.baseline_url != ''
+        continue-on-error: true
+        shell: bash
+        env:
+          SIMPLEKIT_HOSTED_PREVIEW: '1'
+          SIMPLEKIT_PREVIEW_URL: ${{ inputs.baseline_url }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/preview-browser-evidence/before"
+          NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules" SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/before" node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$RUNNER_TEMP/preview-browser-evidence/before/capture.log"
+          mkdir -p "$RUNNER_TEMP/preview-browser-evidence/baseline-lighthouse"
+          NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules" SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/baseline-lighthouse" node tests/v2-lighthouse.cjs 2>&1 | tee "$RUNNER_TEMP/preview-browser-evidence/baseline-lighthouse/lighthouse.log"
       - name: Upload a preview branch only
+        id: upload
+        shell: bash
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-        run: npm exec --yes --package=wrangler@4.45.0 -- wrangler pages deploy dist --project-name=simplekit-preview --branch=codex-preview
+        run: |
+          mkdir -p "$RUNNER_TEMP/preview-browser-evidence"
+          npm exec --yes --package=wrangler@4.45.0 -- wrangler pages deploy dist --project-name=simplekit-preview --branch=codex-preview 2>&1 | tee "$RUNNER_TEMP/preview-browser-evidence/upload.log"
+          python3 - <<'PYCODE'
+          import os, pathlib, re
+          text = (pathlib.Path(os.environ['RUNNER_TEMP']) / 'preview-browser-evidence/upload.log').read_text()
+          urls = re.findall(r'https://[a-z0-9-]+\.simplekit-preview\.pages\.dev', text)
+          assert urls, 'Upload did not report an isolated preview URL'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('url=' + urls[0] + '\n')
+          PYCODE
+      - name: Verify and capture the deployed preview
+        shell: bash
+        env:
+          SIMPLEKIT_HOSTED_PREVIEW: '1'
+          SIMPLEKIT_PREVIEW_URL: ${{ steps.upload.outputs.url }}
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/after"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
+          node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
+          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline v2-release; do
+            export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/regression/$suite"
+            mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+            node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          done
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-08/accessibility"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit node tests/v2-accessibility-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-08/lighthouse"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-lighthouse.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/lighthouse.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-09"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-seo-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: preview-browser-evidence
+          path: ${{ runner.temp }}/preview-browser-evidence/
+          if-no-files-found: warn
+          retention-days: 7

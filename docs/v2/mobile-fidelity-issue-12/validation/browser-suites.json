@@ -1,0 +1,22 @@
+[
+  {
+    "script": "v2-header-hero-browser.cjs",
+    "exit_code": 0
+  },
+  {
+    "script": "v2-trust-browser.cjs",
+    "exit_code": 0
+  },
+  {
+    "script": "v2-goals-browser.cjs",
+    "exit_code": 0
+  },
+  {
+    "script": "v2-foundations-browser.cjs",
+    "exit_code": 0
+  },
+  {
+    "script": "browser-smoke.cjs",
+    "exit_code": 0
+  }
+]

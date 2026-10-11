@@ -1,0 +1,44 @@
+/* Optional inline guided discovery; native controls, no modal or animation. */
+.sk-v2.v2-home-onboarding { padding-block: 0 1.5rem; }
+.sk-v2 .v2-onboarding-panel { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; padding: 1rem; border-radius: var(--v2-radius-panel); background: var(--v2-blue-soft); }
+.sk-v2 .v2-onboarding-copy { flex: 1; min-width: min(100%, 12rem); }
+.sk-v2 .v2-onboarding-copy h2 { font-size: 1.25rem; line-height: 1.2; }
+.sk-v2 .v2-onboarding-copy p { margin-top: .375rem; color: var(--v2-slate); font-size: .875rem; }
+.sk-v2 .v2-onboarding-panel > .v2-icon-disc { width: 2.75rem; height: 2.75rem; }
+.sk-v2 .v2-onboarding-panel > .v2-button { flex: 1 0 100%; white-space: normal; }
+.sk-v2.v2-home-onboarding [hidden] { display: none; }
+.sk-v2 .v2-onboarding-flow { margin-top: 1rem; padding: 1rem; border: 1px solid var(--v2-border); border-radius: var(--v2-radius-card); background: var(--v2-surface); }
+.sk-v2 .v2-onboarding-status, .sk-v2 .v2-onboarding-note { color: var(--v2-slate); font-size: .875rem; }
+.sk-v2 #onboarding-flow-title { margin-block: .75rem 1rem; font-size: 1.375rem; }
+.sk-v2 .v2-onboarding-flow fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.sk-v2 .v2-onboarding-choice { display: flex; align-items: center; gap: .75rem; min-height: var(--v2-target-size); padding: .75rem; border: 1px solid var(--v2-border); border-radius: var(--v2-radius-sm); cursor: pointer; }
+.sk-v2 .v2-onboarding-choice input { flex: none; width: 1.25rem; height: 1.25rem; accent-color: var(--v2-blue); }
+.sk-v2 .v2-onboarding-choice:has(input:checked) { border-color: var(--v2-blue); background: var(--v2-blue-soft); }
+.sk-v2 .v2-onboarding-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: 1rem; }
+.sk-v2 .v2-onboarding-actions button { white-space: normal; }
+.sk-v2 .v2-onboarding-directory { display: inline-flex; align-items: center; min-height: var(--v2-target-size); font-weight: 700; }
+.sk-v2 .v2-onboarding-results { padding: 0; margin: 0; list-style: none; display: grid; gap: .75rem; }
+.sk-v2 .v2-onboarding-result { display: block; min-height: var(--v2-target-size); padding: 1rem; border: 1px solid var(--v2-border); border-radius: var(--v2-radius-sm); text-decoration: none; }
+.sk-v2 .v2-onboarding-result-name { display: block; font-weight: 700; }
+.sk-v2 .v2-onboarding-reason { display: block; margin-top: .375rem; color: var(--v2-slate); }
+.sk-v2 .v2-onboarding-note { margin-top: 1rem; }
+@media (min-width: 48rem) {
+  .sk-v2 .v2-onboarding-panel { gap: 1.25rem; padding: 1.5rem; }
+  .sk-v2 .v2-onboarding-copy h2 { font-size: 1.625rem; }
+  .sk-v2 .v2-onboarding-copy p { font-size: 1rem; }
+  .sk-v2 .v2-onboarding-panel > .v2-button { flex: none; }
+  .sk-v2 .v2-onboarding-panel > .v2-icon-disc { width: var(--v2-icon-disc); height: var(--v2-icon-disc); }
+  .sk-v2 .v2-onboarding-flow { padding: 1.5rem; }
+}
+@media (forced-colors: active) {
+  .sk-v2 .v2-onboarding-panel, .sk-v2 .v2-onboarding-choice, .sk-v2 .v2-onboarding-flow, .sk-v2 .v2-onboarding-result { border: 1px solid CanvasText; }
+  .sk-v2 .v2-onboarding-choice:has(input:checked) { outline: 2px solid Highlight; }
+}
+/* Rem-based reflow also covers narrow viewports with enlarged text. */
+@media (max-width: 23.4rem) {
+  .sk-v2 .v2-onboarding-panel > .v2-button { white-space: normal; padding-inline: 1rem; }
+  .sk-v2 .v2-onboarding-actions button { padding-inline: 1rem; }
+  .sk-v2 .v2-onboarding-choice { padding: .375rem; gap: .375rem; }
+  .sk-v2 .v2-onboarding-choice input { width: min(1.25rem, 20px); height: min(1.25rem, 20px); }
+  .sk-v2 .v2-onboarding-choice span { min-width: 0; }
+}

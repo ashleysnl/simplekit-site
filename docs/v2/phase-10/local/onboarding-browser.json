@@ -1,0 +1,7130 @@
+{
+  "browser": "151.0.7922.173",
+  "paths": 93,
+  "layouts": [
+    {
+      "state": "closed-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": 1951.8125,
+        "width": 320,
+        "height": 215.859375,
+        "top": 1951.8125,
+        "right": 320,
+        "bottom": 2167.671875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 2074.875,
+            "width": 256,
+            "height": 52.796875,
+            "top": 2074.875,
+            "right": 288,
+            "bottom": 2127.671875,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 99.765625,
+              "y": 2091.875,
+              "width": 84.46875,
+              "height": 17,
+              "top": 2091.875,
+              "right": 184.234375,
+              "bottom": 2108.875,
+              "left": 99.765625
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 1967.8125,
+            "width": 200,
+            "height": 24,
+            "top": 1967.8125,
+            "right": 288,
+            "bottom": 1991.8125,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 1997.8125,
+            "width": 200,
+            "height": 65.0625,
+            "top": 1997.8125,
+            "right": 288,
+            "bottom": 2062.875,
+            "left": 88
+          }
+        }
+      ]
+    },
+    {
+      "state": "open-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": 391.8125,
+        "width": 320,
+        "height": 944.265625,
+        "top": 391.8125,
+        "right": 320,
+        "bottom": 1336.078125,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 514.875,
+            "width": 256,
+            "height": 52.796875,
+            "top": 514.875,
+            "right": 288,
+            "bottom": 567.671875,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 99.765625,
+              "y": 531.875,
+              "width": 84.46875,
+              "height": 17,
+              "top": 531.875,
+              "right": 184.234375,
+              "bottom": 548.875,
+              "left": 99.765625
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 33,
+            "y": 690.109375,
+            "width": 254,
+            "height": 44,
+            "top": 690.109375,
+            "right": 287,
+            "bottom": 734.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 702.703125,
+              "width": 78.25,
+              "height": 17,
+              "top": 702.703125,
+              "right": 152.25,
+              "bottom": 719.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 33,
+            "y": 742.109375,
+            "width": 254,
+            "height": 44,
+            "top": 742.109375,
+            "right": 287,
+            "bottom": 786.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 754.703125,
+              "width": 129.84375,
+              "height": 17,
+              "top": 754.703125,
+              "right": 203.84375,
+              "bottom": 771.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 33,
+            "y": 794.109375,
+            "width": 254,
+            "height": 44,
+            "top": 794.109375,
+            "right": 287,
+            "bottom": 838.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 806.703125,
+              "width": 101.421875,
+              "height": 17,
+              "top": 806.703125,
+              "right": 175.421875,
+              "bottom": 823.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 33,
+            "y": 846.109375,
+            "width": 254,
+            "height": 44,
+            "top": 846.109375,
+            "right": 287,
+            "bottom": 890.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 858.703125,
+              "width": 64.046875,
+              "height": 17,
+              "top": 858.703125,
+              "right": 138.046875,
+              "bottom": 875.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 33,
+            "y": 898.109375,
+            "width": 254,
+            "height": 44,
+            "top": 898.109375,
+            "right": 287,
+            "bottom": 942.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 910.703125,
+              "width": 110.296875,
+              "height": 17,
+              "top": 910.703125,
+              "right": 184.296875,
+              "bottom": 927.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 33,
+            "y": 950.109375,
+            "width": 254,
+            "height": 44,
+            "top": 950.109375,
+            "right": 287,
+            "bottom": 994.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 962.703125,
+              "width": 80.921875,
+              "height": 17,
+              "top": 962.703125,
+              "right": 154.921875,
+              "bottom": 979.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 33,
+            "y": 1002.109375,
+            "width": 254,
+            "height": 44,
+            "top": 1002.109375,
+            "right": 287,
+            "bottom": 1046.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 74,
+              "y": 1014.703125,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1014.703125,
+              "right": 182.8125,
+              "bottom": 1031.703125,
+              "left": 74
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 33,
+            "y": 1062.109375,
+            "width": 105.328125,
+            "height": 52.796875,
+            "top": 1062.109375,
+            "right": 138.328125,
+            "bottom": 1114.90625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 51,
+              "y": 1079.109375,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1079.109375,
+              "right": 120.328125,
+              "bottom": 1096.109375,
+              "left": 51
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 146.328125,
+            "y": 1062.109375,
+            "width": 69.796875,
+            "height": 52.796875,
+            "top": 1062.109375,
+            "right": 216.125,
+            "bottom": 1114.90625,
+            "left": 146.328125
+          },
+          "glyphs": [
+            {
+              "x": 164.328125,
+              "y": 1079.109375,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1079.109375,
+              "right": 198.125,
+              "bottom": 1096.109375,
+              "left": 164.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 33,
+            "y": 1122.90625,
+            "width": 91.140625,
+            "height": 52.796875,
+            "top": 1122.90625,
+            "right": 124.140625,
+            "bottom": 1175.703125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 51,
+              "y": 1139.90625,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1139.90625,
+              "right": 106.140625,
+              "bottom": 1156.90625,
+              "left": 51
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 132.140625,
+            "y": 1122.90625,
+            "width": 79.578125,
+            "height": 52.796875,
+            "top": 1122.90625,
+            "right": 211.71875,
+            "bottom": 1175.703125,
+            "left": 132.140625
+          },
+          "glyphs": [
+            {
+              "x": 150.140625,
+              "y": 1139.90625,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1139.90625,
+              "right": 193.71875,
+              "bottom": 1156.90625,
+              "left": 150.140625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 1191.703125,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1191.703125,
+            "right": 177.9375,
+            "bottom": 1235.703125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 1204.296875,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1204.296875,
+              "right": 177.9375,
+              "bottom": 1221.296875,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 407.8125,
+            "width": 200,
+            "height": 24,
+            "top": 407.8125,
+            "right": 288,
+            "bottom": 431.8125,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 437.8125,
+            "width": 200,
+            "height": 65.0625,
+            "top": 437.8125,
+            "right": 288,
+            "bottom": 502.875,
+            "left": 88
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 33,
+            "y": 616.671875,
+            "width": 254,
+            "height": 21.6875,
+            "top": 616.671875,
+            "right": 287,
+            "bottom": 638.359375,
+            "left": 33
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 33,
+            "y": 650.359375,
+            "width": 254,
+            "height": 23.75,
+            "top": 650.359375,
+            "right": 287,
+            "bottom": 674.109375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 74,
+            "y": 699.703125,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 699.703125,
+            "right": 152.25,
+            "bottom": 724.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 74,
+            "y": 751.703125,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 751.703125,
+            "right": 203.84375,
+            "bottom": 776.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 74,
+            "y": 803.703125,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 803.703125,
+            "right": 175.421875,
+            "bottom": 828.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 74,
+            "y": 855.703125,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 855.703125,
+            "right": 138.046875,
+            "bottom": 880.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 74,
+            "y": 907.703125,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 907.703125,
+            "right": 184.296875,
+            "bottom": 932.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 74,
+            "y": 959.703125,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 959.703125,
+            "right": 154.921875,
+            "bottom": 984.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 74,
+            "y": 1011.703125,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1011.703125,
+            "right": 182.8125,
+            "bottom": 1036.5,
+            "left": 74
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 1251.703125,
+            "width": 254,
+            "height": 43.375,
+            "top": 1251.703125,
+            "right": 287,
+            "bottom": 1295.078125,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "results-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": -197.1875,
+        "width": 320,
+        "height": 765.40625,
+        "top": -197.1875,
+        "right": 320,
+        "bottom": 568.21875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": -74.125,
+            "width": 256,
+            "height": 52.796875,
+            "top": -74.125,
+            "right": 288,
+            "bottom": -21.328125,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 99.765625,
+              "y": -57.125,
+              "width": 84.46875,
+              "height": 17,
+              "top": -57.125,
+              "right": 184.234375,
+              "bottom": -40.125,
+              "left": 99.765625
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 33,
+            "y": 294.25,
+            "width": 74.25,
+            "height": 52.796875,
+            "top": 294.25,
+            "right": 107.25,
+            "bottom": 347.046875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 51,
+              "y": 311.25,
+              "width": 38.25,
+              "height": 17,
+              "top": 311.25,
+              "right": 89.25,
+              "bottom": 328.25,
+              "left": 51
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 115.25,
+            "y": 294.25,
+            "width": 91.140625,
+            "height": 52.796875,
+            "top": 294.25,
+            "right": 206.390625,
+            "bottom": 347.046875,
+            "left": 115.25
+          },
+          "glyphs": [
+            {
+              "x": 133.25,
+              "y": 311.25,
+              "width": 55.140625,
+              "height": 17,
+              "top": 311.25,
+              "right": 188.390625,
+              "bottom": 328.25,
+              "left": 133.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 33,
+            "y": 355.046875,
+            "width": 79.578125,
+            "height": 52.796875,
+            "top": 355.046875,
+            "right": 112.578125,
+            "bottom": 407.84375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 51,
+              "y": 372.046875,
+              "width": 43.578125,
+              "height": 17,
+              "top": 372.046875,
+              "right": 94.578125,
+              "bottom": 389.046875,
+              "left": 51
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 423.84375,
+            "width": 144.9375,
+            "height": 44,
+            "top": 423.84375,
+            "right": 177.9375,
+            "bottom": 467.84375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 436.4375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 436.4375,
+              "right": 177.9375,
+              "bottom": 453.4375,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": -181.1875,
+            "width": 200,
+            "height": 24,
+            "top": -181.1875,
+            "right": 288,
+            "bottom": -157.1875,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": -151.1875,
+            "width": 200,
+            "height": 65.0625,
+            "top": -151.1875,
+            "right": 288,
+            "bottom": -86.125,
+            "left": 88
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 33,
+            "y": 27.671875,
+            "width": 254,
+            "height": 43.375,
+            "top": 27.671875,
+            "right": 287,
+            "bottom": 71.046875,
+            "left": 33
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 33,
+            "y": 83.046875,
+            "width": 254,
+            "height": 23.75,
+            "top": 83.046875,
+            "right": 287,
+            "bottom": 106.796875,
+            "left": 33
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 33,
+            "y": 122.796875,
+            "width": 254,
+            "height": 74.390625,
+            "top": 122.796875,
+            "right": 287,
+            "bottom": 197.1875,
+            "left": 33
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 33,
+            "y": 213.1875,
+            "width": 254,
+            "height": 65.0625,
+            "top": 213.1875,
+            "right": 287,
+            "bottom": 278.25,
+            "left": 33
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 483.84375,
+            "width": 254,
+            "height": 43.375,
+            "top": 483.84375,
+            "right": 287,
+            "bottom": 527.21875,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "closed-375",
+      "width": 375,
+      "scrollWidth": 375,
+      "section": {
+        "x": 0,
+        "y": 1498.640625,
+        "width": 375,
+        "height": 194.171875,
+        "top": 1498.640625,
+        "right": 375,
+        "bottom": 1692.8125,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 1600.015625,
+            "width": 311,
+            "height": 52.796875,
+            "top": 1600.015625,
+            "right": 343,
+            "bottom": 1652.8125,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 127.265625,
+              "y": 1617.015625,
+              "width": 84.46875,
+              "height": 17,
+              "top": 1617.015625,
+              "right": 211.734375,
+              "bottom": 1634.015625,
+              "left": 127.265625
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 1514.640625,
+            "width": 255,
+            "height": 24,
+            "top": 1514.640625,
+            "right": 343,
+            "bottom": 1538.640625,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 1544.640625,
+            "width": 255,
+            "height": 43.375,
+            "top": 1544.640625,
+            "right": 343,
+            "bottom": 1588.015625,
+            "left": 88
+          }
+        }
+      ]
+    },
+    {
+      "state": "open-375",
+      "width": 375,
+      "scrollWidth": 375,
+      "section": {
+        "x": 0,
+        "y": 402.640625,
+        "width": 375,
+        "height": 970.15625,
+        "top": 402.640625,
+        "right": 375,
+        "bottom": 1372.796875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 504.015625,
+            "width": 311,
+            "height": 52.796875,
+            "top": 504.015625,
+            "right": 343,
+            "bottom": 556.8125,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 127.265625,
+              "y": 521.015625,
+              "width": 84.46875,
+              "height": 17,
+              "top": 521.015625,
+              "right": 211.734375,
+              "bottom": 538.015625,
+              "left": 127.265625
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 33,
+            "y": 679.25,
+            "width": 309,
+            "height": 50.796875,
+            "top": 679.25,
+            "right": 342,
+            "bottom": 730.046875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 695.25,
+              "width": 78.25,
+              "height": 17,
+              "top": 695.25,
+              "right": 164.25,
+              "bottom": 712.25,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 33,
+            "y": 738.046875,
+            "width": 309,
+            "height": 50.796875,
+            "top": 738.046875,
+            "right": 342,
+            "bottom": 788.84375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 754.046875,
+              "width": 129.84375,
+              "height": 17,
+              "top": 754.046875,
+              "right": 215.84375,
+              "bottom": 771.046875,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 33,
+            "y": 796.84375,
+            "width": 309,
+            "height": 50.796875,
+            "top": 796.84375,
+            "right": 342,
+            "bottom": 847.640625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 812.84375,
+              "width": 101.421875,
+              "height": 17,
+              "top": 812.84375,
+              "right": 187.421875,
+              "bottom": 829.84375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 33,
+            "y": 855.640625,
+            "width": 309,
+            "height": 50.796875,
+            "top": 855.640625,
+            "right": 342,
+            "bottom": 906.4375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 871.640625,
+              "width": 64.046875,
+              "height": 17,
+              "top": 871.640625,
+              "right": 150.046875,
+              "bottom": 888.640625,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 33,
+            "y": 914.4375,
+            "width": 309,
+            "height": 50.796875,
+            "top": 914.4375,
+            "right": 342,
+            "bottom": 965.234375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 930.4375,
+              "width": 110.296875,
+              "height": 17,
+              "top": 930.4375,
+              "right": 196.296875,
+              "bottom": 947.4375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 33,
+            "y": 973.234375,
+            "width": 309,
+            "height": 50.796875,
+            "top": 973.234375,
+            "right": 342,
+            "bottom": 1024.03125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 989.234375,
+              "width": 80.921875,
+              "height": 17,
+              "top": 989.234375,
+              "right": 166.921875,
+              "bottom": 1006.234375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 33,
+            "y": 1032.03125,
+            "width": 309,
+            "height": 50.796875,
+            "top": 1032.03125,
+            "right": 342,
+            "bottom": 1082.828125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 1048.03125,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1048.03125,
+              "right": 194.8125,
+              "bottom": 1065.03125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 33,
+            "y": 1098.828125,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1098.828125,
+            "right": 154.328125,
+            "bottom": 1151.625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1115.828125,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1115.828125,
+              "right": 128.328125,
+              "bottom": 1132.828125,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 162.328125,
+            "y": 1098.828125,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1098.828125,
+            "right": 248.125,
+            "bottom": 1151.625,
+            "left": 162.328125
+          },
+          "glyphs": [
+            {
+              "x": 188.328125,
+              "y": 1115.828125,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1115.828125,
+              "right": 222.125,
+              "bottom": 1132.828125,
+              "left": 188.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 33,
+            "y": 1159.625,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1159.625,
+            "right": 140.140625,
+            "bottom": 1212.421875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1176.625,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1176.625,
+              "right": 114.140625,
+              "bottom": 1193.625,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 148.140625,
+            "y": 1159.625,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1159.625,
+            "right": 243.71875,
+            "bottom": 1212.421875,
+            "left": 148.140625
+          },
+          "glyphs": [
+            {
+              "x": 174.140625,
+              "y": 1176.625,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1176.625,
+              "right": 217.71875,
+              "bottom": 1193.625,
+              "left": 174.140625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 1228.421875,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1228.421875,
+            "right": 177.9375,
+            "bottom": 1272.421875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 1241.015625,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1241.015625,
+              "right": 177.9375,
+              "bottom": 1258.015625,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 418.640625,
+            "width": 255,
+            "height": 24,
+            "top": 418.640625,
+            "right": 343,
+            "bottom": 442.640625,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 448.640625,
+            "width": 255,
+            "height": 43.375,
+            "top": 448.640625,
+            "right": 343,
+            "bottom": 492.015625,
+            "left": 88
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 33,
+            "y": 605.8125,
+            "width": 309,
+            "height": 21.6875,
+            "top": 605.8125,
+            "right": 342,
+            "bottom": 627.5,
+            "left": 33
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 33,
+            "y": 639.5,
+            "width": 309,
+            "height": 23.75,
+            "top": 639.5,
+            "right": 342,
+            "bottom": 663.25,
+            "left": 33
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 86,
+            "y": 692.25,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 692.25,
+            "right": 164.25,
+            "bottom": 717.046875,
+            "left": 86
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 86,
+            "y": 751.046875,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 751.046875,
+            "right": 215.84375,
+            "bottom": 775.84375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 86,
+            "y": 809.84375,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 809.84375,
+            "right": 187.421875,
+            "bottom": 834.640625,
+            "left": 86
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 86,
+            "y": 868.640625,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 868.640625,
+            "right": 150.046875,
+            "bottom": 893.4375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 86,
+            "y": 927.4375,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 927.4375,
+            "right": 196.296875,
+            "bottom": 952.234375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 86,
+            "y": 986.234375,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 986.234375,
+            "right": 166.921875,
+            "bottom": 1011.03125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 86,
+            "y": 1045.03125,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1045.03125,
+            "right": 194.8125,
+            "bottom": 1069.828125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 1288.421875,
+            "width": 309,
+            "height": 43.375,
+            "top": 1288.421875,
+            "right": 342,
+            "bottom": 1331.796875,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "results-375",
+      "width": 375,
+      "scrollWidth": 375,
+      "section": {
+        "x": 0,
+        "y": -222.359375,
+        "width": 375,
+        "height": 614.75,
+        "top": -222.359375,
+        "right": 375,
+        "bottom": 392.390625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": -120.984375,
+            "width": 311,
+            "height": 52.796875,
+            "top": -120.984375,
+            "right": 343,
+            "bottom": -68.1875,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 127.265625,
+              "y": -103.984375,
+              "width": 84.46875,
+              "height": 17,
+              "top": -103.984375,
+              "right": 211.734375,
+              "bottom": -86.984375,
+              "left": 127.265625
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 33,
+            "y": 179.21875,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 179.21875,
+            "right": 123.25,
+            "bottom": 232.015625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 196.21875,
+              "width": 38.25,
+              "height": 17,
+              "top": 196.21875,
+              "right": 97.25,
+              "bottom": 213.21875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 131.25,
+            "y": 179.21875,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 179.21875,
+            "right": 238.390625,
+            "bottom": 232.015625,
+            "left": 131.25
+          },
+          "glyphs": [
+            {
+              "x": 157.25,
+              "y": 196.21875,
+              "width": 55.140625,
+              "height": 17,
+              "top": 196.21875,
+              "right": 212.390625,
+              "bottom": 213.21875,
+              "left": 157.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 246.390625,
+            "y": 179.21875,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 179.21875,
+            "right": 341.96875,
+            "bottom": 232.015625,
+            "left": 246.390625
+          },
+          "glyphs": [
+            {
+              "x": 272.390625,
+              "y": 196.21875,
+              "width": 43.578125,
+              "height": 17,
+              "top": 196.21875,
+              "right": 315.96875,
+              "bottom": 213.21875,
+              "left": 272.390625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 248.015625,
+            "width": 144.9375,
+            "height": 44,
+            "top": 248.015625,
+            "right": 177.9375,
+            "bottom": 292.015625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 260.609375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 260.609375,
+              "right": 177.9375,
+              "bottom": 277.609375,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": -206.359375,
+            "width": 255,
+            "height": 24,
+            "top": -206.359375,
+            "right": 343,
+            "bottom": -182.359375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": -176.359375,
+            "width": 255,
+            "height": 43.375,
+            "top": -176.359375,
+            "right": 343,
+            "bottom": -132.984375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 33,
+            "y": -19.1875,
+            "width": 309,
+            "height": 21.6875,
+            "top": -19.1875,
+            "right": 342,
+            "bottom": 2.5,
+            "left": 33
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 33,
+            "y": 14.5,
+            "width": 309,
+            "height": 23.75,
+            "top": 14.5,
+            "right": 342,
+            "bottom": 38.25,
+            "left": 33
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 33,
+            "y": 54.25,
+            "width": 309,
+            "height": 49.59375,
+            "top": 54.25,
+            "right": 342,
+            "bottom": 103.84375,
+            "left": 33
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 33,
+            "y": 119.84375,
+            "width": 309,
+            "height": 43.375,
+            "top": 119.84375,
+            "right": 342,
+            "bottom": 163.21875,
+            "left": 33
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 308.015625,
+            "width": 309,
+            "height": 43.375,
+            "top": 308.015625,
+            "right": 342,
+            "bottom": 351.390625,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "closed-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 1500.734375,
+        "width": 390,
+        "height": 194.171875,
+        "top": 1500.734375,
+        "right": 390,
+        "bottom": 1694.90625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 1602.109375,
+            "width": 326,
+            "height": 52.796875,
+            "top": 1602.109375,
+            "right": 358,
+            "bottom": 1654.90625,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": 1619.109375,
+              "width": 84.46875,
+              "height": 17,
+              "top": 1619.109375,
+              "right": 219.234375,
+              "bottom": 1636.109375,
+              "left": 134.765625
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 1516.734375,
+            "width": 270,
+            "height": 24,
+            "top": 1516.734375,
+            "right": 358,
+            "bottom": 1540.734375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 1546.734375,
+            "width": 270,
+            "height": 43.375,
+            "top": 1546.734375,
+            "right": 358,
+            "bottom": 1590.109375,
+            "left": 88
+          }
+        }
+      ]
+    },
+    {
+      "state": "open-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 402.734375,
+        "width": 390,
+        "height": 970.15625,
+        "top": 402.734375,
+        "right": 390,
+        "bottom": 1372.890625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 504.109375,
+            "width": 326,
+            "height": 52.796875,
+            "top": 504.109375,
+            "right": 358,
+            "bottom": 556.90625,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": 521.109375,
+              "width": 84.46875,
+              "height": 17,
+              "top": 521.109375,
+              "right": 219.234375,
+              "bottom": 538.109375,
+              "left": 134.765625
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 33,
+            "y": 679.34375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 679.34375,
+            "right": 357,
+            "bottom": 730.140625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 695.34375,
+              "width": 78.25,
+              "height": 17,
+              "top": 695.34375,
+              "right": 164.25,
+              "bottom": 712.34375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 33,
+            "y": 738.140625,
+            "width": 324,
+            "height": 50.796875,
+            "top": 738.140625,
+            "right": 357,
+            "bottom": 788.9375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 754.140625,
+              "width": 129.84375,
+              "height": 17,
+              "top": 754.140625,
+              "right": 215.84375,
+              "bottom": 771.140625,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 33,
+            "y": 796.9375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 796.9375,
+            "right": 357,
+            "bottom": 847.734375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 812.9375,
+              "width": 101.421875,
+              "height": 17,
+              "top": 812.9375,
+              "right": 187.421875,
+              "bottom": 829.9375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 33,
+            "y": 855.734375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 855.734375,
+            "right": 357,
+            "bottom": 906.53125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 871.734375,
+              "width": 64.046875,
+              "height": 17,
+              "top": 871.734375,
+              "right": 150.046875,
+              "bottom": 888.734375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 33,
+            "y": 914.53125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 914.53125,
+            "right": 357,
+            "bottom": 965.328125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 930.53125,
+              "width": 110.296875,
+              "height": 17,
+              "top": 930.53125,
+              "right": 196.296875,
+              "bottom": 947.53125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 33,
+            "y": 973.328125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 973.328125,
+            "right": 357,
+            "bottom": 1024.125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 989.328125,
+              "width": 80.921875,
+              "height": 17,
+              "top": 989.328125,
+              "right": 166.921875,
+              "bottom": 1006.328125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 33,
+            "y": 1032.125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 1032.125,
+            "right": 357,
+            "bottom": 1082.921875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 1048.125,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1048.125,
+              "right": 194.8125,
+              "bottom": 1065.125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 33,
+            "y": 1098.921875,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1098.921875,
+            "right": 154.328125,
+            "bottom": 1151.71875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1115.921875,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1115.921875,
+              "right": 128.328125,
+              "bottom": 1132.921875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 162.328125,
+            "y": 1098.921875,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1098.921875,
+            "right": 248.125,
+            "bottom": 1151.71875,
+            "left": 162.328125
+          },
+          "glyphs": [
+            {
+              "x": 188.328125,
+              "y": 1115.921875,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1115.921875,
+              "right": 222.125,
+              "bottom": 1132.921875,
+              "left": 188.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 33,
+            "y": 1159.71875,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1159.71875,
+            "right": 140.140625,
+            "bottom": 1212.515625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1176.71875,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1176.71875,
+              "right": 114.140625,
+              "bottom": 1193.71875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 148.140625,
+            "y": 1159.71875,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1159.71875,
+            "right": 243.71875,
+            "bottom": 1212.515625,
+            "left": 148.140625
+          },
+          "glyphs": [
+            {
+              "x": 174.140625,
+              "y": 1176.71875,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1176.71875,
+              "right": 217.71875,
+              "bottom": 1193.71875,
+              "left": 174.140625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 1228.515625,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1228.515625,
+            "right": 177.9375,
+            "bottom": 1272.515625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 1241.109375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1241.109375,
+              "right": 177.9375,
+              "bottom": 1258.109375,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 418.734375,
+            "width": 270,
+            "height": 24,
+            "top": 418.734375,
+            "right": 358,
+            "bottom": 442.734375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 448.734375,
+            "width": 270,
+            "height": 43.375,
+            "top": 448.734375,
+            "right": 358,
+            "bottom": 492.109375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 33,
+            "y": 605.90625,
+            "width": 324,
+            "height": 21.6875,
+            "top": 605.90625,
+            "right": 357,
+            "bottom": 627.59375,
+            "left": 33
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 33,
+            "y": 639.59375,
+            "width": 324,
+            "height": 23.75,
+            "top": 639.59375,
+            "right": 357,
+            "bottom": 663.34375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 86,
+            "y": 692.34375,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 692.34375,
+            "right": 164.25,
+            "bottom": 717.140625,
+            "left": 86
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 86,
+            "y": 751.140625,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 751.140625,
+            "right": 215.84375,
+            "bottom": 775.9375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 86,
+            "y": 809.9375,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 809.9375,
+            "right": 187.421875,
+            "bottom": 834.734375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 86,
+            "y": 868.734375,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 868.734375,
+            "right": 150.046875,
+            "bottom": 893.53125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 86,
+            "y": 927.53125,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 927.53125,
+            "right": 196.296875,
+            "bottom": 952.328125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 86,
+            "y": 986.328125,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 986.328125,
+            "right": 166.921875,
+            "bottom": 1011.125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 86,
+            "y": 1045.125,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1045.125,
+            "right": 194.8125,
+            "bottom": 1069.921875,
+            "left": 86
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 1288.515625,
+            "width": 324,
+            "height": 43.375,
+            "top": 1288.515625,
+            "right": 357,
+            "bottom": 1331.890625,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "results-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 29.734375,
+        "width": 390,
+        "height": 614.75,
+        "top": 29.734375,
+        "right": 390,
+        "bottom": 644.484375,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 131.109375,
+            "width": 326,
+            "height": 52.796875,
+            "top": 131.109375,
+            "right": 358,
+            "bottom": 183.90625,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": 148.109375,
+              "width": 84.46875,
+              "height": 17,
+              "top": 148.109375,
+              "right": 219.234375,
+              "bottom": 165.109375,
+              "left": 134.765625
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 33,
+            "y": 431.3125,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 431.3125,
+            "right": 123.25,
+            "bottom": 484.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 448.3125,
+              "width": 38.25,
+              "height": 17,
+              "top": 448.3125,
+              "right": 97.25,
+              "bottom": 465.3125,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 131.25,
+            "y": 431.3125,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 431.3125,
+            "right": 238.390625,
+            "bottom": 484.109375,
+            "left": 131.25
+          },
+          "glyphs": [
+            {
+              "x": 157.25,
+              "y": 448.3125,
+              "width": 55.140625,
+              "height": 17,
+              "top": 448.3125,
+              "right": 212.390625,
+              "bottom": 465.3125,
+              "left": 157.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 246.390625,
+            "y": 431.3125,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 431.3125,
+            "right": 341.96875,
+            "bottom": 484.109375,
+            "left": 246.390625
+          },
+          "glyphs": [
+            {
+              "x": 272.390625,
+              "y": 448.3125,
+              "width": 43.578125,
+              "height": 17,
+              "top": 448.3125,
+              "right": 315.96875,
+              "bottom": 465.3125,
+              "left": 272.390625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 500.109375,
+            "width": 144.9375,
+            "height": 44,
+            "top": 500.109375,
+            "right": 177.9375,
+            "bottom": 544.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 512.703125,
+              "width": 144.9375,
+              "height": 17,
+              "top": 512.703125,
+              "right": 177.9375,
+              "bottom": 529.703125,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 45.734375,
+            "width": 270,
+            "height": 24,
+            "top": 45.734375,
+            "right": 358,
+            "bottom": 69.734375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 75.734375,
+            "width": 270,
+            "height": 43.375,
+            "top": 75.734375,
+            "right": 358,
+            "bottom": 119.109375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 33,
+            "y": 232.90625,
+            "width": 324,
+            "height": 21.6875,
+            "top": 232.90625,
+            "right": 357,
+            "bottom": 254.59375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 33,
+            "y": 266.59375,
+            "width": 324,
+            "height": 23.75,
+            "top": 266.59375,
+            "right": 357,
+            "bottom": 290.34375,
+            "left": 33
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 33,
+            "y": 306.34375,
+            "width": 324,
+            "height": 49.59375,
+            "top": 306.34375,
+            "right": 357,
+            "bottom": 355.9375,
+            "left": 33
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 33,
+            "y": 371.9375,
+            "width": 324,
+            "height": 43.375,
+            "top": 371.9375,
+            "right": 357,
+            "bottom": 415.3125,
+            "left": 33
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 560.109375,
+            "width": 324,
+            "height": 43.375,
+            "top": 560.109375,
+            "right": 357,
+            "bottom": 603.484375,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "closed-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "section": {
+        "x": 0,
+        "y": 1820.28125,
+        "width": 768,
+        "height": 158.78125,
+        "top": 1820.28125,
+        "right": 768,
+        "bottom": 1979.0625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 540.796875,
+            "y": 1861.265625,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": 1861.265625,
+            "right": 713.265625,
+            "bottom": 1914.0625,
+            "left": 540.796875
+          },
+          "glyphs": [
+            {
+              "x": 566.796875,
+              "y": 1878.265625,
+              "width": 84.46875,
+              "height": 17,
+              "top": 1878.265625,
+              "right": 651.265625,
+              "bottom": 1895.265625,
+              "left": 566.796875
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 130.71875,
+            "y": 1844.28125,
+            "width": 390.078125,
+            "height": 31.1875,
+            "top": 1844.28125,
+            "right": 520.796875,
+            "bottom": 1875.46875,
+            "left": 130.71875
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 130.71875,
+            "y": 1881.46875,
+            "width": 390.078125,
+            "height": 49.59375,
+            "top": 1881.46875,
+            "right": 520.796875,
+            "bottom": 1931.0625,
+            "left": 130.71875
+          }
+        }
+      ]
+    },
+    {
+      "state": "open-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "section": {
+        "x": 0,
+        "y": 420.28125,
+        "width": 768,
+        "height": 868.28125,
+        "top": 420.28125,
+        "right": 768,
+        "bottom": 1288.5625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 540.796875,
+            "y": 461.265625,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": 461.265625,
+            "right": 713.265625,
+            "bottom": 514.0625,
+            "left": 540.796875
+          },
+          "glyphs": [
+            {
+              "x": 566.796875,
+              "y": 478.265625,
+              "width": 84.46875,
+              "height": 17,
+              "top": 478.265625,
+              "right": 651.265625,
+              "bottom": 495.265625,
+              "left": 566.796875
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 55.71875,
+            "y": 669.5,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 669.5,
+            "right": 712.265625,
+            "bottom": 720.296875,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 685.5,
+              "width": 78.25,
+              "height": 17,
+              "top": 685.5,
+              "right": 186.96875,
+              "bottom": 702.5,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 55.71875,
+            "y": 728.296875,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 728.296875,
+            "right": 712.265625,
+            "bottom": 779.09375,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 744.296875,
+              "width": 129.84375,
+              "height": 17,
+              "top": 744.296875,
+              "right": 238.5625,
+              "bottom": 761.296875,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 55.71875,
+            "y": 787.09375,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 787.09375,
+            "right": 712.265625,
+            "bottom": 837.890625,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 803.09375,
+              "width": 101.421875,
+              "height": 17,
+              "top": 803.09375,
+              "right": 210.140625,
+              "bottom": 820.09375,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 55.71875,
+            "y": 845.890625,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 845.890625,
+            "right": 712.265625,
+            "bottom": 896.6875,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 861.890625,
+              "width": 64.046875,
+              "height": 17,
+              "top": 861.890625,
+              "right": 172.765625,
+              "bottom": 878.890625,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 55.71875,
+            "y": 904.6875,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 904.6875,
+            "right": 712.265625,
+            "bottom": 955.484375,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 920.6875,
+              "width": 110.296875,
+              "height": 17,
+              "top": 920.6875,
+              "right": 219.015625,
+              "bottom": 937.6875,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 55.71875,
+            "y": 963.484375,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 963.484375,
+            "right": 712.265625,
+            "bottom": 1014.28125,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 979.484375,
+              "width": 80.921875,
+              "height": 17,
+              "top": 979.484375,
+              "right": 189.640625,
+              "bottom": 996.484375,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 55.71875,
+            "y": 1022.28125,
+            "width": 656.546875,
+            "height": 50.796875,
+            "top": 1022.28125,
+            "right": 712.265625,
+            "bottom": 1073.078125,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 108.71875,
+              "y": 1038.28125,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1038.28125,
+              "right": 217.53125,
+              "bottom": 1055.28125,
+              "left": 108.71875
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 55.71875,
+            "y": 1089.078125,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1089.078125,
+            "right": 177.046875,
+            "bottom": 1141.875,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 81.71875,
+              "y": 1106.078125,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1106.078125,
+              "right": 151.046875,
+              "bottom": 1123.078125,
+              "left": 81.71875
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 185.046875,
+            "y": 1089.078125,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1089.078125,
+            "right": 270.84375,
+            "bottom": 1141.875,
+            "left": 185.046875
+          },
+          "glyphs": [
+            {
+              "x": 211.046875,
+              "y": 1106.078125,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1106.078125,
+              "right": 244.84375,
+              "bottom": 1123.078125,
+              "left": 211.046875
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 278.84375,
+            "y": 1089.078125,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1089.078125,
+            "right": 385.984375,
+            "bottom": 1141.875,
+            "left": 278.84375
+          },
+          "glyphs": [
+            {
+              "x": 304.84375,
+              "y": 1106.078125,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1106.078125,
+              "right": 359.984375,
+              "bottom": 1123.078125,
+              "left": 304.84375
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 393.984375,
+            "y": 1089.078125,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1089.078125,
+            "right": 489.5625,
+            "bottom": 1141.875,
+            "left": 393.984375
+          },
+          "glyphs": [
+            {
+              "x": 419.984375,
+              "y": 1106.078125,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1106.078125,
+              "right": 463.5625,
+              "bottom": 1123.078125,
+              "left": 419.984375
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 55.71875,
+            "y": 1157.875,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1157.875,
+            "right": 200.65625,
+            "bottom": 1201.875,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 55.71875,
+              "y": 1170.46875,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1170.46875,
+              "right": 200.65625,
+              "bottom": 1187.46875,
+              "left": 55.71875
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 130.71875,
+            "y": 444.28125,
+            "width": 390.078125,
+            "height": 31.1875,
+            "top": 444.28125,
+            "right": 520.796875,
+            "bottom": 475.46875,
+            "left": 130.71875
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 130.71875,
+            "y": 481.46875,
+            "width": 390.078125,
+            "height": 49.59375,
+            "top": 481.46875,
+            "right": 520.796875,
+            "bottom": 531.0625,
+            "left": 130.71875
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 55.71875,
+            "y": 596.0625,
+            "width": 656.546875,
+            "height": 21.6875,
+            "top": 596.0625,
+            "right": 712.265625,
+            "bottom": 617.75,
+            "left": 55.71875
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 55.71875,
+            "y": 629.75,
+            "width": 656.546875,
+            "height": 23.75,
+            "top": 629.75,
+            "right": 712.265625,
+            "bottom": 653.5,
+            "left": 55.71875
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 108.71875,
+            "y": 682.5,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 682.5,
+            "right": 186.96875,
+            "bottom": 707.296875,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 108.71875,
+            "y": 741.296875,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 741.296875,
+            "right": 238.5625,
+            "bottom": 766.09375,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 108.71875,
+            "y": 800.09375,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 800.09375,
+            "right": 210.140625,
+            "bottom": 824.890625,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 108.71875,
+            "y": 858.890625,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 858.890625,
+            "right": 172.765625,
+            "bottom": 883.6875,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 108.71875,
+            "y": 917.6875,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 917.6875,
+            "right": 219.015625,
+            "bottom": 942.484375,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 108.71875,
+            "y": 976.484375,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 976.484375,
+            "right": 189.640625,
+            "bottom": 1001.28125,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 108.71875,
+            "y": 1035.28125,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1035.28125,
+            "right": 217.53125,
+            "bottom": 1060.078125,
+            "left": 108.71875
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 55.71875,
+            "y": 1217.875,
+            "width": 656.546875,
+            "height": 21.6875,
+            "top": 1217.875,
+            "right": 712.265625,
+            "bottom": 1239.5625,
+            "left": 55.71875
+          }
+        }
+      ]
+    },
+    {
+      "state": "results-768",
+      "width": 768,
+      "scrollWidth": 768,
+      "section": {
+        "x": 0,
+        "y": -194.71875,
+        "width": 768,
+        "height": 527.1875,
+        "top": -194.71875,
+        "right": 768,
+        "bottom": 332.46875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 540.796875,
+            "y": -153.734375,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": -153.734375,
+            "right": 713.265625,
+            "bottom": -100.9375,
+            "left": 540.796875
+          },
+          "glyphs": [
+            {
+              "x": 566.796875,
+              "y": -136.734375,
+              "width": 84.46875,
+              "height": 17,
+              "top": -136.734375,
+              "right": 651.265625,
+              "bottom": -119.734375,
+              "left": 566.796875
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 55.71875,
+            "y": 132.984375,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 132.984375,
+            "right": 145.96875,
+            "bottom": 185.78125,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 81.71875,
+              "y": 149.984375,
+              "width": 38.25,
+              "height": 17,
+              "top": 149.984375,
+              "right": 119.96875,
+              "bottom": 166.984375,
+              "left": 81.71875
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 153.96875,
+            "y": 132.984375,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 132.984375,
+            "right": 261.109375,
+            "bottom": 185.78125,
+            "left": 153.96875
+          },
+          "glyphs": [
+            {
+              "x": 179.96875,
+              "y": 149.984375,
+              "width": 55.140625,
+              "height": 17,
+              "top": 149.984375,
+              "right": 235.109375,
+              "bottom": 166.984375,
+              "left": 179.96875
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 269.109375,
+            "y": 132.984375,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 132.984375,
+            "right": 364.6875,
+            "bottom": 185.78125,
+            "left": 269.109375
+          },
+          "glyphs": [
+            {
+              "x": 295.109375,
+              "y": 149.984375,
+              "width": 43.578125,
+              "height": 17,
+              "top": 149.984375,
+              "right": 338.6875,
+              "bottom": 166.984375,
+              "left": 295.109375
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 55.71875,
+            "y": 201.78125,
+            "width": 144.9375,
+            "height": 44,
+            "top": 201.78125,
+            "right": 200.65625,
+            "bottom": 245.78125,
+            "left": 55.71875
+          },
+          "glyphs": [
+            {
+              "x": 55.71875,
+              "y": 214.375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 214.375,
+              "right": 200.65625,
+              "bottom": 231.375,
+              "left": 55.71875
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 130.71875,
+            "y": -170.71875,
+            "width": 390.078125,
+            "height": 31.1875,
+            "top": -170.71875,
+            "right": 520.796875,
+            "bottom": -139.53125,
+            "left": 130.71875
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 130.71875,
+            "y": -133.53125,
+            "width": 390.078125,
+            "height": 49.59375,
+            "top": -133.53125,
+            "right": 520.796875,
+            "bottom": -83.9375,
+            "left": 130.71875
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 55.71875,
+            "y": -18.9375,
+            "width": 656.546875,
+            "height": 21.6875,
+            "top": -18.9375,
+            "right": 712.265625,
+            "bottom": 2.75,
+            "left": 55.71875
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 55.71875,
+            "y": 14.75,
+            "width": 656.546875,
+            "height": 23.75,
+            "top": 14.75,
+            "right": 712.265625,
+            "bottom": 38.5,
+            "left": 55.71875
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 55.71875,
+            "y": 54.5,
+            "width": 656.546875,
+            "height": 24.796875,
+            "top": 54.5,
+            "right": 712.265625,
+            "bottom": 79.296875,
+            "left": 55.71875
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 55.71875,
+            "y": 95.296875,
+            "width": 656.546875,
+            "height": 21.6875,
+            "top": 95.296875,
+            "right": 712.265625,
+            "bottom": 116.984375,
+            "left": 55.71875
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 55.71875,
+            "y": 261.78125,
+            "width": 656.546875,
+            "height": 21.6875,
+            "top": 261.78125,
+            "right": 712.265625,
+            "bottom": 283.46875,
+            "left": 55.71875
+          }
+        }
+      ]
+    },
+    {
+      "state": "closed-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "section": {
+        "x": 0,
+        "y": 1897.796875,
+        "width": 1440,
+        "height": 133.984375,
+        "top": 1897.796875,
+        "right": 1440,
+        "bottom": 2031.78125,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 1099.53125,
+            "y": 1926.390625,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": 1926.390625,
+            "right": 1272,
+            "bottom": 1979.1875,
+            "left": 1099.53125
+          },
+          "glyphs": [
+            {
+              "x": 1125.53125,
+              "y": 1943.390625,
+              "width": 84.46875,
+              "height": 17,
+              "top": 1943.390625,
+              "right": 1210,
+              "bottom": 1960.390625,
+              "left": 1125.53125
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 244,
+            "y": 1921.796875,
+            "width": 835.53125,
+            "height": 31.1875,
+            "top": 1921.796875,
+            "right": 1079.53125,
+            "bottom": 1952.984375,
+            "left": 244
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 244,
+            "y": 1958.984375,
+            "width": 835.53125,
+            "height": 24.796875,
+            "top": 1958.984375,
+            "right": 1079.53125,
+            "bottom": 1983.78125,
+            "left": 244
+          }
+        }
+      ]
+    },
+    {
+      "state": "open-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "section": {
+        "x": 0,
+        "y": 432.796875,
+        "width": 1440,
+        "height": 843.484375,
+        "top": 432.796875,
+        "right": 1440,
+        "bottom": 1276.28125,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 1099.53125,
+            "y": 461.390625,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": 461.390625,
+            "right": 1272,
+            "bottom": 514.1875,
+            "left": 1099.53125
+          },
+          "glyphs": [
+            {
+              "x": 1125.53125,
+              "y": 478.390625,
+              "width": 84.46875,
+              "height": 17,
+              "top": 478.390625,
+              "right": 1210,
+              "bottom": 495.390625,
+              "left": 1125.53125
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 169,
+            "y": 657.21875,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 657.21875,
+            "right": 1271,
+            "bottom": 708.015625,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 673.21875,
+              "width": 78.25,
+              "height": 17,
+              "top": 673.21875,
+              "right": 300.25,
+              "bottom": 690.21875,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 169,
+            "y": 716.015625,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 716.015625,
+            "right": 1271,
+            "bottom": 766.8125,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 732.015625,
+              "width": 129.84375,
+              "height": 17,
+              "top": 732.015625,
+              "right": 351.84375,
+              "bottom": 749.015625,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 169,
+            "y": 774.8125,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 774.8125,
+            "right": 1271,
+            "bottom": 825.609375,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 790.8125,
+              "width": 101.421875,
+              "height": 17,
+              "top": 790.8125,
+              "right": 323.421875,
+              "bottom": 807.8125,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 169,
+            "y": 833.609375,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 833.609375,
+            "right": 1271,
+            "bottom": 884.40625,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 849.609375,
+              "width": 64.046875,
+              "height": 17,
+              "top": 849.609375,
+              "right": 286.046875,
+              "bottom": 866.609375,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 169,
+            "y": 892.40625,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 892.40625,
+            "right": 1271,
+            "bottom": 943.203125,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 908.40625,
+              "width": 110.296875,
+              "height": 17,
+              "top": 908.40625,
+              "right": 332.296875,
+              "bottom": 925.40625,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 169,
+            "y": 951.203125,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 951.203125,
+            "right": 1271,
+            "bottom": 1002,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 967.203125,
+              "width": 80.921875,
+              "height": 17,
+              "top": 967.203125,
+              "right": 302.921875,
+              "bottom": 984.203125,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 169,
+            "y": 1010,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 1010,
+            "right": 1271,
+            "bottom": 1060.796875,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 222,
+              "y": 1026,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1026,
+              "right": 330.8125,
+              "bottom": 1043,
+              "left": 222
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 169,
+            "y": 1076.796875,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1076.796875,
+            "right": 290.328125,
+            "bottom": 1129.59375,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 195,
+              "y": 1093.796875,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1093.796875,
+              "right": 264.328125,
+              "bottom": 1110.796875,
+              "left": 195
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 298.328125,
+            "y": 1076.796875,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1076.796875,
+            "right": 384.125,
+            "bottom": 1129.59375,
+            "left": 298.328125
+          },
+          "glyphs": [
+            {
+              "x": 324.328125,
+              "y": 1093.796875,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1093.796875,
+              "right": 358.125,
+              "bottom": 1110.796875,
+              "left": 324.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 392.125,
+            "y": 1076.796875,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1076.796875,
+            "right": 499.265625,
+            "bottom": 1129.59375,
+            "left": 392.125
+          },
+          "glyphs": [
+            {
+              "x": 418.125,
+              "y": 1093.796875,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1093.796875,
+              "right": 473.265625,
+              "bottom": 1110.796875,
+              "left": 418.125
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 507.265625,
+            "y": 1076.796875,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1076.796875,
+            "right": 602.84375,
+            "bottom": 1129.59375,
+            "left": 507.265625
+          },
+          "glyphs": [
+            {
+              "x": 533.265625,
+              "y": 1093.796875,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1093.796875,
+              "right": 576.84375,
+              "bottom": 1110.796875,
+              "left": 533.265625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 169,
+            "y": 1145.59375,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1145.59375,
+            "right": 313.9375,
+            "bottom": 1189.59375,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 169,
+              "y": 1158.1875,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1158.1875,
+              "right": 313.9375,
+              "bottom": 1175.1875,
+              "left": 169
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 244,
+            "y": 456.796875,
+            "width": 835.53125,
+            "height": 31.1875,
+            "top": 456.796875,
+            "right": 1079.53125,
+            "bottom": 487.984375,
+            "left": 244
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 244,
+            "y": 493.984375,
+            "width": 835.53125,
+            "height": 24.796875,
+            "top": 493.984375,
+            "right": 1079.53125,
+            "bottom": 518.78125,
+            "left": 244
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 169,
+            "y": 583.78125,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 583.78125,
+            "right": 1271,
+            "bottom": 605.46875,
+            "left": 169
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 169,
+            "y": 617.46875,
+            "width": 1102,
+            "height": 23.75,
+            "top": 617.46875,
+            "right": 1271,
+            "bottom": 641.21875,
+            "left": 169
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 222,
+            "y": 670.21875,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 670.21875,
+            "right": 300.25,
+            "bottom": 695.015625,
+            "left": 222
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 222,
+            "y": 729.015625,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 729.015625,
+            "right": 351.84375,
+            "bottom": 753.8125,
+            "left": 222
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 222,
+            "y": 787.8125,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 787.8125,
+            "right": 323.421875,
+            "bottom": 812.609375,
+            "left": 222
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 222,
+            "y": 846.609375,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 846.609375,
+            "right": 286.046875,
+            "bottom": 871.40625,
+            "left": 222
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 222,
+            "y": 905.40625,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 905.40625,
+            "right": 332.296875,
+            "bottom": 930.203125,
+            "left": 222
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 222,
+            "y": 964.203125,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 964.203125,
+            "right": 302.921875,
+            "bottom": 989,
+            "left": 222
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 222,
+            "y": 1023,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1023,
+            "right": 330.8125,
+            "bottom": 1047.796875,
+            "left": 222
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 169,
+            "y": 1205.59375,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 1205.59375,
+            "right": 1271,
+            "bottom": 1227.28125,
+            "left": 169
+          }
+        }
+      ]
+    },
+    {
+      "state": "results-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "section": {
+        "x": 0,
+        "y": -170.203125,
+        "width": 1440,
+        "height": 502.390625,
+        "top": -170.203125,
+        "right": 1440,
+        "bottom": 332.1875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 1099.53125,
+            "y": -141.609375,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": -141.609375,
+            "right": 1272,
+            "bottom": -88.8125,
+            "left": 1099.53125
+          },
+          "glyphs": [
+            {
+              "x": 1125.53125,
+              "y": -124.609375,
+              "width": 84.46875,
+              "height": 17,
+              "top": -124.609375,
+              "right": 1210,
+              "bottom": -107.609375,
+              "left": 1125.53125
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 169,
+            "y": 132.703125,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 132.703125,
+            "right": 259.25,
+            "bottom": 185.5,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 195,
+              "y": 149.703125,
+              "width": 38.25,
+              "height": 17,
+              "top": 149.703125,
+              "right": 233.25,
+              "bottom": 166.703125,
+              "left": 195
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 267.25,
+            "y": 132.703125,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 132.703125,
+            "right": 374.390625,
+            "bottom": 185.5,
+            "left": 267.25
+          },
+          "glyphs": [
+            {
+              "x": 293.25,
+              "y": 149.703125,
+              "width": 55.140625,
+              "height": 17,
+              "top": 149.703125,
+              "right": 348.390625,
+              "bottom": 166.703125,
+              "left": 293.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 382.390625,
+            "y": 132.703125,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 132.703125,
+            "right": 477.96875,
+            "bottom": 185.5,
+            "left": 382.390625
+          },
+          "glyphs": [
+            {
+              "x": 408.390625,
+              "y": 149.703125,
+              "width": 43.578125,
+              "height": 17,
+              "top": 149.703125,
+              "right": 451.96875,
+              "bottom": 166.703125,
+              "left": 408.390625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 169,
+            "y": 201.5,
+            "width": 144.9375,
+            "height": 44,
+            "top": 201.5,
+            "right": 313.9375,
+            "bottom": 245.5,
+            "left": 169
+          },
+          "glyphs": [
+            {
+              "x": 169,
+              "y": 214.09375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 214.09375,
+              "right": 313.9375,
+              "bottom": 231.09375,
+              "left": 169
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 244,
+            "y": -146.203125,
+            "width": 835.53125,
+            "height": 31.1875,
+            "top": -146.203125,
+            "right": 1079.53125,
+            "bottom": -115.015625,
+            "left": 244
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 244,
+            "y": -109.015625,
+            "width": 835.53125,
+            "height": 24.796875,
+            "top": -109.015625,
+            "right": 1079.53125,
+            "bottom": -84.21875,
+            "left": 244
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 169,
+            "y": -19.21875,
+            "width": 1102,
+            "height": 21.6875,
+            "top": -19.21875,
+            "right": 1271,
+            "bottom": 2.46875,
+            "left": 169
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 169,
+            "y": 14.46875,
+            "width": 1102,
+            "height": 23.75,
+            "top": 14.46875,
+            "right": 1271,
+            "bottom": 38.21875,
+            "left": 169
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 169,
+            "y": 54.21875,
+            "width": 1102,
+            "height": 24.796875,
+            "top": 54.21875,
+            "right": 1271,
+            "bottom": 79.015625,
+            "left": 169
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 169,
+            "y": 95.015625,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 95.015625,
+            "right": 1271,
+            "bottom": 116.703125,
+            "left": 169
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 169,
+            "y": 261.5,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 261.5,
+            "right": 1271,
+            "bottom": 283.1875,
+            "left": 169
+          }
+        }
+      ]
+    },
+    {
+      "state": "closed-1920",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "section": {
+        "x": 0,
+        "y": 1898.59375,
+        "width": 1920,
+        "height": 133.984375,
+        "top": 1898.59375,
+        "right": 1920,
+        "bottom": 2032.578125,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 1339.53125,
+            "y": 1927.1875,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": 1927.1875,
+            "right": 1512,
+            "bottom": 1979.984375,
+            "left": 1339.53125
+          },
+          "glyphs": [
+            {
+              "x": 1365.53125,
+              "y": 1944.1875,
+              "width": 84.46875,
+              "height": 17,
+              "top": 1944.1875,
+              "right": 1450,
+              "bottom": 1961.1875,
+              "left": 1365.53125
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 484,
+            "y": 1922.59375,
+            "width": 835.53125,
+            "height": 31.1875,
+            "top": 1922.59375,
+            "right": 1319.53125,
+            "bottom": 1953.78125,
+            "left": 484
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 484,
+            "y": 1959.78125,
+            "width": 835.53125,
+            "height": 24.796875,
+            "top": 1959.78125,
+            "right": 1319.53125,
+            "bottom": 1984.578125,
+            "left": 484
+          }
+        }
+      ]
+    },
+    {
+      "state": "open-1920",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "section": {
+        "x": 0,
+        "y": 432.59375,
+        "width": 1920,
+        "height": 843.484375,
+        "top": 432.59375,
+        "right": 1920,
+        "bottom": 1276.078125,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 1339.53125,
+            "y": 461.1875,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": 461.1875,
+            "right": 1512,
+            "bottom": 513.984375,
+            "left": 1339.53125
+          },
+          "glyphs": [
+            {
+              "x": 1365.53125,
+              "y": 478.1875,
+              "width": 84.46875,
+              "height": 17,
+              "top": 478.1875,
+              "right": 1450,
+              "bottom": 495.1875,
+              "left": 1365.53125
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 409,
+            "y": 657.015625,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 657.015625,
+            "right": 1511,
+            "bottom": 707.8125,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 673.015625,
+              "width": 78.25,
+              "height": 17,
+              "top": 673.015625,
+              "right": 540.25,
+              "bottom": 690.015625,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 409,
+            "y": 715.8125,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 715.8125,
+            "right": 1511,
+            "bottom": 766.609375,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 731.8125,
+              "width": 129.84375,
+              "height": 17,
+              "top": 731.8125,
+              "right": 591.84375,
+              "bottom": 748.8125,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 409,
+            "y": 774.609375,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 774.609375,
+            "right": 1511,
+            "bottom": 825.40625,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 790.609375,
+              "width": 101.421875,
+              "height": 17,
+              "top": 790.609375,
+              "right": 563.421875,
+              "bottom": 807.609375,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 409,
+            "y": 833.40625,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 833.40625,
+            "right": 1511,
+            "bottom": 884.203125,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 849.40625,
+              "width": 64.046875,
+              "height": 17,
+              "top": 849.40625,
+              "right": 526.046875,
+              "bottom": 866.40625,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 409,
+            "y": 892.203125,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 892.203125,
+            "right": 1511,
+            "bottom": 943,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 908.203125,
+              "width": 110.296875,
+              "height": 17,
+              "top": 908.203125,
+              "right": 572.296875,
+              "bottom": 925.203125,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 409,
+            "y": 951,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 951,
+            "right": 1511,
+            "bottom": 1001.796875,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 967,
+              "width": 80.921875,
+              "height": 17,
+              "top": 967,
+              "right": 542.921875,
+              "bottom": 984,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 409,
+            "y": 1009.796875,
+            "width": 1102,
+            "height": 50.796875,
+            "top": 1009.796875,
+            "right": 1511,
+            "bottom": 1060.59375,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 462,
+              "y": 1025.796875,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1025.796875,
+              "right": 570.8125,
+              "bottom": 1042.796875,
+              "left": 462
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 409,
+            "y": 1076.59375,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1076.59375,
+            "right": 530.328125,
+            "bottom": 1129.390625,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 435,
+              "y": 1093.59375,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1093.59375,
+              "right": 504.328125,
+              "bottom": 1110.59375,
+              "left": 435
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 538.328125,
+            "y": 1076.59375,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1076.59375,
+            "right": 624.125,
+            "bottom": 1129.390625,
+            "left": 538.328125
+          },
+          "glyphs": [
+            {
+              "x": 564.328125,
+              "y": 1093.59375,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1093.59375,
+              "right": 598.125,
+              "bottom": 1110.59375,
+              "left": 564.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 632.125,
+            "y": 1076.59375,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1076.59375,
+            "right": 739.265625,
+            "bottom": 1129.390625,
+            "left": 632.125
+          },
+          "glyphs": [
+            {
+              "x": 658.125,
+              "y": 1093.59375,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1093.59375,
+              "right": 713.265625,
+              "bottom": 1110.59375,
+              "left": 658.125
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 747.265625,
+            "y": 1076.59375,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1076.59375,
+            "right": 842.84375,
+            "bottom": 1129.390625,
+            "left": 747.265625
+          },
+          "glyphs": [
+            {
+              "x": 773.265625,
+              "y": 1093.59375,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1093.59375,
+              "right": 816.84375,
+              "bottom": 1110.59375,
+              "left": 773.265625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 409,
+            "y": 1145.390625,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1145.390625,
+            "right": 553.9375,
+            "bottom": 1189.390625,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 409,
+              "y": 1157.984375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1157.984375,
+              "right": 553.9375,
+              "bottom": 1174.984375,
+              "left": 409
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 484,
+            "y": 456.59375,
+            "width": 835.53125,
+            "height": 31.1875,
+            "top": 456.59375,
+            "right": 1319.53125,
+            "bottom": 487.78125,
+            "left": 484
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 484,
+            "y": 493.78125,
+            "width": 835.53125,
+            "height": 24.796875,
+            "top": 493.78125,
+            "right": 1319.53125,
+            "bottom": 518.578125,
+            "left": 484
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 409,
+            "y": 583.578125,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 583.578125,
+            "right": 1511,
+            "bottom": 605.265625,
+            "left": 409
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 409,
+            "y": 617.265625,
+            "width": 1102,
+            "height": 23.75,
+            "top": 617.265625,
+            "right": 1511,
+            "bottom": 641.015625,
+            "left": 409
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 462,
+            "y": 670.015625,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 670.015625,
+            "right": 540.25,
+            "bottom": 694.8125,
+            "left": 462
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 462,
+            "y": 728.8125,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 728.8125,
+            "right": 591.84375,
+            "bottom": 753.609375,
+            "left": 462
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 462,
+            "y": 787.609375,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 787.609375,
+            "right": 563.421875,
+            "bottom": 812.40625,
+            "left": 462
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 462,
+            "y": 846.40625,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 846.40625,
+            "right": 526.046875,
+            "bottom": 871.203125,
+            "left": 462
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 462,
+            "y": 905.203125,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 905.203125,
+            "right": 572.296875,
+            "bottom": 930,
+            "left": 462
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 462,
+            "y": 964,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 964,
+            "right": 542.921875,
+            "bottom": 988.796875,
+            "left": 462
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 462,
+            "y": 1022.796875,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1022.796875,
+            "right": 570.8125,
+            "bottom": 1047.59375,
+            "left": 462
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 409,
+            "y": 1205.390625,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 1205.390625,
+            "right": 1511,
+            "bottom": 1227.078125,
+            "left": 409
+          }
+        }
+      ]
+    },
+    {
+      "state": "results-1920",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "section": {
+        "x": 0,
+        "y": -170.40625,
+        "width": 1920,
+        "height": 502.390625,
+        "top": -170.40625,
+        "right": 1920,
+        "bottom": 331.984375,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 1339.53125,
+            "y": -141.8125,
+            "width": 172.46875,
+            "height": 52.796875,
+            "top": -141.8125,
+            "right": 1512,
+            "bottom": -89.015625,
+            "left": 1339.53125
+          },
+          "glyphs": [
+            {
+              "x": 1365.53125,
+              "y": -124.8125,
+              "width": 84.46875,
+              "height": 17,
+              "top": -124.8125,
+              "right": 1450,
+              "bottom": -107.8125,
+              "left": 1365.53125
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 409,
+            "y": 132.5,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 132.5,
+            "right": 499.25,
+            "bottom": 185.296875,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 435,
+              "y": 149.5,
+              "width": 38.25,
+              "height": 17,
+              "top": 149.5,
+              "right": 473.25,
+              "bottom": 166.5,
+              "left": 435
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 507.25,
+            "y": 132.5,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 132.5,
+            "right": 614.390625,
+            "bottom": 185.296875,
+            "left": 507.25
+          },
+          "glyphs": [
+            {
+              "x": 533.25,
+              "y": 149.5,
+              "width": 55.140625,
+              "height": 17,
+              "top": 149.5,
+              "right": 588.390625,
+              "bottom": 166.5,
+              "left": 533.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 622.390625,
+            "y": 132.5,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 132.5,
+            "right": 717.96875,
+            "bottom": 185.296875,
+            "left": 622.390625
+          },
+          "glyphs": [
+            {
+              "x": 648.390625,
+              "y": 149.5,
+              "width": 43.578125,
+              "height": 17,
+              "top": 149.5,
+              "right": 691.96875,
+              "bottom": 166.5,
+              "left": 648.390625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 409,
+            "y": 201.296875,
+            "width": 144.9375,
+            "height": 44,
+            "top": 201.296875,
+            "right": 553.9375,
+            "bottom": 245.296875,
+            "left": 409
+          },
+          "glyphs": [
+            {
+              "x": 409,
+              "y": 213.890625,
+              "width": 144.9375,
+              "height": 17,
+              "top": 213.890625,
+              "right": 553.9375,
+              "bottom": 230.890625,
+              "left": 409
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 484,
+            "y": -146.40625,
+            "width": 835.53125,
+            "height": 31.1875,
+            "top": -146.40625,
+            "right": 1319.53125,
+            "bottom": -115.21875,
+            "left": 484
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 484,
+            "y": -109.21875,
+            "width": 835.53125,
+            "height": 24.796875,
+            "top": -109.21875,
+            "right": 1319.53125,
+            "bottom": -84.421875,
+            "left": 484
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 409,
+            "y": -19.421875,
+            "width": 1102,
+            "height": 21.6875,
+            "top": -19.421875,
+            "right": 1511,
+            "bottom": 2.265625,
+            "left": 409
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 409,
+            "y": 14.265625,
+            "width": 1102,
+            "height": 23.75,
+            "top": 14.265625,
+            "right": 1511,
+            "bottom": 38.015625,
+            "left": 409
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 409,
+            "y": 54.015625,
+            "width": 1102,
+            "height": 24.796875,
+            "top": 54.015625,
+            "right": 1511,
+            "bottom": 78.8125,
+            "left": 409
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 409,
+            "y": 94.8125,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 94.8125,
+            "right": 1511,
+            "bottom": 116.5,
+            "left": 409
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 409,
+            "y": 261.296875,
+            "width": 1102,
+            "height": 21.6875,
+            "top": 261.296875,
+            "right": 1511,
+            "bottom": 282.984375,
+            "left": 409
+          }
+        }
+      ]
+    },
+    {
+      "state": "blocked-assets",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 371.734375,
+        "width": 390,
+        "height": 970.15625,
+        "top": 371.734375,
+        "right": 390,
+        "bottom": 1341.890625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": 473.109375,
+            "width": 326,
+            "height": 52.796875,
+            "top": 473.109375,
+            "right": 358,
+            "bottom": 525.90625,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": 490.109375,
+              "width": 84.46875,
+              "height": 17,
+              "top": 490.109375,
+              "right": 219.234375,
+              "bottom": 507.109375,
+              "left": 134.765625
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 33,
+            "y": 648.34375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 648.34375,
+            "right": 357,
+            "bottom": 699.140625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 664.34375,
+              "width": 78.25,
+              "height": 17,
+              "top": 664.34375,
+              "right": 164.25,
+              "bottom": 681.34375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 33,
+            "y": 707.140625,
+            "width": 324,
+            "height": 50.796875,
+            "top": 707.140625,
+            "right": 357,
+            "bottom": 757.9375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 723.140625,
+              "width": 129.84375,
+              "height": 17,
+              "top": 723.140625,
+              "right": 215.84375,
+              "bottom": 740.140625,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 33,
+            "y": 765.9375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 765.9375,
+            "right": 357,
+            "bottom": 816.734375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 781.9375,
+              "width": 101.421875,
+              "height": 17,
+              "top": 781.9375,
+              "right": 187.421875,
+              "bottom": 798.9375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 33,
+            "y": 824.734375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 824.734375,
+            "right": 357,
+            "bottom": 875.53125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 840.734375,
+              "width": 64.046875,
+              "height": 17,
+              "top": 840.734375,
+              "right": 150.046875,
+              "bottom": 857.734375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 33,
+            "y": 883.53125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 883.53125,
+            "right": 357,
+            "bottom": 934.328125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 899.53125,
+              "width": 110.296875,
+              "height": 17,
+              "top": 899.53125,
+              "right": 196.296875,
+              "bottom": 916.53125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 33,
+            "y": 942.328125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 942.328125,
+            "right": 357,
+            "bottom": 993.125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 958.328125,
+              "width": 80.921875,
+              "height": 17,
+              "top": 958.328125,
+              "right": 166.921875,
+              "bottom": 975.328125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 33,
+            "y": 1001.125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 1001.125,
+            "right": 357,
+            "bottom": 1051.921875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 1017.125,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1017.125,
+              "right": 194.8125,
+              "bottom": 1034.125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 33,
+            "y": 1067.921875,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1067.921875,
+            "right": 154.328125,
+            "bottom": 1120.71875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1084.921875,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1084.921875,
+              "right": 128.328125,
+              "bottom": 1101.921875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 162.328125,
+            "y": 1067.921875,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1067.921875,
+            "right": 248.125,
+            "bottom": 1120.71875,
+            "left": 162.328125
+          },
+          "glyphs": [
+            {
+              "x": 188.328125,
+              "y": 1084.921875,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1084.921875,
+              "right": 222.125,
+              "bottom": 1101.921875,
+              "left": 188.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 33,
+            "y": 1128.71875,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1128.71875,
+            "right": 140.140625,
+            "bottom": 1181.515625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1145.71875,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1145.71875,
+              "right": 114.140625,
+              "bottom": 1162.71875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 148.140625,
+            "y": 1128.71875,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1128.71875,
+            "right": 243.71875,
+            "bottom": 1181.515625,
+            "left": 148.140625
+          },
+          "glyphs": [
+            {
+              "x": 174.140625,
+              "y": 1145.71875,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1145.71875,
+              "right": 217.71875,
+              "bottom": 1162.71875,
+              "left": 174.140625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 1197.515625,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1197.515625,
+            "right": 177.9375,
+            "bottom": 1241.515625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 1210.109375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1210.109375,
+              "right": 177.9375,
+              "bottom": 1227.109375,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": 387.734375,
+            "width": 270,
+            "height": 24,
+            "top": 387.734375,
+            "right": 358,
+            "bottom": 411.734375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": 417.734375,
+            "width": 270,
+            "height": 43.375,
+            "top": 417.734375,
+            "right": 358,
+            "bottom": 461.109375,
+            "left": 88
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 33,
+            "y": 574.90625,
+            "width": 324,
+            "height": 21.6875,
+            "top": 574.90625,
+            "right": 357,
+            "bottom": 596.59375,
+            "left": 33
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 33,
+            "y": 608.59375,
+            "width": 324,
+            "height": 23.75,
+            "top": 608.59375,
+            "right": 357,
+            "bottom": 632.34375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 86,
+            "y": 661.34375,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 661.34375,
+            "right": 164.25,
+            "bottom": 686.140625,
+            "left": 86
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 86,
+            "y": 720.140625,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 720.140625,
+            "right": 215.84375,
+            "bottom": 744.9375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 86,
+            "y": 778.9375,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 778.9375,
+            "right": 187.421875,
+            "bottom": 803.734375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 86,
+            "y": 837.734375,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 837.734375,
+            "right": 150.046875,
+            "bottom": 862.53125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 86,
+            "y": 896.53125,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 896.53125,
+            "right": 196.296875,
+            "bottom": 921.328125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 86,
+            "y": 955.328125,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 955.328125,
+            "right": 166.921875,
+            "bottom": 980.125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 86,
+            "y": 1014.125,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1014.125,
+            "right": 194.8125,
+            "bottom": 1038.921875,
+            "left": 86
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 1257.515625,
+            "width": 324,
+            "height": 43.375,
+            "top": 1257.515625,
+            "right": 357,
+            "bottom": 1300.890625,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "blocked-assets-results",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": -222.265625,
+        "width": 390,
+        "height": 614.75,
+        "top": -222.265625,
+        "right": 390,
+        "bottom": 392.484375,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 32,
+            "y": -120.890625,
+            "width": 326,
+            "height": 52.796875,
+            "top": -120.890625,
+            "right": 358,
+            "bottom": -68.09375,
+            "left": 32
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": -103.890625,
+              "width": 84.46875,
+              "height": 17,
+              "top": -103.890625,
+              "right": 219.234375,
+              "bottom": -86.890625,
+              "left": 134.765625
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 33,
+            "y": 179.3125,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 179.3125,
+            "right": 123.25,
+            "bottom": 232.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 196.3125,
+              "width": 38.25,
+              "height": 17,
+              "top": 196.3125,
+              "right": 97.25,
+              "bottom": 213.3125,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 131.25,
+            "y": 179.3125,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 179.3125,
+            "right": 238.390625,
+            "bottom": 232.109375,
+            "left": 131.25
+          },
+          "glyphs": [
+            {
+              "x": 157.25,
+              "y": 196.3125,
+              "width": 55.140625,
+              "height": 17,
+              "top": 196.3125,
+              "right": 212.390625,
+              "bottom": 213.3125,
+              "left": 157.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 246.390625,
+            "y": 179.3125,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 179.3125,
+            "right": 341.96875,
+            "bottom": 232.109375,
+            "left": 246.390625
+          },
+          "glyphs": [
+            {
+              "x": 272.390625,
+              "y": 196.3125,
+              "width": 43.578125,
+              "height": 17,
+              "top": 196.3125,
+              "right": 315.96875,
+              "bottom": 213.3125,
+              "left": 272.390625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 248.109375,
+            "width": 144.9375,
+            "height": 44,
+            "top": 248.109375,
+            "right": 177.9375,
+            "bottom": 292.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 260.703125,
+              "width": 144.9375,
+              "height": 17,
+              "top": 260.703125,
+              "right": 177.9375,
+              "bottom": 277.703125,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 88,
+            "y": -206.265625,
+            "width": 270,
+            "height": 24,
+            "top": -206.265625,
+            "right": 358,
+            "bottom": -182.265625,
+            "left": 88
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 88,
+            "y": -176.265625,
+            "width": 270,
+            "height": 43.375,
+            "top": -176.265625,
+            "right": 358,
+            "bottom": -132.890625,
+            "left": 88
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 33,
+            "y": -19.09375,
+            "width": 324,
+            "height": 21.6875,
+            "top": -19.09375,
+            "right": 357,
+            "bottom": 2.59375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 33,
+            "y": 14.59375,
+            "width": 324,
+            "height": 23.75,
+            "top": 14.59375,
+            "right": 357,
+            "bottom": 38.34375,
+            "left": 33
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 33,
+            "y": 54.34375,
+            "width": 324,
+            "height": 49.59375,
+            "top": 54.34375,
+            "right": 357,
+            "bottom": 103.9375,
+            "left": 33
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 33,
+            "y": 119.9375,
+            "width": 324,
+            "height": 43.375,
+            "top": 119.9375,
+            "right": 357,
+            "bottom": 163.3125,
+            "left": 33
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 308.109375,
+            "width": 324,
+            "height": 43.375,
+            "top": 308.109375,
+            "right": 357,
+            "bottom": 351.484375,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "forced-colors",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 370.734375,
+        "width": 390,
+        "height": 972.15625,
+        "top": 370.734375,
+        "right": 390,
+        "bottom": 1342.890625,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 33,
+            "y": 473.109375,
+            "width": 324,
+            "height": 52.796875,
+            "top": 473.109375,
+            "right": 357,
+            "bottom": 525.90625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": 490.109375,
+              "width": 84.46875,
+              "height": 17,
+              "top": 490.109375,
+              "right": 219.234375,
+              "bottom": 507.109375,
+              "left": 134.765625
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 33,
+            "y": 649.34375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 649.34375,
+            "right": 357,
+            "bottom": 700.140625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 665.34375,
+              "width": 78.25,
+              "height": 17,
+              "top": 665.34375,
+              "right": 164.25,
+              "bottom": 682.34375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 33,
+            "y": 708.140625,
+            "width": 324,
+            "height": 50.796875,
+            "top": 708.140625,
+            "right": 357,
+            "bottom": 758.9375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 724.140625,
+              "width": 129.84375,
+              "height": 17,
+              "top": 724.140625,
+              "right": 215.84375,
+              "bottom": 741.140625,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 33,
+            "y": 766.9375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 766.9375,
+            "right": 357,
+            "bottom": 817.734375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 782.9375,
+              "width": 101.421875,
+              "height": 17,
+              "top": 782.9375,
+              "right": 187.421875,
+              "bottom": 799.9375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 33,
+            "y": 825.734375,
+            "width": 324,
+            "height": 50.796875,
+            "top": 825.734375,
+            "right": 357,
+            "bottom": 876.53125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 841.734375,
+              "width": 64.046875,
+              "height": 17,
+              "top": 841.734375,
+              "right": 150.046875,
+              "bottom": 858.734375,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 33,
+            "y": 884.53125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 884.53125,
+            "right": 357,
+            "bottom": 935.328125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 900.53125,
+              "width": 110.296875,
+              "height": 17,
+              "top": 900.53125,
+              "right": 196.296875,
+              "bottom": 917.53125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 33,
+            "y": 943.328125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 943.328125,
+            "right": 357,
+            "bottom": 994.125,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 959.328125,
+              "width": 80.921875,
+              "height": 17,
+              "top": 959.328125,
+              "right": 166.921875,
+              "bottom": 976.328125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 33,
+            "y": 1002.125,
+            "width": 324,
+            "height": 50.796875,
+            "top": 1002.125,
+            "right": 357,
+            "bottom": 1052.921875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 86,
+              "y": 1018.125,
+              "width": 108.8125,
+              "height": 17,
+              "top": 1018.125,
+              "right": 194.8125,
+              "bottom": 1035.125,
+              "left": 86
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 33,
+            "y": 1068.921875,
+            "width": 121.328125,
+            "height": 52.796875,
+            "top": 1068.921875,
+            "right": 154.328125,
+            "bottom": 1121.71875,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1085.921875,
+              "width": 69.328125,
+              "height": 17,
+              "top": 1085.921875,
+              "right": 128.328125,
+              "bottom": 1102.921875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 162.328125,
+            "y": 1068.921875,
+            "width": 85.796875,
+            "height": 52.796875,
+            "top": 1068.921875,
+            "right": 248.125,
+            "bottom": 1121.71875,
+            "left": 162.328125
+          },
+          "glyphs": [
+            {
+              "x": 188.328125,
+              "y": 1085.921875,
+              "width": 33.796875,
+              "height": 17,
+              "top": 1085.921875,
+              "right": 222.125,
+              "bottom": 1102.921875,
+              "left": 188.328125
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 33,
+            "y": 1129.71875,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 1129.71875,
+            "right": 140.140625,
+            "bottom": 1182.515625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 1146.71875,
+              "width": 55.140625,
+              "height": 17,
+              "top": 1146.71875,
+              "right": 114.140625,
+              "bottom": 1163.71875,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 148.140625,
+            "y": 1129.71875,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 1129.71875,
+            "right": 243.71875,
+            "bottom": 1182.515625,
+            "left": 148.140625
+          },
+          "glyphs": [
+            {
+              "x": 174.140625,
+              "y": 1146.71875,
+              "width": 43.578125,
+              "height": 17,
+              "top": 1146.71875,
+              "right": 217.71875,
+              "bottom": 1163.71875,
+              "left": 174.140625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 1198.515625,
+            "width": 144.9375,
+            "height": 44,
+            "top": 1198.515625,
+            "right": 177.9375,
+            "bottom": 1242.515625,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 1211.109375,
+              "width": 144.9375,
+              "height": 17,
+              "top": 1211.109375,
+              "right": 177.9375,
+              "bottom": 1228.109375,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 89,
+            "y": 387.734375,
+            "width": 268,
+            "height": 24,
+            "top": 387.734375,
+            "right": 357,
+            "bottom": 411.734375,
+            "left": 89
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 89,
+            "y": 417.734375,
+            "width": 268,
+            "height": 43.375,
+            "top": 417.734375,
+            "right": 357,
+            "bottom": 461.109375,
+            "left": 89
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 33,
+            "y": 575.90625,
+            "width": 324,
+            "height": 21.6875,
+            "top": 575.90625,
+            "right": 357,
+            "bottom": 597.59375,
+            "left": 33
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 33,
+            "y": 609.59375,
+            "width": 324,
+            "height": 23.75,
+            "top": 609.59375,
+            "right": 357,
+            "bottom": 633.34375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 86,
+            "y": 662.34375,
+            "width": 78.25,
+            "height": 24.796875,
+            "top": 662.34375,
+            "right": 164.25,
+            "bottom": 687.140625,
+            "left": 86
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 86,
+            "y": 721.140625,
+            "width": 129.84375,
+            "height": 24.796875,
+            "top": 721.140625,
+            "right": 215.84375,
+            "bottom": 745.9375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 86,
+            "y": 779.9375,
+            "width": 101.421875,
+            "height": 24.796875,
+            "top": 779.9375,
+            "right": 187.421875,
+            "bottom": 804.734375,
+            "left": 86
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 86,
+            "y": 838.734375,
+            "width": 64.046875,
+            "height": 24.796875,
+            "top": 838.734375,
+            "right": 150.046875,
+            "bottom": 863.53125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 86,
+            "y": 897.53125,
+            "width": 110.296875,
+            "height": 24.796875,
+            "top": 897.53125,
+            "right": 196.296875,
+            "bottom": 922.328125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 86,
+            "y": 956.328125,
+            "width": 80.921875,
+            "height": 24.796875,
+            "top": 956.328125,
+            "right": 166.921875,
+            "bottom": 981.125,
+            "left": 86
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 86,
+            "y": 1015.125,
+            "width": 108.8125,
+            "height": 24.796875,
+            "top": 1015.125,
+            "right": 194.8125,
+            "bottom": 1039.921875,
+            "left": 86
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 1258.515625,
+            "width": 324,
+            "height": 43.375,
+            "top": 1258.515625,
+            "right": 357,
+            "bottom": 1301.890625,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "forced-colors-results",
+      "width": 390,
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": -224.265625,
+        "width": 390,
+        "height": 616.75,
+        "top": -224.265625,
+        "right": 390,
+        "bottom": 392.484375,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 33,
+            "y": -121.890625,
+            "width": 324,
+            "height": 52.796875,
+            "top": -121.890625,
+            "right": 357,
+            "bottom": -69.09375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 134.765625,
+              "y": -104.890625,
+              "width": 84.46875,
+              "height": 17,
+              "top": -104.890625,
+              "right": 219.234375,
+              "bottom": -87.890625,
+              "left": 134.765625
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 33,
+            "y": 179.3125,
+            "width": 90.25,
+            "height": 52.796875,
+            "top": 179.3125,
+            "right": 123.25,
+            "bottom": 232.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 59,
+              "y": 196.3125,
+              "width": 38.25,
+              "height": 17,
+              "top": 196.3125,
+              "right": 97.25,
+              "bottom": 213.3125,
+              "left": 59
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 131.25,
+            "y": 179.3125,
+            "width": 107.140625,
+            "height": 52.796875,
+            "top": 179.3125,
+            "right": 238.390625,
+            "bottom": 232.109375,
+            "left": 131.25
+          },
+          "glyphs": [
+            {
+              "x": 157.25,
+              "y": 196.3125,
+              "width": 55.140625,
+              "height": 17,
+              "top": 196.3125,
+              "right": 212.390625,
+              "bottom": 213.3125,
+              "left": 157.25
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 246.390625,
+            "y": 179.3125,
+            "width": 95.578125,
+            "height": 52.796875,
+            "top": 179.3125,
+            "right": 341.96875,
+            "bottom": 232.109375,
+            "left": 246.390625
+          },
+          "glyphs": [
+            {
+              "x": 272.390625,
+              "y": 196.3125,
+              "width": 43.578125,
+              "height": 17,
+              "top": 196.3125,
+              "right": 315.96875,
+              "bottom": 213.3125,
+              "left": 272.390625
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 33,
+            "y": 248.109375,
+            "width": 144.9375,
+            "height": 44,
+            "top": 248.109375,
+            "right": 177.9375,
+            "bottom": 292.109375,
+            "left": 33
+          },
+          "glyphs": [
+            {
+              "x": 33,
+              "y": 260.703125,
+              "width": 144.9375,
+              "height": 17,
+              "top": 260.703125,
+              "right": 177.9375,
+              "bottom": 277.703125,
+              "left": 33
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 89,
+            "y": -207.265625,
+            "width": 268,
+            "height": 24,
+            "top": -207.265625,
+            "right": 357,
+            "bottom": -183.265625,
+            "left": 89
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 89,
+            "y": -177.265625,
+            "width": 268,
+            "height": 43.375,
+            "top": -177.265625,
+            "right": 357,
+            "bottom": -133.890625,
+            "left": 89
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 33,
+            "y": -19.09375,
+            "width": 324,
+            "height": 21.6875,
+            "top": -19.09375,
+            "right": 357,
+            "bottom": 2.59375,
+            "left": 33
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 33,
+            "y": 14.59375,
+            "width": 324,
+            "height": 23.75,
+            "top": 14.59375,
+            "right": 357,
+            "bottom": 38.34375,
+            "left": 33
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 33,
+            "y": 54.34375,
+            "width": 324,
+            "height": 49.59375,
+            "top": 54.34375,
+            "right": 357,
+            "bottom": 103.9375,
+            "left": 33
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 33,
+            "y": 119.9375,
+            "width": 324,
+            "height": 43.375,
+            "top": 119.9375,
+            "right": 357,
+            "bottom": 163.3125,
+            "left": 33
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 33,
+            "y": 308.109375,
+            "width": 324,
+            "height": 43.375,
+            "top": 308.109375,
+            "right": 357,
+            "bottom": 351.484375,
+            "left": 33
+          }
+        }
+      ]
+    },
+    {
+      "state": "text-200",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": -160.09375,
+        "width": 320,
+        "height": 2969.515625,
+        "top": -160.09375,
+        "right": 320,
+        "bottom": 2809.421875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 64,
+            "y": 424.25,
+            "width": 192,
+            "height": 151.1875,
+            "top": 424.25,
+            "right": 256,
+            "bottom": 575.4375,
+            "left": 64
+          },
+          "glyphs": [
+            {
+              "x": 97.328125,
+              "y": 456.25,
+              "width": 53.34375,
+              "height": 36,
+              "top": 456.25,
+              "right": 150.671875,
+              "bottom": 492.25,
+              "left": 97.328125
+            },
+            {
+              "x": 70.65625,
+              "y": 505.84375,
+              "width": 106.703125,
+              "height": 36,
+              "top": 505.84375,
+              "right": 177.359375,
+              "bottom": 541.84375,
+              "left": 70.65625
+            }
+          ]
+        },
+        {
+          "name": "Retirement",
+          "rect": {
+            "x": 65,
+            "y": 1001.15625,
+            "width": 227.890625,
+            "height": 88,
+            "top": 1001.15625,
+            "right": 292.890625,
+            "bottom": 1089.15625,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1026.359375,
+              "width": 156.5,
+              "height": 36,
+              "top": 1026.359375,
+              "right": 274.5,
+              "bottom": 1062.359375,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Home & mortgage",
+          "rect": {
+            "x": 65,
+            "y": 1105.15625,
+            "width": 227.890625,
+            "height": 125.1875,
+            "top": 1105.15625,
+            "right": 292.890625,
+            "bottom": 1230.34375,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1124.15625,
+              "width": 115.59375,
+              "height": 36,
+              "top": 1124.15625,
+              "right": 233.59375,
+              "bottom": 1160.15625,
+              "left": 118
+            },
+            {
+              "x": 118,
+              "y": 1173.75,
+              "width": 135.1875,
+              "height": 36,
+              "top": 1173.75,
+              "right": 253.1875,
+              "bottom": 1209.75,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Budget & debt",
+          "rect": {
+            "x": 65,
+            "y": 1246.34375,
+            "width": 227.890625,
+            "height": 125.1875,
+            "top": 1246.34375,
+            "right": 292.890625,
+            "bottom": 1371.53125,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1265.34375,
+              "width": 131.65625,
+              "height": 36,
+              "top": 1265.34375,
+              "right": 249.65625,
+              "bottom": 1301.34375,
+              "left": 118
+            },
+            {
+              "x": 118,
+              "y": 1314.9375,
+              "width": 62.28125,
+              "height": 36,
+              "top": 1314.9375,
+              "right": 180.28125,
+              "bottom": 1350.9375,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Investing",
+          "rect": {
+            "x": 65,
+            "y": 1387.53125,
+            "width": 227.890625,
+            "height": 88,
+            "top": 1387.53125,
+            "right": 292.890625,
+            "bottom": 1475.53125,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1412.734375,
+              "width": 128.078125,
+              "height": 36,
+              "top": 1412.734375,
+              "right": 246.078125,
+              "bottom": 1448.734375,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Tax preparation",
+          "rect": {
+            "x": 65,
+            "y": 1491.53125,
+            "width": 227.890625,
+            "height": 125.1875,
+            "top": 1491.53125,
+            "right": 292.890625,
+            "bottom": 1616.71875,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1510.53125,
+              "width": 49.796875,
+              "height": 36,
+              "top": 1510.53125,
+              "right": 167.796875,
+              "bottom": 1546.53125,
+              "left": 118
+            },
+            {
+              "x": 118,
+              "y": 1560.125,
+              "width": 161.890625,
+              "height": 36,
+              "top": 1560.125,
+              "right": 279.890625,
+              "bottom": 1596.125,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Pay & work",
+          "rect": {
+            "x": 65,
+            "y": 1632.71875,
+            "width": 227.890625,
+            "height": 88,
+            "top": 1632.71875,
+            "right": 292.890625,
+            "bottom": 1720.71875,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1657.921875,
+              "width": 161.828125,
+              "height": 36,
+              "top": 1657.921875,
+              "right": 279.828125,
+              "bottom": 1693.921875,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Travel planning",
+          "rect": {
+            "x": 65,
+            "y": 1736.71875,
+            "width": 227.890625,
+            "height": 125.1875,
+            "top": 1736.71875,
+            "right": 292.890625,
+            "bottom": 1861.90625,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 118,
+              "y": 1755.71875,
+              "width": 87.71875,
+              "height": 36,
+              "top": 1755.71875,
+              "right": 205.71875,
+              "bottom": 1791.71875,
+              "left": 118
+            },
+            {
+              "x": 118,
+              "y": 1805.3125,
+              "width": 121,
+              "height": 36,
+              "top": 1805.3125,
+              "right": 239,
+              "bottom": 1841.3125,
+              "left": 118
+            }
+          ]
+        },
+        {
+          "name": "Continue",
+          "rect": {
+            "x": 65,
+            "y": 1893.90625,
+            "width": 190,
+            "height": 101.59375,
+            "top": 1893.90625,
+            "right": 255,
+            "bottom": 1995.5,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 90.6875,
+              "y": 1925.90625,
+              "width": 138.640625,
+              "height": 36,
+              "top": 1925.90625,
+              "right": 229.328125,
+              "bottom": 1961.90625,
+              "left": 90.6875
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "rect": {
+            "x": 65,
+            "y": 2011.5,
+            "width": 135.578125,
+            "height": 101.59375,
+            "top": 2011.5,
+            "right": 200.578125,
+            "bottom": 2113.09375,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 99,
+              "y": 2043.5,
+              "width": 67.578125,
+              "height": 36,
+              "top": 2043.5,
+              "right": 166.578125,
+              "bottom": 2079.5,
+              "left": 99
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 65,
+            "y": 2129.09375,
+            "width": 178.265625,
+            "height": 101.59375,
+            "top": 2129.09375,
+            "right": 243.265625,
+            "bottom": 2230.6875,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 99,
+              "y": 2161.09375,
+              "width": 110.265625,
+              "height": 36,
+              "top": 2161.09375,
+              "right": 209.265625,
+              "bottom": 2197.09375,
+              "left": 99
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 65,
+            "y": 2246.6875,
+            "width": 155.140625,
+            "height": 101.59375,
+            "top": 2246.6875,
+            "right": 220.140625,
+            "bottom": 2348.28125,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 99,
+              "y": 2278.6875,
+              "width": 87.140625,
+              "height": 36,
+              "top": 2278.6875,
+              "right": 186.140625,
+              "bottom": 2314.6875,
+              "left": 99
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 65,
+            "y": 2380.28125,
+            "width": 190,
+            "height": 99.1875,
+            "top": 2380.28125,
+            "right": 255,
+            "bottom": 2479.46875,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 65,
+              "y": 2386.28125,
+              "width": 160.0625,
+              "height": 36,
+              "top": 2386.28125,
+              "right": 225.0625,
+              "bottom": 2422.28125,
+              "left": 65
+            },
+            {
+              "x": 65,
+              "y": 2435.875,
+              "width": 120.921875,
+              "height": 36,
+              "top": 2435.875,
+              "right": 185.921875,
+              "bottom": 2471.875,
+              "left": 65
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 64,
+            "y": -16.09375,
+            "width": 192,
+            "height": 144,
+            "top": -16.09375,
+            "right": 256,
+            "bottom": 127.90625,
+            "left": 64
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 64,
+            "y": 139.90625,
+            "width": 192,
+            "height": 260.34375,
+            "top": 139.90625,
+            "right": 256,
+            "bottom": 400.25,
+            "left": 64
+          }
+        },
+        {
+          "text": "Step 1 of 3. All questions are optional.",
+          "rect": {
+            "x": 65,
+            "y": 672.4375,
+            "width": 190,
+            "height": 130.171875,
+            "top": 672.4375,
+            "right": 255,
+            "bottom": 802.609375,
+            "left": 65
+          }
+        },
+        {
+          "text": "What are you planning?",
+          "rect": {
+            "x": 65,
+            "y": 826.609375,
+            "width": 190,
+            "height": 142.546875,
+            "top": 826.609375,
+            "right": 255,
+            "bottom": 969.15625,
+            "left": 65
+          }
+        },
+        {
+          "text": "Retirement",
+          "rect": {
+            "x": 118,
+            "y": 1020.359375,
+            "width": 156.5,
+            "height": 49.59375,
+            "top": 1020.359375,
+            "right": 274.5,
+            "bottom": 1069.953125,
+            "left": 118
+          }
+        },
+        {
+          "text": "Home & mortgage",
+          "rect": {
+            "x": 118,
+            "y": 1118.15625,
+            "width": 161.890625,
+            "height": 99.1875,
+            "top": 1118.15625,
+            "right": 279.890625,
+            "bottom": 1217.34375,
+            "left": 118
+          }
+        },
+        {
+          "text": "Budget & debt",
+          "rect": {
+            "x": 118,
+            "y": 1259.34375,
+            "width": 161.890625,
+            "height": 99.1875,
+            "top": 1259.34375,
+            "right": 279.890625,
+            "bottom": 1358.53125,
+            "left": 118
+          }
+        },
+        {
+          "text": "Investing",
+          "rect": {
+            "x": 118,
+            "y": 1406.734375,
+            "width": 128.078125,
+            "height": 49.59375,
+            "top": 1406.734375,
+            "right": 246.078125,
+            "bottom": 1456.328125,
+            "left": 118
+          }
+        },
+        {
+          "text": "Tax preparation",
+          "rect": {
+            "x": 118,
+            "y": 1504.53125,
+            "width": 161.890625,
+            "height": 99.1875,
+            "top": 1504.53125,
+            "right": 279.890625,
+            "bottom": 1603.71875,
+            "left": 118
+          }
+        },
+        {
+          "text": "Pay & work",
+          "rect": {
+            "x": 118,
+            "y": 1651.921875,
+            "width": 161.828125,
+            "height": 49.59375,
+            "top": 1651.921875,
+            "right": 279.828125,
+            "bottom": 1701.515625,
+            "left": 118
+          }
+        },
+        {
+          "text": "Travel planning",
+          "rect": {
+            "x": 118,
+            "y": 1749.71875,
+            "width": 161.890625,
+            "height": 99.1875,
+            "top": 1749.71875,
+            "right": 279.890625,
+            "bottom": 1848.90625,
+            "left": 118
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 65,
+            "y": 2511.46875,
+            "width": 190,
+            "height": 216.953125,
+            "top": 2511.46875,
+            "right": 255,
+            "bottom": 2728.421875,
+            "left": 65
+          }
+        }
+      ]
+    },
+    {
+      "state": "text-200-results",
+      "width": 320,
+      "scrollWidth": 320,
+      "section": {
+        "x": 0,
+        "y": -578.09375,
+        "width": 320,
+        "height": 2676.140625,
+        "top": -578.09375,
+        "right": 320,
+        "bottom": 2098.046875,
+        "left": 0
+      },
+      "controls": [
+        {
+          "name": "Get started",
+          "rect": {
+            "x": 64,
+            "y": 6.25,
+            "width": 192,
+            "height": 151.1875,
+            "top": 6.25,
+            "right": 256,
+            "bottom": 157.4375,
+            "left": 64
+          },
+          "glyphs": [
+            {
+              "x": 97.328125,
+              "y": 38.25,
+              "width": 53.34375,
+              "height": 36,
+              "top": 38.25,
+              "right": 150.671875,
+              "bottom": 74.25,
+              "left": 97.328125
+            },
+            {
+              "x": 70.65625,
+              "y": 87.84375,
+              "width": 106.703125,
+              "height": 36,
+              "top": 87.84375,
+              "right": 177.359375,
+              "bottom": 123.84375,
+              "left": 70.65625
+            }
+          ]
+        },
+        {
+          "name": "Back",
+          "rect": {
+            "x": 65,
+            "y": 1300.125,
+            "width": 144.5,
+            "height": 101.59375,
+            "top": 1300.125,
+            "right": 209.5,
+            "bottom": 1401.71875,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 99,
+              "y": 1332.125,
+              "width": 76.5,
+              "height": 36,
+              "top": 1332.125,
+              "right": 175.5,
+              "bottom": 1368.125,
+              "left": 99
+            }
+          ]
+        },
+        {
+          "name": "Restart",
+          "rect": {
+            "x": 65,
+            "y": 1417.71875,
+            "width": 178.265625,
+            "height": 101.59375,
+            "top": 1417.71875,
+            "right": 243.265625,
+            "bottom": 1519.3125,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 99,
+              "y": 1449.71875,
+              "width": 110.265625,
+              "height": 36,
+              "top": 1449.71875,
+              "right": 209.265625,
+              "bottom": 1485.71875,
+              "left": 99
+            }
+          ]
+        },
+        {
+          "name": "Close",
+          "rect": {
+            "x": 65,
+            "y": 1535.3125,
+            "width": 155.140625,
+            "height": 101.59375,
+            "top": 1535.3125,
+            "right": 220.140625,
+            "bottom": 1636.90625,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 99,
+              "y": 1567.3125,
+              "width": 87.140625,
+              "height": 36,
+              "top": 1567.3125,
+              "right": 186.140625,
+              "bottom": 1603.3125,
+              "left": 99
+            }
+          ]
+        },
+        {
+          "name": "Browse all 22 tools",
+          "rect": {
+            "x": 65,
+            "y": 1668.90625,
+            "width": 190,
+            "height": 99.1875,
+            "top": 1668.90625,
+            "right": 255,
+            "bottom": 1768.09375,
+            "left": 65
+          },
+          "glyphs": [
+            {
+              "x": 65,
+              "y": 1674.90625,
+              "width": 160.0625,
+              "height": 36,
+              "top": 1674.90625,
+              "right": 225.0625,
+              "bottom": 1710.90625,
+              "left": 65
+            },
+            {
+              "x": 65,
+              "y": 1724.5,
+              "width": 120.921875,
+              "height": 36,
+              "top": 1724.5,
+              "right": 185.921875,
+              "bottom": 1760.5,
+              "left": 65
+            }
+          ]
+        }
+      ],
+      "text": [
+        {
+          "text": "Not sure where to start?",
+          "rect": {
+            "x": 64,
+            "y": -434.09375,
+            "width": 192,
+            "height": 144,
+            "top": -434.09375,
+            "right": 256,
+            "bottom": -290.09375,
+            "left": 64
+          }
+        },
+        {
+          "text": "Answer a few quick questions and we’ll suggest tools to explore.",
+          "rect": {
+            "x": 64,
+            "y": -278.09375,
+            "width": 192,
+            "height": 260.34375,
+            "top": -278.09375,
+            "right": 256,
+            "bottom": -17.75,
+            "left": 64
+          }
+        },
+        {
+          "text": "Browse all tools to find your starting point.",
+          "rect": {
+            "x": 65,
+            "y": 254.4375,
+            "width": 190,
+            "height": 173.5625,
+            "top": 254.4375,
+            "right": 255,
+            "bottom": 428,
+            "left": 65
+          }
+        },
+        {
+          "text": "Tools to explore",
+          "rect": {
+            "x": 65,
+            "y": 452,
+            "width": 190,
+            "height": 95.03125,
+            "top": 452,
+            "right": 255,
+            "bottom": 547.03125,
+            "left": 65
+          }
+        },
+        {
+          "text": "No need to choose a goal now. Browse all 22 tools whenever you are ready.",
+          "rect": {
+            "x": 65,
+            "y": 579.03125,
+            "width": 190,
+            "height": 396.75,
+            "top": 579.03125,
+            "right": 255,
+            "bottom": 975.78125,
+            "left": 65
+          }
+        },
+        {
+          "text": "These tools provide educational estimates, not a financial recommendation.",
+          "rect": {
+            "x": 65,
+            "y": 1007.78125,
+            "width": 190,
+            "height": 260.34375,
+            "top": 1007.78125,
+            "right": 255,
+            "bottom": 1268.125,
+            "left": 65
+          }
+        },
+        {
+          "text": "Your choices aren’t saved. Close or restart to clear them.",
+          "rect": {
+            "x": 65,
+            "y": 1800.09375,
+            "width": 190,
+            "height": 216.953125,
+            "top": 1800.09375,
+            "right": 255,
+            "bottom": 2017.046875,
+            "left": 65
+          }
+        }
+      ]
+    }
+  ],
+  "backRestartClose": true,
+  "keyboardAX": true,
+  "noAnswerRequests": true,
+  "noStorageOrAnalyticsChanges": true,
+  "noJSAndFailedModuleFallback": true,
+  "canonicalActivation": true,
+  "pageErrors": [],
+  "failedResponses": [],
+  "limitations": "Inline nonmodal flow; Chromium AX/keyboard, CSS text enlargement and emulated viewports. Manual screen readers, real devices and native toolbar zoom remain Phase 8."
+}

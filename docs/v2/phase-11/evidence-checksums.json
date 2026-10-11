@@ -1,0 +1,1297 @@
+[
+  {
+    "file": "hosted/capture.log",
+    "bytes": 80,
+    "sha256": "6cb42b6797205bca340c7f9445e63ac168fce8ce2f8f3469e9744be8632fee82"
+  },
+  {
+    "file": "hosted/geometry.json",
+    "bytes": 13230,
+    "sha256": "14eeefe5b6718a6b0b8caf6bd2ce18382ffc1511e714ffc14fe1b33bffb3eb8a"
+  },
+  {
+    "file": "hosted/home-1440.jpg",
+    "bytes": 782622,
+    "sha256": "2dd4faca36639ff75f24db48f708d0de993d1982b25b8ff695f6b9f1cf5067c4"
+  },
+  {
+    "file": "hosted/home-375.jpg",
+    "bytes": 547832,
+    "sha256": "1e0e0ea37b570a3c48231133936fdf11f72ad5cd53c5f51e7b9fe142f0e5d42f"
+  },
+  {
+    "file": "hosted/home-390.jpg",
+    "bytes": 552609,
+    "sha256": "818c7bd8efdecaa36c46f672cac8bf4ef8b29d3898e65e1119e72f587e7c4ea7"
+  },
+  {
+    "file": "hosted/home-768.jpg",
+    "bytes": 615927,
+    "sha256": "d7ad855162761b2ab16e92d2fac80ccd069a091d892cbf5c93cbc71a521a1bbb"
+  },
+  {
+    "file": "hosted/hosted-http.json",
+    "bytes": 4135,
+    "sha256": "33f456ccae5af58d7f054c8ecc9b0baecd73fdaeca4c9a22f9c1301fe8e47976"
+  },
+  {
+    "file": "hosted/http.log",
+    "bytes": 114,
+    "sha256": "6b990416d45d4fb41f2f08dd2cbdba3749e8479962fded4aa7a1eec9870b491e"
+  },
+  {
+    "file": "hosted/inventory.log",
+    "bytes": 166,
+    "sha256": "17d546d17677d4853b074cf604aa07ed2451028d96d067e291619fa40c1176ea"
+  },
+  {
+    "file": "hosted/preview-review.json",
+    "bytes": 128837,
+    "sha256": "b5a70dd47d4703d9e0ac26cee1eac1180a1ec27bf7264852d507e3a147c992c2"
+  },
+  {
+    "file": "hosted/regression/v2-baseline/browser.log",
+    "bytes": 1044,
+    "sha256": "869d4f16d7c0c6dd2e606bdb3ce5f71bd54c0b73785a3c557e18591ac36a8ac1"
+  },
+  {
+    "file": "hosted/regression/v2-baseline/v2-browser-result.json",
+    "bytes": 182,
+    "sha256": "b9a0fc002dd259add500494215732fbee83c622f1c8195f05d35ea28245f505e"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/browser.json",
+    "bytes": 25463,
+    "sha256": "a2a6ca6c8f56cc8663c7dbd56d1a037b17df6e98fb1ae4ec80e93c4243beb257"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/browser.log",
+    "bytes": 199,
+    "sha256": "743a56ee13601d9c655583b7f2ff2c3ebe4c62d16f803ebbc90c23563d0288e6"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-css-zoom-200.jpg",
+    "bytes": 132839,
+    "sha256": "fd96e0a4a6ff4867c1c2628c027a5b804072a9b48abe761107ebef63db0b8ffa"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-empty-1440.jpg",
+    "bytes": 127408,
+    "sha256": "cd6447120b522abefbd5f27d19126bc948f52348ebdda97bf2c4d41c512f90bd"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-empty-1920.jpg",
+    "bytes": 140423,
+    "sha256": "73453d69d1ce1c43eead80769932eb7212e49fc20b0153584f8ac79311ba1a67"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-empty-320.jpg",
+    "bytes": 56749,
+    "sha256": "65e2ab47da2e1f35c91c122683842541e8cd7a8ed7c1b5fed558460b261984a1"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-empty-375.jpg",
+    "bytes": 68130,
+    "sha256": "576053c452f9faffafbfb4c31ec8cdf791dcc211f689933249b644a8436c049f"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-empty-390.jpg",
+    "bytes": 70150,
+    "sha256": "907976d73288abd31b6b619108644ece40b30f89c8c7589d11fd05d0173b49ca"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-empty-768.jpg",
+    "bytes": 81072,
+    "sha256": "6371817a90953a0be718e5c66537e562c06591828d873c0986c97567be40750e"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-failed-module-390.jpg",
+    "bytes": 62975,
+    "sha256": "8188c947345f81512795a55c5799ca68a7b7d4de9abe9599dd86442c25fec058"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-landscape-touch.jpg",
+    "bytes": 109841,
+    "sha256": "fbd70f0c13af6c845a20a8648a38e7fbe5a0a098f636440b40a222e98cb9027e"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-no-results-1440.jpg",
+    "bytes": 130588,
+    "sha256": "7653af957fe8c6fac1b5d8bc3ed4a6b8f4ce696bf1105c7195e043f7b606373d"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-nojs-390.jpg",
+    "bytes": 57533,
+    "sha256": "571d46c6eb3983b6748744a355fd511079113cd9c5e7903f862426ac8b27ee50"
+  },
+  {
+    "file": "hosted/regression/v2-discovery/search-results-390.jpg",
+    "bytes": 74612,
+    "sha256": "39109dda73752f6302d1143a3fc1ecd29d82078fa064d70bd34cf3065c708dcd"
+  },
+  {
+    "file": "hosted/regression/v2-featured/browser.log",
+    "bytes": 134,
+    "sha256": "0f4f939e62cf595c15702299fb00a1587c7dc89fa17708ea7ca9b632c4f12490"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-1440.jpg",
+    "bytes": 51650,
+    "sha256": "c7d604ff23273f514870e499529382938442d809080ef37ff83624b82dcaef90"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-1920.jpg",
+    "bytes": 53739,
+    "sha256": "217e1393c3b0dc2c6c8225264e4e3c69bbce2d2a13d2b03d50e9fb974fe35960"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-320.jpg",
+    "bytes": 30611,
+    "sha256": "b6c65e7970d679fb948c50bb463d0982d63350308177d5a121b43aebfc13cb4d"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-375.jpg",
+    "bytes": 32980,
+    "sha256": "eba73f60ab8c9d81cf928e463754486353ea19366e9e4e1355707fda33c5cc8e"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-390.jpg",
+    "bytes": 33288,
+    "sha256": "0a907846fb793ee936f79cc064243e0e047f34f3b2ffe03b6fb197de258451f2"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-768.jpg",
+    "bytes": 45448,
+    "sha256": "f69ae908329da638e1d1479246c9c4a8a697adf032a35a9fceba95fc26e3448e"
+  },
+  {
+    "file": "hosted/regression/v2-featured/featured-browser.json",
+    "bytes": 59251,
+    "sha256": "bc2e9107db7ca6f0e95e32a67d1387e2c6f9fb4de43e90497eb29c6a45682804"
+  },
+  {
+    "file": "hosted/regression/v2-featured/text-200-percent.jpg",
+    "bytes": 1255423,
+    "sha256": "1829dcfe2e14a0381f1aaee7cb4079fa28e835a10ef89cb9a993e0a6df3caf67"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-directory-1440.jpg",
+    "bytes": 422813,
+    "sha256": "f59620f734a10a91a99122ad04cf2beaa603d9477188e98998928771f6d005f4"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-directory-375.jpg",
+    "bytes": 353020,
+    "sha256": "3e6e94a6c1e4f968f9b4dcd834bd685cf992743a2de3cb3e2804d35ba57f8abc"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-directory-390.jpg",
+    "bytes": 357285,
+    "sha256": "bfbddcdc9e898b768876c0a5e2b15eb58d49103d116b412be8a562402521cf32"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-directory-768.jpg",
+    "bytes": 370428,
+    "sha256": "42ed5797d77faf1307b39a169ae9b7407713068d495cd239717f2ba566304f1e"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-home-1440.jpg",
+    "bytes": 618393,
+    "sha256": "7686f52d9ed156dda1ff4710a3e127a30052c4e46c23bd648e5bfada65a87d85"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-home-375.jpg",
+    "bytes": 432798,
+    "sha256": "f4aeec43ae8ed33736717257388ceca2af03da574996a4c4b7085af0ce335fc0"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-home-390.jpg",
+    "bytes": 438492,
+    "sha256": "bb65b960adc538fae43ee50e46b3f75bc7b6a9bf7a3a909a907b03cb3b7628a3"
+  },
+  {
+    "file": "hosted/regression/v2-goals/after-home-768.jpg",
+    "bytes": 486177,
+    "sha256": "80ee94cffa534532c2248208f12e5f2c763a7f842e856039c328627ad9f0b796"
+  },
+  {
+    "file": "hosted/regression/v2-goals/browser.log",
+    "bytes": 246,
+    "sha256": "10cf7ba95de304336fb2c23c5896156528ba19ee3ab1287aeeeeeef039d0cb3e"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-1440.jpg",
+    "bytes": 35382,
+    "sha256": "e352112d49f8c3a1732a1ae641e284bdd33ba8accceb7cb11866b7bdc4fb8407"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-1920.jpg",
+    "bytes": 37133,
+    "sha256": "6730e0a8c79d7d13f872f6dc4c798f0fb4cd41c0f6df580803c1d1812dfe6ec4"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-320.jpg",
+    "bytes": 22427,
+    "sha256": "42a2955ff2464584e6e0fc939ef24e2ef25828e1fda1c9746d567d88b624fd41"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-375.jpg",
+    "bytes": 21511,
+    "sha256": "8187fc0acbc6aa19fb0b425db2206addb05d9287f6cf985f6341494cb144f0a3"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-390.jpg",
+    "bytes": 20578,
+    "sha256": "37fe53ff7b303e43b45441ea227468c2c29b4c4cd36cc7f69bcd9ad8566b8af8"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-768.jpg",
+    "bytes": 29207,
+    "sha256": "f99f119caf1efecf4a008dec9b0bb9b5c784eea64098585e33619f157001f993"
+  },
+  {
+    "file": "hosted/regression/v2-goals/goals-browser.json",
+    "bytes": 44161,
+    "sha256": "c1bb1787135aed57a449dfd84213fe75e72287d6cf847fc8923172bfefc80437"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/browser.json",
+    "bytes": 71147,
+    "sha256": "40cae7b636c15ce87a074ad28a25a3dd5ac9c2621296fabbee62bcb42cf494d6"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/browser.log",
+    "bytes": 111,
+    "sha256": "c2c66b0c1392e60456636118fc460f03b5edd91b7bdd53db2d9de6fe0913e42a"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/delayed-loading.json",
+    "bytes": 4092,
+    "sha256": "08e4c0ae2ec6d40c3aabc9065e3af6fd6bdf95822a0b703ba0c03db55b0813d6"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-1440.jpg",
+    "bytes": 117249,
+    "sha256": "8e6e00f886da1036418d77b71582d8a4ae84a0e8e76fee9fc7237f15c6ab518b"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-1920.jpg",
+    "bytes": 129469,
+    "sha256": "1a8f01f8294d35b5b46ed20be076b2f7bd04f2c1aff2b0a7b05a8b7624620946"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-320.jpg",
+    "bytes": 51106,
+    "sha256": "6b6e356489b0a422a4186035db4b469f72cb84490df4cb5b1e9f73053a811309"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-375.jpg",
+    "bytes": 63173,
+    "sha256": "4ef6d4016a084eec6d4f64e9c92e7b5e92c0ca13c16032ab41b7928acd2ad9d6"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-390.jpg",
+    "bytes": 64296,
+    "sha256": "54eb728c502ac3c8fe605a094948379f7cd60910b06cc9448c29afe940cb116a"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-768.jpg",
+    "bytes": 74971,
+    "sha256": "03d2379e0301aa85ceee1066ae3d39189923b07146d9fab3cd796a2c188df3b2"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/homepage-full.jpg",
+    "bytes": 618393,
+    "sha256": "7686f52d9ed156dda1ff4710a3e127a30052c4e46c23bd648e5bfada65a87d85"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/image-font-fallback.jpg",
+    "bytes": 62815,
+    "sha256": "e290ec0b41d53743b086d5efaa480e4c1072df20e7e32d9159c4565f914fe837"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/magnification-200-percent.jpg",
+    "bytes": 100965,
+    "sha256": "12ebdc9cf08e910be46cc3593d2322933cb5e3cc2340f51dba58dc0d0fbce382"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/menu-375.jpg",
+    "bytes": 51809,
+    "sha256": "7f5c2158250e4ce8ec9e3f677e07de1d3a78b8ddaf23ca5a1325102c9452013c"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/menu-768.jpg",
+    "bytes": 62271,
+    "sha256": "1482ff24d39c4f8003dcc14874d5c7008648d039f1e4b0e09b95326ea4897ee1"
+  },
+  {
+    "file": "hosted/regression/v2-header-hero/touch-landscape-menu.jpg",
+    "bytes": 22140,
+    "sha256": "f3597e5ff6dbea0a08c22ea64fb05eda2a04db5e24b0d4bedcaf509990c17e71"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/browser.log",
+    "bytes": 599,
+    "sha256": "18c7c977f2663c1427268b594561bcc46994964dc7b001c06a1196679d378f29"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/flow-390.jpg",
+    "bytes": 56815,
+    "sha256": "88232c09494782ca662db22d0967fa6e95eff8cbaf9e8c2467d781c6d20d73c1"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/onboarding-browser.json",
+    "bytes": 173608,
+    "sha256": "7206a89a7db942a43c3f87246ff7cd104b13068a7a069081b6fe6b91e3225df5"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/panel-1440.jpg",
+    "bytes": 16621,
+    "sha256": "6075125e3053ae1ad87fe51ea07d8758173b56c7e42e35cdfbb198f1bd6185a7"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/panel-1920.jpg",
+    "bytes": 17193,
+    "sha256": "c4b467827f726b184c087dbc67bd9e98deea5300ea9a389e913f21776ffb2924"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/panel-320.jpg",
+    "bytes": 12527,
+    "sha256": "c7180433f77ef0dbf5ee6b69dbe3378e58aeca83c864c3abdc9717c1c165e57b"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/panel-375.jpg",
+    "bytes": 12779,
+    "sha256": "81a4a81381e582c8d4c6401ec296ee57bc642c74ae50e165ef59e63343573fde"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/panel-390.jpg",
+    "bytes": 13151,
+    "sha256": "fdb5e785e1da978935883c69bd2a095a910ecfe0d0eaf4e4568c7c9695aeda08"
+  },
+  {
+    "file": "hosted/regression/v2-onboarding/panel-768.jpg",
+    "bytes": 14371,
+    "sha256": "0a90ce20a5798f187bd7a11c52a3fb891b556baedc29112047773d1b7b255728"
+  },
+  {
+    "file": "hosted/regression/v2-release/browser.log",
+    "bytes": 183,
+    "sha256": "b23928d653b7832d388871081779833460d8d38ca75934019869be21b5242c9f"
+  },
+  {
+    "file": "hosted/regression/v2-release/mortgage-payments.csv",
+    "bytes": 27142,
+    "sha256": "fbbfd19847f3efaf50674939086bf6b42d503969fd995b4cdea149128df41264"
+  },
+  {
+    "file": "hosted/regression/v2-release/mortgage-yearly.csv",
+    "bytes": 1728,
+    "sha256": "d864a32d8288c5d7c65aa4a215805411f96dfc42c8ff300b7326c04710834241"
+  },
+  {
+    "file": "hosted/regression/v2-release/release-regression.json",
+    "bytes": 999,
+    "sha256": "70b57f4b0e3160e64902ae1920619078160c23f4449ad3223c14596bf6fff98f"
+  },
+  {
+    "file": "hosted/regression/v2-trust/browser.log",
+    "bytes": 470,
+    "sha256": "b68433538c84f98bc60d152a5641254dbc74a069b5694942c4f1026e20e7b2cd"
+  },
+  {
+    "file": "hosted/regression/v2-trust/homepage-1440.jpg",
+    "bytes": 149783,
+    "sha256": "56890cf2319200771b580cf5f4f641e0ebbd1c270560e769d2c1c294534ba752"
+  },
+  {
+    "file": "hosted/regression/v2-trust/homepage-390.jpg",
+    "bytes": 80866,
+    "sha256": "fdcb6b904ca213674bd4f8c9276540b787c3d5ee05ba0b28b0bd9a45a779b59b"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-1440.jpg",
+    "bytes": 11297,
+    "sha256": "bda18307a7dec799582fcb4df0527b5767ccd7c0a8e026df4bafd1e697be5e59"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-1920.jpg",
+    "bytes": 10348,
+    "sha256": "9d4e5f0fdea4f292ab9ae948a939523aa9ee8047eaf7332d2b87362fea653458"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-320.jpg",
+    "bytes": 9753,
+    "sha256": "2640e57573e9840639239f82979a1ddddc11a0b7b83060976222deb999182969"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-375.jpg",
+    "bytes": 7668,
+    "sha256": "aac0de237bdc3063d4dc117530de7281f47a29c4eb706817a0bed5d5a24f1cc5"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-390.jpg",
+    "bytes": 7979,
+    "sha256": "cc2a6feedb0fc42c3805ab169b926ee59b36fdba08847b7c1add73756a8bc5d5"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-768.jpg",
+    "bytes": 9912,
+    "sha256": "3782ac0166298a180e3bef9eb852b54903734aa3037a0c9f913b5aa75e922094"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-browser.json",
+    "bytes": 38974,
+    "sha256": "33a634eb9aabf221457307189b8d56caf5a2e0656a90e301750a1e9b75ae2908"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-css-zoom-200.jpg",
+    "bytes": 27326,
+    "sha256": "fcc3b3508d9bf5e020a08841b0526cef77ad0516f9966d04bda204d1c06cdc7f"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-nojs-forced-colors.jpg",
+    "bytes": 7440,
+    "sha256": "58623f9868d67bf58a5d242453034f86a49410c9ccbb961e9ffbcde326e4a857"
+  },
+  {
+    "file": "hosted/regression/v2-trust/trust-text-200-320.jpg",
+    "bytes": 22499,
+    "sha256": "f1aebc009a792fb428a3a2ac67c3f6c419b4f1b0aeb9c257ca17b62df356debb"
+  },
+  {
+    "file": "hosted/seo/browser.log",
+    "bytes": 110,
+    "sha256": "99a20bf2e537f9e4f0b3684b5a8c41a3782b216c890235bde1685e92c7faaaa1"
+  },
+  {
+    "file": "hosted/seo/seo-browser.json",
+    "bytes": 32199,
+    "sha256": "017723dded0563aa49f673218173ba81f98df19efad825a06422a7fe6d6cad2a"
+  },
+  {
+    "file": "hosted/seo/share-image-browser.png",
+    "bytes": 102028,
+    "sha256": "d6a50a5f09364fe1b014c9809b25f0636b524ae0d59059f29dbee69ac8afb06f"
+  },
+  {
+    "file": "hosted/viewport-1440.jpg",
+    "bytes": 143373,
+    "sha256": "e29f92c2389509dc491385649444460e3288d14cd93e270a427a6ef1a457764d"
+  },
+  {
+    "file": "hosted/viewport-375.jpg",
+    "bytes": 75740,
+    "sha256": "6c4d9fbeb82c445a55a6462f31c33c5ccef9b0680eccb95cc8f0315fb8f84ca2"
+  },
+  {
+    "file": "hosted/viewport-390.jpg",
+    "bytes": 77714,
+    "sha256": "d15d8d0f35d78a3c2c9bd0db23b39f4f1959e9108d9831a067c88d47169cc768"
+  },
+  {
+    "file": "hosted/viewport-768.jpg",
+    "bytes": 89525,
+    "sha256": "3014826af858d3f103332c0d9548e4dcc3c53542057b16d1058c5c78449cfd95"
+  },
+  {
+    "file": "site-hosted/ROUTE_CHECKLIST.md",
+    "bytes": 13796,
+    "sha256": "6bc2a2f6e763d9f1dceabf8929e137b543debc78ab56324be53bc08367efeebe"
+  },
+  {
+    "file": "site-hosted/browser.log",
+    "bytes": 843,
+    "sha256": "6be1ada673a3621463fc4856732a5db9a7ee0fc3dbdce13c20784a429f6bef11"
+  },
+  {
+    "file": "site-hosted/screenshots/about-1440-initial.jpg",
+    "bytes": 260656,
+    "sha256": "2b2366acb99a5e841a0ac5034866e87ceec0981f2c09c4fde39acf98cea2cb01"
+  },
+  {
+    "file": "site-hosted/screenshots/about-375-initial.jpg",
+    "bytes": 207728,
+    "sha256": "d45b5349c2800ace785b248728970cd89c1b05432aa81d08914345b4edca7c7b"
+  },
+  {
+    "file": "site-hosted/screenshots/about-390-initial.jpg",
+    "bytes": 208709,
+    "sha256": "c22bf3bcd0aafd29bbeade01877ffba39bf407e479a8b9e706b7231770c8fc96"
+  },
+  {
+    "file": "site-hosted/screenshots/about-390-overview.jpg",
+    "bytes": 51979,
+    "sha256": "f30dd7117ff75064d0d008bf768deb1508035773e246bcbc089741b9a9cdd68c"
+  },
+  {
+    "file": "site-hosted/screenshots/about-768-initial.jpg",
+    "bytes": 212490,
+    "sha256": "fd6d77a0fbfc58d9a21d0a3469f02f90a899fadd7144b486a39f4c7d0d2ed155"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-1440-initial.jpg",
+    "bytes": 923423,
+    "sha256": "0d3a85b60c54ec85ca1f4b80aa8f52c3a30b88e0ec5cb03d4ecdb47920db5dc1"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-1440-populated.jpg",
+    "bytes": 1014696,
+    "sha256": "e2bb49e7c775de84832ecc3cccff0a2becc87593190f45d061576866ec8a0787"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-375-initial.jpg",
+    "bytes": 865994,
+    "sha256": "2e077e5ae3ff477ca2f48583081b20a9898ab8e5ecc009eb82b94cbb65e74b4a"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-390-initial.jpg",
+    "bytes": 858039,
+    "sha256": "f9d113cd6b1617ee9ff39923e8f6801b0afc9dd2778cd81ed7aed9527dc9e149"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-390-overview.jpg",
+    "bytes": 50276,
+    "sha256": "7bf20f54599f515e3699ce7185af916ae1c1d7e012a5f953e068f9c205959b11"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-390-populated.jpg",
+    "bytes": 933457,
+    "sha256": "6cd03bcc0719eda539dcd2c7373801840a8b26766efb1dafc0db4cf544876b76"
+  },
+  {
+    "file": "site-hosted/screenshots/budget-planner-768-initial.jpg",
+    "bytes": 940020,
+    "sha256": "e295e72da3e2026b201bd5ade50b147f642590e66a069cb1fb6eb22629e9e050"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-1440-initial.jpg",
+    "bytes": 507413,
+    "sha256": "48ae619fd3c54e0b873bf8790852851d04126a165a9710f84b992cf3579d942a"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-1440-populated.jpg",
+    "bytes": 550259,
+    "sha256": "2b8cead727b225960d4175e83b3ac05bea89f0e084ef60a0015d8b1e1bcec4f5"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-375-initial.jpg",
+    "bytes": 341029,
+    "sha256": "605197de68ae2e7cbbadee02270970eab92ab0b3aa66921b057549ac05bd69a1"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-390-initial.jpg",
+    "bytes": 341117,
+    "sha256": "98f20e24f7b0a1606f8adc11bd0e25ff2df563978b4d71480a1c17f3bfc00320"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-390-overview.jpg",
+    "bytes": 54656,
+    "sha256": "fe89cfb86ec670ca70ae8b6fc2fdc8e8426d0df8fbeab0262ad4782ea7b484ff"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-390-populated.jpg",
+    "bytes": 379301,
+    "sha256": "604f109dc8dca3a93efab5a66d44ba8781401b957ba2958e7cba716941ee6a81"
+  },
+  {
+    "file": "site-hosted/screenshots/canadian-tax-checklist-768-initial.jpg",
+    "bytes": 424092,
+    "sha256": "697ce7ca074ec0347779a76511f9e296b3d80fcd5f6dfa20daa9c4577ffc40b8"
+  },
+  {
+    "file": "site-hosted/screenshots/compound-interest-calculator-390-overview.jpg",
+    "bytes": 58323,
+    "sha256": "29176fa615950ccf83e2d72f6dc51e5ffae3e92c0d04de367df42a1af27e6b8d"
+  },
+  {
+    "file": "site-hosted/screenshots/contractor-effective-hourly-rate-calculator-1440-initial.jpg",
+    "bytes": 793365,
+    "sha256": "9437aaf5a8ccae66255a1eebe3d5b60d1c3d9186a82ee2ad6cb86c2c391c03b5"
+  },
+  {
+    "file": "site-hosted/screenshots/contractor-effective-hourly-rate-calculator-375-initial.jpg",
+    "bytes": 718845,
+    "sha256": "1e6099a062df28959a8bf02c8d8504bfaf0b003308e4da5e276a661ebf7b1ae2"
+  },
+  {
+    "file": "site-hosted/screenshots/contractor-effective-hourly-rate-calculator-390-initial.jpg",
+    "bytes": 718667,
+    "sha256": "d9d6cbb8482932c90c4991834ccf2905050018fb02c2f42101fc4f58d916d98c"
+  },
+  {
+    "file": "site-hosted/screenshots/contractor-effective-hourly-rate-calculator-390-overview.jpg",
+    "bytes": 57553,
+    "sha256": "cfc9453f7c98a8aeb6224bb757e35a2cb24fad41ba06ea7b8fb302d613d38457"
+  },
+  {
+    "file": "site-hosted/screenshots/contractor-effective-hourly-rate-calculator-768-initial.jpg",
+    "bytes": 752716,
+    "sha256": "6afd83e533f0c788e108020e543b0836544ef846367da3f7a6132f342fbb2ba7"
+  },
+  {
+    "file": "site-hosted/screenshots/cpp-calculator-390-overview.jpg",
+    "bytes": 60025,
+    "sha256": "46256cb4a75900c03d61931d89c74cc10436a85f03804f7d60774fbd8a11adf0"
+  },
+  {
+    "file": "site-hosted/screenshots/credit-card-interest-calculator-390-overview.jpg",
+    "bytes": 52402,
+    "sha256": "7bdbfc72f6512964b1ffde278ea97da917e1e2c2fa10ab9d0aea213e895320e4"
+  },
+  {
+    "file": "site-hosted/screenshots/debt-payoff-calculator-1440-initial.jpg",
+    "bytes": 856756,
+    "sha256": "2bb2ce334a2bcf5ebd9e3191f9e4259d83e09d78775d5f1286f3b84b716bca5c"
+  },
+  {
+    "file": "site-hosted/screenshots/debt-payoff-calculator-375-initial.jpg",
+    "bytes": 767868,
+    "sha256": "99ec2858edf75a675b2d62c4f08d77e62f70941b2c4bba491b21750909183231"
+  },
+  {
+    "file": "site-hosted/screenshots/debt-payoff-calculator-390-initial.jpg",
+    "bytes": 773213,
+    "sha256": "5a06f701710e066ca2828467dd8fee1fbd301d59fb64b9f2b6d005356b71cb78"
+  },
+  {
+    "file": "site-hosted/screenshots/debt-payoff-calculator-390-overview.jpg",
+    "bytes": 51452,
+    "sha256": "283e970577e6f03a0a40d729fbe220b9c849cf164c51aa5d00565603700de4a3"
+  },
+  {
+    "file": "site-hosted/screenshots/debt-payoff-calculator-768-initial.jpg",
+    "bytes": 844578,
+    "sha256": "ef0ce8c052f0118f2daf08a8420aae0d411aa92dcbdbf57975c4ebf8c7e51a08"
+  },
+  {
+    "file": "site-hosted/screenshots/debt-to-income-ratio-calculator-390-overview.jpg",
+    "bytes": 56627,
+    "sha256": "5a2e907f63fb96f160cf49064e3225555d4a1b0b225a57da86d21596bf98a9a7"
+  },
+  {
+    "file": "site-hosted/screenshots/emergency-fund-calculator-1440-initial.jpg",
+    "bytes": 450974,
+    "sha256": "550d812d86900d7a77a9f3d00ad098697e8d5e0d862f37518c52d874dd2230f6"
+  },
+  {
+    "file": "site-hosted/screenshots/emergency-fund-calculator-375-initial.jpg",
+    "bytes": 382847,
+    "sha256": "3acdb2b3b5669e03fb0fd5dd329852c05ee11990caf7a7389c7ba4b26520e25f"
+  },
+  {
+    "file": "site-hosted/screenshots/emergency-fund-calculator-390-initial.jpg",
+    "bytes": 385994,
+    "sha256": "9ffb2c16917db6ac44e5562b380780cad8be8e88ec29a047e3eff4d19c3dcb68"
+  },
+  {
+    "file": "site-hosted/screenshots/emergency-fund-calculator-390-overview.jpg",
+    "bytes": 46906,
+    "sha256": "50f0138181518f10868a96fc1a60fb72a992844996ace85a4cb2ab751062908c"
+  },
+  {
+    "file": "site-hosted/screenshots/emergency-fund-calculator-768-initial.jpg",
+    "bytes": 429848,
+    "sha256": "a0d11ffe05ac8d768640de1969952821bd88d644639fe180480783e282710035"
+  },
+  {
+    "file": "site-hosted/screenshots/fire-calculator-390-overview.jpg",
+    "bytes": 51866,
+    "sha256": "48b990122d11ae1c5193f5c031636d28905dc49cfb42cebb712a1e0dc87078b1"
+  },
+  {
+    "file": "site-hosted/screenshots/home-1440-initial.jpg",
+    "bytes": 567091,
+    "sha256": "67609f8242c2dd0f4495a8b73e681456c5a920c190ff152255e0820aa1ad5c5f"
+  },
+  {
+    "file": "site-hosted/screenshots/home-375-initial.jpg",
+    "bytes": 394535,
+    "sha256": "7661be0766c081d8bf51a2fe0c87b070f771d3843484197353271772d133f067"
+  },
+  {
+    "file": "site-hosted/screenshots/home-390-dark.jpg",
+    "bytes": 398414,
+    "sha256": "edcf63441c3d60eeac7a9cd1da9aa514ae14b39cfba2c9036706e9cf9b54cc9a"
+  },
+  {
+    "file": "site-hosted/screenshots/home-390-forced-colors.jpg",
+    "bytes": 495656,
+    "sha256": "90d1b70e0f4f3d51bbd6b09f3ec140a52e64a2403b101dfb77c5ea6da89933b0"
+  },
+  {
+    "file": "site-hosted/screenshots/home-390-initial.jpg",
+    "bytes": 398414,
+    "sha256": "edcf63441c3d60eeac7a9cd1da9aa514ae14b39cfba2c9036706e9cf9b54cc9a"
+  },
+  {
+    "file": "site-hosted/screenshots/home-390-open-menu.jpg",
+    "bytes": 386961,
+    "sha256": "1b671ecff08dcf9331a1dc2be44c32f0e5f94f450f6551c166e12c836e4b5f44"
+  },
+  {
+    "file": "site-hosted/screenshots/home-390-overview.jpg",
+    "bytes": 56274,
+    "sha256": "66f3e27a7b2ee5f31eceb9a09469aa7c30112b21d3fd9f7f3bcb63c56909fc3d"
+  },
+  {
+    "file": "site-hosted/screenshots/home-768-initial.jpg",
+    "bytes": 444358,
+    "sha256": "6f2406caffba6497d29dd689b0d3803f9ddb660d527ae856a90bbd40f72effd4"
+  },
+  {
+    "file": "site-hosted/screenshots/house-affordability-calculator-390-overview.jpg",
+    "bytes": 55608,
+    "sha256": "b8cc2fd442f063f1147df28f791ce214a0a6d0d193b68ea5b14635afa40f6b5b"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-1440-initial.jpg",
+    "bytes": 1023984,
+    "sha256": "447cc98c02584ea0503ca32f1815f89caddc52420c731ca35e5b4e2484035075"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-1440-populated.jpg",
+    "bytes": 1026456,
+    "sha256": "c787bbf04045a99b062eda862e72999bbcd6bf1617dcb096acc5a3fdf48bdc95"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-375-initial.jpg",
+    "bytes": 934359,
+    "sha256": "5040980736794f91ef1c36a61c61c15693c3abf723904f47c52736ce7eee8dea"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-390-initial.jpg",
+    "bytes": 953273,
+    "sha256": "9a74a0f6096f64fa6ca786d94a6ebd08a3ed4cdedd6eb16d5b51c62afd48ed23"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-390-overview.jpg",
+    "bytes": 53244,
+    "sha256": "ac9adc9dae77ee950093562d436d93efc5e79a13dc9677deb6f5484746962efc"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-390-populated.jpg",
+    "bytes": 951699,
+    "sha256": "5aee6924e944f2c1e1900e67f9e37eb091da6d4d8244e3bad178a5a889737cee"
+  },
+  {
+    "file": "site-hosted/screenshots/investment-fee-calculator-768-initial.jpg",
+    "bytes": 996764,
+    "sha256": "2649efa24c64b4907a1e9469942596831d2149543a84401b2d75eb2f07a84def"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--budget-to-cash-flow-plan-390-overview.jpg",
+    "bytes": 60595,
+    "sha256": "56d9813c57f0f6e8184d14fe7d2754d871a8c733a66055ce932f28ad9117010d"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--compound-interest-and-investment-fees-390-overview.jpg",
+    "bytes": 50354,
+    "sha256": "7f86879543f127217d6a15ec2cff968d671625e7febdc541aecf08294f4c0f43"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--cpp-basics-390-overview.jpg",
+    "bytes": 45199,
+    "sha256": "e9d6976a8bc9bd9e123f3f236a02193ffeda6264d9fb659a665f37a20ce6dd97"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--credit-card-interest-and-payoff-390-overview.jpg",
+    "bytes": 50624,
+    "sha256": "fae96e100231f4e1f06c6c77eea427d3713ea00202f715407eb4f6481d47d70c"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--debt-snowball-vs-avalanche-390-overview.jpg",
+    "bytes": 48908,
+    "sha256": "c0dda37a3a9bd7cd82d01eea4a52d1c19163e4a23ca6c63ecb8eeb18ae30d727"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--emergency-fund-and-savings-goals-390-overview.jpg",
+    "bytes": 51511,
+    "sha256": "acec0ad6c75c000e722152103807074792c6b80fa2e3ae8227cb72f478ff1a42"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--fire-explained-390-overview.jpg",
+    "bytes": 44795,
+    "sha256": "77ae83b10e757b0479591c2f7b8143f4080af00efcb2f68790839fcb35a5ef45"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--loan-payments-and-amortization-390-overview.jpg",
+    "bytes": 46946,
+    "sha256": "2e20bac9b1b9cd4ee765c954b6ed7c8393d286de079e4b9596ccd9029793e5fd"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--monthly-budgeting-and-cash-flow-390-overview.jpg",
+    "bytes": 49218,
+    "sha256": "849899a79a466a159ae08866ca3408688e45c3584e4167e1c7811474b8f67ebe"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-1440-initial.jpg",
+    "bytes": 271836,
+    "sha256": "8e7637c19f431a763902d39b23b6fee51da6bec5edebeba8fef954ba45a5739e"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-375-initial.jpg",
+    "bytes": 224913,
+    "sha256": "7938ab1e1b01ac778c9cecc92a0dd0e044f53bd1d413453767d942c3d6879720"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-390-dark.jpg",
+    "bytes": 225072,
+    "sha256": "cc767be482fb6ae2e81af874233050dd0425fbbaf6dc46bc31ef019d30650eac"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-390-forced-colors.jpg",
+    "bytes": 287508,
+    "sha256": "4ab06e84e1563be970a5da20871cff5e5135eff9fac8cd6a93a87b6c374f92c0"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-390-initial.jpg",
+    "bytes": 225072,
+    "sha256": "cc767be482fb6ae2e81af874233050dd0425fbbaf6dc46bc31ef019d30650eac"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-390-overview.jpg",
+    "bytes": 51349,
+    "sha256": "b69d4addbdc0a56210c99882a6f0aa45e447a74cb33d05eb3892cb6f9e5288f1"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-affordability-canada-768-initial.jpg",
+    "bytes": 229406,
+    "sha256": "9287437b1a9038412ea35269d638ad17617820348a86495ca928b6233e658b06"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-costs-beyond-the-payment-390-overview.jpg",
+    "bytes": 50958,
+    "sha256": "78545287dc09ff0f62d124ebfa27e7b1ca1f5da589a2e109bafaed1cc3f6a7ba"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--mortgage-prepayment-vs-investing-390-overview.jpg",
+    "bytes": 51652,
+    "sha256": "2ce121c081aefeaafd9edb4439b62bc660a942aabf50a0d97125cfcaa9074aae"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--net-worth-basics-390-overview.jpg",
+    "bytes": 45274,
+    "sha256": "e8e579d148673239a69a56220530c003d0316aad97784a163b06fa8b77bf2849"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--rent-vs-buy-canada-390-overview.jpg",
+    "bytes": 49683,
+    "sha256": "4560a396957cbf3f4d26929c76b83886d5637475bd457d04ccd9cf1795b44d4b"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--retirement-planning-basics-1440-initial.jpg",
+    "bytes": 129350,
+    "sha256": "d70e971fdaaf8d8f859f0525aee7dfd57a2e52d7ed1fb0398444855d0c54a60d"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--retirement-planning-basics-375-initial.jpg",
+    "bytes": 93170,
+    "sha256": "f53d69e0c6dc95e09815bc54dba18872b680c47b8a88a38118b0d9652c3bf94c"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--retirement-planning-basics-390-initial.jpg",
+    "bytes": 94194,
+    "sha256": "64cbcadc5768575255607f5ecfd39a2c2b3f9ea6ac64367e1cdf7d773650a7b9"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--retirement-planning-basics-390-overview.jpg",
+    "bytes": 47163,
+    "sha256": "73f319a329bafc1c5e8b256625ec0647b484fc7209a3bcc41f7535b43a25d923"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--retirement-planning-basics-768-initial.jpg",
+    "bytes": 97361,
+    "sha256": "979536999db785c5186e198dbc3d61fa326171e08b98702b138bdf7824740df0"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--rrsp-vs-tfsa-basics-390-overview.jpg",
+    "bytes": 45858,
+    "sha256": "d2f9ebb763d743b7461428003dbe0ebc2278b1558861241d04e6a3d889544f18"
+  },
+  {
+    "file": "site-hosted/screenshots/learn--travel-budget-planning-basics-390-overview.jpg",
+    "bytes": 45001,
+    "sha256": "d4f9a91658497fd96dfadfe125060471f39ac4d1ae0152ea2720ddd77b2e214b"
+  },
+  {
+    "file": "site-hosted/screenshots/learn-1440-initial.jpg",
+    "bytes": 431022,
+    "sha256": "42202747234a4ec128e78db229b1278cf5dca7913816ae088948c0679d2bdc91"
+  },
+  {
+    "file": "site-hosted/screenshots/learn-375-initial.jpg",
+    "bytes": 342178,
+    "sha256": "4b5ea26526c6f3aca535ea21ffb0ba765a039ae290704729eabda73b6437d24c"
+  },
+  {
+    "file": "site-hosted/screenshots/learn-390-initial.jpg",
+    "bytes": 343755,
+    "sha256": "f58c5e71d1133a3f231809561506c12bc2cecd02bca8ab91e823c98586f83428"
+  },
+  {
+    "file": "site-hosted/screenshots/learn-390-overview.jpg",
+    "bytes": 51792,
+    "sha256": "1bfd4aff4cbff45080ccd3554b54b667b60a326f6b417f8b5f123de75319c208"
+  },
+  {
+    "file": "site-hosted/screenshots/learn-768-initial.jpg",
+    "bytes": 351745,
+    "sha256": "21c93e3d6c569b3baea529a6c154c92f7100dfe9175893a1a8ce746c5fbf68d1"
+  },
+  {
+    "file": "site-hosted/screenshots/loan-calculator-390-overview.jpg",
+    "bytes": 52623,
+    "sha256": "fe54b9c48b4e7248b6dbc6119ee370bab031ee4099749178d1fec18b15bdde87"
+  },
+  {
+    "file": "site-hosted/screenshots/methodology-1440-initial.jpg",
+    "bytes": 253203,
+    "sha256": "6eb08fdf8727f7b5bab410d4a294cb69250874ceba986731506539c63400544c"
+  },
+  {
+    "file": "site-hosted/screenshots/methodology-375-initial.jpg",
+    "bytes": 204566,
+    "sha256": "8e8ecb87b24f2ef9e7f54c36d80cdd7bd2b076c1c7074525d425a8d8337d310c"
+  },
+  {
+    "file": "site-hosted/screenshots/methodology-390-initial.jpg",
+    "bytes": 202268,
+    "sha256": "2fc6ae91b2fff280ae4932016f2053ffd6824dba5794710280a90d668cc3968e"
+  },
+  {
+    "file": "site-hosted/screenshots/methodology-390-overview.jpg",
+    "bytes": 54074,
+    "sha256": "ac3cd12ff04de24c4302b98aab6315a09854c666fe04af92c6b163d70350e571"
+  },
+  {
+    "file": "site-hosted/screenshots/methodology-768-initial.jpg",
+    "bytes": 206144,
+    "sha256": "fe84446f59d774978acca91dbb783d2799f00e3aedcf20ab09c5a274868296d0"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-1440-initial.jpg",
+    "bytes": 1045166,
+    "sha256": "8c35e59396aca36b5fd1ef9cfd17bec16c59b70c693ef363327ef222e3600c40"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-1440-populated.jpg",
+    "bytes": 1047265,
+    "sha256": "a13afab1372e1df557a7d6b02945bd80ab2982706c0b7bf3037a0cc7cbb61a53"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-375-initial.jpg",
+    "bytes": 986075,
+    "sha256": "7907f12fa5f1703e9943d78a8903f5ae0b1098aa32340642ddf46c51d81c955a"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-390-dark.jpg",
+    "bytes": 988526,
+    "sha256": "4e1c56c2c94d19d3deb9d7094c71452d7de8838a7a0226298c12d049e6871005"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-390-forced-colors.jpg",
+    "bytes": 1147447,
+    "sha256": "e6b8e769d356a2306f8464ebeed4dc66d1369c4db8aabe32ed7c3a0c36a7d773"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-390-initial.jpg",
+    "bytes": 988526,
+    "sha256": "4e1c56c2c94d19d3deb9d7094c71452d7de8838a7a0226298c12d049e6871005"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-390-overview.jpg",
+    "bytes": 55177,
+    "sha256": "2e538a0efb35cb7dfc4aa12abdd0f2f04ec454c8afa8fb418717c2ce4a247d1d"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-390-populated.jpg",
+    "bytes": 989760,
+    "sha256": "a2e862dac702fe297073d0d30731dbe55dc60afe2cd6118f07f755e260015bca"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-calculator-768-initial.jpg",
+    "bytes": 1001440,
+    "sha256": "9797671bfe4bbb07668cfc69390194a90b4ba36861203a45fa70c2de58c1e887"
+  },
+  {
+    "file": "site-hosted/screenshots/mortgage-paydown-vs-invest-calculator-390-overview.jpg",
+    "bytes": 56963,
+    "sha256": "57b3fd703976f8aae3302e14f44a4bed93a0100caa2c20d7b02c20aae7ce5996"
+  },
+  {
+    "file": "site-hosted/screenshots/net-worth-calculator-390-overview.jpg",
+    "bytes": 57634,
+    "sha256": "e61b016ca8837c3793ed24aff16f9c6d9a9af53b86f3ea454c84a1f93da34466"
+  },
+  {
+    "file": "site-hosted/screenshots/privacy-1440-initial.jpg",
+    "bytes": 163010,
+    "sha256": "fe8b4c2ea5f211f7179f4d7b89b0d45554bd8e3d17a1190c0825c5383a1b6d21"
+  },
+  {
+    "file": "site-hosted/screenshots/privacy-375-initial.jpg",
+    "bytes": 125880,
+    "sha256": "80948c2e12029835c26fabb05d1e50c44f07ec385cb5d72a276744b9c9fc20f1"
+  },
+  {
+    "file": "site-hosted/screenshots/privacy-390-initial.jpg",
+    "bytes": 126594,
+    "sha256": "6f5c4880c57fc79db186af9e47eb4f68f15c0ffad059b74e6db6dd6cd82dd684"
+  },
+  {
+    "file": "site-hosted/screenshots/privacy-390-overview.jpg",
+    "bytes": 49697,
+    "sha256": "aa897cc03288fa321602133582b840258824f288e0f9e40a8fe1da62b22db9b5"
+  },
+  {
+    "file": "site-hosted/screenshots/privacy-768-initial.jpg",
+    "bytes": 131250,
+    "sha256": "7ae7cae17de62afbaf2618676cb5248358cff73348d256d302b317efff71011e"
+  },
+  {
+    "file": "site-hosted/screenshots/rent-vs-buy-calculator-390-overview.jpg",
+    "bytes": 55700,
+    "sha256": "2cb8ebe3c2cd88eca427150f152cc7263dca4605892041fd174b2cf06686ead5"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--404-1440-initial.jpg",
+    "bytes": 309633,
+    "sha256": "3fcaa0af62c6b248c307d32b802e2803f5b686d23deb14ea07177c5190ac61a5"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--404-375-initial.jpg",
+    "bytes": 253074,
+    "sha256": "5c0e4bd337d01e6d3ab6213b264899c4b9d2e7fb6470856207feea43ba87b7d1"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--404-390-initial.jpg",
+    "bytes": 255491,
+    "sha256": "7779c0b19ff8fdaf8f44c344d0cd7eb136f03262b36e12d5b9c2cab1c6324f88"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--404-390-overview.jpg",
+    "bytes": 61442,
+    "sha256": "4181f70a3e9469d4a95f6bf9d624900385deadaf3a22f2ff33d17cd20cf0d098"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--404-768-initial.jpg",
+    "bytes": 269273,
+    "sha256": "5f5332f842d7b2ec02f8e70fffd7fd0facf5ad08f399f8dfa0a2115659ebb986"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--canadian-retirement-income-calculator-1440-initial.jpg",
+    "bytes": 167149,
+    "sha256": "54400d498a3141684ebdd6ac4559aee81c4380135a1b1259699beb336a14b831"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--canadian-retirement-income-calculator-375-initial.jpg",
+    "bytes": 142573,
+    "sha256": "3d43621a207f80c1756a11fb490ae722b612b4bcdea702fb5105e65f8d7ebf6b"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--canadian-retirement-income-calculator-390-initial.jpg",
+    "bytes": 143424,
+    "sha256": "9f427f5685b6e9a41b9949997c95e9f50672a7aaffb53a91a4768892a456bed5"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--canadian-retirement-income-calculator-390-overview.jpg",
+    "bytes": 79260,
+    "sha256": "1435584b1713eeed7c58284601cd75f779e4031738078fc2c314e7405991da7a"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--canadian-retirement-income-calculator-768-initial.jpg",
+    "bytes": 152902,
+    "sha256": "83a7d3687011c7fcf15b6be5cbf6fb3f752c799c7336c07c446837517d6cf286"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--cpp-timing-calculator-canada-390-overview.jpg",
+    "bytes": 73208,
+    "sha256": "4525a5f246ae0a080d45f1492cdc9575ffb39263382730a62699050b3dcb37d5"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--oas-clawback-calculator-390-overview.jpg",
+    "bytes": 68915,
+    "sha256": "fccb3c5e167671d9745e93cd63a2a4ee4e230f72a1bbd459807bfe587774fb3b"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--retirement-tax-calculator-canada-390-overview.jpg",
+    "bytes": 68241,
+    "sha256": "887d5d4c3956a43bf3c7d19d0198d4dfffec1e694e0b84aac890a8a57eacb3cb"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--rrif-minimum-withdrawal-calculator-390-overview.jpg",
+    "bytes": 70729,
+    "sha256": "ebbff23e6fa9d01c62f97061fc08ae20cbede5140351de64290e3d1c45ac6e35"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--rrif-withdrawal-calculator-390-overview.jpg",
+    "bytes": 69186,
+    "sha256": "5d57fe1314f842c8fa145fd1239056b2e4d3aeccbd0e0b20caa0b5c4702021f7"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner--rrsp-withdrawal-strategy-canada-390-overview.jpg",
+    "bytes": 68471,
+    "sha256": "c1534d9122f02d5af8e6d71189f5157672c936e1dd6d4c35b8b2c5db0b617d4c"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-1440-initial.jpg",
+    "bytes": 309633,
+    "sha256": "3fcaa0af62c6b248c307d32b802e2803f5b686d23deb14ea07177c5190ac61a5"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-1440-populated.jpg",
+    "bytes": 963841,
+    "sha256": "8fe9a2c123d994f0636d280c57253d087634bd771f425594c3a551bc579fb8eb"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-375-initial.jpg",
+    "bytes": 253074,
+    "sha256": "5c0e4bd337d01e6d3ab6213b264899c4b9d2e7fb6470856207feea43ba87b7d1"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-390-initial.jpg",
+    "bytes": 255491,
+    "sha256": "7779c0b19ff8fdaf8f44c344d0cd7eb136f03262b36e12d5b9c2cab1c6324f88"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-390-overview.jpg",
+    "bytes": 61442,
+    "sha256": "4181f70a3e9469d4a95f6bf9d624900385deadaf3a22f2ff33d17cd20cf0d098"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-390-populated.jpg",
+    "bytes": 770887,
+    "sha256": "8d77386c32cb606dde3ed43c95861f35177fe714a6746a1f8f0808754606995b"
+  },
+  {
+    "file": "site-hosted/screenshots/retirement-planner-768-initial.jpg",
+    "bytes": 269273,
+    "sha256": "5f5332f842d7b2ec02f8e70fffd7fd0facf5ad08f399f8dfa0a2115659ebb986"
+  },
+  {
+    "file": "site-hosted/screenshots/rrsp-vs-tfsa-calculator-390-overview.jpg",
+    "bytes": 62252,
+    "sha256": "c5e86eb53569b4a92d89fdae6029f76762cb94a0211c3d50f598ceaefd713b8c"
+  },
+  {
+    "file": "site-hosted/screenshots/savings-goal-calculator-390-overview.jpg",
+    "bytes": 55537,
+    "sha256": "f1956089b2d1479a650b0a973b49fd25264956dfd96104da39b4c3099e976ada"
+  },
+  {
+    "file": "site-hosted/screenshots/support-1440-initial.jpg",
+    "bytes": 182533,
+    "sha256": "79d0dcee5d0ae4b0116f80b324c0f26b5de40240807e2c2abc235211cb90f75d"
+  },
+  {
+    "file": "site-hosted/screenshots/support-375-initial.jpg",
+    "bytes": 131537,
+    "sha256": "ec059eeac67968ac38aa169c3325f9fe182e8598235ef8691fb9d43febf376da"
+  },
+  {
+    "file": "site-hosted/screenshots/support-390-initial.jpg",
+    "bytes": 131924,
+    "sha256": "e78b582cd740a7e38abf4e175876baf428919fd474a40102f17a105ece695b4a"
+  },
+  {
+    "file": "site-hosted/screenshots/support-390-overview.jpg",
+    "bytes": 47682,
+    "sha256": "70504fc5bf3c0b1a90c537021e14b96377d5b5669b7afabf0037273d03f2b573"
+  },
+  {
+    "file": "site-hosted/screenshots/support-768-initial.jpg",
+    "bytes": 137188,
+    "sha256": "c1c545e79689b826fc9d288412d2ea1f921ff74e45a74ba951de14b7f8d606ff"
+  },
+  {
+    "file": "site-hosted/screenshots/take-home-pay-calculator-390-overview.jpg",
+    "bytes": 54466,
+    "sha256": "a0f683cfe71aefa73b97a4a8221eee032fe2ea5909d039dff9c9b81e0cb69dcc"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-1440-initial.jpg",
+    "bytes": 388055,
+    "sha256": "947a227e722d51db7bebbb277302f778d359fa0b370d0109b270d15bed64ef52"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-375-initial.jpg",
+    "bytes": 320906,
+    "sha256": "fcaf1bc7e2006ddb880920f621bacfe372d47ff7826f18c50b985b4346d0f462"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-390-dark.jpg",
+    "bytes": 324609,
+    "sha256": "49e1ae65edbd3a795fc1987f9fb964dfbaa40fbd4552dc8c50211ecc120697b2"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-390-forced-colors.jpg",
+    "bytes": 405761,
+    "sha256": "441a589c7ae34e431c0206d2e6e4a4efebab68f1e29a66b16bcfe36a23714446"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-390-initial.jpg",
+    "bytes": 324609,
+    "sha256": "49e1ae65edbd3a795fc1987f9fb964dfbaa40fbd4552dc8c50211ecc120697b2"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-390-overview.jpg",
+    "bytes": 43617,
+    "sha256": "8c428a7e6ee7481f873261eebab38029e712f90f5ce1693f41e40b082452dce2"
+  },
+  {
+    "file": "site-hosted/screenshots/tools-768-initial.jpg",
+    "bytes": 339728,
+    "sha256": "58dcb695e69bdab673a0d29f7f871f4502f4e74fbd6d24aad55e067efae387d0"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-1440-initial.jpg",
+    "bytes": 56459,
+    "sha256": "9193f8d845e86db014b1e254013d9f00a8ba48540f010de7264bd3211f1165a6"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-1440-populated.jpg",
+    "bytes": 364972,
+    "sha256": "e925c3d7b41af20c6ed967cfef0416d7f0fd7f6c727ab65890c457cb0af1d46f"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-375-initial.jpg",
+    "bytes": 38491,
+    "sha256": "b8dff05839f8f6af3aaaa103eef809b1bef97ce3b6a122622a8a4961f1896a4a"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-390-initial.jpg",
+    "bytes": 39075,
+    "sha256": "0a80e451d85449970f8677573d61b6d9e54032d3d87bd86079776b1cbad14b88"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-390-overview.jpg",
+    "bytes": 39075,
+    "sha256": "0a80e451d85449970f8677573d61b6d9e54032d3d87bd86079776b1cbad14b88"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-390-populated.jpg",
+    "bytes": 317599,
+    "sha256": "64b0de1bcb1c41d52fab0ee8c810f5ddac1085ead990fd34c357e396e810c372"
+  },
+  {
+    "file": "site-hosted/screenshots/travel-planner-768-initial.jpg",
+    "bytes": 47639,
+    "sha256": "50df4d360df7106ab22c8c43f97ed521ceb360e2288c743371c1021fb6d6b32d"
+  },
+  {
+    "file": "site-hosted/site-inventory.json",
+    "bytes": 686160,
+    "sha256": "372bb8046ef2f030f6294e4dd3e51fd66966864962fac2fc8c42e57ef71dce47"
+  },
+  {
+    "file": "site-hosted/source-inventory.log",
+    "bytes": 281,
+    "sha256": "05ded8aeef1d5053d26f8aaa76054ae80bca903eaff6c526b5424a9dda4164ca"
+  },
+  {
+    "file": "site-hosted/visual-inventory.json",
+    "bytes": 369782,
+    "sha256": "689129db89776b8349fe6daa2ddc850b762748e6a02062211ac08bfe4bcd9c42"
+  }
+]

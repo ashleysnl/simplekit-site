@@ -1,0 +1,542 @@
+[
+  {
+    "run": "run-1.json",
+    "lighthouseVersion": "12.8.2",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "settings": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": [
+        "*googletagmanager.com*",
+        "*google-analytics.com*"
+      ],
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "performance": 91.0,
+    "accessibility": 100,
+    "lcp_ms": 2705.6211000000003,
+    "cls": 0.1125110288543609,
+    "render_blocking": {
+      "type": "opportunity",
+      "headings": [
+        {
+          "key": "url",
+          "valueType": "url",
+          "label": "URL"
+        },
+        {
+          "key": "totalBytes",
+          "valueType": "bytes",
+          "label": "Transfer Size"
+        },
+        {
+          "key": "wastedMs",
+          "valueType": "timespanMs",
+          "label": "Duration"
+        }
+      ],
+      "items": [
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/goals.css",
+          "totalBytes": 4981,
+          "wastedMs": 452
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/featured.css",
+          "totalBytes": 2576,
+          "wastedMs": 152
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/onboarding.css",
+          "totalBytes": 3856,
+          "wastedMs": 152
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/trust.css",
+          "totalBytes": 2624,
+          "wastedMs": 302
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/discovery.css",
+          "totalBytes": 5351,
+          "wastedMs": 452
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/home.css",
+          "totalBytes": 6629,
+          "wastedMs": 452
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/foundations.css",
+          "totalBytes": 8067,
+          "wastedMs": 452
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/site.css",
+          "totalBytes": 11929,
+          "wastedMs": 452
+        }
+      ],
+      "overallSavingsMs": 561
+    },
+    "layout_shifts": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,1,MAIN",
+            "selector": "body.v2-home > main#main-content",
+            "boundingRect": {
+              "top": 85,
+              "bottom": 6806,
+              "left": 0,
+              "right": 390,
+              "width": 390,
+              "height": 6722
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "YOUR MONEY, MADE CLEARER\n\nBetter financial decisions start here.\n\nFree, practic\u2026"
+          },
+          "score": 0.1125110288543609
+        }
+      ]
+    }
+  },
+  {
+    "run": "run-2.json",
+    "lighthouseVersion": "12.8.2",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "settings": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": [
+        "*googletagmanager.com*",
+        "*google-analytics.com*"
+      ],
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "performance": 91.0,
+    "accessibility": 100,
+    "lcp_ms": 2708.0802000000003,
+    "cls": 0.1125110288543609,
+    "render_blocking": {
+      "type": "opportunity",
+      "headings": [
+        {
+          "key": "url",
+          "valueType": "url",
+          "label": "URL"
+        },
+        {
+          "key": "totalBytes",
+          "valueType": "bytes",
+          "label": "Transfer Size"
+        },
+        {
+          "key": "wastedMs",
+          "valueType": "timespanMs",
+          "label": "Duration"
+        }
+      ],
+      "items": [
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/goals.css",
+          "totalBytes": 4981,
+          "wastedMs": 453
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/onboarding.css",
+          "totalBytes": 3856,
+          "wastedMs": 153
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/featured.css",
+          "totalBytes": 2576,
+          "wastedMs": 153
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/trust.css",
+          "totalBytes": 2624,
+          "wastedMs": 303
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/discovery.css",
+          "totalBytes": 5351,
+          "wastedMs": 453
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/home.css",
+          "totalBytes": 6629,
+          "wastedMs": 453
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/foundations.css",
+          "totalBytes": 8067,
+          "wastedMs": 453
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/site.css",
+          "totalBytes": 11929,
+          "wastedMs": 453
+        }
+      ],
+      "overallSavingsMs": 547
+    },
+    "layout_shifts": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,1,MAIN",
+            "selector": "body.v2-home > main#main-content",
+            "boundingRect": {
+              "top": 85,
+              "bottom": 6806,
+              "left": 0,
+              "right": 390,
+              "width": 390,
+              "height": 6722
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "YOUR MONEY, MADE CLEARER\n\nBetter financial decisions start here.\n\nFree, practic\u2026"
+          },
+          "score": 0.1125110288543609
+        }
+      ]
+    }
+  },
+  {
+    "run": "run-3.json",
+    "lighthouseVersion": "12.8.2",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "settings": {
+      "output": [
+        "json",
+        "html"
+      ],
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": [
+        "*googletagmanager.com*",
+        "*google-analytics.com*"
+      ],
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance",
+        "accessibility"
+      ],
+      "skipAudits": null
+    },
+    "performance": 91.0,
+    "accessibility": 100,
+    "lcp_ms": 2702.8992000000003,
+    "cls": 0.1125110288543609,
+    "render_blocking": {
+      "type": "opportunity",
+      "headings": [
+        {
+          "key": "url",
+          "valueType": "url",
+          "label": "URL"
+        },
+        {
+          "key": "totalBytes",
+          "valueType": "bytes",
+          "label": "Transfer Size"
+        },
+        {
+          "key": "wastedMs",
+          "valueType": "timespanMs",
+          "label": "Duration"
+        }
+      ],
+      "items": [
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/onboarding.css",
+          "totalBytes": 3856,
+          "wastedMs": 151
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/goals.css",
+          "totalBytes": 4981,
+          "wastedMs": 451
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/featured.css",
+          "totalBytes": 2576,
+          "wastedMs": 151
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/discovery.css",
+          "totalBytes": 5351,
+          "wastedMs": 451
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/home.css",
+          "totalBytes": 6629,
+          "wastedMs": 451
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/trust.css",
+          "totalBytes": 2624,
+          "wastedMs": 301
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/v2/foundations.css",
+          "totalBytes": 8067,
+          "wastedMs": 451
+        },
+        {
+          "url": "http://127.0.0.1:8003/assets/site.css",
+          "totalBytes": 11929,
+          "wastedMs": 451
+        }
+      ],
+      "overallSavingsMs": 543
+    },
+    "layout_shifts": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "extra"
+          },
+          "label": "Element"
+        },
+        {
+          "key": "score",
+          "valueType": "numeric",
+          "subItemsHeading": {
+            "key": "cause",
+            "valueType": "text"
+          },
+          "granularity": 0.001,
+          "label": "Layout shift score"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "page-1-MAIN",
+            "path": "1,HTML,1,BODY,1,MAIN",
+            "selector": "body.v2-home > main#main-content",
+            "boundingRect": {
+              "top": 85,
+              "bottom": 6806,
+              "left": 0,
+              "right": 390,
+              "width": 390,
+              "height": 6722
+            },
+            "snippet": "<main id=\"main-content\" tabindex=\"-1\">",
+            "nodeLabel": "YOUR MONEY, MADE CLEARER\n\nBetter financial decisions start here.\n\nFree, practic\u2026"
+          },
+          "score": 0.1125110288543609,
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "extra": {
+                  "type": "url",
+                  "value": "http://127.0.0.1:8003/assets/v2/fonts/simplekit-sans-700.woff"
+                },
+                "cause": "Web font loaded"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

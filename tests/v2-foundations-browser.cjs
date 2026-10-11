@@ -33,7 +33,7 @@ fs.mkdirSync(output,{recursive:true});
    results.push({width,scale,...details});await context.close();
   }
   // Verify real text remains visible with all local fonts blocked.
-  const c=await browser.newContext({viewport:{width:390,height:1000}});await c.route('**/*',r=>r.request().url()===origin+'/__v2-foundations'?r.fulfill({body:fs.readFileSync(path.join(root,'docs/v2/phase-01/foundations-preview.html'),'utf8'),contentType:'text/html'}):r.request().url().endsWith('.woff')?r.abort():r.continue());
+  const c=await browser.newContext({viewport:{width:390,height:1000}});await c.route('**/*',r=>r.request().url()===origin+'/__v2-foundations'?r.fulfill({body:fs.readFileSync(path.join(root,'docs/v2/phase-01/foundations-preview.html'),'utf8'),contentType:'text/html'}):/\.woff2?$/.test(r.request().url())?r.abort():r.continue());
   const p=await c.newPage();await p.goto(origin+'/__v2-foundations',{waitUntil:'networkidle'});assert(await p.locator('h1').first().isVisible());await p.screenshot({path:path.join(output,'font-fallback-390.jpg'),type:'jpeg',quality:80,fullPage:true});await c.close();
   const formats={'coastal-mobile-400.avif':'image/avif','coastal-mobile-400.webp':'image/webp','coastal-mobile-400.jpg':'image/jpeg'};
   for(const [file,mime] of Object.entries(formats)){const response=await fetch(origin+'/assets/v2/images/'+file);assert.equal(response.headers.get('content-type'),mime);}
