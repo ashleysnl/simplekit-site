@@ -64,6 +64,12 @@ Sources remain independent repositories. This site is their deployment assembler
 
 Browser-only external dependencies include optional Google Analytics (`www.googletagmanager.com`) and outbound support/reference links. They are not build prerequisites. Canonical cross-page links intentionally still point to `simplekit.app`, including during previews. Core CSS/JS no longer need a live network request in the generated bundle. No live DNS, Cloudflare edge redirects, custom-domain configuration, or existing production hosting settings have been changed.
 
+## Current V2 execution cadence
+
+The owner requested implementation first with comprehensive testing at the end. Follow the [remaining-phase cadence](docs/SIMPLEKIT_V2_REDESIGN_PLAN.md#remaining-phase-execution-cadence--implementation-first), which supersedes per-task test repetition below. During Phase 15, run one portable build per coherent batch and record deferred checks. Automatic V2 CI runs source acquisition/build/artifact publication; it does not establish release readiness.
+
+For the frozen Phase 16 candidate, manually dispatch `validate.yml` on `develop-v2` with `full_qa=true`; all repository, SEO/output, preservation and three-engine browser suites run. PRs targeting main and main-branch runs also request full QA. Complete all 22 calculator checks before release. `cloudflare-preview.yml` defaults to a lean build/upload/smoke/capture flow; set `full_qa=true` only when the complete hosted regression run is needed. Production isolation and approval requirements are unchanged.
+
 ## Build and validation
 
 `npm run build` retrieves exact Git commits, validates manifest/templates, copies public authored pages/assets, renders templates, assembles all 22 calculator routes, bundles Core, and writes SEO outputs into `dist/`. Missing sources, incomplete trackers, unknown template tokens, unpinned commits, unsafe source paths, dirty caches, and published legacy links fail the build. Building twice with the same inputs must produce identical files and leave the tracked checkout unchanged.
@@ -90,7 +96,7 @@ For shared Core changes, follow the same process for `simplekit-core`; verify he
 
 ## GitHub Actions
 
-`.github/workflows/validate.yml` runs for PRs, main/develop-v2 and temporary feature/fix/chore pushes, or manual dispatch. It pins the Actions revisions, uses `.node-version`, retrieves all sources, runs tests/build/SEO/output checks, verifies that tracked files stay unchanged and uploads `dist/` as the `simplekit-site` artifact. It has only `contents: read` and contains no deployment step. Configure this validation job as a required branch-protection check before production merges. An actual hosted Actions run is distinct from executing its commands locally.
+`.github/workflows/validate.yml` runs for PRs, main/develop-v2 and temporary feature/fix/chore pushes, or manual dispatch. It pins the Actions revisions, uses `.node-version`, retrieves all sources, builds, verifies that tracked files stay unchanged and uploads `dist/` as the `simplekit-site` artifact. Tests/SEO/output and the complete browser job run for explicit full QA or main/release-target events, per the current cadence. It has only `contents: read` and contains no deployment step. Configure this validation job as a required branch-protection check before production merges. An actual hosted Actions run is distinct from executing its commands locally.
 
 ## Cloudflare previews
 

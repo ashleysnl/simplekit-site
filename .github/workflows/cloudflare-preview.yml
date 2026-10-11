@@ -5,6 +5,11 @@ name: Manual Cloudflare preview
 on:
   workflow_dispatch:
     inputs:
+      full_qa:
+        description: Repeat the complete browser/regression suites on this preview
+        required: false
+        default: false
+        type: boolean
       source_ref:
         description: Feature branch or commit to preview
         required: true
@@ -31,14 +36,20 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version-file: .node-version
-      - run: npm run sources:fetch && npm test && npm run build && npm run seo:validate && npm run output:validate
-      - name: Verify preservation and deterministic release candidate
+      - run: npm run sources:fetch && npm run build
+      - if: inputs.full_qa
+        run: npm test && npm run seo:validate && npm run output:validate
+      - name: Record candidate identity and optional full QA preservation
         id: candidate
         run: |
-          node scripts/v2-baseline-inventory.mjs
+          if [ "${{ inputs.full_qa }}" = "true" ]; then
+            node scripts/v2-baseline-inventory.mjs
+          fi
           node scripts/v2-release-artifact.mjs --record "$RUNNER_TEMP/release-inventory.json"
-          npm run build
-          node scripts/v2-release-artifact.mjs --compare "$RUNNER_TEMP/release-inventory.json"
+          if [ "${{ inputs.full_qa }}" = "true" ]; then
+            npm run build
+            node scripts/v2-release-artifact.mjs --compare "$RUNNER_TEMP/release-inventory.json"
+          fi
           tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -cf "$RUNNER_TEMP/release-candidate.tar" -C dist .
           gzip -n "$RUNNER_TEMP/release-candidate.tar"
           sha256sum "$RUNNER_TEMP/release-candidate.tar.gz" > "$RUNNER_TEMP/release-candidate.sha256"
@@ -106,9 +117,13 @@ jobs:
       - name: Prepare isolated browser verification
         run: |
           npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3 lighthouse@12.8.2
-          "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
+          if [ "${{ inputs.full_qa }}" = "true" ]; then
+            "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
+          else
+            "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium
+          fi
       - name: Capture the previous hosted preview
-        if: inputs.baseline_url != ''
+        if: inputs.full_qa && inputs.baseline_url != ''
         continue-on-error: true
         shell: bash
         env:
@@ -147,6 +162,14 @@ jobs:
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
           node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
+      - name: Complete deployed browser QA when explicitly requested
+        if: inputs.full_qa
+        shell: bash
+        env:
+          SIMPLEKIT_HOSTED_PREVIEW: '1'
+          SIMPLEKIT_PREVIEW_URL: ${{ steps.upload.outputs.url }}
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
           for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline v2-release; do
             export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/regression/$suite"
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"

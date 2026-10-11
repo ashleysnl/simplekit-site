@@ -6,6 +6,11 @@ on:
     branches: [main, develop-v2, 'feat/**', 'fix/**', 'chore/**']
   workflow_dispatch:
     inputs:
+      full_qa:
+        description: Run complete final QA (required before release)
+        required: false
+        default: true
+        type: boolean
       preview_url:
         description: Optional immutable isolated preview for read-only owner-review verification
         required: false
@@ -41,10 +46,22 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm run sources:fetch
-      - run: npm test
+      - if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+        run: npm test
       - run: npm run build
-      - run: npm run seo:validate
-      - run: npm run output:validate
+      - if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+        run: npm run seo:validate
+      - if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+        run: npm run output:validate
+      - name: Record validation scope
+        env:
+          FULL_QA: ${{ inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main' }}
+        run: |
+          if [ "$FULL_QA" = "true" ]; then
+            echo 'Full QA requested; browser and regression jobs follow.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Implementation build only. Tests and release acceptance are deferred to final QA.' >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Ensure build left tracked files unchanged
         run: git diff --exit-code
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -55,6 +72,7 @@ jobs:
           retention-days: 7
 
   design-system:
+    if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
     needs: validate
     runs-on: ubuntu-latest
     timeout-minutes: 30
