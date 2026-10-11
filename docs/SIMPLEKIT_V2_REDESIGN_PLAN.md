@@ -42,6 +42,8 @@ After release, preserve `main` as the production source of truth and explicitly 
 
 The [2026-10-09 branch audit and consolidation](v2/branch-consolidation-2026-10-09.md) records the inherited plan/Phase 0–4 history and archived branches. Those historical branches and PR references are evidence, not development destinations. Phase acceptance, unfinished checks, and release approval gates below remain in force.
 
+The owner-authorized [2026-10-11 consolidation](v2/branch-consolidation-2026-10-11.md) integrates PR #13 and preserves cloud-native history in `develop-v2`. Earlier phase notes describing temporary PR #13 as unmerged are historical; their phase states and outstanding acceptance checks are unchanged. Continue V2 work on `develop-v2`. Remote feature-branch deletion is blocked by unavailable webhook dependency inspection; retaining those refs does not make them development destinations. No production release is authorized.
+
 ## Task state convention
 
 | State | Meaning | Transition rule |
