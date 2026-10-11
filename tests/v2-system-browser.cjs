@@ -105,14 +105,14 @@ async function geometry(page,name){
    assert.deepEqual(result.external,[],'References must load no external resources');
    await p.emulateMedia({media:'print'});assert(!(await p.locator('.v2s-header').isVisible()));await p.screenshot({path:path.join(output,`${engine}-print.jpg`),type:'jpeg',quality:75,fullPage:true});await c.close();
    // Load new CSS and navigation on old pages: geometry, typography and controls remain exact.
-   for(const route of ['/','/fire-calculator/','/cpp-calculator/','/budget-planner/']){
+   for(const route of ['/','/retirement-planner/404.html']){
     console.log(engine+': legacy isolation '+route);
     const c=await context();const p=await c.newPage();await p.goto(origin+route,{waitUntil:'networkidle'});await fontsReady(p,engine+' legacy '+route);
     const sample=()=>p.evaluate(()=>[...document.querySelectorAll('h1,nav,footer,input,button,main')].map(n=>{const s=getComputedStyle(n),r=n.getBoundingClientRect();return {tag:n.tagName,id:n.id,font:s.fontFamily,color:s.color,background:s.backgroundColor,rect:[r.x,r.y,r.width,r.height],hidden:n.hidden};}));
     assert.equal(await p.locator('[data-v2-system="1"]').count(),0,route+': isolation requires a legacy page');
     const before=await sample();await p.addStyleTag({url:origin+'/assets/v2/system.css'});await p.addScriptTag({url:origin+'/assets/v2/shell.js'});assert.deepEqual(await sample(),before,route+': legacy isolation');result.legacyIsolation.push(route);await c.close();
    }
-   assert.deepEqual(result.errors,[]);assert.deepEqual(result.failed,[]);report.engines.push(result);console.log(`${engine}: ${result.layouts.length} layouts, ${result.axe.length} clean axe states, keyboard/validation/reset/export/print and four legacy isolation checks pass.`);
+   assert.deepEqual(result.errors,[]);assert.deepEqual(result.failed,[]);report.engines.push(result);console.log(`${engine}: ${result.layouts.length} layouts, ${result.axe.length} clean axe states, keyboard/validation/reset/export/print and two unopted-page isolation checks pass.`);
   } finally {await browser.close();fs.writeFileSync(path.join(output,'browser.json'),JSON.stringify(report,null,2)+'\n');}
  }
 })().catch(e=>{console.error(e);process.exitCode=1;});

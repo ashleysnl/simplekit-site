@@ -1,0 +1,616 @@
+{
+  "phase": 15,
+  "coreBefore": "092877bebbab2e93afc532bce37c77d700ee2357",
+  "coreAfter": "817b8480fbe4e932f876f5642a44fb9bfb268ee7",
+  "batches": {
+    "investing": [
+      "cpp-calculator",
+      "fire-calculator",
+      "rrsp-vs-tfsa-calculator",
+      "compound-interest-calculator",
+      "investment-fee-calculator"
+    ],
+    "housing-debt": [
+      "house-affordability-calculator",
+      "rent-vs-buy-calculator",
+      "mortgage-paydown-vs-invest-calculator",
+      "debt-payoff-calculator",
+      "credit-card-interest-calculator",
+      "loan-calculator",
+      "debt-to-income-ratio-calculator"
+    ],
+    "income-planning": [
+      "take-home-pay-calculator",
+      "budget-planner",
+      "net-worth-calculator",
+      "savings-goal-calculator",
+      "emergency-fund-calculator",
+      "contractor-effective-hourly-rate-calculator"
+    ],
+    "tax-travel": [
+      "canadian-tax-checklist",
+      "travel-planner"
+    ]
+  },
+  "calculators": [
+    {
+      "id": "cpp-calculator",
+      "repository": "ashleysnl/SimpleKitCPP",
+      "revision": "e2f14e9401f9e16bf25fa6801dbf5df494676edf",
+      "defaultBranch": "main",
+      "production": "e2f14e9401f9e16bf25fa6801dbf5df494676edf",
+      "existingV2": false,
+      "tree": "971d8e05cc894cabb472a07f3ae72b42d0e389ec",
+      "batch": "investing",
+      "adapter": {
+        "layout": ".calculator-form",
+        "columns": "repeat(2,minmax(0,1fr))",
+        "summary": ".decision-summary-grid,.comparison-grid",
+        "note": "Age selection and CPP start-age scenarios stay together; decision comparisons remain below the inputs.",
+        "extra": ".calculator-form > .form-actions { grid-column:1 / -1; }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "icons/apple-touch-icon.png"
+      ],
+      "after": "6dd3bbd05c1ac357f15bd27cbd4cf88b05e2da8e",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "take-home-pay-calculator",
+      "repository": "ashleysnl/SimpleKitTakeHomePay",
+      "revision": "78d539f338078443563a7927e68c156aa261beac",
+      "defaultBranch": "main",
+      "production": "78d539f338078443563a7927e68c156aa261beac",
+      "existingV2": false,
+      "tree": "c0cbbff1d51fdd2df6bd4ddd6955d1ad310962ed",
+      "batch": "income-planning",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.05fr) minmax(18rem,.95fr)",
+        "summary": ".headline-grid,.result-grid",
+        "note": "Salary/province/year inputs retain monthly/annual net pay, payroll caps and province comparison tables.",
+        "extra": ".result-summary-card { background:var(--v2-blue-soft); color:var(--v2-navy); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "64c820ba6aae43b94217f8a27270cb1dee7f6bed",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "debt-payoff-calculator",
+      "repository": "ashleysnl/SimpleKitDebt",
+      "revision": "c36650f1ef95b446ec2035e1ee28d37d11d69e28",
+      "defaultBranch": "main",
+      "production": "c36650f1ef95b446ec2035e1ee28d37d11d69e28",
+      "existingV2": false,
+      "tree": "e7b40bede5ed136b8c5df0272083ff6135f7fd76",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.15fr) minmax(18rem,.85fr)",
+        "summary": ".result-grid,.comparison-grid",
+        "note": "Editable debt rows, strategy selection, payoff schedule and chart keep their existing controls and ordering.",
+        "extra": ".debt-table-wrap { border:1px solid var(--v2-border); } .debt-table-wrap input { min-width:6rem; }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "assets/js/app.js"
+      ],
+      "after": "a6026273755dfb39d006637c473712e192a14c93",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false,
+      "presentationChanges": [
+        [
+          "const width = Math.max(320, Math.floor(rect.width || canvas.width));",
+          "const width = canvas.closest('[data-v2-calculator]') ? Math.max(1, Math.floor(rect.width || canvas.width)) : Math.max(320, Math.floor(rect.width || canvas.width));"
+        ],
+        [
+          "context.font = '12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif';",
+          "context.font = canvas.closest('[data-v2-calculator]') ? '12px ' + getComputedStyle(canvas).fontFamily : '12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif';"
+        ]
+      ]
+    },
+    {
+      "id": "house-affordability-calculator",
+      "repository": "ashleysnl/SimpleKitHouseAffordability",
+      "revision": "1a34b31ba85ca3cf0e31175bc93446bb01a61154",
+      "defaultBranch": "main",
+      "production": "1a34b31ba85ca3cf0e31175bc93446bb01a61154",
+      "existingV2": false,
+      "tree": "3d676e82e60694f69594d62af5684e9531d6b479",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.1fr) minmax(18rem,.9fr)",
+        "summary": ".result-grid",
+        "note": "Income, down payment and housing costs retain their grouped inputs and visible affordability summary.",
+        "extra": ""
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "b03fef1caf722cecc9508df2c2649149872d9334",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "credit-card-interest-calculator",
+      "repository": "ashleysnl/SimpleKitCreditCard",
+      "revision": "2b75e7a44d3af3eb87cfb68c2cdbac9312114ef3",
+      "defaultBranch": "main",
+      "production": "2b75e7a44d3af3eb87cfb68c2cdbac9312114ef3",
+      "existingV2": false,
+      "tree": "01af57bbfead7c3017f6b11034bcab991baa86a5",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.1fr) minmax(18rem,.9fr)",
+        "summary": ".result-grid,.comparison-grid",
+        "note": "Balance/payment inputs retain their debt-free summary, target-payment guidance and comparison modes.",
+        "extra": ".summary-shell { background:var(--v2-blue-soft); border-color:var(--v2-border); border-radius:var(--v2-radius-card); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "e1371433da8efebfeeacdb3536b854d95e437f76",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "loan-calculator",
+      "repository": "ashleysnl/SimpleKITLoan",
+      "revision": "bda03742ce0f2d8677a34e56e4a665d66a9113ae",
+      "defaultBranch": "main",
+      "production": "bda03742ce0f2d8677a34e56e4a665d66a9113ae",
+      "existingV2": false,
+      "tree": "bd904c66e1162a857c007c03e6ca3d4c4f634de2",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".workspace-main-grid",
+        "columns": "minmax(0,1.1fr) minmax(18rem,.9fr)",
+        "summary": ".result-grid,.comparison-summary",
+        "note": "Loan settings and repayment overview remain adjacent on desktop; lump-sum inputs, charts and schedule follow.",
+        "extra": ".workspace-secondary-grid,.chart-grid { gap:1rem; } .chart-details { background:var(--v2-surface); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "assets/js/app.js"
+      ],
+      "after": "352747e12d93c892a0d3fed7a8cb62cc2fcc64ad",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false,
+      "presentationChanges": [
+        [
+          "context.font = \"10px sans-serif\";",
+          "context.font = context.canvas.closest('[data-v2-calculator]') ? '12px ' + getComputedStyle(context.canvas).fontFamily : \"10px sans-serif\";"
+        ]
+      ]
+    },
+    {
+      "id": "rent-vs-buy-calculator",
+      "repository": "ashleysnl/SimplekitRentVsBuy",
+      "revision": "6d361109616df603b15b5a7b4f501d0407fa542f",
+      "defaultBranch": "main",
+      "production": "6d361109616df603b15b5a7b4f501d0407fa542f",
+      "existingV2": false,
+      "tree": "e7a3c2b854fc4f6b3f22b0dc4c0328cece9aaaee",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".primary-grid",
+        "columns": "repeat(2,minmax(0,1fr))",
+        "summary": ".insight-grid,.comparison-grid",
+        "note": "Rent/buy assumptions and comparison results preserve the original comparison workflow and chart tabs.",
+        "extra": ".hero-grid { grid-template-columns:minmax(0,1.2fr) minmax(18rem,.8fr); gap:1.25rem; } .chart-tabs { flex-wrap:wrap; }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "5f0db0ecc1396de4fb6a30daf5a14520887e87a6",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "budget-planner",
+      "repository": "ashleysnl/SimpleKitMonthlyBudget",
+      "revision": "35a6c68bca49d56b5e46d1ca7530dede48eccb36",
+      "defaultBranch": "main",
+      "production": "35a6c68bca49d56b5e46d1ca7530dede48eccb36",
+      "existingV2": false,
+      "tree": "6d9f60a6759d4a6e836f2b3f23036f36d9779a1f",
+      "batch": "income-planning",
+      "adapter": {
+        "layout": ".planner-layout",
+        "columns": "minmax(0,1.1fr) minmax(18rem,.9fr)",
+        "summary": ".summary-grid-primary,.summary-grid-secondary",
+        "note": "Editable income/expense rows, starter packs and budget goals retain JSON/storage controls and the cash-flow summary.",
+        "extra": ".budget-row { gap:.625rem; } .results-stack { min-width:0; } .mobile-summary-bar { background:var(--v2-surface); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "93e61eff224bcc1a6c4fb45b581dc08ed18a1890",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "compound-interest-calculator",
+      "repository": "ashleysnl/SimpleKitInvestment",
+      "revision": "cd7ec0dfeb1199a1e09f80a4c04ff3f2f29d4955",
+      "defaultBranch": "main",
+      "production": "cd7ec0dfeb1199a1e09f80a4c04ff3f2f29d4955",
+      "existingV2": false,
+      "tree": "0d9e71335e6f3590726c5a1c70e40d53668f68df",
+      "batch": "investing",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.05fr) minmax(18rem,.95fr)",
+        "summary": ".result-grid,.interpretation-grid",
+        "note": "Contribution/return inputs lead into growth results, interpretations and charts; advanced assumptions remain optional.",
+        "extra": ".chart-shell { background:var(--v2-surface); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "e29b7b70a21dea385d89065d1ea8afe728d4728c",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "net-worth-calculator",
+      "repository": "ashleysnl/SimpleKitNetWorth",
+      "revision": "55ede2d5e2130aa10530cccbc4fc8dac52f24975",
+      "defaultBranch": "main",
+      "production": "55ede2d5e2130aa10530cccbc4fc8dac52f24975",
+      "existingV2": false,
+      "tree": "34b6e55f183aabcc8f53844c66c2023932a5dfe3",
+      "batch": "income-planning",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.1fr) minmax(18rem,.9fr)",
+        "summary": ".metric-grid,.mobile-summary-grid",
+        "note": "Assets and liabilities retain grouped editing and a visible net-worth summary, projections and milestones.",
+        "extra": ".mobile-summary-card { background:var(--v2-blue-soft); border-color:var(--v2-border); } .projection-highlight { background:var(--v2-tint); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "38229bea99718d7fb7eec682faf46c7799fea0dc",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "savings-goal-calculator",
+      "repository": "ashleysnl/SimpleKitSavingsGoal",
+      "revision": "0f4a7e4a276535694e121168b2f0e85d50e41630",
+      "defaultBranch": "main",
+      "production": "0f4a7e4a276535694e121168b2f0e85d50e41630",
+      "existingV2": false,
+      "tree": "a03af37c6e4725b0c25a2638014d3f1af5c59151",
+      "batch": "income-planning",
+      "adapter": {
+        "layout": ".workspace-grid",
+        "columns": "minmax(0,1.05fr) minmax(18rem,.95fr)",
+        "summary": ".summary-grid-primary,.comparison-highlights",
+        "note": "Scenario modes, saved scenarios and import/export stay in the control column; goal results and comparisons remain adjacent.",
+        "extra": ".scenario-panel,.storage-card,.mode-context-card { background:var(--v2-surface); border-color:var(--v2-border); border-radius:var(--v2-radius-card); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "cb8a1065200c1c75c81f0b6cf0172ded533cdc29",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "emergency-fund-calculator",
+      "repository": "ashleysnl/SImpleKitEmergency",
+      "revision": "144367cf3e024810b70b373677844e7f36c2c829",
+      "defaultBranch": "main",
+      "production": "144367cf3e024810b70b373677844e7f36c2c829",
+      "existingV2": false,
+      "tree": "72e28e9d928b9586ec6616867d7d156d275723c8",
+      "batch": "income-planning",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.1fr) minmax(18rem,.9fr)",
+        "summary": ".result-grid",
+        "note": "Expense assumptions and coverage choices retain their recommended fund summary and optional advanced details.",
+        "extra": ".selection-summary { background:var(--v2-tint); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "1c7cb83f86e45e5881a3fedab4561b97bc750da7",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "mortgage-paydown-vs-invest-calculator",
+      "repository": "ashleysnl/SimpleKitMortOrInvest",
+      "revision": "7e7198d600e545bf4b61c23fee50db9421b5b4c2",
+      "defaultBranch": "main",
+      "production": "7e7198d600e545bf4b61c23fee50db9421b5b4c2",
+      "existingV2": false,
+      "tree": "27ae77777f271da28ec14fddbc98582d019f61c3",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".calculator-grid",
+        "columns": "minmax(0,1.15fr) minmax(18rem,.85fr)",
+        "summary": ".metric-grid-results,.comparison-grid",
+        "note": "Mortgage and investment assumptions remain paired with outcome comparisons and sensitivity tables.",
+        "extra": ".sensitivity-table-wrap { border:1px solid var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "icons/apple-touch-icon.png"
+      ],
+      "after": "5adb0fa4c017682225da9b2e2356e1d6eabe7066",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "investment-fee-calculator",
+      "repository": "ashleysnl/SimpleKitFees",
+      "revision": "470270f4adfcdc6987ac1d20c3657453e65e6c1c",
+      "defaultBranch": "main",
+      "production": "470270f4adfcdc6987ac1d20c3657453e65e6c1c",
+      "existingV2": false,
+      "tree": "2c7e2f18777535e1fe66caa17e1f9e08bbd8a4a9",
+      "batch": "investing",
+      "adapter": {
+        "layout": ".calculator-shell",
+        "columns": "minmax(0,1fr)",
+        "summary": ".results-grid,.comparison-grid",
+        "note": "Fee inputs precede the fee-drag takeaway and comparisons; milestone bars retain their original data and order.",
+        "extra": ".calculator-panel { padding:1.25rem; background:var(--v2-surface); border:1px solid var(--v2-border); border-radius:var(--v2-radius-card); } .bar-chart { background:var(--v2-tint); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "icons/apple-touch-icon.png"
+      ],
+      "after": "f46d933798900ccce7889842daa6dd45d49d4a86",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "rrsp-vs-tfsa-calculator",
+      "repository": "ashleysnl/SimpleKitRRSPTFSA",
+      "revision": "ef07a5e34a6d838d34dbf39a3e860c39d8b0eccd",
+      "defaultBranch": "main",
+      "production": "ef07a5e34a6d838d34dbf39a3e860c39d8b0eccd",
+      "existingV2": false,
+      "tree": "d76cfe65d924b115d44a568ea28e322f152083f1",
+      "batch": "investing",
+      "adapter": {
+        "layout": ".steps-row",
+        "columns": "repeat(2,minmax(0,1fr))",
+        "summary": ".winner-mini-grid,.compact-results-grid",
+        "note": "Basic and advanced optimizer steps retain their disclosure controls; the winner and detailed comparison stay below.",
+        "extra": ".optimizer-layout { grid-template-columns:minmax(0,1fr); gap:1.25rem; } .winner-summary { padding:1.25rem; }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "icons/apple-touch-icon.png"
+      ],
+      "after": "c4e4be92eacab080cea23e45d5a3153a13a6234b",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "fire-calculator",
+      "repository": "ashleysnl/SimpleKitFIRE",
+      "revision": "e44404c1405382840c12a2edf7aae3d1aa816e1b",
+      "defaultBranch": "main",
+      "production": "e44404c1405382840c12a2edf7aae3d1aa816e1b",
+      "existingV2": false,
+      "tree": "8a61bba4d884205f25661a113c8edf63f82d1964",
+      "batch": "investing",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.15fr) minmax(18rem,.85fr)",
+        "summary": ".results-grid,.milestone-grid",
+        "note": "Savings inputs and FIRE readiness retain a side-by-side desktop workspace and a stacked mobile path.",
+        "extra": ".chart-surface { background:var(--v2-surface); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md",
+        "icons/apple-touch-icon.png"
+      ],
+      "after": "ec2d8014299ae79740c2b8efdd9b6f4a2db715c6",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "canadian-tax-checklist",
+      "repository": "ashleysnl/SimpleKitTaxCheckListCAN",
+      "revision": "ebe6150565b6e6dff5fcf0f96837f9710cbc422a",
+      "defaultBranch": "main",
+      "production": "ebe6150565b6e6dff5fcf0f96837f9710cbc422a",
+      "existingV2": false,
+      "tree": "e50bd4d6ecabc1be824065d72bffe7fcdbff4e59",
+      "batch": "tax-travel",
+      "adapter": {
+        "layout": ".planner-grid",
+        "columns": "minmax(0,1fr) minmax(16rem,.38fr)",
+        "summary": ".summary-grid-compact",
+        "note": "Checklist categories, progress, filters and saved/imported plans retain a settings sidebar and action controls.",
+        "extra": ".category-card,.checklist-item,.checklist-category,.settings-card,.state-pill-card { background:var(--v2-surface); border-color:var(--v2-border); border-radius:var(--v2-radius-sm); } .checklist-controls,.action-bar { flex-wrap:wrap; gap:.625rem; }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "a7fbe80a2f9068a2a33e23cb5b715ecd128b00b5",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "travel-planner",
+      "repository": "ashleysnl/TravelPlanner",
+      "revision": "dc5b680e1bf49b75a0f8a746cf49c58b0914707a",
+      "defaultBranch": "main",
+      "production": "dc5b680e1bf49b75a0f8a746cf49c58b0914707a",
+      "existingV2": false,
+      "tree": "351d1c884b4a9c7cd60a5bfd1d09c4c503d1d022",
+      "batch": "tax-travel",
+      "adapter": {
+        "layout": ".settings-inline-grid",
+        "columns": "repeat(2,minmax(0,1fr))",
+        "summary": ".metric-grid",
+        "note": "Dashboard/itinerary/costs/settings/report tabs, trip wizard, editable activities and save/import remain intact.",
+        "extra": ".tabs { position:static; display:flex; flex-wrap:wrap; gap:.5rem; padding:.5rem; background:var(--v2-surface); border:1px solid var(--v2-border); border-radius:var(--v2-radius-card); } .itinerary-day-block,.itinerary-card,.dashboard-modal-card,.app-menu-card { background:var(--v2-surface); border-color:var(--v2-border); border-radius:var(--v2-radius-card); } .itinerary-day-add-btn,.mode-btn { min-height:44px; }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "375a4bb1333415c3f7fa88541c1a8c3e6ba53e8e",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "debt-to-income-ratio-calculator",
+      "repository": "ashleysnl/SimpleKitDTI",
+      "revision": "d3c05a120862cc5c46e27fd527d2369fd6679121",
+      "defaultBranch": "main",
+      "production": "d3c05a120862cc5c46e27fd527d2369fd6679121",
+      "existingV2": false,
+      "tree": "354904203ff12bd1aca44d508f74956ea3d0c4ff",
+      "batch": "housing-debt",
+      "adapter": {
+        "layout": ".guided-shell",
+        "columns": "minmax(12rem,.32fr) minmax(0,1fr)",
+        "summary": ".result-grid,.comparison-grid",
+        "note": "The five-step guided form, step controls and results remain intact; full-width results follow the guided workspace.",
+        "extra": ".guided-sidebar { background:var(--v2-tint); border-color:var(--v2-border); border-radius:var(--v2-radius-card); } .progress-step.is-active { color:var(--v2-blue); border-color:var(--v2-blue); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "4cb4bde5441a90476718d03753b51d19bf39f6e1",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "contractor-effective-hourly-rate-calculator",
+      "repository": "ashleysnl/SimpleKitContractorRate",
+      "revision": "f8feb8c5d6193dc1a300a7632a26203223e95ecd",
+      "defaultBranch": "main",
+      "production": "f8feb8c5d6193dc1a300a7632a26203223e95ecd",
+      "existingV2": false,
+      "tree": "d8b720671c43820da08fdf74ed31e9b76b2e3393",
+      "batch": "income-planning",
+      "adapter": {
+        "layout": ".calculator-layout",
+        "columns": "minmax(0,1.15fr) minmax(18rem,.85fr)",
+        "summary": ".summary-grid,.compare-grid",
+        "note": "Contract, leave and benefits steps retain the sticky effective-rate summary and employee comparison.",
+        "extra": ".summary-card-sticky { top:1rem; } .summary-bridge { background:var(--v2-tint); border-color:var(--v2-border); }"
+      },
+      "changedFiles": [
+        "index.html",
+        "v2-calculator.css",
+        "AGENTS.md"
+      ],
+      "after": "c975759a49ca05deb6a20f19295421077663d4e8",
+      "state": "[~]",
+      "implementationComplete": true,
+      "batchBuild": true,
+      "phase16Verified": false
+    }
+  ],
+  "pilots": [
+    {
+      "id": "retirement-planner",
+      "state": "[~]",
+      "implementationComplete": true,
+      "phase14AutomatedVerified": true,
+      "phase16Verified": false
+    },
+    {
+      "id": "mortgage-calculator",
+      "state": "[~]",
+      "implementationComplete": true,
+      "phase14AutomatedVerified": true,
+      "phase16Verified": false
+    }
+  ]
+}

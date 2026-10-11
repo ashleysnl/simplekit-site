@@ -1,19 +1,55 @@
-// Independent last-passed Phase 13 output; pilot formulas and legacy pages remain exact.
+// Source-owned V2 migrations against independent pre-redesign contracts.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
-const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist');
+const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const before=require('../docs/v2/phase-14/baseline-inventory.json').files;
-const contract=require('../data/v2-pilot-sources.json');
-const pins=require('../data/calculator-sources.json');
-const baseline=require('../docs/v2/baseline/contracts.json');
+const {transitions,pilot,suite}=require('../scripts/v2-migration-contract.cjs');
+const pins=require('../data/calculator-sources.json'),baseline=require('../docs/v2/baseline/contracts.json');
 const originalCss=require('../docs/v2/phase-14/baseline-css.json');
-const presentation=require('../docs/v2/phase-14/presentation-js-baseline.json');
-const transform=require('../scripts/v2-presentation-contract.cjs');
-assert.deepEqual(Object.keys(presentation).sort(),contract.presentationJavaScript.slice().sort());
-assert.equal(crypto.createHash('sha256').update(originalCss.content).digest('hex'),before[originalCss.file].sha256,'Independent CSS baseline integrity');
-for(const s of baseline.sourcePins.sources){const c=pins.sources.find(p=>p.id===s.id);assert.deepEqual(c,{...s,revision:contract.transitions[s.id]?.after||s.revision});if(contract.transitions[s.id])assert.equal(s.revision,contract.transitions[s.id].before);}
+const presentation=require('../docs/v2/phase-14/presentation-js-baseline.json'),transform=require('../scripts/v2-presentation-contract.cjs');
+const suitePresentation=require('../docs/v2/phase-15/presentation-js-baseline.json'),suiteTransform=require('../scripts/v2-calculator-presentation.cjs');
+const sourceBaseline=require('../docs/v2/phase-15/baseline-sources.json');
+assert.deepEqual(Object.keys(presentation).sort(),pilot.presentationJavaScript.slice().sort());
+assert.equal(hash(originalCss.content),before[originalCss.file].sha256,'Independent CSS baseline integrity');
+for(const s of baseline.sourcePins.sources){const c=pins.sources.find(p=>p.id===s.id);assert.deepEqual(c,{...s,revision:transitions[s.id]?.after||s.revision});if(transitions[s.id])assert.equal(s.revision,transitions[s.id].before);}
+const indexOwners=new Map(suite.calculators.map(e=>[e.id+'/index.html',e]));
 let exact=0;
-for(const[file,c]of Object.entries(before)){const raw=fs.readFileSync(path.join(dist,file));if(presentation[file]){const original=presentation[file];assert.equal(crypto.createHash('sha256').update(original.before).digest('hex'),c.sha256,file+' baseline integrity');assert.equal(raw.toString(),transform(original.before),file+' only canvas backing dimensions/fonts may change');continue;}if(file===originalCss.file){assert.equal(raw.toString(),originalCss.content.replace('@import url("../../styles.css");','/* Base stylesheet is loaded explicitly in index.html. */'));continue;}if(contract.changedExistingRuntimeFiles.includes(file)){assert(raw.toString().includes('data-v2-pilot='));continue;}assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),c.sha256,file);exact++;}
+for(const[file,c]of Object.entries(before)){
+ const raw=fs.readFileSync(path.join(dist,file));
+ if(presentation[file]){assert.equal(hash(presentation[file].before),c.sha256,file+' original source');assert.equal(raw.toString(),transform(presentation[file].before),file+' reviewed chart-only edits');continue;}
+ const entry=suitePresentation[file.split('/')[0]];
+ if(entry&&file===file.split('/')[0]+'/'+entry.file){assert.equal(hash(entry.before),c.sha256,file+' original source');assert.equal(raw.toString(),suiteTransform(file,entry.before),file+' reviewed canvas-only edits');continue;}
+ if(file===originalCss.file){assert.equal(raw.toString(),originalCss.content.replace('@import url("../../styles.css");','/* Base stylesheet is loaded explicitly in index.html. */'));continue;}
+ if(indexOwners.has(file)){assert(raw.toString().includes('data-v2-calculator="'+indexOwners.get(file).id+'"'));assert(raw.toString().includes('data-v2-system="1"'));continue;}
+ if(pilot.changedExistingRuntimeFiles.includes(file)){assert(raw.toString().includes('data-v2-pilot='));continue;}
+ assert.equal(hash(raw),c.sha256,file+' original runtime asset');exact++;
+}
+const sourceDir=e=>path.join(root,'.cache/calculator-sources',e.id,e.after);
+const metadata=h=>(h.match(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*rel=["']canonical["'][^>]*>|<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi)||[]);
+const inline=h=>[...h.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)].filter(m=>! /\bsrc\s*=/.test(m[1])&&m[2].trim()).map(m=>m[2]);
+const ids=h=>[...h.matchAll(/\bid=["']([^"']+)["']/g)].map(m=>m[1]);
+const controls=h=>[...h.matchAll(/<(?:input|select|textarea)\b[^>]*>/gi)].map(m=>m[0].replace(/\s+class=(["'])[\s\S]*?\1/g,''));
+for(const e of suite.calculators){
+ const original=sourceBaseline[e.id],source=sourceDir(e),h=fs.readFileSync(path.join(source,'index.html'),'utf8');
+ assert.equal(hash(original.html),original.files['index.html'],e.id+' original template integrity');
+ assert.deepEqual(metadata(h),metadata(original.html),e.id+' original SEO metadata');
+ assert.deepEqual(inline(h),inline(original.html),e.id+' original inline scripts');
+ assert.deepEqual(controls(h),controls(original.html),e.id+' original input defaults and attributes');
+ for(const id of ids(original.html))assert(ids(h).includes(id),e.id+' original anchor/control '+id);
+ const allowed=['index.html','AGENTS.md'];if(suitePresentation[e.id])allowed.push(suitePresentation[e.id].file);
+ for(const[f,sha]of Object.entries(original.files)){
+  if(allowed.includes(f))continue;
+  assert.equal(hash(fs.readFileSync(path.join(source,f))),sha,e.id+'/'+f+' original source asset');
+ }
+ assert(fs.readFileSync(path.join(source,'v2-calculator.css'),'utf8').includes('[data-v2-calculator="'+e.id+'"]'),e.id+' scoped adapter');
+}
 const files=fs.readdirSync(dist,{recursive:true}).filter(f=>fs.statSync(path.join(dist,f)).isFile());
-const added=files.filter(f=>!before[f]);assert.equal(added.length,16);assert(added.every(f=>f.startsWith('assets/core/v2/')||f==='retirement-planner/icons/apple-touch-icon.png'));
-for(const f of added){const icon=f==='retirement-planner/icons/apple-touch-icon.png';const s=icon?path.join(root,'.cache/calculator-sources/retirement-planner',contract.transitions['retirement-planner'].after,'icons/apple-touch-icon.png'):path.join(root,'.cache/calculator-sources/simplekit-core',contract.transitions['simplekit-core'].after,'v2',f.slice('assets/core/v2/'.length));assert.equal(crypto.createHash('sha256').update(fs.readFileSync(s)).digest('hex'),crypto.createHash('sha256').update(fs.readFileSync(path.join(dist,f))).digest('hex'),f+' upstream asset');}
-console.log(`${exact} Phase 13 runtime files exact; two pilot HTML and seven guides migrate; retirement CSS only removes its nested import. Four presentation JS files change only opt-in canvas dimensions/font selection; all financial source bytes stay original. 15 opt-in Core assets and the referenced Apple icon added. Other 20 calculators, upstream 404, legacy Core and SEO output remain exact.`);
+const permittedAdded=new Set(['retirement-planner/icons/apple-touch-icon.png',...suite.calculators.flatMap(e=>[e.id+'/v2-calculator.css',...e.changedFiles.filter(f=>f.endsWith('.png')).map(f=>e.id+'/'+f)])]);
+const added=files.filter(f=>!before[f]);assert.equal(added.length,43,'Only 17 Core assets, six Apple icons and 20 tool adapters may be added');
+for(const f of added){
+ const core=f.startsWith('assets/core/v2/');assert(core||permittedAdded.has(f),f+' unexpected artifact');
+ const owner=core?'simplekit-core':f.split('/')[0],pin=pins.sources.find(s=>s.id===owner);
+ const src=path.join(root,'.cache/calculator-sources',owner,pin.revision,core?'v2/'+f.slice('assets/core/v2/'.length):f.slice(owner.length+1));
+ assert.equal(hash(fs.readFileSync(src)),hash(fs.readFileSync(path.join(dist,f))),f+' exact pinned source');
+}
+assert(!files.some(f=>f.endsWith('AGENTS.md')||f.startsWith('docs/')),'Instructions/evidence are not public assets');
+console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Six JS files allow only reviewed chart dimensions/fonts; all other financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);

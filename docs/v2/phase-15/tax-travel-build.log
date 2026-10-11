@@ -1,0 +1,13 @@
+
+> build
+> node scripts/build-site.mjs
+
+Fetched canadian-tax-checklist at a7fbe80a2f9068a2a33e23cb5b715ecd128b00b5
+Fetched travel-planner at 375a4bb1333415c3f7fa88541c1a8c3e6ba53e8e
+Verified 23 pinned GitHub sources.
+Built 22 calculators into /workspace/simplekit-site/dist
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

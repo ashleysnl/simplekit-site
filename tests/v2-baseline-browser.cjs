@@ -83,8 +83,8 @@ async function inputs(page) {
       const tool = manifest.tools.find(t=>t.slug===id);
       const response = await page.goto(origin+tool.canonicalPath,{waitUntil:'networkidle'});
       assert.equal(response.status(),200,id);
-      const pilot = ['retirement-planner','mortgage-calculator'].includes(id);
-      assert(await page.locator(pilot ? '[data-v2-pilot] .v2s-header nav' : '[data-simplekit-header] nav').count(),`${id}: shared shell missing`);
+      const pilot = await page.locator('[data-v2-system="1"]').count()>0;
+      assert(await page.locator(pilot ? '.v2s-header nav' : '[data-simplekit-header] nav').count(),`${id}: shared shell missing`);
       const initialInputs = await inputs(page);
       const before = await outputs(page,selectors);
       const analyticsBefore = await page.evaluate(() => (window.dataLayer || []).length);

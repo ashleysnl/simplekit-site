@@ -7,6 +7,8 @@ import {execFileSync} from 'node:child_process';
 import {repoRoot,outputRoot} from './paths.mjs';
 import {loadSeoManifest,getCanonicalToolRegistry} from './seo-utils.mjs';
 import presentationTransform from './v2-presentation-contract.cjs';
+import calculatorPresentation from './v2-calculator-presentation.cjs';
+import migration from './v2-migration-contract.cjs';
 const record=process.argv.includes('--record');
 const evidence=path.join(repoRoot,'docs/v2/baseline');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
@@ -48,17 +50,28 @@ if(record) {
  save('source-identity.json',{planCommit:execFileSync('git',['rev-parse','HEAD'],{cwd:repoRoot,encoding:'utf8'}).trim(),mainCommit:execFileSync('git',['rev-parse','origin/main'],{cwd:repoRoot,encoding:'utf8'}).trim(),node:process.version,protectedInputHashes:Object.fromEntries(['data/tools.json','data/site-pages.json','data/calculator-sources.json','index.html','tools/index.html','CNAME','.github/workflows/validate.yml','.github/workflows/cloudflare-preview.yml','assets/site.css'].map(p=>[p,hash(read(path.join(repoRoot,p)))]))});
 } else {
  const previous=JSON.parse(read(path.join(evidence,'contracts.json')));
- // Phase 14 permits only two presentation documents and three traceable pin moves.
+ // Reviewed source-owned migrations preserve original numerical and route contracts.
  // Numerical JavaScript remains checked against the original baseline hashes.
  const pilot=JSON.parse(read(path.join(repoRoot,'data/v2-pilot-sources.json')));
- for(const s of contracts.sourcePins.sources)if(pilot.transitions[s.id]){assert.equal(s.revision,pilot.transitions[s.id].after);s.revision=pilot.transitions[s.id].before;}
+ for(const s of contracts.sourcePins.sources)if(migration.transitions[s.id]){assert.equal(s.revision,migration.transitions[s.id].after);s.revision=migration.transitions[s.id].before;}
  for(const p of pilot.changedExistingRuntimeFiles)contracts.protectedAssets[p]=previous.protectedAssets[p];
+ for(const e of migration.suite.calculators){
+  contracts.protectedAssets[e.id+'/index.html']=previous.protectedAssets[e.id+'/index.html'];
+  delete contracts.protectedAssets[e.id+'/v2-calculator.css'];
+  for(const f of e.changedFiles.filter(f=>f.endsWith('.png')))delete contracts.protectedAssets[e.id+'/'+f];
+  for(const f of e.changedFiles.filter(f=>f.endsWith('.js')))contracts.protectedAssets[e.id+'/'+f]=previous.protectedAssets[e.id+'/'+f];
+ }
  for(const p of Object.keys(contracts.protectedAssets))if(p.startsWith('assets/core/v2/'))delete contracts.protectedAssets[p];
  delete contracts.protectedAssets['retirement-planner/icons/apple-touch-icon.png'];
  const visual=JSON.parse(read(path.join(repoRoot,'docs/v2/phase-14/presentation-js-baseline.json')));
  for(const js of JSON.parse(read(path.join(evidence,'upstream-js.json')))){
   if(visual[js.file]){assert.equal(hash(visual[js.file].before),js.sha256,js.file+' original source');assert.equal(read(path.join(outputRoot,js.file)).toString(),presentationTransform(visual[js.file].before),js.file+' only reviewed chart presentation changes');}
-  else assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
+  else if(!migration.suite.calculators.some(e=>e.id===js.file.split('/')[0]&&e.presentationChanges&&e.changedFiles.includes(js.file.slice(e.id.length+1))))assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
+  else {
+   const entry=JSON.parse(read(path.join(repoRoot,'docs/v2/phase-15/presentation-js-baseline.json')))[js.file.split('/')[0]];
+   assert.equal(hash(entry.before),js.sha256,js.file+' original presentation source');
+   assert.equal(read(path.join(outputRoot,js.file)).toString(),calculatorPresentation(js.file,entry.before),js.file+' only reviewed canvas presentation changes');
+  }
  }
  assert.deepEqual(contracts,previous,'Protected calculator/route/source/reference contract changed');
 }

@@ -443,13 +443,13 @@ Verified demo: https://1e526422.simplekit-preview.pages.dev. Owner authorized in
 
 ## Phase 15 — Redesign remaining 20 calculators in controlled batches
 
-Status: `[ ]`. Implementation may proceed under the owner’s implementation-first cadence; pilot acceptance and deferred verification consolidate into Phases 16–17.
+Status: `[~]`. Implementation of all remaining 20 calculators is complete in four coherent batches, each with a passing portable build. All 22 now opt into V2; full numerical/state/browser/visual verification remains deferred to Phases 16–17. [22-tool matrix and source records](v2/phase-15-verification.md).
 
-- [ ] Group remaining tools by interaction pattern (retirement/investing, housing, debt, income/tax, budgeting/planning, checklists/travel); inventory unique UI and state cases.
-- [ ] Apply shared V2 visual primitives and appropriate tool-specific layouts to every remaining calculator; avoid blanket CSS that breaks complex charts, tables or input controls.
-- [ ] Update upstream sources and source pins after source inspection and a successful batch build; record per-tool old/new pins, changed files and rollback path. Defer fixture tests to Phase 16.
-- [ ] For every tool record deferred mobile/desktop, numerical, persistence, import/export, validation, keyboard, zoom/reflow and related-link checks in the migration matrix; verify them together in Phase 16.
-- [ ] Maintain a 22-row tool-by-tool migration checklist with `[ ]`, `[~]`, `[x]` and direct evidence; do not mark the phase complete based only on shared CSS application.
+- [x] Group remaining tools by interaction pattern (retirement/investing, housing, debt, income/tax, budgeting/planning, checklists/travel); inventory unique UI and state cases.
+- [~] Apply shared V2 visual primitives and appropriate tool-specific layouts to every remaining calculator; avoid blanket CSS that breaks complex charts, tables or input controls.
+- [x] Update upstream sources and source pins after source inspection and a successful batch build; record per-tool old/new pins, changed files and rollback path. Defer fixture tests to Phase 16.
+- [x] For every tool record deferred mobile/desktop, numerical, persistence, import/export, validation, keyboard, zoom/reflow and related-link checks in the migration matrix; verify them together in Phase 16.
+- [x] Maintain a 22-row tool-by-tool migration checklist with `[ ]`, `[~]`, `[x]` and direct evidence; do not mark the phase complete based only on shared CSS application.
 
 Acceptance:
 - [ ] All 22 calculator routes are visually migrated and have tool-specific passing regression evidence, including the two pilots.
@@ -558,7 +558,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
-| 15 Remaining calculators | `[ ]` | Implement remaining 20 in coherent batches; comprehensive verification deferred to Phase 16. |
+| 15 Remaining calculators | `[~]` | [All 20 implemented](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. Full verification deferred to Phase 16. |
 | 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |
 | 17 Cloudflare preview/review | `[ ]` | Pending Phase 16; owner approves full-site preview. |
 | 18 Production rollout | `[ ]` | Pending Phase 17 and explicit release approval. |

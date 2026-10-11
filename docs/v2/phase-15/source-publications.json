@@ -1,0 +1,590 @@
+[
+  {
+    "id": "simplekit-core",
+    "repository": "ashleysnl/SimpleKit-Core",
+    "before": "de9d1b7c9cc34e96b6df65a4aa2078c3c5fba6d5",
+    "after": "817b8480fbe4e932f876f5642a44fb9bfb268ee7",
+    "files": [
+      {
+        "path": "v2/calculators.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f4cd501d7876c1b4b0a803b308195924b84d9a27"
+      },
+      {
+        "path": "v2/calculators.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d5af928d1c86fa3ee0aec102184ae124af7c0efd"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "85a39ffb3a3cb2fa3ef7cfe4191396cd72862f5c"
+      }
+    ]
+  },
+  {
+    "id": "cpp-calculator",
+    "repository": "ashleysnl/SimpleKitCPP",
+    "before": "e2f14e9401f9e16bf25fa6801dbf5df494676edf",
+    "after": "6dd3bbd05c1ac357f15bd27cbd4cf88b05e2da8e",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf78d02bd9a9094401cbb2f34879af011ec56d4c"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c0f3d9f67d1848018f2d7985a3459cf64d3a789"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "610e507a2a9670a8324155e26c4827b4a700b87f"
+      },
+      {
+        "path": "icons/apple-touch-icon.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df3afa8e0897cae08f089d11dceb16e7b7ddfb"
+      }
+    ]
+  },
+  {
+    "id": "take-home-pay-calculator",
+    "repository": "ashleysnl/SimpleKitTakeHomePay",
+    "before": "78d539f338078443563a7927e68c156aa261beac",
+    "after": "64c820ba6aae43b94217f8a27270cb1dee7f6bed",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "02c5279bc8ddedfd8925fe52c204f50875e8f3e9"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "11a661d5648e51a394982a464116bedcfd5d2507"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7002a9f74974f2228e55ec40ed1b4a712397ec8d"
+      }
+    ]
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "repository": "ashleysnl/SimpleKitDebt",
+    "before": "c36650f1ef95b446ec2035e1ee28d37d11d69e28",
+    "after": "a6026273755dfb39d006637c473712e192a14c93",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "236688a58daac3636b1a8635a58019432043a6c3"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d8be0863618053f8a36fd40fd9e402653e7fa639"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "402d1a7feac417e91ca3ffa7a1337dadf9ddbf5d"
+      },
+      {
+        "path": "assets/js/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6312bc2f9d8fb2d4cee4c07a90d8fd155b95cdea"
+      }
+    ]
+  },
+  {
+    "id": "house-affordability-calculator",
+    "repository": "ashleysnl/SimpleKitHouseAffordability",
+    "before": "1a34b31ba85ca3cf0e31175bc93446bb01a61154",
+    "after": "b03fef1caf722cecc9508df2c2649149872d9334",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98524426a5c5ce72e33ffc38ffbe5a0c16bc531b"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e71f2daa5962583eb781f7f59c2ffa3bf2922d7c"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1bbee4740d6b9abe3940cdae05ed15c193239ed"
+      }
+    ]
+  },
+  {
+    "id": "credit-card-interest-calculator",
+    "repository": "ashleysnl/SimpleKitCreditCard",
+    "before": "2b75e7a44d3af3eb87cfb68c2cdbac9312114ef3",
+    "after": "e1371433da8efebfeeacdb3536b854d95e437f76",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "52c1f24ca998087d2b22d2418d687c03e43e5623"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f6832555cf9fdff7aab52dd4006d08d171396cd4"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff9d0c945745e9081a5ec925b75d8938d375d42a"
+      }
+    ]
+  },
+  {
+    "id": "loan-calculator",
+    "repository": "ashleysnl/SimpleKITLoan",
+    "before": "bda03742ce0f2d8677a34e56e4a665d66a9113ae",
+    "after": "352747e12d93c892a0d3fed7a8cb62cc2fcc64ad",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "556c7efb57cf15944c99b8d964df543c4762ea46"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c533d0eb8da439bdc7a40707e6768c2a351ff67"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ba5c6e1d8bdfc17141b98968972d316218509ff7"
+      },
+      {
+        "path": "assets/js/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0af46b2585027a9ac20cccea62c69a6e00da6b47"
+      }
+    ]
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "repository": "ashleysnl/SimplekitRentVsBuy",
+    "before": "6d361109616df603b15b5a7b4f501d0407fa542f",
+    "after": "5f0db0ecc1396de4fb6a30daf5a14520887e87a6",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a26b5d0d5658ed94a2502a75ae6cdbbc8be8405d"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37f6bce3b3b256b81c8d21342709af87c51640f2"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b7e12d779eaefccdd5599535cef1f890c3fed4f4"
+      }
+    ]
+  },
+  {
+    "id": "budget-planner",
+    "repository": "ashleysnl/SimpleKitMonthlyBudget",
+    "before": "35a6c68bca49d56b5e46d1ca7530dede48eccb36",
+    "after": "93e61eff224bcc1a6c4fb45b581dc08ed18a1890",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e366a43ce93da4968385d67dd92768f901a5751"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2d877e877479c360b4d69cec3fe2a7ed9fb95aeb"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "970c30f00e5ce503f8c7b0fd2ea7bbd7aae93b6c"
+      }
+    ]
+  },
+  {
+    "id": "compound-interest-calculator",
+    "repository": "ashleysnl/SimpleKitInvestment",
+    "before": "cd7ec0dfeb1199a1e09f80a4c04ff3f2f29d4955",
+    "after": "e29b7b70a21dea385d89065d1ea8afe728d4728c",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d6a7800b83d5bc9d539bf09e17e8ee0f1ac99b63"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b86b124e051aadda5cc94eb465f61f17d8d8c22b"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "99eba0049a6ca877d0a79e921f9327cb0cbb44a4"
+      }
+    ]
+  },
+  {
+    "id": "net-worth-calculator",
+    "repository": "ashleysnl/SimpleKitNetWorth",
+    "before": "55ede2d5e2130aa10530cccbc4fc8dac52f24975",
+    "after": "38229bea99718d7fb7eec682faf46c7799fea0dc",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "af47fa7a6d2aceaa5693db0da9a4ef6c6059364f"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccbef7e617f6d9e2a690d1d27668d48492384575"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "500ea0c63204379f1d15d335da6794b46834119f"
+      }
+    ]
+  },
+  {
+    "id": "savings-goal-calculator",
+    "repository": "ashleysnl/SimpleKitSavingsGoal",
+    "before": "0f4a7e4a276535694e121168b2f0e85d50e41630",
+    "after": "cb8a1065200c1c75c81f0b6cf0172ded533cdc29",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c80cf0a8540b151354b26b09616606a129a818e1"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37ba3cecfb75d352163b2c5f10f117903d6c2d64"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b5b8c017ed32c1ba24480746879e52efba59b2ce"
+      }
+    ]
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "repository": "ashleysnl/SImpleKitEmergency",
+    "before": "144367cf3e024810b70b373677844e7f36c2c829",
+    "after": "1c7cb83f86e45e5881a3fedab4561b97bc750da7",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee77718f13c3f06797440845c6dcd5396f3c16af"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92168478c5f22e07623ae3ebfd736f3e6da3474d"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c860a4c70f8cc23f8d22ed5b7590355aad26de03"
+      }
+    ]
+  },
+  {
+    "id": "mortgage-paydown-vs-invest-calculator",
+    "repository": "ashleysnl/SimpleKitMortOrInvest",
+    "before": "7e7198d600e545bf4b61c23fee50db9421b5b4c2",
+    "after": "5adb0fa4c017682225da9b2e2356e1d6eabe7066",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "914977a5f6d73bcedeebea4ab90a064490ca56d2"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "48db8fc52241e411d4dc4fe22dc6234f8a1014cd"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2bce3a819924504d1df74b1d364c1cce8c65bd80"
+      },
+      {
+        "path": "icons/apple-touch-icon.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df3afa8e0897cae08f089d11dceb16e7b7ddfb"
+      }
+    ]
+  },
+  {
+    "id": "investment-fee-calculator",
+    "repository": "ashleysnl/SimpleKitFees",
+    "before": "470270f4adfcdc6987ac1d20c3657453e65e6c1c",
+    "after": "f46d933798900ccce7889842daa6dd45d49d4a86",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb5e21f7c1dbbc3de535176a506d6b2aa5d9a462"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acd145d6e3261425b2567ea5c387ed2ed70a10eb"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d3bcdcff6abe7db1c608d4bb2e36d4104d7b388a"
+      },
+      {
+        "path": "icons/apple-touch-icon.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df3afa8e0897cae08f089d11dceb16e7b7ddfb"
+      }
+    ]
+  },
+  {
+    "id": "rrsp-vs-tfsa-calculator",
+    "repository": "ashleysnl/SimpleKitRRSPTFSA",
+    "before": "ef07a5e34a6d838d34dbf39a3e860c39d8b0eccd",
+    "after": "c4e4be92eacab080cea23e45d5a3153a13a6234b",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c61e2b95b5fd54075b5cd598909edcfeb62e4fc"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d86eea04c53740aafcfee7dd748ea115d6e00328"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bd0bd8717a46e9287a66e96d941c8f945465008f"
+      },
+      {
+        "path": "icons/apple-touch-icon.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df3afa8e0897cae08f089d11dceb16e7b7ddfb"
+      }
+    ]
+  },
+  {
+    "id": "fire-calculator",
+    "repository": "ashleysnl/SimpleKitFIRE",
+    "before": "e44404c1405382840c12a2edf7aae3d1aa816e1b",
+    "after": "ec2d8014299ae79740c2b8efdd9b6f4a2db715c6",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "483ed0b51d4dc59ccbca18f71b7ab4e3d542f15a"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "595a9c143b095ef8cf0608c5d7e23bcbacf4d953"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cd7e15e2d8ad5d462e86d8f1ecb3cd34b073447e"
+      },
+      {
+        "path": "icons/apple-touch-icon.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "28df3afa8e0897cae08f089d11dceb16e7b7ddfb"
+      }
+    ]
+  },
+  {
+    "id": "canadian-tax-checklist",
+    "repository": "ashleysnl/SimpleKitTaxCheckListCAN",
+    "before": "ebe6150565b6e6dff5fcf0f96837f9710cbc422a",
+    "after": "a7fbe80a2f9068a2a33e23cb5b715ecd128b00b5",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbfbcd57cf84a5dbae355f60f2c5066304ffb7e6"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "33c4001d098bc0f0425b2410480d182b405c88c8"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da2dc75a0abfc9be7240fcd84ad2cef0dbf65dbe"
+      }
+    ]
+  },
+  {
+    "id": "travel-planner",
+    "repository": "ashleysnl/TravelPlanner",
+    "before": "dc5b680e1bf49b75a0f8a746cf49c58b0914707a",
+    "after": "375a4bb1333415c3f7fa88541c1a8c3e6ba53e8e",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5e88faad77dcccfa34e50af17cb264a4e5be8394"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e2ef6f728b9b234d482d0524f748711f29b5fe6"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "233d9b36d657e8c456fe1a2dfbb9531665147ea6"
+      }
+    ]
+  },
+  {
+    "id": "debt-to-income-ratio-calculator",
+    "repository": "ashleysnl/SimpleKitDTI",
+    "before": "d3c05a120862cc5c46e27fd527d2369fd6679121",
+    "after": "4cb4bde5441a90476718d03753b51d19bf39f6e1",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e362a5ea792cca2e9e3d32fa792e4bb5d53dc457"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4769cc48a2a1e1b5bf3a2a883465434b6f76614a"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3d581cb460dbe03fdb74e53fc9eeaa07f0790ee9"
+      }
+    ]
+  },
+  {
+    "id": "contractor-effective-hourly-rate-calculator",
+    "repository": "ashleysnl/SimpleKitContractorRate",
+    "before": "f8feb8c5d6193dc1a300a7632a26203223e95ecd",
+    "after": "c975759a49ca05deb6a20f19295421077663d4e8",
+    "files": [
+      {
+        "path": "index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2bcc5ae5b8ba3938eaf9a748a769d95bdfd5cd51"
+      },
+      {
+        "path": "v2-calculator.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b2a1fb248c4a19d3b4594284de10e17244a7b1e1"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7eb97b8e42cbaf73f5bea33c4284410e4f3b422"
+      }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cpp-calculator",
+    "developV2": "6dd3bbd05c1ac357f15bd27cbd4cf88b05e2da8e",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "take-home-pay-calculator",
+    "developV2": "64c820ba6aae43b94217f8a27270cb1dee7f6bed",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "developV2": "a6026273755dfb39d006637c473712e192a14c93",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "house-affordability-calculator",
+    "developV2": "b03fef1caf722cecc9508df2c2649149872d9334",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "credit-card-interest-calculator",
+    "developV2": "e1371433da8efebfeeacdb3536b854d95e437f76",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "loan-calculator",
+    "developV2": "352747e12d93c892a0d3fed7a8cb62cc2fcc64ad",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "developV2": "5f0db0ecc1396de4fb6a30daf5a14520887e87a6",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "budget-planner",
+    "developV2": "93e61eff224bcc1a6c4fb45b581dc08ed18a1890",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "compound-interest-calculator",
+    "developV2": "e29b7b70a21dea385d89065d1ea8afe728d4728c",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "net-worth-calculator",
+    "developV2": "38229bea99718d7fb7eec682faf46c7799fea0dc",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "savings-goal-calculator",
+    "developV2": "cb8a1065200c1c75c81f0b6cf0172ded533cdc29",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "developV2": "1c7cb83f86e45e5881a3fedab4561b97bc750da7",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "mortgage-paydown-vs-invest-calculator",
+    "developV2": "5adb0fa4c017682225da9b2e2356e1d6eabe7066",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "investment-fee-calculator",
+    "developV2": "f46d933798900ccce7889842daa6dd45d49d4a86",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "rrsp-vs-tfsa-calculator",
+    "developV2": "c4e4be92eacab080cea23e45d5a3153a13a6234b",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "fire-calculator",
+    "developV2": "ec2d8014299ae79740c2b8efdd9b6f4a2db715c6",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "canadian-tax-checklist",
+    "developV2": "a7fbe80a2f9068a2a33e23cb5b715ecd128b00b5",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "travel-planner",
+    "developV2": "375a4bb1333415c3f7fa88541c1a8c3e6ba53e8e",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "debt-to-income-ratio-calculator",
+    "developV2": "4cb4bde5441a90476718d03753b51d19bf39f6e1",
+    "productionUnchanged": true,
+    "localClean": true
+  },
+  {
+    "id": "contractor-effective-hourly-rate-calculator",
+    "developV2": "c975759a49ca05deb6a20f19295421077663d4e8",
+    "productionUnchanged": true,
+    "localClean": true
+  }
+]

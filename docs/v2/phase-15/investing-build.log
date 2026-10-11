@@ -1,0 +1,17 @@
+
+> build
+> node scripts/build-site.mjs
+
+Fetched cpp-calculator at 6dd3bbd05c1ac357f15bd27cbd4cf88b05e2da8e
+Fetched compound-interest-calculator at e29b7b70a21dea385d89065d1ea8afe728d4728c
+Fetched investment-fee-calculator at f46d933798900ccce7889842daa6dd45d49d4a86
+Fetched rrsp-vs-tfsa-calculator at c4e4be92eacab080cea23e45d5a3153a13a6234b
+Fetched fire-calculator at ec2d8014299ae79740c2b8efdd9b6f4a2db715c6
+Fetched simplekit-core at 817b8480fbe4e932f876f5642a44fb9bfb268ee7
+Verified 23 pinned GitHub sources.
+Built 22 calculators into /workspace/simplekit-site/dist
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
