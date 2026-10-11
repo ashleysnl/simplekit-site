@@ -5,9 +5,11 @@ const before=require('../docs/v2/phase-14/baseline-inventory.json').files;
 const contract=require('../data/v2-pilot-sources.json');
 const pins=require('../data/calculator-sources.json');
 const baseline=require('../docs/v2/baseline/contracts.json');
+const originalCss=require('../docs/v2/phase-14/baseline-css.json');
+assert.equal(crypto.createHash('sha256').update(originalCss.content).digest('hex'),before[originalCss.file].sha256,'Independent CSS baseline integrity');
 for(const s of baseline.sourcePins.sources){const c=pins.sources.find(p=>p.id===s.id);assert.deepEqual(c,{...s,revision:contract.transitions[s.id]?.after||s.revision});if(contract.transitions[s.id])assert.equal(s.revision,contract.transitions[s.id].before);}
 let exact=0;
-for(const[file,c]of Object.entries(before)){const raw=fs.readFileSync(path.join(dist,file));if(file==='retirement-planner/assets/css/styles.css'){const old=fs.readFileSync(path.join(root,'.cache/calculator-sources/retirement-planner',contract.transitions['retirement-planner'].before,'assets/css/styles.css'),'utf8');assert.equal(raw.toString(),old.replace('@import url("../../styles.css");','/* Base stylesheet is loaded explicitly in index.html. */'));continue;}if(contract.changedExistingRuntimeFiles.includes(file)){assert(raw.toString().includes('data-v2-pilot='));continue;}assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),c.sha256,file);exact++;}
+for(const[file,c]of Object.entries(before)){const raw=fs.readFileSync(path.join(dist,file));if(file===originalCss.file){assert.equal(raw.toString(),originalCss.content.replace('@import url("../../styles.css");','/* Base stylesheet is loaded explicitly in index.html. */'));continue;}if(contract.changedExistingRuntimeFiles.includes(file)){assert(raw.toString().includes('data-v2-pilot='));continue;}assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),c.sha256,file);exact++;}
 const files=fs.readdirSync(dist,{recursive:true}).filter(f=>fs.statSync(path.join(dist,f)).isFile());
 const added=files.filter(f=>!before[f]);assert.equal(added.length,15);assert(added.every(f=>f.startsWith('assets/core/v2/')));
 for(const f of added){const s=path.join(root,'.cache/calculator-sources/simplekit-core',contract.transitions['simplekit-core'].after,'v2',f.slice('assets/core/v2/'.length));assert.equal(crypto.createHash('sha256').update(fs.readFileSync(s)).digest('hex'),crypto.createHash('sha256').update(fs.readFileSync(path.join(dist,f))).digest('hex'),f+' upstream asset');}

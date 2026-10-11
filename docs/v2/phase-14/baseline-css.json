@@ -1,0 +1,5 @@
+{
+  "file": "retirement-planner/assets/css/styles.css",
+  "sha256": "11ce2c56d7c098a58c6cb241a2e53e43415ad967d671628cea6ad66d202afdea",
+  "content": "@import url(\"../../styles.css\");\n\n.skip-link {\n  position: absolute;\n  left: 16px;\n  top: -48px;\n  z-index: 100;\n  padding: 10px 14px;\n  border-radius: 999px;\n  background: #0f6abf;\n  color: #fff;\n  text-decoration: none;\n  font-weight: 700;\n  box-shadow: 0 12px 28px rgba(15, 106, 191, 0.25);\n  transition: top 140ms ease;\n}\n\n.skip-link:focus {\n  top: 14px;\n}\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n"
+}
