@@ -1,0 +1,491 @@
+{
+  "scope": "Every non-calculator route; retained upstream exceptions are not marked redesigned.",
+  "pages": [
+    {
+      "route": "/about/",
+      "family": "about",
+      "action": "migrate",
+      "source": "templates/about/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/",
+      "family": "homepage",
+      "action": "retain",
+      "reason": "Previously migrated and verified in Phases 2\u201310; preserve the approved homepage.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": true
+    },
+    {
+      "route": "/learn/budget-to-cash-flow-plan/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/budget-to-cash-flow-plan/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/compound-interest-and-investment-fees/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/compound-interest-and-investment-fees/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/cpp-basics/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/cpp-basics/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/credit-card-interest-and-payoff/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/credit-card-interest-and-payoff/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/debt-snowball-vs-avalanche/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/debt-snowball-vs-avalanche/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/emergency-fund-and-savings-goals/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/emergency-fund-and-savings-goals/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/fire-explained/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/fire-explained/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/",
+      "family": "learn-hub",
+      "action": "migrate",
+      "source": "templates/learn/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/loan-payments-and-amortization/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/loan-payments-and-amortization/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/monthly-budgeting-and-cash-flow/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/monthly-budgeting-and-cash-flow/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/mortgage-affordability-canada/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/mortgage-affordability-canada/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/mortgage-costs-beyond-the-payment/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/mortgage-costs-beyond-the-payment/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/mortgage-prepayment-vs-investing/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/mortgage-prepayment-vs-investing/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/net-worth-basics/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/net-worth-basics/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/rent-vs-buy-canada/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/rent-vs-buy-canada/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/retirement-planning-basics/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/retirement-planning-basics/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/rrsp-vs-tfsa-basics/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/rrsp-vs-tfsa-basics/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/learn/travel-budget-planning-basics/",
+      "family": "article",
+      "action": "migrate",
+      "source": "templates/learn/travel-budget-planning-basics/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/methodology/",
+      "family": "methodology",
+      "action": "migrate",
+      "source": "templates/methodology/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/privacy/",
+      "family": "legal",
+      "action": "migrate",
+      "source": "templates/privacy/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/retirement-planner/404.html",
+      "family": "error",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "404.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/canadian-retirement-income-calculator.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "canadian-retirement-income-calculator.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/cpp-timing-calculator-canada.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "cpp-timing-calculator-canada.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/oas-clawback-calculator.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "oas-clawback-calculator.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/retirement-tax-calculator-canada.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "retirement-tax-calculator-canada.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/rrif-minimum-withdrawal-calculator.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "rrif-minimum-withdrawal-calculator.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/rrif-withdrawal-calculator.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "rrif-withdrawal-calculator.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/retirement-planner/rrsp-withdrawal-strategy-canada.html",
+      "family": "retirement-guide",
+      "action": "retain",
+      "reason": "Pinned upstream Retirement Planner page; defer source-owned migration to Phase 14 as established by Phase 11 ownership and immutable-pin contract.",
+      "source": {
+        "repository": "ashleysnl/RetirementPlanner",
+        "revision": "77babb4a4d8da834c3118c80e50b989ba7429130",
+        "sourceFile": "rrsp-withdrawal-strategy-canada.html",
+        "authority": "upstream pinned source; separate reviewed update required"
+      },
+      "status": "[ ]",
+      "migrated": false,
+      "exceptionReviewedUnder": "Phase 11 ownership and Phase 12 immutable-pin migration contract; implementation remains pending Phase 14."
+    },
+    {
+      "route": "/support/",
+      "family": "support",
+      "action": "migrate",
+      "source": "templates/support/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/budget-planner/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/budget-planner/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/cpp-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/cpp-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/debt-payoff-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/debt-payoff-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/emergency-fund-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/emergency-fund-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/fire-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/fire-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/",
+      "family": "directory",
+      "action": "migrate",
+      "source": "templates/tools/index.html",
+      "status": "[~]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/investment-growth-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/investment-growth-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/loan-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/loan-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/net-worth-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/net-worth-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/rent-vs-buy-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/rent-vs-buy-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/retirement-planner/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/retirement-planner/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/rrsp-tfsa-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/rrsp-tfsa-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/savings-goal-calculator/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/savings-goal-calculator/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    },
+    {
+      "route": "/tools/travel-planner/",
+      "family": "compatibility",
+      "action": "retain",
+      "reason": "Retain noindex compatibility redirects and exact canonical destinations; no reading layout is served.",
+      "source": {
+        "repository": "ashleysnl/simplekit-site",
+        "sourceFile": "templates/tools/travel-planner/index.html",
+        "authority": "authored template"
+      },
+      "status": "[x]",
+      "migrated": false
+    }
+  ]
+}

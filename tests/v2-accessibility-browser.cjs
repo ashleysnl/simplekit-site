@@ -68,11 +68,11 @@ async function audit(p, name, blocking = true) {
 }
 async function keyboard(p, directory=false) {
   await p.keyboard.press('Tab');
-  const skip=p.getByRole('link',{name:directory?'Skip to tools':'Skip to main content',exact:true});
+  const skip=p.getByRole('link',{name:directory?'Skip to content':'Skip to main content',exact:true});
   assert(await skip.evaluate(n=>n===document.activeElement),'Skip link must be first tab stop');
   assert.equal(await skip.evaluate(n=>getComputedStyle(n).outlineStyle),'solid');
   await skip.press('Enter');
-  const target=p.locator(directory?'.content#main-content':'main#main-content');
+  const target=p.locator(directory?'main#main':'main#main-content');
   assert(await target.evaluate(n=>n===document.activeElement),'Skip destination must receive focus');
   if(directory)return;
   const menu=p.locator('[data-v2-menu-toggle]');await menu.focus();await p.keyboard.press('Enter');

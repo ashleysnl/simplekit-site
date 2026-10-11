@@ -396,7 +396,7 @@ Verified evidence: [Phase 12 verification](v2/phase-12-verification.md), [System
 
 ## Phase 13 — Articles, Learn hub and supporting pages redesign
 
-Status: `[ ]`. Depends on Phase 12.
+Status: `[~]`. Site-owned content migration implemented; responsive and hosted verification in progress.
 
 - [ ] Redesign Learn hub, all existing article and educational guide templates, tool directory and supporting pages (About, Methodology, Privacy, Support and other inventoried routes) to match V2.
 - [ ] Apply consistent header/footer, breadcrumb trails, reading widths, serif headings, sans-serif body, author/date information only where substantiated, section navigation, lists, tables, callouts, citations and related tools.
@@ -539,7 +539,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 10 Interim homepage/discovery regression | `[x]` | [Phase 10 verification](v2/phase-10-verification.md); clean/repeated builds, all 22 fixtures, import/export/reload, hosted cross-engine/SEO/performance and preserved candidate pass in run 38072049423. Manual release gates remain. |
 | 11 Site-wide inventory | `[x]` | [Inventory/evidence](v2/phase-11-verification.md): 67 pages, 23 sources, 155 captures; hosted run 38088742754 passes. Phase 12 is next; migrations and manual review remain. |
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
-| 13 Articles and supporting pages | `[ ]` | Pending Phase 12; migrate all editorial and informational pages. |
+| 13 Articles and supporting pages | `[~]` | 23 site-owned pages implemented; preservation, responsive and hosted checks in progress. Upstream guides retained for Phase 14. |
 | 14 Calculator pilots | `[ ]` | Pending Phase 13; Retirement and Mortgage pilots with owner review. |
 | 15 Remaining calculators | `[ ]` | Pending Phase 14; complete all 22 tool migrations. |
 | 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |
