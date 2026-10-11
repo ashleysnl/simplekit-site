@@ -145,6 +145,32 @@ test("output checks detect wrong metadata, missing assets and module dependencie
   assert.throws(() => validateOutput(root, manifest), /Missing dependency/);
   writeFileSync(path.join(directory, "app.js"), "console.log('ok');");
   assert.doesNotThrow(() => validateOutput(root, manifest));
+  for (const rel of ["apple-touch-icon", "apple-touch-icon-precomposed", "shortcut icon", "mask-icon", "ICON"]) {
+    writeFileSync(path.join(directory, "index.html"), html.replace("</html>", `<link rel="${rel}" href="./touch-icon.png"></html>`));
+    assert.throws(() => validateOutput(root, manifest), /Missing local asset .*touch-icon\.png/);
+    writeFileSync(path.join(directory, "touch-icon.png"), "");
+    assert.throws(() => validateOutput(root, manifest), /Missing local asset .*touch-icon\.png/);
+    writeFileSync(path.join(directory, "touch-icon.png"), "icon fixture");
+    assert.doesNotThrow(() => validateOutput(root, manifest));
+    rmSync(path.join(directory, "touch-icon.png"));
+  }
+  // A legacy exception must not hide the same missing asset after V2 adoption.
+  manifest.tools = [loadSeoManifest(repoRoot).tools.find(tool => tool.slug === "cpp-calculator")];
+  const cpp = manifest.tools[0];
+  const cppDirectory = path.join(root, cpp.slug);
+  mkdirSync(cppDirectory);
+  rmSync(directory, { recursive: true });
+  writeFileSync(path.join(root, "sitemap.xml"), `<urlset><url><loc>${cpp.canonicalUrl}</loc></url></urlset>`);
+  const cppHtml = `<html><link rel="canonical" href="${cpp.canonicalUrl}"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"></html>`;
+  writeFileSync(path.join(cppDirectory, "index.html"), cppHtml);
+  assert.doesNotThrow(() => validateOutput(root, manifest));
+  writeFileSync(path.join(cppDirectory, "index.html"), cppHtml.replace("<html>", '<html data-v2-system="1">'));
+  assert.throws(() => validateOutput(root, manifest), /Missing local asset/);
+  manifest.tools = [tool];
+  rmSync(cppDirectory, { recursive: true });
+  mkdirSync(directory);
+  writeFileSync(path.join(root, "sitemap.xml"), `<urlset><url><loc>${tool.canonicalUrl}</loc></url></urlset>`);
+  writeFileSync(path.join(directory, "app.js"), "console.log('ok');");
   writeFileSync(path.join(directory, "index.html"), html.replace(`content="${tool.canonicalUrl}"`, 'content="https://simplekit.app/wrong/"'));
   assert.throws(() => validateOutput(root, manifest), /Open Graph URL/);
 });

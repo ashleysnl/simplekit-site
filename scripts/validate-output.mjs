@@ -5,6 +5,17 @@ import { fileURLToPath } from "node:url";
 import { repoRoot, outputRoot } from "./paths.mjs";
 import { loadSeoManifest, runSeoValidation } from "./seo-utils.mjs";
 
+const resourceRelations = new Set(["stylesheet", "icon", "manifest", "apple-touch-icon", "apple-touch-icon-precomposed", "mask-icon"]);
+// These unchanged, pinned legacy calculators already reference absent Apple
+// icons. Keep the exception exact and never apply it to an opted-in V2 page.
+const legacyMissingAppleIcons = new Set([
+  "cpp-calculator/index.html",
+  "fire-calculator/index.html",
+  "investment-fee-calculator/index.html",
+  "mortgage-paydown-vs-invest-calculator/index.html",
+  "rrsp-vs-tfsa-calculator/index.html"
+]);
+
 export function filesIn(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     const filename = path.join(directory, entry.name);
@@ -63,11 +74,19 @@ export function validateOutput(root = outputRoot, manifest = loadSeoManifest(rep
     }
     for (const match of html.matchAll(/<(?:script|img|link)\b[^>]*>/gi)) {
       const attrs = attributes(match[0]);
-      const reference = attrs.src || (attrs.rel === "stylesheet" || attrs.rel === "icon" || attrs.rel === "manifest" ? attrs.href : null);
+      const loadsResource = (attrs.rel || "").toLowerCase().split(/\s+/).some(rel => resourceRelations.has(rel));
+      const reference = attrs.src || (loadsResource ? attrs.href : null);
       if (!reference) continue;
       assert(!reference.startsWith("https://core.simplekit.app/"), `Unbundled Core asset in ${relative}`);
       const target = resolveLocal(reference, filename, root, manifest.site.canonicalHost);
       if (!target) continue;
+      if (!existsSync(target) && attrs.rel === "apple-touch-icon" &&
+          legacyMissingAppleIcons.has(relative) &&
+          target === path.join(path.dirname(filename), "icons/apple-touch-icon.png") &&
+          !/\bdata-v2-(?:system|pilot)\s*=/.test(html)) {
+        console.warn(`Known legacy missing Apple icon: ${relative} (${reference}); repair in its source repository before V2 adoption.`);
+        continue;
+      }
       assert(existsSync(target) && statSync(target).isFile() && statSync(target).size > 0, `Missing local asset ${reference} in ${relative}`);
       assets.add(target);
     }
