@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {repoRoot,outputRoot} from './paths.mjs';
 import {loadSeoManifest,getCanonicalToolRegistry} from './seo-utils.mjs';
+import presentationTransform from './v2-presentation-contract.cjs';
 const record=process.argv.includes('--record');
 const evidence=path.join(repoRoot,'docs/v2/baseline');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
@@ -54,7 +55,11 @@ if(record) {
  for(const p of pilot.changedExistingRuntimeFiles)contracts.protectedAssets[p]=previous.protectedAssets[p];
  for(const p of Object.keys(contracts.protectedAssets))if(p.startsWith('assets/core/v2/'))delete contracts.protectedAssets[p];
  delete contracts.protectedAssets['retirement-planner/icons/apple-touch-icon.png'];
- for(const js of JSON.parse(read(path.join(evidence,'upstream-js.json'))))assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
+ const visual=JSON.parse(read(path.join(repoRoot,'docs/v2/phase-14/presentation-js-baseline.json')));
+ for(const js of JSON.parse(read(path.join(evidence,'upstream-js.json')))){
+  if(visual[js.file]){assert.equal(hash(visual[js.file].before),js.sha256,js.file+' original source');assert.equal(read(path.join(outputRoot,js.file)).toString(),presentationTransform(visual[js.file].before),js.file+' only reviewed chart presentation changes');}
+  else assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
+ }
  assert.deepEqual(contracts,previous,'Protected calculator/route/source/reference contract changed');
 }
 console.log(`${record?'Recorded':'Verified'}: 22 unique tools, 53 sitemap URLs, ${html.length} HTML routes, ${Object.keys(artifact).length} artifact files; ${upstreamJS.length} calculator JS files match pinned upstream. Docs/reference excluded.`);

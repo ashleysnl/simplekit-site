@@ -3,7 +3,7 @@
   "transitions": {
     "retirement-planner": {
       "before": "77babb4a4d8da834c3118c80e50b989ba7429130",
-      "after": "acb5a512bb72a520fb9ba5b34656c4ee9eac9c46"
+      "after": "54bb14f436e0249c4b81e94d4fe042e5de54cc1b"
     },
     "mortgage-calculator": {
       "before": "92cf246721bf6b152334b7bc4185c62098abb8b4",
@@ -24,6 +24,16 @@
     "retirement-planner/rrif-minimum-withdrawal-calculator.html",
     "retirement-planner/rrif-withdrawal-calculator.html",
     "retirement-planner/rrsp-withdrawal-strategy-canada.html",
-    "retirement-planner/assets/css/styles.css"
+    "retirement-planner/assets/css/styles.css",
+    "retirement-planner/src/ui/charts.js",
+    "retirement-planner/src/ui/incomeMap.js",
+    "retirement-planner/src/ui/learnCharts.js",
+    "retirement-planner/app.classic.js"
+  ],
+  "presentationJavaScript": [
+    "retirement-planner/src/ui/charts.js",
+    "retirement-planner/src/ui/incomeMap.js",
+    "retirement-planner/src/ui/learnCharts.js",
+    "retirement-planner/app.classic.js"
   ]
 }

@@ -152,6 +152,9 @@ jobs:
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
             node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           done
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-14/pilots"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit node tests/v2-pilot-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/phase-08/accessibility"
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit node tests/v2-accessibility-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
