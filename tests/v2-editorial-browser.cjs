@@ -11,6 +11,20 @@ const report={baselineSource:baseline.source,axeVersion:axe.version,engines:[],m
 const slug=route=>route.replace(/^\//,'').replace(/\/$/,'').replaceAll('/','-');
 async function bounded(label,operation,milliseconds=30000){let timer;try{return await Promise.race([operation,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(label+' timed out')),milliseconds);})]);}finally{clearTimeout(timer);}}
 async function fonts(page){const deadline=Date.now()+30000;while(Date.now()<deadline){if(await page.evaluate(()=>document.fonts.status==='loaded'))return;await new Promise(r=>setTimeout(r,50));}throw Error('Fonts timed out');}
+async function capture(page,file,quality,result){
+ const viewport=page.viewportSize(),height=await page.evaluate(()=>document.documentElement.scrollHeight);
+ if(height<=30000){await page.screenshot({path:path.join(output,file),type:'jpeg',quality,fullPage:true});result.captures.push({file,documentHeight:height,fullPage:true});return;}
+ // Firefox cannot encode a >32767px image. Retain full-document assertions and
+ // capture overlapping viewport tiles that cover all enlarged article content.
+ await page.setViewportSize({width:viewport.width,height:8000});
+ for(let offset=0,index=0;offset<height;offset+=8000,index++){
+  const scrollY=await page.evaluate(y=>{window.scrollTo(0,y);return window.scrollY;},offset);
+  const tile=index?file.replace('.jpg',`-part-${index+1}.jpg`):file;
+  await page.screenshot({path:path.join(output,tile),type:'jpeg',quality,fullPage:false});
+  result.captures.push({file:tile,documentHeight:height,fullPage:false,scrollY,viewportHeight:8000});
+ }
+ await page.setViewportSize(viewport);await page.evaluate(()=>window.scrollTo(0,0));
+}
 async function contract(page,prior=false){return page.evaluate(prior=>{
  const norm=s=>s.replace(/\s+/g,' ').trim();
  const content=document.querySelector(prior?'.content':'.v2e-content');
@@ -32,7 +46,7 @@ async function layout(page,label){const g=await page.evaluate(()=>{
  for(const engine of engines){
   assert(['chromium','firefox','webkit'].includes(engine));
   const browser=await {chromium,firefox,webkit}[engine].launch({...(engine==='chromium'&&process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:engine==='chromium'?['--no-sandbox']:[]});
-  const result={engine,version:browser.version(),pages:[],layouts:[],axe:[],errors:[],failed:[],interactions:[]};
+  const result={engine,version:browser.version(),pages:[],layouts:[],axe:[],captures:[],errors:[],failed:[],interactions:[]};
   report.engines.push(result);
   async function context(options={},old){const c=await browser.newContext({viewport:{width:390,height:1000},reducedMotion:'reduce',...options});c.setDefaultTimeout(10000);await c.route('**/*',r=>{
    const url=new URL(r.request().url());if(url.origin!==origin)return r.fulfill({status:200,body:'',contentType:'text/plain'});
@@ -64,7 +78,7 @@ async function layout(page,label){const g=await page.evaluate(()=>{
      console.log(engine+' '+route+' '+state);const c=await context(options),p=await open(c,route);if(state==='text-200')await p.addStyleTag({content:'html {font-size:200% !important}'});
      if(state==='no-js'){assert(await p.locator('.v2s-nav').isVisible());assert.equal(await p.locator('.v2s-nav a').count(),5);}
      result.layouts.push({route,state,...await layout(p,route+' '+state)});if(state==='text-200')await scan(p,route+' '+state);
-     if(['no-js','text-200','forced-colors'].includes(state))await p.screenshot({path:path.join(output,engine+'-'+slug(route)+'-'+state+'.jpg'),type:'jpeg',quality:73,fullPage:true});await c.close();
+     if(['no-js','text-200','forced-colors'].includes(state))await capture(p,engine+'-'+slug(route)+'-'+state+'.jpg',73,result);await c.close();
     }
    }
    const c=await context(),p=await open(c,'/learn/budget-to-cash-flow-plan/');
