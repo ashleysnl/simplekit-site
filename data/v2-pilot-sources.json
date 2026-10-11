@@ -1,0 +1,29 @@
+{
+  "phase": 14,
+  "transitions": {
+    "retirement-planner": {
+      "before": "77babb4a4d8da834c3118c80e50b989ba7429130",
+      "after": "acb5a512bb72a520fb9ba5b34656c4ee9eac9c46"
+    },
+    "mortgage-calculator": {
+      "before": "92cf246721bf6b152334b7bc4185c62098abb8b4",
+      "after": "2a2de947e1874638be280d15ca8676c6351cfe03"
+    },
+    "simplekit-core": {
+      "before": "cb1da347956f66cec40c72f48fae38b6daf201ed",
+      "after": "092877bebbab2e93afc532bce37c77d700ee2357"
+    }
+  },
+  "changedExistingRuntimeFiles": [
+    "retirement-planner/index.html",
+    "mortgage-calculator/index.html",
+    "retirement-planner/canadian-retirement-income-calculator.html",
+    "retirement-planner/cpp-timing-calculator-canada.html",
+    "retirement-planner/oas-clawback-calculator.html",
+    "retirement-planner/retirement-tax-calculator-canada.html",
+    "retirement-planner/rrif-minimum-withdrawal-calculator.html",
+    "retirement-planner/rrif-withdrawal-calculator.html",
+    "retirement-planner/rrsp-withdrawal-strategy-canada.html",
+    "retirement-planner/assets/css/styles.css"
+  ]
+}

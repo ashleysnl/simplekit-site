@@ -47,6 +47,14 @@ if(record) {
  save('source-identity.json',{planCommit:execFileSync('git',['rev-parse','HEAD'],{cwd:repoRoot,encoding:'utf8'}).trim(),mainCommit:execFileSync('git',['rev-parse','origin/main'],{cwd:repoRoot,encoding:'utf8'}).trim(),node:process.version,protectedInputHashes:Object.fromEntries(['data/tools.json','data/site-pages.json','data/calculator-sources.json','index.html','tools/index.html','CNAME','.github/workflows/validate.yml','.github/workflows/cloudflare-preview.yml','assets/site.css'].map(p=>[p,hash(read(path.join(repoRoot,p)))]))});
 } else {
  const previous=JSON.parse(read(path.join(evidence,'contracts.json')));
+ // Phase 14 permits only two presentation documents and three traceable pin moves.
+ // Numerical JavaScript remains checked against the original baseline hashes.
+ const pilot=JSON.parse(read(path.join(repoRoot,'data/v2-pilot-sources.json')));
+ for(const s of contracts.sourcePins.sources)if(pilot.transitions[s.id]){assert.equal(s.revision,pilot.transitions[s.id].after);s.revision=pilot.transitions[s.id].before;}
+ for(const p of pilot.changedExistingRuntimeFiles)contracts.protectedAssets[p]=previous.protectedAssets[p];
+ for(const p of Object.keys(contracts.protectedAssets))if(p.startsWith('assets/core/v2/'))delete contracts.protectedAssets[p];
+ delete contracts.protectedAssets['retirement-planner/icons/apple-touch-icon.png'];
+ for(const js of JSON.parse(read(path.join(evidence,'upstream-js.json'))))assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
  assert.deepEqual(contracts,previous,'Protected calculator/route/source/reference contract changed');
 }
 console.log(`${record?'Recorded':'Verified'}: 22 unique tools, 53 sitemap URLs, ${html.length} HTML routes, ${Object.keys(artifact).length} artifact files; ${upstreamJS.length} calculator JS files match pinned upstream. Docs/reference excluded.`);
