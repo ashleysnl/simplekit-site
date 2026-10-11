@@ -1,0 +1,5 @@
+
+> sources:fetch
+> node scripts/acquire-sources.mjs
+
+Verified 23 pinned GitHub sources.

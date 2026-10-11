@@ -6,8 +6,8 @@
       "family": "about",
       "action": "migrate",
       "source": "templates/about/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/",
@@ -27,160 +27,160 @@
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/budget-to-cash-flow-plan/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/compound-interest-and-investment-fees/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/compound-interest-and-investment-fees/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/cpp-basics/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/cpp-basics/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/credit-card-interest-and-payoff/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/credit-card-interest-and-payoff/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/debt-snowball-vs-avalanche/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/debt-snowball-vs-avalanche/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/emergency-fund-and-savings-goals/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/emergency-fund-and-savings-goals/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/fire-explained/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/fire-explained/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/",
       "family": "learn-hub",
       "action": "migrate",
       "source": "templates/learn/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/loan-payments-and-amortization/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/loan-payments-and-amortization/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/monthly-budgeting-and-cash-flow/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/monthly-budgeting-and-cash-flow/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/mortgage-affordability-canada/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/mortgage-affordability-canada/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/mortgage-costs-beyond-the-payment/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/mortgage-costs-beyond-the-payment/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/mortgage-prepayment-vs-investing/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/mortgage-prepayment-vs-investing/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/net-worth-basics/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/net-worth-basics/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/rent-vs-buy-canada/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/rent-vs-buy-canada/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/retirement-planning-basics/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/retirement-planning-basics/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/rrsp-vs-tfsa-basics/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/rrsp-vs-tfsa-basics/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/learn/travel-budget-planning-basics/",
       "family": "article",
       "action": "migrate",
       "source": "templates/learn/travel-budget-planning-basics/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/methodology/",
       "family": "methodology",
       "action": "migrate",
       "source": "templates/methodology/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/privacy/",
       "family": "legal",
       "action": "migrate",
       "source": "templates/privacy/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/retirement-planner/404.html",
@@ -307,8 +307,8 @@
       "family": "support",
       "action": "migrate",
       "source": "templates/support/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/tools/budget-planner/",
@@ -380,8 +380,8 @@
       "family": "directory",
       "action": "migrate",
       "source": "templates/tools/index.html",
-      "status": "[~]",
-      "migrated": false
+      "status": "[x]",
+      "migrated": true
     },
     {
       "route": "/tools/investment-growth-calculator/",

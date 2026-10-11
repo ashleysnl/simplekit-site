@@ -1,0 +1,49 @@
+chromium: editorial 320
+chromium: editorial 375
+chromium: editorial 390
+chromium: axe editorial 390
+chromium: editorial 768
+chromium: editorial 1440
+chromium: axe editorial 1440
+chromium: editorial 1920
+chromium: editorial no-js
+chromium: editorial forced-colors
+chromium: editorial dark
+chromium: editorial font-fallback
+chromium: editorial text-200
+chromium: axe editorial text-200
+chromium: calculator 320
+chromium: calculator 375
+chromium: calculator 390
+chromium: axe calculator 390
+chromium: calculator 768
+chromium: calculator 1440
+chromium: axe calculator 1440
+chromium: calculator 1920
+chromium: calculator no-js
+chromium: calculator forced-colors
+chromium: calculator dark
+chromium: calculator font-fallback
+chromium: calculator text-200
+chromium: axe calculator text-200
+chromium: components 320
+chromium: components 375
+chromium: components 390
+chromium: axe components 390
+chromium: components 768
+chromium: components 1440
+chromium: axe components 1440
+chromium: components 1920
+chromium: components no-js
+chromium: components forced-colors
+chromium: components dark
+chromium: components font-fallback
+chromium: components text-200
+chromium: axe components text-200
+chromium: axe open menu
+chromium: axe invalid amount
+chromium: legacy isolation /
+chromium: legacy isolation /retirement-planner/rrif-withdrawal-calculator.html
+chromium: legacy isolation /mortgage-calculator/
+chromium: legacy isolation /retirement-planner/
+chromium: 33 layouts, 11 clean axe states, keyboard/validation/reset/export/print and four legacy isolation checks pass.

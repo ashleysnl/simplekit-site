@@ -1,0 +1,6 @@
+
+> build
+> node scripts/build-site.mjs
+
+Verified 23 pinned GitHub sources.
+Built 22 calculators into /workspace/simplekit-site/dist
