@@ -11,6 +11,11 @@ on:
         required: false
         default: true
         type: boolean
+      rollback_only:
+        description: Rebuild and verify the unchanged production rollback package without browser QA
+        required: false
+        default: false
+        type: boolean
       preview_url:
         description: Optional immutable isolated preview for read-only owner-review verification
         required: false
@@ -164,7 +169,7 @@ jobs:
           retention-days: 30
 
   rollback-package:
-    if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+    if: inputs.rollback_only || inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     # Read-only rebuild of the unchanged production baseline. No Pages token,
@@ -187,6 +192,7 @@ jobs:
       - name: Verify primary published bytes and preserve the rollback web artifact
         run: |
           mkdir -p "$RUNNER_TEMP/rollback-package"
+          sudo chown -R "$(id -u):$(id -g)" rollback-site
           node --input-type=module <<'JS'
           import fs from 'node:fs';import crypto from 'node:crypto';import assert from 'node:assert/strict';
           const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
