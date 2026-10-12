@@ -105,13 +105,26 @@ async function geometry(page,name){
    assert.deepEqual(result.external,[],'References must load no external resources');
    await p.emulateMedia({media:'print'});assert(!(await p.locator('.v2s-header').isVisible()));await p.screenshot({path:path.join(output,`${engine}-print.jpg`),type:'jpeg',quality:75,fullPage:true});await c.close();
    // Load new CSS and navigation on old pages: geometry, typography and controls remain exact.
-   for(const route of ['/','/retirement-planner/404.html']){
+   for(const route of ['/','/cpp-calculator/']){
     console.log(engine+': legacy isolation '+route);
-    const c=await context();const p=await c.newPage();await p.goto(origin+route,{waitUntil:'networkidle'});await fontsReady(p,engine+' legacy '+route);
+    const c=await context();const p=await c.newPage();
+    if(route==='/cpp-calculator/') {
+     // Every live calculator is migrated. Use the independently saved original
+     // template with unchanged legacy CSS/JS, rather than misclassifying a
+     // compatibility redirect's V2 destination as a legacy page.
+     const original=require('../docs/v2/phase-15/baseline-sources.json')['cpp-calculator'].html.replaceAll('https://core.simplekit.app/',origin+'/assets/core/');
+     await p.route(origin+route,r=>r.fulfill({body:original,contentType:'text/html'}));
+    }
+    await p.goto(origin+route,{waitUntil:'networkidle'});await fontsReady(p,engine+' legacy '+route);
     const sample=()=>p.evaluate(()=>[...document.querySelectorAll('h1,nav,footer,input,button,main')].map(n=>{const s=getComputedStyle(n),r=n.getBoundingClientRect();return {tag:n.tagName,id:n.id,font:s.fontFamily,color:s.color,background:s.backgroundColor,rect:[r.x,r.y,r.width,r.height],hidden:n.hidden};}));
     assert.equal(await p.locator('[data-v2-system="1"]').count(),0,route+': isolation requires a legacy page');
-    const before=await sample();await p.addStyleTag({url:origin+'/assets/v2/system.css'});await p.addScriptTag({url:origin+'/assets/v2/shell.js'});assert.deepEqual(await sample(),before,route+': legacy isolation');result.legacyIsolation.push(route);await c.close();
+    const before=await sample();await p.addStyleTag({url:origin+'/assets/v2/system.css'});await p.addScriptTag({url:origin+'/assets/v2/shell.js'});await p.addStyleTag({url:origin+'/assets/core/v2/calculators.css'});await p.addScriptTag({url:origin+'/assets/core/v2/calculators.js'});assert.deepEqual(await sample(),before,route+': legacy isolation');result.legacyIsolation.push(route);await c.close();
    }
+   const redirectContext=await context(),redirectPage=await redirectContext.newPage();
+   await redirectPage.goto(origin+'/retirement-planner/404.html',{waitUntil:'networkidle'});
+   await redirectPage.waitForURL(url=>url.pathname==='/retirement-planner/index.html'&&url.hash.startsWith('#notfound='));
+   assert.equal(await redirectPage.locator('[data-v2-system="1"]').count(),1,'Preserved 404 redirects into its V2 calculator');
+   result.compatibilityRedirect=redirectPage.url();await redirectContext.close();
    assert.deepEqual(result.errors,[]);assert.deepEqual(result.failed,[]);report.engines.push(result);console.log(`${engine}: ${result.layouts.length} layouts, ${result.axe.length} clean axe states, keyboard/validation/reset/export/print and two unopted-page isolation checks pass.`);
   } finally {await browser.close();fs.writeFileSync(path.join(output,'browser.json'),JSON.stringify(report,null,2)+'\n');}
  }
