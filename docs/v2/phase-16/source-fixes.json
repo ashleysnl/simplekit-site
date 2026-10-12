@@ -95,5 +95,19 @@
       }
     ],
     "after": "f3bc12213c5b91698ddc64953faa6c4a9ef15e61"
+  },
+  {
+    "repository": "ashleysnl/TravelPlanner",
+    "parent": "375a4bb1333415c3f7fa88541c1a8c3e6ba53e8e",
+    "tree": "97a972bedc57f672a534b89bb92e1800a09da25f",
+    "files": [
+      {
+        "path": "app.js"
+      },
+      {
+        "path": "v2-calculator.css"
+      }
+    ],
+    "after": "069a47fb28d57ff3364ad56925d1771acdc669b3"
   }
 ]

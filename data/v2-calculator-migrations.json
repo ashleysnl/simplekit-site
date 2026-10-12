@@ -534,13 +534,20 @@
       "changedFiles": [
         "index.html",
         "v2-calculator.css",
-        "AGENTS.md"
+        "AGENTS.md",
+        "app.js"
       ],
-      "after": "375a4bb1333415c3f7fa88541c1a8c3e6ba53e8e",
+      "after": "069a47fb28d57ff3364ad56925d1771acdc669b3",
       "state": "[~]",
       "implementationComplete": true,
       "batchBuild": true,
-      "phase16Verified": false
+      "phase16Verified": false,
+      "presentationChanges": [
+        [
+          "<div class=\"timeline-day${selectedClass}\" data-date=\"${key}\" role=\"button\" tabindex=\"0\" aria-pressed=\"${uiState.dashboardSelectedDate === key}\">\n          <div class=\"timeline-day-head\">\n            <strong>${dayShortFmt.format(date)} \u2022 ${monthDayFmt.format(date)}</strong>\n          </div>",
+          "<div class=\"timeline-day${selectedClass}\" data-date=\"${key}\" role=\"group\" aria-label=\"${escapeHtml(dayShortFmt.format(date) + ' \u2022 ' + monthDayFmt.format(date))}\">\n          <button type=\"button\" class=\"timeline-day-head\" aria-pressed=\"${uiState.dashboardSelectedDate === key}\">\n            <strong>${dayShortFmt.format(date)} \u2022 ${monthDayFmt.format(date)}</strong>\n          </button>"
+        ]
+      ]
     },
     {
       "id": "debt-to-income-ratio-calculator",

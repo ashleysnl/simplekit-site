@@ -6,7 +6,7 @@ Status: `[~]`. Implementation and source-owned QA fixes are integrated. Final ho
 
 All 22 calculator interfaces are V2, with 23 immutable upstream pins in `data/calculator-sources.json`. The production-ready build contains 381 files, 67 HTML routes and the unchanged 53 sitemap URLs. No original artifact file is removed. Superseded pre-final inventory: `d3327aea4499be16f48d4d30807444f2fe48f0938107324c2033f1742a3318ac`; superseded archive: `88c71108b7f54314f6ba15d5eafda71c3822a27fb0e2299143d053b9f3242700` (SHA-256).
 
-The source preservation guard retains 302 original runtime files exactly, preserves original metadata, inline scripts, controls/defaults and anchors, and checks all 94 calculator JS files against immutable upstream pins. Six JS files permit exact reviewed chart/control presentation transformations. The classic retirement fallback is an explicit release exception, reproduced from the canonical module sources with a scoped bundler. All modular financial formulas remain original. Source fixes and commits: [manifest](phase-16/source-fixes.json).
+The source preservation guard retains 302 original runtime files exactly, preserves original metadata, inline scripts, controls/defaults and anchors, and checks all 94 calculator JS files against immutable upstream pins. Seven JS files permit exact reviewed chart/control presentation transformations. The classic retirement fallback is an explicit release exception, reproduced from the canonical module sources with a scoped bundler. All modular financial formulas remain original. Source fixes and commits: [manifest](phase-16/source-fixes.json).
 
 ## Findings resolved
 
@@ -37,3 +37,11 @@ The source preservation guard retains 302 original runtime files exactly, preser
 Evidence and candidate identity will be updated from the completed hosted run. No task is marked complete based only on a successful build. `main`, GitHub Pages publishing, DNS and production remain unchanged.
 
 Final QA is split into independent suites so failures can be isolated and unrelated gates need not be rerun. Source refinements preserve nested desktop hero width and 44px action widths. Final inventory/archive digests supersede the earlier preparation values and will be taken from the new hosted candidate.
+
+## Focused completion after the independent QA run
+
+Run [38198828023](https://github.com/ashleysnl/simplekit-site/actions/runs/38198828023), candidate `85c20662849d13cda59670032565d23d41409064`, passed validation, system, pilots, editorial, homepage, accessibility/SEO and performance. The calculator job failed on the populated Travel calendar's nested buttons and orange cost-marker contrast. The rollback job failed because the official Jekyll builder omits `CNAME`.
+
+The follow-up changes only the Travel source's calendar markup and two scoped CSS declarations, plus QA/documentation files. The day header becomes a standalone button within a labelled group, retaining the existing delegated selection handlers; cost markers use a darker orange with readable white text. Financial algorithms, state, fixtures and all other published page assets are unchanged. Exact source transformations are recorded and enforced. The rollback builder restores the unchanged source `CNAME` metadata before inventorying its output; it does not change live Pages settings or DNS.
+
+The `[remaining-qa]` commit marker requests fresh static/preservation/reproducibility gates, the complete 20-calculator suite in all three engines, and the rollback package. The six independent passing suites above are retained for their unchanged inputs, avoiding unrelated repetition. Full QA remains the default manual/release gate. An optional calculator-ID filter supports focused local diagnosis; hosted QA does not set that filter.

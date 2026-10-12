@@ -63,4 +63,4 @@ for(const f of added){
  assert.equal(hash(fs.readFileSync(src)),hash(fs.readFileSync(path.join(dist,f))),f+' exact pinned source');
 }
 assert(!files.some(f=>f.endsWith('AGENTS.md')||f.startsWith('docs/')),'Instructions/evidence are not public assets');
-console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Six JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);
+console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Seven JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);

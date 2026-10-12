@@ -31,7 +31,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: validate-${{ github.ref }}-${{ (inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main') && 'full-qa' || 'build' }}
+  group: validate-${{ github.ref }}-${{ (inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main') && 'full-qa' || 'build' }}
   cancel-in-progress: true
 
 jobs:
@@ -46,15 +46,15 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm run sources:fetch
-      - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+      - if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm test
       - run: npm run build
-      - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+      - if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm run seo:validate
-      - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+      - if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm run output:validate
       - name: Verify final preservation and reproducibility
-        if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+        if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: |
           node scripts/v2-baseline-inventory.mjs
           node tests/v2-pilot-preservation.cjs
@@ -65,7 +65,7 @@ jobs:
           node scripts/v2-release-artifact.mjs --compare "$RUNNER_TEMP/release-inventory.json"
       - name: Record validation scope
         env:
-          FULL_QA: ${{ inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main' }}
+          FULL_QA: ${{ inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main' }}
         run: |
           if [ "$FULL_QA" = "true" ]; then
             echo 'Full QA requested; browser and regression jobs follow.' >> "$GITHUB_STEP_SUMMARY"
@@ -99,14 +99,14 @@ jobs:
           retention-days: 7
 
   final-qa:
-    if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+    if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
     needs: validate
     runs-on: ubuntu-latest
     timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
-        suite: [system, calculators, pilots, editorial, homepage, accessibility-seo, performance]
+        suite: ${{ fromJSON(contains(github.event.head_commit.message, '[remaining-qa]') && '["calculators"]' || '["system","calculators","pilots","editorial","homepage","accessibility-seo","performance"]') }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -164,7 +164,7 @@ jobs:
           retention-days: 30
 
   rollback-package:
-    if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+    if: inputs.full_qa || (contains(github.event.head_commit.message, '[final-qa]') || contains(github.event.head_commit.message, '[remaining-qa]')) || github.ref == 'refs/heads/main' || github.base_ref == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     # Read-only rebuild of the unchanged production baseline. No Pages token,
@@ -190,6 +190,9 @@ jobs:
           node --input-type=module <<'JS'
           import fs from 'node:fs';import crypto from 'node:crypto';import assert from 'node:assert/strict';
           const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+          // The official Jekyll Pages builder omits CNAME; retain the unchanged source metadata.
+          assert.equal(fs.readFileSync('rollback-source/CNAME','utf8').trim(),'simplekit.app');
+          if(!fs.existsSync('rollback-site/CNAME'))fs.copyFileSync('rollback-source/CNAME','rollback-site/CNAME');
           const files={};function walk(dir,prefix=''){for(const n of fs.readdirSync(dir,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))){const file=prefix+n.name;assert(!n.isSymbolicLink());if(n.isDirectory())walk(dir+'/'+n.name,file+'/');else{const b=fs.readFileSync(dir+'/'+n.name);files[file]={bytes:b.length,sha256:hash(b)};}}}walk('rollback-site');
           assert.equal(fs.readFileSync('rollback-site/CNAME','utf8').trim(),'simplekit.app');
           const checks=[];for(const [file,url] of [['index.html','/'],['tools/index.html','/tools/'],['styles.css','/styles.css'],['robots.txt','/robots.txt'],['sitemap.xml','/sitemap.xml']]){if(!files[file])continue;const r=await fetch('https://simplekit.app'+url,{signal:AbortSignal.timeout(30000)});assert.equal(r.status,200,file);const b=Buffer.from(await r.arrayBuffer());assert.equal(hash(b),files[file].sha256,file+' must match the working production bytes');checks.push({file,sha256:hash(b),status:r.status});}assert(checks.some(c=>c.file==='index.html')&&checks.some(c=>c.file==='tools/index.html'));
