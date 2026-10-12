@@ -4,11 +4,11 @@ Status: `[~]`. Preparation only. Production release is not authorized. Activate 
 
 ## Exact package
 
-Runtime inventory SHA-256: `d3327aea4499be16f48d4d30807444f2fe48f0938107324c2033f1742a3318ac`.
+Superseded pre-final runtime inventory SHA-256: `d3327aea4499be16f48d4d30807444f2fe48f0938107324c2033f1742a3318ac`.
 
-Deterministic production archive SHA-256: `88c71108b7f54314f6ba15d5eafda71c3822a27fb0e2299143d053b9f3242700`.
+Superseded pre-final production archive SHA-256: `88c71108b7f54314f6ba15d5eafda71c3822a27fb0e2299143d053b9f3242700`.
 
-The final candidate source SHA, passing hosted QA run, immutable demo URL, retained release-artifact link and separate design/release approvals must be filled from the verified Phase 16/17 candidate before approval. Any source/artifact/destination change invalidates approval. The complete 23-source manifest is `data/calculator-sources.json`.
+The final source refinements supersede these preparation digests; do not approve or deploy that older archive. The final candidate source SHA, passing hosted QA run, immutable demo URL, retained release-artifact link and separate design/release approvals must be filled from the verified Phase 16/17 candidate before approval. Any source/artifact/destination change invalidates approval. The complete 23-source manifest is `data/calculator-sources.json`.
 
 ## Existing production destination
 
@@ -16,14 +16,14 @@ Read-only GitHub API inspection recorded [Pages configuration](phase-18/producti
 
 Merging development templates into `main` does not publish `dist/` as V2. A reviewed publishing proposal is required. [Proposed workflow](phase-18/production-workflow.proposed.yml) deploys the exact approved artifact through a manual dispatch and protected `github-pages` environment, rejects a mismatched production head, verifies every file/hash before upload and keeps the existing hosting destination. [Artifact verifier](phase-18/verify-approved-artifact.py) successfully validated the prepared archive locally, including path safety, `CNAME` and production indexing.
 
-Before activation: review/pin the two proposed Pages action tags to immutable SHAs; inspect/create appropriate owner approval protections on `github-pages`; separately approve changing the Pages build type to workflow and the release PR into `main`. These are proposals, not configuration changes performed by this task. Preview uploads remain separate and cannot authorize production deployment.
+The proposed Pages actions are pinned to the official v3/v4 commit SHAs read from GitHub. Before activation: review those action versions; inspect/create appropriate owner approval protections on `github-pages`; separately approve changing the Pages build type to workflow and the release PR into `main`. These are proposals, not configuration changes performed by this task. Preview uploads remain separate and cannot authorize production deployment.
 
 ## Controlled release after approval
 
 1. Owner reviews the immutable full-site demo and evidence, accepting design/manual exceptions separately.
 2. Approval names source SHA, production archive/inventory digests, existing Pages destination, release PR and publishing proposal. Preserve the verified artifacts outside short-lived Actions retention.
-3. Merge only the approved release PR and record the new expected `main` SHA. If the runtime artifact changes, repeat relevant checks and obtain fresh approval.
-4. Activate the reviewed manual Pages workflow and protected environment only as separately approved. Deploy the approved production archive, never the preview-modified files.
+3. After explicit publishing approval, switch Pages from legacy publishing to the reviewed manual workflow **before any release merge into main**. Verify the existing production site is still served. This prevents a main merge from automatically publishing repository templates/developer files. Install the approved manual-only publisher through its reviewed PR; configure owner protection on `github-pages`.
+4. Merge only the approved release PR, record the new expected `main` SHA, and manually deploy the exact approved production archive. If the reviewed source/artifact/destination changes, obtain renewed approval. Never deploy the preview-modified files.
 5. Check homepage/discovery, all 22 calculator routes, key numerical/state/export interactions, assets, canonicals, sitemap, robots and legacy redirects. Production must have `CNAME=simplekit.app` and must not receive preview `noindex` headers or `Disallow: /` robots.
 6. Inspect existing authorized analytics/errors at rollout, approximately 24 hours and 7 days. Record monitoring evidence; do not create scheduled automation without a request.
 
@@ -34,3 +34,5 @@ Unmodified production source archive: `simplekit-production-baseline-ca7826d.tar
 Before release, retain a known-good **published** Pages artifact/build and verify restoration permissions. For an immediate rollback, restore that approved published artifact through the protected workflow; if returning to legacy publishing, restore the recorded `main`/root build type and revert the approved release merge with a normal reviewed revert commit, then rebuild Pages. Do not force-push, reset shared `main`, change DNS or substitute an unverified source archive as a deployable artifact.
 
 Rollback triggers: missing canonical calculator, numerical/state regression, broken key navigation or a severe accessibility/JavaScript/asset failure. Record incident, approval, restored artifact/configuration and post-rollback route checks. No rollback or rollout has been executed. The phase remains open until explicit release approval and post-release observation pass.
+
+The last successful production Pages run is [37932730808](https://github.com/ashleysnl/simplekit-site/actions/runs/37932730808), source `ca7826d`; its original web artifact is no longer downloadable. Final QA now includes a read-only rebuild of that unchanged source with the exact recorded builder action and Docker image digest, verifies primary live-production file hashes, and retains a rollback web archive. No publishing/configuration/deployment step is included. Record its new workflow/artifact link and checksum after success before release approval.

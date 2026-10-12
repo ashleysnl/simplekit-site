@@ -1,7 +1,7 @@
 {
   "phase": 15,
   "coreBefore": "092877bebbab2e93afc532bce37c77d700ee2357",
-  "coreAfter": "40da6e15abcfe28825c2e290b780b986c37ab78a",
+  "coreAfter": "f3bc12213c5b91698ddc64953faa6c4a9ef15e61",
   "batches": {
     "investing": [
       "cpp-calculator",
@@ -588,13 +588,17 @@
       "changedFiles": [
         "index.html",
         "v2-calculator.css",
-        "AGENTS.md"
+        "AGENTS.md",
+        "assets/js/app.js"
       ],
-      "after": "95dcc71a68c5cb81aef13212db492009dd4e4d80",
+      "after": "c56104eb63ba19a4bf053d61553855ab79945398",
       "state": "[~]",
       "implementationComplete": true,
       "batchBuild": true,
-      "phase16Verified": false
+      "phase16Verified": false,
+      "presentationChanges": [
+        "Expose the selected boolean choice with aria-pressed; financial calculations are unchanged."
+      ]
     }
   ],
   "pilots": [

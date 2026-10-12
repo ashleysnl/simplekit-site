@@ -1,4 +1,4 @@
-// Only the reviewed canvas width / label typography edits are allowed here.
+// Only exact recorded chart, disclosure and control-semantic edits are allowed.
 const originals=require('../docs/v2/phase-15/presentation-js-baseline.json');
 module.exports=(file,before)=>{
   const entry=Object.entries(originals).find(([id,e])=>file===id+'/'+e.file)?.[1];

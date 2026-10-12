@@ -473,7 +473,7 @@ Acceptance:
 
 ## Phase 17 — Cloudflare preview and owner review
 
-Status: `[ ]`. Depends on Phase 16 full-site release candidate.
+Status: `[~]`. Manual preview dispatch and full deployed artifact verification are prepared; upload and owner review remain pending. Depends on Phase 16 full-site release candidate.
 
 - [ ] Inspect the manual preview workflow and dedicated project/environment protections through permitted tools; retain production branch guard and absence of custom domains.
 - [ ] Dispatch “Manual Cloudflare preview” from the trusted default workflow with `source_ref` set to the exact reviewed `develop-v2` commit; satisfy existing environment approvals without weakening protections.
@@ -560,7 +560,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
 | 15 Remaining calculators | `[~]` | [All 20 implemented](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. Full verification deferred to Phase 16. |
 | 16 Full-site release candidate | `[~]` | [Final QA candidate](v2/phase-16-verification.md); source-owned fixes integrated, hosted/browser and manual acceptance pending. |
-| 17 Cloudflare preview/review | `[ ]` | Pending Phase 16; owner approves full-site preview. |
+| 17 Cloudflare preview/review | `[~]` | [Preview verification prepared](v2/phase-17-verification.md); awaits final QA, network permission and successful upload before owner review. |
 | 18 Production rollout | `[~]` | [Release preparation](v2/phase-18-release-package.md); proposal and rollback prepared, no release approval or production action. |
 
 

@@ -31,7 +31,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: validate-${{ github.ref }}
+  group: validate-${{ github.ref }}-${{ (inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main') && 'full-qa' || 'build' }}
   cancel-in-progress: true
 
 jobs:
@@ -53,6 +53,16 @@ jobs:
         run: npm run seo:validate
       - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm run output:validate
+      - name: Verify final preservation and reproducibility
+        if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+        run: |
+          node scripts/v2-baseline-inventory.mjs
+          node tests/v2-pilot-preservation.cjs
+          node scripts/v2-system-reference.mjs
+          git diff --exit-code docs/v2/phase-12/references
+          node scripts/v2-release-artifact.mjs --record "$RUNNER_TEMP/release-inventory.json"
+          npm run build
+          node scripts/v2-release-artifact.mjs --compare "$RUNNER_TEMP/release-inventory.json"
       - name: Record validation scope
         env:
           FULL_QA: ${{ inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main' }}
@@ -62,6 +72,23 @@ jobs:
           else
             echo 'Implementation build only. Tests and release acceptance are deferred to final QA.' >> "$GITHUB_STEP_SUMMARY"
           fi
+      - name: Preserve the exact production-ready candidate
+        run: |
+          node scripts/v2-release-artifact.mjs --record "$RUNNER_TEMP/release-inventory.json"
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -cf "$RUNNER_TEMP/release-candidate.tar" -C dist .
+          gzip -n "$RUNNER_TEMP/release-candidate.tar"
+          sha256sum "$RUNNER_TEMP/release-candidate.tar.gz" > "$RUNNER_TEMP/release-candidate.sha256"
+          git rev-parse HEAD > "$RUNNER_TEMP/release-source.txt"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: release-candidate-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/release-candidate.tar.gz
+            ${{ runner.temp }}/release-candidate.sha256
+            ${{ runner.temp }}/release-inventory.json
+            ${{ runner.temp }}/release-source.txt
+          retention-days: 30
+          if-no-files-found: error
       - name: Ensure build left tracked files unchanged
         run: git diff --exit-code
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -71,12 +98,15 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-  design-system:
+  final-qa:
     if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
     needs: validate
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-    # Review-only specimens and local build. No deployment environment or secrets.
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [system, calculators, pilots, editorial, homepage, accessibility-seo, performance]
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -88,85 +118,93 @@ jobs:
         with:
           name: simplekit-site
           path: dist/
-      - name: Verify preservation and reproducible reference markup
-        run: |
-          npm run sources:fetch
-          node scripts/v2-baseline-inventory.mjs
-          node tests/v2-pilot-preservation.cjs
-          node scripts/v2-system-reference.mjs
-          git diff --exit-code docs/v2/phase-12/references
       - name: Install isolated test-only browser tools
         run: |
           npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3 lighthouse@12.8.2
           "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
-      - name: Validate system references and unchanged calculator behavior
+      - name: Run the final QA suite
         shell: bash
+        env:
+          QA_SUITE: ${{ matrix.suite }}
         run: |
           export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
           export SIMPLEKIT_PREVIEW_URL=http://127.0.0.1:8007
           export SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit
-          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/design-system-evidence"
-          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
-          PORT=8007 node scripts/preview.mjs > "$SIMPLEKIT_EVIDENCE_DIR/server.log" 2>&1 &
+          evidence="$RUNNER_TEMP/final-qa-$QA_SUITE"
+          mkdir -p "$evidence"
+          PORT=8007 node scripts/preview.mjs > "$evidence/server.log" 2>&1 &
           preview_pid=$!
           trap 'kill "$preview_pid"' EXIT
           for attempt in {1..40}; do
             if curl -fsS "$SIMPLEKIT_PREVIEW_URL/" > /dev/null; then break; fi
             sleep .25
           done
-          node tests/v2-system-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
-          node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
-          node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
-          node tests/v2-retirement-fallback-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/fallback.log"
-          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/calculator-evidence"
-          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
-          node tests/v2-calculator-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
-          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/pilot-evidence"
-          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
-          node tests/v2-pilot-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
-          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence"
-          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
-          node tests/v2-editorial-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
-          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-seo v2-accessibility; do
-            export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence/regression/$suite"
+          case "$QA_SUITE" in
+            system) suites="v2-system v2-baseline v2-release v2-retirement-fallback" ;;
+            calculators) suites="v2-calculator" ;;
+            pilots) suites="v2-pilot" ;;
+            editorial) suites="v2-editorial" ;;
+            homepage) suites="v2-foundations v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding" ;;
+            accessibility-seo) suites="v2-seo v2-accessibility" ;;
+            performance) suites="v2-lighthouse" ;;
+            *) exit 1 ;;
+          esac
+          for suite in $suites; do
+            export SIMPLEKIT_EVIDENCE_DIR="$evidence/$suite"
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
-            node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
+            if [ "$suite" = "v2-lighthouse" ]; then script="tests/v2-lighthouse.cjs"; else script="tests/$suite-browser.cjs"; fi
+            node "$script" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           done
-          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence/lighthouse"
-          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
-          node tests/v2-lighthouse.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/lighthouse.log"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
-          name: design-system-evidence
-          path: ${{ runner.temp }}/design-system-evidence/
+          name: final-qa-${{ matrix.suite }}
+          path: ${{ runner.temp }}/final-qa-${{ matrix.suite }}/
           if-no-files-found: warn
           retention-days: 30
 
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        if: always()
+  rollback-package:
+    if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Read-only rebuild of the unchanged production baseline. No Pages token,
+    # publishing environment, configuration action or deployment step.
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          name: editorial-evidence
-          path: ${{ runner.temp }}/editorial-evidence/
-          if-no-files-found: warn
-          retention-days: 30
-
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        if: always()
+          ref: ca7826db75cb4353488786aab80857b3a71c1be1
+          path: rollback-source
+          persist-credentials: false
+      - name: Restore the exact publishing-builder image used by production
+        run: |
+          docker pull ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+          docker tag ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041 ghcr.io/actions/jekyll-build-pages:v1.0.13
+      - uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # exact production builder
         with:
-          name: pilot-evidence
-          path: ${{ runner.temp }}/pilot-evidence/
-          if-no-files-found: warn
-          retention-days: 30
-
+          source: ./rollback-source
+          destination: ./rollback-site
+          build_revision: ca7826db75cb4353488786aab80857b3a71c1be1
+      - name: Verify primary published bytes and preserve the rollback web artifact
+        run: |
+          mkdir -p "$RUNNER_TEMP/rollback-package"
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+          const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+          const files={};function walk(dir,prefix=''){for(const n of fs.readdirSync(dir,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))){const file=prefix+n.name;assert(!n.isSymbolicLink());if(n.isDirectory())walk(dir+'/'+n.name,file+'/');else{const b=fs.readFileSync(dir+'/'+n.name);files[file]={bytes:b.length,sha256:hash(b)};}}}walk('rollback-site');
+          assert.equal(fs.readFileSync('rollback-site/CNAME','utf8').trim(),'simplekit.app');
+          const checks=[];for(const [file,url] of [['index.html','/'],['tools/index.html','/tools/'],['styles.css','/styles.css'],['robots.txt','/robots.txt'],['sitemap.xml','/sitemap.xml']]){if(!files[file])continue;const r=await fetch('https://simplekit.app'+url,{signal:AbortSignal.timeout(30000)});assert.equal(r.status,200,file);const b=Buffer.from(await r.arrayBuffer());assert.equal(hash(b),files[file].sha256,file+' must match the working production bytes');checks.push({file,sha256:hash(b),status:r.status});}assert(checks.some(c=>c.file==='index.html')&&checks.some(c=>c.file==='tools/index.html'));
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/rollback-package/rollback-inventory.json',JSON.stringify({source:'ca7826db75cb4353488786aab80857b3a71c1be1',builder:'44a6e6beabd48582f863aeeb6cb2151cc1716697',image:'sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041',files,checks},null,2)+'\n');
+          console.log('Unchanged production baseline rebuilt; '+checks.length+' primary live file hashes match. No deployment performed.');
+          JS
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner -cf "$RUNNER_TEMP/rollback-package/production-baseline.tar" -C rollback-site .
+          gzip -n "$RUNNER_TEMP/rollback-package/production-baseline.tar"
+          sha256sum "$RUNNER_TEMP/rollback-package/production-baseline.tar.gz" > "$RUNNER_TEMP/rollback-package/production-baseline.sha256"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        if: always()
         with:
-          name: calculator-evidence
-          path: ${{ runner.temp }}/calculator-evidence/
-          if-no-files-found: warn
+          name: production-rollback-ca7826d
+          path: ${{ runner.temp }}/rollback-package/
           retention-days: 30
-
+          if-no-files-found: error
 
   preview-review:
     if: github.event_name == 'workflow_dispatch' && inputs.preview_url != ''

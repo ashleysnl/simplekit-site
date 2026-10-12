@@ -34,7 +34,17 @@ for(const e of suite.calculators){
  assert.equal(hash(original.html),original.files['index.html'],e.id+' original template integrity');
  assert.deepEqual(metadata(h),metadata(original.html),e.id+' original SEO metadata');
  assert.deepEqual(inline(h),inline(original.html),e.id+' original inline scripts');
- assert.deepEqual(controls(h),controls(original.html),e.id+' original input defaults and attributes');
+ const actualControls=controls(h);
+ if(e.id==='contractor-effective-hourly-rate-calculator') {
+  // Only these two backing inputs are hidden; visible pressed buttons remain
+  // the accessible controls. Preserve types, IDs, names and financial defaults.
+  for(const id of ['vacationIsPaid','benefitsAreEmployerPaid']) {
+   const index=actualControls.findIndex(tag=>tag.includes('id="'+id+'"'));
+   assert(index>=0&&/\s+hidden(?=[\s>])/.test(actualControls[index]),id+' backing input must leave keyboard navigation');
+   actualControls[index]=actualControls[index].replace(/\s+hidden(?=[\s>])/,'');
+  }
+ }
+ assert.deepEqual(actualControls,controls(original.html),e.id+' original input defaults and attributes');
  for(const id of ids(original.html))assert(ids(h).includes(id),e.id+' original anchor/control '+id);
  const allowed=['index.html','AGENTS.md'];if(suitePresentation[e.id])allowed.push(suitePresentation[e.id].file);
  for(const[f,sha]of Object.entries(original.files)){
@@ -53,4 +63,4 @@ for(const f of added){
  assert.equal(hash(fs.readFileSync(src)),hash(fs.readFileSync(path.join(dist,f))),f+' exact pinned source');
 }
 assert(!files.some(f=>f.endsWith('AGENTS.md')||f.startsWith('docs/')),'Instructions/evidence are not public assets');
-console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Five JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);
+console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Six JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);

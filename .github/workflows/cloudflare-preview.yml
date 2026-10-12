@@ -26,6 +26,8 @@ permissions:
 
 jobs:
   build:
+    outputs:
+      candidate_sha: ${{ steps.candidate.outputs.commit }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -93,6 +95,10 @@ jobs:
         with:
           name: preview-site
           path: dist/
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: release-candidate-${{ needs.build.outputs.candidate_sha }}
+          path: ${{ runner.temp }}/preview-release
       - name: Verify the dedicated preview project
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -162,6 +168,47 @@ jobs:
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-hosted-preview-smoke.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/http.log"
           node tests/v2-fidelity-screenshots.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/capture.log"
+          # Phase 16 owns the complete matrix. Verify deployed bytes and actual
+          # calculator interactions here without repeating all visual suites.
+          node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
+          node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
+          node tests/v2-retirement-fallback-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/fallback.log"
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          import assert from 'node:assert/strict';
+          const inventory=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/preview-release/release-inventory.json'));
+          const source=fs.readFileSync(process.env.RUNNER_TEMP+'/preview-release/release-source.txt','utf8').trim();
+          const files=Object.entries(inventory.files).filter(([file])=>!['CNAME','robots.txt','_redirects'].includes(file));
+          const origins=[process.env.SIMPLEKIT_PREVIEW_URL,'https://codex-preview.simplekit-preview.pages.dev'];
+          const report={source,inventorySHA256:inventory.inventorySHA256,origins:[],exceptions:['CNAME removed','robots disallows preview',...(inventory.files._redirects?['_redirects consumed by Cloudflare; upload artifact retains it']:[])]};
+          const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+          for(const origin of origins) {
+            assert(/^https:\/\/[a-z0-9-]+\.simplekit-preview\.pages\.dev$/.test(origin));
+            const result={origin,checked:0,errors:[]};
+            async function read(file) {
+              let url=origin+'/'+file;
+              for(let i=0;i<6;i++) {
+                const response=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(20000)});
+                if(response.status>=300&&response.status<400) {
+                  url=new URL(response.headers.get('location'),url).href;assert.equal(new URL(url).origin,origin);continue;
+                }
+                assert.equal(response.status,200,file+' HTTP status');
+                assert(/noindex/.test(response.headers.get('x-robots-tag')||''),file+' preview noindex');
+                return Buffer.from(await response.arrayBuffer());
+              }
+              throw Error(file+' redirect loop');
+            }
+            assert.equal((await read('robots.txt')).toString(),'User-agent: *\nDisallow: /\n');
+            const queue=[...files];
+            await Promise.all(Array.from({length:6},async()=>{while(queue.length){const [file,expected]=queue.shift();try{const data=await read(file);assert.equal(data.length,expected.bytes,file+' bytes');assert.equal(hash(data),expected.sha256,file+' artifact digest');result.checked++;}catch(e){result.errors.push({file,message:e.message});}}}));
+            report.origins.push(result);
+          }
+          fs.writeFileSync(process.env.SIMPLEKIT_EVIDENCE_DIR+'/artifact-verification.json',JSON.stringify(report,null,2)+'\n');
+          assert(report.origins.every(r=>r.errors.length===0),JSON.stringify(report.origins));
+          console.log('Both isolated origins match '+files.length+' published files, all preview noindex headers and robots; source '+source);
+          JS
+
       - name: Complete deployed browser QA when explicitly requested
         if: inputs.full_qa
         shell: bash

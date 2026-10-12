@@ -109,12 +109,12 @@
     {
       "id": "contractor-effective-hourly-rate-calculator",
       "repository": "ashleysnl/SimpleKitContractorRate",
-      "revision": "95dcc71a68c5cb81aef13212db492009dd4e4d80"
+      "revision": "c56104eb63ba19a4bf053d61553855ab79945398"
     },
     {
       "id": "simplekit-core",
       "repository": "ashleysnl/SimpleKit-Core",
-      "revision": "40da6e15abcfe28825c2e290b780b986c37ab78a"
+      "revision": "f3bc12213c5b91698ddc64953faa6c4a9ef15e61"
     }
   ]
 }
