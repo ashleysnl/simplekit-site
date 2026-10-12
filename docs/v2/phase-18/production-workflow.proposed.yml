@@ -1,0 +1,58 @@
+# REVIEW PROPOSAL ONLY. Do not activate or change Pages configuration without
+# explicit approval naming the release SHA, artifact digest and destination.
+name: Approved SimpleKit V2 production artifact
+on:
+  workflow_dispatch:
+    inputs:
+      preview_run_id: {description: Verified preview run containing the release artifact, required: true}
+      release_sha: {description: Approved exact candidate source SHA, required: true}
+      artifact_sha256: {description: Approved release-candidate.tar.gz digest, required: true}
+      inventory_sha256: {description: Approved published-file inventory digest, required: true}
+      approved_main_sha: {description: Expected main SHA after the separately approved release merge, required: true}
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: simplekit-production
+  cancel-in-progress: false
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.release_sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: release-candidate-${{ inputs.release_sha }}
+          run-id: ${{ inputs.preview_run_id }}
+          github-token: ${{ github.token }}
+          path: release/
+      - name: Verify exact approved source, archive, inventory and production head
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_SHA: ${{ inputs.release_sha }}
+          ARCHIVE_SHA: ${{ inputs.artifact_sha256 }}
+          INVENTORY_SHA: ${{ inputs.inventory_sha256 }}
+          MAIN_SHA: ${{ inputs.approved_main_sha }}
+        run: |
+          set -euo pipefail
+          test "$(cat release/release-source.txt)" = "$RELEASE_SHA"
+          test "$(sha256sum release/release-candidate.tar.gz | cut -d' ' -f1)" = "$ARCHIVE_SHA"
+          test "$(gh api repos/ashleysnl/simplekit-site/commits/main --jq .sha)" = "$MAIN_SHA"
+          export INVENTORY_SHA
+          python3 docs/v2/phase-18/verify-approved-artifact.py release dist
+      # Replace these tags with reviewed immutable action SHAs before activation.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+      - name: Deploy to the existing GitHub Pages destination
+        id: deployment
+        uses: actions/deploy-pages@v4

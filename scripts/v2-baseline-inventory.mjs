@@ -7,6 +7,7 @@ import {execFileSync} from 'node:child_process';
 import {repoRoot,outputRoot} from './paths.mjs';
 import {loadSeoManifest,getCanonicalToolRegistry} from './seo-utils.mjs';
 import presentationTransform from './v2-presentation-contract.cjs';
+import verifyFallback from './v2-retirement-fallback.cjs';
 import calculatorPresentation from './v2-calculator-presentation.cjs';
 import migration from './v2-migration-contract.cjs';
 const record=process.argv.includes('--record');
@@ -65,7 +66,8 @@ if(record) {
  delete contracts.protectedAssets['retirement-planner/icons/apple-touch-icon.png'];
  const visual=JSON.parse(read(path.join(repoRoot,'docs/v2/phase-14/presentation-js-baseline.json')));
  for(const js of JSON.parse(read(path.join(evidence,'upstream-js.json')))){
-  if(visual[js.file]){assert.equal(hash(visual[js.file].before),js.sha256,js.file+' original source');assert.equal(read(path.join(outputRoot,js.file)).toString(),presentationTransform(visual[js.file].before),js.file+' only reviewed chart presentation changes');}
+  if(js.file==='retirement-planner/app.classic.js')verifyFallback(read(path.join(outputRoot,js.file)));
+  else if(visual[js.file]){assert.equal(hash(visual[js.file].before),js.sha256,js.file+' original source');assert.equal(read(path.join(outputRoot,js.file)).toString(),presentationTransform(visual[js.file].before),js.file+' only reviewed chart presentation changes');}
   else if(!migration.suite.calculators.some(e=>e.id===js.file.split('/')[0]&&e.presentationChanges&&e.changedFiles.includes(js.file.slice(e.id.length+1))))assert.equal(artifact[js.file].sha256,js.sha256,js.file+' original logic');
   else {
    const entry=JSON.parse(read(path.join(repoRoot,'docs/v2/phase-15/presentation-js-baseline.json')))[js.file.split('/')[0]];

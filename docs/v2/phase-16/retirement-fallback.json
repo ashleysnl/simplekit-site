@@ -1,0 +1,5 @@
+{
+  "sha256": "fcabbfa45e588e6337b4408e6b8020f3387c181cb838f70dc052538803ca590c",
+  "source": "8b03745004bc8a81daea02c76017980dc35f7e6d",
+  "method": "Scoped deterministic bundler retains canonical module imports, exports and private helpers. Original modular formulas remain byte exact. Fixes old global helper collisions; both loaders must match frozen module fixtures."
+}

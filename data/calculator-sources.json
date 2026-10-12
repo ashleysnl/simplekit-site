@@ -4,7 +4,7 @@
     {
       "id": "retirement-planner",
       "repository": "ashleysnl/RetirementPlanner",
-      "revision": "54bb14f436e0249c4b81e94d4fe042e5de54cc1b"
+      "revision": "8b03745004bc8a81daea02c76017980dc35f7e6d"
     },
     {
       "id": "cpp-calculator",
@@ -19,7 +19,7 @@
     {
       "id": "debt-payoff-calculator",
       "repository": "ashleysnl/SimpleKitDebt",
-      "revision": "a6026273755dfb39d006637c473712e192a14c93"
+      "revision": "1699e62610b9e56b61323f743376e221eed720c3"
     },
     {
       "id": "mortgage-calculator",
@@ -44,7 +44,7 @@
     {
       "id": "rent-vs-buy-calculator",
       "repository": "ashleysnl/SimplekitRentVsBuy",
-      "revision": "5f0db0ecc1396de4fb6a30daf5a14520887e87a6"
+      "revision": "337482c2a13f6854790f8cf8874074763496f680"
     },
     {
       "id": "budget-planner",
@@ -69,7 +69,7 @@
     {
       "id": "emergency-fund-calculator",
       "repository": "ashleysnl/SImpleKitEmergency",
-      "revision": "1c7cb83f86e45e5881a3fedab4561b97bc750da7"
+      "revision": "20bae365f61d241ed1457abf4060096c8e73f1df"
     },
     {
       "id": "mortgage-paydown-vs-invest-calculator",
@@ -79,12 +79,12 @@
     {
       "id": "investment-fee-calculator",
       "repository": "ashleysnl/SimpleKitFees",
-      "revision": "f46d933798900ccce7889842daa6dd45d49d4a86"
+      "revision": "68430085ccc5be9d52120b1ae5f1edda7d893794"
     },
     {
       "id": "rrsp-vs-tfsa-calculator",
       "repository": "ashleysnl/SimpleKitRRSPTFSA",
-      "revision": "c4e4be92eacab080cea23e45d5a3153a13a6234b"
+      "revision": "d922d11bd3be00ba66890cf35677cded231e2113"
     },
     {
       "id": "fire-calculator",
@@ -109,12 +109,12 @@
     {
       "id": "contractor-effective-hourly-rate-calculator",
       "repository": "ashleysnl/SimpleKitContractorRate",
-      "revision": "c975759a49ca05deb6a20f19295421077663d4e8"
+      "revision": "95dcc71a68c5cb81aef13212db492009dd4e4d80"
     },
     {
       "id": "simplekit-core",
       "repository": "ashleysnl/SimpleKit-Core",
-      "revision": "817b8480fbe4e932f876f5642a44fb9bfb268ee7"
+      "revision": "40da6e15abcfe28825c2e290b780b986c37ab78a"
     }
   ]
 }

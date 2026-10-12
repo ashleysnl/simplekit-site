@@ -12,8 +12,17 @@
       [
         "context.font = '12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif';",
         "context.font = canvas.closest('[data-v2-calculator]') ? '12px ' + getComputedStyle(canvas).fontFamily : '12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif';"
+      ],
+      [
+        "          <div class=\"debt-row-summary-actions\">\n            <button\n              class=\"btn btn-icon\"\n              type=\"button\"\n              data-action=\"delete-debt\"\n              data-debt-id=\"${escapeHtml(debt.id)}\"\n              aria-label=\"Delete ${escapeHtml(debt.name || `debt ${index + 1}`)}\"\n            >\n              Delete\n            </button>\n          </div>",
+        ""
+      ],
+      [
+        "      <div class=\"debt-row-body\">",
+        "      <div class=\"debt-row-body\">\n          <div class=\"debt-row-summary-actions\">\n            <button\n              class=\"btn btn-icon\"\n              type=\"button\"\n              data-action=\"delete-debt\"\n              data-debt-id=\"${escapeHtml(debt.id)}\"\n              aria-label=\"Delete ${escapeHtml(debt.name || `debt ${index + 1}`)}\"\n            >\n              Delete\n            </button>\n          </div>"
       ]
-    ]
+    ],
+    "afterSha256": "c8a73aed503dde118be4e02603c9386681434e2a2ae4985b930a5e7a117f92c9"
   },
   "loan-calculator": {
     "file": "assets/js/app.js",

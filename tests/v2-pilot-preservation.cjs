@@ -15,6 +15,7 @@ const indexOwners=new Map(suite.calculators.map(e=>[e.id+'/index.html',e]));
 let exact=0;
 for(const[file,c]of Object.entries(before)){
  const raw=fs.readFileSync(path.join(dist,file));
+ if(file==='retirement-planner/app.classic.js'){require('../scripts/v2-retirement-fallback.cjs')(raw);continue;}
  if(presentation[file]){assert.equal(hash(presentation[file].before),c.sha256,file+' original source');assert.equal(raw.toString(),transform(presentation[file].before),file+' reviewed chart-only edits');continue;}
  const entry=suitePresentation[file.split('/')[0]];
  if(entry&&file===file.split('/')[0]+'/'+entry.file){assert.equal(hash(entry.before),c.sha256,file+' original source');assert.equal(raw.toString(),suiteTransform(file,entry.before),file+' reviewed canvas-only edits');continue;}
@@ -52,4 +53,4 @@ for(const f of added){
  assert.equal(hash(fs.readFileSync(src)),hash(fs.readFileSync(path.join(dist,f))),f+' exact pinned source');
 }
 assert(!files.some(f=>f.endsWith('AGENTS.md')||f.startsWith('docs/')),'Instructions/evidence are not public assets');
-console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Six JS files allow only reviewed chart dimensions/fonts; all other financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);
+console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Five JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);

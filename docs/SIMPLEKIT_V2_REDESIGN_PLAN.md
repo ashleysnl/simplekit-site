@@ -458,7 +458,7 @@ Acceptance:
 
 ## Phase 16 — End-to-end visual coherence and final release candidate
 
-Status: `[ ]`. Final QA checkpoint after implementation in Phases 11–15. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
+Status: `[~]`. Final QA is in progress. Source-owned responsive/accessibility fixes and scoped retirement fallback are implemented; full hosted verification and owner manual review remain. Final QA checkpoint after implementation in Phases 11–15. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
 
 - [ ] Audit the full site as a user journey: homepage → search/goals → calculator → related guide/article → another calculator → supporting pages.
 - [ ] Compare representative and exceptional page families to the saved mockup and approved derived references at 320, 375, 390, 768, 1440 and 1920 widths, with 200% zoom, reduced motion and mobile devices.
@@ -492,7 +492,7 @@ Codex guidance: the prior verified alias was `https://codex-preview.simplekit-pr
 
 ## Phase 18 — Controlled production rollout and rollback
 
-Status: `[ ]`. Depends on Phase 17 plus explicit owner production approval.
+Status: `[~]`. Release and rollback preparation is in progress; production merge, publishing configuration, deployment and monitoring remain unapproved. Depends on Phase 17 plus explicit owner production approval.
 
 - [ ] Prepare the concrete release package: exact source commit/artifact/checksum, all passing checks, preview approval, intended existing production destination, deploy procedure, previous artifact/commit and rollback procedure.
 - [ ] Inspect the actual GitHub Pages publishing source and Cloudflare configuration. If publishing `dist/` needs a workflow, create a separate reviewed proposal with protected approvals; do not assume merging templates deploys the new site.
@@ -559,9 +559,9 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
 | 15 Remaining calculators | `[~]` | [All 20 implemented](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. Full verification deferred to Phase 16. |
-| 16 Full-site release candidate | `[ ]` | Pending Phase 15; final cross-site regression and design acceptance. |
+| 16 Full-site release candidate | `[~]` | [Final QA candidate](v2/phase-16-verification.md); source-owned fixes integrated, hosted/browser and manual acceptance pending. |
 | 17 Cloudflare preview/review | `[ ]` | Pending Phase 16; owner approves full-site preview. |
-| 18 Production rollout | `[ ]` | Pending Phase 17 and explicit release approval. |
+| 18 Production rollout | `[~]` | [Release preparation](v2/phase-18-release-package.md); proposal and rollback prepared, no release approval or production action. |
 
 
 End each execution with the active phase, completed criteria/evidence, unfinished work or blocker, current branch/PR/commit, preview identity if applicable, production unchanged status, and the next bounded phase/task. Keep this file updated in the same phase commit on `develop-v2` (or required temporary PR targeting it) so the next Codex task can resume from evidence instead of conversation memory.

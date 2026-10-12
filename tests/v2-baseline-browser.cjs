@@ -36,11 +36,7 @@ const fixtures = [
   ['contractor-effective-hourly-rate-calculator', [['fill', '#hourlyRate', '120']], ['#summaryEffectiveRate', '#summaryAnnualEarnings']]
 ];
 const normalize = s => s.replace(/\s+/g, ' ').trim();
-async function outputs(page, selectors) {
-  const values = {};
-  for (const selector of selectors) values[selector] = normalize(await page.locator(selector).innerText());
-  return values;
-}
+const outputs=require('./v2-fixture-output.cjs');
 async function inputs(page) {
   return page.locator('input,select,textarea').evaluateAll(nodes => nodes
     .filter(n => n.type !== 'file' && n.type !== 'hidden' && !/[0-9a-f]{8}-[0-9a-f]{4}-/.test(n.id) && (n.id || n.closest('[data-group]')))

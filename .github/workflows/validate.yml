@@ -46,16 +46,16 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm run sources:fetch
-      - if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+      - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm test
       - run: npm run build
-      - if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+      - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm run seo:validate
-      - if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+      - if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
         run: npm run output:validate
       - name: Record validation scope
         env:
-          FULL_QA: ${{ inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main' }}
+          FULL_QA: ${{ inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main' }}
         run: |
           if [ "$FULL_QA" = "true" ]; then
             echo 'Full QA requested; browser and regression jobs follow.' >> "$GITHUB_STEP_SUMMARY"
@@ -72,10 +72,10 @@ jobs:
           retention-days: 7
 
   design-system:
-    if: inputs.full_qa || github.ref == 'refs/heads/main' || github.base_ref == 'main'
+    if: inputs.full_qa || contains(github.event.head_commit.message, '[final-qa]') || github.ref == 'refs/heads/main' || github.base_ref == 'main'
     needs: validate
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     # Review-only specimens and local build. No deployment environment or secrets.
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -97,7 +97,7 @@ jobs:
           git diff --exit-code docs/v2/phase-12/references
       - name: Install isolated test-only browser tools
         run: |
-          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3
+          npm install --prefix "$RUNNER_TEMP/simplekit-v2-browser" --no-save playwright@1.56.1 axe-core@4.10.3 lighthouse@12.8.2
           "$RUNNER_TEMP/simplekit-v2-browser/node_modules/.bin/playwright" install --with-deps chromium firefox webkit
       - name: Validate system references and unchanged calculator behavior
         shell: bash
@@ -117,17 +117,24 @@ jobs:
           node tests/v2-system-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
           node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
+          node tests/v2-retirement-fallback-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/fallback.log"
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/calculator-evidence"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-calculator-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/pilot-evidence"
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-pilot-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence"
           mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
           node tests/v2-editorial-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
-          for suite in v2-goals v2-seo v2-accessibility; do
+          for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-seo v2-accessibility; do
             export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence/regression/$suite"
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
             node "tests/$suite-browser.cjs" 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/browser.log"
           done
+          export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/editorial-evidence/lighthouse"
+          mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"
+          node tests/v2-lighthouse.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/lighthouse.log"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
@@ -151,6 +158,15 @@ jobs:
           path: ${{ runner.temp }}/pilot-evidence/
           if-no-files-found: warn
           retention-days: 30
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: calculator-evidence
+          path: ${{ runner.temp }}/calculator-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+
 
   preview-review:
     if: github.event_name == 'workflow_dispatch' && inputs.preview_url != ''
