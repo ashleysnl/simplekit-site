@@ -131,5 +131,16 @@
       }
     ],
     "after": "2e2e31ad9f743e031fa6ed7ee400f5051ed90f92"
+  },
+  {
+    "repository": "ashleysnl/SimpleKitTakeHomePay",
+    "parent": "64c820ba6aae43b94217f8a27270cb1dee7f6bed",
+    "tree": "89160fa2bd9f170b5e0de0772232a3689c3170de",
+    "files": [
+      {
+        "path": "v2-calculator.css"
+      }
+    ],
+    "after": "6bd6aeaff68bbd026fe44084e4b97583d114403b"
   }
 ]
