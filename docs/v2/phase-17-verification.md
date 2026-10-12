@@ -1,6 +1,6 @@
 # Phase 17 — Isolated full-site preview preparation
 
-Status: `[~]`. Preview procedure and deployed verification are prepared. No new upload is claimed. Full Phase 16 QA and execution-environment network access must succeed before dispatch.
+Status: `[~]`. Preview procedure and deployed verification are prepared. The full-site demo is uploaded and its deployed checks pass; see the candidate below. Final WebKit enlarged-text correction and owner review remain pending.
 
 The manual-only `cloudflare-preview.yml` retains its dedicated `simplekit-preview` project, `codex-preview` branch, `simplekit-preview` environment, `__production_disabled__` production-branch guard and rejection of custom domains. No automatic deployment trigger is added.
 
@@ -13,3 +13,12 @@ Record upload workflow URL, immutable demo URL, replaceable alias, source SHA, a
 Owner review is required against the exact full-site candidate, the saved mockup and derived page references. Document design acceptance separately from production release permission. Physical-device/screen-reader/native-toolbar-zoom review remains explicitly pending or requires specific owner acceptance of the documented limitations.
 
 All 24 production/source branch heads were rechecked against their baselines and remain unchanged ([evidence](phase-16/production-heads.json)). Pages configuration is retained in the Phase 18 baseline. New upload, deployed checks, owner acceptance and production release are not marked complete before verification.
+
+## Verified functional full-site demo
+
+- Immutable URL: https://c5817f32.simplekit-preview.pages.dev
+- Shared alias: https://codex-preview.simplekit-preview.pages.dev
+- Source: `818b22501fa3225032946a389207442a5ffbafc7`
+- [Successful upload and verification](https://github.com/ashleysnl/simplekit-site/actions/runs/38247367021): 22/22 exact deployed financial fixtures, zero page errors/failed same-origin requests, JSON import/export and storage reload, mortgage CSV/payment reconciliation, and module/classic retirement parity.
+- Both URLs match all 379 ordinary published files, with noindex headers and disallowed preview robots. The 381-file production artifact retains its production CNAME and indexing separately.
+- All 24 production branch heads remain unchanged. The independent browser run passes all tools in Chromium/Firefox and 19/20 WebKit enlarged-text cases; Take Home Pay at 200% text remains a release-blocking layout finding. Normal-size deployed financial functionality passes; this demo is ready for feedback but is not production approval.

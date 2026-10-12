@@ -16,6 +16,23 @@ on:
         required: false
         default: false
         type: boolean
+      qa_suite:
+        description: Browser QA scope; all is required for an initial release candidate
+        required: false
+        default: all
+        type: choice
+        options: [all, calculators]
+      browser_engines:
+        description: Engines for a focused calculator follow-up; retain prior passing evidence
+        required: false
+        default: chromium,firefox,webkit
+        type: choice
+        options: ["chromium,firefox,webkit", chromium, firefox, webkit]
+      calculator_ids:
+        description: Optional comma-separated calculator IDs for focused diagnosis
+        required: false
+        default: ''
+        type: string
       preview_url:
         description: Optional immutable isolated preview for read-only owner-review verification
         required: false
@@ -111,7 +128,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        suite: ${{ fromJSON(contains(github.event.head_commit.message, '[remaining-qa]') && '["calculators"]' || '["system","calculators","pilots","editorial","homepage","accessibility-seo","performance"]') }}
+        suite: ${{ fromJSON((inputs.qa_suite == 'calculators' || contains(github.event.head_commit.message, '[remaining-qa]')) && '["calculators"]' || '["system","calculators","pilots","editorial","homepage","accessibility-seo","performance"]') }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -131,10 +148,12 @@ jobs:
         shell: bash
         env:
           QA_SUITE: ${{ matrix.suite }}
+          QA_ENGINES: ${{ inputs.browser_engines || 'chromium,firefox,webkit' }}
+          SIMPLEKIT_CALCULATOR_IDS: ${{ inputs.calculator_ids }}
         run: |
           export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
           export SIMPLEKIT_PREVIEW_URL=http://127.0.0.1:8007
-          export SIMPLEKIT_BROWSER_ENGINES=chromium,firefox,webkit
+          export SIMPLEKIT_BROWSER_ENGINES="$QA_ENGINES"
           evidence="$RUNNER_TEMP/final-qa-$QA_SUITE"
           mkdir -p "$evidence"
           PORT=8007 node scripts/preview.mjs > "$evidence/server.log" 2>&1 &

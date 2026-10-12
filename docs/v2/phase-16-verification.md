@@ -6,7 +6,7 @@ Status: `[~]`. Implementation and source-owned QA fixes are integrated. Final ho
 
 All 22 calculator interfaces are V2, with 23 immutable upstream pins in `data/calculator-sources.json`. The production-ready build contains 381 files, 67 HTML routes and the unchanged 53 sitemap URLs. No original artifact file is removed. Superseded pre-final inventory: `d3327aea4499be16f48d4d30807444f2fe48f0938107324c2033f1742a3318ac`; superseded archive: `88c71108b7f54314f6ba15d5eafda71c3822a27fb0e2299143d053b9f3242700` (SHA-256).
 
-The source preservation guard retains 298 original runtime files exactly, preserves original metadata, inline scripts, controls/defaults and anchors, and checks all 94 calculator JS files against immutable upstream pins. Eight JS files permit exact reviewed chart/control presentation transformations. The classic retirement fallback is an explicit release exception, reproduced from the canonical module sources with a scoped bundler. All modular financial formulas remain original. Source fixes and commits: [manifest](phase-16/source-fixes.json).
+The source preservation guard retains 299 original runtime files exactly, preserves original metadata, inline scripts, controls/defaults and anchors, and checks all 94 calculator JS files against immutable upstream pins. Eight JS files permit exact reviewed chart/control presentation transformations. The classic retirement fallback is an explicit release exception, reproduced from the canonical module sources with a scoped bundler. All modular financial formulas remain original. Source fixes and commits: [manifest](phase-16/source-fixes.json).
 
 ## Findings resolved
 
