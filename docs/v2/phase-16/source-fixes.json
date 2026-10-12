@@ -109,5 +109,27 @@
       }
     ],
     "after": "069a47fb28d57ff3364ad56925d1771acdc669b3"
+  },
+  {
+    "repository": "ashleysnl/TravelPlanner",
+    "parent": "069a47fb28d57ff3364ad56925d1771acdc669b3",
+    "tree": "0ec54cc7392e78b4775e209cd5dc3b8e3a0dffa6",
+    "files": [
+      {
+        "path": "v2-calculator.css"
+      }
+    ],
+    "after": "eace2e1e94f4c19bb6978f0f90d1c50906e5bca0"
+  },
+  {
+    "repository": "ashleysnl/SimpleKitMortOrInvest",
+    "parent": "5adb0fa4c017682225da9b2e2356e1d6eabe7066",
+    "tree": "e0744d734eb1e2034433982084269b2b96777e38",
+    "files": [
+      {
+        "path": "app.js"
+      }
+    ],
+    "after": "2e2e31ad9f743e031fa6ed7ee400f5051ed90f92"
   }
 ]

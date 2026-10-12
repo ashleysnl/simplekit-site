@@ -396,13 +396,20 @@
         "index.html",
         "v2-calculator.css",
         "AGENTS.md",
-        "icons/apple-touch-icon.png"
+        "icons/apple-touch-icon.png",
+        "app.js"
       ],
-      "after": "5adb0fa4c017682225da9b2e2356e1d6eabe7066",
+      "after": "2e2e31ad9f743e031fa6ed7ee400f5051ed90f92",
       "state": "[~]",
       "implementationComplete": true,
       "batchBuild": true,
-      "phase16Verified": false
+      "phase16Verified": false,
+      "presentationChanges": [
+        [
+          "window.addEventListener(\"resize\", scheduleCharts);",
+          "window.addEventListener(\"resize\", () => scheduleCharts());"
+        ]
+      ]
     },
     {
       "id": "investment-fee-calculator",
@@ -537,7 +544,7 @@
         "AGENTS.md",
         "app.js"
       ],
-      "after": "069a47fb28d57ff3364ad56925d1771acdc669b3",
+      "after": "eace2e1e94f4c19bb6978f0f90d1c50906e5bca0",
       "state": "[~]",
       "implementationComplete": true,
       "batchBuild": true,

@@ -74,7 +74,7 @@
     {
       "id": "mortgage-paydown-vs-invest-calculator",
       "repository": "ashleysnl/SimpleKitMortOrInvest",
-      "revision": "5adb0fa4c017682225da9b2e2356e1d6eabe7066"
+      "revision": "2e2e31ad9f743e031fa6ed7ee400f5051ed90f92"
     },
     {
       "id": "investment-fee-calculator",
@@ -99,7 +99,7 @@
     {
       "id": "travel-planner",
       "repository": "ashleysnl/TravelPlanner",
-      "revision": "069a47fb28d57ff3364ad56925d1771acdc669b3"
+      "revision": "eace2e1e94f4c19bb6978f0f90d1c50906e5bca0"
     },
     {
       "id": "debt-to-income-ratio-calculator",
