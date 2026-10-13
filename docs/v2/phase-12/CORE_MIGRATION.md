@@ -1,6 +1,8 @@
 # Shared Core and upstream adoption plan
 
-Current shared Core: `ashleysnl/SimpleKit-Core@cb1da347956f66cec40c72f48fae38b6daf201ed`. [All 23 exact source pins and styling owners](../phase-11/SOURCE_MATRIX.md) remain authoritative. This phase does not change Core, calculator repositories, pins, numerical logic, user data or public routes.
+Phase 15A consumes Core theme 1.1 through the existing immutable source manifest. See [current ownership, adoption and rollback](../phase-15a-handoff.md). The original steps below are historical; broad validation belongs to Phase 16 under the current implementation-first cadence. Do not restart completed migrations.
+
+Historical Phase 12 baseline Core: `ashleysnl/SimpleKit-Core@cb1da347956f66cec40c72f48fae38b6daf201ed`. [All 23 exact source pins and styling owners](../phase-11/SOURCE_MATRIX.md) remain authoritative. This phase does not change Core, calculator repositories, pins, numerical logic, user data or public routes.
 
 1. **Prepare Core compatibility.** Review its header/footer injection, loading and per-tool style interactions. Introduce an explicit version/opt-in for shared markup, tokens/fonts and disclosure navigation; preserve legacy output when absent. Test header initialization idempotence, classic/module callers, local Core asset paths, no-JS handoff and tools with existing custom headers. Do not globally replace their resets/type selectors.
 2. **Review upstream changes separately.** Carry System v1's CSS/markup/keyboard behavior into reviewed Core commits or a compatible shared-assets contract. Decide ownership of font/sprite URLs and pin them deliberately; avoid runtime CDN dependencies and duplicate shell markup. Site-owned helper renderers are build-time exemplars, not automatically callable from a browser or an existing Core API.

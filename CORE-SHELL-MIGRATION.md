@@ -1,5 +1,7 @@
 # Core Shell Migration Tracker
 
+This queue documents legacy production Core adoption. V2 consumers already use the opt-in System v1 shell and pinned local assets; do not inject a second legacy header/footer into those pages. Follow [Phase 15A ownership and upgrades](docs/v2/phase-15a-handoff.md) on `develop-v2`. Production CDN assets are unchanged.
+
 This tracker is for tools that already live on `simplekit.app/<slug>/` but do not yet use the shared SimpleKit Core header/footer shell.
 
 Retirement Planner is intentionally excluded from this queue.

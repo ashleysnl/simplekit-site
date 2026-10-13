@@ -1,6 +1,6 @@
 # SimpleKit V2 design system — version 1
 
-Contract version: **1**. This extends Phase 1's existing tokens; it does not silently change their values or retrofit legacy selectors. Load `foundations.css`, then `system.css`, and explicitly opt a complete page or isolated subtree into `.sk-v2[data-v2-system="1"]`. Load `shell.js` only for its disclosure navigation. Shared markup renderers are in `scripts/v2-system-components.mjs`. No new framework or site dependency is required.
+Contract version: **1**. This extends Phase 1's existing tokens; it does not silently change their values or retrofit legacy selectors. Load `foundations.css`, then `system.css`, and explicitly opt a complete page or isolated subtree into `.sk-v2[data-v2-system="1"]`. Load `shell.js` only for its disclosure navigation. As of Phase 15A, renderers are owned by pinned Core `v2/components.mjs`; `scripts/v2-system-components.mjs` is the site import bridge. See [the current ownership and upgrade handoff](../phase-15a-handoff.md). No new framework or site dependency is required.
 
 ## Tokens and responsive rules
 
@@ -11,7 +11,7 @@ Contract version: **1**. This extends Phase 1's existing tokens; it does not sil
 | Borders | Decorative #dbe2ec; functional input/menu border #7e8ba1. Error input has a 2px error border and visible corrective text, linked to the field. |
 | Space | Retain .25/.5/.75/1/1.5/2/3/4.5rem ladder. Interior layout gap 1–2rem, gutters 1–3rem, cards 1–1.5rem padding. Avoid multiple nested article cards; use reading flow and discrete callouts. |
 | Width/reflow | Site 72rem maximum; reading 44rem maximum; form target 34rem; mobile one column. 48rem breakpoint permits editorial sidebar and balanced input/results columns. Grids use `minmax(0,…)`; tables scroll locally, never widen the page. |
-| Surfaces/elevation | Small radius .75rem, card 1.25rem, panel 1.75rem; soft shadow 0 8px 24px navy at 5%. Interior actions use small radius; homepage discovery keeps its established treatment. |
+| Surfaces/elevation | Small radius .75rem, card 1.25rem, panel 1.75rem; soft shadow 0 8px 24px navy at 5%. Theme 1.1 primary actions use the existing pill token; task-specific secondary controls retain their treatment. Homepage discovery keeps its established treatment. |
 | Icons | Reuse the existing 18-symbol SVG sprite. Decorative icons have aria-hidden/focusable=false; icon-only actions require a text name. Meaningful state labels never rely on an icon or colour alone. |
 | States | Visible 3px action-colour focus with 3px offset, hover, current page, expanded disclosure, disabled, inline error, empty and loading. Existing reduced-motion rules apply. Forced colours preserve native control borders; example chart uses explicit white backing plus its textual data alternative. No bespoke dark palette is claimed. |
 

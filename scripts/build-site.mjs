@@ -16,6 +16,7 @@ import { localizeCoreHtml } from "./site-html.mjs";
 import { createDiscoveryIndex, discoveryModule, loadDiscoveryMetadata, renderDiscoveryQuestions } from "./v2-discovery.mjs";
 import { createGoalGroups, renderGoalCards, renderGoalDirectory, renderGoalNavigation } from "./v2-goals.mjs";
 import { homepageStyles, navigationScript } from "./v2-home-resources.mjs";
+import { shellHeader, shellFooter, alignSharedShell } from './v2-system-components.mjs';
 import { renderEditorialPage } from "./v2-editorial.mjs";
 
 const sourceById = new Map(acquireSources().map(source => [source.id, source]));
@@ -74,6 +75,8 @@ function buildTemplates(relativeDir = ".") {
     mkdirSync(path.dirname(destinationPath), { recursive: true });
     const template = readFileSync(absolutePath, "utf8");
     const rendered = template
+      .replaceAll("{{v2SharedHomeHeader}}", shellHeader('Home','home',{mainId:'main-content',skipLabel:'Skip to main content'}))
+      .replaceAll("{{v2SharedFooter}}", shellFooter())
       .replaceAll("{{v2NavigationScript}}", navigationScript(repoRoot))
       .replaceAll("{{v2GoalCards}}", renderGoalCards(goalGroups))
       .replaceAll("{{v2GoalNavigation}}", renderGoalNavigation(goalGroups))
@@ -420,6 +423,10 @@ function copyCoreAssets() {
   // Pilot assets are opt-in upstream sources; legacy Core remains byte-identical.
   const pilotAssets = path.join(sourceDirectory(core), "v2");
   if (existsSync(pilotAssets)) cpSync(pilotAssets, path.join(destination, "v2"), { recursive: true });
+  // Compatibility URLs are generated aliases of the same pinned Core bytes.
+  for(const name of ['foundations.css','system.css','shell.js','fonts','icons']) {
+    cpSync(path.join(pilotAssets,name),path.join(outputRoot,'assets','v2',name),{recursive:true});
+  }
 }
 
 function localizeCoreAssets(directory) {
@@ -428,7 +435,7 @@ function localizeCoreAssets(directory) {
     if (entry.isDirectory()) localizeCoreAssets(filename);
     else if (entry.name.endsWith(".html")) {
       const html = readFileSync(filename, "utf8");
-      const localized = localizeCoreHtml(html);
+      const localized = localizeCoreHtml(alignSharedShell(html));
       if (localized !== html) writeFileSync(filename, localized);
     }
   }

@@ -55,7 +55,7 @@ for(const e of suite.calculators){
 }
 const files=fs.readdirSync(dist,{recursive:true}).filter(f=>fs.statSync(path.join(dist,f)).isFile());
 const permittedAdded=new Set(['retirement-planner/icons/apple-touch-icon.png',...suite.calculators.flatMap(e=>[e.id+'/v2-calculator.css',...e.changedFiles.filter(f=>f.endsWith('.png')).map(f=>e.id+'/'+f)])]);
-const added=files.filter(f=>!before[f]);assert.equal(added.length,43,'Only 17 Core assets, six Apple icons and 20 tool adapters may be added');
+const added=files.filter(f=>!before[f]);assert.equal(added.length,44,'Only 18 Core assets (including the shared theme module), six Apple icons and 20 tool adapters may be added');
 for(const f of added){
  const core=f.startsWith('assets/core/v2/');assert(core||permittedAdded.has(f),f+' unexpected artifact');
  const owner=core?'simplekit-core':f.split('/')[0],pin=pins.sources.find(s=>s.id===owner);

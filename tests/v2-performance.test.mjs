@@ -17,7 +17,7 @@ test('homepage bundle preserves CSS order and resolves local font resources', ()
 
 test('navigation enhancement is synchronous at its markup boundary, with JS-free fallback', () => {
   const html = readFileSync(new URL('../templates/index.html', import.meta.url), 'utf8');
-  assert(html.indexOf('</header>') < html.indexOf('<script>{{v2NavigationScript}}</script>'));
+  assert(html.indexOf('{{v2SharedHomeHeader}}') < html.indexOf('<script>{{v2NavigationScript}}</script>'));
   assert(html.indexOf('<script>{{v2NavigationScript}}</script>') < html.indexOf('<main'));
   assert(!html.includes('defer src="assets/v2/home.js"'));
   assert(!/<nav[^>]+data-v2-navigation[^>]*\bhidden\b/.test(html));

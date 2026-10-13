@@ -74,26 +74,8 @@
 </script>
 </head>
 <body class="v2-home">
-  <div class="sk-v2 v2-home-top">
-    <a class="v2-skip-link" href="#main-content">Skip to main content</a>
-    <header class="v2-header v2-container" data-v2-header>
-      <div class="v2-brand">
-        <a class="v2-wordmark" href="./" aria-label="SimpleKit home">Simple<span>Kit.</span></a>
-        <p class="v2-tagline">Free planning tools for Canadians</p>
-      </div>
-      <button class="v2-menu-toggle" type="button" hidden data-v2-menu-toggle aria-label="Open navigation menu" aria-expanded="false" aria-controls="home-navigation">
-        <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#menu"></use></svg>
-      </button>
-      <nav class="v2-navigation" id="home-navigation" aria-label="Primary" data-v2-navigation>
-        <a href="./" aria-current="page">Home</a>
-        <a href="tools/">Tools</a>
-        <a href="learn/">Learn</a>
-        <a href="about/">About</a>
-        <a href="support/">Support</a>
-      </nav>
-    </header>
-    <script>{{v2NavigationScript}}</script>
-  </div>
+  <div class="sk-v2" data-v2-system="1">{{v2SharedHomeHeader}}
+  <script>{{v2NavigationScript}}</script></div>
 
   <main id="main-content" tabindex="-1">
     <section class="sk-v2 v2-home-hero" aria-labelledby="home-hero-title">
@@ -218,17 +200,6 @@
     </section>
   </main>
 
-  <footer class="sk-v2 v2-home-footer">
-    <div class="v2-container">
-      <div class="v2-footer-top">
-        <div class="v2-footer-brand"><a class="v2-wordmark" href="./" aria-label="SimpleKit home">Simple<span>Kit.</span></a><p>Free planning tools for Canadians.</p><p class="v2-footer-maintainer">Independently built and maintained by Ashley Skinner in Canada.</p></div>
-        <nav class="v2-footer-navigation" aria-label="Footer navigation"><a href="tools/">View all {{toolCount}} tools</a><a href="learn/">Explore the guides</a><a href="about/">About SimpleKit</a><a href="support/">Support &amp; corrections</a></nav>
-      </div>
-      <div class="v2-footer-bottom">
-        <div class="v2-trust-note"><p>Inputs stay local; some tools save on-device. Google Analytics measures usage. Educational estimates; Canadian rules vary.</p><p class="v2-trust-links"><a href="privacy/">Privacy details</a><a href="methodology/">Methodology &amp; sources</a></p></div>
-        <div class="v2-footer-support"><a href="https://buymeacoffee.com/ashleysnl">Support future tools <svg class="v2-icon" aria-hidden="true" focusable="false"><use href="assets/v2/icons/sprite.svg#arrow-right"></use></svg></a><p>© SimpleKit</p></div>
-      </div>
-    </div>
-  </footer>
+  <div class="sk-v2" data-v2-system="1">{{v2SharedFooter}}</div>
 </body>
 </html>
