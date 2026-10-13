@@ -9,7 +9,7 @@
     {
       "id": "cpp-calculator",
       "repository": "ashleysnl/SimpleKitCPP",
-      "revision": "6dd3bbd05c1ac357f15bd27cbd4cf88b05e2da8e"
+      "revision": "6061a0a9c1935ec40dd463e4e25a707c2b98be29"
     },
     {
       "id": "take-home-pay-calculator",
@@ -49,7 +49,7 @@
     {
       "id": "budget-planner",
       "repository": "ashleysnl/SimpleKitMonthlyBudget",
-      "revision": "93e61eff224bcc1a6c4fb45b581dc08ed18a1890"
+      "revision": "2d410fd86b8b06da70dadeb5a6921311c3afcd05"
     },
     {
       "id": "compound-interest-calculator",
