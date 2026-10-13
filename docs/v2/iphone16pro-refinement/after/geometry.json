@@ -1,0 +1,57 @@
+{
+  ".v2-header": {
+    "top": 0,
+    "height": 67.59375,
+    "bottom": 67.59375
+  },
+  ".v2-hero-copy": {
+    "top": 75.59375,
+    "height": 160.40625,
+    "bottom": 236
+  },
+  ".v2-discovery-slot": {
+    "top": 250,
+    "height": 262,
+    "bottom": 512
+  },
+  ".v2-search-bar": {
+    "top": 250,
+    "height": 48,
+    "bottom": 298
+  },
+  ".v2-discovery-panel": {
+    "top": 298,
+    "height": 214,
+    "bottom": 512
+  },
+  ".v2-home-trust": {
+    "top": 524,
+    "height": 83.75,
+    "bottom": 607.75
+  },
+  ".v2-home-goals": {
+    "top": 607.75,
+    "height": 242.5,
+    "bottom": 850.25
+  },
+  ".v2-goal-heading": {
+    "top": 619.75,
+    "height": 60.5,
+    "bottom": 680.25
+  },
+  ".v2-home-goal-list": {
+    "top": 688.25,
+    "height": 150,
+    "bottom": 838.25
+  },
+  ".v2-home-featured": {
+    "top": 850.25,
+    "height": 363.1875,
+    "bottom": 1213.4375
+  },
+  ".v2-home-onboarding": {
+    "top": 1213.4375,
+    "height": 125.6875,
+    "bottom": 1339.125
+  }
+}

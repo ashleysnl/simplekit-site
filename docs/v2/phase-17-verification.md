@@ -26,3 +26,7 @@ All 24 production/source branch heads were rechecked against their baselines and
 ## Owner feedback: compact iPhone 16 Pro homepage
 
 The owner requested a clearer coastal image and a more compact match to the vision at 402 × 874 CSS pixels. [Focused refinement and measured baseline](iphone16pro-refinement/README.md) are prepared on `develop-v2`. New after screenshots, interaction/contrast/reflow verification and a replacement demo upload are pending because browser/network commands were aborted before execution. The verified c5817f32 demo remains available; it does not contain the new CSS. The prior homepage/performance passing results must be rechecked for this refinement before release acceptance.
+
+## Compact iPhone homepage uploaded for owner verification
+
+Immutable demo: https://b1364470.simplekit-preview.pages.dev. Source `77664662f9b1be9eb5ff68b32d880097e952e0a5`; [successful manual upload and deployed checks](https://github.com/ashleysnl/simplekit-site/actions/runs/38417515799). Shared alias now points to this candidate. All 22 deployed financial fixtures, JSON/state/CSV and retirement loading-path checks pass; both origins match 379 ordinary published-file hashes with noindex/robots protection. [Before/after iPhone capture and measurements](iphone16pro-refinement/README.md): all four goal cards fit within the first 874px. Owner design acceptance and remaining full visual/accessibility checks are still open; no production action.

@@ -1,8 +1,8 @@
 # iPhone 16 Pro homepage fidelity refinement
 
-Status: `[~]` — implementation prepared; after screenshots and updated demo are blocked by aborted browser/network tool calls. This is not visual acceptance or a production release.
+Status: `[~]` — implementation uploaded and deployed functionality verified; owner visual acceptance and complete responsive/accessibility review remain pending. Production is unchanged.
 
-Target: **402 × 874 CSS pixels, DPR 3**, using the existing [approved vision](../../design-reference/simplekit-v2-target.png). The last verified functional demo remains https://c5817f32.simplekit-preview.pages.dev, source `818b22501fa3225032946a389207442a5ffbafc7`; it does not include these new styling changes.
+Target: **402 × 874 CSS pixels, DPR 3**, using the existing [approved vision](../../design-reference/simplekit-v2-target.png). The current review demo is https://b1364470.simplekit-preview.pages.dev, source `77664662f9b1be9eb5ff68b32d880097e952e0a5`. Shared alias: https://codex-preview.simplekit-preview.pages.dev.
 
 ## Baseline measured before editing
 
@@ -34,10 +34,26 @@ The four goal cards extend below the first 874px screen. The prior mobile gradie
 - [x] Capture and measure the original page at the target viewport before substantive changes.
 - [x] Portable build with all 23 pinned sources and 22 calculators.
 - [x] Existing repository unit tests, SEO and output validation; unchanged 53 sitemap URLs and canonical host.
-- [ ] Capture the new 402px screenshot and compare it with the vision; record measured density improvements.
+- [x] Capture the new 402px screenshot and compare it with the vision; record measured density improvements below.
 - [ ] Check 375/390/402/768/1440px layouts, 200% text, search, suggested questions, menu and guided-start keyboard behavior. Check axe contrast with the clearer image, console/network errors and 44px targets.
 - [ ] Refine any remaining discrepancies using actual after screenshots.
-- [ ] Upload the exact verified candidate through the existing manual isolated preview workflow; record immutable URL and deployed verification.
+- [x] Upload the prepared candidate through the existing manual isolated preview workflow; verify deployed bytes and calculator functionality. Full visual acceptance remains separate.
 - [ ] Owner visual acceptance. Production approval remains separate.
 
 Browser execution requires the execution tool's network/socket permission. Repeated commands with that permission were aborted before they ran; no successful after capture or demo upload is claimed. Retained homepage and performance evidence from earlier candidates cannot certify this new CSS. The prior Take Home Pay WebKit 200% comparison-table finding also remains tracked separately; its source-owned containment edit is preserved uncommitted in that source checkout and is not integrated by this homepage task.
+
+## Successful review upload
+
+[Preview workflow 38417515799](https://github.com/ashleysnl/simplekit-site/actions/runs/38417515799) succeeds for source `77664662f9b1be9eb5ff68b32d880097e952e0a5`. All 22 exact financial fixtures pass on the public demo, with zero page errors or failed same-origin requests. JSON import/export and storage reload, mortgage payment/CSV reconciliation and retirement loading-path parity pass. The immutable URL and shared alias match all 379 ordinary artifact files; preview noindex headers and disallowed robots remain intact.
+
+[New iPhone screenshot](after/iphone16pro-viewport.png) · [Measured geometry](after/geometry.json)
+
+| Component | Before | After |
+| --- | ---: | ---: |
+| Header height | 85px | 68px |
+| Four goal cards start | 827px | 688px |
+| Four goal cards end | 1,015px | 838px |
+| Featured calculators start | 1,031px | 850px |
+| Guided-start panel end | 1,678px | 1,339px |
+
+All four goal cards now fit inside the 874px target screen. The composition through the guided-start panel is approximately 20% shorter, with the coast visible along the right of the hero. The owner should review this exact immutable demo before further refinement or production discussion. Earlier aborted calls describe the preparation history and no longer block this review upload.

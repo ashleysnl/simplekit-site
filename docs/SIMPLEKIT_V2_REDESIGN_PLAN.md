@@ -571,6 +571,8 @@ End each execution with the active phase, completed criteria/evidence, unfinishe
 - [x] Measure the current composition at 402 × 874 CSS pixels against the approved vision.
 - [~] Tighten mobile header/hero/search/goal/featured/onboarding proportions and expose the coastal background more clearly. [Implementation and baseline](v2/iphone16pro-refinement/README.md).
 - [ ] Verify after screenshots, readability, accessible controls, responsive reflow and homepage interactions; iterate against the actual vision.
-- [ ] Upload the verified replacement to the isolated demo and provide its immutable URL before any production release discussion.
+- [x] Upload the prepared replacement to the isolated demo and verify deployed bytes and calculator functionality: https://b1364470.simplekit-preview.pages.dev, source `7766466`, workflow `38417515799`. Owner visual acceptance remains pending.
 
 The functional full-site demo remains https://c5817f32.simplekit-preview.pages.dev. No new visual acceptance or production permission is recorded. Keep this feedback open until screenshots and deployed verification pass.
+
+Current owner-review demo: https://b1364470.simplekit-preview.pages.dev. The compact iPhone 16 Pro composition is uploaded; [402px before/after measurements](v2/iphone16pro-refinement/README.md) and all 22 deployed fixtures pass. Prior demo identities remain historical evidence. Production remains untouched.
