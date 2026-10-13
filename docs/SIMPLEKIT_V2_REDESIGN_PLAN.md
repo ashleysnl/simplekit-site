@@ -576,3 +576,11 @@ End each execution with the active phase, completed criteria/evidence, unfinishe
 The functional full-site demo remains https://c5817f32.simplekit-preview.pages.dev. No new visual acceptance or production permission is recorded. Keep this feedback open until screenshots and deployed verification pass.
 
 Current owner-review demo: https://b1364470.simplekit-preview.pages.dev. The compact iPhone 16 Pro composition is uploaded; [402px before/after measurements](v2/iphone16pro-refinement/README.md) and all 22 deployed fixtures pass. Prior demo identities remain historical evidence. Production remains untouched.
+
+### Active owner feedback — one continuous homepage
+
+- [x] Identify and remove the legacy landing page appended beneath the V2 guided-start panel, including duplicate retirement/process/trust promotions.
+- [x] Integrate useful learning, maintainer, support, privacy and methodology destinations into compact V2 guide rows and a consistent footer.
+- [x] Verify portable build, unit/SEO/output checks and full-scroll responsive/accessibility/keyboard behavior. [Evidence](v2/homepage-continuity/README.md).
+- [~] Upload the exact candidate to the isolated Cloudflare demo for owner review.
+- [ ] Record owner acceptance of the entire homepage scroll. No production changes or release authorization.
