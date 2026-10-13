@@ -26,3 +26,11 @@
   .sk-v2 .v2-featured-list, .sk-v2 .v2-featured-tool { border-color: CanvasText; }
   .sk-v2 .v2-featured-description, .sk-v2 .v2-featured-chevron { color: CanvasText; }
 }
+
+@media (max-width:47.999rem) {
+  .sk-v2.v2-home-featured { padding-block:.25rem 1rem; }
+  .sk-v2 .v2-featured-heading { margin-bottom:.375rem; }
+  .sk-v2 .v2-featured-tool { padding-block:.5rem; gap:.625rem; }
+  .sk-v2 .v2-featured-name { font-size:1.0625rem; }
+  .sk-v2 .v2-featured-description { font-size:.8125rem; line-height:1.4; margin-top:.125rem; }
+}

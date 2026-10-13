@@ -39,3 +39,9 @@
   .sk-v2 .v2-trust-item .v2-icon-disc { width: 1.5rem; height: 1.5rem; }
   .sk-v2 .v2-trust-item .v2-icon { width: 1.125rem; height: 1.125rem; }
 }
+
+@media (min-width:23.4375rem) and (max-width:47.999rem) {
+  .sk-v2 .v2-trust-item { padding-block:.375rem; }
+  .sk-v2 .v2-trust-title { font-size:.8125rem; }
+  .sk-v2 .v2-trust-detail { font-size:.75rem; line-height:1.35; margin-top:.1875rem; }
+}

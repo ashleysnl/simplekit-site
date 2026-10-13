@@ -47,3 +47,9 @@
   .sk-v2 .v2-discovery-panel { padding: .75rem 1rem; }
   .sk-v2 .v2-discovery-heading { font-size: .75rem; }
 }
+
+@media (max-width:47.999rem) {
+  .sk-v2 .v2-search-bar { min-height:3rem; padding-block:.0625rem; }
+  .sk-v2 .v2-discovery-panel { padding:.5rem .875rem; border-radius:1rem; }
+  .sk-v2 .v2-discovery-list .v2-question { padding-block:.375rem; font-size:.9375rem; }
+}

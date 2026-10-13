@@ -22,3 +22,7 @@ All 24 production/source branch heads were rechecked against their baselines and
 - [Successful upload and verification](https://github.com/ashleysnl/simplekit-site/actions/runs/38247367021): 22/22 exact deployed financial fixtures, zero page errors/failed same-origin requests, JSON import/export and storage reload, mortgage CSV/payment reconciliation, and module/classic retirement parity.
 - Both URLs match all 379 ordinary published files, with noindex headers and disallowed preview robots. The 381-file production artifact retains its production CNAME and indexing separately.
 - All 24 production branch heads remain unchanged. The independent browser run passes all tools in Chromium/Firefox and 19/20 WebKit enlarged-text cases; Take Home Pay at 200% text remains a release-blocking layout finding. Normal-size deployed financial functionality passes; this demo is ready for feedback but is not production approval.
+
+## Owner feedback: compact iPhone 16 Pro homepage
+
+The owner requested a clearer coastal image and a more compact match to the vision at 402 × 874 CSS pixels. [Focused refinement and measured baseline](iphone16pro-refinement/README.md) are prepared on `develop-v2`. New after screenshots, interaction/contrast/reflow verification and a replacement demo upload are pending because browser/network commands were aborted before execution. The verified c5817f32 demo remains available; it does not contain the new CSS. The prior homepage/performance passing results must be rechecked for this refinement before release acceptance.

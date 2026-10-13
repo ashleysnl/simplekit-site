@@ -42,3 +42,14 @@
   .sk-v2 .v2-onboarding-choice input { width: min(1.25rem, 20px); height: min(1.25rem, 20px); }
   .sk-v2 .v2-onboarding-choice span { min-width: 0; }
 }
+
+@media (min-width:23.4375rem) and (max-width:47.999rem) {
+  .sk-v2 .v2-onboarding-panel { flex-wrap:nowrap; gap:.5rem; padding:.75rem; border-radius:1rem; }
+  .sk-v2 .v2-onboarding-panel > .v2-icon-disc { width:2rem; height:2rem; }
+  .sk-v2 .v2-onboarding-panel > .v2-icon-disc .v2-icon { width:1.25rem; height:1.25rem; }
+  .sk-v2 .v2-onboarding-copy { min-width:0; overflow-wrap:anywhere; }
+  .sk-v2 .v2-onboarding-copy h2 { font-size:1rem; }
+  .sk-v2 .v2-onboarding-copy p { font-size:.78125rem; line-height:1.4; }
+  .sk-v2 .v2-onboarding-panel > .v2-button { flex:none; padding:.5rem .625rem; gap:.25rem; font-size:.8125rem; }
+  .sk-v2 .v2-onboarding-panel > .v2-button .v2-icon { width:1rem; height:1rem; }
+}
