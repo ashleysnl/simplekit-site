@@ -582,5 +582,7 @@ Current owner-review demo: https://b1364470.simplekit-preview.pages.dev. The com
 - [x] Identify and remove the legacy landing page appended beneath the V2 guided-start panel, including duplicate retirement/process/trust promotions.
 - [x] Integrate useful learning, maintainer, support, privacy and methodology destinations into compact V2 guide rows and a consistent footer.
 - [x] Verify portable build, unit/SEO/output checks and full-scroll responsive/accessibility/keyboard behavior. [Evidence](v2/homepage-continuity/README.md).
-- [~] Upload the exact candidate to the isolated Cloudflare demo for owner review.
+- [x] Upload the exact candidate to the isolated Cloudflare demo for owner review: https://686bceb8.simplekit-preview.pages.dev, source `4554b4e`, workflow `38422069217`; deployed checks pass.
 - [ ] Record owner acceptance of the entire homepage scroll. No production changes or release authorization.
+
+Latest owner-review demo: https://686bceb8.simplekit-preview.pages.dev. The entire homepage now uses V2 styling through the guide rows and compact footer. [Full-scroll evidence](v2/homepage-continuity/README.md); all 22 deployed fixture checks and artifact/preview protections pass. Earlier demo identities remain historical. Main and production are unchanged.

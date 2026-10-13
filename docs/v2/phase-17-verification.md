@@ -30,3 +30,9 @@ The owner requested a clearer coastal image and a more compact match to the visi
 ## Compact iPhone homepage uploaded for owner verification
 
 Immutable demo: https://b1364470.simplekit-preview.pages.dev. Source `77664662f9b1be9eb5ff68b32d880097e952e0a5`; [successful manual upload and deployed checks](https://github.com/ashleysnl/simplekit-site/actions/runs/38417515799). Shared alias now points to this candidate. All 22 deployed financial fixtures, JSON/state/CSV and retirement loading-path checks pass; both origins match 379 ordinary published-file hashes with noindex/robots protection. [Before/after iPhone capture and measurements](iphone16pro-refinement/README.md): all four goal cards fit within the first 874px. Owner design acceptance and remaining full visual/accessibility checks are still open; no production action.
+
+## Full-scroll continuity verified and deployed
+
+The owner identified the legacy landing page below the V2 guided-start panel. Duplicate retirement/process/trust/promotional blocks and the long tool footer are removed; useful guides and maintainer/support/privacy/methodology links now use consistent V2 components. [Full-scroll desktop/mobile and accessibility evidence](homepage-continuity/README.md).
+
+Review URL: https://686bceb8.simplekit-preview.pages.dev, source `4554b4e2a9663b258040d9ead595e1faa4e5d8d2`. [Workflow 38422069217](https://github.com/ashleysnl/simplekit-site/actions/runs/38422069217) passes build, upload, 22 deployed calculator fixtures, state/import/export/CSV and retirement loading-path checks; both origins match 379 ordinary published files with noindex/robots protection. This is the latest demo for owner review. Main remains `ca7826d`; no production/DNS/publishing changes.

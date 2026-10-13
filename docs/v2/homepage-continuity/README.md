@@ -1,6 +1,6 @@
 # One continuous V2 homepage
 
-Status: `[~]` — implemented and locally verified; isolated demo upload and owner review follow. Production remains unchanged.
+Status: `[~]` — implemented, uploaded and locally/deployed verified; owner review remains pending. Production remains unchanged.
 
 The owner reported that the compact V2 homepage transitioned into an appended legacy landing page when scrolling. The earlier demo at https://b1364470.simplekit-preview.pages.dev showed the duplicate retirement promotion, large process/trust/support cards and long calculator-directory footer beneath the new homepage.
 
@@ -21,11 +21,19 @@ The owner reported that the compact V2 homepage transitioned into an appended le
 - [x] Chromium full-page inspection at 375/390/402/768/1440px; no horizontal overflow or visible touch target below 44px.
 - [x] 402px enlarged text at 200% reflows without horizontal overflow.
 - [x] WCAG 2 A/AA and 2.1 AA axe audits pass at 402px and 1440px.
-- [x] Mobile menu Enter/Escape behavior, search/clear and privacy-to-methodology keyboard navigation pass; zero page errors or failed same-origin requests.
+- [x] Mobile menu open/Escape behavior, search/clear and privacy-to-methodology keyboard navigation pass; zero page errors or failed same-origin requests.
 - [x] Exactly one V2 footer, three guide rows and no legacy homepage/footer wrappers.
-- [ ] Isolated demo upload, public artifact/robots and deployed calculator checks.
+- [x] Isolated demo upload, public artifact/robots and deployed calculator checks.
 - [ ] Owner review of the complete scroll. Production permission remains separate.
 
 [Full mobile page](home-402.jpg) · [Lower-page transition](lower-402.jpg) · [Desktop page](home-1440.jpg) · [Browser evidence](verification.json).
 
-The full 402px page is 2,087px tall. This is a focused Chromium check, not a claim of final cross-engine/device/screen-reader release acceptance. The previous unrelated Take Home Pay WebKit enlarged-table finding remains open and its source edit is preserved separately.
+The full 402px page is 2,087px tall, versus 8,314px in the saved prior DPR-3 full-page capture (the appended landing page and long directory footer were responsible for most of that extra length). This is a focused Chromium check, not a claim of final cross-engine/device/screen-reader release acceptance. The previous unrelated Take Home Pay WebKit enlarged-table finding remains open and its source edit is preserved separately.
+
+## Review demo
+
+https://686bceb8.simplekit-preview.pages.dev · shared alias https://codex-preview.simplekit-preview.pages.dev
+
+Source `4554b4e2a9663b258040d9ead595e1faa4e5d8d2`; [successful deployment and verification](https://github.com/ashleysnl/simplekit-site/actions/runs/38422069217). All 22 deployed financial fixtures pass with zero page errors or failed same-origin requests. Budget/Retirement JSON import/export and reload, mortgage payment/CSV reconciliation and retirement loading-path parity pass. Both demo URLs match all 379 ordinary published files and retain preview noindex/robots protections.
+
+The production branch remains `ca7826db75cb4353488786aab80857b3a71c1be1`; production, publishing configuration and DNS were not modified. Review the entire scroll on this immutable demo; visual acceptance and production permission remain separate.
