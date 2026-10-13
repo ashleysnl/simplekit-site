@@ -28,7 +28,7 @@ SimpleKit V2 uses a simplified development workflow.
 
 ### Standard Codex workflow
 
-Checkout `develop-v2` → Sync → Implement → Test → Commit → Push → Update V2 plan
+Checkout `develop-v2` → Sync → Implement coherent batch → Lightweight/focused checks → Update plan → Commit → Push\n\nComplete comprehensive QA against the finished release candidate in Phase 16.
 
 If the environment requires a pull request, target `develop-v2`, not `main`.
 
@@ -104,34 +104,25 @@ Non-negotiable boundaries:
 
 ## Execution protocol for every phase
 
-Read this plan, repository instructions, relevant source files and the target PNG before changing code. Confirm prerequisite phases and start from the latest reviewed work. Check out and synchronize `develop-v2` as required above, and verify previous completed work is integrated. Continue directly on `develop-v2`; use a temporary task branch and a PR targeting `develop-v2` only if the environment requires it. Do not edit `main` directly. A documentation-plan PR does not authorize implementation or release.
+Read this plan, repository instructions and the source files relevant to the task. Use the saved target PNG and approved derived references for visual work. Synchronize `develop-v2` and check that prerequisite work is integrated. Use the existing checkout where available; connector-only documentation changes may update the existing file directly on `develop-v2` using its current blob SHA. Do not create a new development branch for a routine plan edit.
 
-Set only the active phase/task to `[~]`. Implement its bounded scope. Reuse the current static HTML/CSS/JavaScript architecture unless a separate decision is approved. Capture before/after screenshots at 375, 390, 768 and 1440 CSS pixels; check 320 and 1920 widths, portrait/landscape and zoom. Compare section order, typography, landscape fade/crop, spacing, colors and controls with the reference; document differences.
+Implement coherent batches using the existing static HTML/CSS/JavaScript architecture and source/template/registry contracts. During implementation, inspect the diff, run one portable build per coherent code batch, and check the changed page's primary interaction when necessary. If financial logic, data handling or a known defect is touched, run the focused check that can detect that regression immediately. Do not repeat the complete calculator suite, SEO/accessibility audits, multi-browser matrices or exhaustive screenshot galleries after each styling change. Documentation-only changes need a diff/link/structure review, not a site rebuild or browser suite. Preserve required CI; this plan does not disable mandatory repository checks.
 
-For code phases run the current supported validation sequence with the Node version in `.node-version`:
+Set implemented-but-unverified work to `[~]` and record deferred checks. Maintain a short handoff: changed files/source pins, build result, known issues, remaining checks and next task. Reuse existing evidence and fixtures rather than producing a new evidence directory for every minor refinement. Capture a small mobile/desktop comparison only when it helps resolve a design choice; capture the full gallery once during final QA.
 
-```sh
-npm run sources:fetch
-npm test
-npm run build
-npm run seo:validate
-npm run output:validate
-npm run preview
-```
+Continue through the authorized implementation scope without requesting approval between routine reversible batches. Stop for missing requirements that materially affect implementation, unresolved critical defects, or the final production authorization. This roadmap update authorizes documentation changes only; future implementation tasks follow their requested scope.
 
-Use the isolated Playwright setup documented in `docs/cloud-native-validation.md` for `tests/browser-smoke.cjs`. Do not add runtime dependencies just to run browser checks. Run focused interaction checks appropriate to the phase. Build must leave tracked files unchanged apart from intentional authored changes; do not commit `dist/` or `.cache/`.
-
-Record evidence in the `develop-v2` commit (and a PR targeting `develop-v2` if required) and a future `docs/v2/phase-NN-verification.md`: source commit, task states, files changed, commands/results, browser/device scope, screenshot paths, comparison notes, route checks, known limitations, and preview workflow/deployment links if used. Add evidence links to this plan. Mark `[x]` only after the criteria pass; report blockers without checking them off. Obtain review of the finished phase before proceeding to the next phase when working through the roadmap step by step.
+Phase 16 runs the consolidated final QA against the frozen candidate. Phase 17 verifies the uploaded artifact and preview protections, exercising deployed routes and key interactions without automatically repeating every suite already passed for identical inputs. Phase 18 prepares the concrete release/rollback package before requesting production authorization. Keep `main`, production hosting and DNS unchanged until release is explicitly authorized.
 
 Reusable Codex execution prompt:
 
-> Implement Phase NN only from `docs/SIMPLEKIT_V2_REDESIGN_PLAN.md` on synchronized `develop-v2`. Read `docs/design-reference/simplekit-v2-target.png` and the repository instructions first. Confirm prerequisites, set active tasks to `[~]`, implement the phase using existing source/template/registry contracts, and run its acceptance checks and the supported build validations. Preserve all 22 calculators, existing URLs, source pins, production files/configuration and deployment. Record screenshots, results, limitations and evidence links; set passing tasks to `[x]`. Commit completed work to `develop-v2`; if a temporary branch is required, open or update a focused PR targeting `develop-v2` and integrate it after validation. Update this plan and report the next incomplete task. Do not merge or deploy production.
+> Continue the requested V2 phase on synchronized `develop-v2`. Read the current plan and repository instructions. Reuse existing shared foundations/Core/components and implement in coherent batches. Inspect source changes and run one portable build per code batch; use focused checks for changed calculation/state behavior or known defects. Defer broad browser, accessibility, SEO, numerical/state regression and screenshot matrices to Phase 16. Keep unverified work `[~]`, record deferred checks and update this plan in the same commit. Preserve formulas, state compatibility, canonical URLs and production. Do not create persistent task branches, duplicate the design system, merge into `main` or deploy production. Report the next bounded task.
 
 ## Remaining-phase execution cadence — implementation first
 
-Owner direction (2026-10-11): accelerate the remaining work and defer comprehensive testing until the end of implementation. This cadence supersedes earlier instructions requiring full regression/browser suites for every task, source-pin update, documentation commit or intermediate phase.
+Owner direction (2026-10-11, reaffirmed 2026-10-13): accelerate the remaining work and defer comprehensive testing until the end of implementation. This cadence supersedes earlier instructions requiring full regression/browser suites for every task, source-pin update, documentation commit or intermediate phase.
 
-- Phase 15: implement all remaining calculators in a small number of coherent batches on develop-v2. Inspect source changes, preserve financial logic/URLs and run one portable build per batch. Integrate source-owned work into the owning develop-v2 branches and record pins/rollback information. Defer numerical/state regressions, SEO audits, accessibility suites, browser matrices and exhaustive screenshot evidence to Phase 16.
+- Phase 15 (including 15A–15D above): finish shared-theme alignment and reference/tool refinements without restarting completed migrations; implement all remaining calculators in a small number of coherent batches on develop-v2. Inspect source changes, preserve financial logic/URLs and run one portable build per batch. Integrate source-owned work into the owning develop-v2 branches and record pins/rollback information. Defer numerical/state regressions, SEO audits, accessibility suites, browser matrices and exhaustive screenshot evidence to Phase 16.
 - Phase 16: freeze the implementation candidate and run one comprehensive final QA checkpoint covering all 22 calculators, financial/state/export fixtures, source preservation, SEO, accessibility, responsive browser behavior and visual coherence. Capture the final comparison gallery once. Fix defects and rerun affected checks; repeat broad QA when changes or unresolved concerns warrant it.
 - Phase 17: deploy the tested candidate to the isolated preview, verify its artifact identity, indexing isolation and key deployed paths, and obtain owner design review. Do not automatically repeat every local browser matrix on an identical deployed artifact. Explicit full hosted QA remains available when needed.
 - Phase 18: prepare release/rollback materials after QA and review. Main and production remain unchanged until explicit release authorization. Final QA is required before release, not after production deployment.
@@ -139,6 +130,97 @@ Owner direction (2026-10-11): accelerate the remaining work and defer comprehens
 Previously pending pilot visual/manual acceptance moves to the final review checkpoint; this authorizes continuing implementation without claiming that acceptance has passed. Mark implemented-but-unverified work [~], not [x]; track deferred checks explicitly. A successful intermediate build is not release readiness.
 
 Automatic V2 CI now builds and publishes the review artifact without exhaustive tests. Manually dispatch Validate static site on the final develop-v2 commit with full_qa=true for the complete test suite. Release PRs targeting main and main-branch runs always request full QA. Preview full_qa defaults to false; project isolation, noindex/robots/CNAME protections and a short hosted smoke check remain mandatory.
+
+## Homepage-to-calculators production roadmap — owner direction 2026-10-13
+
+Goal: one recognisable SimpleKit website from homepage through calculator, learning content and support, with shared foundations that can evolve without rewriting 22 tools. Build the remaining work first, then complete the broad test pass before production.
+
+### Review of the current V2 implementation
+
+The `develop-v2` plan and source records already contain substantial implementation:
+
+- Phase 12 established the opt-in System v1 contract, shared shell/component renderers and page-family references.
+- Phase 13 migrated site-owned editorial/support pages.
+- Phase 14 implemented Retirement and Mortgage pilots. Retain them; do not restart the pilot programme.
+- Phase 15 records all 20 remaining tools as implemented, with per-tool adapters, immutable upstream revisions and deferred verification. CPP and Budget already have V2 implementation entries.
+- Phase 16 contains QA results and source-owned fixes, with outstanding verification/manual acceptance. Historical test results are useful evidence, not acceptance of every later visual change.
+- The latest recorded owner-review homepage is `https://686bceb8.simplekit-preview.pages.dev`, source `4554b4e`. Homepage continuity is implemented; owner acceptance remains open. The production CPP screenshot supplied on 2026-10-13 demonstrates the legacy experience, not a verified defect in the latest V2 preview.
+- No open PR targeting `develop-v2` was returned during this documentation review. Existing completed phases and historical evidence remain intact.
+
+Do not recreate completed foundations or mark current implementations release-ready from these records. The next implementation task is to reconcile the latest homepage refinements with the shared shell and calculator interiors, then finish any visible gaps before consolidated QA.
+
+### Remaining delivery sequence
+
+These subphases extend existing Phase 15 and preserve Phases 0–18 numbering and evidence.
+
+| Step | Scope and concrete deliverable | Development checks / completion |
+| --- | --- | --- |
+| 15A Shared theme alignment | Compare the latest homepage header, typography, navigation, footer and support treatment with Core/System v1. Reconcile common styles and markup in their owning sources; keep coastal imagery and discovery modules homepage-specific. Produce one documented shared contract and asset ownership map. | Diff review and one portable build. Record implementation separately from final acceptance. |
+| 15B Calculator reference interiors | Refine the existing CPP and Budget implementations as simple/complex references. Use compact introductions, accessible fields, prominent results and consistent assumptions/related content. Retain Retirement/Mortgage as existing pilot coverage. | One build and a brief mobile/desktop look at the changed references; focused interaction checks only. |
+| 15C Complete all calculator families | Propagate compatible shared changes through the existing 22-tool migration matrix in coherent investing, housing/debt, income/planning and tax/travel batches. Keep purpose-specific forms, charts, tables and workflows. Include associated guides and compatibility pages. | Inspect upstream diffs and update deliberate immutable pins. One build per coherent batch; queue broad checks for Phase 16. |
+| 15D Future tool handoff | Bring the calculator style guide, starter, spec template and master Codex instructions into agreement with the actual V2 contract. Document upgrade/version/rollback rules and exceptions. | Documentation/template review and a build only if executable starter/build files change. |
+| 16 Consolidated release QA | Freeze the implementation candidate; run the comprehensive site, calculator and cross-browser release checks below. Fix findings and rerun affected checks. | Passing evidence tied to exact source pins/artifact; accepted exceptions recorded. No production release. |
+| 17 Isolated preview and design review | Upload the tested candidate, verify deployed identity/indexing isolation, inspect all route availability and key interactions, and review full user journeys with the owner. | Reuse passing QA for unchanged inputs. New design fixes return to development and receive proportionate checks before review. |
+| 18A Release preparation | Finalise exact candidate/artifact, current production destination, approved publishing procedure and recoverable known-good rollback artifact. | Concrete release package ready for owner production authorization. |
+| 18B Production release | After authorization, merge/publish through the reviewed procedure, verify production routes/assets/indexing and key calculator behaviour. | Production serves the approved candidate; rollback is available if a critical issue appears. |
+| 18C Observation and maintenance handoff | Review rollout, approximately 24-hour and 7-day observations; record results and adopt the ongoing upgrade policy. | Close rollout after observation; create scheduled checks only if separately requested. |
+
+### Phase 15 extension checklist
+
+New tasks start incomplete; this review does not claim implementation of the refinements.
+
+- [ ] **15A:** Identify shared differences between the latest homepage and pinned Core/System v1; record existing asset/component owners and resolve duplication or drift.
+- [ ] **15A:** Align shared header/menu, wordmark, fonts, colours, spacing, footer and support placement. Use an explicit opt-in/compatible contract rather than a global reset.
+- [ ] **15B:** Refine CPP and Budget reference interiors using the compact calculator layout; retain formulas, parsing, defaults, state/export and metadata contracts.
+- [ ] **15C:** Carry any required changes across all 22 tools and related page families; update source-owned revisions on their owning `develop-v2` branches and keep the matrix current.
+- [ ] **15D:** Update the owning repository's calculator style guide/starter/master prompt/spec guidance; do not only edit chat attachments. If no maintained counterpart exists, add the authoritative guidance in the repository and record its location.
+- [ ] **15D:** Document compatible upgrade procedure, explicit contract-version changes, pinned-asset consumption and rollback. Mark implementation finished and queue the consolidated candidate for Phase 16.
+
+### Calculator page design contract
+
+Common page order: shared header → breadcrumb/title/one-sentence introduction → calculator inputs and primary results → assumptions/methodology → related tools/guides → shared footer/support.
+
+- Use the homepage's brand typography, palette, icons, spacing and shell consistently. Calculator titles use the interior scale, not the homepage hero scale.
+- Keep introductions compact, especially on mobile. Remove redundant promotional paragraphs/trust chips/CTA blocks that delay the first useful input. Preserve meaningful disclaimers and route-specific educational content.
+- Desktop can place inputs beside results when that suits the tool; mobile presents inputs followed by a clear result summary. Do not force a universal two-column layout onto comparison tools, dynamic-row planners or checklists.
+- Preserve purpose-specific chart, table, export and disclosure interactions. Use consistent labels, units, validation, empty states and result hierarchy.
+- Support must not cover navigation, inputs, results or mobile browser-safe areas. Prefer a normal-flow/footer treatment where a floating control competes with the task.
+- Keep existing canonical routes, SEO content/schema, anchors, privacy claims and financial behaviour. Avoid a redesign that requires an SEO URL migration.
+
+### Shared ownership and upgrades
+
+| Layer | Owner/responsibility | Change rule |
+| --- | --- | --- |
+| Foundation | Shared V2 tokens, fonts, icons, spacing and responsive primitives, published through the established Core/site build contract | One maintained source; consumers adopt a deliberate compatible release/pin. |
+| Shell and reusable components | Core owns shared runtime shell; site templates/build renderers consume the documented contract; shared calculator primitives cover controls/results/disclosures | Keep API/markup compatibility or increment the contract version. Do not double-inject headers/footers. |
+| Tool-specific presentation | Owning calculator repository: layout adapter, unique chart/table interactions and educational copy | Use shared primitives; keep local CSS limited to meaningful tool differences. |
+| Financial behaviour | Owning calculator repository: formulas, parsing, assumptions, defaults, saved state and imports/exports | Isolate from theme edits; review and run focused behaviour checks whenever changed. |
+| Release assembly | `simplekit-site` manifests/build: canonical route authority and immutable upstream source pins | Build a reproducible portable artifact; retain previous pins/artifacts for rollback. |
+
+The existing System v1 opt-in marker `.sk-v2[data-v2-system="1"]` and immutable source manifests are the starting point. Do not introduce a second design system or registry. Prefer the existing locally assembled pinned assets over an unversioned live stylesheet that can change every deployed tool unexpectedly. If standalone consumers require versioned hosted assets, add explicit immutable release paths through the owning Core contract; do not make that infrastructure a prerequisite where the current build already pins assets.
+
+No framework rewrite, repository consolidation or hosting migration is required for the visual rollout.
+
+### Testing policy — build first, broad QA before release
+
+During development, perform only the checks needed to confirm the changed batch builds and its primary behaviour is plausible. Catch obvious broken rendering and touched calculation/state regressions early; avoid exhaustive verification of unfinished styling. Preserve required CI, but do not manually duplicate it.
+
+At Phase 16, run a consolidated release matrix:
+
+1. **Numerical correctness:** all 22 frozen fixtures, relevant edge/invalid inputs and rounding; module/classic parity where supported.
+2. **State and data:** persistence/reload, reset, scenario changes, import/export and CSV schedules where each tool supports them.
+3. **Visual/usability:** representative initial/populated/error/results states; shared shell consistency; charts/tables/support placement; mobile/tablet/desktop and narrow/enlarged-text reflow.
+4. **Accessibility/browser:** keyboard/focus, labels/errors/live results, contrast and automated audits; Chromium/Firefox/WebKit. Record physical-device/screen-reader/native-zoom checks and any owner-accepted limitations separately.
+5. **Site/SEO:** all public and compatibility routes, internal links/anchors, canonicals/schema, sitemap/robots/redirects and privacy/analytics claims.
+6. **Build/performance/release:** pinned-source preservation, reproducibility, font/image loading, representative page performance, deployable artifact identity and recoverable rollback package.
+
+Use existing tests and fixtures; add coverage for actual new behaviour or uncovered failure modes, not CSS snapshots or tests that merely mirror implementation. Keep one final evidence gallery/report and a defect list. Rerun affected suites after fixes; repeat broad QA only when shared changes, new failures or unresolved risks invalidate prior results. Passing tests for unchanged inputs may be reused with recorded provenance.
+
+### After production
+
+Use the same three-layer structure for subsequent upgrades. Compatible component fixes stay within the documented contract; breaking token/markup changes receive an explicit new version and staged adoption. New calculators start from the maintained V2 starter. Small changes get focused checks; substantial shared-system or financial changes receive an appropriate release regression pass. Retire obsolete adapters/assets only after consumer coverage and rollback needs are understood.
+
+This task updates the roadmap only. It does not implement 15A–15D, change CI, upload a preview or authorize production.
 
 ## Phase 0 — Baseline inventory and regression guardrails
 
@@ -443,7 +525,7 @@ Verified demo: https://1e526422.simplekit-preview.pages.dev. Owner authorized in
 
 ## Phase 15 — Redesign remaining 20 calculators in controlled batches
 
-Status: `[~]`. Implementation of all remaining 20 calculators is complete in four coherent batches, each with a passing portable build. All 22 now opt into V2; full numerical/state/browser/visual verification remains deferred to Phases 16–17. [22-tool matrix and source records](v2/phase-15-verification.md).
+Status: `[~]`. The initial implementation of all remaining 20 calculators is complete in four coherent batches, each with a passing portable build. The 2026-10-13 Phase 15A–15D shared-theme alignment, reference refinement and future-tool handoff tasks remain incomplete. All 22 now opt into V2; full numerical/state/browser/visual verification remains deferred to Phases 16–17. [22-tool matrix and source records](v2/phase-15-verification.md).
 
 - [x] Group remaining tools by interaction pattern (retirement/investing, housing, debt, income/tax, budgeting/planning, checklists/travel); inventory unique UI and state cases.
 - [~] Apply shared V2 visual primitives and appropriate tool-specific layouts to every remaining calculator; avoid blanket CSS that breaks complex charts, tables or input controls.
@@ -458,7 +540,7 @@ Acceptance:
 
 ## Phase 16 — End-to-end visual coherence and final release candidate
 
-Status: `[~]`. Final QA is in progress. Source-owned responsive/accessibility fixes and scoped retirement fallback are implemented; full hosted verification and owner manual review remain. Final QA checkpoint after implementation in Phases 11–15. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
+Status: `[~]`. Final QA is in progress. Source-owned responsive/accessibility fixes and scoped retirement fallback are implemented; full hosted verification and owner manual review remain. Final QA checkpoint after implementation in Phases 11–15, including any required Phase 15A–15D refinements. Freeze the final implementation candidate before broad QA; retain earlier passing results only for unchanged inputs. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
 
 - [ ] Audit the full site as a user journey: homepage → search/goals → calculator → related guide/article → another calculator → supporting pages.
 - [ ] Compare representative and exceptional page families to the saved mockup and approved derived references at 320, 375, 390, 768, 1440 and 1920 widths, with 200% zoom, reduced motion and mobile devices.
@@ -541,6 +623,8 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 
 ## Phase tracker and handoff
 
+Current next implementation step (2026-10-13): **15A — reconcile the latest homepage refinements with the existing shared Core/System v1 and calculator interiors.** Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
+
 | Phase | State | Evidence / next step |
 | --- | --- | --- |
 | 0 Baseline and guardrails | `[x]` | [Baseline evidence](v2/phase-00-verification.md); owner instructed Phase 1. Live edge HTTP checks limited by 403. |
@@ -558,7 +642,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
-| 15 Remaining calculators | `[~]` | [All 20 implemented](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. Full verification deferred to Phase 16. |
+| 15 Remaining calculators and theme alignment | `[~]` | [Initial 20 implementations](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. Next: 15A shared-theme comparison, then 15B references, 15C family refinements and 15D maintained guidance. Full verification in Phase 16. |
 | 16 Full-site release candidate | `[~]` | [Final QA candidate](v2/phase-16-verification.md); source-owned fixes integrated, hosted/browser and manual acceptance pending. |
 | 17 Cloudflare preview/review | `[~]` | [Preview verification prepared](v2/phase-17-verification.md); awaits final QA, network permission and successful upload before owner review. |
 | 18 Production rollout | `[~]` | [Release preparation](v2/phase-18-release-package.md); proposal and rollback prepared, no release approval or production action. |
