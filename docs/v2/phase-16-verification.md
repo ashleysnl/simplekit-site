@@ -1,5 +1,15 @@
 # Phase 16 — Full-site final QA candidate
 
+## Current checkpoint after Phases 15A–15D
+
+Status: `[~]`. A new candidate is being frozen for one consolidated final QA run. Earlier evidence below is historical for inputs changed by the latest shared theme and family refinements. No production merge/deployment.
+
+Preflight: all ten repository test files pass; SEO validates 53 indexed pages, 1464 internal links and 13 compatibility pages; output validates 22 calculators, 53 sitemap URLs, 67 HTML pages and 201 assets. The independent preservation guard protects 262 exact pre-pilot runtime files and unchanged editorial head/content hashes outside the reviewed shell replacement. Its historical shell fixture is from `5bb3fc1`; financial baselines were not replaced with current output. Homepage-owned assets and generated immutable Core aliases have explicit source/ownership checks. Legacy browser selectors are updated to the current shared header/navigation contract without removing functional assertions.
+
+The preserved Contractor runtime files are byte-identical to published pin `c56104e`, including the hidden backing checkboxes and pressed-state updates. Its local divergent history/dirty files remain preserved; there is no missing runtime change to silently include. The TakeHomePay enlarged-table containment fix is now published as `28b1ca0b7f3d6aba3689e24582ba691cffb0b52c`; its original patch/private commit are backed up. No formula, parsing, state or export change. WebKit/enlarged table verification is part of this checkpoint.
+
+[Exact frozen runtime pins](phase-16/current/source-pins.json). The candidate source SHA and artifact identity are recorded by the full-QA workflow's `release-source.txt` and release inventory/archive. Full numerical/state/accessibility/cross-browser/performance suites, final gallery and current rollback evidence are pending. Physical-device/screen-reader/native-zoom and owner visual approval remain distinct manual gates. Phase 17 uploads/reviews the verified isolated demo; production remains protected.
+
 Status: `[~]`. Implementation and source-owned QA fixes are integrated. Final hosted QA is requested once for the consolidated candidate. No production release approval is recorded.
 
 ## Candidate and preservation

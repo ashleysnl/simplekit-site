@@ -6,7 +6,7 @@ const path = require('node:path');
 const output = process.env.SIMPLEKIT_EVIDENCE_DIR || '/tmp/simplekit-v2-fidelity';
 const origin = new URL(process.env.SIMPLEKIT_PREVIEW_URL || 'http://127.0.0.1:8003').origin;
 require('./v2-preview-origin.cjs')(origin);
-const selectors = ['.v2-header', '.v2-hero-copy', 'h1', '.v2-hero-body', '.v2-discovery-slot',
+const selectors = ['.v2s-header', '.v2-hero-copy', 'h1', '.v2-hero-body', '.v2-discovery-slot',
   '.v2-search-bar', '.v2-discovery-panel', '.v2-home-trust', '.v2-trust', '.v2-trust-note',
   '.v2-home-goals', '.v2-goal-heading', '.v2-home-goal-list'];
 

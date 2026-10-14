@@ -36,7 +36,7 @@ const id=route=>route==='/'?'home':route.replace(/^\/|\/$/g,'').replaceAll('/','
   for(const route of representatives){
    for(const width of [375,390,768,1440]){
     const {context,page}=await contextFor(route,width);await metrics(page,route,width);await capture(page,route,width);
-    if(route==='/'&&width===390){await page.locator('.v2-menu-toggle').click();await metrics(page,route,width,'open-menu');await capture(page,route,width,'open-menu');await page.locator('.v2-menu-toggle').click();}
+    if(route==='/'&&width===390){await page.locator('.v2s-menu').click();await metrics(page,route,width,'open-menu');await capture(page,route,width,'open-menu');await page.locator('.v2s-menu').click();}
     if([390,1440].includes(width)&&['/retirement-planner/','/mortgage-calculator/','/budget-planner/','/travel-planner/','/canadian-tax-checklist/','/investment-fee-calculator/'].includes(route)){
      const fixture=fixtures.tools.find(t=>t.path===route);for(const [op,selector,value]of fixture.steps.map(s=>[s.operation,s.selector,s.value])){let control=page.locator(selector);if(typeof value==='number')control=control.nth(value);if(op==='fill'){await control.fill(value);await control.press('Tab');}else if(op==='check')await control.check();else await control.click();await page.waitForTimeout(700);}
      await metrics(page,route,width,'populated');await capture(page,route,width,'populated');

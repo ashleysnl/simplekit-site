@@ -37,7 +37,7 @@ async function layout(p) {
     const range = document.createRange(); range.selectNodeContents(h1);
     return {
       viewport: innerWidth, scrollWidth: document.documentElement.scrollWidth,
-      header: box('.v2-header'), hero: box('.v2-home-hero'), headline: box('h1'),
+      header: box('.v2s-header'), hero: box('.v2-home-hero'), headline: box('h1'),
       textRects: [...range.getClientRects()].map(r => r.toJSON()),
       body: box('.v2-hero-body'), discovery: box('.v2-discovery-slot'),
       source: document.querySelector('.v2-coastal-picture img').currentSrc,
@@ -68,9 +68,9 @@ function worstContrast(width, right, color) {
   return (luminance(background) + .05) / (luminance(color) + .05);
 }
 async function menu(p, screenshot) {
-  const button = p.locator('.v2-menu-toggle');
+  const button = p.locator('.v2s-menu');
   assert.equal(await button.getAttribute('aria-label'), 'Open navigation menu');
-  const nav = p.getByRole('navigation', { name: 'Primary' });
+  const nav = p.getByRole('navigation', { name: 'Main navigation' });
   assert.equal(await button.getAttribute('aria-expanded'), 'false');
   assert.equal(await nav.count(), 0, 'Closed navigation exposed to accessibility tree');
   await button.focus(); await button.press('Enter');
@@ -86,7 +86,7 @@ async function menu(p, screenshot) {
   const tree = await session.send('Accessibility.getFullAXTree'); await session.detach();
   const control = tree.nodes.find(n => !n.ignored && n.role?.value === 'button' && n.name?.value === 'Close navigation menu');
   assert(control?.properties.some(v => v.name === 'expanded' && v.value.value === true));
-  assert(tree.nodes.some(n => !n.ignored && n.role?.value === 'navigation' && n.name?.value === 'Primary'));
+  assert(tree.nodes.some(n => !n.ignored && n.role?.value === 'navigation' && n.name?.value === 'Main navigation'));
   await p.keyboard.press('Escape'); assert.equal(await button.getAttribute('aria-expanded'), 'false');
   assert(await button.evaluate(n => n === document.activeElement), 'Escape must return focus');
   await button.press('Space'); assert.equal(await button.getAttribute('aria-expanded'), 'true');
@@ -99,7 +99,7 @@ async function menu(p, screenshot) {
   await button.click(); await p.getByRole('link', { name: 'Home', exact: true }).focus();
   await p.locator('.v2-home-hero').click({ position: { x: 2, y: 20 } });
   assert.equal(await button.getAttribute('aria-expanded'), 'false');
-  assert(await p.locator('#home-navigation').evaluate(n => !n.contains(document.activeElement)
+  assert(await p.locator('#home-nav').evaluate(n => !n.contains(document.activeElement)
     && document.activeElement.getClientRects().length > 0), 'Outside click must leave focus on a visible control or content target');
   await button.click(); await button.click(); assert.equal(await button.getAttribute('aria-expanded'), 'false');
   return { keyboardEnterSpaceTab: true, escapeFocusReturn: true, outsideClickVisibleFocus: true, nonModalTabExit: true, chromiumAXNameExpandedNavigation: true };
@@ -131,24 +131,24 @@ async function menu(p, screenshot) {
       if ([320, 375, 390, 768, 1440, 1920].includes(width))
         await p.screenshot({ path: path.join(output, `homepage-${width}.jpg`), type: 'jpeg', quality: 85 });
       if ([375, 768].includes(width)) menuResults.push({ width, ...await menu(p, `menu-${width}.jpg`) });
-      if (width >= 900) assert.equal(await p.getByRole('navigation', { name: 'Primary' }).getByRole('link').count(), 5);
+      if (width >= 900) assert.equal(await p.getByRole('navigation', { name: 'Main navigation' }).getByRole('link').count(), 5);
       await c.close();
     }
     const c = await context(browser); const p = await c.newPage(); await p.goto(origin, { waitUntil: 'networkidle' });
     // All existing navigation destinations resolve locally; canonical tool hrefs are preserved separately.
-    const destinations = await p.locator('#home-navigation a').evaluateAll(nodes => nodes.map(n => ({ name: n.textContent, href: n.getAttribute('href') })));
+    const destinations = await p.locator('#home-nav a').evaluateAll(nodes => nodes.map(n => ({ name: n.textContent, href: n.getAttribute('href') })));
     for (const { href } of destinations) assert.equal((await c.request.get(new URL(href, origin + '/').href)).status(), 200);
-    await p.locator('.v2-menu-toggle').click(); await p.getByRole('link', { name: 'Tools', exact: true }).click();
+    await p.locator('.v2s-menu').click(); await p.getByRole('link', { name: 'Tools', exact: true }).click();
     await p.waitForURL(origin + '/tools/'); assert.equal(await p.locator('h1').count(), 1);
     await p.goto(origin, { waitUntil: 'networkidle' });
     // Resize with active menu link, then with active desktop link: focus stays on a visible control.
-    await p.locator('.v2-menu-toggle').click(); await p.getByRole('link', { name: 'Home', exact: true }).focus();
+    await p.locator('.v2s-menu').click(); await p.getByRole('link', { name: 'Home', exact: true }).focus();
     await p.setViewportSize({ width: 1440, height: 900 });
     await p.waitForFunction(() => document.querySelector('[data-v2-menu-toggle]').hidden && !document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.getByRole('link', { name: 'Home', exact: true }).evaluate(n => n === document.activeElement));
     await p.setViewportSize({ width: 390, height: 900 });
     await p.waitForFunction(() => !document.querySelector('[data-v2-menu-toggle]').hidden && document.querySelector('[data-v2-navigation]').hidden);
-    assert(await p.locator('.v2-menu-toggle').evaluate(n => n === document.activeElement));
+    assert(await p.locator('.v2s-menu').evaluate(n => n === document.activeElement));
     await p.setViewportSize({ width: 1440, height: 900 });
     await p.waitForFunction(() => document.querySelector('[data-v2-menu-toggle]').hidden && !document.querySelector('[data-v2-navigation]').hidden);
     assert(await p.getByRole('link', { name: 'Home', exact: true }).evaluate(n => n === document.activeElement));
@@ -156,15 +156,15 @@ async function menu(p, screenshot) {
     await c.close();
     const touch = await context(browser, { viewport: { width: 844, height: 390 }, hasTouch: true, isMobile: true });
     const t = await touch.newPage(); await t.goto(origin, { waitUntil: 'networkidle' });
-    await assertLayout(t); await t.locator('.v2-menu-toggle').tap();
-    assert.equal(await t.locator('.v2-menu-toggle').getAttribute('aria-expanded'), 'true');
+    await assertLayout(t); await t.locator('.v2s-menu').tap();
+    assert.equal(await t.locator('.v2s-menu').getAttribute('aria-expanded'), 'true');
     await t.screenshot({ path: path.join(output, 'touch-landscape-menu.jpg'), type: 'jpeg', quality: 85 });
     await t.locator('.v2-home-hero').tap({ position: { x: 2, y: 20 } });
-    assert.equal(await t.locator('.v2-menu-toggle').getAttribute('aria-expanded'), 'false');
+    assert.equal(await t.locator('.v2s-menu').getAttribute('aria-expanded'), 'false');
     await touch.close();
     const nojs = await context(browser, { javaScriptEnabled: false }); const n = await nojs.newPage();
     await n.goto(origin, { waitUntil: 'networkidle' }); await assertLayout(n);
-    assert.equal(await n.getByRole('navigation').getByRole('link').count(), 5);
+    assert.equal(await n.getByRole('navigation', {name:'Main navigation'}).getByRole('link').count(), 5);
     assert.equal(await n.getByRole('button').count(), 0); await n.getByRole('link', { name: 'Tools', exact: true }).click();
     await n.waitForURL(origin + '/tools/'); await nojs.close();
     const fallback = await context(browser, {}, 'blocked'); const f = await fallback.newPage();
@@ -186,14 +186,14 @@ async function menu(p, screenshot) {
     // This is not an OS/browser toolbar zoom or a real-device claim.
     const zoom = await context(browser, { viewport: { width: 1440, height: 900 } }); const z = await zoom.newPage();
     await z.goto(origin, { waitUntil: 'networkidle' }); await z.evaluate(() => document.body.style.zoom = '2');
-    await assertLayout(z); assert.equal(await z.getByRole('navigation').getByRole('link').count(), 5);
-    for (const link of await z.getByRole('navigation').getByRole('link').all()) { await link.focus(); assert(await link.isVisible()); }
+    await assertLayout(z); assert.equal(await z.getByRole('navigation', {name:'Main navigation'}).getByRole('link').count(), 5);
+    for (const link of await z.getByRole('navigation', {name:'Main navigation'}).getByRole('link').all()) { await link.focus(); assert(await link.isVisible()); }
     await z.screenshot({ path: path.join(output, 'magnification-200-percent.jpg'), type: 'jpeg', quality: 85 });
     await z.evaluate(() => document.body.style.zoom = ''); await z.setViewportSize({ width: 720, height: 450 });
     // matchMedia change events are asynchronous after a viewport resize. Wait for
     // the actual disclosure state before asserting its accessibility exposure.
-    await z.waitForFunction(() => document.querySelector('#home-navigation').hidden
-      && !document.querySelector('.v2-menu-toggle').hidden);
+    await z.waitForFunction(() => document.querySelector('#home-nav').hidden
+      && !document.querySelector('.v2s-menu').hidden);
     await assertLayout(z); await menu(z); await zoom.close();
     assert.deepEqual(errors, []); assert.deepEqual(failed, []);
     fs.writeFileSync(path.join(output, 'browser.json'), JSON.stringify({

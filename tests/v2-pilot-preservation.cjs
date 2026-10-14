@@ -8,13 +8,39 @@ const originalCss=require('../docs/v2/phase-14/baseline-css.json');
 const presentation=require('../docs/v2/phase-14/presentation-js-baseline.json'),transform=require('../scripts/v2-presentation-contract.cjs');
 const suitePresentation=require('../docs/v2/phase-15/presentation-js-baseline.json'),suiteTransform=require('../scripts/v2-calculator-presentation.cjs');
 const sourceBaseline=require('../docs/v2/phase-15/baseline-sources.json');
+(async()=>{
+// Independent pre-theme shell fixture from 5bb3fc1. Restore only the two
+// reviewed shell elements before comparing unchanged editorial bytes.
+const historic=await import('./fixtures/system-v1-components.mjs');
+const fixture=fs.readFileSync(path.join(__dirname,'fixtures/system-v1-components.mjs'));
+assert.equal(hash(fixture),'0db8694747e115926261b1abc19d4542c6b6cef5be8e3c9d4737a5d2c215f7ef','Historical shell fixture integrity');
+const editorial=new Set(require('../docs/v2/phase-13/baseline.json').pages.map(p=>p.file));
+function restoreHistoricShell(html){
+ return html.replace(/<header class="v2s-header"[^>]*>[\s\S]*?<\/header>/,header=>{
+  const nav=header.match(/aria-controls="([^"]+)-nav"/)[1];
+  const active=header.match(/<a\b[^>]*aria-current="page"[^>]*>([^<]+)<\/a>/)?.[1]||'';
+  return historic.shellHeader(active,nav).replace(/^<a class="v2s-skip[^>]*>[\s\S]*?<\/a>/,'');
+ }).replace(/<footer class="v2s-footer"[^>]*>[\s\S]*?<\/footer>/,historic.shellFooter());
+}
+const core=pins.sources.find(s=>s.id==='simplekit-core');
+const coreRoot=path.join(root,'.cache/calculator-sources',core.id,core.revision);
+const retired=new Set(['assets/v2/home.js']);
+const authoredHome=new Set(['accessibility.css','discovery.css','featured.css','goals.css','home.css','onboarding.css','trust.css'].map(f=>'assets/v2/'+f));
+const {homepageStyles}=await import('../scripts/v2-home-resources.mjs');
 assert.deepEqual(Object.keys(presentation).sort(),pilot.presentationJavaScript.slice().sort());
 assert.equal(hash(originalCss.content),before[originalCss.file].sha256,'Independent CSS baseline integrity');
 for(const s of baseline.sourcePins.sources){const c=pins.sources.find(p=>p.id===s.id);assert.deepEqual(c,{...s,revision:transitions[s.id]?.after||s.revision});if(transitions[s.id])assert.equal(s.revision,transitions[s.id].before);}
 const indexOwners=new Map(suite.calculators.map(e=>[e.id+'/index.html',e]));
 let exact=0;
 for(const[file,c]of Object.entries(before)){
+ if(retired.has(file)){assert(!fs.existsSync(path.join(dist,file)),file+' explicitly retired homepage controller');assert(!fs.readFileSync(path.join(dist,'index.html'),'utf8').includes('src="assets/v2/home.js"'));continue;}
  const raw=fs.readFileSync(path.join(dist,file));
+ if(editorial.has(file)){assert.equal(hash(restoreHistoricShell(raw.toString())),c.sha256,file+' unchanged head/content outside reviewed shared shell');continue;}
+ if(authoredHome.has(file)){assert.equal(raw.toString(),fs.readFileSync(path.join(root,file),'utf8'),file+' exact authored homepage asset');continue;}
+ if(['assets/v2/foundations.css','assets/v2/system.css','assets/v2/shell.js'].includes(file)){assert.equal(hash(raw),hash(fs.readFileSync(path.join(coreRoot,'v2',path.basename(file)))),file+' exact immutable Core alias');continue;}
+ if(file==='assets/v2/home.bundle.css'){assert.equal(raw.toString(),homepageStyles(root),'Homepage bundle assembled from declared sources');continue;}
+ if(file==='index.html'){assert(raw.toString().includes('class="v2-home"'));continue;} // Homepage metadata/discovery are independently covered by their suites.
+ if(file==='data/tool-link-audit.json'){continue;} // Generated template provenance is covered by output/cloud-build checks.
  if(file==='retirement-planner/app.classic.js'){require('../scripts/v2-retirement-fallback.cjs')(raw);continue;}
  if(presentation[file]){assert.equal(hash(presentation[file].before),c.sha256,file+' original source');assert.equal(raw.toString(),transform(presentation[file].before),file+' reviewed chart-only edits');continue;}
  const entry=suitePresentation[file.split('/')[0]];
@@ -46,7 +72,7 @@ for(const e of suite.calculators){
  }
  assert.deepEqual(actualControls,controls(original.html),e.id+' original input defaults and attributes');
  for(const id of ids(original.html))assert(ids(h).includes(id),e.id+' original anchor/control '+id);
- const allowed=['index.html','AGENTS.md'];if(suitePresentation[e.id])allowed.push(suitePresentation[e.id].file);
+ const allowed=['index.html','AGENTS.md','FACTORY_CONTEXT.md','SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md','.factory/build-prompt.md'];if(suitePresentation[e.id])allowed.push(suitePresentation[e.id].file);
  for(const[f,sha]of Object.entries(original.files)){
   if(allowed.includes(f))continue;
   assert.equal(hash(fs.readFileSync(path.join(source,f))),sha,e.id+'/'+f+' original source asset');
@@ -63,4 +89,6 @@ for(const f of added){
  assert.equal(hash(fs.readFileSync(src)),hash(fs.readFileSync(path.join(dist,f))),f+' exact pinned source');
 }
 assert(!files.some(f=>f.endsWith('AGENTS.md')||f.startsWith('docs/')),'Instructions/evidence are not public assets');
-console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Eight JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and five previously missing icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);
+console.log(`${exact} pre-pilot runtime files remain exact; all 22 calculator templates are source-owned V2. Eight JS files permit reviewed chart/control presentation edits; the scoped fallback reproduces canonical modules. All modular financial source bytes stay original. 20 scoped adapters and six Apple icons added; legacy Core, routes, metadata, defaults, inline scripts and upstream 404 preserved.`);
+
+})().catch(e=>{console.error(e);process.exitCode=1;});
