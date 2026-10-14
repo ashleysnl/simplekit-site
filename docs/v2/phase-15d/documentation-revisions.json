@@ -1,0 +1,53 @@
+[
+  {
+    "repository": "ashleysnl/SimpleKitTakeHomePay",
+    "revision": "a81da71d360a01fea6784e9ff577a6a411f9cacf",
+    "files": [
+      "AGENTS.md",
+      "FACTORY_CONTEXT.md",
+      "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
+      ".factory/build-prompt.md"
+    ]
+  },
+  {
+    "repository": "ashleysnl/SimpleKitCreditCard",
+    "revision": "3bb3fe7373db0505bc687971c7301d1173e6ad16",
+    "files": [
+      "AGENTS.md",
+      "FACTORY_CONTEXT.md",
+      "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
+      ".factory/build-prompt.md"
+    ]
+  },
+  {
+    "repository": "ashleysnl/SimpleKitTaxCheckListCAN",
+    "revision": "b60a3dbfcd0bdda792fcf415a2d0a858d06992bb",
+    "files": [
+      "AGENTS.md",
+      "FACTORY_CONTEXT.md",
+      "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
+      ".factory/build-prompt.md"
+    ]
+  },
+  {
+    "repository": "ashleysnl/SimpleKitDTI",
+    "revision": "e3528152c84ac201485fd0e72db1ba578ecfde3e",
+    "files": [
+      "AGENTS.md",
+      "FACTORY_CONTEXT.md",
+      "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
+      ".factory/build-prompt.md"
+    ]
+  },
+  {
+    "repository": "ashleysnl/SimpleKitContractorRate",
+    "revision": "03d0d1b078ac1a9011d1f69bae92ae1b1af5cab2",
+    "files": [
+      "AGENTS.md",
+      "FACTORY_CONTEXT.md",
+      "SIMPLEKIT_CALCULATOR_STYLE_GUIDE.md",
+      ".factory/build-prompt.md"
+    ],
+    "publication": "Remote fast-forward from c56104e; divergent local checkout preserved"
+  }
+]

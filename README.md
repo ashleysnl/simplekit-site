@@ -32,3 +32,5 @@ See [CLOUD_DEVELOPMENT.md](CLOUD_DEVELOPMENT.md) for the dependency map, Codex C
 The included Actions validate and prepare artifacts. Production merge and deployment remain separate approved actions.
 
 SimpleKit V2 development uses only `develop-v2`; `main` stays stable until the approved release. Start by checking out and synchronizing `develop-v2`, commit validated V2 work there, and target it for any required temporary PR. See [Git Branch Strategy — Mandatory](docs/SIMPLEKIT_V2_REDESIGN_PLAN.md#git-branch-strategy--mandatory) for the binding workflow and [branch audit](docs/v2/branch-consolidation-2026-10-09.md) for historical branches. Production deployment requires explicit approval.
+
+V2 calculator authoring follows the maintained [Core style guide, starter, spec and Codex prompt](https://github.com/ashleysnl/SimpleKit-Core/blob/49de30920a878b4b23c09a9803b7cacf3d1d41ba/docs/v2-authoring/README.md). See [Phase 15D](docs/v2/phase-15d-handoff.md) for owners, runtime-pin policy and outstanding release checks.

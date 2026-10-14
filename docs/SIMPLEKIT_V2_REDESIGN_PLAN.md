@@ -167,14 +167,14 @@ These subphases extend existing Phase 15 and preserve Phases 0–18 numbering an
 
 ### Phase 15 extension checklist
 
-Phase 15A is implemented with lightweight verification; final acceptance remains deferred. See [the ownership, source revisions, checks and remaining gaps](v2/phase-15a-handoff.md). Phase 15B reference interiors are also implemented with focused checks; see [its handoff](v2/phase-15b-handoff.md). Phase 15C family alignment is implemented with [four batch builds and recorded limitations](v2/phase-15c-handoff.md). Phase 15D remains incomplete.
+Phase 15A is implemented with lightweight verification; final acceptance remains deferred. See [the ownership, source revisions, checks and remaining gaps](v2/phase-15a-handoff.md). Phase 15B reference interiors are also implemented with focused checks; see [its handoff](v2/phase-15b-handoff.md). Phase 15C family alignment is implemented with [four batch builds and recorded limitations](v2/phase-15c-handoff.md). Phase 15D maintained authoring documentation and starter checks are complete; see [its handoff](v2/phase-15d-handoff.md). Final website acceptance remains pending Phase 16.
 
 - [x] **15A:** Identify shared differences between the latest homepage and pinned Core/System v1; record existing asset/component owners and resolve duplication or drift.
 - [~] **15A:** Align shared header/menu, wordmark, fonts, colours, spacing, footer and support placement. Use an explicit opt-in/compatible contract rather than a global reset.
 - [~] **15B:** Refine CPP and Budget reference interiors using the compact calculator layout; retain formulas, parsing, defaults, state/export and metadata contracts.
 - [~] **15C:** Carry any required changes across all 22 tools and related page families; update source-owned revisions on their owning `develop-v2` branches and keep the matrix current.
-- [ ] **15D:** Update the owning repository's calculator style guide/starter/master prompt/spec guidance; do not only edit chat attachments. If no maintained counterpart exists, add the authoritative guidance in the repository and record its location.
-- [ ] **15D:** Document compatible upgrade procedure, explicit contract-version changes, pinned-asset consumption and rollback. Mark implementation finished and queue the consolidated candidate for Phase 16.
+- [x] **15D:** Update the owning repository's calculator style guide/starter/master prompt/spec guidance; do not only edit chat attachments. If no maintained counterpart exists, add the authoritative guidance in the repository and record its location.
+- [x] **15D:** Document compatible upgrade procedure, explicit contract-version changes, pinned-asset consumption and rollback. Mark implementation finished and queue the consolidated candidate for Phase 16.
 
 ### Calculator page design contract
 
@@ -525,7 +525,7 @@ Verified demo: https://1e526422.simplekit-preview.pages.dev. Owner authorized in
 
 ## Phase 15 — Redesign remaining 20 calculators in controlled batches
 
-Status: `[~]`. The initial implementation of all remaining 20 calculators is complete in four coherent batches, each with a passing portable build. The 2026-10-13 Phase 15A–15D shared-theme alignment, reference refinement and future-tool handoff tasks remain incomplete. All 22 now opt into V2; full numerical/state/browser/visual verification remains deferred to Phases 16–17. [22-tool matrix and source records](v2/phase-15-verification.md).
+Status: `[~]`. The initial implementation of all remaining 20 calculators is complete in four coherent batches, each with a passing portable build. Phase 15A–15D shared-theme alignment, reference refinement and future-tool handoff are implemented; final visual and release verification remains pending. All 22 now opt into V2; full numerical/state/browser/visual verification remains deferred to Phases 16–17. [22-tool matrix and source records](v2/phase-15-verification.md).
 
 - [x] Group remaining tools by interaction pattern (retirement/investing, housing, debt, income/tax, budgeting/planning, checklists/travel); inventory unique UI and state cases.
 - [~] Apply shared V2 visual primitives and appropriate tool-specific layouts to every remaining calculator; avoid blanket CSS that breaks complex charts, tables or input controls.
@@ -623,7 +623,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 
 ## Phase tracker and handoff
 
-Current next implementation step (2026-10-13): **15D — update the maintained style guide, starter, spec and Codex handoff to the implemented V2 contract.** Phase 15C implementation, exact source revisions and deferred checks are recorded in [its handoff](v2/phase-15c-handoff.md). Phase 15B implementation and focused checks are recorded in [its handoff](v2/phase-15b-handoff.md). Phase 15A implementation and lightweight checks are recorded in [its handoff](v2/phase-15a-handoff.md); final acceptance remains pending. Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
+Current next implementation step (2026-10-13): **Phase 16 — review preserved Contractor work, freeze the exact candidate and perform consolidated final QA.** Phase 15D maintained authoring sources and starter verification are recorded in [its handoff](v2/phase-15d-handoff.md). Phase 15C implementation, exact source revisions and deferred checks are recorded in [its handoff](v2/phase-15c-handoff.md). Phase 15B implementation and focused checks are recorded in [its handoff](v2/phase-15b-handoff.md). Phase 15A implementation and lightweight checks are recorded in [its handoff](v2/phase-15a-handoff.md); final acceptance remains pending. Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
 
 | Phase | State | Evidence / next step |
 | --- | --- | --- |
@@ -642,7 +642,7 @@ Current next implementation step (2026-10-13): **15D — update the maintained s
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
-| 15 Remaining calculators and theme alignment | `[~]` | [Initial 20 implementations](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. 15A shared-theme implementation/lightweight checks recorded in [handoff](v2/phase-15a-handoff.md). 15B reference interiors implemented with [focused checks](v2/phase-15b-handoff.md). 15C family alignment implemented with [four batch builds](v2/phase-15c-handoff.md). Next: 15D maintained guidance; Contractor local work remains preserved for separate review. Full verification in Phase 16. |
+| 15 Remaining calculators and theme alignment | `[~]` | [Initial 20 implementations](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. 15A shared-theme implementation/lightweight checks recorded in [handoff](v2/phase-15a-handoff.md). 15B reference interiors implemented with [focused checks](v2/phase-15b-handoff.md). 15C family alignment implemented with [four batch builds](v2/phase-15c-handoff.md). 15D maintained guidance/starter checks [complete](v2/phase-15d-handoff.md). Next: Phase 16 candidate freeze and consolidated QA; Contractor local work remains preserved for separate review. Full verification in Phase 16. |
 | 16 Full-site release candidate | `[~]` | [Final QA candidate](v2/phase-16-verification.md); source-owned fixes integrated, hosted/browser and manual acceptance pending. |
 | 17 Cloudflare preview/review | `[~]` | [Preview verification prepared](v2/phase-17-verification.md); awaits final QA, network permission and successful upload before owner review. |
 | 18 Production rollout | `[~]` | [Release preparation](v2/phase-18-release-package.md); proposal and rollback prepared, no release approval or production action. |

@@ -11,4 +11,6 @@ Follow [Git Branch Strategy — Mandatory](docs/SIMPLEKIT_V2_REDESIGN_PLAN.md#gi
 - Use the existing checkout; do not create another worktree unless requested. Edit authored landing templates, never copied calculator logic or downloaded source caches.
 - Follow the owner’s [implementation-first cadence](docs/SIMPLEKIT_V2_REDESIGN_PLAN.md#remaining-phase-execution-cadence--implementation-first) for the remaining phases: inspect source changes and run one portable build per coherent batch; defer full tests, SEO/accessibility audits, browser matrices and exhaustive screenshots to Phase 16. Record unverified work as `[~]`. Run complete final QA before release; during Phase 17 verify the deployed artifact and preview protections without repeating identical suites. See `CLOUD_DEVELOPMENT.md` for commands.
 
+For new V2 tools or authoring updates, read the [maintained Core authoring contract](https://github.com/ashleysnl/SimpleKit-Core/blob/49de30920a878b4b23c09a9803b7cacf3d1d41ba/docs/v2-authoring/README.md) and [Phase 15D handoff](docs/v2/phase-15d-handoff.md). Reuse its style guide, shared-shell starter, spec and master prompt; preserve local financial specs and existing migrations. Legacy Factory paths and large-hero/CDN guidance are historical for V2.
+
 Historical branches recorded in the branch audit are archival evidence, not destinations for new V2 work.
