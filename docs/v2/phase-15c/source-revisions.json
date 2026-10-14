@@ -1,0 +1,166 @@
+[
+  {
+    "id": "compound-interest-calculator",
+    "repository": "ashleysnl/SimpleKitInvestment",
+    "before": "e29b7b70a21dea385d89065d1ea8afe728d4728c",
+    "after": "bace8f51189080ab4a77af87025e53c9816715d3",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "investment-fee-calculator",
+    "repository": "ashleysnl/SimpleKitFees",
+    "before": "68430085ccc5be9d52120b1ae5f1edda7d893794",
+    "after": "a007b66bff796a8118c2221ec27d2a08a2635225",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "rrsp-vs-tfsa-calculator",
+    "repository": "ashleysnl/SimpleKitRRSPTFSA",
+    "before": "d922d11bd3be00ba66890cf35677cded231e2113",
+    "after": "98398e48bbc10f3dd325a0c1a7aabb2efa20a181",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "fire-calculator",
+    "repository": "ashleysnl/SimpleKitFIRE",
+    "before": "ec2d8014299ae79740c2b8efdd9b6f4a2db715c6",
+    "after": "a07c3540a216b89b2ac3cb9b646eea2d12339a05",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "repository": "ashleysnl/SimpleKitDebt",
+    "before": "1699e62610b9e56b61323f743376e221eed720c3",
+    "after": "8e1ca2bc4536ee00440b1a017e36ec7aacc5c82c",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "house-affordability-calculator",
+    "repository": "ashleysnl/SimpleKitHouseAffordability",
+    "before": "b03fef1caf722cecc9508df2c2649149872d9334",
+    "after": "45bdd75814ccd05011ee5e9f296ec3203f9b46a4",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "credit-card-interest-calculator",
+    "repository": "ashleysnl/SimpleKitCreditCard",
+    "before": "e1371433da8efebfeeacdb3536b854d95e437f76",
+    "after": "83412e0399dc5469a7a57718e52a4885497fd5b5",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "loan-calculator",
+    "repository": "ashleysnl/SimpleKITLoan",
+    "before": "352747e12d93c892a0d3fed7a8cb62cc2fcc64ad",
+    "after": "c2f3ef663c09b6e01bc1f1d818160ba299a2f57e",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "repository": "ashleysnl/SimplekitRentVsBuy",
+    "before": "337482c2a13f6854790f8cf8874074763496f680",
+    "after": "9c504223be20cebd5da02fd1c6331e2bef971ab9",
+    "files": [
+      "index.html"
+    ],
+    "privateCommit": "9585270eb8d5fb633f5bd8248054fb3b69a1c33c"
+  },
+  {
+    "id": "mortgage-paydown-vs-invest-calculator",
+    "repository": "ashleysnl/SimpleKitMortOrInvest",
+    "before": "2e2e31ad9f743e031fa6ed7ee400f5051ed90f92",
+    "after": "e7f95e863b481f41c21a4426d2f6bfe0519ba33e",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "debt-to-income-ratio-calculator",
+    "repository": "ashleysnl/SimpleKitDTI",
+    "before": "4cb4bde5441a90476718d03753b51d19bf39f6e1",
+    "after": "dc34a34630a8e90b0e7b4e2e90ca224ce2a9d57e",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "take-home-pay-calculator",
+    "repository": "ashleysnl/SimpleKitTakeHomePay",
+    "before": "6bd6aeaff68bbd026fe44084e4b97583d114403b",
+    "after": "f319afd5372f9df0f91e01ac8c478b69bcc0c7db",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "net-worth-calculator",
+    "repository": "ashleysnl/SimpleKitNetWorth",
+    "before": "38229bea99718d7fb7eec682faf46c7799fea0dc",
+    "after": "6dc1af4d6143257ae076fd632510caff65b38f4c",
+    "files": [
+      "index.html"
+    ],
+    "privateCommit": "568a17d34198cf73573647611a1b44f0ff940c3b"
+  },
+  {
+    "id": "savings-goal-calculator",
+    "repository": "ashleysnl/SimpleKitSavingsGoal",
+    "before": "cb8a1065200c1c75c81f0b6cf0172ded533cdc29",
+    "after": "9585d684c42de19e5898c6216f0dd78781fd8280",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "repository": "ashleysnl/SImpleKitEmergency",
+    "before": "20bae365f61d241ed1457abf4060096c8e73f1df",
+    "after": "f6c1ed4f63c5c1e36ddc2c83f1577894eb0bbd56",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "budget-planner",
+    "repository": "ashleysnl/SimpleKitMonthlyBudget",
+    "before": "2d410fd86b8b06da70dadeb5a6921311c3afcd05",
+    "after": "dbaa2bb24cc56b39ff9f293557bddf1ff9f5ac56",
+    "files": [
+      "v2-calculator.css"
+    ]
+  },
+  {
+    "id": "canadian-tax-checklist",
+    "repository": "ashleysnl/SimpleKitTaxCheckListCAN",
+    "before": "a7fbe80a2f9068a2a33e23cb5b715ecd128b00b5",
+    "after": "203ef2a40a454fe475b4352e1771f84caf22a951",
+    "files": [
+      "index.html"
+    ]
+  },
+  {
+    "id": "travel-planner",
+    "repository": "ashleysnl/TravelPlanner",
+    "before": "eace2e1e94f4c19bb6978f0f90d1c50906e5bca0",
+    "after": "a8db28d0c12e0fc6436fbcaa328a81318d667f40",
+    "files": [
+      "index.html"
+    ]
+  }
+]
