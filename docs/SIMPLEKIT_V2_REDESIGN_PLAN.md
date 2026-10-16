@@ -540,7 +540,7 @@ Acceptance:
 
 ## Phase 16 — End-to-end visual coherence and final release candidate
 
-Status: `[~]`. Final QA is in progress. Source-owned responsive/accessibility fixes and scoped retirement fallback are implemented; full hosted verification and owner manual review remain. Final QA checkpoint after implementation in Phases 11–15, including any required Phase 15A–15D refinements. Freeze the final implementation candidate before broad QA; retain earlier passing results only for unchanged inputs. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
+Status: `[~]`. Consolidated run 38548702694 passed static/preservation/reproducibility, rollback packaging, pilots, editorial, accessibility/SEO and performance. Focused system/homepage test repairs and the remaining TakeHomePay WebKit 200% overflow investigation are recorded in [Phase 16 verification](v2/phase-16-verification.md#focused-repair-checkpoint). Full hosted acceptance and owner manual review remain. Final QA checkpoint after implementation in Phases 11–15, including any required Phase 15A–15D refinements. Freeze the final implementation candidate before broad QA; retain earlier passing results only for unchanged inputs. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
 
 - [ ] Audit the full site as a user journey: homepage → search/goals → calculator → related guide/article → another calculator → supporting pages.
 - [ ] Compare representative and exceptional page families to the saved mockup and approved derived references at 320, 375, 390, 768, 1440 and 1920 widths, with 200% zoom, reduced motion and mobile devices.

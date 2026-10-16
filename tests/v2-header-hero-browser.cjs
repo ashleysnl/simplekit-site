@@ -60,12 +60,35 @@ function luminance(rgb) {
   return rgb.map(v => v / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4)
     .reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
 }
-function worstContrast(width, right, color) {
-  const x = right / width, end = width < 1024 ? .72 : .54;
-  const alpha = width < 768 ? (x <= .8 ? .96 - .06 * x / .8 : .90 - .78 * (x - .8) / .2) : x <= end ? .98 - .04 * x / end : .94 - .76 * (x - end) / (1 - end);
-  // Black is the darkest possible landscape pixel. The additional bottom fade only raises contrast.
-  const background = [252, 252, 251].map(v => v * alpha);
-  return (luminance(background) + .05) / (luminance(color) + .05);
+async function paintedContrast(p) {
+  // Inspect the actual rendered photo/gradients under each non-space character,
+  // not an obsolete gradient formula or the empty right side of a text box.
+  const glyphs=await p.evaluate(()=>{
+    const out=[];
+    for(const [key,selector,minimum] of [['headline','h1',3],['body','.v2-hero-body',4.5]]) {
+      const root=document.querySelector(selector),walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+      while(walk.nextNode()) {
+        const node=walk.currentNode,color=getComputedStyle(node.parentElement).color.match(/[\d.]+/g).slice(0,3).map(Number);
+        for(let i=0;i<node.textContent.length;i++)if(node.textContent[i].trim()) {
+          const range=document.createRange();range.setStart(node,i);range.setEnd(node,i+1);
+          for(const rect of range.getClientRects())out.push({key,minimum,color,rect:rect.toJSON()});
+        }
+      }
+    }
+    return out;
+  });
+  const hidden=await p.addStyleTag({content:'h1,.v2-hero-body,.v2-hero-body * {color:transparent!important;text-shadow:none!important}'});
+  let png;try {const PNG=require(path.join(path.dirname(require.resolve('playwright-core')),'lib/utilsBundle.js')).PNG;png=PNG.sync.read(await p.screenshot({type:'png'}));}finally {await hidden.evaluate(n=>n.remove());}
+  const values={};
+  for(const glyph of glyphs) {
+    const fg=luminance(glyph.color),r=glyph.rect;let minimum=Infinity;
+    for(let y=Math.max(0,Math.floor(r.top));y<Math.min(png.height,Math.ceil(r.bottom));y++)for(let x=Math.max(0,Math.floor(r.left));x<Math.min(png.width,Math.ceil(r.right));x++) {
+      const i=(y*png.width+x)*4,bg=luminance([...png.data.subarray(i,i+3)]);
+      minimum=Math.min(minimum,(Math.max(fg,bg)+.05)/(Math.min(fg,bg)+.05));
+    }
+    if(Number.isFinite(minimum))values[glyph.key]={minimum:glyph.minimum,ratio:Math.min(values[glyph.key]?.ratio??Infinity,minimum)};
+  }
+  assert.deepEqual(Object.keys(values).sort(),['body','headline']);return values;
 }
 async function menu(p, screenshot) {
   const button = p.locator('.v2s-menu');
@@ -121,12 +144,9 @@ async function menu(p, screenshot) {
       await img.evaluate(async n => { await n.decode(); if (!n.naturalWidth) throw Error('Image failed to decode'); });
       await p.evaluate(() => document.fonts.ready);
       const value = await assertLayout(p); results.push({ width, ...value });
-      for (const [key, color, minimum] of [['body', [82, 98, 124], 4.5], ['headline', [16, 27, 70], 3]]) {
-        // Contrast applies to painted glyphs, not the empty right side of a heading box.
-        const right = key === 'headline' ? Math.max(...value.textRects.map(rect => rect.right)) : value[key].right;
-        const ratio = worstContrast(width, right, color);
-        assert(ratio >= minimum, `Hero ${key} contrast ${ratio} at ${width}`);
-        contrasts.push({ width, text: key, darkestPossiblePixelRatio: ratio, minimum });
+      for(const [key,contrast] of Object.entries(await paintedContrast(p))) {
+        assert(contrast.ratio>=contrast.minimum,`Hero ${key} rendered contrast ${contrast.ratio} at ${width}`);
+        contrasts.push({width,text:key,renderedBackgroundRatio:contrast.ratio,minimum:contrast.minimum});
       }
       if ([320, 375, 390, 768, 1440, 1920].includes(width))
         await p.screenshot({ path: path.join(output, `homepage-${width}.jpg`), type: 'jpeg', quality: 85 });

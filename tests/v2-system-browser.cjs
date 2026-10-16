@@ -108,6 +108,11 @@ async function geometry(page,name){
    for(const route of ['/','/cpp-calculator/']){
     console.log(engine+': legacy isolation '+route);
     const c=await context();const p=await c.newPage();
+    if(route==='/') {
+     // The deployed homepage is now opted in. Use the untouched production
+     // authoring source as the independent legacy consumer.
+     await p.route(origin+'/',r=>r.fulfill({body:fs.readFileSync(path.join(root,'index.html'),'utf8'),contentType:'text/html'}));
+    }
     if(route==='/cpp-calculator/') {
      // Every live calculator is migrated. Use the independently saved original
      // template with unchanged legacy CSS/JS, rather than misclassifying a
