@@ -100,7 +100,11 @@ async function geometry(page,name){
    const summary=p.getByText('Additional assumptions',{exact:true});await summary.focus();await p.keyboard.press('Enter');assert(await summary.evaluate(n=>n.parentElement.open));
    await p.getByRole('button',{name:'Reset example',exact:true}).click();assert.equal(await p.locator('#amount').inputValue(),'100000');assert.equal(await p.locator('#slider-value').textContent(),'20 years');
    const download=p.waitForEvent('download');await p.getByRole('button',{name:'Download example CSV',exact:true}).click();const d=await download;assert.equal(d.suggestedFilename(),'simplekit-design-example.csv');const file=await d.path();assert.equal(fs.readFileSync(file,'utf8'),'year,ending_balance_CAD\n0,100000\n5,80000\n10,55000\n');
-   assert.deepEqual(actionRequests,[],'Reference interactions must add no requests');
+   // WebKit re-fetches an external-use sprite when its SVGs are redrawn.
+   // Permit only this exact local static GET (no query/input data); every other
+   // action request remains forbidden, including external or submitted values.
+   result.localActionAssetRequests=actionRequests.filter(r=>r.method==='GET'&&r.url===origin+'/assets/core/v2/icons/sprite.svg');
+   assert.deepEqual(actionRequests.filter(r=>!result.localActionAssetRequests.includes(r)),[],'Reference interactions must send no data requests');
    assert.deepEqual(await p.evaluate(()=>({local:Object.keys(localStorage),session:Object.keys(sessionStorage)})),{local:[],session:[]},'Reference inputs must not persist');
    assert.deepEqual(result.external,[],'References must load no external resources');
    await p.emulateMedia({media:'print'});assert(!(await p.locator('.v2s-header').isVisible()));await p.screenshot({path:path.join(output,`${engine}-print.jpg`),type:'jpeg',quality:75,fullPage:true});await c.close();
