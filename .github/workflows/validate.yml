@@ -149,6 +149,7 @@ jobs:
         env:
           QA_SUITE: ${{ matrix.suite }}
           QA_ENGINES: ${{ inputs.browser_engines || 'chromium,firefox,webkit' }}
+          VERIFY_HERO: ${{ github.ref == 'refs/heads/develop-v2' && contains(github.event.head_commit.message, '[verify-hero]') }}
           SIMPLEKIT_CALCULATOR_IDS: ${{ github.ref == 'refs/heads/develop-v2' && contains(github.event.head_commit.message, '[takehome-diagnostic]') && 'take-home-pay-calculator' || inputs.calculator_ids }}
         run: |
           export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
@@ -165,7 +166,7 @@ jobs:
           done
           case "$QA_SUITE" in
             system) suites="v2-system v2-baseline v2-release v2-retirement-fallback" ;;
-            calculators) suites="v2-calculator" ;;
+            calculators) suites="v2-calculator"; if [ "$VERIFY_HERO" = "true" ]; then suites="$suites v2-header-hero"; fi ;;
             pilots) suites="v2-pilot" ;;
             editorial) suites="v2-editorial" ;;
             homepage) suites="v2-foundations v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding" ;;

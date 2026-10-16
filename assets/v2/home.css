@@ -37,7 +37,7 @@ body.v2-home { margin: 0; background: #fcfcfb; }
 @media (max-width: 47.999rem) {
   .sk-v2 .v2-hero-content { padding-block:.5rem .75rem; }
   .sk-v2 .v2-hero-copy h1 { font-size:clamp(1.75rem,7.1vw,2.125rem); max-width:20ch; margin-top:.375rem; }
-  .sk-v2 .v2-hero-body { max-width:22rem; font-size:.9375rem; line-height:1.45; margin-top:.5rem; color:color-mix(in srgb,var(--v2-slate) 90%,var(--v2-ink)); }
+  .sk-v2 .v2-hero-body { max-width:22rem; font-size:.9375rem; line-height:1.45; margin-top:.5rem; color:var(--v2-navy); }
   .sk-v2 .v2-discovery-slot { margin-top:.875rem; }
   .sk-v2 .v2-coastal-picture { height:20rem; max-height:20rem; mask-image:linear-gradient(#000 78%,transparent); }
   .sk-v2 .v2-coastal-picture img { object-position:72% 72%; }

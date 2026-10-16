@@ -46,5 +46,7 @@ await geometry('text-200');if(tool.id==='take-home-pay-calculator') {
  assert(await region.evaluate(n=>n.scrollLeft>0),'Province table remains keyboard-scrollable at 200% text');
  await region.evaluate(n=>{n.scrollLeft=n.scrollWidth;});
  assert(await region.evaluate(n=>{const cell=n.querySelector('tr:last-child td:last-child');return n.scrollLeft>0&&cell.getBoundingClientRect().right<=n.getBoundingClientRect().right+1;}),'Last province-tax result remains reachable inside local scroll region');
- report.interactions.push({id:tool.id,state:'text-200',tableKeyboardScroll:true,lastColumnReachable:true});
+ const province=p.locator('#province'),beforeProvince=await province.inputValue();await province.focus();await p.keyboard.press('ArrowDown');await p.keyboard.press('Tab');
+ assert.notEqual(await province.inputValue(),beforeProvince,'Styled native province select remains keyboard-operable at 200% text');
+ report.interactions.push({id:tool.id,state:'text-200',tableKeyboardScroll:true,lastColumnReachable:true,provinceKeyboardSelection:true});
  }await shot('text-200',390);await c.close();console.log(name+': '+tool.id+' responsive, keyboard, interaction and axe checks passed');}catch(e){report.failures.push({id:tool.id,message:e.message});console.error(name+': '+tool.id+': '+e.message);}}assert.equal(report.failures.length,0,JSON.stringify(report.failures));assert.equal(report.errors.length,0,JSON.stringify(report.errors));assert.equal(report.failed.length,0,JSON.stringify(report.failed));}finally{result.engines.push(report);fs.writeFileSync(path.join(out,'calculator-browser.json'),JSON.stringify(result,null,2)+'\n');await browser.close();}}})().catch(e=>{console.error(e);process.exitCode=1});
