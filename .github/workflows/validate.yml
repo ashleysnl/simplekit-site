@@ -149,7 +149,7 @@ jobs:
         env:
           QA_SUITE: ${{ matrix.suite }}
           QA_ENGINES: ${{ inputs.browser_engines || 'chromium,firefox,webkit' }}
-          SIMPLEKIT_CALCULATOR_IDS: ${{ inputs.calculator_ids }}
+          SIMPLEKIT_CALCULATOR_IDS: ${{ github.ref == 'refs/heads/develop-v2' && contains(github.event.head_commit.message, '[takehome-diagnostic]') && 'take-home-pay-calculator' || inputs.calculator_ids }}
         run: |
           export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
           export SIMPLEKIT_PREVIEW_URL=http://127.0.0.1:8007

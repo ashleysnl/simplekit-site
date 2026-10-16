@@ -10,6 +10,12 @@ async function geometry(state){const g=await p.evaluate(()=>({width:innerWidth,s
  fs.writeFileSync(path.join(out,`${name}-${tool.id}-${state}-overflow.json`),JSON.stringify(diagnostic,null,2)+'\n');
  await p.screenshot({path:path.join(out,`${name}-${tool.id}-${state}-overflow.jpg`),fullPage:true});
  console.error('Unclipped/table-container diagnostic '+JSON.stringify(diagnostic));
+ if(tool.id==='take-home-pay-calculator'){
+  const variants={hideTable:'.table-shell{display:none!important}',separateBorders:'.comparison-table{border-collapse:separate!important;border-spacing:0!important}',wrapHeaders:'.comparison-table th{white-space:normal!important;overflow-wrap:anywhere!important;max-width:10rem!important}',scrollLayer:'.table-scroll{transform:translateZ(0)!important}',scrollContain:'.table-scroll{contain:layout paint!important}',selectAppearance:'.form-field select{appearance:none!important;white-space:normal!important}',hideSelects:'select{display:none!important}',hideFooter:'.v2s-footer{display:none!important}',hideSVG:'svg{display:none!important}',hidePseudos:'*::before,*::after{display:none!important}'};
+  const measurements={};for(const [key,css] of Object.entries(variants)){const style=await p.addStyleTag({content:css});await p.waitForTimeout(100);measurements[key]=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth}));await style.evaluate(n=>n.remove());}
+  console.error('TakeHomePay reversible diagnostic variants '+JSON.stringify(measurements));fs.writeFileSync(path.join(out,`${name}-${tool.id}-${state}-variants.json`),JSON.stringify(measurements,null,2)+'\n');
+ }
+
  }assert(g.scroll<=g.width+1,tool.id+' '+state+' horizontal overflow '+JSON.stringify(g));assert.equal(g.small.length,0,tool.id+' '+state+' small touch targets '+JSON.stringify(g.small));}
 async function audit(state){await p.addScriptTag({path:require.resolve('axe-core/axe.min.js')});const a=await p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}));report.audits.push({id:tool.id,state,violations:a.violations,incomplete:a.incomplete});assert.equal(a.violations.length,0,tool.id+' '+state+' axe '+a.violations.map(v=>v.id));}
 async function shot(state,width){if(name==='chromium')await p.screenshot({path:path.join(out,`${tool.id}-${state}-${width}.jpg`),fullPage:(await p.evaluate(()=>document.documentElement.scrollHeight))<28000});}
