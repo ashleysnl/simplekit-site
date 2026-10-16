@@ -1,5 +1,21 @@
 # Phase 16 — Full-site final QA candidate
 
+## Verified automated candidate — current authority
+
+Status: `[~]`. Automated QA is complete for `6ac53323275bc8348e7a97558b71bab694a68151` on `develop-v2`. [Final integration run 38839747189](https://github.com/ashleysnl/simplekit-site/actions/runs/38839747189) is successful. Phase 17 demo upload/verification and owner visual, physical-device, screen-reader and native-toolbar-zoom acceptance remain outstanding; no production authorization is recorded.
+
+The final run passes static/preservation/reproducibility and rollback gates, all 20 remaining calculators in Chromium/Firefox/WebKit, the 27-width header/hero checks, all 22 unchanged numerical fixtures, Budget/Retirement JSON/storage round trips, mortgage CSV reconciliation and module/classic retirement equivalence. TakeHomePay's 200% WebKit width, native province keyboard selection and horizontal table keyboard scrolling now pass. The source fixes are TakeHomePay `8341a79` and Core `04a7cfb` on their owning `develop-v2` branches. No financial algorithm/default or state/export schema changed.
+
+Retained successful pilot/editorial results come from run 38548702694; homepage/discovery/accessibility/SEO/performance results come from run 38837029465 for unchanged inputs, with affected hero/calculator checks refreshed in the final run. Lighthouse medians remain performance 99, accessibility 100, LCP 1965ms, CLS 0. Only four published files differ from the initial full-run artifact: Core's presentation helper, two homepage CSS outputs and TakeHomePay's scoped stylesheet. No files are removed. This is evidence across deliberately scoped runs, not a claim that every suite reran on the final SHA.
+
+The 381-file candidate contains 67 HTML pages, 22 calculators and the unchanged 53 sitemap URLs. Inventory SHA-256: `172332591b31e8277a3c42f2da3616e4ab51ac1f4cceb773df58a0f7555807c9`; archive SHA-256: `6dfa9617aa4382781de6bdbe369e4a742174c70f451f4fd4d820b9395ff4c384`. Downloaded source identity, archive digest and inventory match CI and the local build. Main remains `ca7826db75cb4353488786aab80857b3a71c1be1`; its pinned-builder rollback package is retained and four primary live hashes match. No production or preview deployment occurred during this checkpoint.
+
+[Concise handoff](phase-16-handoff.md) · [Machine evidence](phase-16/current/qa-evidence.json) · [Source pins](phase-16/current/source-pins.json) · [Screenshot gallery index](phase-16/current/gallery.md).
+
+## Historical checkpoints and resolved investigations
+
+The entries below preserve the diagnostic history. Their pending/failure statements are superseded by the verified checkpoint above where the inputs match. Physical-device and owner acceptance statements remain current.
+
 ## Current checkpoint after Phases 15A–15D
 
 Status: `[~]`. Candidate `ba06376e02fd88e26e0da09f2450d50918087cb7` completed [the consolidated run](https://github.com/ashleysnl/simplekit-site/actions/runs/38548702694). Validation (including preservation and reproducibility), rollback packaging, pilots, editorial, accessibility/SEO and performance passed. System, homepage and calculators need the focused follow-up below. Earlier evidence below is historical for inputs changed by the latest shared theme and family refinements. No production merge/deployment.

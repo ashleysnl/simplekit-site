@@ -540,18 +540,18 @@ Acceptance:
 
 ## Phase 16 — End-to-end visual coherence and final release candidate
 
-Status: `[~]`. Consolidated run 38548702694 passed static/preservation/reproducibility, rollback packaging, pilots, editorial, accessibility/SEO and performance. Focused system/homepage test repairs and the remaining TakeHomePay WebKit 200% overflow investigation are recorded in [Phase 16 verification](v2/phase-16-verification.md#focused-repair-checkpoint). Full hosted acceptance and owner manual review remain. Final QA checkpoint after implementation in Phases 11–15, including any required Phase 15A–15D refinements. Freeze the final implementation candidate before broad QA; retain earlier passing results only for unchanged inputs. Resolve or document earlier manual accessibility findings for owner acceptance at Phase 17.
+Status: `[~]`. Automated final QA passes for candidate `6ac53323275bc8348e7a97558b71bab694a68151`: final run 38839747189 verifies calculator/system/hero integration, with unchanged successful suites retained using archive-diff evidence. The WebKit select overflow and horizontal table keyboard findings are resolved in their owning sources. [Verification](v2/phase-16-verification.md), [handoff](v2/phase-16-handoff.md) and [gallery](v2/phase-16/current/gallery.md) record exact source pins, checksums, checks and remaining manual acceptance. Next: Phase 17 isolated demo upload/verification and owner review. No production merge/deploy.
 
-- [ ] Audit the full site as a user journey: homepage → search/goals → calculator → related guide/article → another calculator → supporting pages.
-- [ ] Compare representative and exceptional page families to the saved mockup and approved derived references at 320, 375, 390, 768, 1440 and 1920 widths, with 200% zoom, reduced motion and mobile devices.
-- [ ] Run clean pinned-source builds, deterministic artifact comparisons, SEO/output validations, every calculator numerical/state fixture, accessibility checks and browser regression suites.
-- [ ] Check all published routes, article anchors, schema, canonical metadata, sitemap, robots, redirects, fonts, imagery, performance and privacy claims.
-- [ ] Capture final full-site screenshot gallery, resolved deviations, known issues, upstream pin manifest, versioned release artifact/checksum and rollback package.
+- [~] Audit the full site as a user journey (automated navigation/route checks pass; owner/device review remains): homepage → search/goals → calculator → related guide/article → another calculator → supporting pages.
+- [~] Compare representative and exceptional page families to the saved mockup and approved derived references at 320, 375, 390, 768, 1440 and 1920 widths, with 200% zoom, reduced motion and mobile devices.
+- [x] Run clean pinned-source builds, deterministic artifact comparisons, SEO/output validations, every calculator numerical/state fixture, accessibility checks and browser regression suites.
+- [x] Check all published routes, article anchors, schema, canonical metadata, sitemap, robots, redirects, fonts, imagery, performance and privacy claims.
+- [x] Capture final full-site screenshot gallery, resolved deviations, known issues, upstream pin manifest, versioned release artifact/checksum and rollback package.
 
 Acceptance:
-- [ ] Homepage, articles, directory, all 22 calculators and supporting pages meet the unified V2 design acceptance rubric; no unapproved legacy-styled page remains.
-- [ ] All critical functionality, SEO, accessibility and performance gates pass; any noncritical exceptions are specifically owner-accepted.
-- [ ] The **entire-site** release candidate and its exact commit/artifact are documented in `docs/v2/phase-16-verification.md`; no production merge/deploy.
+- [~] Homepage, articles, directory, all 22 calculators and supporting pages meet the unified V2 design acceptance rubric; no unapproved legacy-styled page remains.
+- [~] All critical functionality, SEO, accessibility and performance gates pass; any noncritical exceptions are specifically owner-accepted.
+- [x] The **entire-site** release candidate and its exact commit/artifact are documented in `docs/v2/phase-16-verification.md`; no production merge/deploy.
 
 ## Phase 17 — Cloudflare preview and owner review
 
@@ -623,7 +623,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 
 ## Phase tracker and handoff
 
-Current next implementation step (2026-10-13): **Phase 16 — freeze the exact candidate and perform consolidated final QA. Preserved Contractor runtime changes are already present byte-for-byte in its published pin; its local history remains preserved.** Phase 15D maintained authoring sources and starter verification are recorded in [its handoff](v2/phase-15d-handoff.md). Phase 15C implementation, exact source revisions and deferred checks are recorded in [its handoff](v2/phase-15c-handoff.md). Phase 15B implementation and focused checks are recorded in [its handoff](v2/phase-15b-handoff.md). Phase 15A implementation and lightweight checks are recorded in [its handoff](v2/phase-15a-handoff.md); final acceptance remains pending. Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
+Current next implementation step (2026-10-16): **Phase 17 — upload and verify the isolated demo from tested candidate `6ac53323275bc8348e7a97558b71bab694a68151`, then obtain owner visual/device review. Automated Phase 16 checks pass; main/production remain protected. Preserved Contractor runtime changes are already present byte-for-byte in its published pin; its local history remains preserved.** Phase 15D maintained authoring sources and starter verification are recorded in [its handoff](v2/phase-15d-handoff.md). Phase 15C implementation, exact source revisions and deferred checks are recorded in [its handoff](v2/phase-15c-handoff.md). Phase 15B implementation and focused checks are recorded in [its handoff](v2/phase-15b-handoff.md). Phase 15A implementation and lightweight checks are recorded in [its handoff](v2/phase-15a-handoff.md); final acceptance remains pending. Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
 
 | Phase | State | Evidence / next step |
 | --- | --- | --- |
@@ -642,9 +642,9 @@ Current next implementation step (2026-10-13): **Phase 16 — freeze the exact c
 | 12 Unified design system | `[x]` | [Verified system/references](v2/phase-12-verification.md): 90 captures, 99 layouts, three engines; all 22 fixtures and byte preservation pass. Phase 13 is next; manual review remains. |
 | 13 Articles and supporting pages | `[x]` | [Verified 23 pages](v2/phase-13-verification.md): 324 screenshots, 423 layouts, 99 clean axe states; upstream guides retained for Phase 14. Manual review remains. |
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
-| 15 Remaining calculators and theme alignment | `[~]` | [Initial 20 implementations](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. 15A shared-theme implementation/lightweight checks recorded in [handoff](v2/phase-15a-handoff.md). 15B reference interiors implemented with [focused checks](v2/phase-15b-handoff.md). 15C family alignment implemented with [four batch builds](v2/phase-15c-handoff.md). 15D maintained guidance/starter checks [complete](v2/phase-15d-handoff.md). Next: Phase 16 candidate freeze and consolidated QA; Contractor local work remains preserved for separate review. Full verification in Phase 16. |
-| 16 Full-site release candidate | `[~]` | [Final QA candidate](v2/phase-16-verification.md); source-owned fixes integrated, hosted/browser and manual acceptance pending. |
-| 17 Cloudflare preview/review | `[~]` | [Preview verification prepared](v2/phase-17-verification.md); awaits final QA, network permission and successful upload before owner review. |
+| 15 Remaining calculators and theme alignment | `[~]` | [Initial 20 implementations](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. 15A shared-theme implementation/lightweight checks recorded in [handoff](v2/phase-15a-handoff.md). 15B reference interiors implemented with [focused checks](v2/phase-15b-handoff.md). 15C family alignment implemented with [four batch builds](v2/phase-15c-handoff.md). 15D maintained guidance/starter checks [complete](v2/phase-15d-handoff.md). Automated Phase 16 QA now passes; owner/demo review remains at Phase 17. Contractor runtime matches its published pin; local history remains preserved. |
+| 16 Final QA | `[~]` | [Automated checks pass](v2/phase-16-handoff.md) for `6ac5332`; exact artifact/checksums and gallery recorded. Owner physical-device/visual acceptance remains at Phase 17. |
+| 17 Cloudflare preview/review | `[~]` | [Preview verification prepared](v2/phase-17-verification.md); tested candidate is ready. Requires trusted manual workflow dispatch, deployed-artifact verification and owner review; see [handoff](v2/phase-16-handoff.md). |
 | 18 Production rollout | `[~]` | [Release preparation](v2/phase-18-release-package.md); proposal and rollback prepared, no release approval or production action. |
 
 

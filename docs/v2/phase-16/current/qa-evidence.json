@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "status": "automated-checks-passed; owner-and-preview-acceptance-pending",
+  "candidate": "6ac53323275bc8348e7a97558b71bab694a68151",
+  "branch": "develop-v2",
+  "repositories": {
+    "ashleysnl/simplekit-site": "6ac53323275bc8348e7a97558b71bab694a68151",
+    "ashleysnl/SimpleKit-Core": "04a7cfb5406fab82ec4a568e75cbbcc03e117932",
+    "ashleysnl/SimpleKitTakeHomePay": "8341a79be9a1f767b7337f711c0776f62787fb72"
+  },
+  "release": {
+    "workflowRun": 38839747189,
+    "artifact": 12020194392,
+    "files": 381,
+    "htmlPages": 67,
+    "calculators": 22,
+    "sitemapUrls": 53,
+    "inventorySHA256": "172332591b31e8277a3c42f2da3616e4ab51ac1f4cceb773df58a0f7555807c9",
+    "archiveSHA256": "6dfa9617aa4382781de6bdbe369e4a742174c70f451f4fd4d820b9395ff4c384"
+  },
+  "rollback": {
+    "source": "ca7826db75cb4353488786aab80857b3a71c1be1",
+    "artifact": 12020433644,
+    "archiveSHA256": "eb8f6a20d0048e919a90aceb7d4b9d7883a6b13b020e8aa2119f92f768f8cda4",
+    "builder": "44a6e6beabd48582f863aeeb6cb2151cc1716697",
+    "primaryLiveHashesMatched": [
+      "index.html",
+      "tools/index.html",
+      "robots.txt",
+      "sitemap.xml"
+    ]
+  },
+  "checks": [
+    {
+      "suite": "static/preservation/reproducibility",
+      "run": 38839747189,
+      "job": 116776857404,
+      "result": "success"
+    },
+    {
+      "suite": "rollback",
+      "run": 38839747189,
+      "job": 116776857497,
+      "result": "success"
+    },
+    {
+      "suite": "system + 22 numerical fixtures + storage/export + retirement fallback",
+      "run": 38839747189,
+      "job": 116777070795,
+      "result": "success"
+    },
+    {
+      "suite": "20 calculators x Chromium/Firefox/WebKit + 27-width header/hero",
+      "run": 38839747189,
+      "job": 116777070760,
+      "result": "success"
+    },
+    {
+      "suite": "homepage/discovery/guidance",
+      "run": 38837029465,
+      "job": 116768552085,
+      "result": "success",
+      "retainedReason": "Only the explicit navy declaration changed after this run; its rendered appearance and behavior were rechecked by the final header/hero suite."
+    },
+    {
+      "suite": "accessibility/SEO",
+      "run": 38837029465,
+      "job": 116768552034,
+      "result": "success",
+      "retainedReason": "Affected calculator behavior/layout/axe states and hero were rechecked by the final integration suites; all other assets are unchanged."
+    },
+    {
+      "suite": "performance",
+      "run": 38837029465,
+      "job": 116768552031,
+      "result": "success",
+      "medians": {
+        "performance": 99,
+        "accessibility": 100,
+        "lcpMs": 1965,
+        "cls": 0
+      },
+      "retainedReason": "Same homepage rendered color/layout/resources; final change makes inherited navy explicit."
+    },
+    {
+      "suite": "pilots",
+      "run": 38548702694,
+      "job": 115801300669,
+      "result": "success",
+      "retainedReason": "Financial code, pilot templates/styles and shared shell appearance unchanged. All 22 fixtures/export/fallback repeated in final system run."
+    },
+    {
+      "suite": "editorial",
+      "run": 38548702694,
+      "job": 115801300638,
+      "result": "success",
+      "retainedReason": "Published editorial content, metadata, templates and referenced presentation assets are unchanged."
+    }
+  ],
+  "publishedDiffFromInitialFullRun": [
+    "assets/core/v2/calculators.js",
+    "assets/v2/home.bundle.css",
+    "assets/v2/home.css",
+    "take-home-pay-calculator/v2-calculator.css"
+  ],
+  "remaining": [
+    "Phase 17 isolated preview upload, inventory/route verification and owner visual review",
+    "Physical iPhone/Android, VoiceOver/second screen reader and native toolbar zoom acceptance",
+    "Explicit production release/merge/deploy authorization"
+  ],
+  "productionModified": false,
+  "previewDeployed": false
+}
