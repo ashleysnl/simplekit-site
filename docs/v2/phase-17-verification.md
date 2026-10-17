@@ -1,6 +1,30 @@
 # Phase 17 — Isolated full-site preview preparation
 
-## Current candidate and navigation correction
+## Verified demo — current authority
+
+Status: `[~]`. Deployment and automated verification are complete; owner design/device review remains pending.
+
+- **Demo:** https://1081e2fa.simplekit-preview.pages.dev
+- **V2 CPP:** https://1081e2fa.simplekit-preview.pages.dev/cpp-calculator/
+- Shared replaceable alias: https://codex-preview.simplekit-preview.pages.dev
+- Exact deployed source: `151edc09ec53f70c3e1767e1d16a4e27f4ae4866` on `develop-v2`.
+- [Successful build/upload/verification](https://github.com/ashleysnl/simplekit-site/actions/runs/39059118074); [screenshots and browser evidence](https://github.com/ashleysnl/simplekit-site/actions/runs/39059118074/artifacts/12110324727); [machine record](phase-17/current/deployment.json).
+
+The production-ready archive is byte-identical to completed Phase 16 runtime candidate `6ac5332`: SHA-256 `6dfa9617aa4382781de6bdbe369e4a742174c70f451f4fd4d820b9395ff4c384`, inventory `172332591b31e8277a3c42f2da3616e4ab51ac1f4cceb773df58a0f7555807c9`. The workflow checks both before upload. Only the isolated preview receives link-localization/script injection plus its CNAME/robots/header protections. Canonical/OG/JSON-LD metadata, financial scripts and the production artifact are unchanged.
+
+Verified on the hosted candidate:
+
+- All 380 public preview files exactly match the approved artifact plus deterministic documented preview transforms, on both immutable origin and shared alias. Every checked response has noindex/nofollow; robots disallows crawling and no production CNAME is served.
+- All 22 frozen calculator fixtures pass, with zero page errors or failed same-origin requests. Budget/Retirement JSON import/export/storage, mortgage CSV/payment reconciliation and both retirement loading paths pass.
+- Real clicks through featured tools, search → CPP, suggested questions, goals → directory → Budget and guided recommendations stay on the demo. All 22 directory destinations are local. No-JavaScript links stay local too; no escaped navigation or browser errors.
+- Homepage screenshots at 375/390/768/1440 and CPP at 390/1440 are captured. Inspected CPP captures show the white V2 shared shell and compact introduction, without the old production gradient hero or floating support control. This is not owner visual acceptance.
+- Repository CI run 39058710845 passes. Main remains `ca7826db75cb4353488786aab80857b3a71c1be1`; four fresh primary production file hashes match the saved rollback baseline. The preview project still has production disabled and no custom domains. Production hosting/publishing/DNS were not changed.
+
+The owner-reported old-style CPP screenshot was on `simplekit.app`, caused by demo links escaping to production. The corrected preview localizes native HTML anchors and dynamically generated links without changing canonical metadata or financial behavior. Static preparation audited 67 pages and 1,114 local anchor destinations with zero remaining production navigation anchors. New focused tests protect raw financial scripts/metadata and exercise actual click navigation rather than only loading tool URLs directly.
+
+Remaining: owner review of this exact URL/source against the approved design, physical iPhone/Android, VoiceOver/second screen reader and native-toolbar zoom. Analytics was stubbed during browser checks; actual delivery/configuration is not claimed. No production release approval has been granted. Previous upload URLs below are historical and superseded.
+
+## Navigation correction history
 
 Status: `[~]`. Initial upload [38982031051](https://github.com/ashleysnl/simplekit-site/actions/runs/38982031051) successfully deployed Phase 16 runtime candidate `6ac5332` to https://86b17508.simplekit-preview.pages.dev. Independent verification matched all 379 ordinary published files on both the immutable origin and shared alias, including noindex/nofollow, disallowed robots and absent production CNAME.
 

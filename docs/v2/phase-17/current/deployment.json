@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "status": "deployed-and-automatically-verified; owner-review-pending",
+  "source": "151edc09ec53f70c3e1767e1d16a4e27f4ae4866",
+  "phase16Runtime": "6ac53323275bc8348e7a97558b71bab694a68151",
+  "workflowRun": 39059118074,
+  "workflowRef": "develop-v2",
+  "workflowConclusion": "success",
+  "deployment": {
+    "id": "1081e2fa-5f4a-44e1-a7e9-699ed38283ab",
+    "url": "https://1081e2fa.simplekit-preview.pages.dev",
+    "alias": "https://codex-preview.simplekit-preview.pages.dev",
+    "project": "simplekit-preview",
+    "branch": "codex-preview",
+    "environment": "preview",
+    "productionBranch": "__production_disabled__",
+    "domains": [
+      "simplekit-preview.pages.dev"
+    ],
+    "githubEnvironmentProtectionRules": []
+  },
+  "productionReadyArchiveSHA256": "6dfa9617aa4382781de6bdbe369e4a742174c70f451f4fd4d820b9395ff4c384",
+  "productionReadyInventorySHA256": "172332591b31e8277a3c42f2da3616e4ab51ac1f4cceb773df58a0f7555807c9",
+  "artifacts": {
+    "productionReadyCandidate": 12110447009,
+    "previewSite": 12110901102,
+    "browserEvidence": 12110324727
+  },
+  "verifiedOrigins": [
+    {
+      "origin": "https://1081e2fa.simplekit-preview.pages.dev",
+      "files": 380,
+      "noindexNofollow": true,
+      "robotsDisallowAll": true,
+      "productionCNAMEAbsent": true
+    },
+    {
+      "origin": "https://codex-preview.simplekit-preview.pages.dev",
+      "files": 380,
+      "noindexNofollow": true,
+      "robotsDisallowAll": true,
+      "productionCNAMEAbsent": true
+    }
+  ],
+  "navigation": {
+    "journeys": [
+      {
+        "selector": "[data-featured-tool=\"retirement-planner\"]",
+        "path": "/retirement-planner/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2s-header .v2s-brand",
+        "path": "/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": "[data-tool-id=\"cpp-calculator\"]",
+        "path": "/cpp-calculator/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2s-header .v2s-brand",
+        "path": "/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2-question",
+        "path": "/retirement-planner/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2s-header .v2s-brand",
+        "path": "/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2-goal",
+        "path": "/tools/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": "a[href=\"/budget-planner/\"]",
+        "path": "/budget-planner/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2s-header .v2s-brand",
+        "path": "/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": "[data-onboarding-tool]",
+        "path": "/retirement-planner/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      },
+      {
+        "selector": ".v2s-header .v2s-brand",
+        "path": "/",
+        "origin": "https://1081e2fa.simplekit-preview.pages.dev"
+      }
+    ],
+    "directoryTools": 22,
+    "noJavaScriptNavigation": true,
+    "escapedNavigation": [],
+    "pageErrors": [],
+    "failed": []
+  },
+  "deployedChecks": {
+    "financialFixtures": "22/22 exact frozen fixtures pass",
+    "stateAndExports": "Budget/Retirement JSON round trips and storage reload; mortgage CSV/payment reconciliation pass",
+    "retirementLoading": "module/classic parity passes",
+    "screenshots": [
+      "home-375.jpg",
+      "home-390.jpg",
+      "home-768.jpg",
+      "home-1440.jpg",
+      "cpp-390.jpg",
+      "cpp-1440.jpg"
+    ]
+  },
+  "previewOnlyTransforms": [
+    "CNAME removed",
+    "robots.txt disallows crawling",
+    "_headers supplies noindex,nofollow",
+    "67 HTML files localize canonical-host anchor destinations and load the preview routing helper",
+    "one additional preview-only helper handles dynamic search/guided anchors",
+    "canonical/OG/JSON-LD metadata and financial scripts are unchanged"
+  ],
+  "production": {
+    "main": "ca7826db75cb4353488786aab80857b3a71c1be1",
+    "checks": [
+      {
+        "file": "index.html",
+        "sha256": "71237e9bb94bea09891c6c2fd5929ee86891eb0bf92082198f1d7d6651feef82"
+      },
+      {
+        "file": "tools/index.html",
+        "sha256": "ab473ef760ad9597e94a11202e95a11fc802c4cf63332bae63b83d8ee1fefecb"
+      },
+      {
+        "file": "robots.txt",
+        "sha256": "c9aa10360f495060a3817687204a00bbd966e3a8728b66f52e273c996c7e59a5"
+      },
+      {
+        "file": "sitemap.xml",
+        "sha256": "9aca65d095d1e5ef0fde6d8d5a8d2f7f990a26eb4cb776dfaafa14f5d74b4b1a"
+      }
+    ]
+  },
+  "productionModified": false,
+  "ownerDesignAccepted": false,
+  "physicalDeviceAndScreenReaderAcceptance": false
+}

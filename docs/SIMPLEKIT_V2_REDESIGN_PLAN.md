@@ -555,22 +555,22 @@ Acceptance:
 
 ## Phase 17 — Cloudflare preview and owner review
 
-Status: `[~]`. Manual preview dispatch and full deployed artifact verification are prepared; upload and owner review remain pending. Depends on Phase 16 full-site release candidate.
+Status: `[~]`. [Verified demo](https://1081e2fa.simplekit-preview.pages.dev) deployed from `151edc0`; [workflow 39059118074](https://github.com/ashleysnl/simplekit-site/actions/runs/39059118074) passes all hosted file/route/financial/state/export/fallback and real click-journey checks. Preview links now stay on the demo instead of opening unchanged production pages. The production-ready archive remains identical to Phase 16. Owner visual/device acceptance remains pending; see [current evidence](v2/phase-17-verification.md#verified-demo--current-authority).
 
 - [x] Inspect the manual preview workflow and dedicated project/environment protections through permitted tools; retain production branch guard and absence of custom domains.
-- [~] Dispatch “Manual Cloudflare preview” with the exact reviewed `develop-v2` source. Initial trusted-main upload succeeded; the reviewed development workflow adds preview-only link isolation without modifying main or weakening existing environment/project guards.
-- [ ] Record source SHA, workflow URL, artifact checksum and exact deployment URL from upload output; verify the shared branch alias points to that candidate.
-- [ ] Verify deployed homepage, discovery flows and all 22 calculator paths/assets on the preview origin; compare the deployed file inventory with the approved artifact and rerun key calculator interactions.
-- [ ] Present mobile/tablet/desktop comparisons with the saved mockup, verification evidence and deviations for owner design/release review; resolve feedback on `develop-v2`.
+- [x] Dispatch “Manual Cloudflare preview” with the exact reviewed `develop-v2` source. The reviewed development workflow adds preview-only link isolation without modifying main or weakening existing environment/project guards.
+- [x] Record source SHA, workflow URL, artifact checksum and exact deployment URL from upload output; verify the shared branch alias points to that candidate.
+- [x] Verify deployed homepage, discovery flows and all 22 calculator paths/assets on the preview origin; compare the deployed file inventory with the approved artifact and rerun key calculator interactions.
+- [~] Present mobile/tablet/desktop comparisons with the saved mockup, verification evidence and deviations for owner design/release review; resolve feedback on `develop-v2`.
 
 Acceptance:
 
-- [ ] Build/upload jobs succeed for the intended candidate and the deployed artifact matches; deployed pages return `X-Robots-Tag: noindex, nofollow`, preview robots disallows crawling, and the preview has no production `CNAME`.
-- [ ] All 22 calculators and every new interaction pass on the preview origin; no new console errors/failed same-origin requests/broken links.
-- [ ] Production content/deployed commit and publishing/DNS/custom-domain configuration remain unchanged against the recorded baseline.
+- [x] Build/upload jobs succeed for the intended candidate and the deployed artifact matches; deployed pages return `X-Robots-Tag: noindex, nofollow`, preview robots disallows crawling, and the preview has no production `CNAME`.
+- [x] All 22 calculators and every new interaction pass on the preview origin; no new console errors/failed same-origin requests/broken links.
+- [x] Production content/deployed commit and publishing/DNS/custom-domain configuration remain unchanged against the recorded baseline.
 - [ ] Owner review outcome is documented against the exact commit and deployment. Design acceptance and permission to release production are recorded separately.
 
-Codex guidance: the prior verified alias was `https://codex-preview.simplekit-preview.pages.dev`; `https://simplekit-preview.pages.dev` returned 404 because only a preview branch was uploaded. Use upload output as the current authority. The `codex-preview` alias is shared/replaceable: coordinate preview uploads and retain the immutable candidate URL. Preview approval never grants production approval. Evidence link: pending.
+Codex guidance: the prior verified alias was `https://codex-preview.simplekit-preview.pages.dev`; `https://simplekit-preview.pages.dev` returned 404 because only a preview branch was uploaded. Use upload output as the current authority. The `codex-preview` alias is shared/replaceable: coordinate preview uploads and retain the immutable candidate URL. Preview approval never grants production approval. Evidence: [verified deployment, screenshots and navigation checks](v2/phase-17-verification.md#verified-demo--current-authority).
 
 ## Phase 18 — Controlled production rollout and rollback
 
@@ -623,7 +623,7 @@ Snapshot from `data/tools.json` at the inspected baseline. All canonical URLs us
 
 ## Phase tracker and handoff
 
-Current next implementation step (2026-10-16): **Phase 17 — upload and verify the isolated demo from tested candidate `6ac53323275bc8348e7a97558b71bab694a68151`, then obtain owner visual/device review. Automated Phase 16 checks pass; main/production remain protected. Preserved Contractor runtime changes are already present byte-for-byte in its published pin; its local history remains preserved.** Phase 15D maintained authoring sources and starter verification are recorded in [its handoff](v2/phase-15d-handoff.md). Phase 15C implementation, exact source revisions and deferred checks are recorded in [its handoff](v2/phase-15c-handoff.md). Phase 15B implementation and focused checks are recorded in [its handoff](v2/phase-15b-handoff.md). Phase 15A implementation and lightweight checks are recorded in [its handoff](v2/phase-15a-handoff.md); final acceptance remains pending. Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
+Current next step (2026-10-17): **Owner review of the verified Phase 17 demo, https://1081e2fa.simplekit-preview.pages.dev, source `151edc0`. Preview navigation and all hosted calculator checks pass; production-ready bytes match Phase 16. Phase 18 release preparation may proceed, but production merge/deploy requires separate explicit approval. Main/production remain protected and unrelated source history remains preserved.** Phase 15D maintained authoring sources and starter verification are recorded in [its handoff](v2/phase-15d-handoff.md). Phase 15C implementation, exact source revisions and deferred checks are recorded in [its handoff](v2/phase-15c-handoff.md). Phase 15B implementation and focused checks are recorded in [its handoff](v2/phase-15b-handoff.md). Phase 15A implementation and lightweight checks are recorded in [its handoff](v2/phase-15a-handoff.md); final acceptance remains pending. Do not rebuild completed Phases 12–15 or start another pilot from scratch. Historical acceptance and final release gates remain as recorded.
 
 | Phase | State | Evidence / next step |
 | --- | --- | --- |
@@ -644,7 +644,7 @@ Current next implementation step (2026-10-16): **Phase 17 — upload and verify 
 | 14 Calculator pilots | `[~]` | [Verified source-owned pilots](v2/phase-14-verification.md): 159 deployed layouts, 33 clean axe states, 102 screenshots; [isolated demo](https://1e526422.simplekit-preview.pages.dev) deployed. All four open V2 PRs merged into develop-v2; owner visual review and manual device/AT checks pending; classic/module parity documented before release. |
 | 15 Remaining calculators and theme alignment | `[~]` | [Initial 20 implementations](v2/phase-15-verification.md); four builds pass, 22-tool matrix retained. 15A shared-theme implementation/lightweight checks recorded in [handoff](v2/phase-15a-handoff.md). 15B reference interiors implemented with [focused checks](v2/phase-15b-handoff.md). 15C family alignment implemented with [four batch builds](v2/phase-15c-handoff.md). 15D maintained guidance/starter checks [complete](v2/phase-15d-handoff.md). Automated Phase 16 QA now passes; owner/demo review remains at Phase 17. Contractor runtime matches its published pin; local history remains preserved. |
 | 16 Final QA | `[~]` | [Automated checks pass](v2/phase-16-handoff.md) for `6ac5332`; exact artifact/checksums and gallery recorded. Owner physical-device/visual acceptance remains at Phase 17. |
-| 17 Cloudflare preview/review | `[~]` | [Preview verification prepared](v2/phase-17-verification.md); tested candidate is ready. Requires trusted manual workflow dispatch, deployed-artifact verification and owner review; see [handoff](v2/phase-16-handoff.md). |
+| 17 Cloudflare preview/review | `[~]` | [Verified demo](https://1081e2fa.simplekit-preview.pages.dev), source `151edc0`; all hosted checks and preview-only navigation pass. [Evidence](v2/phase-17-verification.md). Owner visual/device acceptance pending. |
 | 18 Production rollout | `[~]` | [Release preparation](v2/phase-18-release-package.md); proposal and rollback prepared, no release approval or production action. |
 
 

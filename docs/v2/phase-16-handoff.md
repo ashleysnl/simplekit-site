@@ -32,6 +32,8 @@ Unchanged pilot/editorial results from run 38548702694 and homepage/accessibilit
 
 ## Next step and remaining gates
 
+**Current update:** Phase 17 is now deployed and verified at https://1081e2fa.simplekit-preview.pages.dev, including preview-only navigation. [Phase 17 evidence](phase-17-verification.md) supersedes the historical access limitation below. Owner review and production authorization remain pending.
+
 Phase 17 uploads and verifies the isolated demo, then obtains owner review. The trusted
 [Manual Cloudflare preview workflow](https://github.com/ashleysnl/simplekit-site/actions/workflows/cloudflare-preview.yml)
 on `main` accepts `source_ref` only: use the exact candidate SHA above. It preserves
