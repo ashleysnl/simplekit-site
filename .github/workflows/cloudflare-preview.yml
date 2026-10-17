@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       full_qa:
-        description: Repeat the complete browser/regression suites on this preview
+        description: Repeat complete production-artifact regression in addition to deployed smoke checks
         required: false
         default: false
         type: boolean
@@ -67,11 +67,22 @@ jobs:
             ${{ runner.temp }}/release-source.txt
           if-no-files-found: error
           retention-days: 30
+      - name: Verify the production artifact still matches completed Phase 16 QA
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          import assert from 'node:assert/strict';
+          const qa=JSON.parse(fs.readFileSync('docs/v2/phase-16/current/qa-evidence.json')).release;
+          const inventory=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/release-inventory.json'));
+          assert.equal(inventory.inventorySHA256,qa.inventorySHA256,'New runtime changes require Phase 16 QA before preview');
+          const archive=fs.readFileSync(process.env.RUNNER_TEMP+'/release-candidate.tar.gz');
+          assert.equal(crypto.createHash('sha256').update(archive).digest('hex'),qa.archiveSHA256);
+          console.log('Production-ready bytes exactly match the verified Phase 16 candidate.');
+          JS
       - name: Isolate preview indexing and hostname
         run: |
-          rm -f dist/CNAME
-          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' > dist/_headers
-          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          node scripts/prepare-preview.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: preview-site
@@ -173,50 +184,34 @@ jobs:
           node tests/v2-baseline-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/calculators.log"
           node tests/v2-release-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/state-export.log"
           node tests/v2-retirement-fallback-browser.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/fallback.log"
-          node --input-type=module <<'JS'
-          import fs from 'node:fs';
-          import crypto from 'node:crypto';
-          import assert from 'node:assert/strict';
-          const inventory=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/preview-release/release-inventory.json'));
-          const source=fs.readFileSync(process.env.RUNNER_TEMP+'/preview-release/release-source.txt','utf8').trim();
-          const files=Object.entries(inventory.files).filter(([file])=>!['CNAME','robots.txt','_redirects'].includes(file));
-          const origins=[process.env.SIMPLEKIT_PREVIEW_URL,'https://codex-preview.simplekit-preview.pages.dev'];
-          const report={source,inventorySHA256:inventory.inventorySHA256,origins:[],exceptions:['CNAME removed','robots disallows preview',...(inventory.files._redirects?['_redirects consumed by Cloudflare; upload artifact retains it']:[])]};
-          const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-          for(const origin of origins) {
-            assert(/^https:\/\/[a-z0-9-]+\.simplekit-preview\.pages\.dev$/.test(origin));
-            const result={origin,checked:0,errors:[]};
-            async function read(file) {
-              let url=origin+'/'+file;
-              for(let i=0;i<6;i++) {
-                const response=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(20000)});
-                if(response.status>=300&&response.status<400) {
-                  url=new URL(response.headers.get('location'),url).href;assert.equal(new URL(url).origin,origin);continue;
-                }
-                assert.equal(response.status,200,file+' HTTP status');
-                assert(/noindex/.test(response.headers.get('x-robots-tag')||''),file+' preview noindex');
-                return Buffer.from(await response.arrayBuffer());
-              }
-              throw Error(file+' redirect loop');
-            }
-            assert.equal((await read('robots.txt')).toString(),'User-agent: *\nDisallow: /\n');
-            const queue=[...files];
-            await Promise.all(Array.from({length:6},async()=>{while(queue.length){const [file,expected]=queue.shift();try{const data=await read(file);assert.equal(data.length,expected.bytes,file+' bytes');assert.equal(hash(data),expected.sha256,file+' artifact digest');result.checked++;}catch(e){result.errors.push({file,message:e.message});}}}));
-            report.origins.push(result);
-          }
-          fs.writeFileSync(process.env.SIMPLEKIT_EVIDENCE_DIR+'/artifact-verification.json',JSON.stringify(report,null,2)+'\n');
-          assert(report.origins.every(r=>r.errors.length===0),JSON.stringify(report.origins));
-          console.log('Both isolated origins match '+files.length+' published files, all preview noindex headers and robots; source '+source);
-          JS
+          export SIMPLEKIT_PREVIEW_ALIAS=https://codex-preview.simplekit-preview.pages.dev
+          export SIMPLEKIT_RELEASE_DIR="$RUNNER_TEMP/preview-release"
+          export SIMPLEKIT_CANDIDATE_SHA="$(cat "$SIMPLEKIT_RELEASE_DIR/release-source.txt")"
+          export SIMPLEKIT_CANDIDATE_ARCHIVE_SHA256="$(node -p "require('./docs/v2/phase-16/current/qa-evidence.json').release.archiveSHA256")"
+          export SIMPLEKIT_PREVIEW_ROUTING=1
+          node tests/v2-preview-review.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/artifact.log"
+          node tests/v2-preview-navigation.cjs 2>&1 | tee "$SIMPLEKIT_EVIDENCE_DIR/navigation.log"
 
-      - name: Complete deployed browser QA when explicitly requested
+      - name: Repeat production-artifact regression when explicitly requested
         if: inputs.full_qa
         shell: bash
         env:
-          SIMPLEKIT_HOSTED_PREVIEW: '1'
-          SIMPLEKIT_PREVIEW_URL: ${{ steps.upload.outputs.url }}
+          SIMPLEKIT_HOSTED_PREVIEW: '0'
+          SIMPLEKIT_PREVIEW_URL: http://127.0.0.1:8009
         run: |
           export NODE_PATH="$RUNNER_TEMP/simplekit-v2-browser/node_modules"
+          # Broad canonical-link assertions describe the production artifact.
+          # Preview navigation is covered separately by real hosted click tests.
+          mv dist "$RUNNER_TEMP/reviewed-preview-dist"
+          mkdir dist
+          tar -xzf "$RUNNER_TEMP/preview-release/release-candidate.tar.gz" -C dist
+          PORT=8009 node scripts/preview.mjs > "$RUNNER_TEMP/production-regression-server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..40}; do
+            if curl -fsS "$SIMPLEKIT_PREVIEW_URL/" > /dev/null; then break; fi
+            sleep .25
+          done
           for suite in v2-header-hero v2-discovery v2-trust v2-goals v2-featured v2-onboarding v2-baseline v2-release; do
             export SIMPLEKIT_EVIDENCE_DIR="$RUNNER_TEMP/preview-browser-evidence/regression/$suite"
             mkdir -p "$SIMPLEKIT_EVIDENCE_DIR"

@@ -1,5 +1,21 @@
 # Phase 17 — Isolated full-site preview preparation
 
+## Current candidate and navigation correction
+
+Status: `[~]`. Initial upload [38982031051](https://github.com/ashleysnl/simplekit-site/actions/runs/38982031051) successfully deployed Phase 16 runtime candidate `6ac5332` to https://86b17508.simplekit-preview.pages.dev. Independent verification matched all 379 ordinary published files on both the immutable origin and shared alias, including noindex/nofollow, disallowed robots and absent production CNAME.
+
+Owner feedback then exposed a real preview-navigation defect: canonical absolute tool links took visitors to the unchanged production site. The attached CPP screenshot showed `simplekit.app` in the address bar. Direct preview calculator pages already contained the new shared V2 shell; direct-URL fixture tests had not caught leaving the demo through links. This initial upload is superseded for review once the corrected upload below passes.
+
+The correction is strictly a preview overlay: native anchor destinations in HTML are localized to the current origin, and a small preview-only helper handles newly generated search/guided links. Canonical/OG/JSON-LD metadata, financial scripts, external references and the 381-file production-ready artifact stay unchanged. Static links work without JavaScript. `scripts/prepare-preview.mjs` is idempotent; `tests/v2-preview-review.cjs` verifies the approved archive and exact deterministic preview transformations rather than accepting arbitrary HTML differences. Its historical Phase 10 mode is retained.
+
+The reviewed manual workflow on `develop-v2` adopts this overlay and real click-journey checks; `main` is not modified. GitHub's existing `simplekit-preview` environment has no required reviewers or branch restriction, so dispatching the reviewed development workflow does not bypass an approval rule. The production-disabled branch guard, rejection of custom domains, dedicated project/branch and manual-only trigger remain unchanged. Each build must match the independently verified Phase 16 archive/inventory before upload. Optional broad regression uses the original production artifact on loopback, while actual hosted navigation is checked against preview-specific behavior.
+
+Build and focused tests pass; corrected upload, actual click journeys, deployed fixtures and owner review remain pending. No production deployment or DNS/publishing change.
+
+## Historical uploads and feedback
+
+The entries below are retained history, not the authority for the current source or remaining WebKit status. The Phase 16 automated findings are resolved; physical-device and owner acceptance remain open.
+
 Status: `[~]`. Preview procedure and deployed verification are prepared. The full-site demo is uploaded and its deployed checks pass; see the candidate below. Final WebKit enlarged-text correction and owner review remain pending.
 
 The manual-only `cloudflare-preview.yml` retains its dedicated `simplekit-preview` project, `codex-preview` branch, `simplekit-preview` environment, `__production_disabled__` production-branch guard and rejection of custom domains. No automatic deployment trigger is added.

@@ -557,8 +557,8 @@ Acceptance:
 
 Status: `[~]`. Manual preview dispatch and full deployed artifact verification are prepared; upload and owner review remain pending. Depends on Phase 16 full-site release candidate.
 
-- [ ] Inspect the manual preview workflow and dedicated project/environment protections through permitted tools; retain production branch guard and absence of custom domains.
-- [ ] Dispatch “Manual Cloudflare preview” from the trusted default workflow with `source_ref` set to the exact reviewed `develop-v2` commit; satisfy existing environment approvals without weakening protections.
+- [x] Inspect the manual preview workflow and dedicated project/environment protections through permitted tools; retain production branch guard and absence of custom domains.
+- [~] Dispatch “Manual Cloudflare preview” with the exact reviewed `develop-v2` source. Initial trusted-main upload succeeded; the reviewed development workflow adds preview-only link isolation without modifying main or weakening existing environment/project guards.
 - [ ] Record source SHA, workflow URL, artifact checksum and exact deployment URL from upload output; verify the shared branch alias points to that candidate.
 - [ ] Verify deployed homepage, discovery flows and all 22 calculator paths/assets on the preview origin; compare the deployed file inventory with the approved artifact and rerun key calculator interactions.
 - [ ] Present mobile/tablet/desktop comparisons with the saved mockup, verification evidence and deviations for owner design/release review; resolve feedback on `develop-v2`.
